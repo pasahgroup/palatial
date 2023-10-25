@@ -97,7 +97,7 @@
 
          <div class="pre-header">
         <div class="container-fluid">
-            <div class="row" style="background-color:#73843e">
+            <div class="row" style="background-color:#688864">
                 <!-- BEGIN TOP BAR LEFT PART -->
 
                 <div class="col-md-8 col-sm-12 additional-shop-info"  style="font-size;color: white;">
