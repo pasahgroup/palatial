@@ -62,10 +62,15 @@ Route::get('/ff', function () {
     return view('mformt');
 });
 
+
 Route::get('/stl', function () {
+  \Artisan::call('config:clear');
   \Artisan::call('cache:clear');
   \Artisan::call('route:clear');
+  //\Artisan::call('route:cache');
+  //\Artisan::call('route:clear');
   \Artisan::call('storage:link');
+    // \Artisan::call('key:generate');
    dd('cache clear successfully');
 });
 
