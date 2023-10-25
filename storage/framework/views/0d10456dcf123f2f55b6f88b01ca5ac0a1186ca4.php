@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <meta content="Experienced hiking and Tour Safaris" name="description">
-  <meta content="Drongo Safaris" name="keywords">
+  <meta content="Palatial Tours" name="keywords">
   <meta content="Buruhani Wawa" name="author">
 
  <meta property="og:site_name" content="Palatial tours">
@@ -18,7 +18,7 @@
   <meta property="og:description" content="Palatial tour">
   <meta property="og:type" content="https://Palatialtours.com/">
   <meta property="og:image" content="../../assets/corporate/img/logos/logo-corp-red.png" style="height:6vh; width: 170%" alt="Palatial tours"><!-- link to image for socio -->
-  <meta property="og:url" content="https://drongosafaris.com/">
+  <meta property="og:url" content="https://palatialtours.com/">
 
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -140,7 +140,7 @@
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-          <a class="site-logo" href="/"><img src="../../assets/corporate/img/logos/logo-corp-red.png" style="height:8vh; width:100px" alt="Drongo Safaris"></a>
+          <a class="site-logo" href="/"><img src="../../assets/corporate/img/logos/logo-corp-red.png" style="height:8vh; width:100px" alt="palatial tours"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -198,9 +198,9 @@
                 </a>
 
               <ul class="dropdown-menu">
-                <li><a href="/whatWeOfferClient">Drongo Tour Services</a></li>
-                <li><a href="/drongo-attractions">Drongo Tour Attractios</a></li>
-                <li><a href="#">Drongo Crafts and Designing</a></li>
+                <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
+                <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
+                <li><a href="#">Palatial Crafts and Designing</a></li>
               </ul>
             </li>
 
@@ -286,7 +286,7 @@
           </div>
           <div class="col-md-3 col-sm-8 front-step-col">
             <div class="service-box-heading"  style="background-color: #7C858E">
-              <span><h3>About Drongo Safaris</h3></span>
+              <span><h3>About Palatial Tours</h3></span>
             </div>
             <div class="front-step front-step2">
            <ul class="link-widget">
@@ -319,8 +319,8 @@
 
                         <li class="dropdown"><a  href="">Address:<?php echo e($contacts->address??'Arusha'); ?></a></li>
                         <li class="dropdown"><a  href="#">Contact No: (+255)753 216 263</a></li>
-                        <li class="dropdown"><a  href="#">Email: info@drongosafaris.com</a></li>
-                        <li class="dropdown"><a href="#">Website: www.drongosafaris.com</a></li>
+                        <li class="dropdown"><a  href="#">Email: info@palatialtours.com</a></li>
+                        <li class="dropdown"><a href="#">Website: www.palatialtours.com</a></li>
                     </ul>
           </div>
         </div>
@@ -333,7 +333,7 @@
       <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-5 col-sm-6 padding-top-10">
-            2021 © Drongo Safaris. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>|<a href="javascript:;">Terms of Service</a>
+            2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>|<a href="javascript:;">Terms of Service</a>
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->
