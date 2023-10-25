@@ -185,7 +185,7 @@
 	</div>
 
 		<div class="row booking-btn-top">
-			<b><marquee scrollamount="2">Drongo-Safaris Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
+			<b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
 				</div>
 	</div>
 <?php endif; ?>
@@ -195,11 +195,11 @@
 	 <?php $__currentLoopData = $welcome_message; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 									<div class="">
 									 <div class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
-										 <img src="<?php echo e(URL::asset('/storage/uploads/'.$message->attachment)); ?>" class="img-fluid" alt="Drongo Image" style="height:200px;width:100%;">
+										 <img src="<?php echo e(URL::asset('/storage/uploads/'.$message->attachment)); ?>" class="img-fluid" alt="Palatial Image" style="height:200px;width:100%;">
 										</div>
 										<div class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
 											<h2><a href="#"><?php echo e($message->quick_title); ?></a></h2>
-											<h4><a href="#">Welcome to <b>Drongo Safaris</b></a></h4>
+											<h4><a href="#">Welcome to <b>Palatial Tours</b></a></h4>
 											<hr>
 											<h6 class="text-white"><?php echo e($message->quick_description); ?>.</h6>
 									</div>

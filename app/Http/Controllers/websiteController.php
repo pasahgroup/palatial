@@ -210,7 +210,7 @@ class websiteController extends Controller
        
      //Seach Engine
        // $seo = title::where('title','What We Offer')->first();
-       $title = "Drongo Safaris Tour Tanzania";
+       $title = "Palatial Tour Tanzania";
        $description = "";
        $keywords = "";
 
