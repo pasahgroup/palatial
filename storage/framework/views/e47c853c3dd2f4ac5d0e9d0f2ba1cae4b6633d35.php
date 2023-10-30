@@ -57,7 +57,7 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
-			<div class="item active"  style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slidersf->attachment)); ?>);height:65vh;width:100% background-repeat: no-repeat;
+			<div class="item active"  style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slidersf->attachment)); ?>);height:66vh;width:100% background-repeat: no-repeat;
 										 background-size:100% 100%;
 											 background-position: center;">
 										<div class="container">
@@ -233,9 +233,9 @@ Tour Packages
 
 						<div class="">
 						 <div data-aos="fade-up">
-								<!-- BEGIN CAROUSEL -->
+								
 			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-										 <h6 data-text= "Wildlife Safaris" style="font-size: 20px;color: green;font-weight: 700; text-transform:uppercase">Wildlife Safaris</h6>
+						<!-- BEGIN CAROUSEL --> <h6 data-text= "Wildlife Safaris" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Wildlife Safaris</h6>			
 
 	<div id="myCarousel1p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -292,7 +292,7 @@ Tour Packages
 
 
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-									<h6 data-text= "Hiking And Trekking" style="font-size: 20px;color: green;font-weight: 700; text-transform:uppercase">Hiking And Trekking</h6>
+									<h6 data-text= "Hiking And Trekking" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Hiking And Trekking</h6>
 
 	<div id="myCarousel2p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -350,7 +350,7 @@ Tour Packages
 	 </div>
 		<!-- Beach Holidays -->
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-												 <h6 data-text= "Beach Holiday" style="font-size: 20px;color: green;font-weight: 700; text-transform:uppercase">Beach Holiday</h6>
+												 <h6 data-text= "Beach Holiday" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Beach Holiday</h6>
 
 	<div id="myCarousel3p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -405,7 +405,7 @@ Tour Packages
 
  <!-- Beach Holidays -->
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-										 <h6 data-text= "Historical Sites" style="font-size: 20px;color: green;font-weight: 700; text-transform:uppercase">Historical Sites</h6>
+										 <h6 data-text= "Historical Sites" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Historical Sites</h6>
 
 	<div id="myCarousel4p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -1115,7 +1115,7 @@ Popular Destinations
 									<lif class="one-forth text-center">
 
 										<div class="text-center">
-									<h6 data-text= "<?php echo e($popular_safari->type); ?>" style="font-size: 25px;color: white; font-weight: 700; text-transform:uppercase"><?php echo e($popular_safari->type); ?></h6>
+									<h6 data-text= "<?php echo e($popular_safari->type); ?>" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_safari->type); ?></h6>
 			</div>
 
 

@@ -100,16 +100,15 @@
             <div class="row" style="background-color:#688864">
                 <!-- BEGIN TOP BAR LEFT PART -->
 
-                <div class="col-md-8 col-sm-12 additional-shop-info"  style="font-size;color: white;">
+                <div class="col-md-9 col-sm-12 additional-shop-info"  style="font-size;color: white;">
                     <ul class="list-unstyled list-inline">
-                        <!-- <li><i class="fa fa-phone" style="color:red"></i><span>+255 766 236 222</span></li> -->
                           <li>
    <a href="https://wa.me/+255692710255">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height20px;">
                                 +255 753 216 263
                             </a>
-                          </span></li>
-                        <li><i class="fa fa-envelope" style="color:pink;"></i><span>info@palatialtours.com</span></li>
+                        <!--   </span></li>
+                        <li> --><i class="fa fa-envelope" style="color:pink;"></i><span>info@palatialtours.com</span></li>
                     </ul>
                 </div>
 
@@ -120,7 +119,7 @@
                 <!-- BEGIN TOP BAR MENU -->
                <!--  -->
 
-         <div class="col-md-1 col-sm-2">
+         <!-- <div class="col-md-1 col-sm-2">
 
                       <div class="custom-select-box">
                         <select id="basic" class="changeLang" data-placeholder="English"  style="background-color: white;">
@@ -130,7 +129,7 @@
                     <option value="sw" {{ session()->get('locale') == 'sw' ? 'selected' : '' }}>Swahili</option>
             </select>
                     </div>
-                    </div>
+                    </div> -->
 
             </div>
 
