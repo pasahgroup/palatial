@@ -37,8 +37,116 @@
 }
 </style>
 
+
+
+
+<style>
+
+#sticky-social a {
+text-decoration: none;
+text-align:center;
+}
+#sticky-social ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#sticky-social {
+left: 0;
+position: fixed;
+top: 15%;
+z-index: 2500;
+}
+#sticky-social a {
+//position: absolute;
+width: 50px;
+background: #333;
+color: #fff;
+display: block;
+height: 50px;
+font: 20px "Roboto", sans-serif;
+line-height: 60px;
+position: relative;
+text-align: center;
+left:0;
+transition: width .3s;
+}
+#sticky-social a span {
+line-height: 75px;
+left: -160px;
+position: absolute;
+text-align:center;
+width:160px;
+
+}
+
+#sticky-social a:hover {
+left: 100%;
+width:160px;
+}
+
+.entypo-gplus::after {
+content: "Google Plus";
+font-family: 'Roboto';
+margin-top: 25px;
+font-size: 10px;
+position: absolute;
+width: 100%;
+text-align: center;
+left: 0px;
+}
+
+.entypo-twitter::after {
+content: "Twitter";
+font-family: 'Roboto';
+margin-top: 25px;
+font-size: 10px;
+position: absolute;
+width: 100%;
+text-align: center;
+left: 0px;
+}
+.entypo-facebook::after {
+content: "Like Us";
+font-family: 'Roboto';
+margin-top: 25px;
+font-size: 10px;
+position: absolute;
+width: 100%;
+text-align: center;
+left: 0px;
+}
+
+@media (max-width:1200px){
+#sticky-social{
+display:none;
+}
+}
+</style>
+
+
+
  <!--  <link rel="stylesheet" href="../../../../plugins/fontawesome-free/css/all.min.css"> -->
 	<link rel="stylesheet" href="../../css/style.css">
+
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+      <!-- <link rel="stylesheet" href="style.css"> -->
+
+
+<div id="sticky-social">
+<ul>
+<!-- <li><a href="#" class="entypo-gplus" target="_blank"><span>Google Plus</span></a></li>
+<li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+<li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
+    -->
+             <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+</ul>
+</div>
 
 
  @isset($sliders)
