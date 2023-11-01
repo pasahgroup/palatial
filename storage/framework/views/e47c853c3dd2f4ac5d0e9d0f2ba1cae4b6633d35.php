@@ -218,7 +218,7 @@
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
 
-<h3 class="booking-tourPadding" style="color:#c56c1d">
+<h3 class="" style="color:#c56c1d">
 Tour Packages
 </h3>
 										</div>
@@ -464,7 +464,7 @@ Tour Packages
 
 </section>
 
-	<hr class="text-white booking-btn booking-tourPadding">
+	<hr class="text-white">
 
 
 <section id="blog" class="">
@@ -473,7 +473,7 @@ Tour Packages
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
-<h3 class="booking-tourPadding" style="color:#c56c1d">
+<h3 class="" style="color:#c56c1d">
 Special Offers
 </h3>
 
@@ -664,7 +664,7 @@ Special Offers
 
 </div>
  </section>
-	<hr class="text-white booking-btn booking-tourPadding">
+	<hr class="text-white">
 		<!-- Experience v1 -->
 
 <section id="blog" class="">
@@ -675,7 +675,7 @@ Special Offers
 					<div class="col-md-12 text-center">
 
 
-<h3 class="booking-tourPadding" style="color:#c56c1d">
+<h3 class="" style="color:#c56c1d">
 Popular Experiences
 </h3>
 
@@ -765,7 +765,7 @@ Popular Experiences
 																			</div>
 																			 <!--<hr>-->
 														<div class="listing-shot-info rating">
-																<div class="row booking-btn booking-tourPadding">
+																<div class="booking-tourPadding">
 
 																<div class="col-md-12 col-sm-12 col-xs-12 pull-right">
 																			 <a href="/safaris/<?php echo e($popular_safari->id); ?>" class="booking-btn text-center"><b>View More</b></a>
@@ -858,7 +858,7 @@ Popular Experiences
 																			</div>
 																			 <!--<hr>-->
 														<div class="listing-shot-info rating">
-																<div class="row booking-btn booking-tourPadding">
+																<div class="booking-tourPadding">
 
 																<div class="col-md-12 col-sm-12 col-xs-12 pull-right">
 																			 <a href="/safaris/<?php echo e($popular_trekking->id); ?>" class="booking-btn text-center"><b>View More</b></a>
@@ -951,7 +951,7 @@ Popular Experiences
 																			</div>
 														<!--<hr>-->
 														<div class="listing-shot-info rating">
-																<div class="row booking-btn booking-tourPadding">
+																<div class="booking-tourPadding">
 
 																<div class="col-md-12 col-sm-12 col-xs-12 pull-right">
 																			 <a href="/safaris/<?php echo e($popular_holiday->id); ?>" class="booking-btn text-center"><b>View More</b></a>
@@ -1092,7 +1092,7 @@ Group Tours
 						 </div>
 					</div>
  </section>
- 	<hr class="text-white booking-btn booking-tourPadding">
+ 	
 	<section>
 <div class="destinantion-block destinantion-v1 border-bottom border-color-8">
 		<div class="container-fluid">
@@ -1184,515 +1184,7 @@ Popular Destinations
 </div>
 <br>
 </section>
-	<hr class="text-white booking-btn booking-tourPadding">
-	<br>
- <section id="popular_experience" class="blog_section">
-		<div class="container-fluid">
-						<div class="row">
-						<div class="col-md-12" data-aos="fade-up">
-								<div class="section text-center">
-					<div class="col-md-12 text-center">
-							<h3 style="background-color:#0000;" class="text-white booking-tourPadding"><b style="color:#c56c1d;"><blink>Explore Tanzania Uniquenesses:  Do you know.!?</blink></b></h3>
-										</div>
-						</div>
-						</div>
-				</div>
-	<br>
-	<div class="">
-					<!-- BEGIN CONTENT -->
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-						<div class="">
-						 <div data-aos="fade-up">
-								<!-- BEGIN CAROUSEL -->
-						<div class="col-lg-3 col-md-3 col-sm-3 col-xs3 front-carousel booking-tourPadding">
-										<strong>Wildlife</strong>
-
-	<div id="myCarousel1" class="carousel slide" data-ride="carousel">
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-
-	 <div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<?php if(isset($wildlife_first->attachment)): ?>
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-			<?php endif; ?>
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-			<?php if(isset($wildlife_first->attraction_description)): ?>
-		<p class="text-white demo-1"><?php echo e($wildlife_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($wildlife_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-		<?php endif; ?>
-	</div>
-</div>
-</div>
-</div>
-			</div>
- <?php if(isset($wildlife_first->id)): ?>
-		<div class="modal fade" id="view_<?php echo e($wildlife_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"> <?php echo e($wildlife_first->title ?? ''); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-													 <?php if(isset($wildlife_first->attachment)): ?>
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-												 <?php endif; ?>
-
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($wildlife_first->attraction_description ?? ''); ?>.
-																		</p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
-
-
-						<?php $__currentLoopData = $wildlife; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $wildlife_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-												<div class="item">
-
-			<div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-		<p class="text-white demo-1"><?php echo e($wildlife_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($wildlife_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-
-	</div>
-</div>
-</div>
-</div>
-		</div>
-<!-- Wildlife Modal -->
-
-											 <div class="modal fade" id="view_<?php echo e($wildlife_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"><?php echo e($wildlife_data->title); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($wildlife_data->attraction_description); ?>.
-																		</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
-
-		<!-- Left and right controls -->
-	<a data-slide="prev" href="#myCarousel1" class="carousel-control left">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a data-slide="next" href="#myCarousel1" class="carousel-control right">
-											<i class="fa fa-angle-right"></i>
-										</a>
-	</div>
-	 </div>
-
-
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs3 front-carousel booking-tourPadding">
-									<strong>Geographical</strong>
-
-	<div id="myCarousel2" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-		 <!--  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li> -->
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-			 <div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<?php if(isset($geographical_first->attachment)): ?>
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-			<?php endif; ?>
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-			<?php if(isset($geographical_first->attraction_description)): ?>
-		<p class="text-white demo-1"><?php echo e($geographical_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($geographical_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-		<?php endif; ?>
-	</div>
-</div>
-</div>
-</div>
-			</div>
-
-
-		<?php if(isset($geographical_first->id)): ?>
-		<div class="modal fade" id="view_<?php echo e($geographical_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"> <?php echo e($geographical_first->title ?? ''); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-													 <?php if(isset($geographical_first->attachment)): ?>
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-												 <?php endif; ?>
-
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($geographical_first->attraction_description ?? ''); ?>.
-																		</p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
-
-
-		<?php $__currentLoopData = $geographical; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $geographical_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<div class="item">
-			<div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-		<p class="text-white demo-1"><?php echo e($geographical_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($geographical_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-
-	</div>
-</div>
-</div>
-</div>
-		</div>
-<!-- Wildlife Modal -->
-
-											 <div class="modal fade" id="view_<?php echo e($geographical_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"><?php echo e($geographical_data->attraction_title); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($geographical_data->attraction_description); ?>.
-																		</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
-
-		<a data-slide="prev" href="#myCarousel2" class="carousel-control left">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a data-slide="next" href="#myCarousel2" class="carousel-control right">
-											<i class="fa fa-angle-right"></i>
-										</a>
-	</div>
-	 </div>
-
-
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs3 front-carousel booking-tourPadding">
-									<strong>Historical</strong>
-
-	<div id="myCarousel3" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-		 <!--  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li> -->
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-			 <div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<?php if(isset($historical_first->attachment)): ?>
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-			<?php endif; ?>
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-			<?php if(isset($historical_first->attraction_description)): ?>
-		<p class="text-white demo-1"><?php echo e($historical_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($historical_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-		<?php endif; ?>
-	</div>
-</div>
-</div>
-</div>
-			</div>
-
-
-		<?php if(isset($historical_first->id)): ?>
-		<div class="modal fade" id="view_<?php echo e($historical_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"> <?php echo e($historical_first->title ?? ''); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-													 <?php if(isset($historical_first->attachment)): ?>
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-												 <?php endif; ?>
-
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($historical_first->attraction_description ?? ''); ?>.
-																		</p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
-
-
-		<?php $__currentLoopData = $historical; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $historical_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<div class="item">
-			<div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-		<p class="text-white demo-1"><?php echo e($historical_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($historical_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-
-	</div>
-</div>
-</div>
-</div>
-		</div>
-<!-- Wildlife Modal -->
-
-											 <div class="modal fade" id="view_<?php echo e($historical_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"><?php echo e($historical_data->attraction_title); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($historical_data->attraction_description); ?>.
-																		</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
-
-		<a data-slide="prev" href="#myCarousel3" class="carousel-control left">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a data-slide="next" href="#myCarousel3" class="carousel-control right">
-											<i class="fa fa-angle-right"></i>
-										</a>
-	</div>
-	 </div>
-
-
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs3 front-carousel booking-tourPadding">
-									<strong>Culture & Belief</strong>
-
-	<div id="myCarousel4" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-		 <!--  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li> -->
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-			 <div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<?php if(isset($culture_first->attachment)): ?>
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-			<?php endif; ?>
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-			<?php if(isset($culture_first->attraction_description)): ?>
-		<p class="text-white demo-1"><?php echo e($culture_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($culture_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-		<?php endif; ?>
-	</div>
-</div>
-</div>
-</div>
-			</div>
-
-
-		<?php if(isset($culture_first->id)): ?>
-		<div class="modal fade" id="view_<?php echo e($culture_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"> <?php echo e($culture_first->title ?? ''); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-													 <?php if(isset($culture_first->attachment)): ?>
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-												 <?php endif; ?>
-
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($culture_first->attraction_description ?? ''); ?>.
-																		</p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
-
-
-		<?php $__currentLoopData = $culture; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $culture_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<div class="item">
-			<div class="booking-btn-top">
-		<div class="row">
-		<div class="col-md-12">
-			<img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:200px;width:100%;">
-	 </div>
- <div class="col-md-12">
-	<div class="card-body wrapper">
-		<p class="text-white demo-1"><?php echo e($culture_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($culture_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-
-	</div>
-</div>
-</div>
-</div>
-		</div>
-<!-- Wildlife Modal -->
-
-											 <div class="modal fade" id="view_<?php echo e($culture_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					 <h4 class="modal-title"><?php echo e($culture_data->attraction_title); ?></h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-				<div class="modal-body">
-										<div class="img-wapper">
-												<img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
-															</div>
-															<hr>
-					<p class="text-primary"><?php echo e($culture_data->attraction_description); ?>.
-																		</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
-
-		<a data-slide="prev" href="#myCarousel4" class="carousel-control left">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a data-slide="next" href="#myCarousel4" class="carousel-control right">
-											<i class="fa fa-angle-right"></i>
-										</a>
-	</div>
-	 </div>
-
-
-
-</div>
-</div>
-</div>
-
-		</div>
- </section>
- <hr>
- <br>
  <!-- Partner-section -->
 	<section class="">
 			<div class="container-fluid">

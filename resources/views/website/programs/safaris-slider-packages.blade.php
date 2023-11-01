@@ -134,7 +134,7 @@
                                    </div>   
                                         
                                          <ul class="booking-btn booking-tourPadding">
-                            <a href="{{ route('safaris.show',$safari->id) }}" class="booking-btn neon text-center"><b>View More</b></a>
+                            <a href="{{ route('safaris.show',$safari->id) }}" class="booking-btn text-center"><b>View More</b></a>
                                                        
                         </ul>                            
                                 </div>

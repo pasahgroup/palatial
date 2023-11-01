@@ -138,7 +138,7 @@
                                    </div>   
                                         
                                          <ul class="booking-btn booking-tourPadding">
-                            <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn neon text-center"><b>View More</b></a>
+                            <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
                                                        
                         </ul>                            
                                 </div>

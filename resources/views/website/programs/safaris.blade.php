@@ -156,7 +156,7 @@
                                   <div class="row">
                                   <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-tourPadding">
                                     <div class="">
-                                        <a href="/safaris/{{$safari->id}}" class="booking-btn neon text-center"><b>View More</b></a>
+                                        <a href="/safaris/{{$safari->id}}" class="booking-btn text-center"><b>View More</b></a>
                                     </div>  
                                       </div>  
                                       </div>                         
