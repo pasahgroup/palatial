@@ -226,7 +226,7 @@
             </li>
 
 
-             <li class="dropdown">
+            <!--  <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
                 <b>Opportunities</b>
               </a>
@@ -236,7 +236,7 @@
                         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>
                         <li><a href="/New-Partner">Partner-Register</a></li>
               </ul>
-            </li>
+            </li> -->
 
                <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
