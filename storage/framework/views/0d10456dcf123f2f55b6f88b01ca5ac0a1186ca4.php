@@ -64,7 +64,17 @@
 
     <link href="../../css/mform.css" rel="stylesheet">
     <link href="../../css/custom.css" rel="stylesheet">
+    <link href="../../css/sidemenu.css" rel="stylesheet">
    <!-- End Image Libray -->
+
+
+
+<style>
+
+
+</style>
+
+
 
 </head>
 <!-- Head END -->
@@ -91,8 +101,10 @@
  <p><i class="fa fa-phone" style="color:yellow"></i><span> +255 753 216 263</span></p>
       </div>
     </div>
-    <!-- END BEGIN STYLE CUSTOMIZER -->
 
+
+
+    <!-- END BEGIN STYLE CUSTOMIZER -->
     <!-- BEGIN TOP BAR -->
 
          <div class="pre-header">
@@ -263,6 +275,26 @@
         <!-- END NAVIGATION -->
       </div>
     </div>
+
+<div id="sticky-social">
+<ul>
+<!-- <li><a href="#" class="entypo-gplus" target="_blank"><span>Google Plus</span></a></li>
+<li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+<li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
+    -->
+             <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+</ul>
+</div>
+
+
+
+
+
+
     <!-- Header END -->
     <?php echo $__env->yieldContent('content'); ?>
     <br>
