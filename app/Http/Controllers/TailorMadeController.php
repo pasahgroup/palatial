@@ -117,6 +117,8 @@ $status="Active";
         'hear_about_us'=>request('hear_about_us'),
         ]);
           
+         //dd($hear_from); 
+         if($hear_from !=null){
         foreach ($hear_from as $hears) {
         $tourhearfrom = tourEquerySocialMedia::create([
         'tour_equery_id'=>$tailorMadeSummary->id,
@@ -124,8 +126,9 @@ $status="Active";
         'from_name'=>'tailor_made'
         
         ]);
-        }   
-        
+         }   
+        }
+
     return redirect()->back()->with('success','SuccessfulSubmitted');
     }
 

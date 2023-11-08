@@ -137,7 +137,7 @@ class TourController extends Controller
           {
           $title='No Title';
           }
-        $title='Drongo Safaris '.$title;
+        $title='Palatial Tours'.$title;
          $safaris = program::join('attachments','programs.id','attachments.destination_id')
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Drongo safaris</title>
+  <title>Palatial Tour</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -143,7 +143,7 @@
     <!-- Brand Logo -->
     <a href="/dashboard" class="brand-link">
       <img src="../../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><b>Drongo safaris</b></span>
+      <span class="brand-text font-weight-light"><b>Palatial Tour</b></span>
     </a>
 
     <!-- Sidebar -->
@@ -609,7 +609,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0
     </div>
-    <strong>Copyright &copy; 2021 <a href="#">Drongo safaris</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="#">Palatial Tour</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
