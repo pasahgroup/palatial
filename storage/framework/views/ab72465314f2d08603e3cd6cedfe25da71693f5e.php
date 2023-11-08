@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="mb-2">
           <div class="col-sm-6">
             <h1>Add Route Itenary and Attachment</h1>
           </div>
@@ -63,7 +63,7 @@
               <option>Challenging</option>
           </select>                        </div>
                     </div>
-                    
+
                 <div class="col-md-6 col-sm-6 col-xs-12">
                    <label class="control-label" for="price">Total cost</label>
                     <input name="price" type="number" min="0" >
