@@ -48,7 +48,7 @@
                                        <div class="">
 
                                 <div class="row ">
-                                <div class="col-lg-7">
+                                <div class="col-lg-6">
                                 <div class="hotel-diss">
                                <p>{{ $data->itinerary_description }} desc</p>   
                                <hr>                  
@@ -121,7 +121,7 @@
                             <hr>
                             <div class="row">
                             <div class="col-lg-12 text-center">
-                            <a href="#" role="button" class="btn btn-secondary text-center" data-toggle="modal" data-target="#payNow">Print Invoice</a>
+                            <a href="#" role="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#payNow">Print Invoice</a>
                             </div>
                             </div>
                     </div>
