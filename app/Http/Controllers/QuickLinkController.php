@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\quickLink;
 use App\Models\Post;
+use App\Models\program;
 use Illuminate\Http\Request;
 
 class QuickLinkController extends Controller
@@ -98,8 +99,81 @@ class QuickLinkController extends Controller
     {
        // dd($id);
       $quickLinks = quickLink::where('id',$id)
-         ->get()->first();      
-        return view('website.quickLinks.quickLinkSummary',compact('quickLinks')); 
+         ->get()->first();   
+
+            $popular_safari = program::
+  join('attachments','attachments.destination_id','programs.id')
+ 
+  ->select('programs.*','attachments.attachment')
+  //->orwhere('programs.type','Wildlife Safaris')
+ // ->orwhere('programs.type','Combined Tours')
+   //->orwhere('programs.type','Day Tours')
+  ->whereIn('programs.type',array('Wildlife Safaris'))
+  ->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->limit(1)->first();
+
+   //dd($popular_safari->id);
+    $popular_safarif = program::
+  join('attachments','attachments.destination_id','programs.id')
+  ->select('programs.*','attachments.attachment')
+  //->orwhere('programs.type','Wildlife Safaris')
+  //->orwhere('programs.type','Combined Tours')
+  //->orwhere('programs.type','Day Tours')
+   ->whereIn('programs.type',array('Day Tours','Combined Tours','Wildlife Safaris'))
+   
+   ->whereNotIn('programs.id',array($popular_safari->id))
+ 
+  // ->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->offset(1)->limit(8)->get();
+  //dd($popular_safarif);
+
+    $popular_trekking = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Hiking & Trekking')
+ ->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->limit(1)->get()->first();
+
+  $popular_trekkingf = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Hiking & Trekking')
+  //->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+   ->offset(1)->limit(8)->get();
+
+    $popular_holiday = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Beach Holidays')
+ ->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->limit(1)->first();
+  
+     $popular_holidayf = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Beach Holidays')
+ //->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->offset(1)->limit(8)->get();
+  
+   $popular_historical = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Historical Site')
+ ->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->limit(1)->first();
+//dd($popular_historical);
+
+
+ $popular_historicalf = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Historical Site')
+ //->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->offset(1)->limit(4)->get();
+
+        return view('website.quickLinks.quickLinkSummary',compact('quickLinks','popular_safari','popular_safarif','popular_trekking','popular_trekkingf','popular_holiday','popular_holidayf','popular_historical','popular_historicalf'));
     }
     /**
      * Display the specified resource.

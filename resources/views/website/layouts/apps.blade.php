@@ -23,6 +23,7 @@
   <link rel="shortcut icon" href="favicon.ico">
 
         <!--  Custom button -->
+          <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../../css/button.css">
     <link rel="stylesheet" href="../../../css/custom.css">
        <link rel="stylesheet" href="../../css/customAnimation.css">
@@ -179,7 +180,7 @@
                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  header-navigation-col">
                         <h4>Tour Packages</h4>
                         <ul>
-                          <li><a href="/safaris">Wildlife Safaris</a></li>
+                          <li><a href="/safaris" class="fas fa-hiking">Wildlife Safaris</a></li>
                           <li><a href="/trekking"><i class="fas fa-hiking"></i><span> Hiking & Trekking</span></a></li>
                            <li><a href="/holiday">Beach Holidays</a></li>
                             <li><a href="/dayTours">Day Tours</a></li>

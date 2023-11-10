@@ -486,7 +486,6 @@ Tour Packages
 
 	<hr class="text-white">
 
-
 <section id="blog" class="">
 		<div class="container-fluid">
 				<div class="row">

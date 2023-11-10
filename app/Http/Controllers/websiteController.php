@@ -117,6 +117,13 @@ class websiteController extends Controller
  ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
   ->limit(1)->first();
+
+   $popular_holidayf = program::join('attachments','attachments.destination_id','programs.id')
+ ->select('programs.*','attachments.attachment')
+  ->where('programs.type','Beach Holidays')
+ //->where('programs.popular_experience','Yes')
+  ->where('attachments.type','Programs')
+  ->offset(1)->limit(8)->get();
   
    $popular_historical = program::join('attachments','attachments.destination_id','programs.id')
  ->select('programs.*','attachments.attachment')
@@ -126,6 +133,7 @@ class websiteController extends Controller
   ->limit(1)->first();
 //dd($popular_historical);
 
+
  $popular_historicalf = program::join('attachments','attachments.destination_id','programs.id')
  ->select('programs.*','attachments.attachment')
   ->where('programs.type','Historical Site')
@@ -133,12 +141,7 @@ class websiteController extends Controller
   ->where('attachments.type','Programs')
   ->offset(1)->limit(4)->get();
 
- $popular_holidayf = program::join('attachments','attachments.destination_id','programs.id')
- ->select('programs.*','attachments.attachment')
-  ->where('programs.type','Beach Holidays')
- //->where('programs.popular_experience','Yes')
-  ->where('attachments.type','Programs')
-  ->offset(1)->limit(8)->get();
+
 
     $scheduledGroupTours = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')

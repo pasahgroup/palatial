@@ -1,16 +1,15 @@
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
   <link rel="stylesheet" href="../../css/style.css">
   <section class="bg-gray ">
         <div class="container-fluid">
             <div class="package-list-wrap ">
           
-             <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;">
+             <img src="<?php echo e(URL::asset('/storage/uploads/'.$quickLinks->attachment)); ?>" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;">
              
                 <div class="package-list-content">
                   <span>Home/Quick-Link </span>
                                      <h3 class="package-list-title">
-                        <a href="#"><b style="color: white;">{{ $quickLinks->quick_title }}</b></a>
+                        <a href="#"><b style="color: white;"><?php echo e($quickLinks->quick_title); ?></b></a>
                     </h3>
                 </div>
                       </div>
@@ -27,7 +26,7 @@
     <div class=""> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color: white;">
-          {{$quickLinks->quick_description ?? ''}}.
+          <?php echo e($quickLinks->quick_description ?? ''); ?>.
         </p>         
     </div>
     </div>
@@ -76,13 +75,13 @@ Tour Packages
       <div class="item active">
          <div class="package-list-wrap ">
 
-                                        <img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment)}}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                          <p class="booking-btn-gray"><span class="off-box">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</p></span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                          <p class="booking-btn-gray"><span class="off-box"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></p></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $popular_safari->tour_name }}</p>
+      <p><?php echo e($popular_safari->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_safari->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_safari->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
 
@@ -90,20 +89,20 @@ Tour Packages
 
 
 
-            @foreach ($popular_safarif as $safaris)
+            <?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="item">
                                      <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$safaris->attachment) }}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                        <span class="off-box">{{ $safaris->days  }} Days: ${{number_format($safaris->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                        <span class="off-box"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
         <div class="package-list-content">
             <h3 class="package-list-title">
-      <p>{{ $safaris->tour_name }}</p>
+      <p><?php echo e($safaris->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$safaris->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$safaris->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
                       </div>
-                       @endforeach
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
     <!-- Left and right controls -->
@@ -133,35 +132,35 @@ Tour Packages
       <div class="item active">
          <div class="package-list-wrap ">
 
-                                        <img src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment)}}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                        <span class="off-box">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                        <span class="off-box"><?php echo e($popular_trekking->days); ?> Days: $<?php echo e(number_format($popular_trekking->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $popular_trekking->tour_name }}</p>
+      <p><?php echo e($popular_trekking->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_trekking->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_trekking->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
       </div>
 
 
 
-            @foreach ($popular_trekkingf as $trekking)
+            <?php $__currentLoopData = $popular_trekkingf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $trekking): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="item">
                          <div class="package-list-wrap ">
 
 
-                                        <img src="{{URL::asset('/storage/uploads/'.$trekking->attachment) }}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                             <span class="off-box">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                             <span class="off-box"><?php echo e($trekking->days); ?> Days: $<?php echo e(number_format($trekking->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $trekking->tour_name }}</p>
+      <p><?php echo e($trekking->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$trekking->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$trekking->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
                       </div>
-                       @endforeach
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
 
@@ -190,33 +189,33 @@ Tour Packages
     <div class="carousel-inner">
       <div class="item active">
          <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment)}}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                         <span class="off-box">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                         <span class="off-box"><?php echo e($popular_holiday->days); ?> Days: $<?php echo e(number_format($popular_holiday->price),2); ?></span>
         <div class="package-list-content">
             <h3 class="package-list-title">
-      <p>{{ $popular_holiday->tour_name }}</p>
+      <p><?php echo e($popular_holiday->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_holiday->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_holiday->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
       </div>
 
 
 
-             @foreach ($popular_holidayf as $holidays)
+             <?php $__currentLoopData = $popular_holidayf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $holidays): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$holidays->attachment) }}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                         <span class="off-box">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                         <span class="off-box"><?php echo e($holidays->days); ?> Days: $<?php echo e(number_format($holidays->price),2); ?></span>
         <div class="package-list-content">
           <h3 class="package-list-title">
-      <p>{{ $holidays->tour_name }}</p>
+      <p><?php echo e($holidays->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$holidays->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$holidays->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
                       </div>
-                       @endforeach
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
     <!-- Left and right controls -->
@@ -245,33 +244,33 @@ Tour Packages
     <div class="carousel-inner">
       <div class="item active">
          <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$popular_historical->attachment)}}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                         <span class="off-box">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                         <span class="off-box"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $popular_historical->tour_name }}</p>
+      <p><?php echo e($popular_historical->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_historical->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_historical->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
       </div>
 
 
 
-             @foreach ($popular_historicalf as $historicalf)
+             <?php $__currentLoopData = $popular_historicalf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $historicalf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$historicalf->attachment) }}" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-                                            <span class="off-box">{{ $historicalf->days  }} Days: ${{number_format($historicalf->price),2 }}</span>
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                            <span class="off-box"><?php echo e($historicalf->days); ?> Days: $<?php echo e(number_format($historicalf->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $historicalf->tour_name }}</p>
+      <p><?php echo e($historicalf->tour_name); ?></p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$historicalf->id) }}">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$historicalf->id)); ?>">Explore More</a>
                                           </div>
                                         </div>
                       </div>
-                       @endforeach
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 
     <!-- Left and right controls -->
@@ -290,5 +289,7 @@ Tour Packages
 
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/quickLinks/quickLinkSummary.blade.php ENDPATH**/ ?>
