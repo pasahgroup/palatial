@@ -1,5 +1,4 @@
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
   <link rel="stylesheet" href="css/style.css">
 
 <style type="text/css">
@@ -47,9 +46,9 @@
 </style>
 <style>
 .bg-bannerw{
-   @isset($PostcategoryImage->attachment)
-  background-image:url({{URL::asset('/storage/uploads/'.$PostcategoryImage->attachment)}});
-   @endisset
+   <?php if(isset($PostcategoryImage->attachment)): ?>
+  background-image:url(<?php echo e(URL::asset('/storage/uploads/'.$PostcategoryImage->attachment)); ?>);
+   <?php endif; ?>
 
     position: relative;
     background-repeat: no-repeat;
@@ -58,7 +57,7 @@
 </style>
 
 
- @isset($PostcategoryImage->attachment)
+ <?php if(isset($PostcategoryImage->attachment)): ?>
    <section class="same-section-spacing bg-bannerw" style="width:100% !important; height:72vh; !important">
         <div class="container">
             <div class="row">
@@ -83,13 +82,13 @@
     <div class="row"> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color: white;">
-          {{$PostcategoryImage->body ?? ''}}.
+          <?php echo e($PostcategoryImage->body ?? ''); ?>.
         </p>         
     </div>
     </div>
     </div>
 </section>
- @endisset
+ <?php endif; ?>
 <hr>
 <section class="bg-gray">
    
@@ -112,40 +111,40 @@
    <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      @if (isset($wildlife_first->attachment))
-      <img src="{{URL::asset('/storage/attraction/'.$wildlife_first->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
-      @endisset
+      <?php if(isset($wildlife_first->attachment)): ?>
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <?php endif; ?>
    </div>
  <div class="col-md-12">  
   <div class="card-body wrapper">
-      @if (isset($wildlife_first->attraction_description))
-    <p class="text-white demo-1">{{$wildlife_first->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$wildlife_first->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-    @endisset
+      <?php if(isset($wildlife_first->attraction_description)): ?>
+    <p class="text-white demo-1"><?php echo e($wildlife_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($wildlife_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <?php endif; ?>
   </div>
 </div>
 </div>
 </div>
       </div>
- @if (isset($wildlife_first->id))
-    <div class="modal fade" id="view_{{$wildlife_first->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <?php if(isset($wildlife_first->id)): ?>
+    <div class="modal fade" id="view_<?php echo e($wildlife_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title"> {{$wildlife_first->title ?? ''}}</h4> 
+           <h4 class="modal-title"> <?php echo e($wildlife_first->title ?? ''); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                           @if (isset($wildlife_first->attachment))
-                        <img src="{{URL::asset('/storage/attraction/'.$wildlife_first->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
-                         @endisset
+                           <?php if(isset($wildlife_first->attachment)): ?>
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
+                         <?php endif; ?>
                            
                               </div>
                               <hr>
-          <p class="text-primary">{{$wildlife_first->attraction_description ?? ''}}.
+          <p class="text-primary"><?php echo e($wildlife_first->attraction_description ?? ''); ?>.
                                     </p>
 
         </div>
@@ -155,19 +154,19 @@
       </div>      
     </div>
   </div>
-@endisset
+<?php endif; ?>
      
      
-            @foreach ($wildlife as $wildlife_data) 
+            <?php $__currentLoopData = $wildlife; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $wildlife_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
                         <div class="item">
       <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      <img src="{{URL::asset('/storage/attraction/'.$wildlife_data->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
    </div>
  <div class="col-md-12">
   <div class="card-body wrapper">
-    <p class="text-white demo-1">{{$wildlife_data->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$wildlife_data->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <p class="text-white demo-1"><?php echo e($wildlife_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($wildlife_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
    
   </div>
 </div>
@@ -176,22 +175,22 @@
     </div>
 <!-- Wildlife Modal -->
 
-                       <div class="modal fade" id="view_{{$wildlife_data->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                       <div class="modal fade" id="view_<?php echo e($wildlife_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title">{{$wildlife_data->title}}</h4> 
+           <h4 class="modal-title"><?php echo e($wildlife_data->title); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$wildlife_data->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$wildlife_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
                               </div>
                               <hr>
-          <p class="text-primary">{{$wildlife_data->attraction_description}}.
+          <p class="text-primary"><?php echo e($wildlife_data->attraction_description); ?>.
                                     </p>
         </div>
         <div class="modal-footer">
@@ -201,7 +200,7 @@
     </div>
   </div>
     
-    @endforeach    
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    
     </div>
 
     <!-- Left and right controls -->
@@ -232,15 +231,15 @@
        <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      @if (isset($geographical_first->attachment))
-      <img src="{{URL::asset('/storage/attraction/'.$geographical_first->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
-      @endisset
+      <?php if(isset($geographical_first->attachment)): ?>
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <?php endif; ?>
    </div>
  <div class="col-md-12">  
   <div class="card-body wrapper">
-      @if (isset($geographical_first->attraction_description))
-    <p class="text-white demo-1">{{$geographical_first->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$geographical_first->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-    @endisset
+      <?php if(isset($geographical_first->attraction_description)): ?>
+    <p class="text-white demo-1"><?php echo e($geographical_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($geographical_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <?php endif; ?>
   </div>
 </div>
 </div>
@@ -248,26 +247,26 @@
       </div>
 
      
-    @if (isset($geographical_first->id))
-    <div class="modal fade" id="view_{{$geographical_first->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <?php if(isset($geographical_first->id)): ?>
+    <div class="modal fade" id="view_<?php echo e($geographical_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title"> {{$geographical_first->title ?? ''}}</h4> 
+           <h4 class="modal-title"> <?php echo e($geographical_first->title ?? ''); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                           @if (isset($geographical_first->attachment))
-                        <img src="{{URL::asset('/storage/attraction/'.$geographical_first->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
-                         @endisset
+                           <?php if(isset($geographical_first->attachment)): ?>
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
+                         <?php endif; ?>
                            
                               </div>
                               <hr>
-          <p class="text-primary">{{$geographical_first->attraction_description ?? ''}}.
+          <p class="text-primary"><?php echo e($geographical_first->attraction_description ?? ''); ?>.
                                     </p>
 
         </div>
@@ -277,19 +276,19 @@
       </div>      
     </div>
   </div>
-@endisset
+<?php endif; ?>
      
              
-    @foreach ($geographical as $geographical_data)                      
+    <?php $__currentLoopData = $geographical; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $geographical_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                      
 <div class="item">
       <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      <img src="{{URL::asset('/storage/attraction/'.$geographical_data->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
    </div>
  <div class="col-md-12">
   <div class="card-body wrapper">
-    <p class="text-white demo-1">{{$geographical_data->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$geographical_data->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <p class="text-white demo-1"><?php echo e($geographical_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($geographical_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
    
   </div>
 </div>
@@ -298,22 +297,22 @@
     </div>
 <!-- Wildlife Modal -->
 
-                       <div class="modal fade" id="view_{{$geographical_data->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                       <div class="modal fade" id="view_<?php echo e($geographical_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title">{{$geographical_data->attraction_title}}</h4> 
+           <h4 class="modal-title"><?php echo e($geographical_data->attraction_title); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$geographical_data->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$geographical_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
                               </div>
                               <hr>
-          <p class="text-primary">{{$geographical_data->attraction_description}}.
+          <p class="text-primary"><?php echo e($geographical_data->attraction_description); ?>.
                                     </p>
         </div>
         <div class="modal-footer">
@@ -323,7 +322,7 @@
     </div>
   </div>
     
-    @endforeach     
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>     
     </div>
 
     <a data-slide="prev" href="#myCarousel2" class="carousel-control left">
@@ -353,15 +352,15 @@
        <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      @if (isset($historical_first->attachment))
-      <img src="{{URL::asset('/storage/attraction/'.$historical_first->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
-      @endisset
+      <?php if(isset($historical_first->attachment)): ?>
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <?php endif; ?>
    </div>
  <div class="col-md-12">  
   <div class="card-body wrapper">
-      @if (isset($historical_first->attraction_description))
-    <p class="text-white demo-1">{{$historical_first->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$historical_first->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-    @endisset
+      <?php if(isset($historical_first->attraction_description)): ?>
+    <p class="text-white demo-1"><?php echo e($historical_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($historical_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <?php endif; ?>
   </div>
 </div>
 </div>
@@ -369,26 +368,26 @@
       </div>
 
      
-    @if (isset($historical_first->id))
-    <div class="modal fade" id="view_{{$historical_first->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <?php if(isset($historical_first->id)): ?>
+    <div class="modal fade" id="view_<?php echo e($historical_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title"> {{$historical_first->title ?? ''}}</h4> 
+           <h4 class="modal-title"> <?php echo e($historical_first->title ?? ''); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                           @if (isset($historical_first->attachment))
-                        <img src="{{URL::asset('/storage/attraction/'.$historical_first->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
-                         @endisset
+                           <?php if(isset($historical_first->attachment)): ?>
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
+                         <?php endif; ?>
                            
                               </div>
                               <hr>
-          <p class="text-primary">{{$historical_first->attraction_description ?? ''}}.
+          <p class="text-primary"><?php echo e($historical_first->attraction_description ?? ''); ?>.
                                     </p>
 
         </div>
@@ -398,19 +397,19 @@
       </div>      
     </div>
   </div>
-@endisset
+<?php endif; ?>
      
              
-    @foreach ($historical as $historical_data)                      
+    <?php $__currentLoopData = $historical; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $historical_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                      
 <div class="item">
       <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      <img src="{{URL::asset('/storage/attraction/'.$historical_data->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
    </div>
  <div class="col-md-12">
   <div class="card-body wrapper">
-    <p class="text-white demo-1">{{$historical_data->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$historical_data->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <p class="text-white demo-1"><?php echo e($historical_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($historical_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
    
   </div>
 </div>
@@ -419,22 +418,22 @@
     </div>
 <!-- Wildlife Modal -->
 
-                       <div class="modal fade" id="view_{{$historical_data->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                       <div class="modal fade" id="view_<?php echo e($historical_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title">{{$historical_data->attraction_title}}</h4> 
+           <h4 class="modal-title"><?php echo e($historical_data->attraction_title); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$historical_data->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$historical_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
                               </div>
                               <hr>
-          <p class="text-primary">{{$historical_data->attraction_description}}.
+          <p class="text-primary"><?php echo e($historical_data->attraction_description); ?>.
                                     </p>
         </div>
         <div class="modal-footer">
@@ -444,7 +443,7 @@
     </div>
   </div>
     
-    @endforeach     
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>     
     </div>
 
     <a data-slide="prev" href="#myCarousel3" class="carousel-control left">
@@ -474,15 +473,15 @@
        <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      @if (isset($culture_first->attachment))
-      <img src="{{URL::asset('/storage/attraction/'.$culture_first->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
-      @endisset
+      <?php if(isset($culture_first->attachment)): ?>
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_first->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <?php endif; ?>
    </div>
  <div class="col-md-12">  
   <div class="card-body wrapper">
-      @if (isset($culture_first->attraction_description))
-    <p class="text-white demo-1">{{$culture_first->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$culture_first->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
-    @endisset
+      <?php if(isset($culture_first->attraction_description)): ?>
+    <p class="text-white demo-1"><?php echo e($culture_first->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($culture_first->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <?php endif; ?>
   </div>
 </div>
 </div>
@@ -490,26 +489,26 @@
       </div>
 
      
-    @if (isset($culture_first->id))
-    <div class="modal fade" id="view_{{$culture_first->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <?php if(isset($culture_first->id)): ?>
+    <div class="modal fade" id="view_<?php echo e($culture_first->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title"> {{$culture_first->title ?? ''}}</h4> 
+           <h4 class="modal-title"> <?php echo e($culture_first->title ?? ''); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                           @if (isset($culture_first->attachment))
-                        <img src="{{URL::asset('/storage/attraction/'.$culture_first->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
-                         @endisset
+                           <?php if(isset($culture_first->attachment)): ?>
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_first->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
+                         <?php endif; ?>
                            
                               </div>
                               <hr>
-          <p class="text-primary">{{$culture_first->attraction_description ?? ''}}.
+          <p class="text-primary"><?php echo e($culture_first->attraction_description ?? ''); ?>.
                                     </p>
 
         </div>
@@ -519,19 +518,19 @@
       </div>      
     </div>
   </div>
-@endisset
+<?php endif; ?>
      
              
-    @foreach ($culture as $culture_data)                      
+    <?php $__currentLoopData = $culture; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $culture_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                      
 <div class="item">
       <div class="booking-btn-top">
     <div class="row">
     <div class="col-md-12">
-      <img src="{{URL::asset('/storage/attraction/'.$culture_data->attachment)}}" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
+      <img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_data->attachment)); ?>" class="img-fluid" alt="No Image" style="height:140px;width:100%;">
    </div>
  <div class="col-md-12">
   <div class="card-body wrapper">
-    <p class="text-white demo-1">{{$culture_data->attraction_description}}.|</p><a href="#" data-toggle="modal" data-target="#view_{{$culture_data->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+    <p class="text-white demo-1"><?php echo e($culture_data->attraction_description); ?>.|</p><a href="#" data-toggle="modal" data-target="#view_<?php echo e($culture_data->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
    
   </div>
 </div>
@@ -540,22 +539,22 @@
     </div>
 <!-- Wildlife Modal -->
 
-                       <div class="modal fade" id="view_{{$culture_data->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                       <div class="modal fade" id="view_<?php echo e($culture_data->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title">{{$culture_data->attraction_title}}</h4> 
+           <h4 class="modal-title"><?php echo e($culture_data->attraction_title); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$culture_data->attachment) }}" alt="No Image" style="widht:100% !important; height:200px; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$culture_data->attachment)); ?>" alt="No Image" style="widht:100% !important; height:200px; !important">
                               </div>
                               <hr>
-          <p class="text-primary">{{$culture_data->attraction_description}}.
+          <p class="text-primary"><?php echo e($culture_data->attraction_description); ?>.
                                     </p>
         </div>
         <div class="modal-footer">
@@ -565,7 +564,7 @@
     </div>
   </div>
     
-    @endforeach     
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>     
     </div>
 
     <a data-slide="prev" href="#myCarousel4" class="carousel-control left">
@@ -587,41 +586,41 @@
     <hr>
      <div class="container">
     <div class="row"> 
-      @foreach ($datas as $safaris )
+      <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
       <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="package-one blog-box">                    
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$safaris->attachment) }}" alt="{{  $safaris->tour_name }}" style="width:100% !important; height:50vh; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$safaris->attachment)); ?>" alt="<?php echo e($safaris->tour_name); ?>" style="width:100% !important; height:50vh; !important">
                               </div>
                                 <div class="package-content">
-                                    <h3>{{$safaris->attraction_title}}</h3>
+                                    <h3><?php echo e($safaris->attraction_title); ?></h3>
                                    <hr>
-                                    <p class="text-primary demo-1">{{$safaris->attraction_description}}.
+                                    <p class="text-primary demo-1"><?php echo e($safaris->attraction_description); ?>.
                                     </p>
                                 </div>
                                 <p class="text-center">
-                                <a href="#" class="read-btn" data-toggle="modal" data-target="#view_{{$safaris->id}}" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
+                                <a href="#" class="read-btn" data-toggle="modal" data-target="#view_<?php echo e($safaris->id); ?>" data-id="myModal2">Read More<i class="fas fa-angle-double-right"></i></a>
                              </p>
                             </div>
                             </div> 
 
   <!-- Modal -->  
- <div class="modal fade" id="view_{{$safaris->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal fade" id="view_<?php echo e($safaris->id); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <h4 class="modal-title"> {{$safaris->attraction_title}}</h4> 
+           <h4 class="modal-title"> <?php echo e($safaris->attraction_title); ?></h4> 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
         <div class="modal-body">
                     <div class="img-wapper">
-                        <img src="{{URL::asset('/storage/attraction/'.$safaris->attachment) }}" alt="{{  $safaris->tour_name }}" style="widht:100% !important; height:200px; !important">
+                        <img src="<?php echo e(URL::asset('/storage/attraction/'.$safaris->attachment)); ?>" alt="<?php echo e($safaris->tour_name); ?>" style="widht:100% !important; height:200px; !important">
                               </div>
                               <hr>
-          <p class="text-primary">{{$safaris->attraction_description}}.
+          <p class="text-primary"><?php echo e($safaris->attraction_description); ?>.
                                     </p>
         </div>
         <div class="modal-footer">
@@ -630,12 +629,14 @@
       </div>      
     </div>
   </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                      
        </div>
     </div>
 </section>
 <!-- End-Package-Section -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/attractions/attractionClient.blade.php ENDPATH**/ ?>

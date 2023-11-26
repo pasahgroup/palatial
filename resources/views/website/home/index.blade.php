@@ -294,7 +294,7 @@ Tour Packages
 
 
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-									<h6 data-text= "Hiking And Trekking" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Hiking And Trekking</h6>
+									<h6 data-text= "" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Hiking And Trekking</h6>
 
 	<div id="myCarousel2p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -352,7 +352,7 @@ Tour Packages
 	 </div>
 		<!-- Beach Holidays -->
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-												 <h6 data-text= "Beach Holiday" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Beach Holiday</h6>
+												 <h6 data-text= "" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Beach Holiday</h6>
 
 	<div id="myCarousel3p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -407,7 +407,7 @@ Tour Packages
 
  <!-- Beach Holidays -->
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-										 <h6 data-text= "Historical Sites" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Historical Sites</h6>
+										 <h6 data-text= "" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Historical Sites</h6>
 
 	<div id="myCarousel4p" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -1133,9 +1133,13 @@ Popular Destinations
 						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_trekking->attachment) }}); height:250px;width:100%; background-size: cover;">
 								<lif class="one-forth text-center">
 
-									 <div class="text-center">
-								 <h6 data-text= "{{$popular_trekking->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:uppercase">{{ $popular_trekking->type }}</h6>
+										<div class="text-center">
+									<h6 data-text= "{{$popular_trekking->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_trekking->type }}</h6>
 			</div>
+
+
+
+
 										</lif>
 								</div>
 </a>
@@ -1151,9 +1155,8 @@ Popular Destinations
 						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_holiday->attachment) }}); height:250px;width:100%; background-size: cover;">
 								<lif class="one-forth text-center">
 
-
-			<div class="text-center">
-									 <h6 data-text= "{{$popular_holiday->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:uppercase">{{ $popular_holiday->type }}</h6>
+							<div class="text-center">
+									<h6 data-text= "{{$popular_holiday->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_holiday->type }}</h6>
 			</div>
 
 

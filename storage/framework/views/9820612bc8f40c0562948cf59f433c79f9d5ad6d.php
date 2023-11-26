@@ -80,7 +80,7 @@
 
  <hr>
  <section class="booking-btn">
-    <div class="container-fluid">   
+    <div class="container">   
     <div class="row"> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color: white;" class="demo-1">
@@ -93,7 +93,7 @@
  <?php endif; ?>
 <hr>
 <section class="bg-gray">
-    <div class="container-fluid">   
+    <div class="container">   
     <div class="row"> 
       <?php $__currentLoopData = $Postcategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
       <div class="col-lg-4 col-md-6 col-sm-12">
