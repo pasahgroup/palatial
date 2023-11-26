@@ -10,7 +10,7 @@
 </style>
 
   <section class="bg-gray ">
-        <div class="container-fluid">
+        <div class="container">
          
             <div class="row ">
                 {{-- start of tabs --}}

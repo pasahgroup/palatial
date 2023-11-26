@@ -52,8 +52,9 @@
 </style>
 
  <?php if(isset($PostcategoryImage->attachment)): ?>
+  <div class="container">
  <section class="package-list-wrap">
-                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$PostcategoryImage->attachment)); ?>" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;">
+                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$PostcategoryImage->attachment)); ?>" class="" alt="det-img" style="min-height: 35vh !important;max-height:80vh !important;background-size:100% 100%;width: 100%;">
                         
                             <div class="package-list-content">
                                 <p class="package-list-duration"   <div class="banner-box">
@@ -68,23 +69,32 @@
                     </div>
               
   </section>
-  
- <section class="booking-btn">
-    <div class="container-fluid">   
+
+
+
+</div>
+
+
+
+
+
+
+    <div class="container">  
+ <section class="ws-section-spacing booking-btn">   
     <div class="row"> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color: white;">
           <?php echo e($PostcategoryImage->body ?? ''); ?>.
         </p>         
     </div>
-    </div>
-    </div>
+    </div> 
 </section>
- <?php endif; ?>
+   </div>
+    <?php endif; ?>
 <hr>
 
     <section class="">
-        <div class="container-fluid">            
+        <div class="container">            
               <div class="row small-package-list">
                  <?php $__currentLoopData = $addons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $addon): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
