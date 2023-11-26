@@ -3,7 +3,7 @@
 @section('content')
 
   <section class="bg-gray ">
-        <div class="container-fluid">
+        <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 75vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
@@ -63,6 +63,12 @@
                </div>
               </div>
               <div class="tab-pane row fade in active" id="tab-I">
+                 <div class="col-md-10 col-sm-10">
+                                     </div>
+                                       <div class="col-md-2 col-sm-2">
+                    <button type="button" class="btn btn-success float-right">Print Itinerary</button>
+                                     </div>
+
                 <div class="col-md-12 col-sm-12">
                 <p class="card-text">
                                             {{ $programs->itinerary_summury }}

@@ -10,7 +10,7 @@
 
 
     <section class="ws-section-spacing bg-gray">
-    <div class="container-fluid">
+    <div class="container">
           <!-- Start of Image filled from slider -->
              <div class="package-list-wrap ">
                  <img src="{{URL::asset('/storage/uploads/'.$sliders->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:75vh !important;background-size:100% 100%;width: 100%;">
@@ -30,7 +30,7 @@
                 
                                  <hr>
  <section class="ws-section-spacing booking-btn">
-    <div class="container-fluid">   
+    <div class="container">   
     <div class=""> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color: white;">

@@ -283,11 +283,11 @@
 <li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
 <li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
     -->
-             <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+             <li><a href="#"><i class="fab fa-facebook-f"></i><span>-</span></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i><span>-</span></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i><span>-</span></a></li>
+ <!--            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>-</span></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i><span>-</span></a></li> -->
 </ul>
 </div>
 
@@ -300,7 +300,7 @@
     @yield('content')
     <br>
     <div class="main">
-      <div class="row container-fluid">
+      <div class="container">
     <div class="margin-bottom-40 front-steps-wrapper front-steps-count-0">
           <div class="col-md-2 col-sm-8 front-step-col">
             <div class="service-box-heading" style="background-color: #4E7DAC;">

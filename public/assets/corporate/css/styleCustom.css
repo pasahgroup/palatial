@@ -356,9 +356,9 @@ Template Name: Metronic - Responsive Website Template build with Twitter Bootstr
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 8px 10px;
+    padding: 4px 10px;
     font-size: 17px;
-    width: 20%;
+    width: 50%;
   }
 
   .tablink:hover {

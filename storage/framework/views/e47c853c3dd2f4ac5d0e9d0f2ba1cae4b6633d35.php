@@ -44,21 +44,6 @@
       <!-- <link rel="stylesheet" href="style.css"> -->
 
 
-<div id="sticky-social">
-<ul>
-<!-- <li><a href="#" class="entypo-gplus" target="_blank"><span>Google Plus</span></a></li>
-<li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-<li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
-    -->
-             <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
-</ul>
-</div>
-
-
  <?php if(isset($sliders)): ?>
 		<div class="page-slider margin-bottom-40">
 				 <div id="myCarousel" class="carousel slide carousel-slider" data-ride="carousel">
@@ -210,9 +195,8 @@
 <?php endif; ?>
 
  <?php if(isset($welcome_message)): ?>
-<div class="container-fluid">
+<div class="container">
 	 <?php $__currentLoopData = $welcome_message; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-									<div class="">
 									 <div class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
 										 <img src="<?php echo e(URL::asset('/storage/uploads/'.$message->attachment)); ?>" class="img-fluid" alt="Palatial Image" style="height:200px;width:100%;">
 										</div>
@@ -222,14 +206,15 @@
 											<hr>
 											<h6 class="text-white"><?php echo e($message->quick_description); ?>.</h6>
 									</div>
-									<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-							</div>
-		</div>
+						
+								<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+		
 	 <?php endif; ?>
+	 </div>
  <!-- Experience v1 -->
 
 <section id="popular_experience" class="blog_section">
-		<div class="container-fluid">
+		<div class="container">
 
 
 		<div class="row">
@@ -253,61 +238,58 @@ Tour Packages
 						<div class="">
 						 <div data-aos="fade-up">
 								
-			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-						<!-- BEGIN CAROUSEL --> <h6 data-text= "Wildlife Safaris" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Wildlife Safaris</h6>			
+		  <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
+                     <h6 data-text= "" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase;text-align: center;">Wildlife Safaris</h6>
 
-	<div id="myCarousel1p" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-<!--     <ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol> -->
+  <div id="myCarousel4p" class="carousel_no slide" data-ride="carousel">
+    <!-- Indicators -->
+   <!--  <ol class="carousel-indicators">
+      <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel3" data-slide-to="1"></li>
+      <li data-target="#myCarousel3" data-slide-to="2"></li>
+    </ol> -->
 
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				 <div class="package-list-wrap ">
-
-																				<img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-																					<p class="booking-btn-gray"><span class="off-box"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></p></span>
-				<div class="package-list-content">
-			<h3 class="package-list-title">
-			<p><?php echo e($popular_safari->tour_name); ?></p>
-													</h3>
-	 <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_safari->id)); ?>">Explore More</a>
-																					</div>
-																				</div>
-
-			</div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+         <div class="package-list-wrap ">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                         <span class="off-box"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></span>
+        <div class="package-list-content">
+      <h3 class="package-list-title">
+      <p><?php echo e($popular_safari->tour_name); ?></p>
+                          </h3>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_safari->id)); ?>">Explore More</a>
+                                          </div>
+                                        </div>
+      </div>
 
 
 
-						<?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-												<div class="item">
-																		 <div class="package-list-wrap ">
-																				<img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
-																				<span class="off-box"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
-				<div class="package-list-content">
-						<h3 class="package-list-title">
-			<p><?php echo e($safaris->tour_name); ?></p>
-													</h3>
-	 <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$safaris->id)); ?>">Explore More</a>
-																					</div>
-																				</div>
-											</div>
-											 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
+           <?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                        <div class="item">
+                          <div class="package-list-wrap ">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:240px;width:100%;">
+                                            <span class="off-box"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
+        <div class="package-list-content">
+      <h3 class="package-list-title">
+      <p><?php echo e($safaris->tour_name); ?></p>
+                          </h3>
+   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$safaris->id)); ?>">Explore More</a>
+                                          </div>
+                                        </div>
+                      </div>
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
 
-		<!-- Left and right controls -->
-	<a data-slide="prev" href="#myCarousel1p" class="carousel-control left">
-											<i class="fa fa-angle-left"></i>
-										</a>
-										<a data-slide="next" href="#myCarousel1p" class="carousel-control right">
-											<i class="fa fa-angle-right"></i>
-										</a>
-	</div>
-	 </div>
+    <!-- Left and right controls -->
+  <a data-slide="prev" href="#myCarousel4p" class="carousel-control left">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#myCarousel4p" class="carousel-control right">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+  </div>
+   </div>
 
 
 	<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
@@ -486,7 +468,7 @@ Tour Packages
 	<hr class="text-white">
 
 <section id="blog" class="">
-		<div class="container-fluid">
+		<div class="container">
 				<div class="row">
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
@@ -581,7 +563,7 @@ Special Offers
 
 																 <div class="row">
 																		<div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-																																								<a href="<?php echo e(route('safaris.show',$special_private->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
+																									<a href="<?php echo e(route('safaris.show',$special_private->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
 																		</div>
 																			</div>
 																</div>
@@ -664,7 +646,7 @@ Special Offers
 
 															<div class="row">
 																		<div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-																																								 <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
+																					<a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
 																		</div>
 																			</div>
 																</div>
@@ -686,7 +668,7 @@ Special Offers
 		<!-- Experience v1 -->
 
 <section id="blog" class="">
-		<div class="container-fluid">
+		<div class="container">
 				<div class="row">
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
@@ -719,7 +701,7 @@ Popular Experiences
 
 
 																			<div class="">
-																 <h4 class="text-center"> <b style="color:green;"><marquee scrollamount="2"><?php echo e($popular_safari->type); ?></marquee></b>
+																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_safari->type); ?></marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -811,7 +793,7 @@ Popular Experiences
 																	</h3>
 
 																		<div class="">
-																 <h4 class="text-center"> <b style="color:green;"><marquee scrollamount="2"><?php echo e($popular_trekking->type); ?></marquee></b>
+																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_trekking->type); ?></marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -904,7 +886,7 @@ Popular Experiences
 																	</h3>
 
 																	<div class="">
-																 <h4 class="text-center"> <b style="color:green;"><marquee scrollamount="2"><?php echo e($popular_holiday->type); ?></marquee></b>
+																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_holiday->type); ?></marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -997,7 +979,7 @@ Popular Experiences
 <!-- START COUNTER -->
 	<hr class="text-white booking-btn booking-tourPadding">
 <section id="blog_private" class="blog_section">
-		<div class="container-fluid">
+		<div class="container">
 				<div class="row">
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
@@ -1113,7 +1095,7 @@ Group Tours
  	
 	<section>
 <div class="destinantion-block destinantion-v1 border-bottom border-color-8">
-		<div class="container-fluid">
+		<div class="container">
 				<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mt-4">
 					 <div class="col-md-12 text-center">
 						<h3 class="booking-tourPadding" style="color:#c56c1d">
@@ -1126,7 +1108,7 @@ Popular Destinations
 				<div class="mb-1">
 						<!-- Card Block -->
 				<?php if($popular_safari): ?>
-					<div class="col-md-3 mb-3 mb-md-3">
+					<div class="col-md-4 mb-4 mb-md-4">
 						<div class="search_area search_area_two">
 <a href="/safaris">
 						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>); height:250px;width:100%; background-size: cover;">
@@ -1144,7 +1126,7 @@ Popular Destinations
 				 </div>
 					 <?php endif; ?>
 					 <?php if($popular_trekking): ?>
-					<div class="col-md-3 mb-3 mb-md-3">
+						<div class="col-md-4 mb-4 mb-md-4">
 						<div class="search_area search_area_two booking-tourPadding">
  <a href="/trekking">
 						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>); height:250px;width:100%; background-size: cover;">
@@ -1162,7 +1144,7 @@ Popular Destinations
 					 <?php endif; ?>
 
 					 <?php if($popular_holiday): ?>
-				 <div class="col-md-3 mb-3 mb-md-3">
+					<div class="col-md-4 mb-4 mb-md-4">
 						<div class="search_area search_area_two booking-tourPadding">
 						 <a href="/holiday">
 						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>); height:250px;width:100%; background-size: cover;">
@@ -1180,90 +1162,32 @@ Popular Destinations
 						 </div>
 				 </div>
 			 <?php endif; ?>
-					<?php if($popular_historical): ?>
-				<div class="col-md-3 mb-3 mb-md-3">
-						<div class="search_area search_area_two booking-tourPadding">
-						 <a href="/historical-sites">
-						<div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>); height:250px;width:100%; background-size: cover;">
-								<lif class="one-forth text-center">
-
-																															<div class="text-center">
-									 <h6 data-text= "<?php echo e($popular_historical->type); ?>S" style="font-size: 25px;color: white; font-weight: 700; text-transform:uppercase"><?php echo e($popular_historical->type); ?>S</h6>
-			</div>
-
-										</lif>
-								</div>
-								</a>
-						 </div>
-				 </div>
-			 <?php endif; ?>
+		
 		 </div>
 		</div>
 </div>
 <br>
 </section>
 
- <!-- Partner-section -->
-	<section class="">
-			<div class="container-fluid">
-				<div class="row">
-						<div class="col-md-12" data-aos="fade-up">
-								<div class="section text-center">
-					<div class="col-md-12 text-center">
-<h3 class="booking-tourPadding" style="color:#c56c1d">
-Our Partners
-</h3>
-
-						</div>
-						</div>
-						</div>
-				</div>
-				<hr>
-
-
-			<div class="our-clients">
-			<div class="row col-md-12">
-					<div class="owl-carousel owl-carousel6-brands">
-
-						<div class="client-item">
-									<a href="https://www.nepalgram.com">
-									<p class="" style="color:green">Nepal</p>
-								<img src="assets/partners/nepal.jpg" class="img-responsive" alt="No Logo" style="width:100px">
-								<img src="assets/partners/nepal.jpg" class="color-img img-responsive" alt="No Logo" style="width:100px">
-							</a>
-						</div>
-						<div class="client-item">
-									<a href="https://www.africandrongosafaris.com">
-									<p class="" style="color:green">Zambia</p>
-								<img src="assets/partners/zambia.jpg" class="img-responsive" alt="No Logo" style="width:100px">
-								<img src="assets/partners/zambia.jpg" class="color-img img-responsive" alt="No Logo" style="width:100px">
-							</a>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			</div>
-			</section>
-			<!-- END CLIENTS -->
-	<hr>
 	<br>
  <section>
-	 <div class="container-fluid">
-							<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 booking-btn">
-
+	 <div class="container">
+	
+							<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+     <div class="service-box-heading" style="background-color: #4E7DAC;">
 							<p><b>Quick Link</b></p>
 					 <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							 <div class="single-testimonial">
+							     <div class="" style="background-color: #458652;color:#fff;">
 													<ul>
 											 <li><a href="/QuickLink/<?php echo e($data->id); ?>"><b><?php echo e($data->quick_title); ?></b></a><li>  </ul>
 							 </div>
 					 </div>
 						 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 				</div>
+			</div>
 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
- <div class="booking-btn">
+      <div class="service-box-heading" style="background-color: #4E7DAC;">
 	<span><b>Testimonials</b></span>
 								 <span><p>What Travellers Say Tour Reviews</p></span>
 								 <div id="myCarousel1" class="carousel slide">
@@ -1332,6 +1256,7 @@ Our Partners
 </div>
 </div>
 			 </div>
+			</div>
 </section>
 
 		

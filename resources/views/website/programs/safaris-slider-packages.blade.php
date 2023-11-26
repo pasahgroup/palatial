@@ -10,7 +10,7 @@
 
 </section>
     <section class="ws-section-spacing bg-gray">
-    <div class="container-fluid">
+    <div class="container">
           <!-- Start of Image filled from slider -->
              <div class="package-list-wrap ">
                 
@@ -37,7 +37,7 @@
       <!-- End of Image filled from slider -->
       <section class="text-center bg-white">
     <div>
-        <h2 style="background-color:gray;" class="booking-btn booking-tourPadding"><b>Other List of {{$title}}</b></h2>
+        <h2 style="background-color:gray;" class=""><b>Other List of {{$title}}</b></h2>
     </div>
      <!-- Content Header (Page header) -->
          @if($message = Session::get('success'))
@@ -68,7 +68,7 @@
  </section>
         <div class="masonry-item">
             <!-- item -->
-             <div class="row" data-aos="fade-up">
+             <div class="container" data-aos="fade-up">
             @foreach ($safaris as $safari)
                     <div class="col-lg-4 col-md-4">
                         <div class="search_area search_area_two">                         
@@ -145,5 +145,6 @@
         </div>
     </div>
     </div>
+
 </section>
 @endsection

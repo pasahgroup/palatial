@@ -40,6 +40,7 @@ class TourController extends Controller
           $PostcategoryImage = title::where('title', $title)
           ->first();
          
+         //dd('print');
         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
      }
 
