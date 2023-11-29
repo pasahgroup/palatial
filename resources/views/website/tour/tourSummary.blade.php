@@ -2,7 +2,7 @@
 @extends('website.layouts.apps')
 @section('content')
 
-  <section class="bg-gray ">
+  <section class="bg-gray" style="margin-top: 0px;">
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 75vh;background-size: cover;width: 100%;">
@@ -63,11 +63,16 @@
                </div>
               </div>
               <div class="tab-pane row fade in active" id="tab-I">
+
+                   <form method="GET" action="{{ route('safaris.show','print') }}">
+                    @crsf
                  <div class="col-md-10 col-sm-10">
                                      </div>
                                        <div class="col-md-2 col-sm-2">
-                    <button type="button" class="btn btn-success float-right">Print Itinerary</button>
+                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
                                      </div>
+
+                                 </form>
 
                 <div class="col-md-12 col-sm-12">
                 <p class="card-text">
@@ -119,6 +124,7 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab-A">
+
                @foreach ($datas as $data)
      
        <div class="card booking-tourPadding">   
@@ -414,144 +420,9 @@
 
 
 
-{{-- Modal for Enquiry form1 --}}
-<!-- Modal -->
-<div class="modal fade" id="enquiry" tabindex="-1" role="dialog" aria-labelledby="enquiryLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="enquiryLabel">{{ $programs->tour_name }}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
 
 
-<form  method="post" id="post_form" action="{{ route('tourForm.store') }}">
-
-    @csrf  
-
-        <div class="search_area search_area_two booking-tour"> 
-            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h4 id="heading">Enquiry Form</h4>
-                <p>Fill all form field to go to next step</p>
-                <form id="msform">
-                    <!-- progressbar -->
-                    <ul id="progressbar">
-                      <li class="active" id="account"><strong>Personal Details</strong></li>
-                        <li id="personal"><strong>Extra Details</strong></li>
-                        <li id="payment"><strong>Enquiry</strong></li>
-                        <li id="confirm"><strong>Finish</strong></li>
-                    </ul>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div> <br> <!-- fieldsets -->
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Personal Details:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 1 - 4</h2>
-                                </div>
-                            </div> 
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
-                              <label class="fieldlabels">Phone: *</label> <input type="number" name="phone" placeholder="phone" /> 
-                              <label class="fieldlabels">Email: *</label> <input type="number" name="email" placeholder="email" /> 
-
-                            <label class="fieldlabels">Nationality: *
-                            </label>
-                             <input type="text" name="uname" placeholder="nationality" /> 
-                         </div> 
-                        
-                        <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                            <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Extra Details:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 2 - 4</h2>
-                                </div>
-                             </div>
-
-                               <div class="col-lg-6 col-md-6 col-sm-12">
-                                   <label for="">Children (5-12 yrs):</label>
-                                    <div class="form-group">
-                                        <input type="number" class="zt-control" placeholder="0" name="children" min="0">
-                                    </div>
-                                </div>
-                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                 
-                                  <label for="">Tour of Interest:</label>
-                                    <div class="form-group icon_down">
-                                        <select class="selectpicker search-fields form-control" name="tour_type">
-                                              <option value="0">--Select tour type--</option>
-                                            <option value="Safaris">Safaris</option>
-                                            <option value="Trekking">Mt.Trekking</option>
-                                              <option value="Holidays">Beach Holidays</option>
-                                            <option value="Historical_sites">Historical Sites</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
-                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Enquiry:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 3 - 4</h2>
-                                </div>
-                            </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
-                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Finish:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps">Step 4 - 4</h2>
-                                </div>
-                            </div> <br><br>
-                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                            <div class="row justify-content-center">
-                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-   
-</form>
-  </div>
-</div>
-</div>
-</div>
-{{-- end of Enquiry form madal --}}
-
-
-{{-- Modal for booking form --}}
-
-<div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -561,11 +432,47 @@
         </button>
       </div>
       <div class="modal-body">
-        <form  method="post" id="post_form" action="{{ route('tourForm.store') }}">
-    @csrf
-    <div class="row">
-       <div class="col-md-6">
-        <div class="form-group">
+         <div class="search_area search_area_two booking-tour"> 
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> -->
+
+ <div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title"><b>{{$programs->tour_name}}</b></h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="preview-wrap">
+           <div class="preview-img" style="background-image: url({{URL::asset('/storage/uploads/'.$programs->attachment)}});"></div>
+
+            <div class="form-wrap">
+                <h4 id="heading">Booking Form</h4>
+                <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
+                <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
+                    @csrf
+                    <!-- progressbar -->
+                  <!--   <ul id="progressbar">
+                      <li class="active" id="account"><strong>Personal Details</strong></li>
+                        <li id="personal"><strong>Tour Information:</strong></li>
+                        <li id="payment"><strong>Other Information</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul> -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h3 class="fs-title">Personal Details:| Step 1 - 4</h3>
+                                </div>                                
+                            </div> 
+                           
+
+ <div class="form-group">
             @if($discounts !=null)
            <input type="hidden" class="form-control" name="unit_price" value="{{$discounts->new_price}}">
              @else
@@ -574,65 +481,98 @@
                             
              <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
-
-            <label for="">First Name:</label>
-          <input type="text" class="form-control" placeholder="First Name" min="1" max="22" name="first_name">
         </div>
-     </div>
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Last Name:</label>
-          <input type="text" class="form-control" placeholder="Last Name" min="1" max="22" name="last_name">
-        </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Email:</label>
-          <input type="email" class="form-control" placeholder="Email" min="1" max="62" name="email">
-        </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Country:</label>
-          <input type="text" class="form-control" placeholder="Country" name="country">
-        </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Phone:</label>
-          <input type="number" class="form-control" placeholder="Phone number" min="0"  name="phone">
-        </div>
-     </div>
 
-     <div class="col-md-6">
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
+                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
+
+                            <label class="fieldlabels">Nationality: *
+                            </label>
+                             <input type="text" name="country" placeholder="Nationality" /> 
+
+                        </div> 
+                        
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                            <div class="form-card">
+
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
+                                </div>
+                             </div>
+
+                       
+
+
+             <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Travel Date:</label>
+                                    <div class="form-group">
+                                        <input type="text" name="travel_date" id="travel_date" class="form-control datepicker" placeholder="From" value="" required>
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Adults (>16 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="adults" min="0">
+                                    </div>
+                                </div>
+  </div>
+
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Teens (12-14 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="teens" min="0">
+                                    </div>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Children (5-12 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="children" min="0">
+                                    </div>
+                                 </div>
+  </div>
+
+
         <div class="form-group">
             <label for="">Tour type:</label>
                    <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
           <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
         </div>
 
-     </div>
+  
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Accommodations:</label>
-         <select class="selectpicker search-fields form-control" name="accomodation">
-              <option value="0">--Select Accomodation--</option>
-              <option value="Basic">Basic</option>
-              <option value="Comfort">Comfort</option>
-                <option value="Deluxe">Deluxe</option>
-              <option value="Mix">Mix</option>
-              <option value="Not sure">Not sure</option>
-          </select>
+                               
 
-     </div>
-     </div>
+                                    <div class="form-group">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                   <label for="">Accommodation:</label>
+                                    <div class="form-group">
+                                       <select class="form-control" name="accomodation">
+                                            <option value="0">--Select Accomodation--</option>
+                                            <option>Basic</option>
+                                             <option>Comfort</option>
+                                              <option>Deluxe</option>
+                                               <option>Mix</option>
+                                                <option>Not Sure</option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                                               </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
+   <div class="form-group">
             <label for="">Tour Addon:</label>
          <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
@@ -642,46 +582,23 @@
           </select>
 
      </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Travel Date:</label>
-           <div class="form-group date input-datepicker">
-          <input type="date" class="form-control" name="travel_date"
-              data-date-format="yyyy-mm-dd" placeholder="travel date">
-          <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
-      </div>
-     </div>
-     </div>
+                            
+                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Other Information:|Step 3 - 4</h2>
+                                </div>
 
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> No of Adults(>16yrs):</label>
-          <input type="number" class="form-control" placeholder=""  min="0" name="adults">
-        </div>
-           </div>
-
-     <div class="col-md-12">
-        <div class="form-group">
-            <label for=""> No of Teens(13-14yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="teens">
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="form-group">
-            <label for=""> Number of Children (5-12 yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="children">
-        </div>
-        </div>
-
+                              
     <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
 
-         <textarea class="form-control" id="" cols="2" rows="2" name="additional_information" placeholder="Type your additional information here..."></textarea>
+         <textarea class="form-control" id="" cols="2" rows="1" name="additional_information" placeholder="Type your additional information here..."></textarea>
         </div>
      </div>
 
@@ -712,15 +629,40 @@
         <label for=""> Other Media:</label>
            <input type="text" class="form-control" name="hear_about_us">
         </div>
-        </div>
-        </div>    
+        </div> 
+                                </div>
+                          </div> 
+                             
+                        
+                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
+                        <button type="submit" class="btn btn-success">Submit</button>
+                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:| Step 4 - 4</h2>
+                                </div>
+                            </div> <br>
+                            <h2 class="purple-text text-center"><strong>Success!</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully submitted</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
 
-
-<div class="modal-footer">
+                    <div class="modal-footer">
   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-success">Save changes</button>
 </div>
-</form>     
+                </form>
+            </div>
+        </div>   
       </div>
     </div>
   </div>
@@ -728,8 +670,122 @@
 
 {{-- end of booking form madal --}}
 
-<script type="text/javascript" src="../../../js/jquery321.min.js"></script>
+<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
 <!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
+<!-- 
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script> -->
+
+<script>
+function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+$('#myTab a').on('click', function (event) {
+  event.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+
+<script type="text/javascript" src="../../../js/jquery321.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
 
 <script type="text/javascript">
     
@@ -809,36 +865,4 @@ return false;
 });
 </script>
 
-<script>
-function openPage(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-
-$('#myTab a').on('click', function (event) {
-  event.preventDefault()
-  $(this).tab('show')
-})
-</script>
 @endsection
-

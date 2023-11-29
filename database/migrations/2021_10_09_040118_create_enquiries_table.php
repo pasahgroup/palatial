@@ -19,7 +19,7 @@ class CreateEnquiriesTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('email')->nullable();           
 
-            $table->integer('phone')->unsigned();
+            $table->integer('phone')->nullable();
             $table->string('country')->nullable();
 
             $table->integer('tour_id')->unsigned(); 

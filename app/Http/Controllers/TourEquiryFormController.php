@@ -85,6 +85,9 @@ class TourEquiryFormController extends Controller
     {
          $tour_date=request('tour_date'); 
          $yearM =date('Y-m-d', strtotime($tour_date)); 
+
+            $travel_date=request('travel_date'); 
+         $travel_date =date('Y-m-d', strtotime($travel_date)); 
          
           $departurePrice=departures::where('tour_id',request('tour_id'))
           ->where('status','Active')
@@ -184,7 +187,7 @@ class TourEquiryFormController extends Controller
            'teens'=>request('teens'),
             'children'=>request('children'),
              'tour_date'=>$yearM,
-              'travel_date'=>request('travel_date'),
+              'travel_date'=>$travel_date,
 
               'pin'=> $pin,
                'status'=>'Active',
