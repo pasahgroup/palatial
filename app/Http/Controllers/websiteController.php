@@ -147,10 +147,13 @@ class websiteController extends Controller
        ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
-        ->where('departures.group_tour_category','GS')
+        // ->where('departures.group_tour_category','GS')
+        ->whereIn('departures.group_tour_category',['GS','UN','SO'])
         ->where('attachments.type','Programs')
         ->groupBy('departures.group_tour_category')
         ->get();
+
+//dd($scheduledGroupTours);
 
          $place_to_visit = program::join('attachments','programs.id','attachments.destination_id')
          ->join('itineraries','programs.id','itineraries.program_id')

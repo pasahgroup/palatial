@@ -43,9 +43,32 @@ class GrouptourController extends Controller
         return view('website.grouptour.grouptour',compact('programs','PostcategoryImage'));
     }
 
- public function GS()
+ public function group()
     {
-         $tour_category='Scheduled Group Tours';
+      
+            $tour_category='Scheduled Group,Special Ocassions & Utalii Nyumbani Tours';
+
+         $programs = departures::join('programs','departures.tour_id','programs.id')
+       ->join('attachments','attachments.destination_id','programs.id')
+        ->select('departures.*','programs.*','attachments.attachment')
+        ->where('departures.status','Active')
+        // ->where('departures.group_tour_category','GS')
+          ->whereIn('departures.group_tour_category',['GS','UN','SO'])
+        ->where('attachments.type','Programs')
+        ->groupby('departures.group_tour_category')
+         ->groupby('departures.tour_id')
+        ->get();
+
+    $PostcategoryImage = title::where('title','Scheduled Group Tours')
+          ->first();
+         // dd($PostcategoryImage);
+           return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));
+    }
+
+
+     public function GS()
+    {
+           $tour_category='Scheduled Group, Tours';
 
          $programs = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')

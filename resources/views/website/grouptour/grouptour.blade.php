@@ -25,49 +25,22 @@
 }
 </style>
 
- <section class="same-section-spacing bg-bannerw">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10">
-                    <div class="banner-box">
-                        <h2>{{$tour_category}}</h2>
-                        <nav aria-label="breadcrumb">
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{$tour_category}}</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<section class="ws-section-spacing bg-gray">
-    <div class="container">   
-    <div class="row"> 
-      <div class="col-lg-12 col-md-12 col-sm-12">
-        <p><b>
-            @isset($PostcategoryImage->body)
-          {{$PostcategoryImage->body}}.
-         @endisset
-        </b>
-        </p>
-         
-    </div>
-       </div>
-    </div>
-</section>
-</hr>
 
 <section id="blog_private" class="blog_section">
-    <div class="container-fluid">       
+    <div class="container">       
                
-
 <div class="row" data-aos="fade-up">  
-  @foreach ($programs as $program)  
-                    <div class="col-lg-4 col-md-4">
+ 
+  @foreach ($programs as $program)
+            <div class="col-lg-4 col-md-4">
+                @if($program->group_tour_category=="GS")
+<span>Scheduled Group Tour</span>
+@elseif($program->group_tour_category=="SO")
+<span>Special Ocassion Tour</span>
+@else
+<span>Utalii Nyumbani Tour</span>
+@endif
+        
                         <div class="single_blog listing-shot">                         
                                
                                 <div class="listing-shot-img">

@@ -11,6 +11,7 @@
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                 <h4 id="heading">Enquiry Form</h4>
                 <p>Fill all form field to go to next step</p>
+                <!-- tourForm -->
                 <form id="msform"  method="post"  action="<?php echo e(route('enquiry.store')); ?>">
                     <?php echo csrf_field(); ?>
                     <!-- progressbar -->
@@ -36,8 +37,8 @@
                            
                             <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
                              <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
-                              <label class="fieldlabels">Phone: *</label> <input type="number" name="phone" placeholder="phone" /> 
-                              <label class="fieldlabels">Email: *</label> <input type="number" name="email" placeholder="email" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="phone" /> 
+                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
 
                             <label class="fieldlabels">Nationality: *
                             </label>
@@ -136,7 +137,8 @@
                           </div> 
                              
                         
-                        <input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <input type="submit" name="next" class="next action-button" value="Submit" />
+                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
                     <fieldset>
                         <div class="form-card">

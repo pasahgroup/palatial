@@ -244,6 +244,7 @@ Route::get('/safaris-gallery', [galleryController::class, 'safarisGallery'])->na
     Route::get('/historical-gallery', [galleryController::class, 'historicalGallery'])->name('historical-gallery');
 //End of Galleries
 
+Route::get('/group', [GrouptourController::class,'group']);
 Route::get('/Group-scheduled', [GrouptourController::class,'GS']);
 Route::get('/special-occasions', [GrouptourController::class,'SO']);
 Route::get('/Utali-nyumani', [GrouptourController::class,'UN']);

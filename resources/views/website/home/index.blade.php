@@ -62,7 +62,7 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
-			<div class="item active"  style="background-image: url({{URL::asset('/storage/uploads/'.$slidersf->attachment)}});height:66vh;width:100% background-repeat: no-repeat;
+			<div class="item active"  style="background-image: url({{URL::asset('/storage/uploads/'.$slidersf->attachment)}});height:87vh;width:100% background-repeat: no-repeat;
 										 background-size:100% 100%;
 											 background-position: center;">
 										<div class="container">
@@ -98,7 +98,7 @@
 
 	@foreach ($sliders as $slides)
 		<div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}}); height: 65vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}}); height:87vh; width: 100%; background-repeat: no-repeat;
 															background-size:100% 100%;
 											 background-position: center;
 												 position: relative;">
@@ -139,7 +139,7 @@
 
 									@foreach ($quickLinkSliders as $quickSliderf)
 									 <div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); height: 65vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); height: 87vh; width: 100%; background-repeat: no-repeat;
 														background-size:100% 100%;
 											 background-position: center;
 											 background-repeat: no-repeat;
@@ -978,7 +978,7 @@ Popular Experiences
 
 <!-- END WHY CHOOSE US -->
 <!-- START COUNTER -->
-	<hr class="text-white booking-btn booking-tourPadding">
+	<hr class="">
 <section id="blog_private" class="blog_section">
 		<div class="container">
 				<div class="row">
@@ -995,19 +995,27 @@ Group Tours
 				</div>
 	<hr>
 <div class="" data-aos="fade-up">
-	@foreach ($scheduledGroupTours as $program)
+
+	@foreach ($scheduledGroupTours as $program)	
 
 <!-- New Beidge -->
 										<div class="col-lg-4 col-md-4">
+											            @if($program->group_tour_category=="GS")
+<span>Scheduled Group Tour</span>
+@elseif($program->group_tour_category=="SO")
+<span>Special Ocassion Tour</span>
+@else
+<span>Utalii Nyumbani Tour</span>
+@endif
 												<div class="single_blog listing-shot">
 
 																<div class="listing-shot-img">
 																		<div class="blog_image">
-																		<img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" class="img-responsive" alt="{{  $popular_safari->tour_name }}" style="height:250px;width:100%;">
+																		<img src="{{URL::asset('/storage/uploads/'.$program->attachment) }}" class="img-responsive" alt="{{  $program->tour_name }}" style="height:250px;width:100%;">
 																		</div>
 																</div>
 																	 <div class="btn booking-btn-gray">
-																		<h4 class="text-center booking-btn booking-tourPadding demo-3"> <b style="color:" title="{{$popular_safari->tour_name}}">{{$popular_safari->tour_name}}</b>
+																		<h4 class="text-center booking-btn booking-tourPadding demo-3"> <b style="color:" title="{{$program->tour_name}}">{{$program->tour_name}}</b>
 																		</h4>
 
 																</div>
@@ -1019,7 +1027,7 @@ Group Tours
 																				 </div>
 
 																				<div class="col-md-6 col-sm-6 col-xs-6 booking-btn">
-																				<span class="text-white"><strong>From ${{ $popular_safari->price }}</b>  </strong>
+																				<span class="text-white"><strong>From ${{ $program->price }}</b>  </strong>
 																					 </span>
 																				 </div>
 																		</div>
@@ -1031,7 +1039,7 @@ Group Tours
 																						</div>
 
 																							 <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-																									 <strong>{{ $popular_safari->days }} Days, {{ $popular_safari->days -1 }} Nights</strong>
+																									 <strong>{{ $program->days }} Days, {{ $program->days -1 }} Nights</strong>
 																								</div>
 																						 </div>
 
@@ -1042,7 +1050,7 @@ Group Tours
 
 
 																							 <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-																									 <strong>{{ $popular_safari->physical_rating }}</strong>
+																									 <strong>{{ $program->physical_rating }}</strong>
 																								</div>
 																							 </div>
 																								<div class="row">
@@ -1051,7 +1059,7 @@ Group Tours
 																					 </div>
 
 																							 <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-																									 <strong>{{ $popular_safari->category }}-Join</strong>
+																									 <strong>{{ $program->category }}-Join</strong>
 																								</div>
 																						</div>
 																									<div class="row">
@@ -1060,7 +1068,7 @@ Group Tours
 																					 </div>
 
 																							 <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-																									 <strong>{{ $popular_safari->tour_code }}</strong>
+																									 <strong>{{ $program->tour_code }}</strong>
 																								</div>
 																						</div>
 																						 </div>
@@ -1087,13 +1095,13 @@ Group Tours
 						 <div class="row">
 									<div class="col-md-12 col-sm-12 col-xs-12 float-right">
 										<p class="text-right">
-																					<a href="/Group-scheduled" class="read-btn"><b>Explore More Tours</b><i class="fas fa-angle-double-right"></i></a>
+																					<a href="/group" class="read-btn"><b>More Group Tours</b><i class="fas fa-angle-double-right"></i></a>
 																			</p>
 																		</div>
 						 </div>
 					</div>
  </section>
- 	
+ 	<hr>
 	<section>
 <div class="destinantion-block destinantion-v1 border-bottom border-color-8">
 		<div class="container">

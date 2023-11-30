@@ -2,7 +2,7 @@
 @section('content')
 
   <section class="bg-gray ">
-        <div class="container-fluid">
+        <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 80vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">

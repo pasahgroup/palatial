@@ -240,7 +240,7 @@
             </ul>
           </li>
 
-              {{-- Theme --}}
+                {{-- Theme --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -253,19 +253,24 @@
               <li class="nav-item">
                 <a href="/themes" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Slider</p>
+                  <p>Program-Slider</p>
                 </a>
               </li>       
-                         
-              <!--<li class="nav-item">-->
-              <!--  <a href="/why-us" class="nav-link">-->
-              <!--    <i class="far fa-circle nav-icon"></i>-->
-              <!--    <p>Why Us</p>-->
-              <!--  </a>-->
-              <!--</li>-->
+                        <li class="nav-item">
+                <a href="/quickLink" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Page Content</p>
+                </a>
+              </li>    
+          <li class="nav-item">
+                <a href="/PostCategory" class="nav-link">
+                  <i class="fas fa-minus"></i>
+                  <p>Page Type</p>
+                </a>
+              </li>                
+
             </ul>
           </li>
-
           
             {{-- Opportunities --}}
           <li class="nav-item">
@@ -379,79 +384,7 @@
             </ul>
           </li>
 
-
-            {{-- Posts --}}
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-dollar-sign"></i>
-              <p>
-                Posts
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">           
-               <li class="nav-item">
-                <a href="/PostCategory" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page Type</p>
-                </a>
-              </li> 
-                 <li class="nav-item">
-                <a href="/quickLink" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page Content</p>
-                </a>
-              </li>  
-
-            <!--   <li class="nav-item">
-                <a href="/page" class="nav-link">
-                  <i class="fas fa-plus"></i>
-                  <p>Page origin</p>
-                </a>
-              </li>
-               <li class="nav-item">
-                <a href="/widgetList" class="nav-link">
-                  <i class="fas fa-plus"></i>
-                  <p>Widgets</p>
-                </a>
-              </li>
-                 <li class="nav-item">
-                <a href="/createPage" class="nav-link">
-                  <i class="fas fa-plus"></i>
-                  <p>Create Page</p>
-                </a>
-              </li> 
-              <li class="nav-item">
-                <a href="/contact" class="nav-link">
-                  <i class="fas fa-plus"></i>
-                  <p>Contact Page</p>
-                </a>
-              </li>
-               <li class="nav-item">
-                <a href="/aboutus" class="nav-link">
-                  <i class="fas fa-plus"></i>
-                  <p>About us Page</p>
-                </a>
-              </li> 
-
-               <li class="nav-item">
-                <a href="/PostCategory" class="nav-link">
-                  <i class="fas fa-arrow-right"></i>
-                  <p>Pages Category</p>
-                </a>
-              </li>
-                             
-           <li class="nav-item">
-                <a href="/popular-experience" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Popular Experience</p>
-                </a>
-              </li>  --> 
-            </ul>
-          </li>
-
-
-             {{-- Settings --}}
+           {{-- Settings --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
