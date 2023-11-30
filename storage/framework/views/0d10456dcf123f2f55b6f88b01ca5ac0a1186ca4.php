@@ -190,7 +190,8 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  header-navigation-col">
                         <h4>Special Packages </h4>
                         <ul>
-                         <li><a href="/Group-scheduled">Scheduled Group Tours</a></li>
+                         <li><a href="/group">All Group Tours</a></li>
+                          <li><a href="/Group-scheduled">Scheduled Group Tours</a></li>
                 <li><a href="/offers">Special Offers</a></li>
                 <li><a href="/special-occasions">Special Occasions</a></li>
                    <li><a href="/cultural">Cultural Tours</a></li>
