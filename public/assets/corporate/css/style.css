@@ -77,7 +77,7 @@
   padding: 8px 20px;
   color:#ffffff;
   display: block;
-  background-color: #458652;
+  background-color: #496f50;
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -96,7 +96,7 @@
   padding: 2px 15px;
   color:#ffffff;
   display: block;
-  background-color:#6D7956;
+  background-color:#496f50;
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -935,7 +935,7 @@ Header and header elements
 ***/
 .header {
 	box-shadow: 0 1px 2px #8b9b76;
-	background: #6D7956;
+	background: #496f50;
 	border-radius: 0;
 	margin-bottom: 10px;
 	z-index: 999;
