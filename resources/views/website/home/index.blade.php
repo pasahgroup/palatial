@@ -62,7 +62,7 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
-			<div class="item active"  style="background-image: url({{URL::asset('/storage/uploads/'.$slidersf->attachment)}});height:83vh;width:100% background-repeat: no-repeat;
+			<div class="item active"  style="background-image: url({{URL::asset('/storage/uploads/'.$slidersf->attachment)}});height:79vh;width:100% background-repeat: no-repeat;
 										 background-size:100% 100%;
 											 background-position: center;">
 										<div class="container">
@@ -98,7 +98,7 @@
 
 	@foreach ($sliders as $slides)
 		<div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}}); height:83vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}}); height:79vh; width: 100%; background-repeat: no-repeat;
 															background-size:100% 100%;
 											 background-position: center;
 												 position: relative;">
@@ -139,7 +139,7 @@
 
 									@foreach ($quickLinkSliders as $quickSliderf)
 									 <div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); height: 83vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); height: 79vh; width: 100%; background-repeat: no-repeat;
 														background-size:100% 100%;
 											 background-position: center;
 											 background-repeat: no-repeat;

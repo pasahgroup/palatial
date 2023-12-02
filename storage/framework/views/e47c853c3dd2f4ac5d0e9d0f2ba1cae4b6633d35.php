@@ -61,7 +61,7 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
-			<div class="item active"  style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slidersf->attachment)); ?>);height:83vh;width:100% background-repeat: no-repeat;
+			<div class="item active"  style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slidersf->attachment)); ?>);height:79vh;width:100% background-repeat: no-repeat;
 										 background-size:100% 100%;
 											 background-position: center;">
 										<div class="container">
@@ -97,7 +97,7 @@
 
 	<?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 		<div class="item">
-										<div style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>); height:83vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>); height:79vh; width: 100%; background-repeat: no-repeat;
 															background-size:100% 100%;
 											 background-position: center;
 												 position: relative;">
@@ -138,7 +138,7 @@
 
 									<?php $__currentLoopData = $quickLinkSliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quickSliderf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 									 <div class="item">
-										<div style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>); height: 83vh; width: 100%; background-repeat: no-repeat;
+										<div style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>); height: 79vh; width: 100%; background-repeat: no-repeat;
 														background-size:100% 100%;
 											 background-position: center;
 											 background-repeat: no-repeat;
