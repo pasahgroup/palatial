@@ -59,7 +59,9 @@ class programController extends Controller
         $type='Addon';
         }
 
-           $pin=rand(1111,9999);
+//dd(request('main'));
+
+           $pin=rand(1000000,99999999);
            $storeType=request('edit');
             $itDaysBefore=itinerary::where('program_id',request('id'))
              ->where('tour_addon',$type)

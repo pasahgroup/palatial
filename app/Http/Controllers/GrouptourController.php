@@ -38,6 +38,7 @@ class GrouptourController extends Controller
         ->where('attachments.type','Programs')
         ->get();
 
+
    $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
         return view('website.grouptour.grouptour',compact('programs','PostcategoryImage'));
@@ -59,6 +60,8 @@ class GrouptourController extends Controller
          ->groupby('departures.tour_id')
         ->get();
 
+
+//dd($programs);
     $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
          // dd($PostcategoryImage);
@@ -172,7 +175,8 @@ class GrouptourController extends Controller
      
            if($programs ==null){
               $programs = program::
-              where('programs.id',$id)->first();                         }
+              where('programs.id',$id)->first();                        
+               }
 
           $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
             
@@ -210,12 +214,22 @@ class GrouptourController extends Controller
 
       $get_type = program::whereid($id)->first();
         $type = $get_type->type;
-       $addons = addons::join('attachments','addons.id','attachments.destination_id')
-        ->select('addons.*','attachments.attachment')
-        ->where('addons.type','!=',$type)
-        ->where('attachments.type','addon')
-        ->latest()->limit(3)->get();
+      
+       // $addons = addons::join('attachments','addons.id','attachments.destination_id')
+       //  ->select('addons.*','attachments.attachment')
+       //  ->where('addons.type','!=',$type)
+       //  ->where('attachments.type','addon')
+       //  ->latest()->limit(3)->get();
 
+
+ $addons = program::join('attachments','programs.id','attachments.destination_id')
+           ->where('programs.main','addon')
+         ->where('attachments.type','addon')
+        ->select('programs.*','attachments.attachment','attachments.type')
+        ->groupby('programs.id')  
+        ->latest()->limit(3)->get();
+          // ->get();
+//dd($addons);
     //Update seats
     DB::statement("UPDATE departures d,tour_equiry_forms t SET d.booked=(select sum(tt.adults + tt.teens)bookedf from tour_equiry_forms tt where tt.tour_id=$id and tt.status='Active' and d.id=tt.depart_id ) where d.tour_id=$id and d.id=t.depart_id");
 
@@ -228,6 +242,8 @@ class GrouptourController extends Controller
   //   ->where('seats','>','booked')
   //  ->orderBy('start_date')
   // ->get();
+
+
 
    $departureDate=DB::select("select * from departures where tour_id=$id and seats>booked order by start_date");
   //dd($departureDate);
@@ -242,6 +258,8 @@ class GrouptourController extends Controller
       $buyaddons= buyaddons::join('programs','programs.id','buyaddons.program_id')
           ->where('buyaddons.program_id',$id)
          ->get();
+
+
 
         return view('website.grouptour.grouptourSummary',compact('datas','id','programs','basic','basicCount','addons','buyaddons','discounts','departureDate','inclusives','assignLists'));
     }

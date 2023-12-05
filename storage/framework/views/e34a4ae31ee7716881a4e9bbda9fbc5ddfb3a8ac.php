@@ -1,9 +1,11 @@
 <?php $__env->startSection('content'); ?>
 
-  <section class="bg-gray ">
+  <section class="bg-gray">
         <div class="container">
-            <div class="package-list-wrap ">
-                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment)); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 80vh;background-size: cover;width: 100%;">
+        
+
+            <div class="package-list-wrap">
+                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment)); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 72vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
                     <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s)<span
                             class="rate">
@@ -11,7 +13,7 @@
                <!--             $<?php echo e(number_format($discounts->new_price),2); ?>-->
                <!--    <?php else: ?>-->
                <!--$ <?php echo e(number_format($programs->price),2); ?>-->
-              <?php endif; ?></span>
+              <!-- <?php endif; ?></span> -->
                     </p>
                     <h3 class="package-list-title">
                         <?php echo e($programs->tour_name); ?>
@@ -32,6 +34,7 @@
                <span class="off-box">FROM  $ <?php echo e(number_format($programs->price),2); ?></span>
               <?php endif; ?>
              </div>
+
 
             <div class="row ">
                 
@@ -322,6 +325,7 @@
                                <h5 > List of Add-ons</h5>
                                 </p>
                        <!-- Button trigger modal -->
+                     
  <?php $__currentLoopData = $addons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $addon): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <!-- Modal -->
         <div class="package-list-wrap "><img src="<?php echo e(URL::asset('/storage/uploads/'.$addon->attachment)); ?>" class="img-fluid" alt="No Image" style="min-height: 20vh !important;max-height: 80vh !important;width:100%">
@@ -357,105 +361,138 @@
 
 
 
-
-<!-- Modal -->
-<div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><?php echo e($programs->tour_name); ?></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
           </button>
+          <!-- <h4 class="modal-title"><b><?php echo e($programs->tour_name); ?></b></h4> -->
         </div>
         <div class="modal-body">
 
-<form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>">
+          <div class="preview-wrap">
+           
+            <div class="form-wrap">
+                <h4 id="heading">Booking Form:--><span style="color:green"><?php echo e($programs->tour_name); ?></span></h4>
+                <!-- <form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>"> -->
+                <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>">
+                    <?php echo csrf_field(); ?>
+                    <!-- progressbar -->
+                  <!--   <ul id="progressbar">
+                      <li class="active" id="account"><strong>Personal Details</strong></li>
+                        <li id="personal"><strong>Tour Information:</strong></li>
+                        <li id="payment"><strong>Other Information</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul> -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h3 class="fs-title">Personal Details:| Step 1 - 4</h3>
+                                </div>                                
+                            </div> 
+                           
 
-    <?php echo csrf_field(); ?>
-    <div class="row">
-       <div class="col-md-6">
-        <div class="form-group">
-
-            
-              <?php if($discounts !=null): ?>
+ <div class="form-group">
+            <?php if($discounts !=null): ?>
            <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($discounts->new_price); ?>">
              <?php else: ?>
               <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">
-             <?php endif; ?>
-
+             <?php endif; ?>       
+                            
+             <input type="hidden" class="form-control" name="tour_name" value="<?php echo e($programs->tour_name); ?>">
             <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
-
-            <label for="">First Name:</label>
-          <input type="text" class="form-control" placeholder="First Name" min="1" max="22" name="first_name">
         </div>
-     </div>
-     <div class="col-md-6">
+
+
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
+                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
+
+                            <label class="fieldlabels">Nationality: *
+                            </label>
+                             <input type="text" name="country" placeholder="Nationality" /> 
+
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                            <div class="form-card">
+
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
+                                </div>
+                             </div>
+
+                       
+
+
+             <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Travel Date:</label>
+                                    <div class="form-group">
+                                        <input type="text" name="travel_date" id="travel_date" class="form-control datepicker" placeholder="From" value="" required>
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Adults (>16 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="adults" min="0">
+                                    </div>
+                                </div>
+  </div>
+
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Teens (12-14 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="teens" min="0">
+                                    </div>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Children (5-12 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="children" min="0">
+                                    </div>
+                                 </div>
+  </div>
+
+
         <div class="form-group">
-            <label for="">Last Name:</label>
-          <input type="text" class="form-control" placeholder="Last Name" min="1" max="22" name="last_name">
+            <label for="">Tour type:</label>
+                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="<?php echo e($programs->program_id); ?>" readonly="true">
+          <input type="text" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
         </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Email:</label>
-          <input type="email" class="form-control" placeholder="Email" min="1" max="62" name="email">
-        </div>
-     </div>
+                                 
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Country:</label>
-          <input type="text" class="form-control" placeholder="Country" name="country">
-        </div>
-     </div>
+                    <div class="form-group">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                   <label for="">Accommodation:</label>
+                                    <div class="form-group">
+                                       <select class="form-control" name="accomodation">
+                                            <option value="0">--Select Accomodation--</option>
+                                            <option>Basic</option>
+                                             <option>Comfort</option>
+                                              <option>Deluxe</option>
+                                               <option>Mix</option>
+                                                <option>Not Sure</option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                                               </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Phone:</label>
-          <input type="number" class="form-control" placeholder="Phone number" min="0"  name="phone">
-        </div>
-     </div>
-
-      <div class="col-md-6">
-        <div class="form-group">           
-            <label for="">Tour Date:</label>
-             <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="<?php echo e($programs->program_id); ?>" readonly="true">
-          <input type="hidden" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
-             <select class="selectpicker search-fields form-control" name="tour_date">
-              <option value="0">--Select Tour Date--</option>
-        <?php $__currentLoopData = $departureDate; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $departure): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <?php
-                    $i=1;
-                    $myDateTime = DateTime::createFromFormat('Y-m-d', $departure->start_date);                 
-                    $yearM = $myDateTime->format('d-M-Y');  
-                    ?> 
-
-        <option><b class="text-success"><?php echo e($yearM); ?></b></option>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-          </select>
-
-        </div>
-     </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Accommodations:</label>
-          <select class="selectpicker search-fields form-control" name="accomodation">
-              <option value="0">--Select Accomodation--</option>
-              <option value="Basic">Basic</option>
-              <option value="Comfort">Comfort</option>
-                <option value="Deluxe">Deluxe</option>
-              <option value="Mix">Mix</option>
-              <option value="Not sure">Not sure</option>
-          </select>
-
-     </div>
-     </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
+   <div class="form-group">
             <label for="">Tour Addon:</label>
          <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
@@ -465,45 +502,23 @@
           </select>
 
      </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Travel Date:</label>
-           <div class="form-group date input-datepicker">
-          <input type="date" class="form-control" name="travel_date"
-              data-date-format="yyyy-mm-dd" placeholder="travel date">
-          <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
-      </div>
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Other Information:|Step 3 - 4</h2>
+                                </div>
 
-     </div>
-     </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> No of Adults(>16yrs):</label>
-          <input type="number" class="form-control" placeholder=""  min="0" name="adults">
-        </div>
-        </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> No of Teens(13-14yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="teens">
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> Number of Children (5-12 yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="children">
-        </div>
-        </div>
-
-            <div class="col-md-12">
+                              
+    <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
-         <textarea class="form-control" id="" cols="2" rows="2" name="additional_information" placeholder="Type your additional information here..."></textarea>
+
+         <textarea class="form-control" id="" cols="2" rows="1" name="additional_information" placeholder="Type your additional information here..."></textarea>
         </div>
      </div>
 
@@ -527,27 +542,51 @@
         </label>
         </div>
         </div>
-
-
   </div>
+
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="form-group">
         <label for=""> Other Media:</label>
            <input type="text" class="form-control" name="hear_about_us">
         </div>
-        </div>
-        </div>
-        </div>
+        </div> 
+                                </div>
+                          </div> 
+                             
+                        
+                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
+                     
+                      
+                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                           <button type="submit" class="btn btn-success float-left">Submit</button>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:| Step 4 - 4</h2>
+                                </div>
+                            </div> <br>
+                            <h2 class="purple-text text-center"><strong>Success!</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully submitted</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-</form>
-</div>
-</div>
-</div>
 
 
 <script>
@@ -579,6 +618,87 @@ $('#myTab a').on('click', function (event) {
   $(this).tab('show')
 })
 
+</script>
+
+<script type="text/javascript" src="../../../js/jquery321.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
 </script>
 <?php $__env->stopSection(); ?>
 

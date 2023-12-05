@@ -19,6 +19,7 @@ class program extends Model
         'style',
         'tour_code',
         'tour_circuit',
+        'main',
         'overview',
         'tour_highlight',
         'physical_rating',
