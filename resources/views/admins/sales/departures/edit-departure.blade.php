@@ -107,8 +107,7 @@
                             </div>
                         </div>
 
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="col-lg-3 col-md-3s col-sm-6 col-xs-12">
                          <div class="form-group row">
                            <label for="end_date" class="col-sm-4 col-md-4 col-form-label">End Date</label>
                            <div class="col-sm-8 col-md-8">
@@ -117,7 +116,16 @@
                              </div>
                          </div>
 
-                         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                         <div class="form-group row">
+                           <label for="end_date" class="col-sm-4 col-md-4 col-form-label">Days</label>
+                           <div class="col-sm-8 col-md-8">
+                             <input type="number" class="form-control" name="end_date" value="{{ $datas->days}}" disabled>
+                           </div>
+                             </div>
+                         </div>
+
+                         <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                            <div class="form-group row">
                              <label for="status">Status</label>
                              <div class="col-sm-8 col-md-8">

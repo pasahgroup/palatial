@@ -1002,7 +1002,7 @@ Popular Destinations
 									<lif class="one-forth text-center">
 
 										<div class="text-center">
-									<h6 data-text= "{{$popular_safari->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_safari->type }}</h6>
+									<h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_safari->type }}</h6>
 			</div>
 
 
@@ -1020,7 +1020,7 @@ Popular Destinations
 								<lif class="one-forth text-center">
 
 										<div class="text-center">
-									<h6 data-text= "{{$popular_trekking->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_trekking->type }}</h6>
+									<h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_trekking->type }}</h6>
 			</div>
 
 
@@ -1042,7 +1042,7 @@ Popular Destinations
 								<lif class="one-forth text-center">
 
 							<div class="text-center">
-									<h6 data-text= "{{$popular_holiday->type }}" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_holiday->type }}</h6>
+									<h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_holiday->type }}</h6>
 			</div>
 
 
@@ -1064,7 +1064,7 @@ Popular Destinations
 	 <div class="container">
 	
 							<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-     <div class="service-box-heading" style="background-color: #4E7DAC;">
+     <div class="service-box-heading" style="background-color: #496f50;">
 							<p><b>Quick Link</b></p>
 					 @foreach ($datasLink as $data)
 					 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -1077,7 +1077,7 @@ Popular Destinations
 				</div>
 			</div>
 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
-      <div class="service-box-heading" style="background-color: #4E7DAC;">
+      <div class="service-box-heading" style="background-color: #496f50;">
 	<span><b>Testimonials</b></span>
 								 <span><p>What Travellers Say Tour Reviews</p></span>
 								 <div id="myCarousel1" class="carousel slide">

@@ -21,8 +21,10 @@ use App\Models\departures;
 use App\Models\invoice;
 use App\Models\tailorMade;
 use App\Models\TourEquiryForm;
+use App\Models\accommodationInclusive;
 
 use Illuminate\Http\Request;
+use DB;
 
 class PaymentController extends Controller
 {
@@ -144,6 +146,9 @@ class PaymentController extends Controller
             return view('admins.itinerary.add',compact('programs','accommodations','destinations','tour_addon'));
              };
   
+     $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
+    $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
+        ->where('accommodation_inclusives.tour_id',$id)->get();
 
         $basic = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
@@ -154,7 +159,7 @@ class PaymentController extends Controller
         ->get();
         //dd($basic);
 
-        return view('website.payments.groupPaySummary',compact('datas','id','programs','basic','discounts','tourInvoice'));
+        return view('website.payments.groupPaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives'));
     }
 
     /**

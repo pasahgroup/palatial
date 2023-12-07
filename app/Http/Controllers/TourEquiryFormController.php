@@ -5,7 +5,7 @@ use App\Models\program;
 use App\Models\TourEquiryForm;
 use App\Models\tourEquerySocialMedia;
 use App\Models\socialmedia;
-use App\Models\invoice;
+use App\Models\Invoice;
 use App\Models\Tourcostsummary;
 use App\Models\departures;
 
@@ -75,6 +75,44 @@ class TourEquiryFormController extends Controller
         }       
      }
     }
+
+
+
+public function viewTripf($pin)    {
+
+              //Verify if the pin exists
+          // $pin=request('pin');  
+          // dd($pin);      
+
+            $trip = TourEquiryForm::
+            where('tour_equiry_forms.pin',$pin)
+           ->where('tour_equiry_forms.status','Active')->first();        
+            //dd($trip);
+
+           if($trip==null)
+           {
+            return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+           }
+           else
+           {
+           // $id=$trip->tour_id;
+             $id=$trip->id;         
+            // dd($id);
+        if($trip->tour_type=='Private')
+        {
+        return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
+        }
+        else if ($trip->tour_type=='Group') {
+            # code... 
+              return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
+        }else
+        {
+         return 'Tour category was not specified...!';      
+        }       
+     }
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -85,8 +123,9 @@ class TourEquiryFormController extends Controller
     {
          $tour_date=request('tour_date'); 
          $yearM =date('Y-m-d', strtotime($tour_date)); 
-
-            $travel_date=request('travel_date'); 
+       
+// Travel date
+           $travel_date=request('travel_date'); 
          $travel_date =date('Y-m-d', strtotime($travel_date)); 
          
           $departurePrice=departures::where('tour_id',request('tour_id'))
@@ -107,6 +146,8 @@ class TourEquiryFormController extends Controller
         //   {
         
         //  }
+
+      //  dd(request('tour_date'));
        
 
         $pin = rand(111111, 999999);
@@ -198,7 +239,7 @@ class TourEquiryFormController extends Controller
         ]);
 
      
-        $tourcostsummary = invoice::create([
+        $tourcostsummary = Invoice::create([
         'customer_id'=>$tour_costsummary->id,
         'tour_id'=>request('tour_id'),
         'unit_price'=> $unit_price,
@@ -219,7 +260,9 @@ class TourEquiryFormController extends Controller
         ]);
         }
       }
-        return redirect()->back()->with('success','Tour Summary Cost created successful');
+
+      return redirect()->route('viewTripf', [$pin]);
+       // return redirect()->back()->with('success','Tour Summary Cost created successful');
     }
 
     /**

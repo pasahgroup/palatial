@@ -30,6 +30,8 @@ class DeparturesController extends Controller
         // ->where('programs.category','Group')
         ->get();
 
+ //dd($datas);
+
         return view('admins.sales.departures.departure',compact('datas','tours'));
     }
 
@@ -40,7 +42,8 @@ class DeparturesController extends Controller
               ->where('departures.id',$id)
               ->select('departures.id','departures.*','programs.tour_name','programs.days','programs.category','programs.type','programs.price','programs.id as program_id')
               ->get()->first();
-             //dd($datas);
+            //dd($datas);
+
             $tours = program::get();
             return view('admins.sales.departures.edit-departure',compact('datas','tours'));
         }
@@ -136,7 +139,7 @@ class DeparturesController extends Controller
     public function update(Request $request,$id)
     {
       $tours = program::where('id',request('tour_id'))->first();
-
+//dd($tours);
       $originalPrice = $tours->price;
       $discount= request('discount');
       $newprice = $originalPrice - $discount;
@@ -148,8 +151,12 @@ class DeparturesController extends Controller
          if($departures!=null)
          {
           $value=1;
-          $start_date=$departures->start_date;
-         $end_date=date('Y-m-d', strtotime($start_date. ' - '.$value.' days'));
+          $start_date=request('start_date');
+          //dd($start_date);
+         // $end_date=date('Y-m-d', strtotime($start_date. ' - '.$value.' days'));
+            $end_date=date('Y-m-d', strtotime($start_date. ' + '.$tours->days.' days'));
+             $end_date=date('Y-m-d', strtotime($end_date. ' - '.$value.' days'));
+         // $end_date=date('Y-m-d', strtotime($start_date. ' - '.$value.' days'));
           $_date=$end_date;
          }
          else
@@ -157,7 +164,7 @@ class DeparturesController extends Controller
           $_date=request('offer_deadline');
          }
 
-//dd(request('id'));
+ // dd($_date);
       $departure_offer = departures::where('id',request('depart_id'))
         ->update([
           'start_date'=>request('start_date'),
@@ -165,7 +172,7 @@ class DeparturesController extends Controller
           'price'=>request('price'),
            'srs'=>request('srs'),
           'seats'=>request('seats'),
-          'end_date'=>$end_date,
+          'end_date'=>$_date,
           'status'=>request('status'),
           'user_id'=>auth()->id()
      ]);

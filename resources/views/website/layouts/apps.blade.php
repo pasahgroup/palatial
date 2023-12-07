@@ -304,7 +304,7 @@
       <div class="container">
     <div class="margin-bottom-40 front-steps-wrapper front-steps-count-0">
           <div class="col-md-2 col-sm-8 front-step-col">
-            <div class="service-box-heading" style="background-color: #4E7DAC;">
+            <div class="service-box-heading" style="background-color: #496f50;">
               <span><h3>Destinations</h3></span>
             </div>
             <div class="front-step front-step1">
@@ -318,7 +318,7 @@
                   </div>
           </div>
           <div class="col-md-3 col-sm-8 front-step-col">
-            <div class="service-box-heading"  style="background-color: #7C858E">
+            <div class="service-box-heading"  style="background-color: #496f50">
               <span><h3>About Palatial Tours</h3></span>
             </div>
             <div class="front-step front-step2">
@@ -331,7 +331,7 @@
           </div>
         </div>
           <div class="col-md-3 col-sm-8 front-step-col">
-            <div class="service-box-heading"  style="background-color: #4E7DAC">
+            <div class="service-box-heading"  style="background-color: #496f50">
               <span><h3>Support</h3></span>
             </div>
             <div class="front-step front-step3">
@@ -344,7 +344,7 @@
           </div>
         </div>
            <div class="col-md-4 col-sm-8 front-step-col">
-            <div class="service-box-heading" style="background-color: #7C858E">
+            <div class="service-box-heading" style="background-color: #496f50">
               <span><h3>Contacts</h3></span>
             </div>
             <div class="front-step front-step4">

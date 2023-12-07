@@ -143,6 +143,7 @@
                   <thead>
                   <tr>
                     <th>#</th>
+                     <th>Tour  ID</th>
                     <th>Tour Name</th>
                     <th>Tour Category</th>
                     <th>Price</th>
@@ -160,6 +161,7 @@
                  @foreach ($datas as $data)
                   <tr>
                     <td>{{ $data->id}}</td>
+                      <td>{{ $data->tour_id}}</td>
                     <td><a href="{{ route('sales.show',$data->id) }}"> {{ $data->tour_name }}</a></td>
                      <td>{{ $data->group_tour_category }}</td>
                     <td>{{ $data->price }}</td>
