@@ -5,7 +5,7 @@ use App\Models\program;
 use App\Models\TourEquiryForm;
 use App\Models\tourEquerySocialMedia;
 use App\Models\socialmedia;
-use App\Models\Invoice;
+use App\Models\invoice;
 use App\Models\Tourcostsummary;
 use App\Models\departures;
 use App\Models\itinerary;
@@ -449,7 +449,7 @@ public function viewTripf($pin)    {
         ]);
 
      
-        $tourcostsummary = Invoice::create([
+        $tourcostsummary = invoice::create([
         'customer_id'=>$tour_costsummary->id,
         'tour_id'=>request('tour_id'),
         'unit_price'=> $unit_price,
