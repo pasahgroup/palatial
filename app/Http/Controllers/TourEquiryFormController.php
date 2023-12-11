@@ -8,10 +8,24 @@ use App\Models\socialmedia;
 use App\Models\Invoice;
 use App\Models\Tourcostsummary;
 use App\Models\departures;
+use App\Models\itinerary;
 
+use Mail;
 use DB;
 use DateTime;
 use Illuminate\Http\Request;
+
+
+use JasperPHP\JasperPHP as JasperPHP;
+use PHPJasper\PHPJasper;
+
+ require base_path().'/vendor/autoload.php';
+ //require base_path().'/vendor/autoload.php';
+include_once(app_path().'/jrf/PHPJasperXML.inc.php');
+ include_once(app_path().'/jrf/tcpdf/tcpdf.php');
+  //include_once(app_path().'/fpdf184/mysql_table.php');
+  //include_once(app_path().'/fpdf184/pdfg.php');
+ use PHPJasperXML;
 
 class TourEquiryFormController extends Controller
 {
@@ -23,9 +37,205 @@ class TourEquiryFormController extends Controller
      public function index()
        {
 
-       $socialmedia = socialmedia::get();
+   $socialmedia = socialmedia::get();
        return view('website.tour.tourEnquiryForm',compact('socialmedia'));
        }
+
+
+public function email()
+{
+
+//dd('dddd');
+   
+$id=11;
+      $tour_addons = program::where('id', $id)->first();       
+        $type=$tour_addons->main; 
+
+//dd($tour_addons);
+
+        if($type=='Program')
+        {
+         $tour_addon='Programs';
+        }
+        else
+        {
+        $tour_addon='Addon';
+        }
+
+
+$programs = program::
+           join('itineraries','itineraries.program_id','programs.id')
+          ->join('attachments','programs.id','attachments.destination_id')
+         ->where('attachments.type', $tour_addon)
+         ->where('itineraries.tour_addon', $tour_addon)
+         ->where('programs.id',$id)
+            ->select('programs.*','attachments.attachment','itineraries.*')
+          ->get()->first();
+
+      $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
+        ->join('destinations','destinations.id','itinerary_days.destination_id')
+        ->join('programs','programs.id','itineraries.program_id')
+         ->join('locations','destinations.location_id','locations.id')
+        ->join('attachments','accommodations.id','attachments.destination_id')
+        ->orderby('itinerary_days.id','ASC')
+        ->where('itineraries.tour_addon', $tour_addon)
+        ->where('itineraries.program_id',$id)
+        ->where('attachments.type','Accommodation')
+        ->select('accommodations.*','accommodations.type',
+        'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
+        ->get();
+
+
+         if($datas == "[]"){
+      return redirect()->back()->with('info','The Program has no Itinery Data');
+           };
+   $socialmedia = socialmedia::get();
+       return view('website.emails.email',compact('socialmedia','datas','programs'));
+
+}
+
+
+
+
+public function emailSendF()
+{
+
+       include_once(app_path().'/jrf/sample/setting.php');
+       $jasper = new PHPJasperXML();
+           // $jasper = new PHPJasper;
+
+//dd('bvncx');
+$input =app_path().'/reports/pieChart.jrxml';
+ //$input =app_path().'/reports/department.jrxml';
+$output =app_path().'/reports';
+
+$options = [
+    'format' => ['pdf'],
+    'locale' => 'en',
+    'params' => [
+ 'property_id'=>1,
+    ],
+    'db_connection' => [
+         'driver' => 'mysql', //mysql, ....
+         'username' => 'root',
+        //'password' => '',
+        'host' => '127.0.0.1',
+        'database' => 'horesydb',
+        'port' => '3306'
+    ]
+
+    // \Config::get('database.connections.mysql')
+
+];
+
+// Get Itininery
+
+//dd('print tyru');
+
+$id=11;
+
+
+      $tour_addons = program::where('id', $id)->first();       
+        $type=$tour_addons->main; 
+
+//dd($tour_addons);
+
+        if($type=='Program')
+        {
+         $tour_addon='Programs';
+        }
+        else
+        {
+        $tour_addon='Addon';
+        }
+
+      $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
+        ->join('destinations','destinations.id','itinerary_days.destination_id')
+        ->join('programs','programs.id','itineraries.program_id')
+         ->join('locations','destinations.location_id','locations.id')
+        ->join('attachments','accommodations.id','attachments.destination_id')
+        ->orderby('itinerary_days.id','ASC')
+        ->where('itineraries.tour_addon', $tour_addon)
+        ->where('itineraries.program_id',$id)
+        ->where('attachments.type','Accommodation')
+        ->select('accommodations.*','accommodations.type',
+        'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
+        ->get();
+
+
+         if($datas == "[]"){
+      return redirect()->back()->with('info','The Program has no Itinery Data');
+           };
+
+//dd('zz');
+//dd('zzkx');
+// $jasper = new PHPJasper;
+//dd($jasper);
+
+// $jasper->process(
+//         $input,
+//         $output,
+//         $options
+// )->execute();
+
+//dd('zzkx back');
+//Send report
+
+
+
+
+
+
+
+
+
+
+
+ $socialmedia = socialmedia::get();
+
+$date=date('d-M-Y');
+// $data["email"] = "palatialtours@gmail.com";
+$data["email"] = "buruwawa@gmail.com";
+
+$data["title"] = "ITINERARY";
+$data["body"] = "Manyara Best View Hotel: Daily General Inspection Report held on $date";
+$data["date"] = "Date: $date";
+
+// $arrayName =$socialmedia;
+$data['socialmedia'] =$socialmedia;
+$data['datas'] =$datas; 
+$data['programs'] =$tour_addons; 
+//dd($data);
+
+$files = [
+//app_path('reports/pieChart.pdf'),
+
+// app_path().'/reports/itinerayReportf.pdf',
+// public_path('files/reports.png'),
+];
+  //SendMailJobf::dispatch($data);
+ //dd('try34');
+Mail::send('website.emails.email_send',$data, function($message)use($data, $files) {
+$message->to($data["email"], $data["email"])
+        ->subject($data["title"]);
+foreach ($files as $file){
+    $message->attach($file);
+}
+});
+
+dd('Mail sent successfully');
+}
+
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -260,6 +470,114 @@ public function viewTripf($pin)    {
         ]);
         }
       }
+
+//Send Email
+    //  dd('print TourForm');
+ include_once(app_path().'/jrf/sample/setting.php');
+       $jasper = new PHPJasperXML();
+           // $jasper = new PHPJasper;
+
+//dd('bvncx');
+$input =app_path().'/reports/pieChart.jrxml';
+ //$input =app_path().'/reports/department.jrxml';
+$output =app_path().'/reports';
+
+$options = [
+    'format' => ['pdf'],
+    'locale' => 'en',
+    'params' => [
+ 'property_id'=>1,
+    ],
+    'db_connection' => [
+         'driver' => 'mysql', //mysql, ....
+         'username' => 'root',
+        //'password' => '',
+        'host' => '127.0.0.1',
+        'database' => 'horesydb',
+        'port' => '3306'
+    ]
+
+    // \Config::get('database.connections.mysql')
+
+];
+
+// Get Itininery
+
+//dd('print tyru');
+
+$id=request('tour_id');
+
+
+      $tour_addons = program::where('id', $id)->first();       
+        $type=$tour_addons->main; 
+
+//dd($tour_addons);
+
+        if($type=='Program')
+        {
+         $tour_addon='Programs';
+        }
+        else
+        {
+        $tour_addon='Addon';
+        }
+
+      $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
+        ->join('destinations','destinations.id','itinerary_days.destination_id')
+        ->join('programs','programs.id','itineraries.program_id')
+         ->join('locations','destinations.location_id','locations.id')
+        ->join('attachments','accommodations.id','attachments.destination_id')
+        ->orderby('itinerary_days.id','ASC')
+        ->where('itineraries.tour_addon', $tour_addon)
+        ->where('itineraries.program_id',$id)
+        ->where('attachments.type','Accommodation')
+        ->select('accommodations.*','accommodations.type',
+        'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
+        ->get();
+
+
+         if($datas == "[]"){
+      return redirect()->back()->with('info','The Program has no Itinery Data');
+           };
+
+
+
+
+ $socialmedia = socialmedia::get();
+
+$date=date('d-M-Y');
+// $data["email"] = "palatialtours@gmail.com";
+$data["email"] = request('email');
+
+$data["title"] = "ITINERARY "."$tour_addon;
+$data["body"] = "Manyara Best View Hotel: Daily General Inspection Report held on $date";
+$data["date"] = "Date: $date";
+
+// $arrayName =$socialmedia;
+$data['socialmedia'] =$socialmedia;
+$data['datas'] =$datas; 
+$data['programs'] =$tour_addons; 
+//dd($data);
+
+$files = [
+//app_path('reports/pieChart.pdf'),
+
+// app_path().'/reports/itinerayReportf.pdf',
+// public_path('files/reports.png'),
+];
+  //SendMailJobf::dispatch($data);
+ //dd('try34');
+Mail::send('website.emails.email_send',$data, function($message)use($data, $files) {
+$message->to($data["email"], $data["email"])
+        ->subject($data["title"]);
+foreach ($files as $file){
+    $message->attach($file);
+}
+});
+
+///dd('Mail sent successfully');
+
 
       return redirect()->route('viewTripf', [$pin]);
        // return redirect()->back()->with('success','Tour Summary Cost created successful');

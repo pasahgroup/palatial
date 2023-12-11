@@ -91,7 +91,14 @@ class PaymentController extends Controller
        where('status','Deluxe')
        ->get();
 
-        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','comfort','luxury','discounts','tourInvoice'));
+ $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
+
+   $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
+        ->where('accommodation_inclusives.tour_id',$id)->get();
+
+$basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_FORMAT(d.start_date,'%m-%Y')datef from departures d,programs p,attachments a where d.tour_id=p.id and a.destination_id=p.id and d.status='Active' and a.type='Programs' and d.tour_id=$id group by datef)as tmp_table order by DATE_FORMAT(datef,'%m-%Y')");
+
+        return view('website.payments.privatePaySummary',compact('datas','basicCount','inclusives','assignLists','id','programs','basic','comfort','luxury','discounts','tourInvoice'));
     }
 
  //payment for scheduled group tours

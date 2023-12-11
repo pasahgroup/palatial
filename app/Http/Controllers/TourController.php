@@ -280,8 +280,9 @@ class TourController extends Controller
     public function show($id)
     {
  //dd('dd');
-        
-    $tour_addons = program::where('id', $id)->first();       
+       
+    $tour_addons = program::where('id',$id)->first();
+
         $type=$tour_addons->main; 
 
         if($type=='Program')
@@ -367,6 +368,19 @@ $discounts=specialOffer::where('tour_id',$id)->first();
          $buyaddons= buyaddons::join('programs','programs.id','buyaddons.program_id')
           ->where('buyaddons.program_id',$id)
          ->get();
+
+
+// Send Email to clint
+
+
+
+
+
+
+
+
+
+
 
         return view('website.tour.tourSummary',compact('datas','id','programs','basic','comfort','luxury','buyaddons','addons','addondatas','discounts','inclusives','assignLists'));
     }

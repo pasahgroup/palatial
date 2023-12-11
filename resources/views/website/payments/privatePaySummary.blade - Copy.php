@@ -279,11 +279,10 @@
                     </div>
                     </div>
 {{-- End of tour summary sidebar --}}
-
                 </div>
+
                 
                 </div>
-
                 </div>
             </div>
 
@@ -327,7 +326,7 @@
      </div>
 
         </div>
-        </div>
+       
 
 
 <div class="modal-footer">
@@ -335,6 +334,7 @@
   <button type="submit" class="btn btn-primary">Pay</button>
 </div>
 </form>
+ </div>
 </div>
 </div>
 </div>

@@ -1,109 +1,216 @@
 <?php $__env->startSection('content'); ?>
 
-  <section class="bg-gray ">
+
+   <style>
+            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+        </style>
+
+
+
+
+
+  <section class="bg-gray" style="margin-top: 0px;">
         <div class="container">
-            <div class="package-list-wrap ">
-                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment)); ?>" class="img-fluid" alt="det-img" style="height:400px !important">
-                <div class="package-list-content">
 
-                    <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s) Total Costs
-                    </p>
-                    <h3 class="package-list-title">
-                        <a href="#"><?php echo e($programs->tour_name); ?></a>
-                    </h3>
+
+ <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                    
+
+                    <div class="grid grid-cols-8 md:grid-cols-8">
+                        <div class="p-12">
+                        
+                                <div class="mt-8 text-gray-600 dark:text-gray-400 text-sm">
+                                  
+                                     <div class="col-md-12 col-lg-8 masonry">
+                        <div class="card">
+                        <div class="card-body">
+                            <div >
+                                <h4 class="text-secondary"> Tour Summary</h4>
+                            </div>
+                            <div>Name: <b><?php echo e($programs->tour_name); ?></b></div>
+                            <div>Type: <b><?php echo e($programs->type); ?></b></div>
+                            <div>Style: <b><?php echo e($programs->style); ?></b></div>
+                            <div>Duration: <b><?php echo e($programs->days); ?> Days</b></div>
+                            <div>Countries: <b>Tanzania</b> </div>
+                            <div>Destinations:
+                                <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destnation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                               <span class="text-primary " style="font-size: 12px; border-right:solid 1px #ddd; padding-right:2px"> <?php echo e($destnation->destination_name); ?></span>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>
+
+                      
+                        
+                            <div class="col-lg-8 text-center">
+                             <?php if($programs->payee_status !='Paid'): ?>
+                              <a href="#" role="button" class="btn btn-success text-center" data-toggle="modal" data-target="#payNow">Pay Now</a>
+                            <?php else: ?>
+                            <p style="font-style: color:red"><span class="text-primary">Invoice  Alread Paid</span></p>
+                              <?php endif; ?>
+                            </div>
+
+                          
+                            <div class="row">
+                            <div class="col-lg-4 text-center">
+                            <a href="#" role="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#bookNow">Print Invoice</a>
+                            </div>
+                            </div>
+                    </div>
+                    </div>
                 </div>
-             <?php if($discounts !=[]): ?>
-           <span class="off-box">
-            
-                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                          <span class="text-danger" style="font-size:18px"><strong>$<?php echo e($discounts->new_price); ?> </strong> pp
-                                           </span><s style=""><sup>$ <?php echo e($programs->price); ?> </sup></s><br>
-                                            <span style="font-size:12px;">Save $<?php echo e($discounts->save); ?></span>
-                </div>
-              </span>
-              <?php else: ?>
-               <span class="off-box">Total Costs: $<?php echo e(number_format($programs->total_cost)); ?></span>
-              <?php endif; ?>
-            </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                      
+                 
 
+<hr>
+<br>
+<br>
 
+             <!-- Tabs starts here -->
             <div class="row ">
                 
-                <div class="col-lg-9 col-md-9 col-sm-12 masonry ">
-                    <div class="package-detail">
-                              <div class="tab" id="myTabContent">
-                                    <button class="tablink" onclick="openPage('tabH', this, 'orange')">Highlight</button>
-                                    <button class="tablink" onclick="openPage('tabI', this, 'orange')" id="defaultOpen" >Itinerary</button>
-                                    <button class="tablink" onclick="openPage('tabA', this, 'orange')">Accommodations</button>
-                                    <button class="tablink" onclick="openPage('tabC', this, 'orange')" >Tour Cost</button>
-                                    <button class="tablink" onclick="openPage('tabE', this, 'orange')">Extra Information</button>
-                            </div>
-                        <div id="tabH" class="tabcontent">
-                            <p>
-                                <b>Tour Short Desc:</b> <?php echo e($programs->tour_highlight); ?></p>
+            <div class="col-lg-9 col-md-9 col-sm-12 masonry ">
+                    <div class="package-detail"> 
+                             
+            <div class="">
+            <ul class="nav nav-tabs">
+              <li><a href="#tab-H" data-toggle="tab">Highlight</a></li>
+              <li class="active"><a href="#tab-I" data-toggle="tab">Itinerary</a></li>
+              <li><a href="#tab-A" data-toggle="tab">Accommodations</a></li>
+              <li><a href="#tab-C" data-toggle="tab">Tour Cost</a></li>
+              <li><a href="#tab-E" data-toggle="tab">Extra Information</a></li>
+            </ul>
+            <div class="tab-content booking-btn">
+              <div class="tab-pane row fade" id="tab-H">                
+                <div class="col-md-12 col-sm-12">
+                <p>
+                                <?php echo e($programs->tour_highlight); ?></p>
                                     <hr>
                                 <p>Maps Come Here</p>
-                            </div>
-                            
-                            <div id="tabI" class="tabcontent">
+               </div>
+              </div>
+              <div class="tab-pane row fade in active" id="tab-I">
 
-                                            <p class="card-text">Summary:
-                                                <?php echo e($programs->itinerary_summury); ?>
+                   <form method="GET" action="<?php echo e(route('safaris.show','print')); ?>">
+                    @crsf
+                 <div class="col-md-10 col-sm-10">
+                                     </div>
+                                       <div class="col-md-2 col-sm-2">
+                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
+                                     </div>
+
+                                 </form>
+
+                <div class="col-md-12 col-sm-12">
+                <p class="card-text">
+                                            <?php echo e($programs->itinerary_summury); ?>
 
                                             </p>
                                             <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <div class="card card-primary card-outline">
-                                                <div class="card-header">
-                                                <h5 class="m-0"> Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></h5>
+                                            <div class="card card-primary booking-tourPadding">
+                                                <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
+                                                <span><b> Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
+
                                                 </div>
                                                 <div class="card-body">
-
                                                 
 
                                                 <div class="row masonry-item">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
                                        <div class="">
 
-                                <div class="row ">
+                                <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
+                               <p class="booking-btn-gray"><?php echo e($data->itinerary_description); ?></p>   
+                                               
+                                                     
+                               <div class="row"> 
+                                      <div class="col-md-12 col-lg-12 col-sm-12">
+                                        <p><b class="text-success">Distance:</b> <?php echo e($data->distance); ?> KM <b class="text-success">Transport:</b> <?php echo e($data->transport); ?></p>
 
-                               <p><?php echo e($data->itinerary_description); ?></p>                                 <hr>                                         <div class="row">                   
-                                <div class="col-md-6 col-lg-6 col-sm-12">                                    
-                                  <div class="rating">                                                                            <h4>Destination</h4>                                                        </div>                                                                        
-                                  <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> <?php echo e($data->destination_name); ?></a>     
-                                   </div>                                                                                                                               
-                                <div class="col-md-6 col-lg-6 col-sm-12">                              
-                                <div class="rating">                                                                          <h4>Accommodation</h4>                                                                        </div>                                                                        <a class="map-viw" href="#"><i class="fa fa-home"></i> <?php echo e($data->accommodation_name); ?></a>                                              </div>
+                                          <p><b class="text-success">Accommodation:</b> <?php echo e($data->accommodation_name); ?> | <b class="text-success">Meal Plan:</b> <?php echo e($data->meal); ?></p>
+                                      </div>           
+                                                                                 
                                                   </div>
                                                  </div>
                                                </div>
-                                        <div class="col-lg-5">                           <div class="hotel-pics-one">                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" alt="" style=" height:200px !important">                                                                        </div>                                                  </div>
-                                                            </div>
-                                                        </div>
+                                        <div class="col-lg-5">                           
+                                            <div class="hotel-pics-one">                                               <img src="<?php echo e(URL::asset('/storage/destination/'.$data->photo)); ?>" alt="" style="height: 32vh !important;width:100%">                                                                              </div> 
 
-                                                    </div>
+                                                 </div>
+                                                 </div>
+                                                </div>
+                                                </div>
                                                 </div>
 
-                                                
+                                        
                                             </div>
                                             </div>
+                                            <hr>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-A">
 
-<div id="tabA" class="tabcontent">
- <p>Photo Comes Here</p>
-                            <p><b>Accomodation Name: </b>
-                              <?php echo e($data->accommodation_name); ?></p>
-                            <p><b>Description: <?php echo e($data->accommodation_descriptions); ?></b></p>
-                            <p><b>Category: <?php echo e($data->category); ?></b></p>
-</div>
+               <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+     
+       <div class="card booking-tourPadding">   
+      <div class="card-header booking-tourPadding" style="background-color:green">
+    <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
+                     </div>          
 
-<div id="tabC" class="tabcontent">
+                        <div class="card-body">
+                       <div class="row ">
+                                <div class="col-lg-7">
+                                <div class="hotel-diss">
+                
+                               <div class="row">                   
+                                <div class="col-md-6 col-lg-6 col-sm-12">                                   
+                                  <div class="rating">                     
+                                    <h4>Location Details</h4>                        
+                                  </div>                                                                        
 
-        <div class="card">
+                                  <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> <?php echo e($data->destination_name); ?></a> 
+                                     <a class="map-viw" href="#"><i class="fa fa-home"></i> <?php echo e($data->location_name); ?>/<?php echo e($data->region); ?>/<?php echo e($data->country); ?></a>    
+                                   </div>                                                                                                                           
+                                <div class="col-md-6 col-lg-6 col-sm-12 booking-tour">                             
+                                <div class="rating">                                                                       <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b><?php echo e($data->accommodation_name); ?></b></a>      
+
+                                    <div>                            
+                                     <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Standard Category: <br>  
+                                        <?php for($i=0;$i<$data->national_standard;$i++): ?>                                 
+                                        <span class="fa fa-star text-warning"></span>
+                                        <?php endfor; ?>
+                                         <?php for($i=0;$i<5-$data->national_standard;$i++): ?>   
+                                        <span class="fa fa-star-o text-warning"></span>
+                                           <?php endfor; ?>
+                                         </div></b></a>
+ 
+                                       <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Our Category</b>: <?php echo e($data->type); ?>:</a>
+                                       <a href="https://<?php echo e($data->url); ?>" class="btn btn-primary" role="button">View More</a>                                          </div>
+                                                  </div>
+                                                 </div>
+                                               </div>
+                                        <div class="col-lg-5">                  
+                                            <div class="hotel-pics-one">                                    
+                                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" alt="" style="height: 32vh !important;width:100%">        
+                                            </div>                   
+
+                                      </div>
+                               </div>                           
+                                </div>
+                                </div>  
+                                <hr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
+             
+              </div>
+              <div class="tab-pane fade" id="tab-C">               
+                 <div class="card booking-btn">                    
         <div class="card-body">
-            <div class="card-body">
+            <div class="card-body">               
         <table class="table table-bordered data-table">
         <colspan>
            <col width="10%">
@@ -111,7 +218,7 @@
           <col width="10%">
         </colspan>
         <tr>
-          <th class="title" colspan="8" style="background-color:white"><b>BASIC LEVEL ACCOMODATIONS</b></th>
+          <th class="title" colspan="8" style="background-color:gray;"><b>BASIC LEVEL ACCOMODATIONS</b></th>
         </tr>
         <tr>
            <th class="title" colspan="2"></th>
@@ -119,8 +226,7 @@
         </tr>
         <tr>
         <th>#</th>
-          <th>Season</th>
-           <th>Program</th>
+          <th>Season</th>          
           <th>2PAX</th>
            <th>3PAX</th>
             <th>4PAX</th>
@@ -129,11 +235,11 @@
               <th>SRS</th>
         </tr>
 
- <?php $__currentLoopData = $basic; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = $basic; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datab): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <tr>
                     <td><?php echo e($datab->id); ?></td>
-                    <td><a href="<?php echo e(route('tourcostsummary.show',$datab->id)); ?>"> <?php echo e($datab->season); ?></a></td>
-                   <td><?php echo e($datab->program); ?></td>
+                  <td><?php echo e($datab->season); ?></td> 
+                   
                     <td><?php echo e($datab->twopax); ?></td>
                     <td><?php echo e($datab->threepax); ?></td>
                     <td><?php echo e($datab->fourpax); ?></td>
@@ -152,7 +258,7 @@
           <col width="10%">
         </colspan>
         <tr>
-          <th class="title" colspan="8" style="background-color:white"><b>COMFORT LEVEL ACCOMODATIONS</b></th>
+          <th class="title" colspan="8" style="background-color:gray"><b>COMFORT LEVEL ACCOMODATIONS</b></th>
         </tr>
         <tr>
            <th class="title" colspan="2"></th>
@@ -160,8 +266,7 @@
         </tr>
         <tr>
          <th>#</th>
-          <th>Season</th>
-           <th>Program</th>
+          <th>Season</th>           
           <th>2PAX</th>
            <th>3PAX</th>
             <th>4PAX</th>
@@ -173,8 +278,7 @@
  <?php $__currentLoopData = $comfort; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datac): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <tr>
                   <td><?php echo e($datac->id); ?></td>
-                    <td><a href="<?php echo e(route('tourcostsummary.show',$datac->id)); ?>"> <?php echo e($datac->season); ?></a></td>
-                   <td><?php echo e($datac->program); ?></td>
+                     <td><?php echo e($datac->season); ?></td>                   
                     <td><?php echo e($datac->twopax); ?></td>
                     <td><?php echo e($datac->threepax); ?></td>
                     <td><?php echo e($datac->fourpax); ?></td>
@@ -192,7 +296,7 @@
           <col width="10%">
         </colspan>
         <tr>
-          <th class="title" colspan="8" style="background-color:white"><b>DELUXE LEVEL ACCOMODATIONS</b></th>
+          <th class="title" colspan="8" style="background-color:gray"><b>DELUXE LEVEL ACCOMODATIONS</b></th>
         </tr>
         <tr>
            <th class="title" colspan="2"></th>
@@ -200,8 +304,7 @@
         </tr>
         <tr>
              <th>#</th>
-          <th>Season</th>
-           <th>Program</th>
+          <th>Season</th>           
           <th>2PAX</th>
            <th>3PAX</th>
             <th>4PAX</th>
@@ -210,11 +313,10 @@
               <th>SRS</th>
         </tr>
 
- <?php $__currentLoopData = $luxury; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datal): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = $luxury; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $datal): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <tr>
                        <td><?php echo e($datal->id); ?></td>
-                    <td><a href="<?php echo e(route('tourcostsummary.show',$datal->id)); ?>"> <?php echo e($datal->season); ?></a></td>
-                   <td><?php echo e($datal->program); ?></td>
+                    <td><?php echo e($datal->season); ?></td>                   
                     <td><?php echo e($datal->twopax); ?></td>
                     <td><?php echo e($datal->threepax); ?></td>
                     <td><?php echo e($datal->fourpax); ?></td>
@@ -223,73 +325,329 @@
                     <td><?php echo e($datal->srs); ?></td>
                     <tr>
                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-         </table>
-                            </div>
+                   </table>
+                        </div>
                         </div>
                      </div>
-                    </div>
-                        <div id="tabE" class="tabcontent">
-                             <p>Photo Comes Here</p>
-                            <p><b>Accomodation Name: </b>
-                              <?php echo e($data->accommodation_name); ?></p>
-                            <p><b>Description: <?php echo e($data->accommodation_descriptions); ?></b></p>
-                            <p><b>Category: <?php echo e($data->category); ?></b></p>
-                        </div>
+
+              </div>
+
+            <div class="tab-pane fade" id="tab-E">                
+       <div class="card booking-btn-gray">   
+      <div class="card-header">
+                                            <h5 class="m-0">Accommodation List : Inclusive and Not Inclusive</h5>           
+                                              </div>                                 
+                                                
+           
+
+                        <div class="card-body">
+                       <div class="row ">
+                                <div class="col-lg-7">
+                                <div class="hotel-diss">
+                
+                               <div class="row">                   
+                                <div class="col-md-6 col-lg-6 col-sm-12">                                   
+                                  <div class="rating">                                                                      <h4>Not Inclusive</h4>                        
+                                  </div>                                
+   <?php $__currentLoopData = $inclusives; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $inclusive): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>    
+                                  <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+  <label class="form-check-label" for="flexCheckDisabled">
+   <?php echo e($inclusive->inclusive); ?>
+
+  </label>
+</div>
+     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                              
+    </div>                                                                                 
+                                                  </div>
+                                                 </div>
+                                               </div>
+                                        <div class="col-lg-5">  
+                                            <div class="rating">    
+                                                <h4>Inclusive</h4>                                                           
+
+                                            </div>                                        <?php $__currentLoopData = $assignLists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $assignList): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+   <?php echo e($assignList->inclusive); ?>
+
+  </label>
+</div>  
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                  
+                                                    
+                                </div>
+                               </div>                           
+                                </div>
+                                </div> 
+             </div> 
+             
+            </div>
+          </div>
+    
 
                     </div>
                     </div>
-
+                     
                     
                     <div class="col-md-3 col-lg-3 masonry">
                         <div class="card">
                         <div class="card-body">
-                            <div >
-                                <h4 class="text-secondary"> Tour Summary</h4>
-                            </div>
-                            <div>Name: <b><?php echo e($programs->tour_name); ?></b></div>
-                            <div>Type: <b><?php echo e($programs->type); ?></b></div>
-                            <div>Style: <b><?php echo e($programs->style); ?></b></div>
-                            <div>Duration: <b><?php echo e($programs->days); ?> Days</b></div>
-                            <div>Countries: <b>Tanzania</b> </div>
-                            <div>Destinations:
-                                <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destnation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                               <span class="text-primary " style="font-size: 12px; border-right:solid 1px #ddd; padding-right:2px"> <?php echo e($destnation->destination_name); ?></span>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </div>
-
-                        <hr>
+                          
+                            
                         <div class="row">
                           
-                            <div class="col-lg-12 text-center">
-                             <?php if($programs->payee_status !='Paid'): ?>
-                              <a href="#" role="button" class="btn btn-success text-center" data-toggle="modal" data-target="#payNow">Pay Now</a>
-                            <?php else: ?>
-                            <p style="font-style: color:red"><span class="text-primary">Invoice  Alread Paid</span></p>
-                              <?php endif; ?>
                             </div>
+                        <hr>
+                            
+                                <p class="text-center">
+                               <h5 > List of Add-ons</h5>
+                                </p>
 
-
-                            </div>
-                            <hr>                            
-                            <div class="row">
-                            <div class="col-lg-12 text-center">
-                            <a href="#" role="button" class="btn btn-secondary text-center" data-toggle="modal" data-target="#bookNow">Print Invoice</a>
-                            </div>
-                            </div>
-                    </div>
                     </div>
 
 
                 </div>
-                
+                <hr>
+                <p class="text-center">
+                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>">View More Addons</a></p>
                 </div>
-
                 </div>
             </div>
-
         </div>
     </div>
+       </div>
+                </div>
     </section>
+
+
+
+
+ <div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title"><b><?php echo e($programs->tour_name); ?></b></h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="preview-wrap">
+           <div class="preview-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment)); ?>);"></div>
+
+            <div class="form-wrap">
+                <h4 id="heading">Booking Form</h4>
+                <!-- <form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>"> -->
+                <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>">
+                    <?php echo csrf_field(); ?>
+                    <!-- progressbar -->
+                  <!--   <ul id="progressbar">
+                      <li class="active" id="account"><strong>Personal Details</strong></li>
+                        <li id="personal"><strong>Tour Information:</strong></li>
+                        <li id="payment"><strong>Other Information</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul> -->
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h3 class="fs-title">Personal Details:| Step 1 - 4</h3>
+                                </div>                                
+                            </div> 
+                           
+
+ <div class="form-group">
+            <?php if($discounts !=null): ?>
+           <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($discounts->new_price); ?>">
+             <?php else: ?>
+              <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">
+             <?php endif; ?>       
+                            
+             <input type="hidden" class="form-control" name="tour_name" value="<?php echo e($programs->tour_name); ?>">
+            <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
+        </div>
+
+
+
+
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
+                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
+
+                            <label class="fieldlabels">Nationality: *
+                            </label>
+                             <input type="text" name="country" placeholder="Nationality" /> 
+
+                        </div> 
+                        
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                            <div class="form-card">
+
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
+                                </div>
+                             </div>
+
+                       
+
+
+             <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Travel Date:</label>
+                                    <div class="form-group">
+                                        <input type="text" name="travel_date" id="travel_date" class="form-control datepicker" placeholder="From" value="" required>
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Adults (>16 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="adults" min="0">
+                                    </div>
+                                </div>
+  </div>
+
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Teens (12-14 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="teens" min="0">
+                                    </div>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Children (5-12 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="children" min="0">
+                                    </div>
+                                 </div>
+  </div>
+
+
+        <div class="form-group">
+            <label for="">Tour type:</label>
+                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="<?php echo e($programs->program_id); ?>" readonly="true">
+          <input type="text" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
+        </div>
+
+  
+
+                               
+
+                                    <div class="form-group">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                   <label for="">Accommodation:</label>
+                                    <div class="form-group">
+                                       <select class="form-control" name="accomodation">
+                                            <option value="0">--Select Accomodation--</option>
+                                            <option>Basic</option>
+                                             <option>Comfort</option>
+                                              <option>Deluxe</option>
+                                               <option>Mix</option>
+                                                <option>Not Sure</option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                                               </div>
+
+
+                            
+                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Other Information:|Step 3 - 4</h2>
+                                </div>
+
+                              
+    <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">  Additional Information we should know?</label>
+
+         <textarea class="form-control" id="" cols="2" rows="1" name="additional_information" placeholder="Type your additional information here..."></textarea>
+        </div>
+     </div>
+
+
+     <div class="col-md-12">
+        <div class="form-group">
+            <label for=""> How did you hear about us?:</label>
+
+       <div class="form-group">
+           <label for="facebook">Facebook
+          <input id="facebook" type="checkbox" class="zt-control"  name="hear[]" value="Facebook">
+        </label>
+        <label for="instagram">Instagram
+          <input id="instagram" type="checkbox" class="zt-control"  name="hear[]" value="Instagram">
+        </label>
+          <label for="google">Google
+          <input id="google" type="checkbox" class="zt-control"  name="hear[]" value="Google">
+        </label>
+          <label for="mouth">Word of Mouth
+          <input  id="mouth" type="checkbox" class="zt-control"  name="hear[]" value="Word of Mouth">
+        </label>
+        </div>
+        </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="form-group">
+        <label for=""> Other Media:</label>
+           <input type="text" class="form-control" name="hear_about_us">
+        </div>
+        </div> 
+                                </div>
+                          </div> 
+                             
+                        
+                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
+                        <button type="submit" class="btn btn-success">Submit</button>
+                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:| Step 4 - 4</h2>
+                                </div>
+                            </div> <br>
+                            <h2 class="purple-text text-center"><strong>Success!</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully submitted</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="modal-footer">
+  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>
+                </form>
+            </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
@@ -327,7 +685,7 @@
      </div>
 
         </div>
-        </div>
+       
 
 
 <div class="modal-footer">
@@ -335,11 +693,97 @@
   <button type="submit" class="btn btn-primary">Pay</button>
 </div>
 </form>
+ </div>
 </div>
 </div>
 </div>
 
 
+
+
+
+
+
+<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
+<!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
+<!-- 
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script> -->
 
 <script>
 function openPage(pageName, elmnt, color) {
@@ -365,13 +809,95 @@ function openPage(pageName, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
 $('#myTab a').on('click', function (event) {
   event.preventDefault()
   $(this).tab('show')
 })
-
 </script>
+
+
+<script type="text/javascript" src="../../../js/jquery321.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script>
+
 <?php $__env->stopSection(); ?>
-
-
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/payments/privatePaySummary.blade.php ENDPATH**/ ?>

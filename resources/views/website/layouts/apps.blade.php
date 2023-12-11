@@ -295,8 +295,6 @@
 
 
 
-
-
     <!-- Header END -->
     @yield('content')
     <br>

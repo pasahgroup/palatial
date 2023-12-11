@@ -295,8 +295,6 @@
 
 
 
-
-
     <!-- Header END -->
     <?php echo $__env->yieldContent('content'); ?>
     <br>
