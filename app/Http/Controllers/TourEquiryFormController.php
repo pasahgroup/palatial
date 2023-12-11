@@ -550,7 +550,7 @@ $date=date('d-M-Y');
 // $data["email"] = "palatialtours@gmail.com";
 $data["email"] = request('email');
 
-$data["title"] = "ITINERARY "."$tour_addon;
+$data["title"] = "ITINERARY ".$tour_addon;
 $data["body"] = "Manyara Best View Hotel: Daily General Inspection Report held on $date";
 $data["date"] = "Date: $date";
 
