@@ -422,6 +422,10 @@ public function viewTripf($pin)    {
             $total_cost=$total_price + $total_addon_price;
          }
 
+
+$adults_cost=$unit_price * $adults;
+
+
         $tour_costsummary = TourEquiryForm::create([
         'first_name'=>request('first_name'),
         'last_name'=>request('last_name'),
@@ -453,6 +457,9 @@ public function viewTripf($pin)    {
         'customer_id'=>$tour_costsummary->id,
         'tour_id'=>request('tour_id'),
         'unit_price'=> $unit_price,
+        'children_cost'=> $children_cost,
+        'teens_cost'=> $teens_cost,
+        'adults_cost'=> $adults_cost,
         'total_price'=>$total_price,
         'addon_price'=>$addon_price,
          'total_addon_price'=>$total_addon_price,

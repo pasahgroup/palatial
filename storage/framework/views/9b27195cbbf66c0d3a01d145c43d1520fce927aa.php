@@ -52,9 +52,9 @@
                             <div>Teens Cost: <b><?php echo e($programs->style); ?></b></div>
                             <div>Addon Cost: <b><?php echo e($cust->addon_price); ?></b></div>
                             <hr>
-                            <div>Tour Total Cost: <b><?php echo e($cust->total_cost); ?></b> </div>
+                            <div>Total Cost: <b><?php echo e($cust->total_cost); ?></b> </div>
                              <div>Amount paid: <b><?php echo e($cust->total_amount_paid); ?></b> </div>
-                               <div>Amount Remain: <b style="color:yellowgreen;"><?php echo e($cust->amount_remain); ?></b> </div>
+                             <div>Amount Remain: <b style="color:yellowgreen;"><?php echo e($cust->amount_remain); ?></b> </div>
                         </div>
                              <div class="col-md-2 text-center" style="font-size:20PX;">
 
