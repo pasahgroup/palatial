@@ -374,14 +374,6 @@ $discounts=specialOffer::where('tour_id',$id)->first();
 
 
 
-
-
-
-
-
-
-
-
         return view('website.tour.tourSummary',compact('datas','id','programs','basic','comfort','luxury','buyaddons','addons','addondatas','discounts','inclusives','assignLists'));
     }
 

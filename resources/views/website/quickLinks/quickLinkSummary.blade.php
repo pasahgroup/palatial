@@ -5,7 +5,9 @@
         <div class="container-fluid">
             <div class="package-list-wrap ">
           
-             <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;">
+             <!-- <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;"> -->
+
+               <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 75vh;background-size: cover;width: 100%;">
              
                 <div class="package-list-content">
                   <span>Home/Quick-Link </span>

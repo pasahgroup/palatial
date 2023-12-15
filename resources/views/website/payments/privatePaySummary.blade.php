@@ -19,16 +19,18 @@
                     
 
                     <div class="grid grid-cols-8 md:grid-cols-8">
-                        <div class="p-12">
+                   
                         
                                 <div class="mt-8 text-gray-600 dark:text-gray-400 text-sm">
                                   
                                      <div class="col-md-12 col-lg-8 masonry">
                         <div class="card">
                         <div class="card-body">
-                            <div >
-                                <h4 class="text-secondary"> Tour Summary</h4>
-                            </div>
+                             <div class="row">
+                            <div class="col-md-6 text-center" style="font-size:20PX;">
+                           
+                                <h4 class="text-secondary"><strong>Tour Summary</strong></h4>
+                               <hr>
                             <div>Name: <b>{{ $programs->tour_name }}</b></div>
                             <div>Type: <b>{{ $programs->type }}</b></div>
                             <div>Style: <b>{{ $programs->style }}</b></div>
@@ -39,28 +41,44 @@
                                <span class="text-primary " style="font-size: 12px; border-right:solid 1px #ddd; padding-right:2px"> {{ $destnation->destination_name }}</span>
                                 @endforeach
                         </div>
-
+                 </div>
                       
                         
-                            <div class="col-lg-8 text-center">
+                             <div class="col-md-4 text-center" style="font-size:20PX;">
+
+                                  
+                                <h4 class="text-secondary"><strong>Invoice Summary</strong></h4>
+                           <hr>
+                           
+                            <div>Children Cost: <b>{{ $programs->type }}</b></div>
+                            <div>Teens Cost: <b>{{ $programs->style }}</b></div>
+                            <div>Addon Cost: <b>{{ $cust->addon_price }}</b></div>
+                            <hr>
+                            <div>Total Cost: <b>{{ $cust->total_cost }}</b> </div>
+                             <div>Amount paid: <b>{{ $cust->total_amount_paid }}</b> </div>
+                             <div>Amount Remain: <b style="color:yellowgreen;">{{ $cust->amount_remain }}</b> </div>
+                        </div>
+                             <div class="col-md-2 text-center" style="font-size:20PX;">
+
                              @if($programs->payee_status !='Paid')
                               <a href="#" role="button" class="btn btn-success text-center" data-toggle="modal" data-target="#payNow">Pay Now</a>
                             @else
                             <p style="font-style: color:red"><span class="text-primary">Invoice  Alread Paid</span></p>
+                             <a href="#" role="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#bookNow">Print Invoice</a>
+                            </div>
                               @endif
                             </div>
 
                           
-                            <div class="row">
-                            <div class="col-lg-4 text-center">
+                           <!-- 
+                            <div class="col-md-4 text-center">
                             <a href="#" role="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#bookNow">Print Invoice</a>
-                            </div>
+                            </div> -->
                             </div>
                     </div>
                     </div>
                 </div>
                 
-                                </div>
                             </div>
                         </div>
                       

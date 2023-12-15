@@ -18,6 +18,9 @@ class CreateInvoicesTable extends Migration
             $table->integer('customer_id')->nullable();
             $table->integer('tour_id')->nullable();
             $table->decimal('unit_price')->nullable();
+             $table->decimal('children_cost')->nullable();
+              $table->decimal('teens_cost')->nullable();
+               $table->decimal('adults_cost')->nullable();
            $table->decimal('total_price')->nullable();           
             $table->decimal('addon_price')->nullable();
             $table->decimal('total_addon_price')->nullable();
