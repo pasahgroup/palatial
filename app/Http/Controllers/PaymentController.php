@@ -43,8 +43,12 @@ class PaymentController extends Controller
     {      
 
       //Get customer details
-        $cust=invoice::where('customer_id',$cust_id)->first();
-        //dd($cust);
+
+
+        $cust=invoice::  join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
+        ->where('invoices.customer_id',$cust_id)
+        ->select('invoices.*','tour_equiry_forms.children','tour_equiry_forms.teens','tour_equiry_forms.adults','tour_equiry_forms.pin')->first();
+       // dd($cust);
         $id=$cust->tour_id;   
 
          $discounts=specialOffer::where('tour_id',$id)->first();
@@ -185,8 +189,7 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     {
      
       $tailorCustomer = invoice::
-        where('id',$z)
-        ->first();
+        where('id',$z)->first();
 
   if($tailorCustomer->payee_status!='Paid')
    {

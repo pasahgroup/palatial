@@ -429,6 +429,13 @@
                 </a>
               </li>
               <hr>
+               <li class="nav-item">
+                <a href="/percent" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>People Percent</p>
+                </a>
+              </li>
+              <hr>
                  <li class="nav-item">
                 <a href="/quickLink" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

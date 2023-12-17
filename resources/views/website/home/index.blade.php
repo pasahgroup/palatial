@@ -189,10 +189,12 @@
 		</a>
 	</div>
 
-		<div class="row booking-btn-top">
+<div class="container">
+		<div class="booking-btn-top">
 			<b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
 				</div>
 	</div>
+</div>
 @endisset
 
  @isset($welcome_message)
@@ -223,7 +225,7 @@
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
 
-<h3 class="" style="color:#c56c1d">
+<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px;">
 Tour Packages
 </h3>
 										</div>
@@ -474,7 +476,7 @@ Tour Packages
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
-<h3 class="" style="color:#c56c1d">
+<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px;">
 Special Offers
 </h3>
 
@@ -676,7 +678,7 @@ Special Offers
 					<div class="col-md-12 text-center">
 
 
-<h3 class="" style="color:#c56c1d">
+<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px; border-radius:10px;">
 Popular Experiences
 </h3>
 
@@ -955,7 +957,7 @@ Popular Experiences
 																<div class="booking-tourPadding">
 
 																<div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-																			 <a href="/safaris/{{$popular_holiday->id}}" class="booking-btn text-center"><b>View More</b></a>
+																			 <a href="/safaris/{{$popular_holiday->id}}" class="booking-btn text-center"><b>View Morevv</b></a>
 																</div>
 
 																</div>
@@ -985,7 +987,7 @@ Popular Experiences
 		<div class="container">
 				<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mt-4">
 					 <div class="col-md-12 text-center">
-						<h3 class="booking-tourPadding" style="color:#c56c1d">
+						<h3 class="booking-tourPadding" style="color:#fff;background-color:#496f50; border-radius:10px;">
 Popular Destinations
 </h3>
 <hr>

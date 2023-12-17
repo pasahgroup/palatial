@@ -40,6 +40,8 @@ use App\Http\Controllers\commandController;
 
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\InclusiveController;
+use App\Http\Controllers\PeoplePercentController;
+
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -330,11 +332,18 @@ Route::get('popularExperience',[saleController::class,'popularExperience'])->nam
 Route::resource('/themes',themeController::class);
 Route::get('/themes-destroy/{x}', [themeController::class, 'destroy'])->name('themes-destroy');
 
-//inclusives
-Route::resource('/inclusive',InclusiveController::class);
- // Route::post('/inclusiveUpdate/{x}', 'InclusiveController@inclusiveUpdate')->name('inclusiveUpdate');
-Route::POST('/inclusiveUpdate/{x}',[InclusiveController::class, 'inclusiveUpdate'])->name('inclusiveUpdate');
+//percent
+Route::resource('/percent',PeoplePercentController::class);
+Route::POST('/percent-Update/{x}',[PeoplePercentController::class, 'percentUpdate'])->name('percent-Update');
 
+
+Route::get('/add-percent',[PeoplePercentController::class, 'addPercent'])->name('add-percent');
+Route::get('/edit-percent/{x}',[PeoplePercentController::class, 'editPercent'])->name('edit-percent');
+Route::get('/destroy-percent/{x}',[PeoplePercentController::class, 'destroyf'])->name('destroyf');
+
+//inclusive
+Route::resource('/inclusive',InclusiveController::class);
+Route::POST('/inclusiveUpdate/{x}',[InclusiveController::class, 'inclusiveUpdate'])->name('inclusiveUpdate');
 
 Route::get('/addInclusive',[InclusiveController::class, 'addinclusive'])->name('addinclusive');
 Route::get('/editInclusive/{x}',[InclusiveController::class, 'editInclusive'])->name('editInclusive');

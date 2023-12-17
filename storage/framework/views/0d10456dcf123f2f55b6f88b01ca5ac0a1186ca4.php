@@ -69,13 +69,14 @@
    <!-- End Image Libray -->
 
 
-
-<style>
-
-
-</style>
-
-
+<!-- Mold custom style -->
+  <!-- <link rel="stylesheet" href="../assets/css/min/bootstrap.min.css" media="all"> -->
+  <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all">
+  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
+  <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all">
+  <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all">
+  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
+<!-- End of Mold custom style -->
 
 </head>
 <!-- Head END -->
@@ -297,70 +298,55 @@
 
     <!-- Header END -->
     <?php echo $__env->yieldContent('content'); ?>
-    <br>
-    <div class="main">
-      <div class="container">
-    <div class="margin-bottom-40 front-steps-wrapper front-steps-count-0">
-          <div class="col-md-2 col-sm-8 front-step-col">
-            <div class="service-box-heading" style="background-color: #496f50;">
-              <span><h3>Destinations</h3></span>
-            </div>
-            <div class="front-step front-step1">
-                    <ul class="link-widget">
+  <hr>
+      <footer id="footer">
+    <div class="container" style="background-color:#496f50;">
+      <div class="row">
+        <div class="col-md-3">
+          <h4>Destinations</h4>
+           <ul class="link-widget">
                         <li class="dropdown"><a title="Northern Circuit" href="/circuitTour/Northern Circuit">Northern Circuit</a></li>
                         <li class="dropdown"><a title="Southern Circuit" href="/circuitTour/Southern Circuit">Southern Circuit</a></li>
                         <li class="dropdown"><a title="Eastern Circuit" href="/circuitTour/Eastern Circuit">Eastern Circuit</a></li>
                         <li class="dropdown"><a title="Western Circuit" href="/circuitTour/Western Circuit">Western Circuit</a></li>
                          <li class="dropdown"><a title="Central Circuit" href="/circuitTour/Central Circuit">Central Circuit</a></li>
                     </ul>
-                  </div>
-          </div>
-          <div class="col-md-3 col-sm-8 front-step-col">
-            <div class="service-box-heading"  style="background-color: #496f50">
-              <span><h3>About Palatial Tours</h3></span>
-            </div>
-            <div class="front-step front-step2">
-           <ul class="link-widget">
+        </div>
+        <div class="col-md-3">
+         <span><h4>About Palatial Tours</h4></span>
+            <ul class="link-widget">
                          <li class="dropdown"><a title="Why Adventure with us" href="#">Why Adventure with us</a></li>
                         <li class="dropdown"><a title="What We offer" href="/whatWeOfferClient">What We offer</a></li>
                         <li class="dropdown"><a title="Accommodation List-Safaris" href="/accommodation-hotels">Accommodation-Hotels</a></li>
                          <li class="dropdown"><a title="Accommodation List-Camps" href="/accommodation-camps">Accommodation-Camps</a></li>
                     </ul>
-          </div>
         </div>
-          <div class="col-md-3 col-sm-8 front-step-col">
-            <div class="service-box-heading"  style="background-color: #496f50">
-              <span><h3>Support</h3></span>
-            </div>
-            <div class="front-step front-step3">
+        <div class="col-md-3">
+          <h4>Support</h4>
            <ul class="link-widget">
                         <li class="dropdown"><a  href="">Visa information</a></li>
                         <li class="dropdown"><a  href="#">Health & Vaccination</a></li>
                         <li class="dropdown"><a  href="#">Payment Methods</a></li>
                         <li class="dropdown"><a href="#">About Tanzania</a></li>
                     </ul>
-          </div>
-        </div>
-           <div class="col-md-4 col-sm-8 front-step-col">
-            <div class="service-box-heading" style="background-color: #496f50">
-              <span><h3>Contacts</h3></span>
-            </div>
-            <div class="front-step front-step4">
-          <ul class="link-widget">
+                  </div>
+        <div class="col-md-3">
+          <h4>Contacts</h4>
+            <ul class="link-widget">
 
                         <li class="dropdown"><a  href="">Address:<?php echo e($contacts->address??'Arusha'); ?></a></li>
                         <li class="dropdown"><a  href="#">Contact No: (+255)753 216 263</a></li>
                         <li class="dropdown"><a  href="#">Email: info@palatialtours.com</a></li>
                         <li class="dropdown"><a href="#">Website: www.palatialtours.com</a></li>
                     </ul>
-          </div>
         </div>
-        </div>
+
       </div>
     </div>
-<br>
+    <!-- <div class="copy"><span>&copy;</span> Copyright Mold Discover, 2017</div> -->
+  </footer>
 
-    <div class="footer">
+   <div class="footer">
       <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-5 col-sm-6 padding-top-10">
@@ -388,7 +374,6 @@
           </div>
         </div>
       </div>
-
     <!-- END FOOTER -->
  <!--bootstrap.min.js-->
 <script src="../../js/bootstrap.min.js"></script>
@@ -422,6 +407,22 @@
         });
     </script>
 
+<!-- Mold custom scripts -->
+      <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/jqueryui/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="../assets/vendor/jquery.ui.touch-punch.min.js"></script>
+  <!-- <script src="..assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+  <script src="../assets/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/retina.min.js"></script>
+  <!-- <script src="..assets/vendor/jquery.imageScroll.min.js"></script> -->
+  <script src="../assets/js/min/responsivetable.min.js"></script>
+  <script src="../assets/js/bootstrap-tabcollapse.js"></script>
+
+  <script src="../assets/js/min/countnumbers.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+<!-- End of Mold custom scripts -->
 
 <script type="text/javascript">
     //  function getURL(){
