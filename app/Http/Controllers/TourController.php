@@ -282,7 +282,6 @@ class TourController extends Controller
  //dd('dd');
        
     $tour_addons = program::where('id',$id)->first();
-
         $type=$tour_addons->main; 
 
         if($type=='Program')

@@ -10,6 +10,8 @@ use App\Models\Tourcostsummary;
 use App\Models\departures;
 use App\Models\itinerary;
 
+use App\Models\people_percent;
+
 use Mail;
 use DB;
 use DateTime;
@@ -352,13 +354,10 @@ public function viewTripf($pin)    {
                  $dapart_id=0;
             } 
 
-        // if($departurePrice->price<=0)
-        //   {
-        
-        //  }
-
-      //  dd(request('tour_date'));
-       
+           $discount_pricef=request('discount_price');
+            
+        $diff=$pricef-$discount_pricef;
+        //dd($diff);
 
         $pin = rand(111111, 999999);
         $hear_from = request('hear');        
@@ -374,20 +373,52 @@ public function viewTripf($pin)    {
         ->where('status',$acc)
         ->get();    
 
+//Get percent rate
+
+$adult=people_percent::where('percent_name','Adults')->first();
+$teen=people_percent::where('percent_name','Teens')->first();
+$children=people_percent::where('percent_name','children')->first();
+
+$adult_p=$adult->percent/100;
+$teen_p=$teen->percent/100;
+$children_p=$children->percent/100;
+
+if($adult_p<=0.00)
+{
+    $adult_p=1;
+}
+
+if($teen_p<=0.00)
+{
+    $teen_p=0.75;
+}
+
+if($children_p<=0.00)
+{
+    $children_p=0.4;
+}
+
+
+
+
          if($Tourcostsummary == "[]"){
             $unit_price=$pricef;         
-            $teens_cost=($unit_price * 0.75)*request('teens');          
-            $children_cost=($unit_price * 0.4)*request('children');   
+            $teens_cost=($unit_price * $teen_p)*request('teens');          
+            $children_cost=($unit_price * $children_p)*request('children');  
+             //Total discount
+           $total_discount=$diff*$children_p*request('adults') + $diff*$teen_p*request('teens') + $diff*$children_p*request('teens');
+          
+
 
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
          // dd($total_price);
-            $total_addon_price=($addon_price*0.75)*request('teens') + ($addon_price * $adults+($addon_price*0.4)*request('children'));
+            $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
             $total_cost=$total_price + $total_addon_price;
          }
          else
          {
-            //Extraction of Cost Summary values from Array List
+            //Extraction Cost Summary values from Array List
     foreach($Tourcostsummary as $costsummary){
         }
 
@@ -412,12 +443,13 @@ public function viewTripf($pin)    {
              $unit_price=$costsummary->sixpax;
             }
          
-            $teens_cost=($unit_price * 0.75)*request('teens');          
-            $children_cost=($unit_price * 0.4)*request('children');   
+            $teens_cost=($unit_price * $teen_p)*request('teens');          
+            $children_cost=($unit_price * $children_p)*request('children');   
+            $total_discount=$diff*$children_p*request('adults') + $diff*$teen_p*request('teens') + $diff*$children_p*request('teens');
 
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
          // dd($total_price);
-            $total_addon_price=($addon_price*0.75)*request('teens') + ($addon_price * $adults+($addon_price*0.4)*request('children'));
+            $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
             $total_cost=$total_price + $total_addon_price;
          }
@@ -463,6 +495,7 @@ $adults_cost=$unit_price * $adults;
         'total_price'=>$total_price,
         'addon_price'=>$addon_price,
          'total_addon_price'=>$total_addon_price,
+         'total_discount'=> $total_discount,
          'total_cost'=>$total_cost,
         'currency'=>request('currency')
         ]);

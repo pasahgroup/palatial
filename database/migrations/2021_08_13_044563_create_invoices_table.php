@@ -17,6 +17,11 @@ class CreateInvoicesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('customer_id')->nullable();
             $table->integer('tour_id')->nullable();
+            $table->decimal('adults_percent')->nullable();
+            $table->decimal('teens_percent')->nullable();
+            $table->decimal('children_percent')->nullable();
+
+          
             $table->decimal('unit_price')->nullable();
              $table->decimal('children_cost')->nullable();
               $table->decimal('teens_cost')->nullable();
@@ -24,6 +29,7 @@ class CreateInvoicesTable extends Migration
            $table->decimal('total_price')->nullable();           
             $table->decimal('addon_price')->nullable();
             $table->decimal('total_addon_price')->nullable();
+            $table->decimal('total_discount')->nullable();
             $table->decimal('total_cost')->nullable();
 
              $table->decimal('total_amount_paid')->nullable();

@@ -41,6 +41,7 @@ use App\Http\Controllers\commandController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\InclusiveController;
 use App\Http\Controllers\PeoplePercentController;
+use App\Http\Controllers\BankController;
 
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -196,6 +197,7 @@ Route::post('/tailorPay/{x}', [PaymentController::class, 'tailorPay'])->name('ta
 Route::post('/privatePay/{y}', [PaymentController::class, 'privatePay'])->name('privatePay');
 Route::post('/groupPay/{x}', [PaymentController::class, 'groupPay'])->name('groupPay');
 Route::get('/privateTourSumary/{x}', [PaymentController::class, 'privateTourSumary'])->name('privateTourSumary');
+Route::get('/pay/{x}', [PaymentController::class, 'payInvoice'])->name('payInvoice');
 Route::get('/groupTourSumary/{x}', [PaymentController::class, 'groupTourSumary'])->name('groupTourSumary');
 //End of payment controller
 
@@ -332,6 +334,15 @@ Route::get('popularExperience',[saleController::class,'popularExperience'])->nam
 Route::resource('/themes',themeController::class);
 Route::get('/themes-destroy/{x}', [themeController::class, 'destroy'])->name('themes-destroy');
 
+
+//Bank
+Route::resource('/bank',BankController::class);
+Route::POST('/bank-Update/{x}',[BankController::class, 'bankUpdate'])->name('bank-Update');
+
+Route::get('/add-bank',[BankController::class, 'addBank'])->name('add-bank');
+Route::get('/edit-bank/{x}',[BankController::class, 'editBank'])->name('edit-bank');
+Route::get('/destroy-bank/{x}',[BankController::class, 'destroyf'])->name('destroyf');
+
 //percent
 Route::resource('/percent',PeoplePercentController::class);
 Route::POST('/percent-Update/{x}',[PeoplePercentController::class, 'percentUpdate'])->name('percent-Update');
@@ -340,7 +351,6 @@ Route::POST('/percent-Update/{x}',[PeoplePercentController::class, 'percentUpdat
 Route::get('/add-percent',[PeoplePercentController::class, 'addPercent'])->name('add-percent');
 Route::get('/edit-percent/{x}',[PeoplePercentController::class, 'editPercent'])->name('edit-percent');
 Route::get('/destroy-percent/{x}',[PeoplePercentController::class, 'destroyf'])->name('destroyf');
-
 //inclusive
 Route::resource('/inclusive',InclusiveController::class);
 Route::POST('/inclusiveUpdate/{x}',[InclusiveController::class, 'inclusiveUpdate'])->name('inclusiveUpdate');

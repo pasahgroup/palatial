@@ -9,7 +9,8 @@ class popularExperience extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tour_id',
-        'descriptions'
+        'percent_name',
+        'percent',
+        'user_id'
     ];
 }

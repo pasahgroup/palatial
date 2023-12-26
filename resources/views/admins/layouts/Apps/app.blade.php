@@ -428,7 +428,14 @@
                   <p>Inclusive</p>
                 </a>
               </li>
-              <hr>
+               <hr>
+               <li class="nav-item">
+                <a href="/bank" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bank</p>
+                </a>
+              </li>
+             
                <li class="nav-item">
                 <a href="/percent" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

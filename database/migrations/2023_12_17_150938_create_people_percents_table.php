@@ -15,7 +15,9 @@ class CreatePeoplePercentsTable extends Migration
     {
         Schema::create('people_percents', function (Blueprint $table) {
              $table->bigIncrements('id');                     
-             $table->string('percent')->nullable();
+             $table->string('percent_name')->nullable();
+              $table->decimal('percent')->nullable();
+              $table->integer('user_id')->unsigned();
             $table->timestamps(); 
         });
     }

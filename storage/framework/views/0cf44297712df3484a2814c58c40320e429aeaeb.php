@@ -461,15 +461,15 @@
 
  <div class="form-group">
             <?php if($discounts !=null): ?>
-           <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($discounts->new_price); ?>">
+           <input type="text" class="form-control" name="discount_price" value="<?php echo e($discounts->new_price); ?>">
              <?php else: ?>
-              <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">
+              <input type="text" class="form-control" name="discount_price" value="<?php echo e($programs->price); ?>">
              <?php endif; ?>       
-                            
+                      
+            <input type="text" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">               
              <input type="hidden" class="form-control" name="tour_name" value="<?php echo e($programs->tour_name); ?>">
             <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
         </div>
-
 
 
 

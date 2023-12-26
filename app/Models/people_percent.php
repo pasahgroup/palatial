@@ -9,6 +9,7 @@ class people_percent extends Model
 {
     use HasFactory;
      protected $fillable = [
+        'percent_name',
         'percent',
         'user_id'
     ];
