@@ -461,10 +461,10 @@
             @if($discounts !=null)
            <input type="text" class="form-control" name="discount_price" value="{{$discounts->new_price}}">
              @else
-              <input type="text" class="form-control" name="discount_price" value="{{$programs->price}}">
+              <input type="hidden" class="form-control" name="discount_price" value="{{$programs->price}}">
              @endif       
                       
-            <input type="text" class="form-control" name="unit_price" value="{{$programs->price}}">               
+            <input type="hidden" class="form-control" name="unit_price" value="{{$programs->price}}">               
              <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
         </div>
