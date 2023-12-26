@@ -414,7 +414,7 @@ if($children_p<=0.00)
          // dd($total_price);
             $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
-            $total_cost=$total_price + $total_addon_price;
+            $total_cost=$total_price + $total_addon_price + $total_discount;
          }
          else
          {
@@ -451,7 +451,7 @@ if($children_p<=0.00)
          // dd($total_price);
             $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
-            $total_cost=$total_price + $total_addon_price;
+            $total_cost=$total_price + $total_addon_price +  $total_discount;
          }
 
 
