@@ -400,7 +400,6 @@ if($children_p<=0.00)
 
 
 
-
          if($Tourcostsummary == "[]"){
             $unit_price=$pricef;         
             $teens_cost=($unit_price * $teen_p)*request('teens');          
@@ -453,7 +452,6 @@ if($children_p<=0.00)
             
             $total_cost=$total_price + $total_addon_price +  $total_discount;
          }
-
 
 $adults_cost=$unit_price * $adults;
 

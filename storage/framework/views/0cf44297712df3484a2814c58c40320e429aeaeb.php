@@ -461,22 +461,53 @@
 
  <div class="form-group">
             <?php if($discounts !=null): ?>
-           <input type="text" class="form-control" name="discount_price" value="<?php echo e($discounts->new_price); ?>">
+           <input type="hidden" class="form-control" name="discount_price" value="<?php echo e($discounts->new_price); ?>">
              <?php else: ?>
-              <input type="text" class="form-control" name="discount_price" value="<?php echo e($programs->price); ?>">
+              <input type="hidden" class="form-control" name="discount_price" value="<?php echo e($programs->price); ?>">
              <?php endif; ?>       
                       
-            <input type="text" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">               
+            <input type="hidden" class="form-control" name="unit_price" value="<?php echo e($programs->price); ?>">               
              <input type="hidden" class="form-control" name="tour_name" value="<?php echo e($programs->tour_name); ?>">
             <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
         </div>
+       
+  <input type="text" class="form-control" name="tour_id" value="<?php echo e($id); ?>">
+
+         <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label class="fieldlabels">First Name:</label>
+                                    <div class="form-group">
+                                       <input type="text" name="first_name" placeholder="first name"  required /> 
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Last Name:</label>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" placeholder="last name" required/> 
+                                    </div>
+                                </div>
+  </div>
 
 
 
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
-                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
-                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
+     <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label class="fieldlabels">Phone:</label>
+                                    <div class="form-group">
+                                      <input type="text" name="phone" placeholder="+00 00 000 000"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Email:</label>
+                                    <div class="form-group">
+                                      <input type="email" name="email" placeholder="email" /> 
+                                    </div>
+                                </div>
+  </div>
+
 
                             <label class="fieldlabels">Nationality: *
                             </label>
@@ -532,21 +563,22 @@
   </div>
 
 
-        <div class="form-group">
-            <label for="">Tour type:</label>
-                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="<?php echo e($programs->program_id); ?>" readonly="true">
-          <input type="text" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
-        </div>
+ <div class="col-lg-12 col-md-12 col-sm-12">
+                                     <label for="">Tour type:</label>
+                                    <div class="form-group">
+                                     <input type="text" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
+                                    </div>
+                                </div>
+
+
 
   
 
-                               
-
+       <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <label for="">Accommodation:</label>
                                     <div class="form-group">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                   <label for="">Accommodation:</label>
-                                    <div class="form-group">
-                                       <select class="form-control" name="accomodation">
+                                         <select class="form-control" name="accomodation">
                                             <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
                                              <option>Comfort</option>
@@ -557,18 +589,19 @@
                                         </select>
                                     </div>
                                 </div>
-                                                               </div>
 
-   <div class="form-group">
-            <label for="">Tour Addon:</label>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Tour Addon:</label>
          <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
               <?php $__currentLoopData = $addons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $addon): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <option value="<?php echo e($addon->price); ?>"><?php echo e($addon->addon_name); ?> - <?php echo e($addon->days); ?> days / $<?php echo e($addon->price); ?></option>
               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </select>
+                                </div>
+  </div>
 
-     </div>
+
 
                             
                         </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />

@@ -279,7 +279,7 @@ class TourController extends Controller
      */
     public function show($id)
     {
- //dd('dd');
+ //dd($id);
        
     $tour_addons = program::where('id',$id)->first();
         $type=$tour_addons->main; 
@@ -318,7 +318,8 @@ $discounts=specialOffer::where('tour_id',$id)->first();
         'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
         ->get();
 
-//dd($datas);
+//dd($programs);
+
          if($datas == "[]"){
       return redirect()->back()->with('info','The Program has no Itinery Data');
            };

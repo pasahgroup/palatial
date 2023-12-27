@@ -23,6 +23,7 @@
         <div class="box-title">
           <h5><strong>{{$programs->tour_name}}</strong></h5>
         </div>
+        <p>{{$cust->first_name}} {{$cust->last_name}}</p>
         <em>Summary invoice for your favourite tour costs</em>
           <em><b>(Please make Payment to arrange your favourite tour)</b></em>
         <div class="table-responsive-wrap">

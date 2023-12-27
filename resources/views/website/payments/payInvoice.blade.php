@@ -54,7 +54,7 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label>Expiry Date <span class="required"></span>
+                      <label>Expiry Date/Month <span class="required"></span>
                       </label>
                       <div class="row">
                         <div class="col-sm-6">

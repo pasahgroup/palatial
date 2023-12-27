@@ -47,7 +47,7 @@ class PaymentController extends Controller
 
         $cust=invoice::  join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
         ->where('invoices.customer_id',$cust_id)
-        ->select('invoices.*','tour_equiry_forms.children','tour_equiry_forms.teens','tour_equiry_forms.adults','tour_equiry_forms.pin')->first();
+        ->select('invoices.*','tour_equiry_forms.children','tour_equiry_forms.teens','tour_equiry_forms.adults','tour_equiry_forms.pin','tour_equiry_forms.first_name','tour_equiry_forms.last_name')->first();
         //dd($cust);
         $id=$cust->tour_id;   
 
@@ -63,7 +63,7 @@ class PaymentController extends Controller
          ->where('itineraries.tour_addon','programs')
          ->where('invoices.customer_id',$cust->customer_id)
          ->where('programs.id',$id) ->first();
-//dd($programs);
+//dd($cust);
 
        $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')

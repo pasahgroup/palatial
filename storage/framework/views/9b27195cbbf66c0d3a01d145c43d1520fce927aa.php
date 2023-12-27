@@ -22,6 +22,7 @@
         <div class="box-title">
           <h5><strong><?php echo e($programs->tour_name); ?></strong></h5>
         </div>
+        <p><?php echo e($cust->first_name); ?> <?php echo e($cust->last_name); ?></p>
         <em>Summary invoice for your favourite tour costs</em>
           <em><b>(Please make Payment to arrange your favourite tour)</b></em>
         <div class="table-responsive-wrap">
