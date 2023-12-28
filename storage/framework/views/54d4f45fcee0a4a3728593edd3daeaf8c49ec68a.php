@@ -107,7 +107,7 @@
  <li class="nav-item dropdown">
          <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="">          
-          <div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/user/'.auth()->user()->photo)); ?>" width="60" height="40">
+          <div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/user/'.auth()->user()->photo)?? 0); ?>" width="60" height="40">
           </div>
           </i>         
         </a>
