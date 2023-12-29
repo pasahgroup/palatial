@@ -191,7 +191,7 @@
         </div>
 
         <div class="clearfix">
-          <a href="/pay/24" class="btn btn-primary pull-right hvr-sweep-to-right">Proceed Checkout</a>
+         <a href="/pay/<?php echo e($cust->customer_id); ?>" class="btn btn-primary pull-right hvr-sweep-to-right">Proceed Checkout</a>
         </div>
         <br>
       </div>

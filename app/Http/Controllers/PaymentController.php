@@ -14,6 +14,7 @@ use App\Models\popularExperience;
 use App\Models\specialOffer;
 use App\Models\slider;
 use App\Models\people_percent;
+use App\Models\bank;
 
 use App\Models\Tourcostsummary;
 use App\Models\buyaddons;
@@ -168,6 +169,11 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
        where('status','Deluxe')
        ->get();
 
+
+  $banks = bank::
+       where('status','Active')
+       ->get();
+
  $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
 
    $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
@@ -175,8 +181,10 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
 
 $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_FORMAT(d.start_date,'%m-%Y')datef from departures d,programs p,attachments a where d.tour_id=p.id and a.destination_id=p.id and d.status='Active' and a.type='Programs' and d.tour_id=$id group by datef)as tmp_table order by DATE_FORMAT(datef,'%m-%Y')");
 
-        return view('website.payments.payInvoice',compact('datas','basicCount','inclusives','cust','assignLists','id','programs','basic','comfort','luxury','discounts','tourInvoice'));
+        return view('website.payments.payInvoice',compact('datas','banks','basicCount','inclusives','cust','assignLists','id','programs','basic','comfort','luxury','discounts','tourInvoice'));
     }
+
+
 
  //payment for scheduled group tours
       public function groupTourSumary($id)

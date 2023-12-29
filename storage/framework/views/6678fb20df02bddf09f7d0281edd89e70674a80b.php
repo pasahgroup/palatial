@@ -49,7 +49,8 @@
                     <th>Swift code</th>     
                      <th>Country</th>  
                     <th>Account Name</th>  
-                    <th>Account No</th>       
+                    <th>Account No</th> 
+                      <th>Status</th>         
                     <th>Action</th> 
                                  
                   </tr>
@@ -63,7 +64,8 @@
                      <td><?php echo e($bank->swift_code); ?></td>    
                      <td><?php echo e($bank->country); ?></td> 
                      <td><?php echo e($bank->account_name); ?></td> 
-                       <td><?php echo e($bank->account_no); ?></td>              
+                       <td><?php echo e($bank->account_no); ?></td>   
+                        <td><?php echo e($bank->status); ?></td>           
                     <td><a href="/edit-bank/<?php echo e($bank->id); ?>"><i class="fa fa-edit"></i></a>
                      <a href="/destroy-bank/<?php echo e($bank->id); ?>" onclick="return confirm('Are you sure? You want to delete <?php echo e($bank->percent_name); ?>','bank')"><i class="fa fa-trash red"></i></a></td>
                                 </tr>
@@ -77,7 +79,8 @@
                     <th>Swift code</th>     
                      <th>Country</th>  
                     <th>Account Name</th>  
-                        <th>Account No</th>       
+                        <th>Account No</th>   
+                         <th>Status</th>     
                     <th>Action</th>    
                   </tr>
                   </tfoot>

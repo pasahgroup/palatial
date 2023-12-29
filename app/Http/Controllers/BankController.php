@@ -73,14 +73,13 @@ class BankController extends Controller
         'account_no'=>request('account_no'),
     ],[
            'account_name'=>request('account_name'),
+            'status'=>request('status'),
                'user_id'=>auth::id()   
-           ]);
-                  
+           ]);                  
            return redirect()->back()->with('success','Bank recorded successfully');
         }
 
- 
-            }
+ }
 
     /**
      * Display the specified resource.
@@ -131,6 +130,7 @@ class BankController extends Controller
         'country'=>request('country'),
         'account_name'=>request('account_name'),
         'account_no'=>request('account_no'),
+         'status'=>request('status'),
         ]);
     return redirect()->route('bank.index')->with('success','bank updated successfully');
         }

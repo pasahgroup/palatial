@@ -17,13 +17,64 @@
   </div> -->
 
  
- <section class="checkout-page">
+
+
+  <section class="cart-page">
     <div class="container">
       <div class="border-box">
         <div class="box-title">
-          <h4>Complete Payment</h4>
+           <h5>Payment via Cash Transfer</h5>
         </div>
-        <br>
+        <p>Pay Via any Bank below</p>
+        <div class="table-responsive-wrap">
+          <table class="table table-responsive cart-checkout-table">
+            <thead>
+
+              <tr>
+                <th>Bank Name</th>
+                  <th>Swift Code</th>
+                     <th>Country</th>
+                <th>Account Name</th>
+                <th>Account Number</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+
+               @foreach ($banks as $bank)
+              <tr>
+                <td>
+                  {{$bank->bank_name}}
+                </td>
+                <td>
+    {{$bank->swift_code}}
+               
+                </td>
+                  <td>
+            {{$bank->country}}
+                  </td>
+                <td>
+                     {{$bank->account_name}}
+                </td>
+                <td>
+                  {{$bank->account_no}}
+                </td>
+              </tr>
+ @endforeach
+             
+
+            </tbody>
+          </table>
+        </div>
+      
+                   </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="border-box">
+          <h4>Payment Via App Portal</h4>      
         <div class="row">
           <form>
                      <div class="col-sm-12">

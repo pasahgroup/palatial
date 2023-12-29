@@ -16,13 +16,69 @@
   </div> -->
 
  
- <section class="checkout-page">
+
+
+  <section class="cart-page">
     <div class="container">
       <div class="border-box">
         <div class="box-title">
-          <h4>Complete Payment</h4>
+           <h5>Payment via Cash Transfer</h5>
         </div>
-        <br>
+        <p>Pay Via any Bank below</p>
+        <div class="table-responsive-wrap">
+          <table class="table table-responsive cart-checkout-table">
+            <thead>
+
+              <tr>
+                <th>Bank Name</th>
+                  <th>Swift Code</th>
+                     <th>Country</th>
+                <th>Account Name</th>
+                <th>Account Number</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+
+               <?php $__currentLoopData = $banks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $bank): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+              <tr>
+                <td>
+                  <?php echo e($bank->bank_name); ?>
+
+                </td>
+                <td>
+    <?php echo e($bank->swift_code); ?>
+
+               
+                </td>
+                  <td>
+            <?php echo e($bank->country); ?>
+
+                  </td>
+                <td>
+                     <?php echo e($bank->account_name); ?>
+
+                </td>
+                <td>
+                  <?php echo e($bank->account_no); ?>
+
+                </td>
+              </tr>
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+             
+
+            </tbody>
+          </table>
+        </div>
+      
+                   </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="border-box">
+          <h4>Payment Via App Portal</h4>      
         <div class="row">
           <form>
                      <div class="col-sm-12">

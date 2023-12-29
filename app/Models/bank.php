@@ -14,6 +14,7 @@ class bank extends Model
         'country',
         'account_name',
         'account_no',
+         'status',
         'user_id'
     ];
 }

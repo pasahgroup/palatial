@@ -48,7 +48,14 @@
 
                        <label>Account Number</label>
                     <input class="form-control" type="text" name="account_no"  value="{{$bank->account_no}}">  
-                    
+
+                        <label>Status</label>
+                     <select name="status" id="status" class="form-control">
+
+                                  <option selected>{{$bank->status}}</option>
+                                  <option>Active</option>
+                                  <option>Inactive</option>
+                                </select>                    
              </div>               
       <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-3">
               <div>

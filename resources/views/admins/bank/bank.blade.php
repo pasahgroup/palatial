@@ -49,7 +49,8 @@
                     <th>Swift code</th>     
                      <th>Country</th>  
                     <th>Account Name</th>  
-                    <th>Account No</th>       
+                    <th>Account No</th> 
+                      <th>Status</th>         
                     <th>Action</th> 
                                  
                   </tr>
@@ -63,7 +64,8 @@
                      <td>{{ $bank->swift_code }}</td>    
                      <td>{{ $bank->country }}</td> 
                      <td>{{ $bank->account_name }}</td> 
-                       <td>{{ $bank->account_no }}</td>              
+                       <td>{{ $bank->account_no }}</td>   
+                        <td>{{ $bank->status }}</td>           
                     <td><a href="/edit-bank/{{$bank->id}}"><i class="fa fa-edit"></i></a>
                      <a href="/destroy-bank/{{$bank->id}}" onclick="return confirm('Are you sure? You want to delete {{ $bank->percent_name}}','bank')"><i class="fa fa-trash red"></i></a></td>
                                 </tr>
@@ -77,7 +79,8 @@
                     <th>Swift code</th>     
                      <th>Country</th>  
                     <th>Account Name</th>  
-                        <th>Account No</th>       
+                        <th>Account No</th>   
+                         <th>Status</th>     
                     <th>Action</th>    
                   </tr>
                   </tfoot>
