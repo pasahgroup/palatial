@@ -77,6 +77,7 @@
                                           <option>Basic</option>
                                           <option>Comfort</option>
                                           <option>Deluxe</option>
+                                          <option>Mix</option>
                                         </select>
                                       </div>
                                   </div>

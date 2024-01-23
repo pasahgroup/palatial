@@ -260,6 +260,7 @@ Route::get('/group', [GrouptourController::class,'group']);
 Route::get('/Group-scheduled', [GrouptourController::class,'GS']);
 Route::get('/special-occasions', [GrouptourController::class,'SO']);
 Route::get('/Utali-nyumani', [GrouptourController::class,'UN']);
+
 //Tour Cost Summary controller
 Route::resource('/tourcostsummary', tourcostsummaryController::class);
 Route::get('/editTourSummary/{x}',[tourcostsummaryController::class, 'edit'])->name('editTourSummary');

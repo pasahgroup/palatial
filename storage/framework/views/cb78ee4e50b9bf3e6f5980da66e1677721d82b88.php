@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -9,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit Cost Summary Page</h1>
+            <h1>New Cost Summary Page</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -33,10 +32,9 @@
               </div>
               <div class="container-fluid x_content">
                 <br />
-              <form  method="post" id="post_form" action="{{ route('updateSummary') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">               
-                @csrf
-                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-                 <input type="hidden" name="id" value="{{$tourcostsummaries->id}}">
+              <form  method="post" id="post_form" action="<?php echo e(route('tourcostsummary.store')); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                <?php echo csrf_field(); ?>
+                <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
                 <div class="card-body">
                     <div class="row">
 
@@ -45,12 +43,12 @@
                                       <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Program Name:</label>
                                       <div class="col-sm-8 col-md-8">
                                         <select name="program" id="" class="form-control">
-                                          <option value="{{$tourcostsummaries->program}}">{{$tourcostsummaries->program}}</option>
-                                          @foreach($programs as $program)
+                                          <option value="">--Select Program--</option>
+                                          <?php $__currentLoopData = $programs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $program): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                           {
-                                                <option>{{$program->tour_name}}</option>
+                                                  <option><?php echo e($program->tour_name); ?></option>
                                                 }
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                       </div>
                                   </div>
@@ -61,7 +59,7 @@
                               <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Season</label>
                               <div class="col-sm-8 col-md-8 ">
                                 <select name="season" id="" class="form-control">
-                                  <option value="{{$tourcostsummaries->season}}">{{$tourcostsummaries->season}}</option>
+                                  <option value="">--Select Season--</option>
                                   <option>Low Season(April & May)</option>
                                   <option>Shoulder Season(March,Nov-14Dec)</option>
                                   <option>High Season(15Dec-Feb,Jun-Oct)</option>
@@ -73,12 +71,12 @@
                                     <div class="form-group row">
                                       <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Accommodation Type</label>
                                       <div class="col-sm-8 col-md-8">
-                                        <select name="status" class="form-control">
-                                          <option value="{{$tourcostsummaries->status}}">{{$tourcostsummaries->status}}</option>
+                                        <select name="status" id="" class="form-control">
+                                          <option value="">--Select Type--</option>
                                           <option>Basic</option>
                                           <option>Comfort</option>
                                           <option>Deluxe</option>
-                                             <option>Mix</option>
+                                          <option>Mix</option>
                                         </select>
                                       </div>
                                   </div>
@@ -89,7 +87,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Price: 2PAX</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="twopax" class="form-control"  value="{{$tourcostsummaries->twopax}}">
+                              <input type="number" name="twopax" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -97,7 +95,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Price: 3PAX</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="threepax" class="form-control"   value="{{$tourcostsummaries->threepax}}">
+                              <input type="number" name="threepax" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -107,7 +105,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Price: 4PAX</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="fourpax" class="form-control"  value="{{$tourcostsummaries->fourpax}}">
+                              <input type="number" name="fourpax" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -116,7 +114,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Price: 5PAX</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="fivepax" class="form-control"  value="{{$tourcostsummaries->fivepax}}">
+                              <input type="number" name="fivepax" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -125,7 +123,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Price: 6PAX</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="sixpax" class="form-control"  value="{{$tourcostsummaries->sixpax}}">
+                              <input type="number" name="sixpax" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -133,7 +131,7 @@
                           <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">SRS</label>
                             <div class="col-sm-8 col-md-8">
-                              <input type="number" name="srs" class="form-control"  value="{{$tourcostsummaries->srs}}">
+                              <input type="number" name="srs" class="form-control"  placeholder="Price">
                             </div>
                               </div>
                           </div>
@@ -144,7 +142,7 @@
                               <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Currency</label>
                               <div class="col-sm-8 col-md-8 ">
                                 <select name="currency" id="" class="form-control">
-                                  <option value="{{$tourcostsummaries->currency}}"> {{$tourcostsummaries->currency}}</option>
+                                  <option value="">--Select Currency--</option>
                                   <option>TSH</option>
                                   <option>USD</option>
                                 </select>
@@ -160,7 +158,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-3">
               <div>
                 <a href="/tourcostsummary" role="button" class="btn btn-success float-left">Return To List</a>
-                   <button type="submit" class="btn btn-primary float-right">Update</button>
+                   <button type="submit" class="btn btn-primary float-right">Save</button>
               </div>
                   </div>
                 </div>
@@ -171,4 +169,6 @@
     </section>
   </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/tour/add.blade.php ENDPATH**/ ?>

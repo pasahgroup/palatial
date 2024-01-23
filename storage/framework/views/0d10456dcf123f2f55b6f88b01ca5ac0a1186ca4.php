@@ -34,6 +34,7 @@
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="../../css/css/font-mytravel.css">
 
+  <link rel="stylesheet" href="../../css/style-shortline.css">
   <!-- Global styles START -->
   <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 

@@ -472,7 +472,6 @@
         </div>
        
   <input type="hidden" class="form-control" name="tour_id" value="<?php echo e($id); ?>">
-
          <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label class="fieldlabels">First Name:</label>
