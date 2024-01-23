@@ -118,7 +118,8 @@
                 <div class="col-md-9 col-sm-12 additional-shop-info"  style="font-size;color: white;">
                     <ul class="list-unstyled list-inline">
                           <li>
-   <a href="https://wa.me/+255692710255">
+ <!--   <a href="https://wa.me/+255692710255"> -->
+    <a href="https://wa.link/z5mmcd">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height20px;">
                                 +255 753 216 263
                             </a>
