@@ -93,11 +93,11 @@
         <hr>
                <div class="login-socio">
                         <ul class="social-icons">
-                                <li class="color-orange"><a href="https://www.facebook.com/profile.php?id=100076571268091" data-original-title="facebook" class="facebook" title="facebook"></a></li>
-                                <li class="color-blue"><a href="https://mobile.twitter.com/DrongoSafaris" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
-                                 <li class="color-pink"><a href="https://www.instagram.com/drongosafaris" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
+                                <li class="color-orange"><a href="#" data-original-title="facebook" class="facebook" title="facebook"></a></li>
+                                <li class="color-blue"><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
+                                 <li class="color-pink"><a href="#" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
                                 <li><a href="javascript:;" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
-                                <li><a href="https://www.linkedin.com/in/drongo-safaris-85b246230" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
+                                <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
                             </ul>
                         </div>
                                              <hr>
