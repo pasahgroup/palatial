@@ -107,7 +107,7 @@
     @endforeach </td>
                   <td>
 
-                                            @foreach ($peoplePercents as $percent)
+  @foreach ($peoplePercents as $percent)
     @if($percent->percent_name==="Children")
       {{number_format(($percent->percent/100)*($cust->unit_price),2)}}
     @endif  
@@ -173,7 +173,7 @@
               </tr>
               <tr class="total">
                 <td class="price">Grand Total</td>
-                <td class="price"> {{ number_format($cust->total_cost,2)}}  {{ $cust->currency}}</td>
+                <td class="price"> {{ number_format($cust->total_cost,2)}}  {{ $cust->currency}}:: </td>
               </tr>
             </table>
 

@@ -111,7 +111,7 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> </td>
                   <td>
 
-                                            <?php $__currentLoopData = $peoplePercents; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $percent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <?php $__currentLoopData = $peoplePercents; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $percent): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <?php if($percent->percent_name==="Children"): ?>
       <?php echo e(number_format(($percent->percent/100)*($cust->unit_price),2)); ?>
 
@@ -181,7 +181,7 @@
               </tr>
               <tr class="total">
                 <td class="price">Grand Total</td>
-                <td class="price"> <?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?></td>
+                <td class="price"> <?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?>:: </td>
               </tr>
             </table>
 
