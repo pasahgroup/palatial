@@ -188,13 +188,6 @@ $id=11;
 
 
 
-
-
-
-
-
-
-
  $socialmedia = socialmedia::get();
 
 $date=date('d-M-Y');
@@ -229,13 +222,6 @@ foreach ($files as $file){
 
 dd('Mail sent successfully');
 }
-
-
-
-
-
-
-
 
 
 
@@ -413,7 +399,7 @@ if($children_p<=0.00)
          // dd($total_price);
             $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
-            $total_cost=$total_price + $total_addon_price + $total_discount;
+            $total_cost=$total_price + $total_addon_price - $total_discount;
          }
          else
          {
@@ -450,11 +436,10 @@ if($children_p<=0.00)
          // dd($total_price);
             $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
-            $total_cost=$total_price + $total_addon_price +  $total_discount;
+            $total_cost=$total_price + $total_addon_price -  $total_discount;
          }
 
 $adults_cost=$unit_price * $adults;
-
 
         $tour_costsummary = TourEquiryForm::create([
         'first_name'=>request('first_name'),
