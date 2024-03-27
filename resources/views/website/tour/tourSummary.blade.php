@@ -531,7 +531,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
                                     <div class="form-group">
-                                        <input type="date" name="travel_date" id="travel_date" class="form-control datepicker" placeholder="From" value="" required>
+                                        <input type="date" name="travel_date" id="travel_date" placeholder="From" value="" required>
                     
                                     </div>
                                 </div>

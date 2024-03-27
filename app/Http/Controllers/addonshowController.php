@@ -42,7 +42,8 @@ class addonshowController extends Controller
          // ->where('attachments.type','Accommodation')
          // ->select('accommodations.*','attachments.attachment','attachments.destination_id')
          //      ->get();
-              
+             
+            // dd('print');
 
            $addons_accom = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
            ->join('programs','programs.id','itinerary_days.accommodation_id')
@@ -76,8 +77,7 @@ class addonshowController extends Controller
         $tour_addon='Addon';
         }
 
-$discounts=specialOffer::where('tour_id',$id)->first(); 
-
+$discounts=specialOffer::where('tour_id',$id)->first();
         $programs = program::
            join('itineraries','itineraries.program_id','programs.id')
           ->join('attachments','programs.id','attachments.destination_id')

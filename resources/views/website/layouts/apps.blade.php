@@ -352,7 +352,7 @@
       <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-5 col-sm-6 padding-top-10">
-            2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>|<a href="javascript:;">Terms of Service</a>
+            2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" _tab="">Email</a>
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->

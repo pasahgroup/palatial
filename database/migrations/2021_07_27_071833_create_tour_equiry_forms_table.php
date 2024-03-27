@@ -26,10 +26,10 @@ class CreateTourEquiryFormsTable extends Migration
              $table->integer('depart_id')->unsigned();
             $table->string('tour_type')->nullable();
             $table->string('accommodation')->nullable();
-                  $table->integer('adults')->unsigned();      
+                  $table->integer('adults')->nullable();      
 
-            $table->integer('teens')->unsigned();
-            $table->integer('children')->unsigned();
+            $table->integer('teens')->nullable();
+            $table->integer('children')->nullable();
               $table->date('tour_date')->nullable();
              $table->date('travel_date')->nullable();
 
