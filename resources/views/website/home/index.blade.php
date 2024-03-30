@@ -25,8 +25,8 @@
     @isset($sliders)      
 
 @foreach ($sliders as $slides)
-            <div class="owl-carousel-item position-relative" data-dot="<img src='../custom/img/carousel-1.jpg'>">
-                <img class="img-fluid" src="../custom/img/carousel-1.jpg" alt="" style="height: 92vh;">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='{{URL::asset('/storage/uploads/'.$slides->attachment)}}'>">
+                <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$slides->attachment)}}" alt="" style="height: 92vh;">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">

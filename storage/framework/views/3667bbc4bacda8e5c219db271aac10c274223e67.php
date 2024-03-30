@@ -24,8 +24,8 @@
     <?php if(isset($sliders)): ?>      
 
 <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='../custom/img/carousel-1.jpg'>">
-                <img class="img-fluid" src="../custom/img/carousel-1.jpg" alt="" style="height: 92vh;">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>'>">
+                <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" alt="" style="height: 92vh;">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
