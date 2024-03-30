@@ -1,232 +1,75 @@
 @extends('website.layouts.apps')
 @section('content')
 
-<style>
-.vl {
-	border-left: 1px solid green;
-	height: 20px;
-}
-</style>
-
-<style type="text/css">
-		.wrapper {
-	padding: 5px;
-	 background-color: rgba(0,0,0,0.00001);
-	max-width: 450px;
-	margin: 2px auto;
-}
-
-.demo-1 {
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-}
-
-.demo-2 {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	max-width: 140px;
-}
-
-.demo-3 {
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
-}
 
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: default;
-}
+    <link href="../custom/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../custom/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../custom/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  padding: 0.25em 0.5em;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 0.25em;
-  white-space: nowrap;
-  
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 100%;
-  transition-property: visibility;
-  transition-delay: 0s;
-}
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  transition-delay: 0.3s;
-}
-</style>
-
-
- <!--  <link rel="stylesheet" href="../../../../plugins/fontawesome-free/css/all.min.css"> -->
-	<link rel="stylesheet" href="../../css/style.css">
+    <!-- Template Stylesheet -->
+    <link href="../custom/css/style.css" rel="stylesheet">
 
       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
-      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="style.css">
 
 
- @isset($sliders)
-		<div class="page-slider margin-bottom-40">
-				 <div id="myCarousel" class="carousel slide carousel-slider" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-		 <!--  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
- -->
-			 <?php $i=0 ?>
-								@for($i=0;$i<$slidersCount;$i++)
-								<li data-target="#carousel-example-generic" data-slide-to="{{$i}}" class="active"></li>
-								@endfor
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active"  style="background-image: url({{URL::asset('/storage/uploads/'.$slidersf->attachment)}});height:79vh;width:100% background-repeat: no-repeat;
-										 background-size:100% 100%;
-											 background-position: center;">
-										<div class="container">
-											 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<div class="carousel-position-six text-center">
-
-															 <p>
-																 <b class="text-white">{{ $slidersf->tour_name }} </b>
-															 </p>
-
-												<div class="tab-pane">
-												 <div class="panel-group">
-														<p class="carousel-subtitle border-top-bottom margin-bottom" data-animation="animated fadeInDown"><a  href="#accordion13_{{ $slidersf->id}}" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle"><b class="text-white">Read</b></a>
-														</p>
-
-															<div class="panel-collapse collapse in" id="accordion13_{{ $slidersf->id }}">
-																	<div class="wrapper">
-																	 <p class="demo-1">{{ $slidersf->description }}</p>
-																	<p><a href="{{ route('safaris-slider',$slidersf->tour_id) }}" data-animation="animated fadeInUp">
-																		<b>Read More<i class="fa fa-angle-double-right"></i></b></a></p>
-
-																	</div>
-														</div>
-
-												</div>
-												</div>
-												</div>
-												</div>
-
-										</div>
-								</div>
 
 
-	@foreach ($sliders as $slides)
-		<div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}}); height:79vh; width: 100%; background-repeat: no-repeat;
-															background-size:100% 100%;
-											 background-position: center;
-												 position: relative;">
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+    @isset($sliders)      
 
-										<div class="container">
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<div class="carousel-position-six text-center">
-
-								<p>
-						 <b class="text-white">{{ $slides->tour_name }} </b>
-						 </p>
-
-												<div class="tab-pane">
-												 <div class="panel-group">
-														<p class="carousel-subtitle border-top-bottom margin-bottom" data-animation="animated fadeInDown"><a  href="#accordion1_{{ $slides->id }}" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle"><b class="text-white">Read</b></a>
-														</p>
-
-														<div class="">
-															<div class="panel-collapse collapse in" id="accordion1_{{ $slides->id }}">
-																	<div class="wrapper">
-																	 <p class="demo-1">{{ $slides->description }}</p>
+@foreach ($sliders as $slides)
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../custom/img/carousel-1.jpg'>">
+                <img class="img-fluid" src="../custom/img/carousel-1.jpg" alt="" style="height: 92vh;">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                 <h3 class="text-white">{{ $slides->tour_name }}</h3>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 demo-1">{{ $slides->description }}.</p>
+                                <a href="{{ route('safaris-slider',$slides->tour_id) }}" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@endforeach
 
 
-																	<p><a href="{{ route('safaris-slider',$slides->tour_id) }}" data-animation="animated fadeInUp">
-																		<b>Read More <i class="fa fa-angle-double-right"></i></b></a></p>
-																	</div>
-														</div>
-														</div>
+@foreach ($quickLinkSliders as $quickSliderf)
+            <div class="owl-carousel-item position-relative" data-dot="<img src={{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}>">
+                <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}" alt="" style="height: 92vh;">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                 <h4 class="text-white">{{ $quickSliderf->quick_title }}</h4>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">{{ $quickSliderf->quick_description }}.</p>
+                                <a href="/QuickLink/{{$quickSliderf->id}}" class="py-1 px-5 animated slideInLeft text-white">Read More >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@endforeach
 
-												</div>
-										</div>
-												</div>
-												</div>
-									</div>
-								</div>
-								</div>
-								@endforeach
 
-									@foreach ($quickLinkSliders as $quickSliderf)
-									 <div class="item">
-										<div style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); height: 79vh; width: 100%; background-repeat: no-repeat;
-														background-size:100% 100%;
-											 background-position: center;
-											 background-repeat: no-repeat;
-												 position: relative;">
+       
+ @endisset
+        </div>
+        <div class="container">
+        <div class="booking-btn-top">
+            <b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
+                </div>
+    </div>
+    </div>
 
-										<div class="container">
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<div class="carousel-position-six text-center">
-
-						 <p>
-						 <b class="text-white">{{ $quickSliderf->quick_title }} </b>
-						 </p>
-												<div class="tab-pane">
-												 <div class="panel-group">
-														<p class="carousel-subtitle border-top-bottom margin-bottom" data-animation="animated fadeInDown"><a  href="#accordion12_{{ $quickSliderf->id }}" data-parent="#accordion1" data-toggle="collapse" class="accordion-toggle"><b class="text-white">Read</b></a>
-														</p>
-
-															<div class="">
-															<div class="panel-collapse collapse in" id="accordion12_{{ $quickSliderf->id }}">
-																	<div class="wrapper">
-																	 <p class="demo-1">{{ $quickSliderf->quick_description }}</p>
-																		<p><a href="/QuickLink/{{$quickSliderf->id}}" data-animation="animated fadeInUp">
-																		<b>Read More <i class="fa fa-angle-double-right"></i></b></a></p>
-																	</div>
-														</div>
-														</div>
-
-												</div>
-										</div>
-												</div>
-												</div>
-									</div>
-								</div>
-								</div>
-							 @endforeach
-		</div>
-
-		<!-- Left and right controls -->
-
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-
-<div class="container">
-		<div class="booking-btn-top">
-			<b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
-				</div>
-	</div>
-</div>
-@endisset
 
  @isset($welcome_message)
 <div class="container">
@@ -256,9 +99,9 @@
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
 
-<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px;">
+<h2 class="" style="color:#3a6859;">
 Tour Packages
-</h3>
+</h2>
 										</div>
 
 						</div>
@@ -507,10 +350,11 @@ Tour Packages
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
-<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px;">
-Special Offers
-</h3>
 
+
+<h2 class="" style="color:#3a6859;">
+Special Offers
+</h2>
 										</div>
 
 						</div>
@@ -709,9 +553,11 @@ Special Offers
 					<div class="col-md-12 text-center">
 
 
-<h3 class="" style="color:#fff;background-color:#496f50; border-radius:10px; border-radius:10px;">
+
+<h2 class="" style="color:#3a6859;">
 Popular Experiences
-</h3>
+</h2>
+
 
 										</div>
 
@@ -1018,9 +864,12 @@ Popular Experiences
 		<div class="container">
 				<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mt-4">
 					 <div class="col-md-12 text-center">
-						<h3 class="booking-tourPadding" style="color:#fff;background-color:#496f50; border-radius:10px;">
+
+<h2 class="" style="color:#3a6859;">
 Popular Destinations
-</h3>
+</h2>
+
+
 <hr>
 				</div>
 				</div>
@@ -1249,4 +1098,23 @@ Popular Destinations
 </div>
 </div>
 {{-- end of booking form madal --}}
+
+
+
+  <!-- JavaScript Libraries -->
+<!--     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    
+    <script src="../custom/lib/wow/wow.min.js"></script>
+    <script src="../custom/lib/easing/easing.min.js"></script>
+    <script src="../custom/lib/waypoints/waypoints.min.js"></script>
+    <script src="../custom/lib/counterup/counterup.min.js"></script>
+    <script src="../custom/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../custom/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../custom/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../custom/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../custom/js/main.js"></script>
  @endsection

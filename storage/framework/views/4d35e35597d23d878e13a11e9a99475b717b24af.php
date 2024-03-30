@@ -85,26 +85,6 @@
 <!-- Body BEGIN -->
 <body class="corporate">
     <!-- BEGIN STYLE CUSTOMIZER -->
-    <div class="color-panel hidden-sm">
-      <div class="color-mode-icons icon-color"></div>
-      <div class="color-mode-icons icon-color-close"></div>
-      <div class="color-mode">
-       <p>Join Us On</p>
-        <hr>
-               <div class="login-socio">
-                        <ul class="social-icons">
-                                <li class="color-orange"><a href="#" data-original-title="facebook" class="facebook" title="facebook"></a></li>
-                                <li class="color-blue"><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
-                                 <li class="color-pink"><a href="#" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
-                                <li><a href="javascript:;" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
-                                <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
-                            </ul>
-                        </div>
-                                             <hr>
- <p><i class="fa fa-phone" style="color:yellow"></i><span> +255 753 216 263</span></p>
-      </div>
-    </div>
-
 
 
     <!-- END BEGIN STYLE CUSTOMIZER -->
@@ -115,7 +95,7 @@
             <div class="row" style="background-color:#688864">
                 <!-- BEGIN TOP BAR LEFT PART -->
 
-                <div class="col-md-9 col-sm-12 additional-shop-info"  style="font-size;color: white;">
+                <div class="col-md-7 col-sm-12 additional-shop-info"  style="font-size;color: white;">
                     <ul class="list-unstyled list-inline">
                           <li>
  <!--   <a href="https://wa.me/+255692710255"> -->
@@ -128,24 +108,25 @@
                     </ul>
                 </div>
 
-                  <div class="col-md-3 col-sm-3">
-     <a href="/tailorForm"  class="btn btn-primary">Tour Enquiry</a>
+
+   <div class="col-md-3 col-sm-6" style="float:right;">
+  <!-- <div class="col-md-4 px-5 text-end"> -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                      <a href="/tailorForm"  class="btn btn-primary">Tour Enquiry</a>
      <a href="/bookingTrip"  class="btn btn-success">My Booking</a>
                 </div>
-                <!-- BEGIN TOP BAR MENU -->
-               <!--  -->
+               
+            </div>
 
-         <!-- <div class="col-md-1 col-sm-2">
+   <div class="col-md-2 col-sm-6" style="float:right;">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
 
-                      <div class="custom-select-box">
-                        <select id="basic" class="changeLang" data-placeholder="English"  style="background-color: white;">
-                    <option value="en" <?php echo e(session()->get('locale') == 'en' ? 'selected' : ''); ?>>English</option>
-                    <option value="fr" <?php echo e(session()->get('locale') == 'fr' ? 'selected' : ''); ?>>France</option>
-                    <option value="sp" <?php echo e(session()->get('locale') == 'sp' ? 'selected' : ''); ?>>Spanish</option>
-                    <option value="sw" <?php echo e(session()->get('locale') == 'sw' ? 'selected' : ''); ?>>Swahili</option>
-            </select>
-                    </div>
-                    </div> -->
 
             </div>
 
@@ -281,19 +262,6 @@
       </div>
     </div>
 
-<div id="sticky-social">
-<ul>
-<!-- <li><a href="#" class="entypo-gplus" target="_blank"><span>Google Plus</span></a></li>
-<li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-<li><a href="#" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
-    -->
-             <li><a href="#"><i class="fab fa-facebook-f"></i><span>-</span></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i><span>-</span></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i><span>-</span></a></li>
- <!--            <li><a href="#"><i class="fab fa-linkedin-in"></i><span>-</span></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i><span>-</span></a></li> -->
-</ul>
-</div>
 
 
 
@@ -358,7 +326,6 @@
           <!-- BEGIN PAYMENTS -->
 
                  <div class="col-md-4 col-sm-6 padding-left-0 padding-top-8 padding-right-30">
-
                                 <div class="login-socio">
                                     <ul class="social-icons">
                                 <li><a href="#" data-original-title="facebook" class="facebook" title="facebook"></a></li>
@@ -390,11 +357,14 @@
     <!-- END CORE PLUGINS -->
 
     <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-    <script src="../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script><!-- pop up -->
-    <script src="../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script><!-- slider for products -->
+   
+    <script src="../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script>
 
     <script src="../../assets/corporate/scripts/layout.js" type="text/javascript"></script>
     <script src="../../assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
+   
+
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->
@@ -404,7 +374,7 @@
             Layout.init();
             Layout.initOWL();
             Layout.initTwitter();
-            Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
+            Layout.initFixHeaderWithPreHeader(); 
             Layout.initNavScrolling();
         });
     </script>
@@ -413,17 +383,22 @@
       <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="../assets/vendor/jqueryui/jquery-ui-1.10.3.custom.min.js"></script>
   <script src="../assets/vendor/jquery.ui.touch-punch.min.js"></script>
-  <!-- <script src="..assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
+
+ 
   <script src="../assets/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
   <script src="../assets/vendor/owlcarousel/owl.carousel.min.js"></script>
   <script src="../assets/vendor/retina.min.js"></script>
-  <!-- <script src="..assets/vendor/jquery.imageScroll.min.js"></script> -->
+
+
+  <script src="..assets/vendor/jquery.imageScroll.min.js"></script>
   <script src="../assets/js/min/responsivetable.min.js"></script>
   <script src="../assets/js/bootstrap-tabcollapse.js"></script>
 
   <script src="../assets/js/min/countnumbers.min.js"></script>
   <script src="../assets/js/main.js"></script>
+
+
 <!-- End of Mold custom scripts -->
 
 <script type="text/javascript">

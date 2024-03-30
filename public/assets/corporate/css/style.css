@@ -75,9 +75,11 @@
 .booking-btn {
   border: 1px solid #647545;
   padding: 8px 20px;
-  color:#ffffff;
-  display: block;
-  background-color: #496f50;
+  color:#fff;
+  display: block;  
+  background-color: #3a6859;
+  /*background-color: #3a6268;*/
+  /*background-color: #3a6859;*/
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -935,9 +937,9 @@ Header and header elements
 ***/
 .header {
 	box-shadow: 0 1px 2px #8b9b76;
-	background: #496f50;
+	background: #3a6859;
 	border-radius: 0;
-	margin-bottom: 10px;
+	margin-bottom: 1px;
 	z-index: 999;
 	position: relative;
 }
