@@ -94,7 +94,8 @@ class websiteController extends Controller
  
   // ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-  ->offset(1)->limit(8)->get();
+  // ->offset(1)
+  ->limit(8)->get();
   //dd($popular_safarif);
 
    $popular_trekking = program::join('attachments','attachments.destination_id','programs.id')
@@ -109,7 +110,8 @@ class websiteController extends Controller
   ->where('programs.type','Hiking & Trekking')
   //->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-   ->offset(1)->limit(8)->get();
+   // ->offset(1)
+   ->limit(8)->get();
 
  $popular_holiday = program::join('attachments','attachments.destination_id','programs.id')
  ->select('programs.*','attachments.attachment')
@@ -123,7 +125,8 @@ class websiteController extends Controller
   ->where('programs.type','Beach Holidays')
  //->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-  ->offset(1)->limit(8)->get();
+  // ->offset(1)
+  ->limit(8)->get();
   
    $popular_historical = program::join('attachments','attachments.destination_id','programs.id')
  ->select('programs.*','attachments.attachment')
@@ -139,7 +142,8 @@ class websiteController extends Controller
   ->where('programs.type','Historical Site')
  //->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-  ->offset(1)->limit(4)->get();
+  // ->offset(1)
+  ->limit(4)->get();
 
 
 
@@ -173,7 +177,8 @@ class websiteController extends Controller
            $sliders = slider::join('programs','programs.id','sliders.tour_id')
           ->where('sliders.status','1')
           ->select('sliders.*','programs.tour_name')
-          ->offset(1)->limit(5)->get();
+          // ->offset(1)
+          ->limit(5)->get();
         //  $slidersCount=DB::select('select count(title) title from sliders');
         // $slidersCount=slider::where('status','1')
         // ->count();
@@ -211,7 +216,8 @@ class websiteController extends Controller
         ->select('testimonies.*','attachments.attachment')
         ->where('attachments.type','Testimonies')
         ->where('testimonies.status','1')
-        ->offset(1)->limit(8)->latest()->get();
+        // ->offset(1)
+        ->limit(8)->latest()->get();
     
        
      //Seach Engine
@@ -230,22 +236,26 @@ class websiteController extends Controller
    $historical_first=attraction::where('type','Historical')
          ->limit(1)->get()->first();
           $historical=attraction::where('type','Historical')
-          ->offset(1)->limit(8)->get();
+          // ->offset(1)
+          ->limit(8)->get();
 
             $wildlife_first=attraction::where('type','Wildlife')
          ->limit(1)->get()->first();
           $wildlife=attraction::where('type','Wildlife')
-          ->offset(1)->limit(8)->get();
+          // ->offset(1)
+          ->limit(8)->get();
 
           $geographical_first=attraction::where('type','Geographical')
          ->limit(1)->get()->first();
           $geographical=attraction::where('type','Geographical')
-          ->offset(1)->limit(8)->get();
+          // ->offset(1)
+          ->limit(8)->get();
 
         $culture_first=attraction::where('type','Culture & Belief')
          ->limit(1)->get()->first();
           $culture=attraction::where('type','Culture & Belief')
-          ->offset(1)->limit(8)->get();
+          // ->offset(1)
+          ->limit(8)->get();
 
          return view('website.home.index',compact('offers_private','offers_group','popular_safari','popular_safarif','popular_trekkingf','popular_holiday','popular_trekking','popular_holidayf','popular_historical','popular_historicalf','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
     }
