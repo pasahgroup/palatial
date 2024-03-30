@@ -72,60 +72,12 @@
 }
 </style>
 
- @isset($PostcategoryImage->attachment)
- <div class="container">
-  <section class="package-list-wrap">
-    
-                            <img src="{{URL::asset('/storage/uploads/'.$PostcategoryImage->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:80vh !important;background-size:100% 100%;width: 100%;">
-                        
-                            <div class="package-list-content">
-                                <p class="package-list-duration"   <div class="banner-box">
-                        <h3 style="font-style;color:white">{{$title}}</h3>
-                        <nav aria-label="breadcrumb">
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                 <li class="breadcrumb-item active" aria-current="page">{{$title?? ''}}</li>
-                            </ul>
-                        </nav>
-                    </div>
-                    </div>
+ <hr>
 
-  </section>
-                </div>
- 
-   <hr>
-     <div class="container">  
- <section class="ws-section-spacing booking-btn">   
-    <div class="row"> 
-      <div class="col-lg-12 col-md-12 col-sm-12">
-        <p style="color: white;">
-          {{$PostcategoryImage->body ?? ''}}.
-        </p>         
-    </div>
-    </div> 
-</section>
-   </div>
-</hr>
-@else
- <div class="">
-                <div class="col-lg-10">
-                    <div class="banner-box">
-                        <h2>{{$title}}</h2>
-                        <nav aria-label="breadcrumb">
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{$title?? ''}}</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
- @endisset
-<hr>
 
 
  <section id="blog_private" class="">
-    <div class="container">    
+    <div class="container">  
                
 
 <div class="row" data-aos="fade-up">  
@@ -213,7 +165,7 @@
                                              </div>
                                
                                   <div class="row">
-                                  <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-tourPadding">
+                                  <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-tourPaddingx">
                                     <div class="">
                                         <a href="/safaris/{{$safari->id}}" class="booking-btn text-center"><b>View More</b></a>
                                     </div>  
