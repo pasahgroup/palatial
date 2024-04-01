@@ -1,6 +1,6 @@
 @extends('website.layouts.apps')
 @section('content')
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
 
 <style type="text/css">
       
@@ -78,11 +78,11 @@
     </section>
 
  <hr>
- <section class="booking-btn">
+ <section class="booking-btnx">
     <div class="container">   
     <div class="row"> 
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <p style="color: white;">
+        <p style="color: whitex;">
           {{$PostcategoryImage->body ?? ''}}.
         </p>         
     </div>

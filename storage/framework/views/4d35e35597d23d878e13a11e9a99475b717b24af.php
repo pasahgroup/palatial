@@ -79,6 +79,14 @@
   <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <!-- End of Mold custom style -->
 
+<!-- Custom stylesheet -->
+    <link href="../custom/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../custom/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="../custom/css/style.css" rel="stylesheet">
 </head>
 <!-- Head END -->
 
@@ -92,7 +100,8 @@
 
          <div class="pre-header">
         <div class="container-fluid">
-            <div class="row" style="background-color:#688864">
+            <!-- <div class="row" style="background-color:#317746de"> -->
+               <div class="row" style="background-color:#3a6859;">
                 <!-- BEGIN TOP BAR LEFT PART -->
 
                 <div class="col-md-7 col-sm-12 additional-shop-info"  style="font-size;color: white;">
@@ -134,7 +143,8 @@
 </div>
 
     <!-- BEGIN HEADER -->
-    <div class="header">
+    <div class="header" style="background-color:#3a6859;">
+       <!-- <div class="row" style="background-color:transparent;"> -->
       <div class="container">
           <a class="site-logo" href="/"><img src="../../assets/corporate/img/logos/logo-corp-red.png" style="height:8vh; width:100px" alt="palatial tours"></a>
 
@@ -270,7 +280,7 @@
     <?php echo $__env->yieldContent('content'); ?>
   <hr>
       <footer id="footer">
-    <div class="container" style="background-color:#496f50;">
+    <div class="container-fluid" style="background-color:#496f50;">
       <div class="row">
         <div class="col-md-3">
           <h4>Destinations</h4>
@@ -316,7 +326,7 @@
     <!-- <div class="copy"><span>&copy;</span> Copyright Mold Discover, 2017</div> -->
   </footer>
 
-   <div class="footer">
+   <div class="footer" style="background-color:#3a6859;">
       <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-5 col-sm-6 padding-top-10">
@@ -398,6 +408,8 @@
   <script src="../assets/js/min/countnumbers.min.js"></script>
   <script src="../assets/js/main.js"></script>
 
+<!-- Custom Javascript -->
+  <!-- <script src="../custom/js/main.js"></script> -->
 
 <!-- End of Mold custom scripts -->
 

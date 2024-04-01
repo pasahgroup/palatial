@@ -14,8 +14,8 @@
 <!-- Head BEGIN -->
 <head>
   <!-- Global styles START -->          
-  <link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--   <link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <!-- Global styles END --> 
    
   <!-- Page level plugin styles START -->

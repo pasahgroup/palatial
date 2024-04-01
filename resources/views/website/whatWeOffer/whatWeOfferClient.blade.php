@@ -1,8 +1,8 @@
 @extends('website.layouts.apps')
 @section('content')
-  <link rel="stylesheet" href="css/style.css">
+<!--   <link rel="stylesheet" href="css/style.css">
 
-
+ -->
 <style type="text/css">
     .wrapper {
   padding: 5px;

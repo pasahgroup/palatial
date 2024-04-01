@@ -13,10 +13,20 @@
     <link href="../custom/css/style.css" rel="stylesheet">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="style.css">
 
 
 
+<style>
+.bgimg{
+     max-height: 92vh !important;
+    min-height: 20vh !important;
+    /*width: 100%;*/
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+</style>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -25,13 +35,13 @@
 
 <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="owl-carousel-item position-relative" data-dot="<img src='<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>'>">
-                <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" alt="" style="height: 92vh;">
+                <img class="img-fluid bgimg" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
                                  <h3 class="text-white"><?php echo e($slides->tour_name); ?></h3>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3 demo-1"><?php echo e($slides->description); ?>.</p>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3"><?php echo e($slides->description); ?>.</p>
                                 <a href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
                             </div>
                         </div>
@@ -43,14 +53,14 @@
 
 <?php $__currentLoopData = $quickLinkSliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quickSliderf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="owl-carousel-item position-relative" data-dot="<img src=<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>>">
-                <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>" alt="" style="height: 92vh;">
+                <img class="img-fluid bgimg" src="<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
                                  <h4 class="text-white"><?php echo e($quickSliderf->quick_title); ?></h4>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-3"><?php echo e($quickSliderf->quick_description); ?>.</p>
-                                <a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" class="py-1 px-5 animated slideInLeft text-white">Read More >></a>
+                                <a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
                             </div>
                         </div>
                     </div>
@@ -58,12 +68,12 @@
             </div>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-
+<br>
        
  <?php endif; ?>
         </div>
         <div class="container">
-        <div class="booking-btn-top">
+        <div class="">
             <b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
                 </div>
     </div>
@@ -97,8 +107,7 @@
 						<div class="col-md-12" data-aos="fade-up">
 								<div class="section text-center">
 					<div class="col-md-12 text-center">
-
-<h2 class="" style="color:#3a6859;">
+<h2 class="" style="color:#b76b0b;">
 Tour Packages
 </h2>
 										</div>
@@ -351,7 +360,7 @@ Tour Packages
 					<div class="col-md-12 text-center">
 
 
-<h2 class="" style="color:#3a6859;">
+<h2 class="" style="color:#b76b0b;">
 Special Offers
 </h2>
 										</div>
@@ -553,7 +562,7 @@ Special Offers
 
 
 
-<h2 class="" style="color:#3a6859;">
+<h2 class="" style="color:#b76b0b;">
 Popular Experiences
 </h2>
 
@@ -864,7 +873,7 @@ Popular Experiences
 				<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mt-4">
 					 <div class="col-md-12 text-center">
 
-<h2 class="" style="color:#3a6859;">
+<h2 class="" style="color:#b76b0b;">
 Popular Destinations
 </h2>
 
@@ -1106,12 +1115,12 @@ Popular Destinations
 
     
     <script src="../custom/lib/wow/wow.min.js"></script>
-    <script src="../custom/lib/easing/easing.min.js"></script>
-    <script src="../custom/lib/waypoints/waypoints.min.js"></script>
+    <!-- <script src="../custom/lib/easing/easing.min.js"></script> -->
+    <!-- <script src="../custom/lib/waypoints/waypoints.min.js"></script> -->
     <script src="../custom/lib/counterup/counterup.min.js"></script>
     <script src="../custom/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../custom/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../custom/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <!-- <script src="../custom/lib/tempusdominus/js/moment-timezone.min.js"></script> -->
     <script src="../custom/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->

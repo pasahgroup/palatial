@@ -1,12 +1,12 @@
 <?php $__env->startSection('content'); ?>
-  <link rel="stylesheet" href="../../css/style.css">
+  <!-- <link rel="stylesheet" href="../../css/style.css"> -->
   <section class="bg-gray ">
         <div class="container-fluid">
-            <div class="package-list-wrap ">
+            <div class="package-list-wrapx">
           
              <!-- <img src="<?php echo e(URL::asset('/storage/uploads/'.$quickLinks->attachment)); ?>" class="" alt="det-img" style="min-height: 35vh !important;max-height:100% !important;background-size: 100% 100%;width: 100%;"> -->
 
-               <img src="<?php echo e(URL::asset('/storage/uploads/'.$quickLinks->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 75vh;background-size: cover;width: 100%;">
+               <img src="<?php echo e(URL::asset('/storage/uploads/'.$quickLinks->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%; opacity:1">
              
                 <div class="package-list-content">
                   <span>Home/Quick-Link </span>
@@ -14,6 +14,13 @@
                         <a href="#"><b style="color: white;"><?php echo e($quickLinks->quick_title); ?></b></a>
                     </h3>
                 </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12">
+        <p style="color:#1da625; background-color:#fff; font-style:italic;">
+          <?php echo e($quickLinks->quick_description ?? ''); ?>.
+       
+        </p>         
+    </div>
                       </div>
 
            </div>
@@ -23,7 +30,7 @@
     </section>
 
 <hr>
- <section class="ws-section-spacing booking-btn">
+<!--  <section class="ws-section-spacing booking-btn">
     <div class="container-fluid">   
     <div class=""> 
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -33,7 +40,7 @@
     </div>
     </div>
     </div>
-</section>
+</section> -->
 
 
 <section id="popular_experience" class="blog_section">
@@ -45,9 +52,9 @@
                 <div class="section text-center">
           <div class="col-md-12 text-center">
 
-<h3 class="" style="color:#c56c1d">
-Tour Packages
-</h3>
+<h2 class="" style="color:#c56c1d"><strong>
+Tour Packages</strong>
+</h2>
                     </div>
 
             </div>
