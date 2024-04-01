@@ -87,6 +87,12 @@
     <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="../custom/css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+      .a{
+color:yellow !important;
+      }
+    </style>
 </head>
 <!-- Head END -->
 
