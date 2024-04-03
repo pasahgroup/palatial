@@ -75,7 +75,7 @@
         </div>
         <div class="container">
         <div class="">
-            <b><marquee scrollamount="2">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
+            <b><marquee scrollamount="2" style="color:#b76b0b; font-size:15px">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
                 </div>
     </div>
     </div>
@@ -544,7 +544,7 @@ Special Offers
 		</div>
 	<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12 text-right">
-						<a class="btn-transparent" href="/offers" target="_blank"><i class="fas fa-gift"></i> Explore More Offers
+						<a class="btn-transparent" href="/offers" target="_blank" style="color:#296820; font-size:15px"><i class="fas fa-gift"></i> Explore More Offers
 						</a>
 					</div>
 				</div>
@@ -843,7 +843,7 @@ Popular Experiences
 																<div class="booking-tourPadding">
 
 																<div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-																			 <a href="/safaris/{{$popular_holiday->id}}" class="booking-btn text-center"><b>View Morevv</b></a>
+																			 <a href="/safaris/{{$popular_holiday->id}}" class="booking-btn text-center"><b>View More</b></a>
 																</div>
 
 																</div>
@@ -857,7 +857,7 @@ Popular Experiences
 
 						 <div class="row">
 						 <div class="col-md-12 col-sm-12 col-xs-12 text-right">
-						<a class="btn-transparent" href="/popularExperienceClient" target="_blank"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
+						<a class="btn-transparent" href="/popularExperienceClient" target="_blank" style="color:#296820; font-size:15px"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
 						</a>
 					</div>
 						 </div>
@@ -955,8 +955,8 @@ Popular Destinations
 	 <div class="container">
 	
 							<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-     <div class="service-box-heading" style="background-color: #496f50;">
-							<p><b>Quick Link</b></p>
+     <div class="service-box-heading" style="background-color: #496f50;">							
+                             <h3 class="" style="color:#37fd00;">Quick Link</h3>
 					 @foreach ($datasLink as $data)
 					 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							     <div class="" style="background-color: #458652;color:#fff;">
@@ -969,7 +969,7 @@ Popular Destinations
 			</div>
 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
       <div class="service-box-heading" style="background-color: #496f50;">
-	<span><b>Testimonials</b></span>
+     <h3 class="" style="color:#37fd00;">Testimonials</h3>
 								 <span><p>What Travellers Say Tour Reviews</p></span>
 								 <div id="myCarousel1" class="carousel slide">
 									 <!-- Carousel items -->

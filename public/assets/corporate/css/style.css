@@ -383,7 +383,7 @@ Template Name: Metronic - Responsive Website Template build with Twitter Bootstr
 }
 .package-list-button {
 	display: inline-block;
-	background-color: #21ab64;
+	/*background-color: #21ab64;*/
 	color: #fff;
 	padding: 5px 15px;
 	border-radius: 4px;

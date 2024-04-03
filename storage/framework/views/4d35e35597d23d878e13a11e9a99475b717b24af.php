@@ -289,7 +289,7 @@ color:yellow !important;
     <div class="container-fluid" style="background-color:#496f50;">
       <div class="row">
         <div class="col-md-3">
-          <h4>Destinations</h4>
+        <h3 class="" style="color:#f78b04;">Destinations</h3>
            <ul class="link-widget">
                         <li class="dropdown"><a title="Northern Circuit" href="/circuitTour/Northern Circuit">Northern Circuit</a></li>
                         <li class="dropdown"><a title="Southern Circuit" href="/circuitTour/Southern Circuit">Southern Circuit</a></li>
@@ -299,7 +299,7 @@ color:yellow !important;
                     </ul>
         </div>
         <div class="col-md-3">
-         <span><h4>About Palatial Tours</h4></span>
+              <h3 class="" style="color:#f78b04;">About Palatial Tours</h3>
             <ul class="link-widget">
                          <li class="dropdown"><a title="Why Adventure with us" href="#">Why Adventure with us</a></li>
                         <li class="dropdown"><a title="What We offer" href="/whatWeOfferClient">What We offer</a></li>
@@ -308,7 +308,7 @@ color:yellow !important;
                     </ul>
         </div>
         <div class="col-md-3">
-          <h4>Support</h4>
+          <h3 class="" style="color:#f78b04;">Support</h3>
            <ul class="link-widget">
                         <li class="dropdown"><a  href="">Visa information</a></li>
                         <li class="dropdown"><a  href="#">Health & Vaccination</a></li>
@@ -317,7 +317,7 @@ color:yellow !important;
                     </ul>
                   </div>
         <div class="col-md-3">
-          <h4>Contacts</h4>
+                <h3 class="" style="color:#f78b04;">Contacts</h3>
             <ul class="link-widget">
 
                         <li class="dropdown"><a  href="">Address:<?php echo e($contacts->address??'Arusha'); ?></a></li>
@@ -355,7 +355,7 @@ color:yellow !important;
                       </div>
                    <!-- BEGIN POWERED -->
           <div class="col-md-3 col-sm-6 text-right">
-            <p class="powered">Powered by: <a href="https://www.pasah.net">www.pasah.net</a></p>
+            <p class="powered">Powered by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
           </div>
         </div>
       </div>
