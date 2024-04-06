@@ -31,13 +31,20 @@
     .color
     {
         color:#fff;
-    };
+    },
      .colort
     {
         color:#2d7d10;
-    }
+    },
+   
     
 
+</style>
+<style type="text/css">
+      .yellow
+    {
+        color:yellow;
+    }
 </style>
 
     <!-- Carousel Start -->
@@ -52,7 +59,7 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
-                                 <h3 class="text-white"><?php echo e($slides->tour_name); ?></h3>
+                                 <h3 class="yellow"><?php echo e($slides->tour_name); ?></h3>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-3 color"><?php echo e($slides->description); ?>.</p>
                                 <a href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
                             </div>
@@ -70,9 +77,9 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
-                                 <h4 class="text-white"><?php echo e($quickSliderf->quick_title); ?></h4>
+                                 <h4 class="yellow"><?php echo e($quickSliderf->quick_title); ?></h4>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-3 color"><?php echo e($quickSliderf->quick_description); ?>.</p>
-                                <a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
+                                <a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" class="btn btn-primary py-1 px-5 animated slideInLeft yellow">Read More >></a>
                             </div>
                         </div>
                     </div>
