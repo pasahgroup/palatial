@@ -11,8 +11,19 @@
     position: relative;
     background-repeat: no-repeat;
     background-size:cover;
-}
+};
+
 </style>
+
+<style type="text/css">
+  
+  .p{
+  color:#115b27  !important;
+  }
+</style>
+
+
+
 
  <?php if(isset($PostcategoryImage->attachment)): ?>
   <section class="same-section-spacing bg-bannerw">
@@ -45,21 +56,21 @@
                             <img src="<?php echo e(URL::asset('/storage/uploads/'.$aboutus->attachment)); ?>" class="img-fluid" alt="det-img">
                                   <?php endif; ?>
                             <div class="package-list-content">
-                            <p class="package-list-duration">Home/About us
+                            <p class="package-list-duration p">Home/About us
                             </p>
                             </div>
                         </div>
                              <div class="col-lg-12">
                             <div class="package-info">
-                               <p class="text-center"><b>About US</b>
+                               <p class="text-center p"><b>About US</b>
                                </p>
                            </div>
                         </div>
                           <div class="col-lg-12">
                             <div class="package-info">
                                 <?php if($aboutus->introduction ?? ''): ?>
-                                <b>Introduction</b>
-                                <p>
+                                <h3>Introduction</h3>
+                                <p class="p">
                                 <?php echo e($aboutus->introduction ?? ''); ?>
 
                               </p>
@@ -70,19 +81,19 @@
                         <div class="col-lg-12">
                             <div class="package-info">
                                 <?php if($aboutus->mission ?? ''): ?>
-                                <b>Mission</b>
-                                <p>
+                                <h3>Mission</h3>
+                                <p class="p">
                                 <?php echo e($aboutus->mission ?? ''); ?>
 
                               </p>
                                 <?php endif; ?>
                            </div>
                         </div>
-                          <div class="col-lg-12">
+                          <div class="col-lg-12 p">
                             <div class="package-info">
                                 <?php if($aboutus->vission ?? ''): ?>
-                                <b>Vission</b>
-                                <p>
+                                <h3>Vission</h3>
+                                <p class="p">
                                 <?php echo e($aboutus->vission ?? ''); ?>
 
                                 </p>
@@ -92,8 +103,8 @@
                           <div class="col-lg-12">
                             <div class="package-info">
                                 <?php if($aboutus->objectives ?? ''): ?>
-                                <b>Objectives</b>
-                                <p>
+                                <h3>Objectives</h3>
+                               <p class="p">
                                 <?php echo e($aboutus->objectives ?? ''); ?>
 
                                 </p>

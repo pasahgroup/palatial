@@ -134,11 +134,11 @@
                                  <div class="row">                                      
                                       </div>
                             <div class="listing-shot-info rating">
-                                <div class="row booking-btn booking-tourPadding">
+                                <div class="row booking-btn booking-tourPaddingx">
                                    
-                                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
+                              <!--   <div class="col-md-12 col-sm-12 col-xs-12"> -->
                                        <a href="/safaris/{{$safari->id}}" class="btn booking-btn">Explore More</a>
-                                </div>  
+                                <!-- </div>   -->
                               
                                 </div>
                             </div>                          

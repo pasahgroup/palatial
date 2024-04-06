@@ -28,6 +28,18 @@
     background-size:cover;
 }
 </style>
+<style type="text/css">
+    .color
+    {
+        color:#fff;
+    };
+     .colort
+    {
+        color:#2d7d10;
+    }
+    
+
+</style>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -42,7 +54,7 @@
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
                                  <h3 class="text-white">{{ $slides->tour_name }}</h3>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">{{ $slides->description }}.</p>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 color">{{ $slides->description }}.</p>
                                 <a href="{{ route('safaris-slider',$slides->tour_id) }}" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
                             </div>
                         </div>
@@ -60,7 +72,7 @@
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
                                  <h4 class="text-white">{{ $quickSliderf->quick_title }}</h4>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">{{ $quickSliderf->quick_description }}.</p>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 color">{{ $quickSliderf->quick_description }}.</p>
                                 <a href="/QuickLink/{{$quickSliderf->id}}" class="btn btn-primary py-1 px-5 animated slideInLeft text-white">Read More >></a>
                             </div>
                         </div>
@@ -75,7 +87,7 @@
         </div>
         <div class="container">
         <div class="">
-            <b><marquee scrollamount="2" style="color:#b76b0b; font-size:15px">Palatial-Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
+            <b><marquee scrollamount="2" style="color:#b76b0b; font-size:15px">Palatial Tour and Adventure Welcomed you to Experience the beauty of Tanzania</marquee></b>
                 </div>
     </div>
     </div>
@@ -143,9 +155,9 @@ Tour Packages
                                          <span class="off-box">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
-      <p>{{ $popular_safari->tour_name }}</p>
+      <p class="color">{{ $popular_safari->tour_name }}</p>
                           </h3>
-   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_safari->id) }}">Explore More</a>
+   <a class="package-list-button btn-outline-body" href="{{ route('safaris-slider-packages',$popular_safari->id) }}">Explore More</a>
                                           </div>
                                         </div>
       </div>
@@ -198,7 +210,7 @@ Tour Packages
 																				<span class="off-box">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
 				<div class="package-list-content">
 			<h3 class="package-list-title">
-			<p>{{ $popular_trekking->tour_name }}</p>
+			<p class="color">{{ $popular_trekking->tour_name }}</p>
 													</h3>
 	 <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_trekking->id) }}">Explore More</a>
 																					</div>
@@ -216,7 +228,7 @@ Tour Packages
 																						 <span class="off-box">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
 				<div class="package-list-content">
 			<h3 class="package-list-title">
-			<p>{{ $trekking->tour_name }}</p>
+			<p class="color">{{ $trekking->tour_name }}</p>
 													</h3>
 	 <a class="package-list-button" href="{{ route('safaris-slider-packages',$trekking->id) }}">Explore More</a>
 																					</div>
@@ -255,7 +267,7 @@ Tour Packages
 																				 <span class="off-box">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
 				<div class="package-list-content">
 						<h3 class="package-list-title">
-			<p>{{ $popular_holiday->tour_name }}</p>
+			<p class="color">{{ $popular_holiday->tour_name }}</p>
 													</h3>
 	 <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_holiday->id) }}">Explore More</a>
 																					</div>
@@ -271,7 +283,7 @@ Tour Packages
 																				 <span class="off-box">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
 				<div class="package-list-content">
 					<h3 class="package-list-title">
-			<p>{{ $holidays->tour_name }}</p>
+			<p class="color">{{ $holidays->tour_name }}</p>
 													</h3>
 	 <a class="package-list-button" href="{{ route('safaris-slider-packages',$holidays->id) }}">Explore More</a>
 																					</div>
@@ -310,7 +322,7 @@ Tour Packages
 																				 <span class="off-box">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
 				<div class="package-list-content">
 			<h3 class="package-list-title">
-			<p>{{ $popular_historical->tour_name }}</p>
+			<p class="color">{{ $popular_historical->tour_name }}</p>
 													</h3>
 	 <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_historical->id) }}">Explore More</a>
 																					</div>
@@ -351,7 +363,8 @@ Tour Packages
 
 </section>
 
-	<hr class="text-white">
+	<hr class="">
+
 
 <section id="blog" class="">
 		<div class="container">
@@ -369,7 +382,7 @@ Special Offers
 						</div>
 						</div>
 				</div>
-				<hr>
+				<br>
 
 
 						 <div data-aos="fade-up">
@@ -551,8 +564,45 @@ Special Offers
 
 </div>
  </section>
-	<hr class="text-white">
+
+
+	<hr class="text-green">
+    <br><br>
 		<!-- Experience v1 -->
+
+         <section>
+     <div class="container">
+    
+                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+     <div class="service-box-heading" style="background-color: #496f50;">                           
+                             <h3 class="" style="color:yellow;">Partnering with SafariBookings.com</h3>
+             
+                     <div class="col-lg-7col-md-12 col-sm-12 col-xs-12">
+                                 <div class="" style="background-color: #458652;color:#fff;">
+                                                    <ul>
+                                             <li><a href="https://www.safaribookings.com/"><b>www.safaribookings.com</b></a><li>  </ul>
+                             </div>
+                     </div>
+                      
+                </div>
+            </div>
+<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
+      <div class="service-box-heading" style="background-color: #496f50;">
+     <h3 class="" style="color:yellow;">Partnering with SafariBookings.com</h3>
+                                 <span><a href="https://www.safaribookings.com/"><b>www.safaribookings.com</b></a></span>
+                                 <div id="myCarousel1" class="carousel slide">
+                                     <!-- Carousel items -->
+                                  
+                                 </div>
+
+</div>
+</div>
+             </div>
+            </div>
+</section>
+<hr class="text-green">
+<br><br><br><br>
+
 
 <section id="blog" class="">
 		<div class="container">
@@ -573,7 +623,7 @@ Popular Experiences
 						</div>
 						</div>
 				</div>
-				<hr>
+				<br>
 								<div class="small-package-list">
 											 @if ($popular_safari)
 												<div class="col-lg-4 col-md-4">
@@ -590,7 +640,7 @@ Popular Experiences
 
 
 																			<div class="">
-																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2">{{$popular_safari->type}}</marquee></b>
+																 <h4 class="text-center"> <b style="color:#b76b0b;"><marquee scrollamount="2">{{$popular_safari->type}}</marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -682,7 +732,7 @@ Popular Experiences
 																	</h3>
 
 																		<div class="">
-																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2">{{$popular_trekking->type}}</marquee></b>
+																 <h4 class="text-center"> <b style="color:#b76b0b;"><marquee scrollamount="2">{{$popular_trekking->type}}</marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -775,7 +825,7 @@ Popular Experiences
 																	</h3>
 
 																	<div class="">
-																 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2">{{$popular_holiday->type}}</marquee></b>
+																 <h4 class="text-center"> <b style="color:#b76b0b;"><marquee scrollamount="2">{{$popular_holiday->type}}</marquee></b>
 																		</h4>
 																</div>
 														<div class="blog-text">
@@ -879,10 +929,10 @@ Popular Destinations
 </h2>
 
 
-<hr>
+<br>
 				</div>
 				</div>
-	<hr>
+
 				<div class="mb-1">
 						<!-- Card Block -->
 				@if ($popular_safari)

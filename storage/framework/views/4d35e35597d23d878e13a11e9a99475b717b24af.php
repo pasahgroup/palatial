@@ -107,10 +107,10 @@ color:yellow !important;
          <div class="pre-header">
         <div class="container-fluid">
             <!-- <div class="row" style="background-color:#317746de"> -->
-               <div class="row" style="background-color:#3a6859;">
+               <div class="row" style="background-color:#8b9b76;">
                 <!-- BEGIN TOP BAR LEFT PART -->
 
-                <div class="col-md-7 col-sm-12 additional-shop-info"  style="font-size;color: white;">
+                <div class="col-md-6 col-sm-12 additional-shop-info"  style="font-size;color: white;">
                     <ul class="list-unstyled list-inline">
                           <li>
  <!--   <a href="https://wa.me/+255692710255"> -->
@@ -127,20 +127,26 @@ color:yellow !important;
    <div class="col-md-3 col-sm-6" style="float:right;">
   <!-- <div class="col-md-4 px-5 text-end"> -->
                 <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                      <a href="/tailorForm"  class="btn btn-primary">Tour Enquiry</a>
-     <a href="/bookingTrip"  class="btn btn-success">My Booking</a>
+                      <a href="/tailorForm"  class="btn btn-outline-body btn-primary">Tour Enquiry</a>
+     <a href="/bookingTrip"  class="btn btn-outline-body btn-success">My Booking</a>
                 </div>
                
             </div>
 
-   <div class="col-md-2 col-sm-6" style="float:right;">
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
+            
+
+   <div class="col-md-3 col-sm-6" style="float:right;">
+  <!-- <div class="col-md-4 px-5 text-end"> -->
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
+      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
+           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+               
             </div>
+
 
 
             </div>
@@ -286,7 +292,7 @@ color:yellow !important;
     <?php echo $__env->yieldContent('content'); ?>
   <hr>
       <footer id="footer">
-    <div class="container-fluid" style="background-color:#496f50;">
+    <div class="container-fluid" style="background-color:#8b9b76;">
       <div class="row">
         <div class="col-md-3">
         <h3 class="" style="color:#f78b04;">Destinations</h3>
@@ -343,14 +349,27 @@ color:yellow !important;
 
                  <div class="col-md-4 col-sm-6 padding-left-0 padding-top-8 padding-right-30">
                                 <div class="login-socio">
-                                    <ul class="social-icons">
-                                <li><a href="#" data-original-title="facebook" class="facebook" title="facebook"></a></li>
+                             <!--        <ul class="social-icons">
+                                <li><a href="#" data-original-title="facebook" class="facebook btn btn-outline-body" title="facebook"></a></li>
                                 <li><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
                                  <li><a href="#" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
                                 <li><a href="javascript:;" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
                                 <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
                             </ul>
+ -->
+
+
+                                     <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
+      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
+           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
+
+                    </div>
                         </div>
+
+
+
 
                       </div>
                    <!-- BEGIN POWERED -->
