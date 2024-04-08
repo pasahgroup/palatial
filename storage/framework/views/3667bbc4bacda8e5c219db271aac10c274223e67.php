@@ -577,16 +577,15 @@ Special Offers
 		<!-- Experience v1 -->
 
          <section>
-     <div class="container">
-    
-                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+     <div class="container">    
+    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
      <div class="service-box-heading" style="background-color: #496f50;">                           
                              <h3 class="" style="color:yellow;">Partnering with SafariBookings.com</h3>
              
                      <div class="col-lg-7col-md-12 col-sm-12 col-xs-12">
                                  <div class="" style="background-color: #458652;color:#fff;">
                                                     <ul>
-                                             <li><a href="https://www.safaribookings.com/"><b>www.safaribookings.com</b></a><li>  </ul>
+                                             <li><a href="https://www.safaribookings.com/" target="_blank"><b>www.safaribookings.com</b></a><li>  </ul>
                              </div>
                      </div>
                       
@@ -595,7 +594,7 @@ Special Offers
 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
       <div class="service-box-heading" style="background-color: #496f50;">
      <h3 class="" style="color:yellow;">Partnering with SafariBookings.com</h3>
-                                 <span><a href="https://www.safaribookings.com/"><b>www.safaribookings.com</b></a></span>
+                                 <span><a href="https://www.safaribookings.com/" target="_blank"><b>www.safaribookings.com</b></a></span>
                                  <div id="myCarousel1" class="carousel slide">
                                      <!-- Carousel items -->
                                   
@@ -603,8 +602,8 @@ Special Offers
 
 </div>
 </div>
-             </div>
-            </div>
+        </div>
+        
 </section>
 <hr class="text-green">
 <br><br><br><br>
