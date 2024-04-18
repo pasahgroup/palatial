@@ -79,7 +79,7 @@
   display: block;  
   /*background-color: #3a6268;*/
   /*background-color: #3a6268;*/
-  background-color: #3a6859;
+  background-color: #3f403d;
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -172,7 +172,7 @@
   padding: 8px 20px;
   color:#ffffff;
   display: block;
-  background-color:green;
+  background-color:#42372d;
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -936,8 +936,9 @@ Pre-Header and pre-header elements
 Header and header elements
 ***/
 .header {
-	box-shadow: 0 1px 2px #8b9b76;
-	background: #3a6868;
+	box-shadow: 0 0px 0px #8b9b76;
+	/*background: #3a6868;*/
+    background: transparent;
 	border-radius: 0;
 	margin-bottom: 1px;
 	z-index: 999;

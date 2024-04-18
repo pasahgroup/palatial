@@ -13,7 +13,7 @@
     <div class="container">
           <!-- Start of Image filled from slider -->
              <div class="package-list-wrap ">
-                 <img src="{{URL::asset('/storage/uploads/'.$sliders->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:75vh !important;background-size:100% 100%;width: 100%;">
+                 <img src="{{URL::asset('/storage/uploads/'.$sliders->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:50vh !important;background-size:100% 100%;width: 100%;">
                  
                 <div class="package-list-content">
                     <p class="package-list-duration"> <span
@@ -49,7 +49,7 @@
             <div class="col-md-12" data-aos="fade-up">
                  
                   <div class="col-md-12 text-center">
-         <h3 style="background-color:gray;" class="text-white  booking-btn booking-tourPadding">More {{$title}}</b></h3>
+         <h3 style="color:#b76b0b;" class="">More: {{$title}}</b></h3>
                     </div>
             </div>
         </div>
@@ -65,16 +65,16 @@
                                     </div>
                                 </div>
                                 <div class="">
-                                 <h3 class="text-center"> <b style="color:">{{$safari->tour_name}}</b>
+                                 <h3 class="text-center demo-1"> <b style="color:">{{$safari->tour_name}}</b>
                                     </h3>
                                 </div>
                                
                             <div class="blog-text">       
                             <div class="row">                                                          
-                                    <div class="col-md-6 col-sm-12 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);font-size:18px;">
+                                    <div class="col-md-6 col-sm-12 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);font-size:14px;">
                                              <strong>{{ $safari->days }} Days, {{ $safari->days -1 }} Nights</strong>
                                         </div>                                           
-                                        <div class="col-md-6 col-sm-12 col-xs-6 booking-btn" style="font-size:18px;">
+                                        <div class="col-md-6 col-sm-12 col-xs-6 booking-btn" style="font-size:14px;">
                                         <span class="text-white"><strong>From ${{number_format($safari->price),2 }}</b>  </strong>
                                            </span>
 
@@ -86,7 +86,7 @@
                                     
                                                <div class="row">                                            
                                               <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                                   <strong>Physical Rating:</strong>
+                                                   <span>Physical Rating:</span>
                                                 </div>                                          
 
                                                <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:17px;">
@@ -96,7 +96,7 @@
                                                 <div class="row">
                                                                                              
                                               <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                                   <strong>Tour Category:</strong>
+                                                   <span>Tour Category:</span>
                                                 </div>  
                             
                                            
@@ -106,7 +106,7 @@
                                             </div>  
                                                   <div class="row">
                                                <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                                   <strong>Tour Code:</strong>
+                                                   <span>Tour Code:</span>
                                                 </div> 
                           
                                                <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:17px;">

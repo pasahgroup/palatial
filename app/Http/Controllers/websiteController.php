@@ -90,7 +90,7 @@ class websiteController extends Controller
   //->orwhere('programs.type','Day Tours')
    ->whereIn('programs.type',array('Day Tours','Combined Tours','Wildlife Safaris'))
    
-   ->whereNotIn('programs.id',array($popular_safari->id))
+  // ->whereNotIn('programs.id',array($popular_safari->id))//When Add limit for $popular_safari enable it
  
   // ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
@@ -134,7 +134,7 @@ class websiteController extends Controller
  ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
   ->limit(1)->first();
-//dd($popular_historical);
+//dd($popular_holidayf);
 
 
  $popular_historicalf = program::join('attachments','attachments.destination_id','programs.id')
@@ -143,8 +143,10 @@ class websiteController extends Controller
  //->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
   // ->offset(1)
-  ->limit(4)->get();
+  ->limit(5)->get();
 
+
+//dd($popular_historicalf);
 
 
     $scheduledGroupTours = departures::join('programs','departures.tour_id','programs.id')
@@ -182,6 +184,8 @@ class websiteController extends Controller
         //  $slidersCount=DB::select('select count(title) title from sliders');
         // $slidersCount=slider::where('status','1')
         // ->count();
+
+        //  dd($sliders);
         
            $slidersCount = slider::join('programs','programs.id','sliders.tour_id')
            ->where('sliders.status','1')
@@ -257,7 +261,7 @@ class websiteController extends Controller
           // ->offset(1)
           ->limit(8)->get();
 
-         return view('website.home.index',compact('offers_private','offers_group','popular_safari','popular_safarif','popular_trekkingf','popular_holiday','popular_trekking','popular_holidayf','popular_historical','popular_historicalf','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
+         return view('website.home.index',compact('offers_private','offers_group','popular_safarif','popular_trekking','popular_trekkingf','popular_safari','popular_holiday','popular_holidayf','popular_historicalf','popular_historical','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
     }
 
     /**

@@ -53,32 +53,32 @@ class TourController extends Controller
          // dd($sliders);
           if($sliders !=null)
           {
-          if($sliders->type=='Wildlife Safaris')
+          if($sliders->type==' Wildlife Safaris')
           {
-             $title='Wildlife Safaris';
+             $title=' Wildlife Safaris';
           }
-          else if($sliders->type=='Hiking & trekking'){
-             $title='Mt.Hiking & Trekking';
+          else if($sliders->type==' Hiking & trekking'){
+             $title=' Mt.Hiking & Trekking';
           }
-           else if($sliders->type=='Beach Holidays'){
-             $title='Beach Holiday';
+           else if($sliders->type==' Beach Holidays'){
+             $title=' Beach Holiday';
 
           }
-            else if($sliders->type=='Combined Tours'){
-             $title='Combined Tours';
+            else if($sliders->type==' Combined Tours'){
+             $title=' Combined Tours';
              
           }
-            else if($sliders->type=='Historical Site'){
-             $title='Historical Sites';
+            else if($sliders->type==' Historical Site'){
+             $title=' Historical Sites';
              
           }
-            else if($sliders->type=='Day Tours'){
-             $title='Day Tours';
+            else if($sliders->type==' Day Tours'){
+             $title=' Day Tours';
              
           }
           else
           {
-          $title='No Title';
+          $title=' No Title';
           }
           }
          else
@@ -115,22 +115,22 @@ class TourController extends Controller
           {
              $title='Wildlife Safaris';
           }
-          else if($programs->type=='Hiking & trekking'){
+          else if($programs->type==' Hiking & trekking'){
              $title='Mt.Hiking & Trekking';
           }
-           else if($programs->type=='Beach Holidays'){
+           else if($programs->type==' Beach Holidays'){
              $title='Beach Holidays';
 
           }
-            else if($programs->type=='Combined Tours'){
+            else if($programs->type==' Combined Tours'){
              $title='Combined Tours';
              
           }
-            else if($programs->type=='Historical Site'){
+            else if($programs->type==' Historical Site'){
              $title='Historical Sites';
              
           }
-            else if($programs->type=='Day Tours'){
+            else if($programs->type==' Day Tours'){
              $title='Day Tours';
              
           }

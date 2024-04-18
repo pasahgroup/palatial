@@ -10,11 +10,11 @@
 
 </section>
     <section class="ws-section-spacing bg-gray">
-    <div class="container">
+    <div class="container-fluid">
           <!-- Start of Image filled from slider -->
              <div class="package-list-wrap ">
                 
-                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:75vh !important;background-size:100% 100%;width: 100%;">
+                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:50vh !important;background-size:100% 100%;width: 100%;">
                  
                 <div class="package-list-content">
                     <p class="package-list-duration"> <span
@@ -37,7 +37,7 @@
       <!-- End of Image filled from slider -->
       <section class="text-center bg-white">
     <div>
-        <h2 style="background-color:gray;" class=""><b>Other List of {{$title}}</b></h2>
+        <h2 style="color:#b76b0b;" class=""><b>Other List of {{$title}}</b></h2>
     </div>
      <!-- Content Header (Page header) -->
          @if($message = Session::get('success'))
@@ -68,9 +68,9 @@
  </section>
         <div class="masonry-item">
             <!-- item -->
-             <div class="container" data-aos="fade-up">
+             <div class="container-fluid" data-aos="fade-up">
             @foreach ($safaris as $safari)
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-3 col-md-4">
                         <div class="search_area search_area_two">                         
                                
                                 <div class="listing-shot-img">

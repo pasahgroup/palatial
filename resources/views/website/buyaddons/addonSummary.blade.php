@@ -41,7 +41,7 @@ body, html {
               <div class="col-lg-12 col-md-12 col-sm-12 masonry">
 
                      <div class="package-list-wrap ">
-                            <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 75vh !important;background-size: cover;width: 100%;">
+                            <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh !important;background-size: cover;width: 100%;">
                             <div class="package-list-content">
                                 <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}} Nights 
                                 </p>

@@ -55,7 +55,7 @@
  @isset($PostcategoryImage->attachment)
   <div class="container">
  <section class="package-list-wrap">
-                            <img src="{{URL::asset('/storage/uploads/'.$PostcategoryImage->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:80vh !important;background-size:100% 100%;width: 100%;">
+                            <img src="{{URL::asset('/storage/uploads/'.$PostcategoryImage->attachment) }}" class="" alt="det-img" style="min-height: 35vh !important;max-height:50vh !important;background-size:100% 100%;width: 100%;">
                         
                             <div class="package-list-content">
                                 <p class="package-list-duration"   <div class="banner-box">

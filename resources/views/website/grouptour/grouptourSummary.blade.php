@@ -6,7 +6,7 @@
         
 
             <div class="package-list-wrap">
-                <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 72vh;background-size: cover;width: 100%;">
+                <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
                     <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}}  Night(s)<span
                             class="rate">
