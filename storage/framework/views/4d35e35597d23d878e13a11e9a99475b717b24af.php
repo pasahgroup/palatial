@@ -61,7 +61,7 @@
 
 
 
-   <!-- <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+   <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
 <!--  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">

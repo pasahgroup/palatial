@@ -38,7 +38,7 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                                <h3 data-animation="fadeInUp" data-delay="100ms" style="color:#fff !important">Find your home</h3>
+                                <h3 data-animation="fadeInUp" data-delay="100ms" style="color:#fff !important">{{ $quickSliderf->quick_title }}</h3>
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@
                                                                      <p class="demo-1">{{ $quickSliderf->quick_description }}</p>
 
 
-                                                                    <p><a href="{{ $quickSliderf->quick_description }}" data-animation="animated fadeInUp">
+                                                                    <p><a href="/QuickLink/{{$quickSliderf->id}}" data-animation="animated fadeInUp">
                                                                         <b>Read More <i class="fa fa-angle-double-right"></i></b></a></p>
                                                                     </div>
 
