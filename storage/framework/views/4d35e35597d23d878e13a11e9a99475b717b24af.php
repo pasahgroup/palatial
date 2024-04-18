@@ -191,7 +191,7 @@
   <hr>
     
 
-   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg);">
+   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;background-color:#183116;">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
