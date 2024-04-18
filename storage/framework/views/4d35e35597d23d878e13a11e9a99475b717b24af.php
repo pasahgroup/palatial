@@ -64,12 +64,12 @@
    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-<!--  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <link href="../../assets/pages/css/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- <link href="../../assets/pages/css/animate.css" rel="stylesheet"> -->
   <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
-  <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
-    <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet">
-   -->
+  <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
+    <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
+  
 </head>
 
 <body>
@@ -189,11 +189,16 @@
     <!-- Header END -->
     <?php echo $__env->yieldContent('content'); ?>
   <hr>
-      <footer id="footer">
-    <div class="container-fluid" style="background-color:#8b9b76;">
-      <div class="row">
-        <div class="col-md-3">
-        <h3 class="" style="color:#0d4f2a;">Destinations</h3>
+    
+
+   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(img/bg-img/cta.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+
+                       <div class="col-md-3">
+        <h3 class=""  style="color:yellow;">Destinations</h3>
            <ul class="link-widget">
                         <li class="dropdown"><a title="Northern Circuit" href="/circuitTour/Northern Circuit">Northern Circuit</a></li>
                         <li class="dropdown"><a title="Southern Circuit" href="/circuitTour/Southern Circuit">Southern Circuit</a></li>
@@ -203,7 +208,7 @@
                     </ul>
         </div>
         <div class="col-md-3">
-              <h3 class="" style="color:#0d4f2a;">About Palatial Tours</h3>
+              <h3 class=""  style="color:yellow;">About Palatial Tours</h3>
             <ul class="link-widget">
                          <li class="dropdown"><a title="Why Adventure with us" href="#">Why Adventure with us</a></li>
                         <li class="dropdown"><a title="What We offer" href="/whatWeOfferClient">What We offer</a></li>
@@ -211,8 +216,11 @@
                          <li class="dropdown"><a title="Accommodation List-Camps" href="/accommodation-camps">Accommodation-Camps</a></li>
                     </ul>
         </div>
-        <div class="col-md-3">
-          <h3 class="" style="color:#0d4f2a;">Support</h3>
+
+
+
+  <div class="col-md-3">
+          <h3 class="" style="color:yellow;">Support</h3>
            <ul class="link-widget">
                         <li class="dropdown"><a  href="">Visa information</a></li>
                         <li class="dropdown"><a  href="#">Health & Vaccination</a></li>
@@ -220,8 +228,11 @@
                         <li class="dropdown"><a href="#">About Tanzania</a></li>
                     </ul>
                   </div>
-        <div class="col-md-3">
-                <h3 class="" style="color:#0d4f2a;">Contacts</h3>
+
+
+
+    <div class="col-md-3">
+                <h3 class="" style="color:yellow;">Contacts</h3>
             <ul class="link-widget">
 
                         <li class="dropdown"><a  href="">Address:<?php echo e($contacts->address??'Arusha'); ?></a></li>
@@ -231,13 +242,45 @@
                     </ul>
         </div>
 
-      </div>
-    </div>
-    <!-- <div class="copy"><span>&copy;</span> Copyright Mold Discover, 2017</div> -->
-  </footer>
 
-   <div class="footer" style="background-color:#3a6859;">
-      <div class="container-fluid">
+
+  
+
+     <div class="col-md-5">
+         <div class="footer-widget-area mb-100">
+                <h3 class="" style="color:yellow;">Working Hours</h3>
+            <div class="weekly-office-hours">
+                                <ul>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
+                                </ul>
+                            </div>
+        </div>
+      </div>
+
+                <div class="col-md-5">
+         <div class="footer-widget-area mb-100">
+                <h3 class="" style="color:yellow;">Working Hours</h3>
+            <div class="weekly-office-hours">
+                                <ul>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
+                                </ul>
+                            </div>
+        </div>
+      </div>
+                 
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Text -->
+        <div class="copywrite-text d-flex align-items-center justify-content-center">
+ 
+   <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-5 col-sm-6 padding-top-10">
             2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" target=”_blank” >Email</a>
@@ -275,119 +318,8 @@
             <p class="powered">Powered by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
           </div>
         </div>
-      </div>
 
 
-
-
-
-
-   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(img/bg-img/cta.jpg);">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>About Us</h6>
-                            </div>
-
-                            <img src="img/bg-img/footer.jpg" alt="">
-                            <div class="footer-logo my-4">
-                                <img src="img/core-img/logo.png" alt="">
-                            </div>
-                            <p>Integer nec bibendum lacus. Suspen disse dictum enim sit amet libero males uada feugiat. Praesent malesuada.</p>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Hours</h6>
-                            </div>
-                            <!-- Office Hours -->
-                            <div class="weekly-office-hours">
-                                <ul>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
-                                </ul>
-                            </div>
-                            <!-- Address -->
-                            <div class="address">
-                                <h6><img src="img/icons/phone-call.png" alt=""> +45 677 8993000 223</h6>
-                                <h6><img src="img/icons/envelope.png" alt=""> office@template.com</h6>
-                                <h6><img src="img/icons/location.png" alt=""> Main Str. no 45-46, b3, 56832, Los Angeles, CA</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Useful Links</h6>
-                            </div>
-                            <!-- Nav -->
-                            <ul class="useful-links-nav d-flex align-items-center">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Properties</a></li>
-                                <li><a href="#">Listings</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Properties</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Elements</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget -->
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Featured Properties</h6>
-                            </div>
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-                                <!-- Single Slide -->
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="img/bg-img/fea-product.jpg" alt=""></a>
-                                </div>
-                                <!-- Single Slide -->
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="img/bg-img/fea-product.jpg" alt=""></a>
-                                </div>
-                                <!-- Single Slide -->
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="img/bg-img/fea-product.jpg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Copywrite Text -->
-        <div class="copywrite-text d-flex align-items-center justify-content-center">
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </div>
     </footer>
 
@@ -462,7 +394,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
 <!-- Custom3 -->
- <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script>    <!--Plugin prevent returning of mobile menu --> -->
+ <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script>   
+  Plugin prevent returning of mobile menu --> 
     <!-- <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
