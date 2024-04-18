@@ -191,7 +191,7 @@
   <hr>
     
 
-   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(img/bg-img/cta.jpg);">
+   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg);">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -312,7 +312,7 @@
                       </div>
                    <!-- BEGIN POWERED -->
           <div class="col-md-3 col-sm-6 text-right">
-            <p class="powered">Powered by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
+            <p class="powered">Developed by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
           </div>
         </div>
 
