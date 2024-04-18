@@ -261,13 +261,10 @@
 
                 <div class="col-md-5">
          <div class="footer-widget-area mb-100">
-                <h3 class="" style="color:yellow;">Working Hours</h3>
             <div class="weekly-office-hours">
-                                <ul>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
-                                    <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
-                                </ul>
+                              <div class="single-featured-properties-slide">
+                                      <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:28vh; width: 100%"></a>
+                                </div>
                             </div>
         </div>
       </div>
