@@ -1198,7 +1198,6 @@ Popular Destinations
 
 </div>
 </div>
-			 </div>
 			</div>
 </section>
 

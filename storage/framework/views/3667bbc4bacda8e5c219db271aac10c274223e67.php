@@ -347,7 +347,7 @@ Tour Packages
 
              <div class="item active">
          <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                          <span class="off-box"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -371,7 +371,7 @@ Tour Packages
 
         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                             <span class="off-box"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -409,7 +409,7 @@ Tour Packages
                                  <div class="single-featured-properties-slide">
                                             <div class="item active">
                  <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                  <span class="off-box"><?php echo e($popular_holiday->days); ?> Days: $<?php echo e(number_format($popular_holiday->price),2); ?></span>
                 <div class="package-list-content">
                         <h3 class="package-list-title">
@@ -429,7 +429,7 @@ Tour Packages
                          <?php $__currentLoopData = $popular_holidayf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $holidays): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <div class="item active">
                                                     <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                  <span class="off-box"><?php echo e($holidays->days); ?> Days: $<?php echo e(number_format($holidays->price),2); ?></span>
                 <div class="package-list-content">
                     <h3 class="package-list-title">
@@ -470,7 +470,7 @@ Tour Packages
     <div class="item active">
                  <div class="package-list-wrap ">
 
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                 <span class="off-box"><?php echo e($popular_trekking->days); ?> Days: $<?php echo e(number_format($popular_trekking->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -492,7 +492,7 @@ Tour Packages
                                 <div class="single-featured-properties-slide">
                                         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                             <span class="off-box"><?php echo e($trekking->days); ?> Days: $<?php echo e(number_format($trekking->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -526,7 +526,7 @@ Tour Packages
  <div class="single-featured-properties-slide">
     <div class="item active">
                  <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                  <span class="off-box"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -552,7 +552,7 @@ Tour Packages
 
     <div class="item">
                                                     <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:290px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                         <span class="off-box"><?php echo e($historicalf->days); ?> Days: $<?php echo e(number_format($historicalf->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -570,14 +570,10 @@ Tour Packages
                         </div>
                     </div>
 
-
-                     
+                
 
 
                   
-
-
-
 </div>
 </div>
 </section>
@@ -600,12 +596,12 @@ Special Offers
             </div>
         </div>
 
-    <div class="container-fluid">
+    <div class="container">
            <div class="row">
 
 
     <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-     <div class="col-lg-3 col-md-12">
+     <div class="col-lg-4 col-md-12">
          <h4><b style="background:"><?php echo e($special_private->sales_header); ?></b></h4>
                                                 <div class="single_blog listing-shot">
 
@@ -690,7 +686,7 @@ Special Offers
 
 
      <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-     <div class="col-lg-3 col-md-12">
+     <div class="col-lg-4 col-md-12">
          <h4><b style="background:"><?php echo e($special_group->sales_header); ?></b></h4>
                                                 <div class="single_blog listing-shot">
 
@@ -818,7 +814,7 @@ Special Offers
 
 
    <section class="featured-properties-area section-padding-100-50">
-        <div class="container-fluid">
+        <div class="container">
 
      <div class="row">
             <div class="col-md-12" data-aos="fade-up">
@@ -838,7 +834,7 @@ Popular Experiences
                 <hr>
                                 <div class="small-package-list">
                                              <?php if($popular_safari): ?>
-                                                <div class="col-lg-3 col-md-4">
+                                                <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
 
                                                                 <div class="listing-shot-img">
@@ -931,7 +927,7 @@ Popular Experiences
                                         <?php endif; ?>
 
                                              <?php if($popular_trekking): ?>
-                                                         <div class="col-lg-3 col-md-4">
+                                                         <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
 
                                                                 <div class="listing-shot-img">
@@ -1024,7 +1020,7 @@ Popular Experiences
                                         <?php endif; ?>
 
                                      <?php if($popular_holiday): ?>
-                                        <div class="col-lg-3 col-md-4">
+                                        <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
 
                                                                 <div class="listing-shot-img">
@@ -1128,279 +1124,120 @@ Popular Experiences
 
 
 
+
+
+
     <!-- ##### Featured Properties Area Start ##### -->
     <section class="featured-properties-area section-padding-100-50">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading wow fadeInUp">
-                        <h2>Featured Properties</h2>
-                        <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p>
+                        <h2  style="color:#b76b0b;">Quick Link</h2>
+                        <!-- <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p> -->
                     </div>
                 </div>
             </div>
 
             <div class="row">
 
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="../assetf/img/bg-img/feature1.jpg" alt="">
 
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Villa in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    
+                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+     <div class="service-box-heading" style="background-color: #496f50;">
+                            <p><b>Quick Link</b></p>
+                     <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                 <div class="" style="background-color: #458652;color:#fff;">
+                                                    <ul>
+                                             <li><a href="/QuickLink/<?php echo e($data->id); ?>"><b><?php echo e($data->quick_title); ?></b></a><li>  </ul>
+                             </div>
+                     </div>
+                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
+            </div>
+<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
+      <div class="service-box-heading" style="background-color: #496f50;">
+    <span><b>Testimonials</b></span>
+                                 <span><p>What Travellers Say Tour Reviews</p></span>
+                                 <div id="myCarousel1" class="carousel slide">
+                                     <!-- Carousel items -->
+                                     <div class="carousel-inner">
+                                         <div class="active item">
+                                             <blockquote><i><?php echo e($testimonies_one->comments); ?></i></blockquote>
+                                             <div class="carousel-info">
+                                                 <img class="pull-left" src="<?php echo e(URL::asset('/storage/uploads/'.$testimonies_one->attachment)); ?>" width="50" alt="review image">
+                                                 <div class="pull-left">
+                                                     <span class="testimonials-name"><?php echo e($testimonies_one->full_name); ?></span>
+                                                     <span class="testimonials-post">
+                                                                <div class="test-rating">
+                                                                     <ul class="list-inline">
+                                                                             <li class="list-inline-item">
+                                                                                    <?php for($i = 0; $i <$testimonies_one->rating; $i++): ?>
+                                                                                     <i class="text-primary fa fa-star text-warning"></i>
+                                                                                    <?php endfor; ?>
 
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="img/bg-img/feature2.jpg" alt="">
+                                                                                <?php for($i=0;$i<5-$testimonies_one->rating;$i++): ?>
+                                                                             <i class="fa fa-star-o text-warning"></i>
+                                                                                    <?php endfor; ?>
 
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Town House in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                                             </li>
+                                                                     </ul>
+                                                             </div>
+                                                     </span>
+                                                 </div>
+                                             </div>
+                                         </div>
 
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="img/bg-img/feature3.jpg" alt="">
 
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Town House in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                             <?php $__currentLoopData = $testimonies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $testimony): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <div class="item">
+                                             <blockquote><i><?php echo e($testimony->comments); ?>.</i></blockquote>
+                                             <div class="carousel-info">
+                                                 <img class="pull-left" src="<?php echo e(URL::asset('/storage/uploads/'.$testimony->attachment)); ?>" width="50" alt="review image">
+                                                 <div class="pull-left">
+                                                     <span class="testimonials-name"><?php echo e($testimony->full_name); ?></span>
+                                                     <span class="testimonials-post">
+                                                                <div class="test-rating">
+                                                                     <ul class="list-inline">
+                                                                             <li class="list-inline-item">
+                                                                                    <?php for($i = 0; $i <$testimony->rating; $i++): ?>
+                                                                                     <i class="text-primary fa fa-star text-warning"></i>
+                                                                                    <?php endfor; ?>
 
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="400ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="img/bg-img/feature4.jpg" alt="">
+                                                                                <?php for($i=0;$i<5-$testimony->rating;$i++): ?>
+                                                                             <i class="fa fa-star-o text-warning"></i>
+                                                                                    <?php endfor; ?>
 
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Villa in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                                             </li>
+                                                                     </ul>
+                                                             </div>
+                                                     </span>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                     </div>
+                                     <!-- Carousel nav -->
+                                     <a class="left-btn" href="#myCarousel1" data-slide="prev"></a>
+                                     <a class="right-btn" href="#myCarousel1" data-slide="next"></a>
+                                 </div>
 
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="500ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="img/bg-img/feature5.jpg" alt="">
-
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Town House in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Featured Property -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="600ms">
-                        <!-- Property Thumbnail -->
-                        <div class="property-thumb">
-                            <img src="img/bg-img/feature6.jpg" alt="">
-
-                            <div class="tag">
-                                <span>For Sale</span>
-                            </div>
-                            <div class="list-price">
-                                <p>$945 679</p>
-                            </div>
-                        </div>
-                        <!-- Property Content -->
-                        <div class="property-content">
-                            <h5>Town House in Los Angeles</h5>
-                            <p class="location"><img src="img/icons/location.png" alt="">Upper Road 3411, no.34 CA</p>
-                            <p>Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada.</p>
-                            <div class="property-meta-data d-flex align-items-end justify-content-between">
-                                <div class="new-tag">
-                                    <img src="img/icons/new.png" alt="">
-                                </div>
-                                <div class="bathroom">
-                                    <img src="img/icons/bathtub.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="garage">
-                                    <img src="img/icons/garage.png" alt="">
-                                    <span>2</span>
-                                </div>
-                                <div class="space">
-                                    <img src="img/icons/space.png" alt="">
-                                    <span>120 sq ft</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+</div>
+</div>
+             
             </div>
         </div>
     </section>
-    <!-- ##### Featured Properties Area End ##### -->
 
-    <!-- ##### Call To Action Area Start ##### -->
-    <section class="call-to-action-area bg-fixed bg-overlay-black" style="background-image: url(img/bg-img/cta.jpg)">
-        <div class="container h-100">
-            <div class="row align-items-center h-100">
-                <div class="col-12">
-                    <div class="cta-content text-center">
-                        <h2 class="wow fadeInUp" data-wow-delay="300ms">Are you looking for a place to rent?</h2>
-                        <h6 class="wow fadeInUp" data-wow-delay="400ms">Suspendisse dictum enim sit amet libero malesuada feugiat.</h6>
-                        <a href="#" class="btn south-btn mt-50 wow fadeInUp" data-wow-delay="500ms">Search</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Call To Action Area End ##### -->
+
+
+
+
+
+
+<!-- START COUNTER -->
+    <hr class="">
 
     <!-- ##### Testimonials Area Start ##### -->
     <section class="south-testimonials-area section-padding-100">
@@ -1408,85 +1245,83 @@ Popular Experiences
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2>Client testimonials</h2>
-                        <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p>
+                        <h2  style="color:#b76b0b";>Popular Destinations</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonials-slides owl-carousel wow fadeInUp" data-wow-delay="500ms">
 
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide text-center">
-                            <h5>Perfect Home for me</h5>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
 
-                            <div class="testimonial-author-info">
-                                <img src="img/bg-img/feature6.jpg" alt="">
-                                <p>Daiane Smith, <span>Customer</span></p>
-                            </div>
-                        </div>
 
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide text-center">
-                            <h5>Perfect Home for me</h5>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
 
-                            <div class="testimonial-author-info">
-                                <img src="img/bg-img/feature6.jpg" alt="">
-                                <p>Daiane Smith, <span>Customer</span></p>
-                            </div>
-                        </div>
+      <div class="mb-1">
+                        <!-- Card Block -->
+                <?php if($popular_safari): ?>
+                    <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two">
+<a href="/safaris">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>); height:250px;width:100%; background-size: cover;">
+                                    <lif class="one-forth text-center">
 
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide text-center">
-                            <h5>Perfect Home for me</h5>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.</p>
-
-                            <div class="testimonial-author-info">
-                                <img src="img/bg-img/feature6.jpg" alt="">
-                                <p>Daiane Smith, <span>Customer</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                        <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_safari->type); ?></h6>
             </div>
-        </div>
+
+
+                                        </lif>
+                                </div>
+                                 </a>
+                         </div>
+                 </div>
+                     <?php endif; ?>
+                     <?php if($popular_trekking): ?>
+                        <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two booking-tourPadding">
+ <a href="/trekking">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>); height:250px;width:100%; background-size: cover;">
+                                <lif class="one-forth text-center">
+
+                                        <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_trekking->type); ?></h6>
+            </div>
+
+
+
+
+                                        </lif>
+                                </div>
+</a>
+</div>
+
+                         </div>
+                     <?php endif; ?>
+
+                     <?php if($popular_holiday): ?>
+                    <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two booking-tourPadding">
+                         <a href="/holiday">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>); height:250px;width:100%; background-size: cover;">
+                                <lif class="one-forth text-center">
+
+                            <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_holiday->type); ?></h6>
+            </div>
+
+
+                                        </lif>
+                                </div>
+                                </a>
+                         </div>
+                 </div>
+             <?php endif; ?>
+        
+         </div>
+
+
+
+       </div>
     </section>
-    <!-- ##### Testimonials Area End ##### -->
 
-    <!-- ##### Editor Area Start ##### -->
-    <section class="south-editor-area d-flex align-items-center">
-        <!-- Editor Content -->
-        <div class="editor-content-area">
-            <!-- Section Heading -->
-            <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                <img src="img/icons/prize.png" alt="">
-                <h2>jeremy Scott</h2>
-                <p>Realtor</p>
-            </div>
-            <p class="wow fadeInUp" data-wow-delay="500ms">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odiomattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu varius ac. Etiam cursus turpis lectus, id iaculis risus tempor id. Phasellus fringilla nisl sed sem scelerisque, eget aliquam magna vehicula.</p>
-            <div class="address wow fadeInUp" data-wow-delay="750ms">
-                <h6><img src="img/icons/phone-call.png" alt=""> +45 677 8993000 223</h6>
-                <h6><img src="img/icons/envelope.png" alt=""> office@template.com</h6>
-            </div>
-            <div class="signature mt-50 wow fadeInUp" data-wow-delay="1000ms">
-                <img src="img/core-img/signature.png" alt="">
-            </div>
-        </div>
-
-        <!-- Editor Thumbnail -->
-        <div class="editor-thumbnail">
-            <img src="img/bg-img/editor.jpg" alt="">
-        </div>
-    </section>
-    <!-- ##### Editor Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
- 
-    <!-- ##### Footer Area End ##### -->
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/home/index.blade.php ENDPATH**/ ?>

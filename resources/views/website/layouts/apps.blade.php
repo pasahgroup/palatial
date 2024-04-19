@@ -55,7 +55,6 @@
            <link rel="stylesheet" href="../../css/customSportLight.css">
 
 
-
    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
   <link rel="stylesheet" href="../../css/style-shortline.css">
 
@@ -70,6 +69,8 @@
   <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
     <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
   
+  <!-- Custom -->
+  <!-- <link href="../../assets/plugins/css/style1.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -82,7 +83,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#3a6859">
+        <div class="top-header-area" style="background:#2e4432">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
@@ -129,7 +130,13 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="/">Home</a></li>
+
+  <li><a href="#">Home</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/">Home</a></li>
+                                    </ul>
+                                </li>
+
                                     <li><a href="#">Tour Packages</a>
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-4">
@@ -160,23 +167,29 @@
                                        
                                     </ul>
                                 </li>
-                                
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="listings.html">Properties</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            
-                                <li><a href="contact.html">Contact</a></li>
+
+
+                                 <li><a href="#">Galleries</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/safaris-gallery">Gallery</a></li>
+                                    </ul>
+                                </li>
+
+
+                                    <li><a href="#">About Us</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/safaris-gallery">About Us</a></li>
+                                    </ul>
+                                   </li>
+
+                                  <li><a href="#">Contact</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/aboutus">Contact</a></li>
+                                    </ul>
+                                </li>
                             </ul>
 
-                            <!-- Search Form -->
-                            <div class="south-search-form">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search" placeholder="Search Anything ...">
-                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-
-                            <!-- Search Button -->
+                                                        <!-- Search Button -->
                             <a href="#" class="searchbtn"><i class="fa" aria-hidden="true"></i></a>
                         </div>
                         <!-- Nav End -->
@@ -243,7 +256,6 @@
         </div>
 
 
-
   
 
      <div class="col-md-5">
@@ -261,9 +273,10 @@
 
                 <div class="col-md-5">
          <div class="footer-widget-area mb-100">
+            <br>
             <div class="weekly-office-hours">
                               <div class="single-featured-properties-slide">
-                                      <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:28vh; width: 100%"></a>
+                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 60%"></a>
                                 </div>
                             </div>
         </div>
