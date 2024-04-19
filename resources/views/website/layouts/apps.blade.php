@@ -78,7 +78,12 @@
  <link href="../../assets/pages/css/components.css" rel="stylesheet">
 
 
+ <link href="../../img_library/main.css" rel="stylesheet">
+    <link href="../../img_library/mform.css" rel="stylesheet">
 
+    <link href="../../css/mform.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <link href="../../css/sidemenu.css" rel="stylesheet">
 </head>
 
 <body>

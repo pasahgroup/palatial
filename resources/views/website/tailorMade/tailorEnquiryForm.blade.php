@@ -8,7 +8,7 @@
                  <a href="#"></a>
                <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="search_area search_area_two booking-tour">
+                    <div class="search_area search_area_two booking-tour contact-form">
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="center-title ">
@@ -26,7 +26,8 @@
                             <div class="row">
                                 <div class="col-lg-5 col-md-12 col-sm-12">
                                     <label for="">First name:</label>
-                                    <div class="form-group">     <input type="hidden" class="form-control" name="price" value="">
+                                    <div class="form-group">    
+                                     <input type="hidden" class="form-control" name="price" value="">
 
                                    <input type="hidden" class="form-control" name="currency" value="">                                
                                         <input type="text" name="first_name" class="form-control" placeholder="first name" min="2">
@@ -202,7 +203,7 @@
      </div>
 
                                    <div class="col-lg-12 mt-3">
-                                    <button type="submit" class="btn btn-success float-right">Submit</button>
+                                    <button type="submit" class="btn south-btn float-right">Submit</button>
                                 </div>        
                               
                               </form>
