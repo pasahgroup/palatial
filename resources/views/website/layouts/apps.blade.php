@@ -107,7 +107,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:rgb(145, 89, 17)">
+        <div class="top-header-area" style="background:#5e792c">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
@@ -320,7 +320,7 @@
         </div>
 
         <!-- Copywrite Text -->
-        <div class="copywrite-text d-flex align-items-center justify-content-center" style="background:rgb(145, 89, 17)">
+        <div class="copywrite-text d-flex align-items-center justify-content-center" style="background:#2e4432;">
  
    <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
