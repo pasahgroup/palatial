@@ -107,7 +107,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#2e4432">
+        <div class="top-header-area" style="background:rgb(145, 89, 17)">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
@@ -141,7 +141,7 @@
         </div>
 
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeader">
+        <div class="main-header-area" id="stickyHeader" style="background:#2e4432;">
             <div class="classy-nav-container breakpoint-off">
                 <!-- Classy Menu -->
                 <nav class="classy-navbar justify-content-between" id="southNav">
@@ -320,7 +320,7 @@
         </div>
 
         <!-- Copywrite Text -->
-        <div class="copywrite-text d-flex align-items-center justify-content-center">
+        <div class="copywrite-text d-flex align-items-center justify-content-center" style="background:rgb(145, 89, 17)">
  
    <div class="container-fluid">
           <!-- BEGIN COPYRIGHT -->
