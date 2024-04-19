@@ -57,9 +57,7 @@
 
    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
   <link rel="stylesheet" href="../../css/style-shortline.css">
-
-
-
+  
    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -86,7 +84,7 @@
     <link href="../../css/sidemenu.css" rel="stylesheet">
 
 
-
+<!-- <link href="../../assets/corporate/css/styleCustom.css" rel="stylesheet"> -->
 
       <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
 
@@ -95,6 +93,9 @@
   <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
 
      <link href="../custom/css/style.css" rel="stylesheet">
+         <!-- <link href="../custom/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
 </head>
 
 <body>
