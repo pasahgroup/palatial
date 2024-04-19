@@ -69,8 +69,16 @@
   <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
     <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
   
-  <!-- Custom -->
+ 
+
+  <!-- CUSTOM -->
   <!-- <link href="../../assets/plugins/css/style1.css" rel="stylesheet"> -->
+
+
+ <link href="../../assets/pages/css/components.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
