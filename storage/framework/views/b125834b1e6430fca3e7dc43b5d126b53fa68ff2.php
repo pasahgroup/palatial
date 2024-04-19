@@ -47,10 +47,9 @@
                                     <img src="<?php echo e(URL::asset('/storage/uploads/'.$program->attachment)); ?>" class="img-responsive" alt="<?php echo e($program->tour_name); ?>" style="height:250px;width:100%;">
                                     </div>
                                 </div>
-                                <div class="btn booking-btn-gray">
                                  <h3 class="text-center"> <b style="color:"><?php echo e($program->tour_name); ?></b>
                                     </h3>
-                                </div>
+                            
                                
                             <div class="blog-text">       
                             <div class="row">                                                            
@@ -111,15 +110,13 @@
                                                                    
                                  <div class="row">                                      
                                       </div>
-                                       <hr>
-                            <div class="listing-shot-info rating">
-                                <div class="row  booking-tourPadding booking-btn">
-                                   
-                                    <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-                                       <a href="<?php echo e(route('grouptour.show',$program->id)); ?>" class="btn booking-btn-green">Book Now</a>
-                                    </div>                                     
-                                </div>
-                            </div>                          
+                                       
+                                         <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
+                                                                                    <a href="<?php echo e(route('grouptour.show',$program->id)); ?>" class="booking-btn text-center"><b>Book Now</b></a>
+                                                                        </div>
+                                                                            </div>
+                                                     
                                 </div>
                           
                         </div>

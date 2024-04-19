@@ -23,7 +23,7 @@
   <!-- Page level plugin styles END -->
 
   <!-- Theme styles START -->
-  <link href="../../assets/pages/css/components.css" rel="stylesheet">
+  <!-- <link href="../../assets/pages/css/components.css" rel="stylesheet"> -->
   <link href="../../assets/corporate/css/style.css" rel="stylesheet">
   <link href="../../assets/pages/css/portfolio.css" rel="stylesheet">
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet">
