@@ -316,19 +316,16 @@
 
 
 
- <section class="featured-properties-area section-padding-100-50">
-       <div class="row">
-            <div class="col-md-12" data-aos="fade-up">
-                <div class="section text-center">
-          <div class="col-md-12 text-center">
-<h2 class="" style="color:#b76b0b;">
-Tour Packages
-</h2>
-                    </div>
+ <section class="featured-properties-area section-padding-100-50">  
 
+
+          <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                        <h2  style="color:#b76b0b";>Tour Packages</h2>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
 
     <div class="container-fluid">
            <div class="row">
@@ -584,18 +581,14 @@ Tour Packages
 
 
 <section class="featured-properties-area section-padding-100-50">
-       <div class="row">
-            <div class="col-md-12" data-aos="fade-up">
-                <div class="section text-center">
-          <div class="col-md-12 text-center">
-<h2 class="" style="color:#b76b0b;">
-Special Offers
-</h2>
+    
+  <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                        <h2  style="color:#b76b0b";>Special Offers</h2>
                     </div>
-
+                </div>
             </div>
-            </div>
-        </div>
 
     <div class="container">
            <div class="row">
@@ -817,22 +810,16 @@ Special Offers
    <section class="featured-properties-area section-padding-100-50">
         <div class="container">
 
-     <div class="row">
-            <div class="col-md-12" data-aos="fade-up">
-                <div class="section text-center">
-          <div class="col-md-12 text-center">
-<h2 class="" style="color:#b76b0b;">
-Popular Experiences
-</h2>
+  <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                        <h2  style="color:#b76b0b";>Popular Experiences</h2>
                     </div>
-
+                </div>
             </div>
-            </div>
-        </div>
 
 
-
-                <hr>
+              
                                 <div class="small-package-list">
                                              @if ($popular_safari)
                                                 <div class="col-lg-4 col-md-4">
@@ -1128,6 +1115,92 @@ Popular Experiences
 
 
 
+
+
+
+<!-- START COUNTER -->
+    <hr class="">
+
+    <!-- ##### Testimonials Area Start ##### -->
+    <section class="south-testimonials-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                        <h2  style="color:#b76b0b";>Popular Destinations</h2>
+                    </div>
+                </div>
+            </div>
+
+      <div class="mb-1">
+                        <!-- Card Block -->
+                @if ($popular_safari)
+                    <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two">
+<a href="/safaris">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_safari->attachment) }}); height:250px;width:100%; background-size: cover;">
+                                    <lif class="one-forth text-center">
+
+                                        <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_safari->type }}</h6>
+            </div>
+
+
+                                        </lif>
+                                </div>
+                                 </a>
+                         </div>
+                 </div>
+                     @endif
+                     @if ($popular_trekking)
+                        <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two booking-tourPadding">
+ <a href="/trekking">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_trekking->attachment) }}); height:250px;width:100%; background-size: cover;">
+                                <lif class="one-forth text-center">
+
+                                        <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_trekking->type }}</h6>
+            </div>
+
+
+
+
+                                        </lif>
+                                </div>
+</a>
+</div>
+
+                         </div>
+                     @endif
+
+                     @if($popular_holiday)
+                    <div class="col-md-4 mb-4 mb-md-4">
+                        <div class="search_area search_area_two booking-tourPadding">
+                         <a href="/holiday">
+                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_holiday->attachment) }}); height:250px;width:100%; background-size: cover;">
+                                <lif class="one-forth text-center">
+
+                            <div class="text-center">
+                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_holiday->type }}</h6>
+            </div>
+
+
+                                        </lif>
+                                </div>
+                                </a>
+                         </div>
+                 </div>
+             @endif
+        
+         </div>
+
+
+
+       </div>
+    </section>
+
+
     <!-- ##### Featured Properties Area Start ##### -->
     <section class="featured-properties-area section-padding-100-50">
         <div class="container">
@@ -1230,98 +1303,4 @@ Popular Experiences
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-<!-- START COUNTER -->
-    <hr class="">
-
-    <!-- ##### Testimonials Area Start ##### -->
-    <section class="south-testimonials-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2  style="color:#b76b0b";>Popular Destinations</h2>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-      <div class="mb-1">
-                        <!-- Card Block -->
-                @if ($popular_safari)
-                    <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two">
-<a href="/safaris">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_safari->attachment) }}); height:250px;width:100%; background-size: cover;">
-                                    <lif class="one-forth text-center">
-
-                                        <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_safari->type }}</h6>
-            </div>
-
-
-                                        </lif>
-                                </div>
-                                 </a>
-                         </div>
-                 </div>
-                     @endif
-                     @if ($popular_trekking)
-                        <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two booking-tourPadding">
- <a href="/trekking">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_trekking->attachment) }}); height:250px;width:100%; background-size: cover;">
-                                <lif class="one-forth text-center">
-
-                                        <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_trekking->type }}</h6>
-            </div>
-
-
-
-
-                                        </lif>
-                                </div>
-</a>
-</div>
-
-                         </div>
-                     @endif
-
-                     @if($popular_holiday)
-                    <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two booking-tourPadding">
-                         <a href="/holiday">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url({{ URL::asset('/storage/uploads/'.$popular_holiday->attachment) }}); height:250px;width:100%; background-size: cover;">
-                                <lif class="one-forth text-center">
-
-                            <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase">{{ $popular_holiday->type }}</h6>
-            </div>
-
-
-                                        </lif>
-                                </div>
-                                </a>
-                         </div>
-                 </div>
-             @endif
-        
-         </div>
-
-
-
-       </div>
-    </section>
-
-
 @endsection
