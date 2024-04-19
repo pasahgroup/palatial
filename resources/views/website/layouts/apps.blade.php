@@ -107,7 +107,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#5e792c">
+        <div class="top-header-area" style="background:transparent;">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
