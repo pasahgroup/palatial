@@ -83,7 +83,7 @@ class GrouptourController extends Controller
          ->groupby('departures.tour_id')
         ->get();
 
-    $PostcategoryImage = title::where('title','Scheduled Group Tours')
+    $PostcategoryImage = title::where('title',' Scheduled Group Tours')
           ->first();
          // dd($PostcategoryImage);
            return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));

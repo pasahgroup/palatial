@@ -82,7 +82,7 @@
                     <div class="advanced-search-form">
                         <!-- Search Title -->
                         <div class="search-title">
-                            <p>Search for your home</p>
+                            <p>Search Tour By</p>
                         </div>
                         <!-- Search Form -->
                         <form action="#" method="post" id="advanceSearch">
