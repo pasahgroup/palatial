@@ -658,7 +658,7 @@
   <div class="col-md-12">
                     <div class="heading-section heading-section-white">
                         <h3 class="subheading" style="color:#b76b0b">Partnering with SafariBookings.com</h3>
-                <h2 class="mb-3"><a href="https://www.safaribookings.com/" target="_blank"><b>www.safaribookings.com</b></a></h2>
+                <h2 class="mb-3"><a href="https://www.safaribookings.com/" target="_blank"><b>https://www.safaribookings.com</b></a></h2>
               </div>
             </div>
             </div>

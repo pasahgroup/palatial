@@ -810,8 +810,8 @@ img {
         .south-search-area .advanced-search-form .range {
           font-size: 10px; } }
     .south-search-area .advanced-search-form .more-filter a {
-      text-transform: uppercase;
-      font-size: 12px;
+      /*text-transform: uppercase;*/
+      font-size: 14px;
       color: #323232; }
       .south-search-area .advanced-search-form .more-filter a:hover {
         color: #947054; }

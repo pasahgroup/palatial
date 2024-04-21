@@ -370,8 +370,6 @@
 
 
 
-
-
     <!-- END FOOTER -->
  <!--bootstrap.min.js-->
 <!-- Mold custom scripts -->
@@ -443,7 +441,6 @@
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->
-
 
 
 
