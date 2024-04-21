@@ -417,7 +417,6 @@
 
 
 
-  <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script> -->
    <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
 
 <script src="../../js/bootstrap.min.js"></script>
@@ -434,10 +433,15 @@
 
 
 
-<!-- Custom3 -->
- <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script>   
-  Plugin prevent returning of mobile menu --> 
+   <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script> -->
+
+   <!-- <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script> -->
+
     <!-- <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
+    <!-- <script src="../../assets/corporate/scripts/back-to-top.js" type="text/javascript"></script> -->
+
+<!-- Custom3 -->   
+  Plugin prevent returning of mobile menu --> 
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->

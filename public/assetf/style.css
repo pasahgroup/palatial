@@ -686,7 +686,8 @@ img {
       -webkit-transform: translateX(0%);
       transform: translateX(0%); } }
 .hero-area .owl-dot {
-  display: block;
+  /*display: block;*/
+   display: none;
   width: 20px;
   height: 20px;
   background-color: #947054;

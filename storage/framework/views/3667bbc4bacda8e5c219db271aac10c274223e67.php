@@ -8,7 +8,6 @@
 
 
 
-
   
     <!-- ##### Hero Area Start ##### -->
     <section class="hero-area">
