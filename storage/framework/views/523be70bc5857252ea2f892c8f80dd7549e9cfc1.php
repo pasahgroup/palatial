@@ -177,7 +177,7 @@
             <div class="col-md-12" data-aos="fade-up">
                 <div class="section-title text-center">                  
                 <?php if($offers_private =='[]'): ?>
-                    <h4>No any Private Offer at this moment</h4>
+                    <h4>No any Private Offered at this moment</h4>
                 <?php endif; ?>
                 </div>
             </div>
@@ -291,7 +291,7 @@
             <div class="col-md-12" data-aos="fade-up">
                 <div class="section-title text-center">                  
                 <?php if($offers_group =='[]'): ?>
-                    <h4>No any Group Offer at this moment</h4>
+                    <h4>No any Group Offered at this moment</h4>
                 <?php endif; ?>
                 </div>
             </div>

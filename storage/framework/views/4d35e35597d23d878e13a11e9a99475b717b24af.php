@@ -134,8 +134,8 @@
 
                     <!-- </div> -->
   <!-- <div class="email-address"> -->
-                            <a href="/tailorForm"  class="btn btn-outline btn-success">Tour Enquiry</a>
-     <a href="/bookingTrip"  class="btn btn-outline btn-success">My Booking</a>
+                            <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tour Enquiry</a>
+     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking</a>
                 </div>
 
             </div>
