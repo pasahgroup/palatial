@@ -77,10 +77,12 @@
                                 </div>
 
                                 <div class="col-6 col-md-4 col-xl-4">
+
+
                                     <div class="form-group">
-                                        <input type="text" class="form-control " id="datepicker-3" name="arrival_date"
-                                            data-date-format="dd-m-yyyy" placeholder="Arrival Date" value="">
-                                        <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+                                        <input type="date" name="arrival_date" id="arrival_date" class="form-control" placeholder="From" value="" required>
+                                      
+                             
                                     </div>
                                 </div>
 
