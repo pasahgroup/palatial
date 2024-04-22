@@ -363,7 +363,7 @@
                     <div class="col-md-3 col-lg-3 masonry">
                         <div class="card">
                         <div class="card-body">
-                            <div class"card booking-btn">
+                            <div class="card booking-btn">
                             <div >
                                 <h4 class="text-secondary booking-tourPadding"><b>Tour Summary</b></h4>
                             </div>                           
@@ -553,10 +553,7 @@
                                         </select>
                                     </div>
                                 </div>
-                   <!--                                             </div>
-
-   <div class="form-group"> -->
-
+               
 
       <div class="col-lg-6 col-md-6 col-sm-6">
                                       <label for="">Tour Addon:</label>
@@ -572,6 +569,7 @@
              </div>
 
                         </div> 
+
                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                         <input type="button" name="next" class="next action-button float-right" value="Next" /> 

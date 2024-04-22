@@ -121,7 +121,7 @@
                      </div>          
 
                         <div class="card-body">
-                       <div class="row ">
+                       <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
                 
