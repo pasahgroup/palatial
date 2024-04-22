@@ -420,31 +420,31 @@
 
 
 
- <div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
+ 
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title"><b>{{$programs->tour_name}}</b></h4>
+          <!-- <h4 class="modal-title"><b>{{$programs->tour_name}}</b></h4> -->
         </div>
         <div class="modal-body">
 
           <div class="preview-wrap">
-           <div class="preview-img" style="background-image: url({{URL::asset('/storage/uploads/'.$programs->attachment)}});"></div>
-
+           
             <div class="form-wrap">
-                <h4 id="heading">Booking Form</h4>
+                <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
                 <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
                     @csrf
                     <!-- progressbar -->
-                  <!--   <ul id="progressbar">
+                    <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
                         <li id="personal"><strong>Tour Information:</strong></li>
                         <li id="payment"><strong>Other Information</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
-                    </ul> -->
+                    </ul>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
@@ -459,59 +459,27 @@
 
  <div class="form-group">
             @if($discounts !=null)
-           <input type="hidden" class="form-control" name="discount_price" value="{{$discounts->new_price}}">
+           <input type="hidden" class="form-control" name="unit_price" value="{{$discounts->new_price}}">
              @else
-              <input type="hidden" class="form-control" name="discount_price" value="{{$programs->price}}">
+              <input type="hidden" class="form-control" name="unit_price" value="{{$programs->price}}">
              @endif       
-                      
-            <input type="hidden" class="form-control" name="unit_price" value="{{$programs->price}}">               
+                            
              <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
         </div>
-       
-  <input type="hidden" class="form-control" name="tour_id" value="{{$id}}">
-         <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label class="fieldlabels">First Name:</label>
-                                    <div class="form-group">
-                                       <input type="text" name="first_name" placeholder="first name"  required /> 
-                    
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label for="">Last Name:</label>
-                                    <div class="form-group">
-                                        <input type="text" name="last_name" placeholder="last name" required/> 
-                                    </div>
-                                </div>
-  </div>
 
 
-
-     <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label class="fieldlabels">Phone:</label>
-                                    <div class="form-group">
-                                      <input type="text" name="phone" placeholder="+00 00 000 000"/>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label for="">Email:</label>
-                                    <div class="form-group">
-                                      <input type="email" name="email" placeholder="email" /> 
-                                    </div>
-                                </div>
-  </div>
-
+                         <input type="text" name="first_name" placeholder="first name" /> 
+                           <input type="text" name="last_name" placeholder="last name" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
+                            <input type="email" name="email" placeholder="email" /> 
 
                             <label class="fieldlabels">Nationality: *
                             </label>
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
-                        
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
@@ -531,7 +499,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
                                     <div class="form-group">
-                                        <input type="date" name="travel_date" id="travel_date" placeholder="From" value="" required>
+                                        <input type="date" name="travel_date" id="travel_date" class="form-control datepicker" placeholder="From" value="" required>
                     
                                     </div>
                                 </div>
@@ -560,22 +528,19 @@
   </div>
 
 
- <div class="col-lg-12 col-md-12 col-sm-12">
-                                     <label for="">Tour type:</label>
-                                    <div class="form-group">
-                                     <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
-                                    </div>
-                                </div>
+        <div class="form-group">
+            <label for="">Tour type:</label>
+                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
+          <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
+        </div>
 
+                                 
 
-
-  
-
-       <div class="row">
+                    <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                 <label for="">Accommodation:</label>
+                                   <label for="">Accommodation:</label>
                                     <div class="form-group">
-                                         <select class="form-control" name="accomodation">
+                                       <select class="form-control" name="accomodation">
                                             <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
                                              <option>Comfort</option>
@@ -586,22 +551,26 @@
                                         </select>
                                     </div>
                                 </div>
+               
 
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label for="">Tour Addon:</label>
-         <select class="selectpicker search-fields form-control" name="addon">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+                                      <label for="">Tour Addon:</label>
+                                    <div class="form-group">
+                                      <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
               @foreach ($addons as $addon)
             <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
               @endforeach
           </select>
+                                    </div>
                                 </div>
-  </div>
+             </div>
 
-
-
-                            
-                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </div> 
+                        
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
+                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -652,8 +621,10 @@
                              
                         
                         <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
-                        <button type="submit" class="btn btn-success">Submit</button>
-                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                     
+                        <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                           <button type="submit" class="btn btn-success float-right">Submit</button>
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -672,11 +643,9 @@
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <div class="modal-footer">
-  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-</div>
+                    </fieldset>
+                        
                 </form>
             </div>
         </div>   
@@ -684,6 +653,7 @@
     </div>
   </div>
 </div>
+
 
 {{-- end of booking form madal --}}
 

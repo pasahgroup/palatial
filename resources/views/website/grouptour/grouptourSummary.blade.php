@@ -378,12 +378,12 @@
                 <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
                     @csrf
                     <!-- progressbar -->
-                  <!--   <ul id="progressbar">
+                    <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
                         <li id="personal"><strong>Tour Information:</strong></li>
                         <li id="payment"><strong>Other Information</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
-                    </ul> -->
+                    </ul>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
@@ -474,9 +474,8 @@
         </div>
 
                                  
-
-                    <div class="form-group">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
+   <div class="form-group">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Accommodation:</label>
                                     <div class="form-group">
                                        <select class="form-control" name="accomodation">
@@ -490,18 +489,20 @@
                                         </select>
                                     </div>
                                 </div>
-                                                               </div>
+               
 
-   <div class="form-group">
-            <label for="">Tour Addon:</label>
-         <select class="selectpicker search-fields form-control" name="addon">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+                                      <label for="">Tour Addon:</label>
+                                    <div class="form-group">
+                                      <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
               @foreach ($addons as $addon)
             <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
               @endforeach
           </select>
-
-     </div>
+                                    </div>
+                                </div>
+             </div>
 
                         </div> 
                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         

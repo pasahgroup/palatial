@@ -381,12 +381,12 @@
                 <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>">
                     <?php echo csrf_field(); ?>
                     <!-- progressbar -->
-                  <!--   <ul id="progressbar">
+                    <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
                         <li id="personal"><strong>Tour Information:</strong></li>
                         <li id="payment"><strong>Other Information</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
-                    </ul> -->
+                    </ul>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
@@ -477,9 +477,8 @@
         </div>
 
                                  
-
-                    <div class="form-group">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
+   <div class="form-group">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Accommodation:</label>
                                     <div class="form-group">
                                        <select class="form-control" name="accomodation">
@@ -493,18 +492,20 @@
                                         </select>
                                     </div>
                                 </div>
-                                                               </div>
+               
 
-   <div class="form-group">
-            <label for="">Tour Addon:</label>
-         <select class="selectpicker search-fields form-control" name="addon">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+                                      <label for="">Tour Addon:</label>
+                                    <div class="form-group">
+                                      <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
               <?php $__currentLoopData = $addons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $addon): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <option value="<?php echo e($addon->price); ?>"><?php echo e($addon->addon_name); ?> - <?php echo e($addon->days); ?> days / $<?php echo e($addon->price); ?></option>
               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </select>
-
-     </div>
+                                    </div>
+                                </div>
+             </div>
 
                         </div> 
                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
