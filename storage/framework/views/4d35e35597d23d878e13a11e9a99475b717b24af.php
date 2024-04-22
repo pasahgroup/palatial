@@ -34,6 +34,15 @@
   <link href="../../assets/corporate/css/style.css" rel="stylesheet">
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet"> -->
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- End of Modal -->
+
+
     <link href="../custom/css/style.css" rel="stylesheet">
 
         <link href="../../assets/pages/css/components.css" rel="stylesheet">
@@ -441,7 +450,7 @@
     <!-- <script src="../../assets/corporate/scripts/back-to-top.js" type="text/javascript"></script> -->
 
 <!-- Custom3 -->   
-  Plugin prevent returning of mobile menu --> 
+  <!-- Plugin prevent returning of mobile menu  -->
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->

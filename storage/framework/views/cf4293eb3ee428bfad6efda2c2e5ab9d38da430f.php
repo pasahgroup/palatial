@@ -38,7 +38,7 @@
       <!-- End of Image filled from slider -->
       <section class="text-center bg-white">
     <div>
-        <h2 style="color:#b76b0b;" class=""><b>Other List of <?php echo e($title); ?></b></h2>
+        <h3 style="color:#b76b0b;" class=""><b>Other List of <?php echo e($title); ?></b></h3>
     </div>
      <!-- Content Header (Page header) -->
          <?php if($message = Session::get('success')): ?>
@@ -86,8 +86,9 @@
                             <div class="blog-text">       
                             <div class="">
                               <div class="col-md-12 col-sm-12 col-xs-12 booking-btn-gray" style="border-right:1px solid rgba(71,85,95,.11)">
-                                        <h3 style=" margin-top:0px;"> <b style="color:white"><?php echo e($safari->tour_name); ?></b>
-                                    </h3>
+                                     
+                                 <h4 class="text-center demo-3"> <b style="color:yellow" title="<?php echo e($safari->tour_name); ?>" style="color:red"><?php echo e($safari->tour_name); ?></b>
+                                                                             </h4>
                                </div>
 
                                   

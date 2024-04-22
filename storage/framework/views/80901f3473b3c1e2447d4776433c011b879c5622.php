@@ -65,8 +65,9 @@
                                     </div>
                                 </div>
                                 <div class="">
-                                 <h3 class="text-center demo-1"> <b style="color:"><?php echo e($safari->tour_name); ?></b>
-                                    </h3>
+                               
+                                      <h4 class="text-center demo-3"> <b style="color:#b76b0b" title="<?php echo e($safari->tour_name); ?>" style="color:red"><?php echo e($safari->tour_name); ?></b>
+                                                                             </h4>
                                 </div>
                                
                             <div class="blog-text">       

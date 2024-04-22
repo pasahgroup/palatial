@@ -153,6 +153,28 @@ class TourController extends Controller
 
 
 
+
+
+  public function searchTour()    {
+         $title="Hiking & Trekking";
+         $safaris = program::join('attachments','programs.id','attachments.destination_id')
+         ->join('itineraries','programs.id','itineraries.program_id')
+         ->select('programs.*','attachments.attachment')
+          ->where('attachments.type','Programs')
+          ->where('programs.type','Hiking & Trekking')
+          ->where('itineraries.tour_addon','Programs')
+         ->get();
+       
+//dd($safaris);
+
+
+  $PostcategoryImage = title::where('title', $title)
+          ->first();
+         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
+    }
+
+
+
       public function trekking()    {
          $title="Hiking & Trekking";
          $safaris = program::join('attachments','programs.id','attachments.destination_id')
@@ -168,6 +190,8 @@ class TourController extends Controller
           ->first();
          return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
     }
+
+
 
     public function holiday()
     {
@@ -217,6 +241,8 @@ class TourController extends Controller
           ->first();
          return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
     }
+
+
 
  public function historicalSites()    {
          $title="Historical Sites";

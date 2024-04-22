@@ -48,8 +48,8 @@
                                     <img src="{{URL::asset('/storage/uploads/'.$program->attachment) }}" class="img-responsive" alt="{{  $program->tour_name }}" style="height:250px;width:100%;">
                                     </div>
                                 </div>
-                                 <h3 class="text-center"> <b style="color:">{{$program->tour_name}}</b>
-                                    </h3>
+                                     <h3 class="text-center demo-3"> <b style="color:" title="{{$program->tour_name}}">{{$program->tour_name}}</b>
+                                                                             </h3>
                             
                                
                             <div class="blog-text">       

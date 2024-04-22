@@ -47,8 +47,8 @@
                                     <img src="<?php echo e(URL::asset('/storage/uploads/'.$program->attachment)); ?>" class="img-responsive" alt="<?php echo e($program->tour_name); ?>" style="height:250px;width:100%;">
                                     </div>
                                 </div>
-                                 <h3 class="text-center"> <b style="color:"><?php echo e($program->tour_name); ?></b>
-                                    </h3>
+                                     <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($program->tour_name); ?>"><?php echo e($program->tour_name); ?></b>
+                                                                             </h3>
                             
                                
                             <div class="blog-text">       
