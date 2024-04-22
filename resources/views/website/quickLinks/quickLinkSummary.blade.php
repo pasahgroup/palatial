@@ -70,7 +70,7 @@ Tour Packages</strong>
              <div data-aos="fade-up">
                 
       <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-            <!-- BEGIN CAROUSEL --> <h6 data-text= "Wildlife Safaris" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Wildlife Safaris</h6>     
+            <!-- BEGIN CAROUSEL --> <h4 style="font-size: 20px;color: green;"><strong>Wildlife Safaris</strong></h4>     
 
   <div id="myCarousel1p" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -127,7 +127,7 @@ Tour Packages</strong>
 
 
   <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-                  <h6 data-text= "Hiking And Trekking" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Hiking And Trekking</h6>
+                <h4 style="font-size: 20px;color: green;"><strong>Hiking And Trekking</strong></h4>
 
   <div id="myCarousel2p" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -185,7 +185,7 @@ Tour Packages</strong>
    </div>
     <!-- Beach Holidays -->
   <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-                         <h6 data-text= "Beach Holiday" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Beach Holiday</h6>
+                      <h4 style="font-size: 20px;color: green;"><strong>Beach Holiday</strong></h4>
 
   <div id="myCarousel3p" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -240,7 +240,7 @@ Tour Packages</strong>
 
  <!-- Beach Holidays -->
   <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 front-carousel booking-tourPadding">
-                     <h6 data-text= "Historical Sites" style="font-size: 20px;color: green;font-weight: 700; text-transform:lowercase">Historical Sites</h6>
+                  <h4 style="font-size: 20px;color: green;"><strong>Historical Sites</strong></h4>
 
   <div id="myCarousel4p" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
