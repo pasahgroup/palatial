@@ -129,7 +129,7 @@
                     </div>
                     <div class="number">
                           <a href="https://wa.link/z5mmcd">
-                            <img src="../../../images/whatsapp.png" alt="" style="width:20px; height20px;">
+                            <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
                                 +255 753 216 263
                             </a>
                             </div>
