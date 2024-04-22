@@ -358,38 +358,9 @@
 
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+  
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
+ 
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -402,7 +373,7 @@
           <div class="preview-wrap">
            
             <div class="form-wrap">
-                <h4 id="heading">Booking Form:--><span style="color:green">{{$programs->tour_name}}</span></h4>
+                <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
                 <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
                     @csrf
@@ -437,16 +408,17 @@
         </div>
 
 
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" /> 
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                         <input type="text" name="first_name" placeholder="first name" /> 
+                           <input type="text" name="last_name" placeholder="last name" /> 
                               <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
-                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" /> 
+                            <input type="email" name="email" placeholder="email" /> 
 
                             <label class="fieldlabels">Nationality: *
                             </label>
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
@@ -532,7 +504,9 @@
      </div>
 
                         </div> 
-                        <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
+                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -584,9 +558,9 @@
                         
                         <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
                      
-                      
-                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                           <button type="submit" class="btn btn-success float-left">Submit</button>
+                        <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                           <button type="submit" class="btn btn-success float-right">Submit</button>
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -605,8 +579,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </fieldset>
-                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                        
                 </form>
             </div>
         </div>   
@@ -614,7 +589,6 @@
     </div>
   </div>
 </div>
-
 
 
 <script>
