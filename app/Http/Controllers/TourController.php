@@ -18,6 +18,7 @@ use App\Models\socialmedia;
 use App\Models\title;
 use App\Models\accommodationInclusive;
 use DB;
+// use Illuminate\Http\Request;
 use Illuminate\Http\Request;
 
 class TourController extends Controller
@@ -155,17 +156,25 @@ class TourController extends Controller
 
 
 
-  public function searchTour()    {
-         $title="Hiking & Trekking";
+  public function searchTour(Request $request)    {
+//dd('print');
+
+// dd(request('tours'));
+
+         $title=request('tours');
+          $price=request('price');
+         // dd($price);
+
          $safaris = program::join('attachments','programs.id','attachments.destination_id')
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
-          ->where('programs.type','Hiking & Trekking')
+           ->where('programs.type',request('tours'))
+            ->where('programs.price','=<',$price)
           ->where('itineraries.tour_addon','Programs')
          ->get();
        
-//dd($safaris);
+//dd($price);
 
 
   $PostcategoryImage = title::where('title', $title)

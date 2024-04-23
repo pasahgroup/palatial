@@ -3,7 +3,8 @@
 
     <style type="text/css">
 .bg-color{
-  background-color:#93c192;
+  /*background-color:#93c192;*/
+   background-color:#2e4432;
 }
 </style>
 
@@ -95,9 +96,11 @@
                             <p>Search Tour By</p>
                         </div>
                         <!-- Search Form -->
-                        <form action="#" method="post" id="advanceSearch">
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                            <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
                                   @csrf
                             <div class="row">
+                                <input type="hidden" name="_method" value="POST">
 <!-- 
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <div class="form-group">
@@ -107,10 +110,10 @@
 
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <div class="form-group">
-                                        <select class="form-control" id="cities">
+                                        <select class="form-control" name="tours">
                                             <option>--Select program--</option>
                                             <option value="Wildlife Safaris">Wildlife Safaris</option>
-                                               <option value="Hiking & Trekking">Hiking & Trekking</option>
+                                               <option value="Hiking & Trekking">Hiking & Trekking</option>                                               
                                           <option value="Beach Holidays">Beach Holidays</option>
                                            <option value="Historical Site">Historical Site</option>
                                             <option value="Day Tours">Day Tours</option>
@@ -125,7 +128,7 @@
                                     
                                           <div class="col-12 col-md-4 col-lg-3">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="input" placeholder="maximum price">
+                                        <input type="number" class="form-control" name="price" placeholder="maximum price">
                                     </div>
                                 </div>
 
@@ -165,13 +168,6 @@
 
 
 
-
-
-
-
-
-
-
  <section class="featured-properties-area section-padding-100-50">  
 
 
@@ -202,7 +198,7 @@
              <div class="item active">
          <div class="package-list-wrap ">
                                         <img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                         <span class="off-box">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</span>
+                                         <span class="off-box" style="background-color:#2e4432">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
       <p>{{ $popular_safari->tour_name }}</p>
@@ -226,7 +222,7 @@
         <div class="item">
                           <div class="package-list-wrap ">
                                         <img src="{{URL::asset('/storage/uploads/'.$safaris->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                            <span class="off-box">{{ $safaris->days  }} Days: ${{number_format($safaris->price),2 }}</span>
+                                            <span class="off-box" style="background-color:#2e4432">{{ $safaris->days  }} Days: ${{number_format($safaris->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
       <p>{{ $safaris->tour_name }}</p>
@@ -264,7 +260,7 @@
                                             <div class="item active">
                  <div class="package-list-wrap ">
                                                                                 <img src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
                 <div class="package-list-content">
                         <h3 class="package-list-title">
             <p>{{ $popular_holiday->tour_name }}</p>
@@ -284,7 +280,7 @@
                                                 <div class="item active">
                                                     <div class="package-list-wrap ">
                                                                                 <img src="{{URL::asset('/storage/uploads/'.$holidays->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
                 <div class="package-list-content">
                     <h3 class="package-list-title">
             <p>{{ $holidays->tour_name }}</p>
@@ -325,7 +321,7 @@
                  <div class="package-list-wrap ">
 
                                                                                 <img src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                <span class="off-box">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
+                                                                                <span class="off-box" style="background-color:#2e4432">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
             <p>{{ $popular_trekking->tour_name }}</p>
@@ -347,7 +343,7 @@
                                         <div class="item">
                           <div class="package-list-wrap ">
                                         <img src="{{URL::asset('/storage/uploads/'.$trekking->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                            <span class="off-box">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
+                                            <span class="off-box" style="background-color:#2e4432">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
       <p>{{ $trekking->tour_name }}</p>
@@ -381,7 +377,7 @@
     <div class="item active">
                  <div class="package-list-wrap ">
                                                                                 <img src="{{URL::asset('/storage/uploads/'.$popular_historical->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
             <p>{{ $popular_historical->tour_name }}</p>
@@ -407,7 +403,7 @@
     <div class="item">
                                                     <div class="package-list-wrap ">
                                                                                 <img src="{{URL::asset('/storage/uploads/'.$historicalf->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                        <span class="off-box">{{ $historicalf->days  }} Days: ${{number_format($historicalf->price),2 }}</span>
+                                                                                        <span class="off-box" style="background-color:#2e4432">{{ $historicalf->days  }} Days: ${{number_format($historicalf->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
             <p>{{ $historicalf->tour_name }}</p>
@@ -1080,12 +1076,12 @@
     
                             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
      <div class="service-box-heading bg-color">
-                            <p><b>Quick Link</b></p>
+                            <p><strong>Quick Link</strong></p>
                      @foreach ($datasLink as $data)
                      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                 <div class="bg-color" style="color:#fff;">
+                                 <div class="bg-colorx">
                                                     <ul>
-                                             <li><a href="/QuickLink/{{$data->id}}"><b>{{$data->quick_title}}</b></a><li>  </ul>
+                                             <li><a href="/QuickLink/{{$data->id}}"><b style="color:#b76b0b;">{{$data->quick_title}}</b></a><li>  </ul>
                              </div>
                      </div>
                          @endforeach

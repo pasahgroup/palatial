@@ -381,7 +381,7 @@ img {
   font-size: 14px;
   font-weight: 600;
   /*background-color: #947054;*/
-  background-color: #2e4432;
+  background-color: #947054;
   border-radius: 0;
   line-height: 50px;
   padding: 0 30px;
@@ -739,7 +739,7 @@ img {
       position: absolute;
       width: 260px;
       height: 45px;
-      background-color: #2e4432;
+      background-color: #947054;
       top: -46px;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -1070,11 +1070,11 @@ img {
   .footer-widget-area .widget-title h6 {
     font-size: 19px;
     /*color: #ffffff;*/
-    color:#0c6846;
+    color:#000000;
     margin-bottom: 0;
     /*text-transform: uppercase;*/
         /*text-transform:lowercase;*/
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-color: #2e4432;
     line-height: 1.8;
     display: inline-block; }
