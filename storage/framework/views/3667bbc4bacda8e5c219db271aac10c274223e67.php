@@ -17,7 +17,7 @@
             <!-- Single Hero Slide -->
            
            <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="single-hero-slide bg-img" style="background-image: url(../assetf/img/bg-img/hero1.jpg);">
+            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>);">
                 <div class="container h-100" style="height:10% !important;">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">

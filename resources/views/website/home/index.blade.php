@@ -18,7 +18,7 @@
             <!-- Single Hero Slide -->
            
            @foreach ($sliders as $slides)
-            <div class="single-hero-slide bg-img" style="background-image: url(../assetf/img/bg-img/hero1.jpg);">
+            <div class="single-hero-slide bg-img" style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}});">
                 <div class="container h-100" style="height:10% !important;">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
