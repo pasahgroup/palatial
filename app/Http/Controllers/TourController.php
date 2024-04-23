@@ -170,7 +170,7 @@ class TourController extends Controller
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
            ->where('programs.type',request('tours'))
-            ->where('programs.price','=<',$price)
+            // ->where('programs.price','=<',$price)
           ->where('itineraries.tour_addon','Programs')
          ->get();
        
