@@ -66,21 +66,6 @@
             </div>
     @endforeach
 
-
-
-
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(../assetf/img/bg-img/hero3.jpg);">*/
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <div class="hero-slides-content">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">Find your perfect house</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->
