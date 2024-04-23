@@ -187,7 +187,7 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
 
 
  //payment for scheduled group tours
-      public function groupTourSumary($id)
+      public function groupTourSumaryDelete($id)
     {
        $cust_id=$id;
        $cust=invoice::where('customer_id',$cust_id)->first();

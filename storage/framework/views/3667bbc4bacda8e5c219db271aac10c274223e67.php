@@ -11,7 +11,7 @@
 
   
     <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area">
+    <section class="hero-area" style="padding:30px;">
 
         <div class="hero-slides owl-carousel">
             <!-- Single Hero Slide -->

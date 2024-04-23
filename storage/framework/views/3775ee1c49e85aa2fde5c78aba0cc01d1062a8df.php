@@ -78,7 +78,7 @@
 
 
                                     <div class="form-group">
-                                        <input type="date" name="arrival_date" id="arrival_date" class="form-control datepicker" placeholder="From" value="" required>
+                                        <input type="date" name="arrival_date" id="arrival_date" class="form-control" placeholder="From" value="" required>
                                       
                              
                                     </div>
