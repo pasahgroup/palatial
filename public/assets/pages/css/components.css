@@ -37,8 +37,8 @@ input::-moz-focus-inner {
 /* Bootstrap buttons */
 .btn-primary {
     color: #fff;
-    background-color: #428bca;
-    border: none;
+    background-color: #B78D65;
+      border-color: #ddeae1;
 }
 
 .btn-primary:hover,
