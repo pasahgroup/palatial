@@ -12,7 +12,7 @@
 
   
     <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area" style="padding:30px;">
+    <section class="hero-area" style="padding:0px;">
 
         <div class="hero-slides owl-carousel">
             <!-- Single Hero Slide -->
@@ -20,7 +20,7 @@
            @foreach ($sliders as $slides)
             <div class="single-hero-slide bg-img" style="background-image: url({{URL::asset('/storage/uploads/'.$slides->attachment)}});">
                 <div class="container h-100" style="height:10% !important;">
-                    <div class="row h-100 align-items-center">
+                    <div class="row h-100 align-items-center" style="margin-top:100px;">
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h3 data-animation="fadeInUp" data-delay="100ms" style="color:#fff !important;">{{ $slides->tour_name }} </h3>
@@ -45,7 +45,7 @@
       @foreach ($quickLinkSliders as $quickSliderf)
              <div class="single-hero-slide bg-img" style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}});">
                   <div class="container h-100" style="height:10% !important;">
-                    <div class="row h-100 align-items-center">
+                   <div class="row h-100 align-items-center" style="margin-top:100px;">
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h3 data-animation="fadeInUp" data-delay="100ms" style="color:#fff !important">{{ $quickSliderf->quick_title }}</h3>
@@ -632,8 +632,7 @@
 
 
 
-  <section class="bg-color">
-        <div class="container">
+  <section class="bg-color container">
 
             <div class="row">
   <div class="col-md-12">
@@ -643,7 +642,6 @@
               </div>
             </div>
             </div>
-        </div>
     </section>
 
 

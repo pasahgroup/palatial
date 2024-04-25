@@ -90,7 +90,8 @@ h6,
 }
 
 .btn-outline-body {
-    color: var(--primary);
+    /*color: var(--primary);*/
+     color: #fbd507;
     border-color: #fbd507;
 }
 

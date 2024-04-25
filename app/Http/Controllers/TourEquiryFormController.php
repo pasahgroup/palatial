@@ -9,6 +9,7 @@ use App\Models\invoice;
 use App\Models\Tourcostsummary;
 use App\Models\departures;
 use App\Models\itinerary;
+use App\Models\specialOffer;
 
 use App\Models\people_percent;
 
@@ -326,6 +327,7 @@ public function viewTripf($pin)    {
            $travel_date=request('travel_date'); 
          $travel_date =date('Y-m-d', strtotime($travel_date)); 
          
+        
           $departurePrice=departures::where('tour_id',request('tour_id'))
           ->where('status','Active')
           ->where('start_date',$yearM)
@@ -340,12 +342,31 @@ public function viewTripf($pin)    {
                  $dapart_id=0;
             } 
 
-           $discount_pricef=request('discount_price');
-            
-        $diff=$pricef-$discount_pricef;
-        //dd($diff);
+           //$discount_pricef=request('discount_price');
 
-        $pin = rand(111111, 999999);
+           if(request('discount_price')==null)
+           {
+          
+             $discount_pricef=specialOffer::where('tour_id',request('tour_id'))
+             ->where('status','Active')
+             ->first();
+
+// dd($discount_pricef);
+
+          if($discount_pricef==null)
+             {
+                $discount_pricef=0;
+             }else{
+
+             $discount_pricef=$discount_pricef->discount;
+             }
+            
+           }
+            
+       // $diff=$pricef-$discount_pricef;
+       // dd($discount_pricef);
+
+        $pin = rand(111111, 99999999);
         $hear_from = request('hear');        
     
         $tour_name=request('tour_name');
@@ -386,14 +407,16 @@ if($children_p<=0.00)
 
 
 
+
+
          if($Tourcostsummary == "[]"){
             $unit_price=$pricef;         
             $teens_cost=($unit_price * $teen_p)*request('teens');          
             $children_cost=($unit_price * $children_p)*request('children');  
              //Total discount
-           $total_discount=$diff*$children_p*request('adults') + $diff*$teen_p*request('teens') + $diff*$children_p*request('teens');
+           $total_discount=$discount_pricef*request('adults') + $discount_pricef*$teen_p*request('teens') + $discount_pricef*$children_p*request('teens');
           
-
+       //dd($total_discount);
 
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
          // dd($total_price);
@@ -430,10 +453,10 @@ if($children_p<=0.00)
          
             $teens_cost=($unit_price * $teen_p)*request('teens');          
             $children_cost=($unit_price * $children_p)*request('children');   
-            $total_discount=$diff*$children_p*request('adults') + $diff*$teen_p*request('teens') + $diff*$children_p*request('teens');
+            $total_discount=$discount_pricef*request('adults') + $discount_pricef*$teen_p*request('teens') + $discount_pricef*$children_p*request('teens');
 
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
-         // dd($total_price);
+   
             $total_addon_price=($addon_price*$teen_p)*request('teens') + ($addon_price * $adults+($addon_price*$children_p)*request('children'));
             
             $total_cost=$total_price + $total_addon_price -  $total_discount;

@@ -35,10 +35,9 @@
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet"> -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
+  
+  <script src="../custom/js/jquery.min.js"></script>
+    <script src="../custom/js/bootstrap.min.js"></script>
 
 <!-- End of Modal -->
 
@@ -117,7 +116,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#446c47;">
+        <div class="top-header-area" style="background:#496a48;">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
@@ -158,7 +157,7 @@
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:8vh; width: 200%"></a>
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:8vh; width: 100%"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -177,10 +176,10 @@
                         <div class="classynav">
                             <ul>
 
-  <li><a href="#">Home</a>
-                                    <ul class="dropdown">
+  <li><a href="/">Home</a>
+                                  <!--   <ul class="dropdown">
                                          <li><a href="/">Home</a></li>
-                                    </ul>
+                                    </ul -->
                                 </li>
 
                                     <li><a href="#">Tour Packages</a>
@@ -215,23 +214,23 @@
                                 </li>
 
 
-                                 <li><a href="#">Galleries</a>
-                                    <ul class="dropdown">
+                                 <li><a href="/safaris-gallery">Galleries</a>
+                                    <!-- <ul class="dropdown">
                                          <li><a href="/safaris-gallery">Gallery</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
 
 
-                                    <li><a href="#">About Us</a>
-                                    <ul class="dropdown">
+                                    <li><a href="/safaris-gallery">About Us</a>
+                                   <!--  <ul class="dropdown">
                                          <li><a href="/safaris-gallery">About Us</a></li>
-                                    </ul>
+                                    </ul> -->
                                    </li>
 
-                                  <li><a href="#">Contact</a>
-                                    <ul class="dropdown">
+                                  <li><a href="/aboutus">Contact</a>
+                                    <!-- <ul class="dropdown">
                                          <li><a href="/aboutus">Contact</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                             </ul>
                         </div>
@@ -240,6 +239,10 @@
                 </nav>
             </div>
         </div>
+
+
+
+
     </header>
 
     <!-- Header END -->
