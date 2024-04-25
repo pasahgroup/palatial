@@ -137,10 +137,10 @@
                       <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
       <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
           <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
-           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
+           <a href="#"  class="btn btn-outline-body" style="margin-right:40px"><i class="fab fa-instagram"></i></a>
 
-                    <!-- </div> -->
-  <!-- <div class="email-address"> -->
+ <!--                    </div>
+  <div class="email-address"> -->
                             <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tour Enquiry</a>
      <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking</a>
                 </div>
