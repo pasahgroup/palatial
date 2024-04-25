@@ -103,7 +103,6 @@
      <link href="../custom/css/style.css" rel="stylesheet">
          <!-- <link href="../custom/css/bootstrap.min.css" rel="stylesheet"> -->
 
-
 </head>
 
 <body>
@@ -119,8 +118,8 @@
         <div class="top-header-area" style="background:#496a48;">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
-                    <a href="mailto:info@palatialtours.com">info@palatialtours.com</a>
-                      
+                    <a href="mailto:info@palatialtours.com">
+                      <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
                 </div>
                 <div class="phone-number d-flex">
                     <div class="icon">
