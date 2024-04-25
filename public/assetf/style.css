@@ -435,7 +435,8 @@ img {
     .top-header-area {
       height: auto; } }
   .top-header-area .email-address {
-    padding-left: 60px;
+    padding-left: 50px;
+     padding-right: 50px;
     line-height: 1; }
     @media only screen and (max-width: 767px) {
       .top-header-area .email-address {
