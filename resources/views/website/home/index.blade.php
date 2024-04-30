@@ -6,6 +6,13 @@
   /*background-color:#93c192;*/
    background-color:#2e4432;
 }
+.w-100 {
+  /*min-width: 100% !important;*/
+  /*min-height: 5% !important;*/
+  /*min-height: 50px;*/
+  background-repeat:no-repeat;
+  /*background-size: 99% 100%;*/
+}
 </style>
 
 
