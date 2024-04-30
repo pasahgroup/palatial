@@ -43,7 +43,7 @@
 
 
       @foreach ($quickLinkSliders as $quickSliderf)
-             <div class="single-hero-slide bg-img" style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); margin-left:20px;margin-right:20px;">
+             <div class="single-hero-slide bg-imgx" style="background-image: url({{URL::asset('/storage/uploads/'.$quickSliderf->attachment)}}); margin-left:20px;margin-right:20px;  background-repeat:no-repeat;background-size:cover;max-height:50vh;">
                   <div class="container h-100" style="height:10% !important;">
                    <div class="row h-100 align-items-center" style="margin-top:100px;">
                         <div class="col-12">

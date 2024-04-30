@@ -122,9 +122,9 @@
                       <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
                 </div>
                 <div class="phone-number d-flex">
-                    <div class="icon">
+                   <!--  <div class="icon">
                         <img src="../assetf/img/icons/phone-call.png" alt="">
-                    </div>
+                    </div> -->
                     <div class="number">
                           <a href="https://wa.link/z5mmcd">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
@@ -325,7 +325,7 @@
             <br>
             <div class="weekly-office-hours">
                               <div class="single-featured-properties-slide">
-                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 60%"></a>
+                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 50%"></a>
                                 </div>
                             </div>
         </div>
