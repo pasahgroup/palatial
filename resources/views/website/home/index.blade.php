@@ -77,8 +77,8 @@
     </section>
     <!-- ##### Hero Area End ##### -->
 
-    <!-- ##### Advance Search Area Start ##### -->
-    <div class="south-search-area">
+
+   <div class="south-search-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -153,28 +153,8 @@
 
 
 
-
-
  <section class="featured-properties-area section-padding-100-50" style="margin-top:0%">  
 
-<!-- 
-          <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2  style="color:#b76b0b";>Tour Packages</h2>
-                    </div>
-                </div>
-            </div>
-
-
-             <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2  style="color:#b76b0b";>Tour Packages gg</h2>
-                    </div>
-                </div>
-            </div>
- -->
     <div class="container" style=" padding-bottom:0px;">
         <div class="section-heading wow fadeInUp" data-wow-delay="250ms" style=" padding-bottom:0px;">
                         <h2  style="color:#b76b0b; padding-bottom:0px;">Tour Packages</h2>
@@ -431,21 +411,29 @@
 
 
 
+
+
+
  <hr class="">
-<section class="featured-properties-area section-padding-100-50">
-    
-  <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+
+
+
+
+
+
+
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:0%">  
+
+    <div class="container" style=" padding-bottom:0px;">
+        <div class="section-heading wow fadeInUp" data-wow-delay="250ms" style=" padding-bottom:0px;">
                         <h2  style="color:#b76b0b";>Special Offers</h2>
                     </div>
-                </div>
-            </div>
-
-    <div class="container">
-           <div class="row">
 
 
+           <div class="row">         
+    <div class="col-12 col-sm-12 col-xl-12">
+                        <div class="footer-widget-area mb-100">
+                           
     @foreach ($offers_private as $special_private)
      <div class="col-lg-4 col-md-12">
          <h4><b style="background:">{{$special_private->sales_header}}</b></h4>
@@ -528,10 +516,8 @@
                                         </div>
                         @endforeach
 
-        
 
-
-     @foreach ($offers_group as $special_group)
+                         @foreach ($offers_group as $special_group)
      <div class="col-lg-4 col-md-12">
          <h4><b style="background:">{{$special_group->sales_header}}</b></h4>
                                                 <div class="single_blog listing-shot">
@@ -612,14 +598,13 @@
                                                 </div>
                                         </div>
                         @endforeach
+                        </div>
+                    </div>              
+
 
                   
-
-
-
 </div>
-
-                         <div class="row">
+  <div class="row">
                          <div class="col-md-12 col-sm-12 col-xs-12 text-right pull-right">
                         <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b"><i class="fa fa-rocket margin-right-10"></i>Explore More Offers
                         </a>
@@ -639,8 +624,12 @@
 
 
 
- <hr class="">
 
+
+
+
+
+ <hr class="">
   <section class="bg-color container">
 
             <div class="row">

@@ -145,6 +145,7 @@ img {
     width: 100%;
      position: relative;*/
    background-size: 99% 98%;
+     /*background-size: 99% 98%;*/
     /*background-size: cover;*/
   background-repeat: no-repeat; }
 
@@ -609,7 +610,7 @@ img {
   height: 87vh; 
    /*height: 400px; */
 }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 1000px) {
     .single-hero-slide {
     height: 700px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
