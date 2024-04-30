@@ -115,7 +115,7 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#496a48;">
+        <div class="top-header-area" style="background:#284d25b5;">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
@@ -253,7 +253,7 @@
   <hr>
     
 
-   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;background-color:#183116;">
+   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">

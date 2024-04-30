@@ -13,11 +13,11 @@
     <!-- ##### Hero Area Start ##### -->
     <section class="hero-area" style="padding:0px;">
 
-        <div class="hero-slides owl-carousel">
+        <div class="hero-slides owl-carousel" style="margin-bottom:0%">
             <!-- Single Hero Slide -->
            
            <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>);">
+            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>); margin-left:20px;margin-right:20px">
                 <div class="container h-100" style="height:10% !important;">
                     <div class="row h-100 align-items-center" style="margin-top:100px;">
                         <div class="col-12">
@@ -42,7 +42,7 @@
 
 
       <?php $__currentLoopData = $quickLinkSliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quickSliderf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-             <div class="single-hero-slide bg-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>);">
+             <div class="single-hero-slide bg-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>); margin-left:20px;margin-right:20px;">
                   <div class="container h-100" style="height:10% !important;">
                    <div class="row h-100 align-items-center" style="margin-top:100px;">
                         <div class="col-12">
@@ -85,12 +85,7 @@
                                   <?php echo csrf_field(); ?>
                             <div class="row">
                                 <input type="hidden" name="_method" value="POST">
-<!-- 
-                                <div class="col-12 col-md-4 col-lg-3">
-                                    <div class="form-group">
-                                        <input type="input" class="form-control" name="input" placeholder="Keyword">
-                                    </div>
-                                </div> -->
+
 
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <div class="form-group">
@@ -152,9 +147,9 @@
 
 
 
- <section class="featured-properties-area section-padding-100-50">  
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:0%">  
 
-
+<!-- 
           <div class="row">
                 <div class="col-12">
                     <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
@@ -163,8 +158,22 @@
                 </div>
             </div>
 
-    <div class="container-fluid">
-           <div class="row">
+
+             <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                        <h2  style="color:#b76b0b";>Tour Packages gg</h2>
+                    </div>
+                </div>
+            </div>
+ -->
+    <div class="container" style=" padding-bottom:0px;">
+        <div class="section-heading wow fadeInUp" data-wow-delay="250ms" style=" padding-bottom:0px;">
+                        <h2  style="color:#b76b0b; padding-bottom:0px;">Tour Packages</h2>
+                    </div>
+
+
+           <div class="row">         
     <div class="col-12 col-sm-6 col-xl-3">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
@@ -414,8 +423,7 @@
 
 
 
-
-
+ <hr class="">
 <section class="featured-properties-area section-padding-100-50">
     
   <div class="row">
@@ -623,13 +631,7 @@
 
 
 
-
-
-
-
-
-
-
+ <hr class="">
 
   <section class="bg-color container">
 
@@ -643,7 +645,7 @@
             </div>
     </section>
 
-
+ <hr class="">
 
 
 
