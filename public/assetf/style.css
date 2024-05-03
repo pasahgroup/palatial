@@ -741,7 +741,7 @@ img {
   .south-search-area .advanced-search-form {
     position: relative;
     z-index: 1;
-    padding: 30px 50px;
+    padding: 3px 5px;
     border: 1px solid #e1dddd;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15); }
     @media only screen and (max-width: 767px) {
@@ -749,9 +749,10 @@ img {
         padding: 30px 20px; } }
     .south-search-area .advanced-search-form .search-title {
       position: absolute;
-      width: 260px;
-      height: 45px;
-      background-color: #947054;
+      width: 290px;
+      height: 40px;
+      background-color: #183519b2;
+          /*background-color: #947054;*/
       top: -46px;
       left: 50%;
       -webkit-transform: translateX(-50%);

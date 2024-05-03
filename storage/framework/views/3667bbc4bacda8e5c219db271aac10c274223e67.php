@@ -152,16 +152,29 @@
 
 
 
- <section class="featured-properties-area section-padding-100-50" style="margin-top:0%">  
+
+
+
+
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:3%">  
 
     <div class="container" style=" padding-bottom:0px;">
-        <div class="section-heading wow fadeInUp" data-wow-delay="250ms" style=" padding-bottom:0px;">
-                        <h2  style="color:#b76b0b; padding-bottom:0px;">Tour Packages</h2>
-                    </div>
 
-
-           <div class="row">         
-    <div class="col-12 col-sm-6 col-xl-3">
+   <div class="south-search-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Tour Packages</p>
+                        </div>
+                        <!-- Search Form -->
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                        
+                            <div class="row">
+                               
+  <div class="col-12 col-sm-6 col-xl-3">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
@@ -223,9 +236,6 @@
 
 
 
-
-
-
    <div class="col-12 col-sm-4 col-xl-3">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
@@ -277,16 +287,7 @@
                     </div>
 
 
-
-
-
-
-
-
-
-
-
-                        <div class="col-12 col-sm-4 col-xl-3">
+       <div class="col-12 col-sm-4 col-xl-3">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
@@ -400,17 +401,16 @@
                         </div>
                     </div>
 
-                
 
-
-                  
-</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
 </div>
 </section>
-
-
-
-
 
 
  <hr class="">
@@ -421,16 +421,27 @@
 
 
 
- <section class="featured-properties-area section-padding-100-50" style="margin-top:0%">  
+
+
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:3%">  
 
     <div class="container" style=" padding-bottom:0px;">
-        <div class="section-heading wow fadeInUp" data-wow-delay="250ms" style=" padding-bottom:0px;">
-                        <h2  style="color:#b76b0b";>Special Offers</h2>
-                    </div>
+   <div class="south-search-area">
+        <div class="containerx">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Special Offers</p>
+                        </div>
+                        <!-- Search Form -->
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                        
+                            <div class="row">
+                               
+           
 
-
-           <div class="row">         
-    <div class="col-12 col-sm-12 col-xl-12">
                         <div class="footer-widget-area mb-100">
                            
     <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -441,7 +452,7 @@
                                                                 <div class="listing-shot-img">
                                                                             <div class="listing-badge now-open"><strong><?php echo e(round($special_private->save/$special_private->price * 100),0); ?>% Off</strong></div>
                                                                         <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_private->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_private->tour_name); ?>" style="height:250px;width:100%;">
+                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_private->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_private->tour_name); ?>" style="height:280px;width:100%;">
                                                                         </div>
                                                                 </div>
                                                                              <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_private->tour_name); ?>"><?php echo e($special_private->tour_name); ?></b>
@@ -524,7 +535,7 @@
                                                                 <div class="listing-shot-img">
                                                                             <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
                                                                         <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="height:250px;width:100%;">
+                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="height:280px;width:100%;">
                                                                         </div>
                                                                 </div>
                                                                              <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_group->tour_name); ?>"><?php echo e($special_group->tour_name); ?></b>
@@ -598,17 +609,27 @@
                                         </div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
-                    </div>              
+                              
 
 
-                  
-</div>
-  <div class="row">
-                         <div class="col-md-12 col-sm-12 col-xs-12 text-right pull-right">
-                        <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b"><i class="fa fa-rocket margin-right-10"></i>Explore More Offers
+                                <div class="col-12 d-flex justify-content-between align-items-end">
+                                    <!-- More Filter -->
+                                    <div class="more-filter">
+                                        <!-- <a href="#" id="moreFilter">+ More filters</a> -->
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="form-group mb-0" target="_blank">
+                                        <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b"><i class="fa fa-rocket margin-right-10"></i>Explore More Offers
                         </a>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
 </div>
 </section>
 
@@ -618,20 +639,21 @@
 
 
 
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:3%" >  
 
-
-
-
-
-
-
-
-
-
- <hr class="">
-  <section class="bg-color container">
-
-            <div class="row">
+    <div class="container" style=" padding-bottom:0px;">
+   <div class="south-search-area">
+        <div class="container">
+            <div class="row bg-color">
+                <div class="col-12">
+                    <div class="advanced-search-form" style="background-color:#cabaa5;">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Partnering</p>
+                        </div>
+                        <!-- Search Form -->
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                            <div class="row">
   <div class="col-md-12">
                     <div class="heading-section heading-section-white">
                         <h3 class="subheading" style="color:#b76b0b">Partnering with SafariBookings.com</h3>
@@ -639,27 +661,33 @@
               </div>
             </div>
             </div>
-    </section>
-
- <hr class="">
-
-
-
-
-   <section class="featured-properties-area section-padding-100-50">
-        <div class="container">
-
-  <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2  style="color:#b76b0b";>Popular Experiences</h2>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+</section>
+
+ <hr class="">
+ 
 
 
-              
-                                <div class="small-package-list">
+
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:3%">  
+
+    <div class="container" style=" padding-bottom:0px;">
+   <div class="south-search-area">
+        <div class="containerx">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Popular Experiences</p>
+                        </div>
+                     
+ <div class="row small-package-list">
                                              <?php if($popular_safari): ?>
                                                 <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
@@ -735,8 +763,7 @@
                                                                                          </div>
 
 
-                                                                 <div class="row">
-                                                                            </div>
+                                                              
                                                                              <!--<hr>-->
                                                         <div class="listing-shot-info rating">
                                                                 <div class="booking-tourPadding">
@@ -753,7 +780,8 @@
                                         </div>
                                         <?php endif; ?>
 
-                                             <?php if($popular_trekking): ?>
+
+        <?php if($popular_trekking): ?>
                                                          <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
 
@@ -846,7 +874,9 @@
                                         </div>
                                         <?php endif; ?>
 
-                                     <?php if($popular_holiday): ?>
+
+
+   <?php if($popular_holiday): ?>
                                         <div class="col-lg-4 col-md-4">
                                                 <div class="single_blog listing-shot">
 
@@ -940,6 +970,11 @@
                                         <?php endif; ?>
 
 
+                                      </div>
+
+
+
+
                          <div class="row">
                          <div class="col-md-12 col-sm-12 col-xs-12 text-right">
                         <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
@@ -947,31 +982,30 @@
                     </div>
                          </div>
                     </div>
- </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
+</div>
+</section>
 
 
 
+ <section class="featured-properties-area section-padding-100-50" style="margin-top:3%"> 
 
-
-
-
-
-
-<!-- START COUNTER -->
-    <hr class="">
-
-    <!-- ##### Testimonials Area Start ##### -->
-    <section class="south-testimonials-area section-padding-100">
+    <div class="container" style=" padding-bottom:0px;">
+   <div class="south-search-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
-                        <h2  style="color:#b76b0b";>Popular Destinations</h2>
-                    </div>
-                </div>
-            </div>
-
-      <div class="mb-1">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>POPULAR DESTINATIONS</p>
+                        </div>
+                     
+                          <div class="row mb-1">
                         <!-- Card Block -->
                 <?php if($popular_safari): ?>
                     <div class="col-md-4 mb-4 mb-md-4">
@@ -1033,11 +1067,19 @@
              <?php endif; ?>
         
          </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
 
 
-       </div>
-    </section>
+    <hr class="">
+
 
 
     <!-- ##### Featured Properties Area Start ##### -->
