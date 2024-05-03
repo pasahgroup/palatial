@@ -751,8 +751,8 @@ img {
       position: absolute;
       width: 290px;
       height: 40px;
-      background-color: #183519b2;
-          /*background-color: #947054;*/
+      /*background-color: #183519b2;*/
+          background-color: #947054;
       top: -46px;
       left: 50%;
       -webkit-transform: translateX(-50%);
