@@ -120,20 +120,12 @@
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
                       <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
-                </div>
-                <div class="phone-number d-flex">
-                   <!--  <div class="icon">
-                        <img src="../assetf/img/icons/phone-call.png" alt="">
-                    </div> -->
-                    <div class="number">
-                          <a href="https://wa.link/z5mmcd">
+                       <a href="https://wa.link/z5mmcd" style="padding-left:30px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
                                 +255 753 216 263
                             </a>
-                            </div>
                 </div>
-
-                      <div class="h-100 d-inline-flex align-items-center py-3 me-2 email-address">
+                                    <div class="h-100 d-inline-flex align-items-center py-3 me-2 email-address">
                       <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
       <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
           <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
