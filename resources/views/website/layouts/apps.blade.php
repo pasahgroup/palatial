@@ -216,13 +216,13 @@
                                 </li>
 
 
-                                    <li><a href="/safaris-gallery">About Us</a>
+                                    <li><a href="/aboutus">About Us</a>
                                    <!--  <ul class="dropdown">
                                          <li><a href="/safaris-gallery">About Us</a></li>
                                     </ul> -->
                                    </li>
 
-                                  <li><a href="/aboutus">Contact</a>
+                                  <li><a href="/mailing">Contact</a>
                                     <!-- <ul class="dropdown">
                                          <li><a href="/aboutus">Contact</a></li>
                                     </ul> -->
