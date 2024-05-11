@@ -78,77 +78,6 @@
     <!-- ##### Hero Area End ##### -->
 
 
-   <div class="south-search-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="advanced-search-form">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>Search Tour By</p>
-                        </div>
-                        <!-- Search Form -->
-                        <!-- <form action="#" method="post" id="advanceSearch"> -->
-                            <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
-                                  @csrf
-                            <div class="row">
-                                <input type="hidden" name="_method" value="POST">
-
-
-                                <div class="col-12 col-md-4 col-lg-3">
-                                    <div class="form-group">
-                                        <select class="form-control" name="tours">
-                                            <option>--Select program--</option>
-                                            <option value="Wildlife Safaris">Wildlife Safaris</option>
-                                               <option value="Hiking & Trekking">Hiking & Trekking</option>                                               
-                                          <option value="Beach Holidays">Beach Holidays</option>
-                                           <option value="Historical Site">Historical Site</option>
-                                            <option value="Day Tours">Day Tours</option>
-                                                                                  </select>
-                                    </div>
-                                </div>
-
-                                
-                              
-                                <div class="col-12 search-form-second-steps">
-                                    <div class="row">                                                                          
-                                    
-                                          <div class="col-12 col-md-4 col-lg-3">
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" name="price" placeholder="maximum price">
-                                    </div>
-                                </div>
-
-
-                                          <div class="col-12 col-md-4 col-lg-3">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="input" placeholder="any keyword">
-                                    </div>
-                                </div> 
-                                    </div>
-                                </div>
-
-                                <div class="col-12 d-flex justify-content-between align-items-end">
-                                    <!-- More Filter -->
-                                    <div class="more-filter">
-                                        <a href="#" id="moreFilter">+ More filters</a>
-                                    </div>
-                                    <!-- Submit -->
-                                    <div class="form-group mb-0" target="_blank">
-                                        <button type="submit" class="btn south-btn" target="_blank">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Advance Search Area End ##### -->
-
-
-
 
 
 
@@ -1183,4 +1112,5 @@
             </div>
         </div>
     </section>
+
 @endsection

@@ -181,7 +181,11 @@
                                             <li><a href="/trekking">Hiking & Trekking</a></li>
                                             <li><a href="/holiday">Beach Holidays</a></li>
                                             <li><a href="/dayTours">Day Tours</a></li>
-                                            <li><a href="/historical-sites">Historical Sites</a></li>
+                                            <li><a href="/historical-sites">Historical Sites</a></li>                                 
+
+
+
+
                                         </ul>
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Special Packages</li>
@@ -227,17 +231,101 @@
                                          <li><a href="/aboutus">Contact</a></li>
                                     </ul> -->
                                 </li>
-                            </ul>
+
+
+
+
+                                     <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
+                                    <div class="megamenu">
+                                        <ul class="single-mega cn-col-12">
+                                            <li class="title">Search by selecting program</li>
+                                           
+                                       
+  <div class="south-search-area">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Search Tour By</p>
                         </div>
-                        <!-- Nav End -->
+                        <!-- Search Form -->
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                            <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
+                                  <?php echo csrf_field(); ?>
+                            <div class="row">
+                                <input type="hidden" name="_method" value="POST">
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <select class="form-control" name="tours">
+                                            <option>--Select program--</option>
+                                            <option value="Wildlife Safaris">Wildlife Safaris</option>
+                                               <option value="Hiking & Trekking">Hiking & Trekking</option>                                               
+                                          <option value="Beach Holidays">Beach Holidays</option>
+                                           <option value="Historical Site">Historical Site</option>
+                                            <option value="Day Tours">Day Tours</option>
+                                                                                  </select>
+                                    </div>
+                                </div>
+
+                                
+                              
+                                <div class="col-12 search-form-second-steps">
+
+                                       <div class="row">                                                                          
+                                    
+                                          <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="price" placeholder="maximum price">
+                                    </div>
+                                </div>
+
+
+                                         <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="input" placeholder="any keyword">
+                                    </div>
+                                </div> 
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between align-items-end">
+                                    <!-- More Filter -->
+                                    <div class="more-filter">
+                                        <a href="#" id="moreFilter">+ More filters</a>
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="form-group mb-0" target="_blank">
+                                        <button type="submit" class="btn south-btn" target="_blank">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </nav>
-            </div>
+                </div>
         </div>
+    </div>
 
 
 
 
+
+
+
+
+    </ul>                           
+
+     </div>
+                                
+
+</li>
+    </ul>
+      </div>
+     </div>
+ </nav>
+           </div>
+        </div>
     </header>
 
     <!-- Header END -->
@@ -298,7 +386,6 @@
 
 
   
-
      <div class="col-md-5">
          <div class="footer-widget-area mb-100">
                 <h3 class="" style="color:yellow;">Working Hours</h3>
@@ -382,7 +469,12 @@
  <!--bootstrap.min.js-->
 <!-- Mold custom scripts -->
   
-        <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script>
+ <!--   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
+
+  
+       <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script>
+
     <!-- Popper js -->
     <script src="../assetf/js/popper.min.js"></script>
     <!-- Bootstrap js -->
@@ -440,6 +532,10 @@
     </script>
 
 
+<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+     -->
 
    <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script> -->
 

@@ -60,7 +60,7 @@ class InclusiveController extends Controller
         'inclusive'=>request('inclusive_name')        
            ]);
                   
-           return redirect()->back()->with('success','Widget created successfully');
+           return redirect()->back()->with('success','Inclusive created successfully');
         }
 
           // Assign Inclusive to the Tour Name
@@ -72,7 +72,7 @@ class InclusiveController extends Controller
         [
         'user_id'=>auth::id()            
            ]);
-     return redirect()->back()->with('success','Widget created successfully');
+     return redirect()->back()->with('success','Inclusive created successfully');
     }
 }
     /**
@@ -121,7 +121,7 @@ class InclusiveController extends Controller
                ->update([
             'inclusive'=>request('inclusive_name')
         ]);
-    return redirect()->route('inclusive.index')->with('success','Widget created successfully');
+    return redirect()->route('inclusive.index')->with('success','Inclusive created successfully');
     }
 //Update program name from inclusive Page
 
@@ -148,7 +148,7 @@ class InclusiveController extends Controller
             return redirect()->route('inclusive.index')->with('success','Inclusive removed successfully');
         }    
         else{
-            return redirect()->route('inclusive.index')->with('error','Widget not exists');
+            return redirect()->route('inclusive.index')->with('error','Inclusive not exists');
         }
     }
 
@@ -158,10 +158,10 @@ class InclusiveController extends Controller
         ///dd($id);
         $delete = accommodationInclusive::where('tour_id',$id)->first();
         if($delete->delete()){
-            return redirect()->back()->with('success','Widget removed successfully');
+            return redirect()->back()->with('success','Inclusive removed successfully');
         }    
         else{
-            return redirect()->back()->with('error','Widget not exists');
+            return redirect()->back()->with('error','Inclusive not exists');
         }
     }
 }

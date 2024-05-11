@@ -21,6 +21,9 @@
   <!-- summernote -->
   <link rel="stylesheet" href="../../../../plugins/summernote/summernote-bs4.min.css">
      <link rel="stylesheet" href="../../../css/bayanno.css">
+
+
+         <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -563,6 +566,8 @@
 </div>
 <!-- ./wrapper -->
 
+
+       <!-- <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script> -->
 <!-- jQuery -->
 <script src="../../../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
