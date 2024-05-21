@@ -40,9 +40,9 @@
             </div>
 
              <!-- Tabs starts here -->
-            <div class="row ">
+            <div class="row">
                 {{-- start of tabs --}}
-            <div class="col-lg-9 col-md-9 col-sm-12 masonry ">
+            <div class="col-lg-9 col-md-9 col-sm-12 masonry"  style="background-color:#2e4432">
                     <div class="package-detail"> 
                              
             <div class="">
@@ -135,7 +135,7 @@
                         <div class="card-body">
                        <div class="row ">
                                 <div class="col-lg-7">
-                                <div class="hotel-diss">
+                                <div class="hotel-diss" style="background-color:#2e4432">
                 
                                <div class="row">                   
                                 <div class="col-md-6 col-lg-6 col-sm-12">                                   

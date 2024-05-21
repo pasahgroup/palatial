@@ -1,30 +1,34 @@
 <?php $__env->startSection('content'); ?>
 
-  <section class="bg-gray">
-        <div class="container">       
-
-            <div class="package-list-wrap">
-                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment)); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
+  <section class="bg-gray" style="margin-top: 0px;">
+        <div class="container">
+            <div class="package-list-wrap ">
+                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
                     <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s)<span
                             class="rate">
-               <!--             <?php if($discounts !=[]): ?>-->
-               <!--             $<?php echo e(number_format($discounts->new_price),2); ?>-->
-               <!--    <?php else: ?>-->
-               <!--$ <?php echo e(number_format($programs->price),2); ?>-->
-              <!-- <?php endif; ?></span> -->
+
+              <!--              <?php if($discounts !=[]): ?>-->
+              <!--              $<?php echo e(number_format($discounts->new_price),2); ?>-->
+              <!--     <?php else: ?>-->
+              <!-- $ <?php echo e(number_format($programs->price),2); ?>-->
+              <!--<?php endif; ?>-->
+
+                    </span>
                     </p>
-                    <h3 class="package-list-title">
+                     
+                     <h3 class="package-list-title">
                         <?php echo e($programs->tour_name); ?>
 
                     </h3>
-                    <a href="#" role="button" class="btn btn-success float-left" data-toggle="modal" data-target="#bookNow">Book Now</a>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
 
                 </div>
-           <?php if($discounts !=[]): ?>
-           <span class="off-box">            
+             <?php if($discounts !=[]): ?>
+           <span class="off-box">
+            
                  <div class="col-md-12 col-sm-12 col-xs-12">
-                                           <span class="text-danger" style="font-size:18px"><strong>$<?php echo e(number_format($discounts->new_price),2); ?> </strong> pp
+                                          <span class="text-danger" style="font-size:18px"><strong>$<?php echo e(number_format($discounts->new_price),2); ?> </strong> pp
                                            </span><s style=""><sup>$ <?php echo e(number_format($programs->price),2); ?> </sup></s><br>
                                             <span style="font-size:12px;">Save $<?php echo e(number_format($discounts->save),2); ?></span>
                 </div>
@@ -32,14 +36,9 @@
               <?php else: ?>
                <span class="off-box">FROM  $ <?php echo e(number_format($programs->price),2); ?></span>
               <?php endif; ?>
-             </div>
+            </div>
 
-
-            <div class="row ">
-                
-            <div class="col-lg-12 col-md-12 col-sm-12 masonry ">
-                    <div class="package-detail">
-                           <!-- Tabs starts here -->
+             <!-- Tabs starts here -->
             <div class="row ">
                 
             <div class="col-lg-9 col-md-9 col-sm-12 masonry ">
@@ -53,7 +52,7 @@
               <li><a href="#tab-C" data-toggle="tab">Tour Cost</a></li>
               <li><a href="#tab-E" data-toggle="tab">Extra Information</a></li>
             </ul>
-            <div class="tab-content">
+            <div class="tab-content booking-btn">
               <div class="tab-pane row fade" id="tab-H">                
                 <div class="col-md-12 col-sm-12">
                 <p>
@@ -62,16 +61,27 @@
                                 <p>Maps Come Here</p>
                </div>
               </div>
-              <div class="tab-pane row fade  in active" id="tab-I">
-                <div class="col-md-12 col-sm-12 booking-tourPadding">
-                <p class="card-text booking-tourPadding">
+              <div class="tab-pane row fade in active" id="tab-I">
+
+                   <form method="GET" action="<?php echo e(route('safaris.show','print')); ?>">
+                    @crsf
+                 <div class="col-md-10 col-sm-10">
+                                     </div>
+                                       <div class="col-md-2 col-sm-2">
+                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
+                                     </div>
+
+                                 </form>
+
+                <div class="col-md-12 col-sm-12">
+                <p class="card-text">
                                             <?php echo e($programs->itinerary_summury); ?>
 
                                             </p>
                                             <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="card card-primary booking-tourPadding">
-                                                <div class="card-header  booking-tourPadding" style="background-color:Gray;">
-                                                <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
+                                                <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
+                                                <span><b> Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
 
                                                 </div>
                                                 <div class="card-body">
@@ -81,10 +91,10 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
                                        <div class="">
 
-                                <div class="row ">
+                                <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
-                               <p><?php echo e($data->itinerary_description); ?></p>   
+                               <p class="booking-btn-gray"><?php echo e($data->itinerary_description); ?></p>   
                                                
                                                      
                                <div class="row"> 
@@ -98,7 +108,7 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                           
-                                            <div class="hotel-pics-one">                                               <img src="<?php echo e(URL::asset('/storage/destination/'.$data->photo)); ?>" alt="" style="min-height: 20vh !important;max-height: 80vh;width: 100% !important">                                                                              </div> 
+                                            <div class="hotel-pics-one">                                               <img src="<?php echo e(URL::asset('/storage/destination/'.$data->photo)); ?>" alt="" style="height: 32vh !important;width:100%">                                                                              </div> 
 
                                                  </div>
                                                  </div>
@@ -114,20 +124,21 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab-A">
+
                <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
      
        <div class="card booking-tourPadding">   
-      <div class="card-header  booking-tourPadding" style="background-color:green">
-    <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?><b></span>                                              
+      <div class="card-header booking-tourPadding" style="background-color:green">
+    <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
                      </div>          
 
                         <div class="card-body">
-                       <div class="row">
+                       <div class="row ">
                                 <div class="col-lg-7">
-                                <div class="hotel-diss">
+                                <div class="hotel-diss" style="background-color:#2e4432">
                 
                                <div class="row">                   
-                                <div class="col-md-6 col-lg-6 col-sm-12">                                    
+                                <div class="col-md-6 col-lg-6 col-sm-12">                                   
                                   <div class="rating">                     
                                     <h4>Location Details</h4>                        
                                   </div>                                                                        
@@ -135,8 +146,8 @@
                                   <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> <?php echo e($data->destination_name); ?></a> 
                                      <a class="map-viw" href="#"><i class="fa fa-home"></i> <?php echo e($data->location_name); ?>/<?php echo e($data->region); ?>/<?php echo e($data->country); ?></a>    
                                    </div>                                                                                                                           
-                                <div class="col-md-6 col-lg-6 col-sm-12">                              
-                                <div class="rating">                                                                         <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b><?php echo e($data->accommodation_name); ?></b></a>      
+                                <div class="col-md-6 col-lg-6 col-sm-12 booking-tour">                             
+                                <div class="rating">                                                                       <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b><?php echo e($data->accommodation_name); ?></b></a>      
 
                                     <div>                            
                                      <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Standard Category: <br>  
@@ -154,31 +165,30 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                  
-                                            <div class="hotel-pics-one">                                    <img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" alt="" style="min-height: 20vh !important;max-height: 80vh !important;width:100%">        
-                                            </div>                    
+                                            <div class="hotel-pics-one">                                    
+                                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" alt="" style="height: 32vh !important;width:100%">        
+                                            </div>                   
 
                                       </div>
                                </div>                           
                                 </div>
-                                </div> 
+                                </div>  
                                 <hr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
              
               </div>
-
-         
-<div id="tab-C" class="tab-pane fade">
-        <div class="card">
+              <div class="tab-pane fade" id="tab-C">               
+                 <div class="card booking-btn">                    
         <div class="card-body">
-            <div class="card-body">
-    <table class="table table-bordered data-table"> 
+            <div class="card-body">               
+          <table class="table table-bordered data-table"> 
         <colspan>
            <col width="10%">
           <col width="20%">
           <col width="10%">
         </colspan>
         <tr>
-          <th class="title" colspan="8" style="background-color:white"><b>Tour Cost Summary Table</b></th>
+          <th class="title" colspan="8" style="background-color:green"><b>Tour Cost Summary Table</b></th>
         </tr>
         
         <tr>
@@ -226,29 +236,31 @@
                  
           </table>
 
-      
-                            </div>
+<hr>
+
+                        </div>
                         </div>
                      </div>
-                    </div>
-                     
 
-              <div class="tab-pane fade" id="tab-E">                
-       <div class="card">   
+              </div>
+
+            <div class="tab-pane fade" id="tab-E">                
+       <div class="card booking-btn-gray">   
       <div class="card-header">
                                             <h5 class="m-0">Accommodation List : Inclusive and Not Inclusive</h5>           
                                               </div>                                 
                                                 
            
 
-                       <div class="card-body">
+                        <div class="card-body">
                        <div class="row ">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
                 
                                <div class="row">                   
                                 <div class="col-md-6 col-lg-6 col-sm-12">                                   
-                                  <div class="rating">                                                                     <h4>Not Inclusive</h4>                   </div>                                
+                                  <div class="rating">                                                                      <h4>Not Inclusive</h4>                        
+                                  </div>                                
    <?php $__currentLoopData = $inclusives; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $inclusive): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>    
                                   <div class="form-check">
    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
@@ -263,7 +275,10 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">  
-                                            <div class="rating">                                                                   <h4>Inclusive</h4>                                                                       </div>                                        <?php $__currentLoopData = $assignLists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $assignList): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <div class="rating">    
+                                                <h4>Inclusive</h4>                                                           
+
+                                            </div>                                        <?php $__currentLoopData = $assignLists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $assignList): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
   <label class="form-check-label" for="flexCheckChecked">
@@ -278,24 +293,21 @@
                                 </div>
                                 </div> 
              </div> 
-         
+             
+            </div>
+          </div>
     
 
                     </div>
-                    </div>  
-
-
                     </div>
-                    </div>
-
-                    
+                     
                     
                     <div class="col-md-3 col-lg-3 masonry">
                         <div class="card">
                         <div class="card-body">
-                            <div >
-
-                                <h4>TOUR SUMMARY</h4>
+                            <div class="card booking-btn">
+                            
+                         <h4>TOUR SUMMARY</h4>
                                  <hr>                                  
                                      <div>Tour Type: <b><?php echo e($programs->type); ?></b></div>
                             <div>Tour Style: <b><?php echo e($programs->category); ?></b></div>
@@ -311,20 +323,24 @@
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
 
+
+                        </div>
+
                         <hr>
                         <div class="row">
-                            <div class="col-lg-12 text-center">
-                            <a href="#" role="button" class="btn btn-success float-left" data-toggle="modal" data-target="#bookNow">Book Now</a>
-                              <a href="/enquiry/<?php echo e($id); ?>" role="button" class="btn btn-primary float-right">Enquiry</a>
+                            <div class="col-lg-12 text-center">                         
+                            
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+
+                    <a href="/enquiry/<?php echo e($id); ?>" role="button" class="btn btn-primary float-right">Enquiry</a>
                             </div>
                             </div>
-                         <hr>
-                           
+                        <hr>
+                            
                                 <p class="text-center">
                                <h5 > List of Add-ons</h5>
                                 </p>
-                       <!-- Button trigger modal -->
-                     
+                                                 <!-- Button trigger modal -->
  <?php $__currentLoopData = $addons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $addon): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
   <!-- Modal -->
         <div class="package-list-wrap "><img src="<?php echo e(URL::asset('/storage/uploads/'.$addon->attachment)); ?>" class="img-fluid" alt="No Image" style="min-height: 20vh !important;max-height: 80vh !important;width:100%">
@@ -333,26 +349,20 @@
       <h3 class="package-list-title">
       <a href="#"><?php echo e($addon->addon_name); ?></a>
                           </h3>
-   <a class="package-list-button" href="<?php echo e(route('addons.show',$addon->id)); ?>">Explore More</a>
+   <a class="package-list-button" href="<?php echo e(route('addons.show',$addon->id)); ?>">View More</a>
                                           </div>
                                         </div>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-                       
                     </div>
-                   
 
 
                 </div>
-                  <hr>
+                <hr>
                 <p class="text-center">
-                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>" >View More Addons</a></p>
+                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>">View More Addons</a></p>
                 </div>
-
                 </div>
             </div>
-
         </div>
     </div>
     </section>
@@ -360,8 +370,6 @@
 
 
 
-
-  
 <div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
  
     <div class="modal-dialog modal-lg" role="document">
@@ -477,7 +485,8 @@
         </div>
 
                                  
-   <div class="form-group">
+
+                    <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Accommodation:</label>
                                     <div class="form-group">
@@ -508,6 +517,7 @@
              </div>
 
                         </div> 
+
                          <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                         <input type="button" name="next" class="next action-button float-right" value="Next" /> 
@@ -595,6 +605,89 @@
 </div>
 
 
+
+
+<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
+<!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
+<!-- 
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script> -->
+
 <script>
 function openPage(pageName, elmnt, color) {
   // Hide all elements with class="tabcontent" by default */
@@ -612,6 +705,7 @@ function openPage(pageName, elmnt, color) {
 
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
+
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
@@ -619,12 +713,13 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
 $('#myTab a').on('click', function (event) {
   event.preventDefault()
   $(this).tab('show')
 })
-
 </script>
+
 
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
@@ -706,7 +801,6 @@ return false;
 
 });
 </script>
+
 <?php $__env->stopSection(); ?>
-
-
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/grouptour/grouptourSummary.blade.php ENDPATH**/ ?>

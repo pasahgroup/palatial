@@ -96,10 +96,10 @@
 
       <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
 
-  <!-- <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
-
+ <!--  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
+  <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all">
+  <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all">
+ -->
      <link href="../custom/css/style.css" rel="stylesheet">
          <!-- <link href="../custom/css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -112,10 +112,11 @@
     </div>
  -->
     <!-- ##### Header Area Start ##### -->
+
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area" style="background:#183519b2;">
+        <div class="top-header-area" style="background-color: :#183519b2;">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
@@ -131,14 +132,66 @@
           <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
            <a href="#"  class="btn btn-outline-body" style="margin-right:40px"><i class="fab fa-instagram"></i></a>
 
- <!--                    </div>
-  <div class="email-address"> -->
-                            <a href="/tailorForm"  class="btn btn-outline btn-primary" style="color:yellow">Tour Enquiry</a>
-     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking</a>
+
+
+
+
+
+                            <a href="/tailorForm"  class="btn btn-outline btn-primary" style="color:yellow">Tour Enquiry nm</a>
+     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking ff</a>
                 </div>
 
             </div>
         </div>
+
+
+
+   <div class="container-fluid top-header-area" style="background-color:#183519b2;">
+
+        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex" style="background-color:#183519b2;">
+            <div class="col-lg-2">
+                <a href="" class="text-decoration-none">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">Palatial</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
+                </a>             
+
+            </div>
+
+              <div class="col-lg-3 col-6 text-left">
+                 <div class="email-address">
+                    <a href="mailto:info@palatialtours.com">
+                      <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
+                       <a href="https://wa.link/z5mmcd" style="padding-left:30px">
+                            <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
+                                +255 753 216 263
+                            </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6 text-left">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="any keyword" required="">
+                        <div class="input-group-append">
+                            <button class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-lg-3 col-6 text-right">
+                 <a href="/tailorForm"  class="btn btn-outline btn-primary" style="color:yellow">Tour Enquiry</a>
+     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
 
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;">
@@ -148,8 +201,7 @@
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:8vh; width: 100%"></a>
-
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:7vh; width: 100%"></a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -172,6 +224,8 @@
                                          <li><a href="/">Home</a></li>
                                     </ul -->
                                 </li>
+
+
 
                                     <li><a href="#">Tour Packages</a>
                                     <div class="megamenu">
@@ -269,11 +323,10 @@
                                     </div>
                                 </div>
 
-                                
+
                               
                                 <div class="col-12 search-form-second-steps">
-
-                                       <div class="row">                                                                          
+                                       <div class="row">                                                                  
                                     
                                           <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
@@ -306,13 +359,6 @@
                 </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
     </ul>                           
 
@@ -463,17 +509,11 @@
 
 
 
+<!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+ -->
 
-    <!-- END FOOTER -->
- <!--bootstrap.min.js-->
-<!-- Mold custom scripts -->
-  
- <!--   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-
-  
-       <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script>
+       <!-- <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script> -->
 
     <!-- Popper js -->
     <script src="../assetf/js/popper.min.js"></script>
@@ -530,19 +570,6 @@
             Layout.initNavScrolling();
         });
     </script>
-
-
-<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-
-     -->
-
-   <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script> -->
-
-   <!-- <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script> -->
-
-    <!-- <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
-    <!-- <script src="../../assets/corporate/scripts/back-to-top.js" type="text/javascript"></script> -->
 
 <!-- Custom3 -->   
   <!-- Plugin prevent returning of mobile menu  -->

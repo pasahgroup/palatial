@@ -46,7 +46,8 @@
 @import url(css/magnific-popup.css);
 @import url(css/font-awesome.min.css);
 @import url(css/themify-icons.css);
-@import url(css/nice-select.css);
+/*@import url(css/nice-select.css);*/
+@import url(select.scss);
 @import url(css/jquery-ui.min.css);
 /* :: 3.0 Base CSS */
 * {
@@ -490,7 +491,7 @@ img {
     /*background-color: transparent;*/
   }
   .main-header-area .classy-navbar {
-    height: 50px;
+    height: 65px;
     padding: .5em 40px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .main-header-area .classy-navbar {

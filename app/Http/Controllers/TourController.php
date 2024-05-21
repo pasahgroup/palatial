@@ -35,6 +35,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Wildlife Safaris')
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -91,6 +92,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type',$sliders->type)
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -144,6 +146,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type',$programs->type)
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -169,6 +172,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
            ->where('programs.type',request('tours'))
             // ->where('programs.price','=<',$price)
           ->where('itineraries.tour_addon','Programs')
@@ -188,12 +192,14 @@ class TourController extends Controller
          $title="Hiking & Trekking";
          $safaris = program::join('attachments','programs.id','attachments.destination_id')
          ->join('itineraries','programs.id','itineraries.program_id')
-         ->select('programs.*','attachments.attachment')
+         ->select('programs.*','attachments.attachment','attachments.type')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Hiking & Trekking')
           ->where('itineraries.tour_addon','Programs')
          ->get();
        
+      // dd($safaris);
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -210,6 +216,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Beach Holidays')
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -226,6 +233,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Day Tours')
           ->where('itineraries.tour_addon','Programs')
          ->get();       
@@ -241,6 +249,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Combined Tours')
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -259,6 +268,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Historical Site')
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -276,6 +286,7 @@ class TourController extends Controller
          ->join('itineraries','programs.id','itineraries.program_id')
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
           ->where('programs.type','Cultural Tour')
           ->where('itineraries.tour_addon','Programs')
          ->get();
@@ -333,7 +344,7 @@ $discounts=specialOffer::where('tour_id',$id)->first();
         $programs = program::
            join('itineraries','itineraries.program_id','programs.id')
           ->join('attachments','programs.id','attachments.destination_id')
-         ->where('attachments.type', $tour_addon)
+          ->where('attachments.type', $tour_addon)
          ->where('itineraries.tour_addon', $tour_addon)
          ->where('programs.id',$id)
             ->select('programs.*','attachments.attachment','itineraries.*')
@@ -353,7 +364,7 @@ $discounts=specialOffer::where('tour_id',$id)->first();
         'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
         ->get();
 
-//dd($programs);
+//dd($tour_addon);
 
          if($datas == "[]"){
       return redirect()->back()->with('info','The Program has no Itinery Data');
@@ -406,8 +417,6 @@ $discounts=specialOffer::where('tour_id',$id)->first();
 
 
 // Send Email to clint
-
-
 
         return view('website.tour.tourSummary',compact('datas','id','programs','basic','comfort','luxury','buyaddons','addons','addondatas','discounts','inclusives','assignLists'));
     }
