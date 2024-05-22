@@ -1394,7 +1394,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
                         <div class="product-action">
                             <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
                         </div>
@@ -1406,27 +1406,42 @@
             </div>
 <?php endif; ?>
 
-            <?php if($popular_safari): ?>
+             <?php if($popular_trekking): ?>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="" style="height:250px;">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_trekking->type); ?></i></a>
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_trekking->type); ?></a>                      
                     </div>
                 </div>
             </div>
 <?php endif; ?>
             
+           <?php if($popular_holiday): ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_holiday->type); ?></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_holiday->type); ?></a>                      
+                    </div>
+                </div>
+            </div>
+<?php endif; ?>
            <?php if($popular_safari): ?>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
                         <div class="product-action">
                             <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
                         </div>
@@ -1437,22 +1452,7 @@
                 </div>
             </div>
 <?php endif; ?>
-           <?php if($popular_safari): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
-                    </div>
-                </div>
-            </div>
-<?php endif; ?>
-            
+
         </div>
     </div>
     <!-- Products End -->
