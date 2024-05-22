@@ -201,6 +201,8 @@ class websiteController extends Controller
         //dd($quickLinkSliders);
         //End of Slider part
 //dd($quickLinkSliders);
+          $sliderCount = slider::where('status','1')
+                  ->count();
 
           // $welcome_message = PostBody::join('attachments','post_bodies.id','attachments.destination_id')
           //   //->select('post_bodies.*','attachments.attachment')
@@ -261,7 +263,15 @@ class websiteController extends Controller
           // ->offset(1)
           ->limit(8)->get();
 
-         return view('website.home.index',compact('offers_private','offers_group','popular_safarif','popular_trekking','popular_trekkingf','popular_safari','popular_holiday','popular_holidayf','popular_historicalf','popular_historical','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
+  $slider_first = slider::where('status','1')
+          //->select('sliders.*')
+          // ->offset(1)
+          ->limit(1)->first();
+
+
+//dd($slidersCount);
+
+         return view('website.home.index',compact('offers_private','sliderCount','slider_first','offers_group','popular_safarif','popular_trekking','popular_trekkingf','popular_safari','popular_holiday','popular_holidayf','popular_historicalf','popular_historical','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
     }
 
     /**

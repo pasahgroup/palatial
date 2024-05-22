@@ -103,6 +103,12 @@
      <link href="../custom/css/style.css" rel="stylesheet">
          <!-- <link href="../custom/css/bootstrap.min.css" rel="stylesheet"> -->
 
+ <!-- Libraries Stylesheet -->
+    <link href="../assetff/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../assetff/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../assetff/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -115,38 +121,7 @@
 
     <header class="header-area">
 
-        <!-- Top Header Area -->
-        <div class="top-header-area" style="background-color: :#183519b2;">
-            <div class="h-100 d-md-flex justify-content-between align-items-center">
-                <div class="email-address">
-                    <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
-                       <a href="https://wa.link/z5mmcd" style="padding-left:30px">
-                            <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                                +255 753 216 263
-                            </a>
-                </div>
-                                    <div class="h-100 d-inline-flex align-items-center py-3 me-2 email-address">
-                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
-      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
-           <a href="#"  class="btn btn-outline-body" style="margin-right:40px"><i class="fab fa-instagram"></i></a>
-
-
-
-
-
-
-                            <a href="/tailorForm"  class="btn btn-outline btn-primary" style="color:yellow">Tour Enquiry nm</a>
-     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking ff</a>
-                </div>
-
-            </div>
-        </div>
-
-
-
-   <div class="container-fluid top-header-area" style="background-color:#183519b2;">
+   <div class="container-fluid top-header-area">
 
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex" style="background-color:#183519b2;">
             <div class="col-lg-2">
@@ -157,7 +132,7 @@
 
             </div>
 
-              <div class="col-lg-3 col-6 text-left">
+              <div class="col-lg-4 col-6 text-left">
                  <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
                       <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
@@ -379,60 +354,64 @@
   <hr>
     
 
-   <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
+      <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
         <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
+        <div class="row px-xl-5 pt-5">
+              <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
+                           
+                              <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="/circuitTour/Northern Circuit"><i class="fa fa-angle-right mr-2"></i>Northern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Southern Circuit"><i class="fa fa-angle-right mr-2"></i>Southern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Eastern Circuit"><i class="fa fa-angle-right mr-2"></i>Eastern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Western Circuit"><i class="fa fa-angle-right mr-2"></i>Western Circuit</a>
+                     <a class="text-secondary mb-2" href="/circuitTour/Central Circuit"><i class="fa fa-angle-right mr-2"></i>Central Circuit</a>
+                        </div>
+                        <br>
+ 
+                    </div>
+            <div class="col-lg-8 col-md-12">
                 <div class="row">
-
-                       <div class="col-md-3">
-        <h3 class=""  style="color:yellow;">Destinations</h3>
-           <ul class="link-widget">
-                        <li class="dropdown"><a title="Northern Circuit" href="/circuitTour/Northern Circuit">Northern Circuit</a></li>
-                        <li class="dropdown"><a title="Southern Circuit" href="/circuitTour/Southern Circuit">Southern Circuit</a></li>
-                        <li class="dropdown"><a title="Eastern Circuit" href="/circuitTour/Eastern Circuit">Eastern Circuit</a></li>
-                        <li class="dropdown"><a title="Western Circuit" href="/circuitTour/Western Circuit">Western Circuit</a></li>
-                         <li class="dropdown"><a title="Central Circuit" href="/circuitTour/Central Circuit">Central Circuit</a></li>
-                    </ul>
-        </div>
-        <div class="col-md-3">
-              <h3 class=""  style="color:yellow;">About Palatial Tours</h3>
-            <ul class="link-widget">
-                         <li class="dropdown"><a title="Why Adventure with us" href="#">Why Adventure with us</a></li>
-                        <li class="dropdown"><a title="What We offer" href="/whatWeOfferClient">What We offer</a></li>
-                        <li class="dropdown"><a title="Accommodation List-Safaris" href="/accommodation-hotels">Accommodation-Hotels</a></li>
-                         <li class="dropdown"><a title="Accommodation List-Camps" href="/accommodation-camps">Accommodation-Camps</a></li>
-                    </ul>
-        </div>
-
-
-
-  <div class="col-md-3">
-          <h3 class="" style="color:yellow;">Support</h3>
-           <ul class="link-widget">
-                        <li class="dropdown"><a  href="">Visa information</a></li>
-                        <li class="dropdown"><a  href="#">Health & Vaccination</a></li>
-                        <li class="dropdown"><a  href="#">Payment Methods</a></li>
-                        <li class="dropdown"><a href="#">About Tanzania</a></li>
-                    </ul>
-                  </div>
-
-
-
-    <div class="col-md-3">
-                <h3 class="" style="color:yellow;">Contacts</h3>
-            <ul class="link-widget">
-
-                        <li class="dropdown"><a  href="">Address:<?php echo e($contacts->address??'Arusha'); ?></a></li>
-                        <li class="dropdown"><a  href="#">Contact No: (+255)753 216 263</a></li>
-                        <li class="dropdown"><a  href="#">Email: info@palatialtours.com</a></li>
-                        <li class="dropdown"><a href="#">Website: www.palatialtours.com</a></li>
-                    </ul>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">About Palatial Tours</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Why Adventure with us</a>
+                            <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>What We offer</a>
+                            <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Accommodation-Hotels</a>
+                            <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>Accommodation-Camps</a>
+                  
+                        </div>
+                    </div>
+                       <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Support</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Visa information</a>
+                            <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>Health & Vaccination</a>
+                            <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Payment Methods</a>
+                            <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>About Tanzania</a>
+                  
+                        </div>
+                    </div>
+                   
+                   
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Contacts</h5>
+                           
+                           <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:<?php echo e($contacts->address??'Arusha'); ?></a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: (+255)753 216 263</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Email: info@palatialtours.com</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: www.palatialtours.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
-  
-     <div class="col-md-5">
+          <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+              
+<div class="col-md-8">
          <div class="footer-widget-area mb-100">
                 <h3 class="" style="color:yellow;">Working Hours</h3>
             <div class="weekly-office-hours">
@@ -445,68 +424,46 @@
         </div>
       </div>
 
-                <div class="col-md-5">
+                <div class="col-md-4">
          <div class="footer-widget-area mb-100">
             <br>
             <div class="weekly-office-hours">
                               <div class="single-featured-properties-slide">
-                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 50%"></a>
+                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 80%"></a>
                                 </div>
                             </div>
         </div>
       </div>
-                 
 
-                </div>
+
+
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                   <div class="col-md-4 mb-5 float-right">
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
             </div>
         </div>
 
-        <!-- Copywrite Text -->
-        <div class="copywrite-text d-flex align-items-center justify-content-center" style="background:#2e4432;">
- 
-   <div class="container-fluid">
-          <!-- BEGIN COPYRIGHT -->
-          <div class="col-md-5 col-sm-6 padding-top-10">
-            2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" target=”_blank” >Email</a>
-          </div>
-          <!-- END COPYRIGHT -->
-          <!-- BEGIN PAYMENTS -->
-
-                 <div class="col-md-4 col-sm-6 padding-left-0 padding-top-8 padding-right-30">
-                                <div class="login-socio">
-                             <!--        <ul class="social-icons">
-                                <li><a href="#" data-original-title="facebook" class="facebook btn btn-outline-body" title="facebook"></a></li>
-                                <li><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
-                                 <li><a href="#" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
-                                <li><a href="javascript:;" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
-                                <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
-                            </ul>
- -->
-
-
-                                     <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
-      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
-           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
-
-                    </div>
-                        </div>
-
-
-
-
-                      </div>
-                   <!-- BEGIN POWERED -->
-          <div class="col-md-3 col-sm-6 text-right">
-            <p class="powered">Developed by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
-          </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    2024 &copy; <a class="text-primary" href="#">Palatial Tour</a>. All Rights Reserved.<a href="javascript:;">| Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" target=”_blank” >Email</a>
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary float-right">
+                  Developed by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a>
+                </p>
+            </div>
         </div>
 
-
-        </div>
-    </footer>
-
+  </footer>
 
 
 <!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
