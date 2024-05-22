@@ -1018,43 +1018,42 @@
     </div>
 </div>
 </section>
-
-
-
     <hr class="">
 
 
+    <!-- Categories Start -->
+    <div class="container-fluid pt-5">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Quick Link</span></h2>
 
-    <!-- ##### Featured Properties Area Start ##### -->
-    <section class="featured-properties-area section-padding-100-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading wow fadeInUp">
-                        <h2  style="color:#b76b0b;">Quick Link</h2>
-                        <!-- <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p> -->
+      
+      <div class="row px-xl-5 pb-3">     
+<div class="col-md-6 col-sm-12 pb-1">
+<div class="row">    
+
+      <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 50px; height: 2px;">
+                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+
+                                             <a href="/QuickLink/<?php echo e($data->id); ?>"><b style="color:#b76b0b;"><?php echo e($data->quick_title); ?></b></a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+         
+</div>
+        </div>
 
-            <div class="row">
-    
-                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-     <div class="service-box-heading bg-color">
-                            <p><strong>Quick Link</strong></p>
-                     <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                 <div class="bg-colorx">
-                                                    <ul>
-                                             <li><a href="/QuickLink/<?php echo e($data->id); ?>"><b style="color:#b76b0b;"><?php echo e($data->quick_title); ?></b></a><li>  </ul>
-                             </div>
-                     </div>
-                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </div>
-            </div>
+            <div class="col-md-6 col-sm-12 pb-1">
+     <div class="row"> 
+
 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 testimonials-v1">
       <div class="service-box-heading bg-color">
-    <span><b>Testimonials</b></span>
                                  <span><p>What Travellers Say Tour Reviews</p></span>
                                  <div id="myCarousel1" class="carousel slide">
                                      <!-- Carousel items -->
@@ -1120,45 +1119,7 @@
                                  </div>
 
 </div>
-</div>
-             
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Categories Start -->
-    <div class="container-fluid pt-5">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3" style="color:#b76b0b;">Quick Link</span></h2>
-      
-      <div class="row px-xl-5 pb-3"> 
-    
-<div class="col-md-6 col-sm-12 pb-1">
-<div class="row">    
-
-      <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 50px; height: 2px;">
-                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-
-                                             <a href="/QuickLink/<?php echo e($data->id); ?>"><b style="color:#b76b0b;"><?php echo e($data->quick_title); ?></b></a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-         
-</div>
-        </div>
-
-            <div class="col-md-6 col-sm-12 pb-1">
-     <div class="row"> 
+</div>        
      </div>       
 </div>
 
@@ -1170,205 +1131,6 @@
 
 
 
-
-
-
-
-    <!-- Featured Start -->
-    <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Featured End -->
-
-
-    <!-- Categories Start -->
-    <div class="container-fluid pt-5">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Categories</span></h2>
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
-                    <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                        </div>
-                        <div class="flex-fill pl-3">
-                            <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Categories End -->
 
 
     <!-- Products Start -->
