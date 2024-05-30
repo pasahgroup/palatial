@@ -118,7 +118,7 @@
                 <a href="" class="text-decoration-none">
                     <span class="h1 text-uppercase text-primary bg-dark px-2">Palatial</span>
                     <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
-                </a>             
+                </a>            
 
             </div>
 
@@ -265,9 +265,9 @@
                 <div class="col-12">
                     <div class="advanced-search-form">
                         <!-- Search Title -->
-                        <div class="search-title">
+                      <!--   <div class="search-title">
                             <p>Search Tour By</p>
-                        </div>
+                        </div> -->
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                             <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
