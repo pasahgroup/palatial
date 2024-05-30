@@ -110,7 +110,7 @@
                     </div>
                     @endif
                 </div>
-                   <div class="product-offer mb-30" style="height: 200px;">
+                   <div class="product-offer mb-30" style="height: 190px;">
                      @if ($popular_trekking)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment) }}" alt="">
                     <div class="offer-text">

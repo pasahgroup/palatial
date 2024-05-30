@@ -110,7 +110,7 @@
                     </div>
                     <?php endif; ?>
                 </div>
-                   <div class="product-offer mb-30" style="height: 200px;">
+                   <div class="product-offer mb-30" style="height: 190px;">
                      <?php if($popular_trekking): ?>
                     <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="">
                     <div class="offer-text">
@@ -429,7 +429,7 @@
                            
     <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-<div class="col-lg-6 col-md-6">
+ <div class="col-lg-4 col-md-12">
     
        <h5><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
