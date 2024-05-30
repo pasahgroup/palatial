@@ -99,6 +99,28 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../assetff/css/style.css" rel="stylesheet">
+
+
+    <style>
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+</style>
 </head>
 
 <body>
@@ -128,7 +150,7 @@
                       <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:30px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                                +255 753 216 263
+                               (+255)753 216 263
                             </a>
                 </div>
             </div>
@@ -148,8 +170,21 @@
 
 
             <div class="col-lg-3 col-6 text-right">
-                 <a href="/tailorForm"  class="btn btn-outline btn-primary" style="color:yellow">Tour Enquiry</a>
-     <a href="/bookingTrip"  class="btn btn-outline btn-success" style="color:yellow">My Booking</a>
+    <!--           <button class="button button1">2px</button>
+<button class="button button2">4px</button>
+<button class="button button3">8px</button>
+<button class="button button4">12px</button> -->
+
+<!-- btn btn-primary btn-square mr-2 -->
+                      <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-twitter"></i></a>
+      <a href="#"  class="btn btn-outline btn-primary" href=""><i class="fab fa-facebook-f"></i></a>
+          <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-linkedin-in"></i></a>
+           <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-instagram"></i></a>
+
+              
+                 <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tour Enquiry</a>
+     <a href="/bookingTrip"  class="btn btn-outline btn-primary" style="color:yellow">My Booking</a>
+
             </div>
 
         </div>
