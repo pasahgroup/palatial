@@ -429,7 +429,7 @@
                            
     @foreach ($offers_private as $special_private)
 
-<div class="col-lg-6 col-md-6">
+ <div class="col-lg-4 col-md-12">
     
        <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
