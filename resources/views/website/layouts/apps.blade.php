@@ -25,17 +25,7 @@
    <link rel="stylesheet" href="../assetf/style.css">
     <!-- Style CSS -->
 <!-- Custom css -->
-  <!-- <link rel="stylesheet" href="../../css/style.css"> -->
-  <!-- <link rel="stylesheet" href="../../../css/button.css"> -->
-
-    <!-- <link href="../../assets/pages/css/components.css" rel="stylesheet"> -->
-
-<!-- <link href="../../assets/pages/css/slider.css" rel="stylesheet">
-  <link href="../../assets/corporate/css/style.css" rel="stylesheet">
-  <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet"> -->
-
-
-  
+ 
   <script src="../custom/js/jquery.min.js"></script>
     <script src="../custom/js/bootstrap.min.js"></script>
 
@@ -70,7 +60,7 @@
 
 
 <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- <link href="../../assets/pages/css/animate.css" rel="stylesheet"> -->
+  <link href="../../assets/pages/css/animate.css" rel="stylesheet">
   <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
   <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
     <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
@@ -101,7 +91,7 @@
   <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all">
  -->
      <link href="../custom/css/style.css" rel="stylesheet">
-         <!-- <link href="../custom/css/bootstrap.min.css" rel="stylesheet"> -->
+         <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
 
  <!-- Libraries Stylesheet -->
     <link href="../assetff/lib/animate/animate.min.css" rel="stylesheet">
@@ -123,7 +113,7 @@
 
    <div class="container-fluid top-header-area">
 
-        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex" style="background-color:#183519b2;">
+        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex" style="background-color:#475e3b;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
                     <span class="h1 text-uppercase text-primary bg-dark px-2">Palatial</span>
@@ -146,7 +136,7 @@
             <div class="col-lg-3 col-6 text-left">
                 <form action="">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="any keyword" required="">
+                        <input type="text" class="form-control" placeholder="search any keyword" required="">
                         <div class="input-group-append">
                             <button class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
@@ -285,20 +275,11 @@
                             <div class="row">
                                 <input type="hidden" name="_method" value="POST">
 
-                                <div class="col-12 col-md-6 col-lg-6">
+                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
-                                        <select class="form-control" name="tours">
-                                            <option>--Select program--</option>
-                                            <option value="Wildlife Safaris">Wildlife Safaris</option>
-                                               <option value="Hiking & Trekking">Hiking & Trekking</option>                                               
-                                          <option value="Beach Holidays">Beach Holidays</option>
-                                           <option value="Historical Site">Historical Site</option>
-                                            <option value="Day Tours">Day Tours</option>
-                                                                                  </select>
+                                        <input type="text" class="form-control" name="input" placeholder="any keyword">
                                     </div>
                                 </div>
-
-
                               
                                 <div class="col-12 search-form-second-steps">
                                        <div class="row">                                                                  
@@ -310,11 +291,7 @@
                                 </div>
 
 
-                                         <div class="col-12 col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="input" placeholder="any keyword">
-                                    </div>
-                                </div> 
+                                     
                                     </div>
                                 </div>
 

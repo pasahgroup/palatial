@@ -62,7 +62,7 @@
                                 <p>Maps Come Here</p>
                </div>
               </div>
-              <div class="tab-pane row fade in active" id="tab-I">
+              <div class="tab-pane row active" id="tab-I">
 
                    <form method="GET" action="{{ route('safaris.show','print') }}">
                     @crsf

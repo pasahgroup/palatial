@@ -65,8 +65,8 @@
                                     <img src="{{URL::asset('/storage/uploads/'.$safari->attachment) }}" class="img-responsive" alt="{{  $safari->tour_name }}" style="height:250px;width:100%;">
                                     </div>
                                 </div>
-                                   <h3 class="text-center booking-btn booking-tourPadding">
-                                  <b style="color:">{{$safari->tour_name}}</b>                                    
+                                   <h3 class="text-center booking-btn booking-tourPadding demo-3">
+                                  <b style="color:" title="{{$safari->tour_name}}">{{$safari->tour_name}}</b>                                    
                                 </h3>  
 
                                     <div class="">
@@ -130,18 +130,14 @@
                                             </div>                                           
                                              </div>
                                
-                                                                   
-                                 <div class="row">                                      
-                                      </div>
-                            <div class="listing-shot-info rating">
-                                <div class="row booking-btn booking-tourPaddingx">
-                                   
-                              <!--   <div class="col-md-12 col-sm-12 col-xs-12"> -->
-                                       <a href="/safaris/{{$safari->id}}" class="btn booking-btn">Explore More</a>
-                                <!-- </div>   -->
-                              
-                                </div>
-                            </div>                          
+
+
+                                 <div class="row">
+                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
+                                                                                    <a href="/safaris/{{$safari->id}}" class="booking-btn text-center"><b>Explore More</b></a>
+                                                                        </div>
+                                                                            </div>
+                                                  
                                 </div>
                           
                         </div>

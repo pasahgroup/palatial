@@ -4,6 +4,29 @@
         margin-top:7%;
     }
 </style>
+<style type="text/css">
+    
+    .booking-btn {
+  border: 0px solid #647545;
+  padding: 10px 38px;
+  color:#fff;
+  display: block;  
+  /*background-color: #3f403d;*/
+  /*background-color: #2e4432;*/
+  background-color: #2e4432;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 30px;
+}
+
+</style>
     <!-- Carousel Start -->
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
@@ -76,22 +99,40 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="img/offer-1.jpg" alt="">
+<hr>
+                <div class="product-offer mb-30" style="height: 215px;">
+                     <?php if($popular_safari): ?>
+                    <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn btn-primary">Shop Now</a>
+                        <h6 class="text-white mb-3"><?php echo e($popular_safari->tour_name); ?></h6>
+                        <h3 class="text-white mb-3"><strong>[<?php echo e($popular_safari->type); ?>]</strong></h3>
+                            <a href="/safaris/<?php echo e($popular_safari->id); ?>" class="btn btn-primary">View more</a>
                     </div>
+                    <?php endif; ?>
                 </div>
-                <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="img/offer-2.jpg" alt="">
+                   <div class="product-offer mb-30" style="height: 200px;">
+                     <?php if($popular_trekking): ?>
+                    <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn btn-primary">Shop Now</a>
+                          <h6 class="text-white mb-3"><?php echo e($popular_trekking->tour_name); ?></h6>
+                        <h3 class="text-white mb-3"><strong>[<?php echo e($popular_trekking->type); ?>]</strong></h3>
+                            <a href="/safaris/<?php echo e($popular_trekking->id); ?>" class="btn btn-primary">View more</a>
                     </div>
+                    <?php endif; ?>
                 </div>
+
+                   <div class="product-offer mb-30" style="height: 190px;">
+                     <?php if($popular_holiday): ?>
+                    <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" alt="">
+                    <div class="offer-text">
+                         <h6 class="text-white mb-3"><?php echo e($popular_holiday->tour_name); ?></h6>
+                        <h3 class="text-white mb-3"><strong>[<?php echo e($popular_holiday->type); ?>]</strong></h3>
+                            <a href="/safaris/<?php echo e($popular_holiday->id); ?>" class="btn btn-primary">View more</a>
+                    </div>
+                    <?php endif; ?>
+                </div>
+  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
+                        </a>
             </div>
         </div>
     </div>
@@ -381,92 +422,78 @@
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                         
-                            <div class="row">
-                               
+                            <div class="row">                             
            
 
                         <div class="footer-widget-area mb-100">
                            
     <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-     <div class="col-lg-4 col-md-12">
-         <h4><b style="background:"><?php echo e($special_private->sales_header); ?></b></h4>
-                                                <div class="single_blog listing-shot">
 
-                                                                <div class="listing-shot-img">
+<div class="col-lg-6 col-md-6">
+    
+       <h5><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
+
+<div class="single_blog listing-shot">
+                <div class="product-item bg-light mb-4">
+                   <div class="listing-shot-img">
                                                                             <div class="listing-badge now-open"><strong><?php echo e(round($special_private->save/$special_private->price * 100),0); ?>% Off</strong></div>
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_private->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_private->tour_name); ?>" style="height:280px;width:100%;">
-                                                                        </div>
-                                                                </div>
-                                                                             <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_private->tour_name); ?>"><?php echo e($special_private->tour_name); ?></b>
-                                                                             </h3>
-                                                                 <hr>
-                                                        <div class="blog-text">
-                                                        <div class="row">
+                                                                    
+                                                               
 
-                                                                         <div class="col-md-7 col-sm-7 col-xs-7 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);height:40px; ">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($special_private->tour_name); ?></i></a>
+                        </div>
+                    </div>
+
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($special_private->tour_name); ?></a>                      
+                    </div>
+                </div>
+                 </div>
+
+  <b>  <div class="col-md-5 col-sm-5 col-xs-5 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);height:40px; ">
                                                                                          <strong>Dead Line: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
-                                                                                 </div>
+                                                                                 </div></b>
 
-                                                                                <div class="col-md-5 col-sm-5 col-xs-5 booking-btn">
+ <b class="float-right">  
+  <div class="booking-btn">
                                                                                 <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_private->new_price),2); ?> </strong> pp
                                                                                      </span><s style=""><sup>$ <?php echo e(number_format($special_private->price),2); ?> </sup></s><br>
                                                                                         <span style="font-size:12px;">Save $<?php echo e(number_format($special_private->save),2); ?></span>
 
-                                                                                 </div>
+                                                                                 </div></b>
+
+
+
+
+
+               </div>
+
+<div>Tour Duration:         
+                                                                  <strong class="float-right"><?php echo e($special_private->days); ?> Days, <?php echo e($special_private->days -1); ?> Nights</strong>
+                                                                                              
+                                                                                              </div>
+
+<div>Physical Rating:          <strong class="float-right"><?php echo e($special_private->physical_rating); ?></strong></div>
+<div>Tour Category:          <strong class="float-right"><?php echo e($special_private->category); ?></strong></div>
+<div>Physical Rating:          <strong class="float-right"><?php echo e($special_private->tour_code); ?></strong></div>
+
+
+<hr>
+                                                                        <div class="text-right">
+                                                                                    <a href="<?php echo e(route('safaris.show',$special_private->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Read more</b></a>
                                                                         </div>
+            </div>
 
-                                                                    <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-                                                                            <div class="row">
-                                                                                     <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                         Tour Duration:
-                                                                                        </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_private->days); ?> Days, <?php echo e($special_private->days -1); ?> Nights</strong>
-                                                                                                </div>
-                                                                                         </div>
-
-                                                                                             <div class="row">
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Physical Rating: </span>
-                                                                                         </div>
+</div>
 
 
-                                                                                             <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_private->physical_rating); ?></strong>
-                                                                                                </div>
-                                                                                             </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Category: </span>
-                                                                                     </div>
 
 
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_private->category); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                                    <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Code: </span>
-                                                                                     </div>
 
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_private->tour_code); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                         </div>
-
-                                                            <div class="row">
-                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-                                                                                    <a href="<?php echo e(route('safaris.show',$special_private->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
-                                                                        </div>
-                                                                            </div>
-                                                                </div>
-
-                                                </div>
-                                        </div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
@@ -478,7 +505,7 @@
                                                                 <div class="listing-shot-img">
                                                                             <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
                                                                         <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="height:280px;width:100%;">
+                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="width:100%;">
                                                                         </div>
                                                                 </div>
                                                                              <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_group->tour_name); ?>"><?php echo e($special_group->tour_name); ?></b>
@@ -580,454 +607,112 @@
 
 
 
-
-
- <section class="featured-properties-area section-padding-100-50 top">  
-
-    <div class="container" style=" padding-bottom:0px;">
-   <div class="south-search-area">
-        <div class="container">
-            <div class="row bg-color">
-                <div class="col-12">
-                    <div class="advanced-search-form" style="background-color:#cabaa5;">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>Partnering</p>
-                        </div>
-                        <!-- Search Form -->
-                        <!-- <form action="#" method="post" id="advanceSearch"> -->
-                            <div class="row">
-  <div class="col-md-12">
-                    <div class="heading-section heading-section-white">
-                        <h3 class="subheading" style="color:#b76b0b">Partnering with SafariBookings.com</h3>
-                <h2 class="mb-3"><a href="https://www.safaribookings.com/" target="_blank"><b>https://www.safaribookings.com</b></a></h2>
-              </div>
-            </div>
-            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
- <hr class="">
  
 
-
-
- <section class="featured-properties-area section-padding-100-50 top">  
-
-    <div class="container" style=" padding-bottom:0px;">
-   <div class="south-search-area">
-        <div class="containerx">
-            <div class="row">
-                <div class="col-12">
-                    <div class="advanced-search-form">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>Popular Experiences</p>
-                        </div>
-                     
- <div class="row small-package-list">
-                                             <?php if($popular_safari): ?>
-                                                <div class="col-lg-4 col-md-4">
-                                                <div class="single_blog listing-shot">
-
-                                                                <div class="listing-shot-img">
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-responsive" alt="<?php echo e($popular_safari->tour_name); ?>" style="height:250px;width:100%;">
-                                                                        </div>
-                                                                </div>
-
-                                                                <h3 class="text-center booking-btn booking-tourPadding demo-3"> <b style="color:" title="<?php echo e($popular_safari->tour_name); ?>"><?php echo e($popular_safari->tour_name); ?></b>
-                                                                    </h3>
-
-
-                                                                            <div class="">
-                                                                 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_safari->type); ?></marquee></b>
-                                                                        </h4>
-                                                                </div>
-                                                        <div class="blog-text">
-                                                        <div class="row">
-
-                                                                         <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11)">
-                                                                                         <strong><b class="text-white"><?php echo e($popular_safari->days); ?> Days, <?php echo e($popular_safari->days -1); ?> Nights</b></strong>
-                                                                                 </div>
-
-                                                                                <div class="col-md-6 col-sm-6 col-xs-6 booking-btn">
-                                                                                <span class="text-white"><strong>From $<?php echo e(number_format($popular_safari->price),2); ?></b>  </strong>
-                                                                                     </span>
-
-                                                                                 </div>
-                                                                        </div>
-
-                                                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-
-                                                                            <div class="row">
-                                                                                     <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                         Tour Duration:
-                                                                                        </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_safari->days); ?> Days, <?php echo e($popular_safari->days -1); ?> Nights</strong>
-                                                                                                </div>
-                                                                                         </div>
-
-                                                                                             <div class="row">
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Physical Rating: </span>
-                                                                                         </div>
-
-
-                                                                                             <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_safari->physical_rating); ?></strong>
-                                                                                                </div>
-                                                                                             </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Category: </span>
-                                                                                     </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_safari->category); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                                    <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Code: </span>
-                                                                                     </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_safari->tour_code); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                         </div>
-
-
-                                                              
-                                                                             <!--<hr>-->
-                                                        <div class="listing-shot-info rating">
-                                                                <div class="booking-tourPadding">
-
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-                                                                             <a href="/safaris/<?php echo e($popular_safari->id); ?>" class="booking-btn text-center"><b>View More</b></a>
-                                                                </div>
-
-                                                                </div>
-                                                        </div>
-                                                                </div>
-
-                                                </div>
-                                        </div>
-                                        <?php endif; ?>
-
-
-        <?php if($popular_trekking): ?>
-                                                         <div class="col-lg-4 col-md-4">
-                                                <div class="single_blog listing-shot">
-
-                                                                <div class="listing-shot-img">
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-responsive" alt="<?php echo e($popular_trekking->tour_name); ?>" style="height:250px;width:100%;">
-                                                                        </div>
-                                                                </div>
-
-                                                                <h3 class="text-center booking-btn booking-tourPadding demo-3"> <b style="color:" title="<?php echo e($popular_trekking->tour_name); ?>"><?php echo e($popular_trekking->tour_name); ?></b>
-                                                                    </h3>
-
-                                                                        <div class="">
-                                                                 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_trekking->type); ?></marquee></b>
-                                                                        </h4>
-                                                                </div>
-                                                        <div class="blog-text">
-                                                        <div class="row">
-
-                                                                         <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11) ">
-                                                                                         <strong><b class="text-white"><?php echo e($popular_trekking->days); ?> Days, <?php echo e($popular_trekking->days -1); ?> Nights</b></strong>
-                                                                                 </div>
-
-                                                                                <div class="col-md-6 col-sm-6 col-xs-6 booking-btn">
-                                                                                <span class="text-white"><strong>From $<?php echo e(number_format($popular_trekking->price),2); ?></b>  </strong>
-                                                                                     </span>
-
-                                                                                 </div>
-                                                                        </div>
-
-                                                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-
-                                                                            <div class="row">
-                                                                                     <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                         Tour Duration:
-                                                                                        </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_trekking->days); ?> Days, <?php echo e($popular_trekking->days -1); ?> Nights</strong>
-                                                                                                </div>
-                                                                                         </div>
-
-                                                                                             <div class="row">
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Physical Rating: </span>
-                                                                                         </div>
-
-
-                                                                                             <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_trekking->physical_rating); ?></strong>
-                                                                                                </div>
-                                                                                             </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Category: </span>
-                                                                                     </div>
-
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_trekking->category); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                                    <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Code: </span>
-                                                                                     </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_trekking->tour_code); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                         </div>
-
-
-                                                                 <div class="row">
-                                                                            </div>
-                                                                             <!--<hr>-->
-                                                        <div class="listing-shot-info rating">
-                                                                <div class="booking-tourPadding">
-
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-                                                                             <a href="/safaris/<?php echo e($popular_trekking->id); ?>" class="booking-btn text-center"><b>View More</b></a>
-                                                                </div>
-
-                                                                </div>
-                                                        </div>
-                                                                </div>
-
-                                                </div>
-                                        </div>
-                                        <?php endif; ?>
-
-
-
-   <?php if($popular_holiday): ?>
-                                        <div class="col-lg-4 col-md-4">
-                                                <div class="single_blog listing-shot">
-
-                                                                <div class="listing-shot-img">
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-responsive" alt="<?php echo e($popular_holiday->tour_name); ?>" style="height:250px;width:100%;">
-                                                                        </div>
-                                                                </div>
-
-                                                                <h3 class="text-center booking-btn booking-tourPadding demo-3"> <b style="color:" title="<?php echo e($popular_holiday->tour_name); ?>"><?php echo e($popular_holiday->tour_name); ?></b>
-                                                                    </h3>
-
-                                                                    <div class="">
-                                                                 <h4 class="text-center"> <b style="color:#e45000;"><marquee scrollamount="2"><?php echo e($popular_holiday->type); ?></marquee></b>
-                                                                        </h4>
-                                                                </div>
-                                                        <div class="blog-text">
-                                                        <div class="row">
-
-                                                                         <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11) ">
-                                                                                         <strong><b class="text-white"><?php echo e($popular_holiday->days); ?> Days, <?php echo e($popular_holiday->days -1); ?> Nights</b></strong>
-                                                                                 </div>
-
-                                                                                <div class="col-md-6 col-sm-6 col-xs-6 booking-btn">
-                                                                                <span class="text-white"><strong>From $<?php echo e(number_format($popular_holiday->price),2); ?></b>  </strong>
-                                                                                     </span>
-
-                                                                                 </div>
-                                                                        </div>
-
-                                                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-
-                                                                            <div class="row">
-                                                                                     <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                         Tour Duration:
-                                                                                        </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_holiday->days); ?> Days, <?php echo e($popular_holiday->days -1); ?> Nights</strong>
-                                                                                                </div>
-                                                                                         </div>
-
-                                                                                             <div class="row">
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Physical Rating: </span>
-                                                                                         </div>
-
-
-                                                                                             <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_holiday->physical_rating); ?></strong>
-                                                                                                </div>
-                                                                                             </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Category: </span>
-                                                                                     </div>
-
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_holiday->category); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                                    <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Code: </span>
-                                                                                     </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($popular_holiday->tour_code); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                         </div>
-
-
-                                                                 <div class="row">
-                                                                            </div>
-                                                        <!--<hr>-->
-                                                        <div class="listing-shot-info rating">
-                                                                <div class="booking-tourPadding">
-
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-                                                                             <a href="/safaris/<?php echo e($popular_holiday->id); ?>" class="booking-btn text-center"><b>View More</b></a>
-                                                                </div>
-
-                                                                </div>
-                                                        </div>
-                                                                </div>
-
-                                                </div>
-                                        </div>
-                                        <?php endif; ?>
-
-
-                                      </div>
-
-
-
-
-                         <div class="row">
-                         <div class="col-md-12 col-sm-12 col-xs-12 text-right">
-                        <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
-                        </a>
-                    </div>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Advance Search Area End ##### -->
-</div>
-</section>
-
-
-
- <section class="featured-properties-area section-padding-100-50 top"> 
-
-    <div class="container" style=" padding-bottom:0px;">
-   <div class="south-search-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="advanced-search-form">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>POPULAR DESTINATIONS2</p>
-                        </div>
-                     
-                          <div class="row mb-1">
-                        <!-- Card Block -->
-                <?php if($popular_safari): ?>
-                    <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two">
-<a href="/safaris">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>); height:250px;width:100%; background-size: cover;">
-                                    <lif class="one-forth text-center">
-
-                                        <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_safari->type); ?></h6>
-            </div>
-
-
-                                        </lif>
-                                </div>
-                                 </a>
-                         </div>
-                 </div>
-                     <?php endif; ?>
-                     <?php if($popular_trekking): ?>
-                        <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two booking-tourPadding">
- <a href="/trekking">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>); height:250px;width:100%; background-size: cover;">
-                                <lif class="one-forth text-center">
-
-                                        <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_trekking->type); ?></h6>
-            </div>
-
-
-
-
-                                        </lif>
-                                </div>
-</a>
-</div>
-
-                         </div>
-                     <?php endif; ?>
-
-                     <?php if($popular_holiday): ?>
-                    <div class="col-md-4 mb-4 mb-md-4">
-                        <div class="search_area search_area_two booking-tourPadding">
-                         <a href="/holiday">
-                        <div id="fh5co-destination-list" class="animate-box min-height-350 bg-img-hero rounded-border p-5 gradient-overlay-half-bg-gradient transition-3d-hover shadow-hover-2 border-0 dropdown" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>); height:250px;width:100%; background-size: cover;">
-                                <lif class="one-forth text-center">
-
-                            <div class="text-center">
-                                    <h6 data-text= "" style="font-size: 25px;color: white; font-weight: 700; text-transform:lowercase"><?php echo e($popular_holiday->type); ?></h6>
-            </div>
-
-
-                                        </lif>
-                                </div>
-                                </a>
-                         </div>
-                 </div>
-             <?php endif; ?>
-        
-         </div>
- 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-    <hr class="">
-
-
-    <!-- Categories Start -->
-    <div class="container-fluid pt-5">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Quick Link</span></h2>
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+
+    <div class="container" style="padding-bottom:0px;">  
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Partnering</span></h2>
 
       
-      <div class="row px-xl-5 pb-3">     
-<div class="col-md-8 col-sm-12 pb-1">
+      <div class="px-xl-5 pb-3">     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+  
+    <div class="heading-section heading-section-white">
+                        <h3 class="subheading" style="color:">Partnering with SafariBookings.com</h3>
+                <h2 class="mb-3"><a href="https://www.safaribookings.com/" target="_blank"><b>https://www.safaribookings.com</b></a></h2>
+              </div>
+         
+
+        </div>         
+
+
+    </div>
+</div>
+</section>
+
+
+
+
+    <!-- Products Start -->
+    <div class="container-fluid pt-5 pb-3 top">
+          <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Popular Destinations</span></h2>
+
+        <div class="row px-xl-5">
+             <?php if($popular_safari): ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($popular_safari->type); ?></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
+                    </div>
+                </div>
+            </div>
+<?php endif; ?>
+
+             <?php if($popular_trekking): ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/trekking"><i class="fa fa-search">  <?php echo e($popular_trekking->type); ?></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>                      
+                    </div>
+                </div>
+            </div>
+<?php endif; ?>
+            
+           <?php if($popular_holiday): ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/holiday"><i class="fa fa-search">  <?php echo e($popular_holiday->type); ?></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>                      
+                    </div>
+                </div>
+            </div>
+<?php endif; ?>
+           <?php if($popular_historical): ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/historical-sites"><i class="fa fa-search">  <?php echo e($popular_historical->type); ?></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>                      
+                    </div>
+                </div>
+            </div>
+<?php endif; ?>
+
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+   <div class="container-fluid pt-5 pb-3">
+          <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Quick Link</span></h2>
+
+            <div class="px-xl-5 pb-3">     
+<div class="col-md-8 col-sm-12 pb-1" style="background-color:#4c7149">
 <div class="row">    
 
       <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -1050,7 +735,7 @@
         </div>
 
             <div class="col-md-4 col-sm-12 pb-1">
-     <div class="row"> 
+     <div class="row" style="background-color:#4c7149"> 
 
 <div class="testimonials-v1">
       <div class="service-box-heading bg-color">
@@ -1126,336 +811,6 @@
 
     </div>
     </div>
-    <!-- Categories End -->
-
-
-
-
-
-
-    <!-- Products Start -->
-    <div class="container-fluid pt-5 pb-3">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Featured Products</span></h2>
-        <div class="row px-xl-5">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Products End -->
-
-
-    <!-- Offer Start -->
-    <div class="container-fluid pt-5 pb-3">
-        <div class="row px-xl-5">
-            <div class="col-md-6">
-                <div class="product-offer mb-30" style="height: 300px;">
-                    <img class="img-fluid" src="img/offer-1.jpg" alt="">
-                    <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn btn-primary">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="product-offer mb-30" style="height: 300px;">
-                    <img class="img-fluid" src="img/offer-2.jpg" alt="">
-                    <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn btn-primary">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Offer End -->
-
-
-    <!-- Products Start -->
-    <div class="container-fluid pt-5 pb-3">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">POPULAR DESTINATIONS</span></h2>
-        <div class="row px-xl-5">
-             <?php if($popular_safari): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
-                    </div>
-                </div>
-            </div>
-<?php endif; ?>
-
-             <?php if($popular_trekking): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="" style="height:250px;">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_trekking->type); ?></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_trekking->type); ?></a>                      
-                    </div>
-                </div>
-            </div>
-<?php endif; ?>
-            
-           <?php if($popular_holiday): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" alt="" style="height:250px;">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_holiday->type); ?></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_holiday->type); ?></a>                      
-                    </div>
-                </div>
-            </div>
-<?php endif; ?>
-           <?php if($popular_safari): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="" style="height:250px;">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"><?php echo e($popular_safari->type); ?></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
-                    </div>
-                </div>
-            </div>
-<?php endif; ?>
-
-        </div>
-    </div>
-    <!-- Products End -->
 
 
     <!-- Vendor Start -->
