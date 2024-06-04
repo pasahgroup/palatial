@@ -82,9 +82,9 @@
     <link href="../../css/sidemenu.css" rel="stylesheet">
 
 
-<!-- <link href="../../assets/corporate/css/styleCustom.css" rel="stylesheet"> -->
+<link href="../../assets/corporate/css/styleCustom.css" rel="stylesheet">
 
-      <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
+      <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all">
 
  <!--  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
   <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all">
@@ -156,7 +156,8 @@
             </div>
 
             <div class="col-lg-3 col-6 text-left">
-                <form action="">
+                      <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
+                                  @csrf
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="search any keyword" required="">
                         <div class="input-group-append">

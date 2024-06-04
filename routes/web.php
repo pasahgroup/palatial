@@ -216,6 +216,8 @@ Route::get('/offers', [saleController::class, 'offers'])->name('offers');
 
 Route::get('popularExperienceClient',[websiteController::class,'popularExperienceClient'])->name('popularExperienceClient');
 Route::get('/circuitTour/{x}', [websiteController::class, 'circuitTour'])->name('circuitTour');
+Route::post('search-tour', [websiteController::class, 'searchTour'])->name('search-tour');
+
 
 Route::get('/attachmentTailorMade/{x}', [TailorMadeController::class, 'attachmentTailorMade'])->name('attachmentTailorMade');
 

@@ -185,7 +185,7 @@ class websiteController extends Controller
         // $slidersCount=slider::where('status','1')
         // ->count();
 
-        //  dd($sliders);
+          //dd($sliders);
         
            $slidersCount = slider::join('programs','programs.id','sliders.tour_id')
            ->where('sliders.status','1')
@@ -269,7 +269,7 @@ class websiteController extends Controller
           ->limit(1)->first();
 
 
-//dd($slidersCount);
+//dd($slider_first);
 
          return view('website.home.index',compact('offers_private','sliderCount','slider_first','offers_group','popular_safarif','popular_trekking','popular_trekkingf','popular_safari','popular_holiday','popular_holidayf','popular_historicalf','popular_historical','place_to_visit','sliders','slidersf','slidersCount','testimonies','offers','welcome_message','scheduledGroupTours','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife'));
     }
@@ -280,6 +280,46 @@ class websiteController extends Controller
      * @return \Illuminate\Http\Response
      */
     //Fction to read the tours according the circuit zone
+
+
+
+  public function searchTour(Request $request)    {
+//dd('print');
+
+// dd(request('tours'));
+
+         $title=request('tours');
+          $price=request('price');
+         // dd($price);
+
+         $safaris = program::join('attachments','programs.id','attachments.destination_id')
+         ->join('itineraries','programs.id','itineraries.program_id')
+         ->select('programs.*','attachments.attachment')
+          ->where('attachments.type','Programs')
+          ->where('programs.main','Program')
+           ->where('programs.type',request('tours'))
+            // ->where('programs.price','=<',$price)
+          ->where('itineraries.tour_addon','Programs')
+         ->get();
+       
+//dd($price);
+
+
+  $PostcategoryImage = title::where('title', $title)
+          ->first();
+         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
+    }
+
+
+
+
+
+
+
+
+
+
+    
     public function circuitTour($circuit_name)
     {
  $circuitTour = program::

@@ -26,6 +26,25 @@
   -o-border-radius: 30px;
 }
 
+ .header-btn {
+  border: 0px solid #647545;
+  padding: 1px 2px;
+  color:#fff;
+  display: block;  
+  /*background-color: #3f403d;*/
+  /*background-color: #2e4432;*/
+  background-color: #2e4432;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 30px;
+}
 </style>
     <!-- Carousel Start -->
     <div class="container-fluid mb-3">
@@ -40,22 +59,26 @@
                         <li data-target="#header-carousel" data-slide-to="$x"></li>
                           <?php endfor; ?> 
                     </ol>
+
                     <div class="carousel-inner">
 
-                        <div class="carousel-item position-relative active" style="height: 82vh;">                           
+                            <div class="carousel-item position-relative active" style="height: 82vh;">
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slider_first->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
-                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-                               
+     
+ <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($slider_first->title); ?></h5>
+                                    <div class="wrapper">
+                                                                     <p class="demo-1" style="color:white"><?php echo e($slider_first->description); ?></p>
 
 
-
+                                                                  <p><a href="/QuickLink/<?php echo e($slider_first->id); ?>" data-animation="animated fadeInUp">
+                                                                        <b style="color:yellow">Read More <i class="fa fa-angle-double-right"></i></b></a></p>
+                                                                    </div>
                                 </div>
                             </div>
                         </div>
+
   <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="carousel-item position-relative" style="height: 82vh;">
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" style="object-fit: cover;">
@@ -65,6 +88,7 @@
                                     <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
                                    <!--  <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>">Read more</a>
  -->
+                                 <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($slides->tour_name); ?></h5>
                                     <div class="wrapper">
                                                                      <p class="demo-1" style="color:white"><?php echo e($slides->description); ?></p>
 
@@ -83,9 +107,11 @@
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                                              
+                                             
+                                              <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($quickSliderf->title); ?></h5>
+
                                   <div class="wrapper">
-                                                                     <p class="demo-1" style="color:white"><?php echo e($slides->description); ?></p>
+                                                                     <p class="demo-1" style="color:white"><?php echo e($quickSliderf->description); ?></p>
 
 
                                                                     <p><a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" data-animation="animated fadeInUp">
@@ -429,7 +455,7 @@
                            
     <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
- <div class="col-lg-4 col-md-12">
+ <div class="col-lg-6 col-md-12">
     
        <h5><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
@@ -454,12 +480,12 @@
                 </div>
                  </div>
 
-  <b>  <div class="col-md-5 col-sm-5 col-xs-5 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);height:40px; ">
+  <b>  <div class="col-md-5 col-sm-5 col-xs-5 header-btn" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
                                                                                          <strong>Dead Line: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
                                                                                  </div></b>
 
  <b class="float-right">  
-  <div class="booking-btn">
+  <div class="header-btn">
                                                                                 <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_private->new_price),2); ?> </strong> pp
                                                                                      </span><s style=""><sup>$ <?php echo e(number_format($special_private->price),2); ?> </sup></s><br>
                                                                                         <span style="font-size:12px;">Save $<?php echo e(number_format($special_private->save),2); ?></span>
@@ -514,11 +540,11 @@
                                                         <div class="blog-text">
                                                         <div class="row">
 
-                                                                         <div class="col-md-7 col-sm-7 col-xs-7 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);height:40px;">
+                                                                         <div class="col-md-7 col-sm-7 col-xs-7 header-btn" style="border-right:1px solid rgba(71,85,95,.11);height:0px;">
                                                                                          <strong>Dead Line: <b class="text-danger"><?php echo e($special_group->offer_deadline); ?></b></strong>
                                                                                  </div>
 
-                                                                                <div class="col-md-5 col-sm-5 col-xs-5 booking-btn">
+                                                                                <div class="col-md-5 col-sm-5 col-xs-5 header-btn">
                                                                                 <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_group->new_price),2); ?> </strong> pp
                                                                                      </span><s style=""><sup>$ <?php echo e(number_format($special_group->price),2); ?> </sup></s><br>
                                                                                         <span style="font-size:12px;">Save $<?php echo e(number_format($special_group->save),2); ?></span>
