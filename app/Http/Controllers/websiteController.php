@@ -200,6 +200,7 @@ class websiteController extends Controller
         //  $slidersCount= $slidersCount + $quickLinkSliderCount;
         //dd($quickLinkSliders);
         //End of Slider part
+
 //dd($quickLinkSliders);
           $sliderCount = slider::where('status','1')
                   ->count();

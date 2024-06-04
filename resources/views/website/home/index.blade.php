@@ -108,10 +108,10 @@
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
                                              
-                                              <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">{{ $quickSliderf->title}}</h5>
+                                              <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">{{ $quickSliderf->quick_title}}</h5>
 
                                   <div class="wrapper">
-                                                                     <p class="demo-1" style="color:white">{{ $quickSliderf->description }}</p>
+                                                                     <p class="demo-1" style="color:white">{{ $quickSliderf->quick_description }}</p>
 
 
                                                                     <p><a href="/QuickLink/{{$quickSliderf->id}}" data-animation="animated fadeInUp">

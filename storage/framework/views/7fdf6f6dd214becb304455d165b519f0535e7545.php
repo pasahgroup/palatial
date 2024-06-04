@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
    <style type="text/css">    
     .red {
     color: red;
@@ -37,9 +36,9 @@
               </div>
               <div class="container-fluid x_content">
                 <br />
-              <form  method="post" id="post_form" action="{{ route('themes.store') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                @csrf
-            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+              <form  method="post" id="post_form" action="<?php echo e(route('themes.store')); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                <?php echo csrf_field(); ?>
+            <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
                 <div class="card-body">
                   <div class="row">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -87,9 +86,9 @@
 
                               <select name="tour_id" id="" class="form-control">
                               <option value="">Select Tour name</option>
-                            @foreach ($tours as $tour)
-                                <option value="{{ $tour->id }}">{{ $tour->tour_name }}</option>
-                            @endforeach                           
+                            <?php $__currentLoopData = $tours; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tour): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($tour->id); ?>"><?php echo e($tour->tour_name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                           
                             </select>
 
                                 </div>
@@ -147,17 +146,17 @@
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($sliders as $slide)
+                    <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <tr>
-                        <td>{{$slide->id  }}</td>
-                        <td>{{$slide->title  }}</td>
-                        <td>{{$slide->description  }}</td>
-                        <td>{{$slide->tour_name  }}</td>
-                         <td><div class="logo mr-auto"><img src="{{ URL::asset('/storage/uploads/'.$slide->attachment) }}"  style="width:100px; height:90px;"></div></td>
-                        <td>{{$slide->status  }}</td>
-                        <td><a href="{{ route('themes.edit',$slide->id) }}"><i class="fa fa-edit"></i></a>  <a href="/themes-destroy/{{$slide->id}}" onclick="return confirm('Are you sure? You want to delete {{ $slide->tour_name}}','Inclusive')"><i class="fa fa-trash red"></i></a></td>
+                        <td><?php echo e($slide->id); ?></td>
+                        <td><?php echo e($slide->title); ?></td>
+                        <td><?php echo e($slide->description); ?></td>
+                        <td><?php echo e($slide->tour_name); ?></td>
+                         <td><div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/uploads/'.$slide->attachment)); ?>"  style="width:100px; height:90px;"></div></td>
+                        <td><?php echo e($slide->status); ?></td>
+                        <td><a href="<?php echo e(route('themes.edit',$slide->id)); ?>"><i class="fa fa-edit"></i></a>  <a href="/themes-destroy/<?php echo e($slide->id); ?>" onclick="return confirm('Are you sure? You want to delete <?php echo e($slide->tour_name); ?>','Inclusive')"><i class="fa fa-trash red"></i></a></td>
                   </tr>
-                  @endforeach
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   </tbody>
                 </table>
               </div>
@@ -175,4 +174,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/themes/slider.blade.php ENDPATH**/ ?>
