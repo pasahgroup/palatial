@@ -3,8 +3,10 @@
   <!-- <link rel="stylesheet" href="../../css/style.css"> -->
   <section class="bg-gray ">
         <div class="container-fluid">
-            <div class="package-list-wrapx">
+            <div class="package-list-wrap">
+              @isset($quickLinks->attachment)
                          <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%; opacity:1">
+                         @endisset
              
                 <div class="package-list-content">
                   <span>Home/Quick-Link </span>
