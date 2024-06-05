@@ -159,7 +159,7 @@
                       <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
                                   <?php echo csrf_field(); ?>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="search any keyword" required="">
+                        <input type="text" class="form-control" name="search" placeholder="search any keyword" required="">
                         <div class="input-group-append">
                             <button class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>

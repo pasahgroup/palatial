@@ -15,12 +15,14 @@ class themeController extends Controller
      */
     public function index()
     {
-        //$sliders = slider::get();
+       //$sliders = slider::get();
          $sliders = slider::join('programs','programs.id','sliders.tour_id')
           ->select('sliders.*','programs.tour_name')
           ->get();
-        $tours = program::get();
-        return view('admins.themes.slider',compact('sliders','tours'));
+
+          //dd($sliders);
+        //$tours = program::get();
+        return view('admins.themes.slider',compact('sliders'));
     }
 
     /**
@@ -28,10 +30,15 @@ class themeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+      public function create()
     {
-        //
+         $sliders = slider::where('status',1)
+          ->get();
+          $tours = program::get();
+        //dd($designations);
+          return view('admins.themes.add-slider',compact('sliders','tours'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -41,21 +48,23 @@ class themeController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        if(request('attachment')){
-            //dd('d1');
-            // Get filename with extension
-            $fileNameWithExt = request('attachment')->getClientOriginalName();
-            // Just Filename
-            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-              //$filename = strtok($filename, " ");
-            // Get just Extension
-            $extension = request('attachment')->getClientOriginalExtension();
-            //Filename to store
-            $filename = strtok($filename, " ");
-            $imageToStore = $filename.'_'.time().'.'.$extension;
-            //upload the image
-            $path = request('attachment')->storeAs('public/uploads/', $imageToStore);
+        
+// dd('prig');
+
+   if(request('attachment')){
+                $attach = request('attachment');
+                foreach($attach as $attached){
+
+                     // Get filename with extension
+                     $fileNameWithExt = $attached->getClientOriginalName();
+                     // Just Filename
+                     $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                     // Get just Extension
+                     $extension = $attached->getClientOriginalExtension();
+                     //Filename to store
+                     $imageToStore = $filename.'_'.time().'.'.$extension;
+                     //upload the image
+                     $path = $attached->storeAs('public/uploads/', $imageToStore);
 
             $slider = slider::UpdateOrCreate(
                 [ 'tour_id'=>request('tour_id')],
@@ -66,9 +75,11 @@ class themeController extends Controller
                 ]);                
                 return redirect()->back()->with('success','Slider created succesfully');
        }
+     }
+
        else
        {
-//dd('d2');
+
              $slider = slider::UpdateOrCreate(
                 [ 'tour_id'=>request('tour_id')],
                 ['title'=>request('title'),
@@ -78,6 +89,36 @@ class themeController extends Controller
                 ]);               
                 return redirect()->route('themes.index')->with('success','Slider created succesfully');
        }
+
+
+   // if(request('attachment')){
+   //              $attach = request('attachment');
+   //              foreach($attach as $attached){
+
+   //                   // Get filename with extension
+   //                   $fileNameWithExt = $attached->getClientOriginalName();
+   //                   // Just Filename
+   //                   $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+   //                   // Get just Extension
+   //                   $extension = $attached->getClientOriginalExtension();
+   //                   //Filename to store
+   //                   $imageToStore = $filename.'_'.time().'.'.$extension;
+   //                   //upload the image
+   //                   $path = $attached->storeAs('public/uploads/', $imageToStore);
+
+       
+   //          $slider = slider::Create(
+   //              [ 'title'=>request('title'),               
+   //              'section'=>request('section'),
+   //              'status'=>request('status'),
+   //                  'description'=>request('description'),                   
+   //                  'attachment'=>$imageToStore
+   //              ]);                
+   //              return redirect()->back()->with('success','Slider created succesfully');
+     
+   //      }
+   //    }
+
 
     }
 
@@ -102,14 +143,15 @@ class themeController extends Controller
     public function edit($id)
     {
 
-       $slides=slider::where('id',$id)->get()->first();
+        $sliders = slider::where('sliders.id',$id)
+          ->first();
 
-        $tours = program::get();
-        $sliders = slider::join('programs','programs.id','sliders.tour_id')
-          ->where('sliders.tour_id',$slides->tour_id)
-          ->get()->first();
-        
-        return view('admins.themes.edit',compact('sliders','tours'));   
+    $sliderTour = program::where('id',$sliders->tour_id)->first();
+    
+ // dd($sliderTour->tour_name);
+
+     $tours = program::get();
+        return view('admins.themes.edit',compact('sliders','tours','sliderTour'));  
     }
 
     /**
@@ -121,7 +163,102 @@ class themeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+    // dd('update');
+
+//          if(request('attachment')){
+//             //dd('d1');
+//             // Get filename with extension
+//             $fileNameWithExt = request('attachment')->getClientOriginalName();
+//             // Just Filename
+//             $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+//               //$filename = strtok($filename, " ");
+//             // Get just Extension
+//             $extension = request('attachment')->getClientOriginalExtension();
+//             //Filename to store
+//             $filename = strtok($filename, " ");
+//             $imageToStore = $filename.'_'.time().'.'.$extension;
+//             //upload the image
+//             $path = request('attachment')->storeAs('public/uploads/', $imageToStore);
+
+// // dd('printed1');
+
+//             $slider = slider::UpdateOrCreate(
+//                   [ 'id'=>$id],
+               
+//                  ['section'=>request('section'),
+//                   'title'=>request('title'),
+//                 'status'=>request('status'),
+//                     'description'=>request('description'),                   
+//                     'attachment'=>$imageToStore
+//                 ]);                
+//                   return redirect()->route('themes.index')->with('success','Slider created succesfully');
+//        }
+//        else{
+
+// // dd('printed2');
+
+//   $slider = slider::UpdateOrCreate(
+//                 [ 'id'=>$id],              
+
+//                 ['section'=>request('section'),
+//                  'title'=>request('title'),
+//                 'status'=>request('status'),
+//                     'description'=>request('description')
+//                 ]);                
+//                 return redirect()->route('themes.index')->with('success','Slider created succesfully');
+
+//        }
+
+
+
+
+
+  if(request('attachment')){
+
+                $attach = request('attachment');
+                foreach($attach as $attached){
+
+                     // Get filename with extension
+                     $fileNameWithExt = $attached->getClientOriginalName();
+                     // Just Filename
+                     $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                     // Get just Extension
+                     $extension = $attached->getClientOriginalExtension();
+                     //Filename to store
+                     $imageToStore = $filename.'_'.time().'.'.$extension;
+                     //upload the image
+                     $path = $attached->storeAs('public/uploads/', $imageToStore);
+
+       
+//dd($id);
+
+             $slider = slider::UpdateOrCreate(
+                [ 'id'=>$id],              
+
+                ['section'=>request('section'),
+                 'title'=>request('title'),
+                'status'=>request('status'),
+                    'description'=>request('description'),
+                       'attachment'=>$imageToStore
+                ]);                
+                return redirect()->route('themes.index')->with('success','Slider created succesfully');
+     
+        }
+      }
+      else{
+       
+  $slider = slider::UpdateOrCreate(
+                [ 'id'=>$id],              
+
+                ['section'=>request('section'),
+                 'title'=>request('title'),
+                'status'=>request('status'),
+                    'description'=>request('description')
+                ]);                
+                return redirect()->route('themes.index')->with('success','Slider created succesfully');
+
+       }   
     }
 
     /**

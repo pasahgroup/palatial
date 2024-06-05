@@ -32,8 +32,12 @@
               </div>
               <div class="container-fluid x_content">
                 <br />
-              <form  method="post" id="post_form" action="{{ route('themes.store') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+            
+
+                  <form method="post" id="post_form" role="form" class="registration-form" action="{{ route('themes.update',$sliders->id) }}" enctype="multipart/form-data">
+
                @csrf
+                <input type="hidden" name="_method" value="PUT">   
             <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <div class="card-body">
                     <div class="row">
@@ -58,12 +62,12 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 
-                            <label for="inputEmail3">Tour Name</label>
+                            <label for="inputEmail3">Tour name</label>
                             <div class="form-group row">
                                 <div class="col-sm-12 col-md-12">
 
-                              <select name="tour_id" id="" class="form-control">
-                              <option value="{{$sliders->tour_id}}">{{$sliders->tour_name}}</option>
+                              <select name="tour_id" id="" class="form-control" required="">
+                              <option value="{{$sliderTour->id}}">{{$sliderTour->tour_name}}</option>
                             @foreach ($tours as $tour)
                                 <option value="{{ $tour->id }}">{{ $tour->tour_name }}</option>
                             @endforeach                           
@@ -90,17 +94,29 @@
                               </div>
                         </div>
                      
+                        
                         <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                           <div class="row">
+ <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                        <x-label for="password_confirmation" :value="__('Photo')" />
+                                    <div class="form-group">
+                                    <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;">
+                                   
+                                </div>
+                              </div>
+          
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <span class="img-div float-right">
+              <div class="text-center img-placeholder"  onClick="triggerClick()">               
+              </div>
+              <img src="{{ URL::asset('/storage/uploads/'.$sliders->attachment) }}" onClick="triggerClick()" id="profileDisplay">
+            </span>
+</div>
 
-                            <label for="inputEmail3">Image</label>
-                            <div class="form-group row">
-                                <div class="col-sm-12 col-md-12">
-                                  <div class="form-group row">
-                                   <input type="file" name="attachment">
-                                  </div>
-                                </div>
-                                </div>
-                           </div>
+
+
+</div>
+  </div>
 
 
                   <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12 col-md-offset-3">

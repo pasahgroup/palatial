@@ -251,7 +251,7 @@ Route::get('/cultural', [TourController::class,'culturalTours']);
 Route::resource('/grouptour', GrouptourController::class);
 
 // Route::get('/search-tour', [TourController::class,'searchTour']);
-Route::post('search-tour', [TourController::class, 'searchTour'])->name('search-tour');
+// Route::post('search-tour', [TourController::class, 'searchTour'])->name('search-tour');
 //Galleries
 Route::get('/safaris-gallery', [galleryController::class, 'safarisGallery'])->name('safaris-gallery');
  Route::get('/hiking-gallery', [galleryController::class, 'hikingGallery'])->name('hiking-gallery');

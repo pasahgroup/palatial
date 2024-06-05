@@ -285,9 +285,21 @@ class websiteController extends Controller
 
 
   public function searchTour(Request $request)    {
-//dd('print');
+//dd('print vbnm');
 
-// dd(request('tours'));
+ // dd(request('search'));
+$search=request('search');
+//s dd($search);
+
+ // $searchResult=DB::select('select (title) title from sliders');
+ //        $slidersCount=slider::where('status','1')
+ //        ->count();
+
+ $searchResult=DB::select('select * from programs where tour_name like "%'.$search.'%"');
+dd($searchResult);
+
+
+
 
          $title=request('tours');
           $price=request('price');
