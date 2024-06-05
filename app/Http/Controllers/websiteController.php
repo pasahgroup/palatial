@@ -295,9 +295,8 @@ $search=request('search');
  //        $slidersCount=slider::where('status','1')
  //        ->count();
 
- $searchResult=DB::select('select * from programs where tour_name like "%'.$search.'%"');
-dd($searchResult);
-
+ $safarisx=DB::select('select * from programs p,attachments a where p.id=a.destination_id and tour_name like "%'.$search.'%"');
+//dd($safaris);
 
 
 
@@ -305,22 +304,76 @@ dd($searchResult);
           $price=request('price');
          // dd($price);
 
-         $safaris = program::join('attachments','programs.id','attachments.destination_id')
-         ->join('itineraries','programs.id','itineraries.program_id')
-         ->select('programs.*','attachments.attachment')
-          ->where('attachments.type','Programs')
-          ->where('programs.main','Program')
-           ->where('programs.type',request('tours'))
-            // ->where('programs.price','=<',$price)
-          ->where('itineraries.tour_addon','Programs')
-         ->get();
+         // $safarisx = program::join('attachments','programs.id','attachments.destination_id')
+         // ->join('itineraries','programs.id','itineraries.program_id')
+         // ->select('programs.*','attachments.attachment')
+         //  ->where('attachments.type','Programs')
+         //  ->where('programs.main','Program')
+         //   ->where('programs.type',request('tours'))
+         //    // ->where('programs.price','=<',$price)
+         //  ->where('itineraries.tour_addon','Programs')
+         // ->get();
        
-//dd($price);
 
+
+       // $safaris = DB::Table('programs')
+       //    ->select('*')
+            $safaris = program::join('attachments','programs.id','attachments.destination_id')
+             ->select('programs.*','attachments.attachment')
+              ->where('attachments.type','Programs')
+           ->where('programs.main','Program')
+          ->where('tour_name','LIKE','%'.$search.'%')
+          ->orWhere('days','LIKE','%'.$search.'%')
+          ->orWhere('cost','LIKE','%'.$search.'%')
+          ->orWhere('price','LIKE','%'.$search.'%')
+          ->orWhere('category','LIKE','%'.$search.'%')
+          ->orWhere('programs.type','LIKE','%'.$search.'%')
+
+              ->orWhere('style','LIKE','%'.$search.'%')
+                  ->orWhere('tour_code','LIKE','%'.$search.'%')
+                      ->orWhere('main','LIKE','%'.$search.'%')
+                          ->orWhere('tour_circuit','LIKE','%'.$search.'%')
+                              ->orWhere('tour_highlight','LIKE','%'.$search.'%')
+
+->orWhere('physical_rating','LIKE','%'.$search.'%')
+->orWhere('popular_experience','LIKE','%'.$search.'%')
+->orWhere('seo','LIKE','%'.$search.'%')
+->orWhere('overview','LIKE','%'.$search.'%')
+
+          ->groupby('programs.id')
+          ->get();
+
+   $safarisCount = program::join('attachments','programs.id','attachments.destination_id')
+             ->select('programs.*','attachments.attachment')
+              ->where('attachments.type','Programs')
+           ->where('programs.main','Program')
+          ->where('tour_name','LIKE','%'.$search.'%')
+          ->orWhere('days','LIKE','%'.$search.'%')
+          ->orWhere('cost','LIKE','%'.$search.'%')
+          ->orWhere('price','LIKE','%'.$search.'%')
+          ->orWhere('category','LIKE','%'.$search.'%')
+          ->orWhere('programs.type','LIKE','%'.$search.'%')
+
+              ->orWhere('style','LIKE','%'.$search.'%')
+                  ->orWhere('tour_code','LIKE','%'.$search.'%')
+                      ->orWhere('main','LIKE','%'.$search.'%')
+                          ->orWhere('tour_circuit','LIKE','%'.$search.'%')
+                              ->orWhere('tour_highlight','LIKE','%'.$search.'%')
+
+->orWhere('physical_rating','LIKE','%'.$search.'%')
+->orWhere('popular_experience','LIKE','%'.$search.'%')
+->orWhere('seo','LIKE','%'.$search.'%')
+->orWhere('overview','LIKE','%'.$search.'%')
+
+          ->groupby('programs.id')
+          ->count();
+//dd($safaris);
+$title=$safarisCount." Result from search";
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
-         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
+
+         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage','safarisCount'));
     }
 
 

@@ -479,9 +479,6 @@
   </footer>
 
 
-<!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
- -->
 
        <!-- <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script> -->
 
