@@ -31,17 +31,18 @@ class GrouptourController extends Controller
      */
     public function index()
     {
-         $programs = departures::join('programs','programs.id','departures.tour_id')
+         $safaris = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
         ->where('attachments.type','Programs')
         ->get();
 
+//dd($safaris);
 
    $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
-        return view('website.grouptour.grouptour',compact('programs','PostcategoryImage'));
+        return view('website.grouptour.grouptour',compact('safaris','PostcategoryImage'));
     }
 
  public function group()

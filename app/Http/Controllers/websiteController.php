@@ -289,31 +289,9 @@ class websiteController extends Controller
 
  // dd(request('search'));
 $search=request('search');
-//s dd($search);
+$searchPrice=request('price');
+ //dd($searchPrice);
 
- // $searchResult=DB::select('select (title) title from sliders');
- //        $slidersCount=slider::where('status','1')
- //        ->count();
-
- $safarisx=DB::select('select * from programs p,attachments a where p.id=a.destination_id and tour_name like "%'.$search.'%"');
-//dd($safaris);
-
-
-
-         $title=request('tours');
-          $price=request('price');
-         // dd($price);
-
-         // $safarisx = program::join('attachments','programs.id','attachments.destination_id')
-         // ->join('itineraries','programs.id','itineraries.program_id')
-         // ->select('programs.*','attachments.attachment')
-         //  ->where('attachments.type','Programs')
-         //  ->where('programs.main','Program')
-         //   ->where('programs.type',request('tours'))
-         //    // ->where('programs.price','=<',$price)
-         //  ->where('itineraries.tour_addon','Programs')
-         // ->get();
-       
 
 
        // $safaris = DB::Table('programs')
@@ -326,6 +304,7 @@ $search=request('search');
           ->orWhere('days','LIKE','%'.$search.'%')
           ->orWhere('cost','LIKE','%'.$search.'%')
           ->orWhere('price','LIKE','%'.$search.'%')
+          ->orWhere('price','LIKE','%'.$searchPrice.'%')
           ->orWhere('category','LIKE','%'.$search.'%')
           ->orWhere('programs.type','LIKE','%'.$search.'%')
 
@@ -366,22 +345,17 @@ $search=request('search');
 ->orWhere('overview','LIKE','%'.$search.'%')
 
           ->groupby('programs.id')
-          ->count();
-//dd($safaris);
-$title=$safarisCount." Result from search";
+          ->get()->count();
+//dd($safarisCount);
+
+$title=$safarisCount." Result(s) from search";
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
 
-         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage','safarisCount'));
+  
+   return view('website.programs.safaris',compact('safaris','title','PostcategoryImage','safarisCount')); 
     }
-
-
-
-
-
-
-
 
 
 

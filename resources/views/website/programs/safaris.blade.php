@@ -158,11 +158,17 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                       </div> 
                                    </div>   
-                                        
+                                      
                                          <ul class="booking-btn booking-tourPadding">
+                                           @if($safari->category=="Private") 
                             <a href="{{ route('safaris.show',$safari->id) }}" class="booking-btn text-center"><b>View More</b></a>
-                                                       
+                               @endif 
+
+                                           @if($safari->category=="Group") 
+                            <a href="{{ route('grouptour.show',$safari->id) }}" class="booking-btn text-center"><b>View More</b></a>
+                               @endif                       
                         </ul>                            
+
                                 </div>
                           
                         </div>

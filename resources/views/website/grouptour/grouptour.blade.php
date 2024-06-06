@@ -31,7 +31,9 @@
                
 <div class="row" data-aos="fade-up">  
  
-  @foreach ($programs as $program)
+
+ 
+  @foreach ($safaris as $program)
             <div class="col-lg-4 col-md-4">
                 @if($program->group_tour_category=="GS")
 <span>Scheduled Group Tour</span>

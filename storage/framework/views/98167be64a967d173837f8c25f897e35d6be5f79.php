@@ -157,11 +157,17 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                       </div> 
                                    </div>   
-                                        
+                                      
                                          <ul class="booking-btn booking-tourPadding">
+                                           <?php if($safari->category=="Private"): ?> 
                             <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
-                                                       
+                               <?php endif; ?> 
+
+                                           <?php if($safari->category=="Group"): ?> 
+                            <a href="<?php echo e(route('grouptour.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
+                               <?php endif; ?>                       
                         </ul>                            
+
                                 </div>
                           
                         </div>

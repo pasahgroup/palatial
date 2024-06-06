@@ -880,7 +880,7 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
    
      <script src="../assetff/js/category.js"></script>
@@ -903,5 +903,5 @@
     <script src="../assetff/j../assetff/s/classy-nav.min.js"></script>
     <script src="../assetff/js/jquery-ui.min.js"></script>
     <!-- Active js -->
-    <script src="../assetff/js/active.js"></script>
+    <!-- <script src="../assetff/js/active.js"></script> -->
 @endsection

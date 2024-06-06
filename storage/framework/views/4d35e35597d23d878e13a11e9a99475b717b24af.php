@@ -306,14 +306,14 @@
                         </div> -->
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
-                            <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
+                             <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
                                   <?php echo csrf_field(); ?>
                             <div class="row">
                                 <input type="hidden" name="_method" value="POST">
 
                                  <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="input" placeholder="any keyword">
+                                        <input type="text" class="form-control" name="search" placeholder="any keyword">
                                     </div>
                                 </div>
                               
@@ -338,7 +338,7 @@
                                     </div>
                                     <!-- Submit -->
                                     <div class="form-group mb-0" target="_blank">
-                                        <button type="submit" class="btn south-btn" target="_blank">Search</button>
+                                        <button type="submit" class="btn btn-success" target="_blank">Search</button>
                                     </div>
                                 </div>
                             </div>
