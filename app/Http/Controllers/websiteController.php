@@ -291,7 +291,7 @@ class websiteController extends Controller
 $search=request('search');
 $searchPrice=request('price');
  
- dd(request('search2'));
+ // dd(request('search2'));
 
 
 
