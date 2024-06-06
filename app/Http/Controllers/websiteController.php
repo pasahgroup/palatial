@@ -290,7 +290,8 @@ class websiteController extends Controller
  // dd(request('search'));
 $search=request('search');
 $searchPrice=request('price');
- //dd($searchPrice);
+ 
+ dd(request('search2'));
 
 
 
@@ -304,7 +305,9 @@ $searchPrice=request('price');
           ->orWhere('days','LIKE','%'.$search.'%')
           ->orWhere('cost','LIKE','%'.$search.'%')
           ->orWhere('price','LIKE','%'.$search.'%')
-          ->orWhere('price','LIKE','%'.$searchPrice.'%')
+
+          // ->orWhere('price','LIKE','%'.$searchPrice.'%')
+
           ->orWhere('category','LIKE','%'.$search.'%')
           ->orWhere('programs.type','LIKE','%'.$search.'%')
 

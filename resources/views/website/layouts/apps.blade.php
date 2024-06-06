@@ -338,7 +338,7 @@
                                     </div>
                                     <!-- Submit -->
                                     <div class="form-group mb-0" target="_blank">
-                                        <button type="submit" class="btn btn-success" target="_blank">Search</button>
+                                        <button type="submit" class="btn btn-success" target="_blank" name="search2" value="search2">Search</button>
                                     </div>
                                 </div>
                             </div>
