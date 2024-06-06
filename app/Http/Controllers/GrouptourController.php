@@ -50,7 +50,7 @@ class GrouptourController extends Controller
       
             $tour_category='Scheduled Group,Special Ocassions & Utalii Nyumbani Tours';
 
-         $programs = departures::join('programs','departures.tour_id','programs.id')
+         $safaris = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
@@ -66,7 +66,7 @@ class GrouptourController extends Controller
     $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
          // dd($PostcategoryImage);
-           return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));
+           return view('website.grouptour.grouptour',compact('safaris','tour_category','PostcategoryImage'));
     }
 
 
@@ -74,7 +74,7 @@ class GrouptourController extends Controller
     {
            $tour_category='Scheduled Group, Tours';
 
-         $programs = departures::join('programs','departures.tour_id','programs.id')
+         $safaris = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
@@ -87,7 +87,7 @@ class GrouptourController extends Controller
     $PostcategoryImage = title::where('title',' Scheduled Group Tours')
           ->first();
          // dd($PostcategoryImage);
-           return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));
+           return view('website.grouptour.grouptour',compact('safaris','tour_category','PostcategoryImage'));
     }
 
      public function SO()
@@ -96,7 +96,7 @@ class GrouptourController extends Controller
         $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
 
-         $programs = departures::join('programs','programs.id','departures.tour_id')
+         $safaris = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
@@ -109,7 +109,7 @@ class GrouptourController extends Controller
       $PostcategoryImage = title::where('title','Special Occasions')
           ->first();
 
-           return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));
+           return view('website.grouptour.grouptour',compact('safaris','tour_category','PostcategoryImage'));
     }
      public function UN()
     {
@@ -117,7 +117,7 @@ class GrouptourController extends Controller
         $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
 
-         $programs = departures::join('programs','programs.id','departures.tour_id')
+         $safaris = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
@@ -129,7 +129,7 @@ class GrouptourController extends Controller
 
           $PostcategoryImage = title::where('title','Utalii Nyumbani')
           ->first();
-           return view('website.grouptour.grouptour',compact('programs','tour_category','PostcategoryImage'));
+           return view('website.grouptour.grouptour',compact('safaris','tour_category','PostcategoryImage'));
     }
     /**
      * Show the form for creating a new resource.
