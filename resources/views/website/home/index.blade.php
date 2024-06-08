@@ -481,7 +481,7 @@
                  </div>
 
   <b>  <div class="col-md-5 col-sm-5 col-xs-5 header-btn" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong>Dead Line: <b class="text-danger">{{ $special_private->offer_deadline }}</b></strong>
+                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger">{{ $special_private->offer_deadline }}</b></strong>
                                                                                  </div></b>
 
  <b class="float-right">  
@@ -541,7 +541,7 @@
                                                         <div class="row">
 
                                                                          <div class="col-md-7 col-sm-7 col-xs-7 header-btn" style="border-right:1px solid rgba(71,85,95,.11);height:0px;">
-                                                                                         <strong>Dead Line: <b class="text-danger">{{ $special_group->offer_deadline }}</b></strong>
+                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger">{{ $special_group->offer_deadline }}</b></strong>
                                                                                  </div>
 
                                                                                 <div class="col-md-5 col-sm-5 col-xs-5 header-btn">
