@@ -20,6 +20,11 @@ class CreateBanksTable extends Migration
                $table->string('country')->nullable();
               $table->string('account_name')->nullable();
                $table->string('account_no')->nullable();
+
+  $table->string('intermediary_bank_name')->nullable();
+    $table->string('intermediary_swift_code')->nullable();
+      $table->string('intermediary_account_no')->nullable();
+
                 $table->string('status')->nullable();
               $table->integer('user_id')->unsigned();
             $table->timestamps();

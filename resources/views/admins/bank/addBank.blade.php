@@ -34,22 +34,53 @@
               <form  method="post" id="post_form" action="{{ route('bank.store') }}">
                 @csrf
 
-                <div class="card-body">                       
+                <div class="card-body"> 
+                      <div class="row"> 
+                   <div class="col-md-4">                   
                     <label>Bank Name</label>
                     <input class="form-control" type="text" name="bank_name" placeholder="bank name">
+                  </div>
+                      <div class="col-md-4"> 
                     <label>Swift Code</label>
                     <input class="form-control" type="text" name="swift_code" placeholder="swift code">  
-                   
-                    <label>Bank</label>
-                    <input class="form-control" type="text" name="country" placeholder="country"> 
-
+                   </div>
+   
+                      <div class="col-md-4">
                       <label>Account Name</label>
                     <input class="form-control" type="text" name="account_name" placeholder="account name">
+</div>
+</div>
 
+    <div class="row"> 
+
+<div class="col-md-4">
                        <label>Account Number</label>
                     <input class="form-control" type="text" name="account_no" placeholder="account number">                 
-             
-                    
+             </div>
+
+                                 <div class="col-md-4"> 
+                    <label>Country</label>
+                    <input class="form-control" type="text" name="country" placeholder="country"> 
+</div>
+           </div>
+<br>
+  <label>INTERMEDIARY BANK DETAILS</label>
+                     <div class="row"> 
+                   <div class="col-md-4">                   
+                    <label>Bank name</label>
+                    <input class="form-control" type="text" name="intermediary_bank_name" placeholder="bank name">
+                  </div>
+                      <div class="col-md-4"> 
+                    <label>Swift code</label>
+                    <input class="form-control" type="text" name="intermediary_swift_code" placeholder="swift code">  
+                   </div>
+   
+                      <div class="col-md-4">
+                      <label>Account number</label>
+                    <input class="form-control" type="text" name="intermediary_account_no" placeholder="account number">    
+</div>
+</div>
+          <br>          
                        <label>Status</label>
                      <select name="status" id="status" class="form-control">
                                   <option>Select Status</option>

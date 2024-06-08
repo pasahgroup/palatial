@@ -35,19 +35,51 @@
                 @csrf
              <input type="hidden" name="_method" value="PUT">
                 <div class="card-body">                       
+                      <div class="row"> 
+                   <div class="col-md-4">  
                   <label>Bank Name</label>
                     <input class="form-control" type="text" name="bank_name"  value="{{$bank->bank_name}}">
+                        </div>
+                      <div class="col-md-4"> 
                     <label>Swift Code</label>
                     <input class="form-control" type="text" name="swift_code"  value="{{$bank->swift_code}}">  
-                   
+                       </div>
+                      <div class="col-md-4"> 
                     <label>Bank</label>
                     <input class="form-control" type="text" name="country"  value="{{$bank->country}}"> 
+</div>
+</div>
+    <div class="row"> 
 
+<div class="col-md-4">
                       <label>Account Name</label>
                     <input class="form-control" type="text" name="account_name"  value="{{$bank->account_name}}">
-
+ </div>
+                      <div class="col-md-4"> 
                        <label>Account Number</label>
                     <input class="form-control" type="text" name="account_no"  value="{{$bank->account_no}}">  
+
+           </div>
+         </div>
+<br>
+  <label>INTERMEDIARY BANK DETAILS</label>
+                     <div class="row"> 
+                   <div class="col-md-4">                   
+                    <label>Intermediary bank name</label>
+                    <input class="form-control" type="text" name="intermediary_bank_name" value="{{$bank->intermediary_bank_name}}">
+                  </div>
+                      <div class="col-md-4"> 
+                    <label>Intermediary swift code</label>
+                    <input class="form-control" type="text" name="intermediary_swift_code"  value="{{$bank->intermediary_swift_code}}">  
+                   </div>
+   
+                      <div class="col-md-4">
+                      <label>Intermediary account number</label>
+                    <input class="form-control" type="text" name="intermediary_account_no"  value="{{$bank->intermediary_account_no}}">    
+</div>
+</div>
+          <br>
+
 
                         <label>Status</label>
                      <select name="status" id="status" class="form-control">

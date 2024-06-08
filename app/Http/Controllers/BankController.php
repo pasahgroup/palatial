@@ -71,7 +71,13 @@ class BankController extends Controller
         'swift_code'=>request('swift_code'),
         'country'=>request('country'),
         'account_no'=>request('account_no'),
+
+
     ],[
+        'intermediary_bank_name'=>request('intermediary_bank_name'),
+        'intermediary_swift_code'=>request('intermediary_swift_code'),
+        'intermediary_account_no'=>request('intermediary_account_no'),
+
            'account_name'=>request('account_name'),
             'status'=>request('status'),
                'user_id'=>auth::id()   
@@ -130,6 +136,9 @@ class BankController extends Controller
         'country'=>request('country'),
         'account_name'=>request('account_name'),
         'account_no'=>request('account_no'),
+        'intermediary_bank_name'=>request('intermediary_bank_name'),
+        'intermediary_swift_code'=>request('intermediary_swift_code'),
+        'intermediary_account_no'=>request('intermediary_account_no'),
          'status'=>request('status'),
         ]);
     return redirect()->route('bank.index')->with('success','bank updated successfully');
