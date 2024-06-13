@@ -326,7 +326,7 @@ img {
     transform: rotate(360deg); } }
 /* :: 5.0 Scroll Up Area CSS */
 #scrollUp {
- /* background-color: #2e4432;
+  background-color: #2e4432;
   border-radius: 50%;
   bottom: 40px;
   right: 40px;
@@ -338,7 +338,7 @@ img {
   width: 50px;
   line-height: 46px;
   -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;*/
+  transition-duration: 500ms;
    }
   #scrollUp:hover {
     background-color: #000000; }
