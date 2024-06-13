@@ -37,9 +37,9 @@
                 <th>Account Name</th>
                 <th>Account No</th>
 
-                    <th>Intermediary Bank Name</th>
-                       <th>Intermediary Swift Code</th>
-              <th>Intermediary Account No</th>
+                    <th>I-Bank Name</th>
+                       <th>I-Swift Code</th>
+              <th>I-Account No</th>
 
                
               </tr>
