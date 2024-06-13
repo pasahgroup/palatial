@@ -450,7 +450,7 @@
  <div class="col-lg-3 col-md-3">
     
        <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
-            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:yellow">
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#f3f4f4">
 
 <div class="single_blog listing-shot">
                 <div class="product-item bg-light mb-4">
