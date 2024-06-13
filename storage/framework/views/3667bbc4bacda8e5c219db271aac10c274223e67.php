@@ -434,10 +434,6 @@
 
 
 
-
-
-
-
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
 
     <div class="container" style="padding-bottom:0px;">  
@@ -448,300 +444,10 @@
       <div class="px-xl-5 pb-3">     
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
   
-    
+   
+                                <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-
-
-    <div class="container" style=" padding-bottom:0px;">
-
-   <div class="south-search-area">
-        <div class="containe">
-            <div class="row">
-                <div class="col-12">
-                               
-  <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Wildlife Safaris</h6>
-                            </div>
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-                                 
-
-
-
-           <div class="single-featured-properties-slide">
-
-             <div class="item active">
-         <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                         <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></span>
-        <div class="package-list-content">
-      <h3 class="package-list-title">
-      <p><?php echo e($popular_safari->tour_name); ?></p>
-                          </h3>
-   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_safari->id)); ?>">Explore More</a>
-                                          </div>
-                                        </div>
-      </div>
-                         
-
-                               </div>
-
-
-
-                                  <?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>   
-                                <!-- Single Slide -->
-                                <div class="single-featured-properties-slide">
-                                    <!-- <a href="#"><img src="../assetf/img/bg-img/fea-product.jpg" alt=""></a> -->
-                               
-
-        <div class="item">
-                          <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                            <span class="off-box" style="background-color:#2e4432"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
-        <div class="package-list-content">
-      <h3 class="package-list-title">
-      <p><?php echo e($safaris->tour_name); ?></p>
-                          </h3>
-   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$safaris->id)); ?>">Explore More</a>
-                                          </div>
-                                        </div>
-                      </div>
-
-
-                                </div>                          
-
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-   <div class="col-12 col-sm-4 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Beach Holiday</h6>
-                            </div>
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-                                <!-- Single Slide -->
-
-                                 <div class="single-featured-properties-slide">
-                                            <div class="item active">
-                 <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_holiday->days); ?> Days: $<?php echo e(number_format($popular_holiday->price),2); ?></span>
-                <div class="package-list-content">
-                        <h3 class="package-list-title">
-            <p><?php echo e($popular_holiday->tour_name); ?></p>
-                                                    </h3>
-     <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_holiday->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
-            </div>
-
-                               </div>
-
-
-
-
-                            
-                         <?php $__currentLoopData = $popular_holidayf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $holidays): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <div class="item active">
-                                                    <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box" style="background-color:#2e4432"><?php echo e($holidays->days); ?> Days: $<?php echo e(number_format($holidays->price),2); ?></span>
-                <div class="package-list-content">
-                    <h3 class="package-list-title">
-            <p><?php echo e($holidays->tour_name); ?></p>
-                                                    </h3>
-     <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$holidays->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
-                                            </div>
-                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-       <div class="col-12 col-sm-4 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Hiking and Trekking</h6>
-                            </div>
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-
-
-   <div class="single-featured-properties-slide">
-    <div class="item active">
-                 <div class="package-list-wrap ">
-
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_trekking->days); ?> Days: $<?php echo e(number_format($popular_trekking->price),2); ?></span>
-                <div class="package-list-content">
-            <h3 class="package-list-title">
-            <p><?php echo e($popular_trekking->tour_name); ?></p>
-                                                    </h3>
-     <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_trekking->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
-            </div>
-</div>
-
-
-
-
-
-                                <!-- Single Slide -->
-                                 <?php $__currentLoopData = $popular_trekkingf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $trekking): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
-                                <!-- Single Slide -->
-                                <div class="single-featured-properties-slide">
-                                        <div class="item">
-                          <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                            <span class="off-box" style="background-color:#2e4432"><?php echo e($trekking->days); ?> Days: $<?php echo e(number_format($trekking->price),2); ?></span>
-        <div class="package-list-content">
-      <h3 class="package-list-title">
-      <p><?php echo e($trekking->tour_name); ?></p>
-                          </h3>
-   <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$trekking->id)); ?>">Explore More</a>
-                                          </div>
-                                        </div>
-                      </div>
-
-
-                                </div>                          
-
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
-                        </div>
-                    </div>
-
-                           <div class="col-12 col-sm-4 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title -->
-                            <div class="widget-title">
-                                <h6>Historical Sites</h6>
-                            </div>
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-
-
-
-
- <div class="single-featured-properties-slide">
-    <div class="item active">
-                 <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
-                <div class="package-list-content">
-            <h3 class="package-list-title">
-            <p><?php echo e($popular_historical->tour_name); ?></p>
-                                                    </h3>
-     <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_historical->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
-            </div>
-</div>
-
-
-
-
-
-
-
-                                <!-- Single Slide -->
-                                         <?php $__currentLoopData = $popular_historicalf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $historicalf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                     
-                                <div class="single-featured-properties-slide">
-                              
-
-    <div class="item">
-                                                    <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                        <span class="off-box" style="background-color:#2e4432"><?php echo e($historicalf->days); ?> Days: $<?php echo e(number_format($historicalf->price),2); ?></span>
-                <div class="package-list-content">
-            <h3 class="package-list-title">
-            <p><?php echo e($historicalf->tour_name); ?></p>
-                                                    </h3>
-     <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$historicalf->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
-                                            </div>
-
-                                </div>
-                               
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Advance Search Area End ##### -->
-</div>
-
-
-       </div>     
-    </div>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- color:b76b0b -->
-
-
- <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-
-    <div class="container" style="padding-bottom:0px;"> 
-            
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Special Offers</span></h2>
-
-      
-      <div class="px-xl-5 pb-3">     
- 
- 
-  <div class="container" style=" padding-bottom:0px;">
-            <div class="row">
-                <div class="col-12x">
-                    
-                     
-                        <div class="footer-widget-area mb-100">
-           <div class="col-md-12 col-sm-12 pb-1" style="background-color:#">                
-    <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
- <div class="col-lg-6 col-md-6">
+ <div class="col-lg-3 col-md-3">
     
        <h5><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
@@ -803,13 +509,13 @@
 </div>
 
 
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-                         <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
      <div class="col-lg-4 col-md-12">
          <h4><b style="background:"><?php echo e($special_group->sales_header); ?></b></h4>
                                                 <div class="single_blog listing-shot">
@@ -890,36 +596,18 @@
                                                 </div>
                                         </div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </div>
-                      </div>
-                              
 
 
-                                <div class="col-12 d-flex justify-content-between align-items-end">
-                                    <!-- More Filter -->
-                                    <div class="more-filter">
-                                        <!-- <a href="#" id="moreFilter">+ More filters</a> -->
-                                    </div>
-                                    <!-- Submit -->
-                                    <div class="form-group mb-0" target="_blank">
-                                        <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b"><i class="fa fa-rocket margin-right-10"></i>Explore More Offers
-                        </a>
-                                    </div>
-                                </div>
-                          
-                 
-        </div>
-    </div>
-    <!-- ##### Advance Search Area End ##### -->
-</div>
-
-
-
-
+        </div>  
 
     </div>
 </div>
 </section>
+
+
+
+
+
 
 
 
