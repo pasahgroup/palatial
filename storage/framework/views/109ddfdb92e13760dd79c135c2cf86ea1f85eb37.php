@@ -1,14 +1,7 @@
 <?php $__env->startSection('content'); ?>
 
 
-
-  <!-- <link rel="stylesheet" href="../assets/css/min/bootstrap.min.css" media="all"> -->
-
-  <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
-  <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss">
+  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <body>
 
  <!--  <div class="pre-loader">
@@ -24,7 +17,7 @@
         <div class="box-title">
            <h5>Payment via Cash Transfer</h5>
         </div>
-        <p>Pay Via any Bank below</p>
+        <p>Pay Via any Bank below:-(I:Intermediary)</p>
         <div class="table-responsive-wrap">
           <table class="table table-responsive cart-checkout-table">
             <thead>
@@ -36,9 +29,9 @@
                 <th>Account Name</th>
                 <th>Account No</th>
 
-                    <th>Intermediary Bank Name</th>
-                       <th>Intermediary Swift Code</th>
-              <th>Intermediary Account No</th>
+                    <th>I-Bank Name</th>
+                       <th>I-Swift Code</th>
+              <th>I-Account No</th>
 
                
               </tr>
@@ -212,7 +205,7 @@
                   </div>
                    <div class="col-sm-1">
                    <div class="form-group">
-                <button class="btn btn-primary hvr-sweep-to-right float-right">Pay</button>
+                <button class="btn btn-primary float-right">Pay</button>
               </div>
                     </div>
                   </div>

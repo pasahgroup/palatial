@@ -2,14 +2,7 @@
 @section('content')
 
 
-
-  <!-- <link rel="stylesheet" href="../assets/css/min/bootstrap.min.css" media="all"> -->
-
-  <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
-  <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss">
+  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <body>
 
  <!--  <div class="pre-loader">
@@ -205,7 +198,7 @@
                   </div>
                    <div class="col-sm-1">
                    <div class="form-group">
-                <button class="btn btn-primary hvr-sweep-to-right float-right">Pay</button>
+                <button class="btn btn-primary float-right">Pay</button>
               </div>
                     </div>
                   </div>
