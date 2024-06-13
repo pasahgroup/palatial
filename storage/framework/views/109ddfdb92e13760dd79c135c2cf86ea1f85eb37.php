@@ -1,5 +1,4 @@
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -46,37 +45,45 @@
             </thead>
             <tbody>
 
-               @foreach ($banks as $bank)
+               <?php $__currentLoopData = $banks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $bank): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <tr>
                 <td>
-                  {{$bank->bank_name}}
+                  <?php echo e($bank->bank_name); ?>
+
                 </td>
                 <td>
-    {{$bank->swift_code}}
+    <?php echo e($bank->swift_code); ?>
+
                
                 </td>
                   <td>
-            {{$bank->country}}
+            <?php echo e($bank->country); ?>
+
                   </td>
                 <td>
-                     {{$bank->account_name}}
+                     <?php echo e($bank->account_name); ?>
+
                 </td>
                 <td>
-                  {{$bank->account_no}}
+                  <?php echo e($bank->account_no); ?>
+
                 </td>
 
                 <td>
-                  {{$bank->intermediary_bank_name}}
+                  <?php echo e($bank->intermediary_bank_name); ?>
+
                 </td>
                 <td>
-                  {{$bank->intermediary_swift_code}}
+                  <?php echo e($bank->intermediary_swift_code); ?>
+
                 </td>
 
                 <td>
-                  {{$bank->intermediary_account_no}}
+                  <?php echo e($bank->intermediary_account_no); ?>
+
                 </td>
               </tr>
- @endforeach
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
              
 
             </tbody>
@@ -223,4 +230,5 @@
 
 </body>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/payments/payInvoice.blade.php ENDPATH**/ ?>

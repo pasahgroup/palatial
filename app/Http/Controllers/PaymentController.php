@@ -117,6 +117,7 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     {      
 
       //Get customer details
+      //dd('ping');
 
         $cust=invoice::  join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
         ->where('invoices.customer_id',$cust_id)
