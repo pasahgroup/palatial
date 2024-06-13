@@ -148,7 +148,7 @@
                  <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
                       <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
-                       <a href="https://wa.link/z5mmcd" style="padding-left:30px">
+                       <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
                                (+255)753 216 263
                             </a>

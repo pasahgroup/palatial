@@ -434,7 +434,7 @@ img {
 .top-header-area {
   position: relative;
   z-index: 1;
-  height: 45px;
+  height: 50px;
   background-color: #000000; }
   @media only screen and (max-width: 767px) {
     .top-header-area {
@@ -448,7 +448,7 @@ img {
         padding: 15px 30px; } }
     .top-header-area .email-address a {
       color:##139721;
-      font-size: 12px;
+      font-size: 13px;
       position: relative;
       z-index: 1;
       top: -2px; }
@@ -755,7 +755,7 @@ img {
       /*background-color: #183519b2;*/
           background-color: #947054;
       top: -46px;
-      left: 9%;
+      left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       padding: 0 40px;

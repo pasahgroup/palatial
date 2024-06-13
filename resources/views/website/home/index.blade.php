@@ -126,7 +126,7 @@
             </div>
             <div class="col-lg-3">
 <hr>
-                <div class="product-offer mb-30" style="height: 215px;">
+                <div class="product-offer mb-30" style="height: 195px;">
                      @if ($popular_safari)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" alt="">
                     <div class="offer-text">
@@ -166,23 +166,28 @@
 
 
 
-<section class="featured-properties-area section-padding-100-50 top">  
+
+
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+
+    <div class="container" style="padding-bottom:0px;">  
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Tour Packages</span></h2>
+
+      
+      <div class="px-xl-5 pb-3">     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+  
+    
+
+
 
     <div class="container" style=" padding-bottom:0px;">
 
    <div class="south-search-area">
-        <div class="container">
+        <div class="containe">
             <div class="row">
                 <div class="col-12">
-                    <div class="advanced-search-form">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>Tour Packages</p>
-                        </div>
-                        <!-- Search Form -->
-                        <!-- <form action="#" method="post" id="advanceSearch"> -->
-                        
-                            <div class="row">
                                
   <div class="col-12 col-sm-6 col-xl-3">
                         <div class="footer-widget-area mb-100">
@@ -412,18 +417,20 @@
                     </div>
 
 
-                            </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ##### Advance Search Area End ##### -->
 </div>
+
+
+       </div>     
+    </div>
+</div>
 </section>
 
 
- <hr class="">
 
 
 
@@ -431,31 +438,310 @@
 
 
 
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+
+    <div class="container" style="padding-bottom:0px;">  
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Special Offers</span></h2>
+
+      
+      <div class="px-xl-5 pb-3">     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+  
+    
 
 
- <section class="featured-properties-area section-padding-100-50 top">  
 
     <div class="container" style=" padding-bottom:0px;">
+
    <div class="south-search-area">
-        <div class="container">
+        <div class="containe">
             <div class="row">
                 <div class="col-12">
-                    <div class="advanced-search-form">
-                        <!-- Search Title -->
-                        <div class="search-title">
-                            <p>Special Offers</p>
-                        </div>
-                        <!-- Search Form -->
-                        <!-- <form action="#" method="post" id="advanceSearch"> -->
-                        
-                            <div class="row">                             
-           
-
+                               
+  <div class="col-12 col-sm-6 col-xl-3">
                         <div class="footer-widget-area mb-100">
-                           
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>Wildlife Safaris</h6>
+                            </div>
+                            <!-- Featured Properties Slides -->
+                            <div class="featured-properties-slides owl-carousel">
+                                 
+
+
+
+           <div class="single-featured-properties-slide">
+
+             <div class="item active">
+         <div class="package-list-wrap ">
+                                        <img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                         <span class="off-box" style="background-color:#2e4432">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</span>
+        <div class="package-list-content">
+      <h3 class="package-list-title">
+      <p>{{ $popular_safari->tour_name }}</p>
+                          </h3>
+   <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_safari->id) }}">Explore More</a>
+                                          </div>
+                                        </div>
+      </div>
+                         
+
+                               </div>
+
+
+
+                                  @foreach ($popular_safarif as $safaris)   
+                                <!-- Single Slide -->
+                                <div class="single-featured-properties-slide">
+                                    <!-- <a href="#"><img src="../assetf/img/bg-img/fea-product.jpg" alt=""></a> -->
+                               
+
+        <div class="item">
+                          <div class="package-list-wrap ">
+                                        <img src="{{URL::asset('/storage/uploads/'.$safaris->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                            <span class="off-box" style="background-color:#2e4432">{{ $safaris->days  }} Days: ${{number_format($safaris->price),2 }}</span>
+        <div class="package-list-content">
+      <h3 class="package-list-title">
+      <p>{{ $safaris->tour_name }}</p>
+                          </h3>
+   <a class="package-list-button" href="{{ route('safaris-slider-packages',$safaris->id) }}">Explore More</a>
+                                          </div>
+                                        </div>
+                      </div>
+
+
+                                </div>                          
+
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+   <div class="col-12 col-sm-4 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>Beach Holiday</h6>
+                            </div>
+                            <!-- Featured Properties Slides -->
+                            <div class="featured-properties-slides owl-carousel">
+                                <!-- Single Slide -->
+
+                                 <div class="single-featured-properties-slide">
+                                            <div class="item active">
+                 <div class="package-list-wrap ">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
+                <div class="package-list-content">
+                        <h3 class="package-list-title">
+            <p>{{ $popular_holiday->tour_name }}</p>
+                                                    </h3>
+     <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_holiday->id) }}">Explore More</a>
+                                                                                    </div>
+                                                                                </div>
+            </div>
+
+                               </div>
+
+
+
+
+                            
+                         @foreach ($popular_holidayf as $holidays)
+                                                <div class="item active">
+                                                    <div class="package-list-wrap ">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$holidays->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
+                <div class="package-list-content">
+                    <h3 class="package-list-title">
+            <p>{{ $holidays->tour_name }}</p>
+                                                    </h3>
+     <a class="package-list-button" href="{{ route('safaris-slider-packages',$holidays->id) }}">Explore More</a>
+                                                                                    </div>
+                                                                                </div>
+                                            </div>
+                                             @endforeach
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+       <div class="col-12 col-sm-4 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>Hiking and Trekking</h6>
+                            </div>
+                            <!-- Featured Properties Slides -->
+                            <div class="featured-properties-slides owl-carousel">
+
+
+   <div class="single-featured-properties-slide">
+    <div class="item active">
+                 <div class="package-list-wrap ">
+
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                <span class="off-box" style="background-color:#2e4432">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
+                <div class="package-list-content">
+            <h3 class="package-list-title">
+            <p>{{ $popular_trekking->tour_name }}</p>
+                                                    </h3>
+     <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_trekking->id) }}">Explore More</a>
+                                                                                    </div>
+                                                                                </div>
+            </div>
+</div>
+
+
+
+
+
+                                <!-- Single Slide -->
+                                 @foreach ($popular_trekkingf as $trekking) 
+                                <!-- Single Slide -->
+                                <div class="single-featured-properties-slide">
+                                        <div class="item">
+                          <div class="package-list-wrap ">
+                                        <img src="{{URL::asset('/storage/uploads/'.$trekking->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                            <span class="off-box" style="background-color:#2e4432">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
+        <div class="package-list-content">
+      <h3 class="package-list-title">
+      <p>{{ $trekking->tour_name }}</p>
+                          </h3>
+   <a class="package-list-button" href="{{ route('safaris-slider-packages',$trekking->id) }}">Explore More</a>
+                                          </div>
+                                        </div>
+                      </div>
+
+
+                                </div>                          
+
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+                           <div class="col-12 col-sm-4 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>Historical Sites</h6>
+                            </div>
+                            <!-- Featured Properties Slides -->
+                            <div class="featured-properties-slides owl-carousel">
+
+
+
+
+ <div class="single-featured-properties-slide">
+    <div class="item active">
+                 <div class="package-list-wrap ">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$popular_historical->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
+                <div class="package-list-content">
+            <h3 class="package-list-title">
+            <p>{{ $popular_historical->tour_name }}</p>
+                                                    </h3>
+     <a class="package-list-button" href="{{ route('safaris-slider-packages',$popular_historical->id) }}">Explore More</a>
+                                                                                    </div>
+                                                                                </div>
+            </div>
+</div>
+
+
+
+
+
+
+
+                                <!-- Single Slide -->
+                                         @foreach ($popular_historicalf as $historicalf)
+                                     
+                                <div class="single-featured-properties-slide">
+                              
+
+    <div class="item">
+                                                    <div class="package-list-wrap ">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$historicalf->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                        <span class="off-box" style="background-color:#2e4432">{{ $historicalf->days  }} Days: ${{number_format($historicalf->price),2 }}</span>
+                <div class="package-list-content">
+            <h3 class="package-list-title">
+            <p>{{ $historicalf->tour_name }}</p>
+                                                    </h3>
+     <a class="package-list-button" href="{{ route('safaris-slider-packages',$historicalf->id) }}">Explore More</a>
+                                                                                    </div>
+                                                                                </div>
+                                            </div>
+
+                                </div>
+                               
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
+</div>
+
+
+       </div>     
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- color:b76b0b -->
+
+
+ <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+
+    <div class="container" style="padding-bottom:0px;"> 
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Special Offers</span></h2>
+
+      
+      <div class="px-xl-5 pb-3">     
+ 
+ 
+  <div class="container" style=" padding-bottom:0px;">
+            <div class="row">
+                <div class="col-12x">
+                    
+                     
+                        <div class="footer-widget-area mb-100">
+           <div class="col-md-12 col-sm-12 pb-1" style="background-color:#">                
     @foreach ($offers_private as $special_private)
 
- <div class="col-lg-6 col-md-12">
+ <div class="col-lg-6 col-md-6">
     
        <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1">
@@ -605,6 +891,7 @@
                                         </div>
                         @endforeach
                         </div>
+                      </div>
                               
 
 
@@ -619,17 +906,20 @@
                         </a>
                                     </div>
                                 </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
+                          
+                 
         </div>
     </div>
     <!-- ##### Advance Search Area End ##### -->
 </div>
+
+
+
+
+
+    </div>
+</div>
 </section>
-
-
 
 
 
