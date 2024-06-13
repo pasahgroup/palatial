@@ -300,10 +300,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="advanced-search-form">
-                        <!-- Search Title -->
-                      <!--   <div class="search-title">
-                            <p>Search Tour By</p>
-                        </div> -->
+                      
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                              <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
@@ -325,8 +322,6 @@
                                         <input type="number" class="form-control" name="price" placeholder="maximum price">
                                     </div>
                                 </div>
-
-
                                      
                                     </div>
                                 </div>
