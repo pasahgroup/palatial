@@ -25,7 +25,7 @@
         <div class="box-title">
            <h5>Payment via Cash Transfer</h5>
         </div>
-        <p>Pay Via any Bank below</p>
+        <p>Pay Via any Bank below:-(I:Intermediary)</p>
         <div class="table-responsive-wrap">
           <table class="table table-responsive cart-checkout-table">
             <thead>
