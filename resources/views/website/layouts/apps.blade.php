@@ -135,7 +135,7 @@
 
    <div class="container-fluid top-header-area">
 
-        <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex" style="background-color:#475e3b;">
+        <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="background-color:#1a644f;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
                     <span class="h1 text-uppercase text-primary bg-dark px-2">Palatial</span>
