@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 
-  <section class="bg-gray" style="margin-top: 0px;">
+  <section class="bg-gray" style="margin-top: 14px;">
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
