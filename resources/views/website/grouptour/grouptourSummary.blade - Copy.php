@@ -1,29 +1,35 @@
+
 @extends('website.layouts.apps')
 @section('content')
 
-  <section class="bg-gray ">
-        <div class="container-fluid">
+  <section class="bg-gray" style="margin-top: 0px;">
+        <div class="container">
             <div class="package-list-wrap ">
-                <img src="{{URL::asset('/storage/uploads/'.$programs->attachment) }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 80vh;background-size: cover;width: 100%;">
+                <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
                     <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}}  Night(s)<span
                             class="rate">
-               <!--             @if($discounts !=[])-->
-               <!--             ${{number_format($discounts->new_price),2 }}-->
-               <!--    @else-->
-               <!--$ {{ number_format($programs->price),2 }}-->
-              @endif</span>
+
+              <!--              @if($discounts !=[])-->
+              <!--              ${{number_format($discounts->new_price),2 }}-->
+              <!--     @else-->
+              <!-- $ {{number_format($programs->price),2 }}-->
+              <!--@endif-->
+
+                    </span>
                     </p>
-                    <h3 class="package-list-title">
+                     
+                     <h3 class="package-list-title">
                         {{ $programs->tour_name }}
                     </h3>
-                    <a href="#" role="button" class="btn btn-success float-left" data-toggle="modal" data-target="#bookNow">Book Now</a>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
 
                 </div>
-           @if($discounts !=[])
-           <span class="off-box">            
+             @if($discounts !=[])
+           <span class="off-box">
+            
                  <div class="col-md-12 col-sm-12 col-xs-12">
-                                           <span class="text-danger" style="font-size:18px"><strong>${{number_format($discounts->new_price),2 }} </strong> pp
+                                          <span class="text-danger" style="font-size:18px"><strong>${{number_format($discounts->new_price),2 }} </strong> pp
                                            </span><s style=""><sup>$ {{number_format($programs->price),2 }} </sup></s><br>
                                             <span style="font-size:12px;">Save ${{number_format($discounts->save),2 }}</span>
                 </div>
@@ -31,13 +37,9 @@
               @else
                <span class="off-box">FROM  $ {{number_format($programs->price),2 }}</span>
               @endif
-             </div>
+            </div>
 
-            <div class="row ">
-                {{-- start of tabs --}}
-            <div class="col-lg-12 col-md-12 col-sm-12 masonry ">
-                    <div class="package-detail">
-                           <!-- Tabs starts here -->
+             <!-- Tabs starts here -->
             <div class="row ">
                 {{-- start of tabs --}}
             <div class="col-lg-9 col-md-9 col-sm-12 masonry ">
@@ -51,7 +53,7 @@
               <li><a href="#tab-C" data-toggle="tab">Tour Cost</a></li>
               <li><a href="#tab-E" data-toggle="tab">Extra Information</a></li>
             </ul>
-            <div class="tab-content">
+            <div class="tab-content booking-btn">
               <div class="tab-pane row fade" id="tab-H">                
                 <div class="col-md-12 col-sm-12">
                 <p>
@@ -60,15 +62,26 @@
                                 <p>Maps Come Here</p>
                </div>
               </div>
-              <div class="tab-pane row fade  in active" id="tab-I">
-                <div class="col-md-12 col-sm-12 booking-tourPadding">
-                <p class="card-text booking-tourPadding">
+              <div class="tab-pane row active" id="tab-I">
+
+                   <form method="GET" action="{{ route('safaris.show','print') }}">
+                    @crsf
+                 <div class="col-md-10 col-sm-10">
+                                     </div>
+                                       <div class="col-md-2 col-sm-2">
+                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
+                                     </div>
+
+                                 </form>
+
+                <div class="col-md-12 col-sm-12">
+                <p class="card-text">
                                             {{ $programs->itinerary_summury }}
                                             </p>
                                             @foreach ($datas as $data)
                                             <div class="card card-primary booking-tourPadding">
-                                                <div class="card-header  booking-tourPadding" style="background-color:Gray;">
-                                                <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
+                                                <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
+                                                <span><b> Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
 
                                                 </div>
                                                 <div class="card-body">
@@ -78,10 +91,10 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
                                        <div class="">
 
-                                <div class="row ">
+                                <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
-                               <p>{{ $data->itinerary_description }}</p>   
+                               <p class="booking-btn-gray">{{ $data->itinerary_description }}</p>   
                                                
                                                      
                                <div class="row"> 
@@ -95,7 +108,7 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                           
-                                            <div class="hotel-pics-one">                                               <img src="{{URL::asset('/storage/destination/'.$data->photo) }}" alt="" style="min-height: 20vh !important;max-height: 80vh;width: 100% !important">                                                                              </div> 
+                                            <div class="hotel-pics-one">                                               <img src="{{URL::asset('/storage/destination/'.$data->photo) }}" alt="" style="height: 32vh !important;width:100%">                                                                              </div> 
 
                                                  </div>
                                                  </div>
@@ -111,20 +124,21 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="tab-A">
+
                @foreach ($datas as $data)
      
        <div class="card booking-tourPadding">   
-      <div class="card-header  booking-tourPadding" style="background-color:green">
-    <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}<b></span>                                              
+      <div class="card-header booking-tourPadding" style="background-color:green">
+    <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
                      </div>          
 
                         <div class="card-body">
                        <div class="row ">
                                 <div class="col-lg-7">
-                                <div class="hotel-diss">
+                                <div class="hotel-diss" style="background-color:#2e4432">
                 
                                <div class="row">                   
-                                <div class="col-md-6 col-lg-6 col-sm-12">                                    
+                                <div class="col-md-6 col-lg-6 col-sm-12">                                   
                                   <div class="rating">                     
                                     <h4>Location Details</h4>                        
                                   </div>                                                                        
@@ -132,8 +146,8 @@
                                   <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> {{ $data->destination_name }}</a> 
                                      <a class="map-viw" href="#"><i class="fa fa-home"></i> {{ $data->location_name }}/{{ $data->region }}/{{ $data->country }}</a>    
                                    </div>                                                                                                                           
-                                <div class="col-md-6 col-lg-6 col-sm-12">                              
-                                <div class="rating">                                                                         <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b>{{ $data->accommodation_name }}</b></a>      
+                                <div class="col-md-6 col-lg-6 col-sm-12 booking-tour">                             
+                                <div class="rating">                                                                       <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b>{{ $data->accommodation_name }}</b></a>      
 
                                     <div>                            
                                      <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Standard Category: <br>  
@@ -151,31 +165,30 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                  
-                                            <div class="hotel-pics-one">                                    <img src="{{URL::asset('/storage/uploads/'.$data->attachment) }}" alt="" style="min-height: 20vh !important;max-height: 80vh !important;width:100%">        
-                                            </div>                    
+                                            <div class="hotel-pics-one">                                    
+                                            <img src="{{URL::asset('/storage/uploads/'.$data->attachment) }}" alt="" style="height: 32vh !important;width:100%">        
+                                            </div>                   
 
                                       </div>
                                </div>                           
                                 </div>
-                                </div> 
+                                </div>  
                                 <hr>
                             @endforeach  
              
               </div>
-
-         
-<div id="tab-C" class="tab-pane fade">
-        <div class="card">
+              <div class="tab-pane fade" id="tab-C">               
+                 <div class="card booking-btn">                    
         <div class="card-body">
-            <div class="card-body">
-    <table class="table table-bordered data-table"> 
+            <div class="card-body">               
+          <table class="table table-bordered data-table"> 
         <colspan>
            <col width="10%">
           <col width="20%">
           <col width="10%">
         </colspan>
         <tr>
-          <th class="title" colspan="8" style="background-color:white"><b>Tour Cost Summary Table</b></th>
+          <th class="title" colspan="8" style="background-color:green"><b>Tour Cost Summary Table</b></th>
         </tr>
         
         <tr>
@@ -223,29 +236,31 @@
                  
           </table>
 
-      
-                            </div>
+<hr>
+
+                        </div>
                         </div>
                      </div>
-                    </div>
-                     
 
-              <div class="tab-pane fade" id="tab-E">                
-       <div class="card">   
+              </div>
+
+            <div class="tab-pane fade" id="tab-E">                
+       <div class="card booking-btn-gray">   
       <div class="card-header">
                                             <h5 class="m-0">Accommodation List : Inclusive and Not Inclusive</h5>           
                                               </div>                                 
                                                 
            
 
-                       <div class="card-body">
+                        <div class="card-body">
                        <div class="row ">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
                 
                                <div class="row">                   
                                 <div class="col-md-6 col-lg-6 col-sm-12">                                   
-                                  <div class="rating">                                                                     <h4>Not Inclusive</h4>                   </div>                                
+                                  <div class="rating">                                                                      <h4>Not Inclusive</h4>                        
+                                  </div>                                
    @foreach($inclusives as $inclusive)    
                                   <div class="form-check">
    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
@@ -259,7 +274,10 @@
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">  
-                                            <div class="rating">                                                                   <h4>Inclusive</h4>                                                                       </div>                                        @foreach($assignLists as $assignList)
+                                            <div class="rating">    
+                                                <h4>Inclusive</h4>                                                           
+
+                                            </div>                                        @foreach($assignLists as $assignList)
                                     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
   <label class="form-check-label" for="flexCheckChecked">
@@ -273,24 +291,21 @@
                                 </div>
                                 </div> 
              </div> 
-         
+             
+            </div>
+          </div>
     
 
                     </div>
-                    </div>  
-
-
                     </div>
-                    </div>
-
-                    {{-- End of tabs --}}
+                     {{-- End of tabs --}}
                     {{-- Tour Summury sidebar --}}
                     <div class="col-md-3 col-lg-3 masonry">
                         <div class="card">
                         <div class="card-body">
-                            <div >
-
-                                <h4>TOUR SUMMARY</h4>
+                            <div class="card booking-btn">
+                            
+                         <h4>TOUR SUMMARY</h4>
                                  <hr>                                  
                                      <div>Tour Type: <b>{{ $programs->type }}</b></div>
                             <div>Tour Style: <b>{{ $programs->category }}</b></div>
@@ -306,19 +321,24 @@
                                 @endforeach
                         </div>
 
+
+                        </div>
+
                         <hr>
                         <div class="row">
-                            <div class="col-lg-12 text-center">
-                            <a href="#" role="button" class="btn btn-success float-left" data-toggle="modal" data-target="#bookNow">Book Now</a>
-                              <a href="/enquiry/{{$id}}" role="button" class="btn btn-primary float-right">Enquiry</a>
+                            <div class="col-lg-12 text-center">                         
+                            
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+
+                    <a href="/enquiry/{{$id}}" role="button" class="btn btn-primary float-right">Enquiry</a>
                             </div>
                             </div>
-                         <hr>
-                           
+                        <hr>
+                            
                                 <p class="text-center">
                                <h5 > List of Add-ons</h5>
                                 </p>
-                       <!-- Button trigger modal -->
+                                                 <!-- Button trigger modal -->
  @foreach ($addons as $addon)
   <!-- Modal -->
         <div class="package-list-wrap "><img src="{{URL::asset('/storage/uploads/'.$addon->attachment) }}" class="img-fluid" alt="No Image" style="min-height: 20vh !important;max-height: 80vh !important;width:100%">
@@ -327,26 +347,20 @@
       <h3 class="package-list-title">
       <a href="#">{{ $addon->addon_name }}</a>
                           </h3>
-   <a class="package-list-button" href="{{ route('addons.show',$addon->id) }}">Explore More</a>
+   <a class="package-list-button" href="{{ route('addons.show',$addon->id) }}">View More</a>
                                           </div>
                                         </div>
                                     @endforeach
-
-
-                       
                     </div>
-                   
 {{-- End of tour summary sidebar --}}
 
                 </div>
-                  <hr>
+                <hr>
                 <p class="text-center">
-                <a class="btn btn-primary" href="{{ route('addons.index') }}" >View More Addons</a></p>
+                <a class="btn btn-primary" href="{{ route('addons.index') }}">View More Addons</a></p>
                 </div>
-
                 </div>
             </div>
-
         </div>
     </div>
     </section>
@@ -354,153 +368,171 @@
 
 
 
-{{-- Modal for booking form --}}
-<!-- Modal -->
-<div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
+ 
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{ $programs->tour_name }}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
           </button>
+          <!-- <h4 class="modal-title"><b>{{$programs->tour_name}}</b></h4> -->
         </div>
         <div class="modal-body">
 
-<form  method="post" id="post_form" action="{{ route('tourForm.store') }}">
+          <div class="preview-wrap">
+           
+            <div class="form-wrap">
+                <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
+                <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
+                <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
+                    @csrf
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                      <li class="active" id="account"><strong>Personal Details</strong></li>
+                        <li id="personal"><strong>Tour Information:</strong></li>
+                        <li id="payment"><strong>Other Information</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h3 class="fs-title">Personal Details:| Step 1 - 4</h3>
+                                </div>                                
+                            </div> 
+                           
 
-    @csrf
-    <div class="row">
-       <div class="col-md-6">
-        <div class="form-group">
-
-            
-              @if($discounts !=null)
+ <div class="form-group">
+            @if($discounts !=null)
            <input type="hidden" class="form-control" name="unit_price" value="{{$discounts->new_price}}">
              @else
               <input type="hidden" class="form-control" name="unit_price" value="{{$programs->price}}">
-             @endif
-
+             @endif       
+                            
+             <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
-
-            <label for="">First Name:</label>
-          <input type="text" class="form-control" placeholder="First Name" min="1" max="22" name="first_name">
         </div>
-     </div>
-     <div class="col-md-6">
+
+
+                         <input type="text" name="first_name" placeholder="first name" /> 
+                           <input type="text" name="last_name" placeholder="last name" /> 
+                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
+                            <input type="email" name="email" placeholder="email" /> 
+
+                            <label class="fieldlabels">Nationality: *
+                            </label>
+                             <input type="text" name="country" placeholder="Nationality" /> 
+
+                        </div> 
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                            <div class="form-card">
+
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
+                                </div>
+                             </div>
+
+                       
+
+
+             <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Travel Date:</label>
+                                    <div class="form-group">
+                                        <input type="date" name="travel_date" id="travel_date" class="form-control" placeholder="From" value="" required>
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Adults (>16 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="adults" min="0">
+                                    </div>
+                                </div>
+  </div>
+
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Teens (12-14 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="teens" min="0">
+                                    </div>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Children (5-12 yrs):</label>
+                                    <div class="form-group">
+                                        <input type="number" class="zt-control" name="children" min="0">
+                                    </div>
+                                 </div>
+  </div>
+
+
         <div class="form-group">
-            <label for="">Last Name:</label>
-          <input type="text" class="form-control" placeholder="Last Name" min="1" max="22" name="last_name">
+            <label for="">Tour type:</label>
+                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
+          <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
         </div>
-     </div>
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Email:</label>
-          <input type="email" class="form-control" placeholder="Email" min="1" max="62" name="email">
-        </div>
-     </div>
+                                 
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Country:</label>
-          <input type="text" class="form-control" placeholder="Country" name="country">
-        </div>
-     </div>
+                    <div class="form-group">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                   <label for="">Accommodation:</label>
+                                    <div class="form-group">
+                                       <select class="form-control" name="accomodation">
+                                            <option value="0">--Select Accomodation--</option>
+                                            <option>Basic</option>
+                                             <option>Comfort</option>
+                                              <option>Deluxe</option>
+                                               <option>Mix</option>
+                                                <option>Not Sure</option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+               
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Phone:</label>
-          <input type="number" class="form-control" placeholder="Phone number" min="0"  name="phone">
-        </div>
-     </div>
-
-      <div class="col-md-6">
-        <div class="form-group">           
-            <label for="">Tour Date:</label>
-             <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
-          <input type="hidden" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
-             <select class="selectpicker search-fields form-control" name="tour_date">
-              <option value="0">--Select Tour Date--</option>
-        @foreach($departureDate as $departure)
-          @php
-                    $i=1;
-                    $myDateTime = DateTime::createFromFormat('Y-m-d', $departure->start_date);                 
-                    $yearM = $myDateTime->format('d-M-Y');  
-                    @endphp 
-
-        <option><b class="text-success">{{$yearM}}</b></option>
-        @endforeach
-          </select>
-
-        </div>
-     </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Accommodations:</label>
-          <select class="selectpicker search-fields form-control" name="accomodation">
-              <option value="0">--Select Accomodation--</option>
-              <option value="Basic">Basic</option>
-              <option value="Comfort">Comfort</option>
-                <option value="Deluxe">Deluxe</option>
-              <option value="Mix">Mix</option>
-              <option value="Not sure">Not sure</option>
-          </select>
-
-     </div>
-     </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Tour Addon:</label>
-         <select class="selectpicker search-fields form-control" name="addon">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+                                      <label for="">Tour Addon:</label>
+                                    <div class="form-group">
+                                      <select class="selectpicker search-fields form-control" name="addon">
               <option value="0" selected>None</option>
               @foreach ($addons as $addon)
             <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
               @endforeach
           </select>
+                                    </div>
+                                </div>
+             </div>
 
-     </div>
-     </div>
+                        </div> 
 
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for="">Travel Date:</label>
-           <div class="form-group date input-datepicker">
-          <input type="date" class="form-control" name="travel_date"
-              data-date-format="yyyy-mm-dd" placeholder="travel date">
-          <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
-      </div>
+                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
+                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Other Information:|Step 3 - 4</h2>
+                                </div>
 
-     </div>
-     </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> No of Adults(>16yrs):</label>
-          <input type="number" class="form-control" placeholder=""  min="0" name="adults">
-        </div>
-        </div>
-
-     <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> No of Teens(13-14yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="teens">
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for=""> Number of Children (5-12 yrs):</label>
-          <input type="number" class="form-control" placeholder="" min="0" name="children">
-        </div>
-        </div>
-
-            <div class="col-md-12">
+                              
+    <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
-         <textarea class="form-control" id="" cols="2" rows="2" name="additional_information" placeholder="Type your additional information here..."></textarea>
+
+         <textarea class="form-control" id="" cols="2" rows="1" name="additional_information" placeholder="Type your additional information here..."></textarea>
         </div>
      </div>
 
@@ -524,28 +556,135 @@
         </label>
         </div>
         </div>
-
-
   </div>
+
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="form-group">
         <label for=""> Other Media:</label>
            <input type="text" class="form-control" name="hear_about_us">
         </div>
-        </div>
-        </div>
-        </div>
+        </div> 
+                                </div>
+                          </div> 
+                             
+                        
+                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
+                     
+                        <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                           <button type="submit" class="btn btn-success float-right">Submit</button>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:| Step 4 - 4</h2>
+                                </div>
+                            </div> <br>
+                            <h2 class="purple-text text-center"><strong>Success!</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully submitted</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                        
+                </form>
+            </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-</form>
-</div>
-</div>
-</div>
 {{-- end of booking form madal --}}
+
+<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
+<!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
+<!-- 
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script> -->
 
 <script>
 function openPage(pageName, elmnt, color) {
@@ -564,6 +703,7 @@ function openPage(pageName, elmnt, color) {
 
   // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
+
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
@@ -571,11 +711,93 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
 $('#myTab a').on('click', function (event) {
   event.preventDefault()
   $(this).tab('show')
 })
-
 </script>
-@endsection
 
+
+<script type="text/javascript" src="../../../js/jquery321.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script>
+
+@endsection

@@ -196,7 +196,7 @@ Route::post('/tailorPay/{x}', [PaymentController::class, 'tailorPay'])->name('ta
  Route::get('/tailorMade-status/{x}', [TailorMadeController::class, 'statusUpdate'])->name('tailorMade-status');
 Route::post('/privatePay/{y}', [PaymentController::class, 'privatePay'])->name('privatePay');
 Route::post('/groupPay/{x}', [PaymentController::class, 'groupPay'])->name('groupPay');
-Route::get('/privateTourSumary/{x}', [PaymentController::class, 'privateTourSumary'])->name('privateTourSumary');
+Route::get('/pg/{x}', [PaymentController::class, 'pg'])->name('pg');
 Route::get('/pay/{x}', [PaymentController::class, 'payInvoice'])->name('payInvoice');
 Route::get('/groupTourSumary/{x}', [PaymentController::class, 'groupTourSumary'])->name('groupTourSumary');
 //End of payment controller

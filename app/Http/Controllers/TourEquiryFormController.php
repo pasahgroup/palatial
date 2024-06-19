@@ -297,14 +297,15 @@ public function viewTripf($pin)    {
            // $id=$trip->tour_id;
              $id=$trip->id;         
             // dd($id);
-        if($trip->tour_type=='Private')
+        if($trip->tour_type=='Private' || $trip->tour_type=='Group')
         {
-        return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
+        return redirect()->route('pg',$id)->with('success','Tour Summary Cost created successful');
         }
-        else if ($trip->tour_type=='Group') {
-            # code... 
-              return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
-        }else
+        // else if ($trip->tour_type=='Group') {
+        //     # code... 
+        //       return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
+        // }
+        else
         {
          return 'Tour category was not specified...!';      
         }       
@@ -320,6 +321,9 @@ public function viewTripf($pin)    {
      */
     public function store(Request $request)
     {
+
+// dd('printt');
+
          $tour_date=request('tour_date'); 
          $yearM =date('Y-m-d', strtotime($tour_date)); 
        
@@ -622,7 +626,8 @@ foreach ($files as $file){
 }
 });
 
-///dd('Mail sent successfully');
+
+//dd('Mail sent successfully');
 
 
       return redirect()->route('viewTripf', [$pin]);
@@ -635,6 +640,9 @@ foreach ($files as $file){
      * @param  \App\Models\TourEquiryFrom  $tourEquiryFrom
      * @return \Illuminate\Http\Response
      */
+
+
+
 
       public function customers()
     {

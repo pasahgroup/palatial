@@ -41,7 +41,7 @@ class PaymentController extends Controller
     }
 
   
-  public function privateTourSumary($cust_id)
+  public function pg($cust_id)
     {      
 
       //Get customer details
@@ -248,9 +248,10 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
         ->where('attachments.type','Programs')
          ->where('departures.tour_id',$id)
         ->get();
+
         //dd($basic);
 
-        return view('website.payments.groupPaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives'));
+        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives'));
     }
     /**
      * Show the form for creating a new resource.

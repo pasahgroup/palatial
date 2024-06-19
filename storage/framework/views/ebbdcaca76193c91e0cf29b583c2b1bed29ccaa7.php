@@ -377,6 +377,8 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
           </button>
+
+
           <!-- <h4 class="modal-title"><b><?php echo e($programs->tour_name); ?></b></h4> -->
         </div>
         <div class="modal-body">
@@ -402,7 +404,7 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-7">
-                                    <h3 class="fs-title">Personal Details:| Step 1 - 4</h3>
+                                    <h4 class="fs-title">Personal Details:| Step 1 - 4</h4>
                                 </div>                                
                             </div> 
                            
@@ -419,23 +421,41 @@
         </div>
 
 
-                         <input type="text" name="first_name" placeholder="first name" /> 
+                        <!--  <input type="text" name="first_name" placeholder="first name" /> 
                            <input type="text" name="last_name" placeholder="last name" /> 
-                              <label class="fieldlabels">Phone: *</label> <input type="text" name="phone" placeholder="+00 00 000 000"/>                                 
-                            <input type="email" name="email" placeholder="email" /> 
 
-                            <label class="fieldlabels">Nationality: *
-                            </label>
+
+ -->
+           
+             <div class="row form-group">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" placeholder="first name" /> 
+                    
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                           <input type="text" name="last_name" placeholder="last name" /> 
+                                    </div>
+                                </div>
+  </div>
+
+
+                              <!-- <label class="fieldlabels">Phone: *</label> -->
+                               <input type="text" name="phone" placeholder="Phone(+00 00 000 000)"/>                                 
+                            <input type="email" name="email" placeholder="email" required=""/> 
+
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
-                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
+
                             <div class="form-card">
-
-
                             <div class="row">
                                 <div class="col-7">
                                     <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
@@ -503,6 +523,7 @@
                                 </div>
                
 
+
       <div class="col-lg-6 col-md-6 col-sm-6">
                                       <label for="">Tour Addon:</label>
                                     <div class="form-group">
@@ -518,7 +539,7 @@
 
                         </div> 
 
-                         <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>                         
+                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>                    
                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                         <input type="button" name="next" class="next action-button float-right" value="Next" /> 
                     </fieldset>
@@ -572,7 +593,7 @@
                         
                         <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
                      
-                        <button type="button" class="btn btn-primary float-left" data-dismiss="modal">Close</button>
+                        <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                            <button type="submit" class="btn btn-success float-right">Submit</button>
                     </fieldset>

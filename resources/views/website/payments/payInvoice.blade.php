@@ -198,7 +198,7 @@
                   </div>
                    <div class="col-sm-1">
                    <div class="form-group">
-                <button class="btn btn-primary float-right">Pay</button>
+                <button class="btn btn-outline btn-success float-right" type="button">Pay</button>
               </div>
                     </div>
                   </div>

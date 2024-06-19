@@ -656,8 +656,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 2px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col {
@@ -2004,7 +2004,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .form-text {
@@ -9456,7 +9456,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 /********** Custom CSS ************/
 .h1, h2, h3 {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
 }
 
 .h4, h5, h6 {

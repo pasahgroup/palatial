@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all"> -->
   <!-- <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all"> -->
   <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
-  <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss">
+  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <body>
 
  <!--  <div class="pre-loader">
@@ -191,7 +191,7 @@
         </div>
 
         <div class="clearfix">
-         <a href="/pay/<?php echo e($cust->customer_id); ?>" class="btn btn-primary pull-right hvr-sweep-to-right">Proceed Checkout</a>
+         <a href="/pay/<?php echo e($cust->customer_id); ?>" class="btn btn-success pull-right hvr-sweep-to-right">Proceed Checkout</a>
         </div>
         <br>
       </div>
