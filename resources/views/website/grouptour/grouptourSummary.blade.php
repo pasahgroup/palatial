@@ -368,7 +368,7 @@
 
 
 
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
  
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -401,7 +401,7 @@
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
-                                <div class="col-7">
+                                <div class="col-12">
                                     <h4 class="fs-title">Personal Details:| Step 1 - 4</h4>
                                 </div>                                
                             </div> 
@@ -455,8 +455,8 @@
 
                             <div class="form-card">
                             <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Tour Information:|Step 2 - 4</h2>
+                                <div class="col-12">
+                                    <h4 class="fs-title">Tour Information:|Step 2 - 4</h4>
                                 </div>
                              </div>
 
@@ -544,8 +544,8 @@
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Other Information:|Step 3 - 4</h2>
+                                <div class="col-12">
+                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>
                                 </div>
 
                               
@@ -598,8 +598,8 @@
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title">Finish:| Step 4 - 4</h2>
+                                <div class="col-12">
+                                    <h4 class="fs-title">Finish:| Step 4 - 4</h4>
                                 </div>
                             </div> <br>
                             <h2 class="purple-text text-center"><strong>Success!</strong></h2> <br>
