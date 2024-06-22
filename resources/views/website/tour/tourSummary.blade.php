@@ -420,7 +420,7 @@
 
 
 
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:80px;">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
  
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
