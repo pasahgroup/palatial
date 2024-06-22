@@ -138,8 +138,8 @@
         <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="background-color:#37533c;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
-                    <span class="h1 text-uppercase text-primary bg-dark px-2">Palatial</span>
-                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
+                    <span class="h3 text-uppercase text-primary bg-dark px-2">Palatial</span>
+                    <span class="h3 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
                 </a>            
 
             </div>
