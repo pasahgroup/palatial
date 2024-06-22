@@ -177,7 +177,6 @@
       
       <div class="px-xl-5 pb-3">     
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-  
     
 
 
@@ -189,7 +188,8 @@
             <div class="row">
                 <div class="col-12">
                                
-  <div class="col-12 col-sm-6 col-xl-3">
+  
+  <div class="col-12 col-sm-6 col-xl-3" style="padding-left:20px;padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
@@ -251,7 +251,7 @@
 
 
 
-   <div class="col-12 col-sm-4 col-xl-3">
+   <div class="col-12 col-sm-4 col-xl-3"  style="padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
@@ -302,7 +302,7 @@
                     </div>
 
 
-       <div class="col-12 col-sm-4 col-xl-3">
+       <div class="col-12 col-sm-4 col-xl-3" style="padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
@@ -357,7 +357,7 @@
                         </div>
                     </div>
 
-                           <div class="col-12 col-sm-4 col-xl-3">
+                           <div class="col-12 col-sm-4 col-xl-3" style="padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
                             <div class="widget-title">
