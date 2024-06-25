@@ -83,7 +83,7 @@
           </table>
         </div>
       
-                   </div>
+          </div>
 
     </div>
 
@@ -209,18 +209,18 @@
               </div>
                     </div>
                   </div>
-
+  </form>
               
-            </div>
-          </form>
+            </div>        
 
         </div>
       </div>
 
 
-    </div>
-  </section>
 
+
+
+  </section>
 </body>
 
 <?php $__env->stopSection(); ?>
