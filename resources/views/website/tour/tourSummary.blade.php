@@ -2,7 +2,7 @@
 @extends('website.layouts.apps')
 @section('content')
 
-  <section class="bg-gray" style="margin-top: 14px;">
+  <section class="bg-gray">
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
