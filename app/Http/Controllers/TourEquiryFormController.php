@@ -193,7 +193,7 @@ $id=11;
 
 $date=date('d-M-Y');
 // $data["email"] = "palatialtours@gmail.com";
-$data["email"] = "buruwawa@gmail.com";
+$data["email"] = "info@palatialtours.com";
 
 $data["title"] = "ITINERARY";
 $data["body"] = "Manyara Best View Hotel: Daily General Inspection Report held on $date";
