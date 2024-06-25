@@ -183,7 +183,7 @@
            <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-instagram"></i></a>
 
               
-                 <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tour Enquiry</a>
+                 <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tailor Maide</a>
      <a href="/bookingTrip"  class="btn btn-outline btn-primary" style="color:yellow">My Booking</a>
 
             </div>
