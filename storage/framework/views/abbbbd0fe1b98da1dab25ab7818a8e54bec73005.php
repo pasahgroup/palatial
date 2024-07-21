@@ -440,7 +440,7 @@
             <div class="form-wrap">
                 <h4 id="heading">Booking Form:<span style="color:green"><?php echo e($programs->tour_name); ?></span></h4>
                 <!-- <form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>"> -->
-                <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>">
+                <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>" class="registration-form">
                     <?php echo csrf_field(); ?>
                     <!-- progressbar -->
                     <ul id="progressbar">
@@ -856,8 +856,12 @@ $('#myTab a').on('click', function (event) {
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
 
-<script type="text/javascript">
-    
+
+
+
+
+
+<script type="text/javascript">    
 $(document).ready(function(){
 var current_fs, next_fs, previous_fs; //fieldsets
 var opacity;
@@ -933,6 +937,62 @@ return false;
 
 });
 </script>
+
+
+
+
+    <script type="text/javascript">        
+        $(document).ready(function () {
+    $('.registration-form fieldset:first-child').fadeIn('slow');
+
+    $('.registration-form input[type="text"]').on('focus', function () {
+        $(this).removeClass('input-error');
+    });
+
+    // next step
+    $('.registration-form .btn-next').on('click', function () {
+        var parent_fieldset = $(this).parents('fieldset');
+        var next_step = true;
+        parent_fieldset.find('input[required],input[type="emailx"]').each(function () {
+                 if ($(this).val() == "" || $(this).val() == "0") {
+                $(this).addClass('input-error');
+                next_step = false;
+            } else {
+                $(this).removeClass('input-error');
+            }
+        });
+
+        if (next_step) {
+            parent_fieldset.fadeOut(400, function () {
+                $(this).next().fadeIn();
+            });
+        }
+
+    });
+
+    // previous step
+    $('.registration-form .btn-previous').on('click', function () {
+        $(this).parents('fieldset').fadeOut(400, function () {
+            $(this).prev().fadeIn();
+        });
+    });
+
+    // submit
+    $('.registration-form').on('submit', function (e) {
+
+        $(this).find('input[required],input[type="emailx"]').each(function () {
+                if ($(this).val() == "" || $(this).val() == "0") {
+                e.preventDefault();
+                $(this).addClass('input-error');
+            } else {
+                $(this).removeClass('input-error');
+            }
+        });
+
+    });
+   
+});
+    </script>
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/tour/tourSummary.blade.php ENDPATH**/ ?>

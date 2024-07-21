@@ -157,7 +157,7 @@
                     </div>
                     @endif
                 </div>
-  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-rocket margin-right-10"></i>Explore More Experiences
+  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Experiences
                         </a>
             </div>
         </div>
@@ -435,7 +435,6 @@
 
 
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-
     <div class="container" style="padding-bottom:0px;">  
             
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Special Offers</span></h2>
@@ -460,13 +459,13 @@
                                                                
 
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" alt="" style="height:250px;">
+                        <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$special_private->attachment) }}" alt="" style="height:250px;">
                         <div class="product-action">
                             <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  {{ $special_private->tour_name }}</i></a>
                         </div>
                     </div>
 
-                    <div class="text-center py-4">
+                    <div class="text-center">
                         <a class="h6 text-decoration-none text-truncate" href="/safaris">{{ $special_private->tour_name }}</a>                      
                     </div>
                 </div>
@@ -600,6 +599,14 @@
 
         </div>  
 
+
+
+
+ <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right"> 
+
+  <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Offers
+                        </a>
+ </span></h3>
     </div>
 </div>
 </section>

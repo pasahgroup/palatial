@@ -46,6 +46,7 @@ class TourController extends Controller
         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
      }
 
+
      public function safarisSlider($x)
     {
            $sliders = slider::join('programs','programs.id','sliders.tour_id')

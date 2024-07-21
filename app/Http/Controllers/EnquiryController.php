@@ -216,7 +216,7 @@ class EnquiryController extends Controller
        $programs = program::get();
        $tours = program::where('id',$id)
        ->first();
-        //dd($programs);
+    //dd($programs);
       return view('website.enquiries.enquiry',compact('programs','tours'));
     }
 

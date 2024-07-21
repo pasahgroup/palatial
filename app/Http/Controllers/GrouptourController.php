@@ -62,7 +62,7 @@ class GrouptourController extends Controller
         ->get();
 
 
-//dd($programs);
+//dd($safaris);
     $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
          // dd($PostcategoryImage);

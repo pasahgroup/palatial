@@ -263,7 +263,8 @@ dd('Mail sent successfully');
             // dd($id);
         if($trip->tour_type=='Private')
         {
-        return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
+        // return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
+              return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
         }
         else if ($trip->tour_type=='Group') {
             # code... 

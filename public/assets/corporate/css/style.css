@@ -64,9 +64,12 @@
   -webkit-box-shadow: 0 0 10px 1px rgba(71,85,95,.08);
   -moz-box-shadow: 0 0 10px 1px rgba(71,85,95,.08);
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 6px;
-  background: #fff;
+/*  background: #fff;*/
+
+background: #c6cab3;
+  
   padding: 0;
   display: inline-block;
   width: 100%;

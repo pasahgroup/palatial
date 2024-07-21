@@ -205,6 +205,9 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
            ->where('itineraries.tour_addon','programs')
            ->where('invoices.customer_id',$cust->customer_id)
           ->where('programs.id',$id)->first();
+
+ //dd($programs);
+
       
            if($programs ==null){
               $programs = program::
@@ -249,9 +252,9 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
          ->where('departures.tour_id',$id)
         ->get();
 
-        //dd($basic);
+       // dd($basic);
 
-        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives'));
+        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives','cust'));
     }
     /**
      * Show the form for creating a new resource.

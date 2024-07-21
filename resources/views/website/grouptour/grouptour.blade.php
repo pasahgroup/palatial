@@ -26,108 +26,104 @@
 </style>
 
 
-<section id="blog_private" class="blog_section">
-    <div class="container">       
-               
-<div class="row" data-aos="fade-up">  
- 
 
- 
-  @foreach ($safaris as $program)
-            <div class="col-lg-4 col-md-4">
-                @if($program->group_tour_category=="GS")
+
+
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+    <div class="container" style="padding-bottom:0px;">  
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> {{$title ?? ''}} Tours</span></h2>
+
+      
+      <div class="px-xl-5 pb-3">     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+  
+   
+                                
+                                            @foreach ($safaris as $program)
+
+
+ <div class="col-lg-3 col-md-3">    
+       <h5><b style="background:">
+
+                    @if($program->group_tour_category=="GS")
 <span>Scheduled Group Tour</span>
 @elseif($program->group_tour_category=="SO")
 <span>Special Ocassion Tour</span>
 @else
 <span>Utalii Nyumbani Tour</span>
 @endif
-        
-                        <div class="single_blog listing-shot">                         
-                               
-                                <div class="listing-shot-img">
-                                    <div class="blog_image">
-                                    <img src="{{URL::asset('/storage/uploads/'.$program->attachment) }}" class="img-responsive" alt="{{  $program->tour_name }}" style="height:250px;width:100%;">
-                                    </div>
-                                </div>
-                                     <h3 class="text-center demo-3"> <b style="color:" title="{{$program->tour_name}}">{{$program->tour_name}}</b>
-                                                                             </h3>
-                            
-                               
-                            <div class="blog-text">       
-                            <div class="row">                                                            
-                                     <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11) ">
-                                             <strong>Valid: <b class="text-white">{{ $program->end_date }}</b></strong> 
-                                    </div>                                            
-                                       
-                                        <div class="col-md-6 col-sm-6 col-xs-6 booking-btn">
-                                        <span class="text-white"><strong>From ${{ $program->price }}</b>  </strong>
-                                           </span>
 
-                                         </div> 
-                                    </div> 
-                                                                                                                               
-                                      <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-                                      
-                                      <div class="row">
-                                           <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                             Tour Duration:
-                                            </div>
-                      
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong>{{ $program->days }} Days, {{ $program->days -1 }} Nights</strong>
-                                                </div>
-                                             </div>
+    </b>
+       </h5>
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#f3f4f4">
 
-                                               <div class="row">
-                                               <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                               <span> Physical Rating: </span>  
-                                             </div>
-                                           
-                                                          
-                                               <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                   <strong>{{ $program->physical_rating }}</strong>
-                                                </div>
-                                               </div>
-                                                <div class="row">
-                                                  <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                               <span> Tour Category: </span>  
-                                           </div>
-                            
-                                           
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong>{{ $program->category }}-Join</strong>
-                                                </div>  
-                                            </div>  
-                                                  <div class="row">
-                                                  <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                               <span> Tour Code: </span>  
-                                           </div>
-                          
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong>{{ $program->tour_code }}</strong>
-                                                </div>  
-                                            </div>                                           
-                                             </div>
-                               
-                                                                   
-                                 <div class="row">                                      
-                                      </div>
-                                       
-                                         <div class="row">
-                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-                                                                                    <a href="{{route('grouptour.show',$program->id)}}" class="booking-btn text-center"><b>Book Now</b></a>
-                                                                        </div>
-                                                                            </div>
-                                                     
-                                </div>
-                          
+<div class="single_blog listing-shot">
+                <div class="product-item bg-light mb-4">
+                   <div class="listing-shot-img">
+                                                                           
+                                                               
+
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$program->attachment) }}" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  {{ $program->tour_name }}</i></a>
                         </div>
-                    </div>              
-                @endforeach            
-              </div>
+                    </div>
 
-          </div>
- </section>
+                    <div class="text-center">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris">{{ $program->tour_name }}</a>                      
+                    </div>
+                </div>
+                 </div>
+
+  <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
+                                                                                         <strong style="background-color:;">{{ $program->days }} Days, {{ $program->days -1 }} Nights:</strong>
+                                                                                 </div></b>
+
+ <b class="float-right">  
+  <div class="header-btn">
+                                                                                <span class="text-danger" style="font-size:17px"><strong>${{ number_format($program->price),2 }} </strong>
+                                                                                     </span>
+                                                                                    
+
+                                                                                 </div></b>
+
+
+
+
+
+               </div>
+
+
+<div>Physical Rating:          <strong class="float-right">{{$program->physical_rating }}</strong></div>
+<div>Tour Category:          <strong class="float-right">{{$program->category }}</strong></div>
+<div>Physical Rating:          <strong class="float-right">{{$program->tour_code }}</strong></div>
+
+
+<hr>
+                                                                        <div class="text-right">
+                                                                             <a href="{{route('grouptour.show',$program->id)}}" class="booking-btn text-center"><b>Book Now</b></a>
+                                                                                 
+                                                                        </div>
+            </div>
+
+</div>
+
+
+                                @endforeach
+
+
+
+
+
+        </div>  
+
+    </div>
+</div>
+</section>
+
+
+
 @endsection
 
