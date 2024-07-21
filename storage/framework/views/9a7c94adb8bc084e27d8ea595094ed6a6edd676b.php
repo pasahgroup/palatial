@@ -51,100 +51,98 @@
 </hr>
 
 
-<section id="popular_experience" class="blog_section">
-    <div class="container">      
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+
+    <div class="container" style="padding-bottom:0px;">  
+            
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> <?php echo e($title ?? ''); ?> Tours</span></h2>
+
+      
+      <div class="px-xl-5 pb-3">     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+  
+   
+                                
+                                            <?php $__currentLoopData = $popularExperiences; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safari): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+ <div class="col-lg-3 col-md-3">
     
-     <div class="row" data-aos="fade-up">    
-            <?php $__currentLoopData = $popularExperiences; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safari): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <div class="col-lg-4 col-md-4">
-                        <div class="single_blog listing-shot">                         
-                               
-                                <div class="listing-shot-img">
-                                    <div class="blog_image">
-                                    <img src="<?php echo e(URL::asset('/storage/uploads/'.$safari->attachment)); ?>" class="img-responsive" alt="<?php echo e($safari->tour_name); ?>" style="height:250px;width:100%;">
-                                    </div>
-                                </div>
-                                   <h3 class="text-center booking-btn booking-tourPadding demo-3">
-                                  <b style="color:" title="<?php echo e($safari->tour_name); ?>"><?php echo e($safari->tour_name); ?></b>                                    
-                                </h3>  
+       <h5><b style="background:"><?php echo e($safari->sales_header); ?></b></h5>
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#f3f4f4">
 
-                                    <div class="">
-                                 <h3 class="text-center"> <b style="color:green;"><?php echo e($safari->type); ?></b>
-                                    </h3>
-                                </div>  
-                            <div class="blog-text">       
-                            <div class="row">
-                                                            
-                                     <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style="border-right:1px solid rgba(71,85,95,.11);font-size:18px;">
-                                             <strong><b class="text-white"><?php echo e($safari->days); ?> Days, <?php echo e($safari->days -1); ?> Nights</b></strong> 
-                                         </div>                                            
-                                       
-                                        <div class="col-md-6 col-sm-6 col-xs-6 booking-btn" style=";font-size:18px;">
-                                        <span class="text-white"><strong>From $<?php echo e($safari->price); ?></b>  </strong>
-                                           </span>
+<div class="single_blog listing-shot">
+                <div class="product-item bg-light mb-4">
+                   <div class="listing-shot-img">
+                                                                           
+                                                               
 
-                                         </div> 
-                                    </div> 
-                                                                                                                               
-                                       <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-                                      
-                                      <div class="row">
-                                           <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                             Tour Duration:
-                                            </div>
-                      
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong><?php echo e($safari->days); ?> Days, <?php echo e($safari->days -1); ?> Nights</strong>
-                                                </div>
-                                             </div>
-
-                                               <div class="row">
-                                               <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                               <span> Physical Rating: </span>  
-                                             </div>
-                                           
-                                                          
-                                               <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                   <strong><?php echo e($safari->physical_rating); ?></strong>
-                                                </div>
-                                               </div>
-                                                <div class="row">
-                                                  <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                               <span> Tour Category: </span>  
-                                           </div>
-                            
-                                           
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong><?php echo e($safari->category); ?></strong>
-                                                </div>  
-                                            </div>  
-                                                  <div class="row">
-                                                  <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5);font-size:17px;">
-                                               <span> Tour Code: </span>  
-                                           </div>
-                          
-                                               <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                   <strong><?php echo e($safari->tour_code); ?></strong>
-                                                </div>  
-                                            </div>                                           
-                                             </div>
-                               
-
-
-                                 <div class="row">
-                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-                                                                                    <a href="/safaris/<?php echo e($safari->id); ?>" class="booking-btn text-center"><b>Explore More</b></a>
-                                                                        </div>
-                                                                            </div>
-                                                  
-                                </div>
-                          
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$safari->attachment)); ?>" alt="" style="height:250px;">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($safari->tour_name); ?></i></a>
                         </div>
-                    </div>                   
-               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
+
+                    <div class="text-center">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($safari->tour_name); ?></a>                      
+                    </div>
+                </div>
+                 </div>
+
+  <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
+                                                                                         <strong style="background-color:;"><?php echo e($safari->days); ?> Days, <?php echo e($safari->days -1); ?> Nights:</strong>
+                                                                                 </div></b>
+
+ <b class="float-right">  
+  <div class="header-btn">
+                                                                                <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($safari->price),2); ?> </strong>
+                                                                                     </span>
+                                                                                    
+
+                                                                                 </div></b>
+
+
+
+
+
+               </div>
+
+
+<div>Physical Rating:          <strong class="float-right"><?php echo e($safari->physical_rating); ?></strong></div>
+<div>Tour Category:          <strong class="float-right"><?php echo e($safari->category); ?></strong></div>
+<div>Physical Rating:          <strong class="float-right"><?php echo e($safari->tour_code); ?></strong></div>
+
+
+<hr>
+                                                                        <div class="text-right">
+                                                                                 
+
+                                                                                                 <?php if($safari->category=="Private"): ?> 
+                            <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
+                               <?php endif; ?> 
+
+                                           <?php if($safari->category=="Group"): ?> 
+                            <a href="/safaris/<?php echo e($safari->id); ?>" class="booking-btn text-center"><b>Explore More</b></a>
+                               <?php endif; ?>
+                                                                        </div>
             </div>
-          </div>
- </section>
+
+</div>
+
+
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
+
+
+        </div>  
+
+    </div>
+</div>
+</section>
+
+
 <?php $__env->stopSection(); ?>
 
 
