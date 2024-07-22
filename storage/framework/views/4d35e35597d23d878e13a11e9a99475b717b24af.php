@@ -17,7 +17,7 @@
   <meta property="og:title" content="Palatial tours">
   <meta property="og:description" content="Palatial tour">
   <meta property="og:type" content="https://Palatialtours.com/">
-  <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh; width: 170%" alt="Palatial tours"><!-- link to image for socio -->
+  <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh; width: 1000%" alt="Palatial tours"><!-- link to image for socio -->
   <meta property="og:url" content="https://palatialtours.com/">
 
   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
