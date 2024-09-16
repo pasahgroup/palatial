@@ -17,7 +17,7 @@ use Mail;
 use DB;
 use DateTime;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 
 use JasperPHP\JasperPHP as JasperPHP;
 use PHPJasper\PHPJasper;
@@ -314,6 +314,7 @@ public function viewTripf($pin)    {
     }
 
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -323,7 +324,23 @@ public function viewTripf($pin)    {
     public function store(Request $request)
     {
 
-// dd('printt');
+ $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:255',
+         'last_name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'arrival_date' => 'required|Date',
+        'days' => 'required|integer',
+
+ // 'min_budget' => 'required|numeric',
+
+        // 'password' => 'required|min:8',
+    ]);
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+    }else
+    {
 
          $tour_date=request('tour_date'); 
          $yearM =date('Y-m-d', strtotime($tour_date)); 
@@ -590,6 +607,7 @@ $id=request('tour_id');
 
          if($datas == "[]"){
       return redirect()->back()->with('info','The Program has no Itinery Data');
+  }
            };
 
 

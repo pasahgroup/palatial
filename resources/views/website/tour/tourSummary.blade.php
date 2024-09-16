@@ -380,7 +380,7 @@
                         <div class="row">
                             <div class="col-lg-12 text-center">                         
                             
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now bb</button>
 
                     <a href="/enquiry/{{$id}}" role="button" class="btn btn-primary float-right">Enquiry</a>
                             </div>
@@ -438,8 +438,26 @@
             <div class="form-wrap">
                 <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
+
+          
+
+@if (session('create_category_error'))      
+<script type="text/javascript">
+    $('#bookNow').modal('show');
+</script>
+@endif
                 <form id="msform"  method="post"  action="{{ route('tourForm.store') }}" class="registration-form">
                     @csrf
+                   
+                  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                     <!-- progressbar -->
                     <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
@@ -495,7 +513,7 @@
 
                               <!-- <label class="fieldlabels">Phone: *</label> -->
                                <input type="text" name="phone" placeholder="Phone(+00 00 000 000)"/>                                 
-                            <input type="email" name="email" placeholder="email" required=""/> 
+                            <input type="email" name="email" placeholder="email"/> 
 
                              <input type="text" name="country" placeholder="Nationality" /> 
 
@@ -519,7 +537,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
                                     <div class="form-group">
-                                        <input type="date" name="travel_date" id="travel_date" class="form-control" placeholder="From" value="" required>
+                                        <input type="date" name="travel_date" id="travel_date" class="form-control" placeholder="From" value="">
                     
                                     </div>
                                 </div>
@@ -935,61 +953,4 @@ return false;
 
 });
 </script>
-
-
-
-
-    <script type="text/javascript">        
-        $(document).ready(function () {
-    $('.registration-form fieldset:first-child').fadeIn('slow');
-
-    $('.registration-form input[type="text"]').on('focus', function () {
-        $(this).removeClass('input-error');
-    });
-
-    // next step
-    $('.registration-form .btn-next').on('click', function () {
-        var parent_fieldset = $(this).parents('fieldset');
-        var next_step = true;
-        parent_fieldset.find('input[required],input[type="emailx"]').each(function () {
-                 if ($(this).val() == "" || $(this).val() == "0") {
-                $(this).addClass('input-error');
-                next_step = false;
-            } else {
-                $(this).removeClass('input-error');
-            }
-        });
-
-        if (next_step) {
-            parent_fieldset.fadeOut(400, function () {
-                $(this).next().fadeIn();
-            });
-        }
-
-    });
-
-    // previous step
-    $('.registration-form .btn-previous').on('click', function () {
-        $(this).parents('fieldset').fadeOut(400, function () {
-            $(this).prev().fadeIn();
-        });
-    });
-
-    // submit
-    $('.registration-form').on('submit', function (e) {
-
-        $(this).find('input[required],input[type="emailx"]').each(function () {
-                if ($(this).val() == "" || $(this).val() == "0") {
-                e.preventDefault();
-                $(this).addClass('input-error');
-            } else {
-                $(this).removeClass('input-error');
-            }
-        });
-
-    });
-   
-});
-    </script>
-
 @endsection
