@@ -30,7 +30,18 @@
     <script src="../custom/js/bootstrap.min.js"></script>
 
 <!-- End of Modal -->
+<style type="text/css">
+    .wpadding{
+       padding-left:20px; 
+        padding-right:25px; 
+    }
+</style>
 
+<style type="text/css">
+    .wppadding{
+       padding-left:6px;  
+    }
+</style>
 
     <link href="../custom/css/style.css" rel="stylesheet">
 
@@ -132,9 +143,7 @@
     <!-- ##### Header Area Start ##### -->
 
     <header class="header-area">
-
    <div class="container-fluid top-header-area">
-
         <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="background-color:#37533c;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
@@ -147,10 +156,10 @@
               <div class="col-lg-4 col-6 text-left">
                  <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><span>     info@palatialtours.com</span></a>
+                      <i class="fa fa-envelope" style="color:pink;"></i><span style="color:yellow;">  info@palatialtours.com</span></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                               (+255)753 216 263
+                               <span style="color:yellow;">(+255)753 216 263</span>
                             </a>
                 </div>
             </div>
@@ -171,23 +180,13 @@
 
 
             <div class="col-lg-3 col-6 text-right">
-    <!--           <button class="button button1">2px</button>
-<button class="button button2">4px</button>
-<button class="button button3">8px</button>
-<button class="button button4">12px</button> -->
-
 <!-- btn btn-primary btn-square mr-2 -->
                       <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-twitter"></i></a>
       <a href="#"  class="btn btn-outline btn-primary" href=""><i class="fab fa-facebook-f"></i></a>
           <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-linkedin-in"></i></a>
            <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-instagram"></i></a>
 
-              
-                 <a href="/tailorForm"  class="btn btn-outline btn-success" style="color:yellow">Tailor Made</a>
-     <a href="/bookingTrip"  class="btn btn-outline btn-primary" style="color:yellow">My Booking</a>
-
             </div>
-
         </div>
     </div>
 
@@ -215,7 +214,6 @@
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
-
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
@@ -289,7 +287,6 @@
 
 
 
-
                                      <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-12">
@@ -297,7 +294,7 @@
                                            
                                        
   <div class="south-search-area">
-            <div class="row">
+            <div class="row wppadding">
                 <div class="col-12">
                     <div class="advanced-search-form">
                       
@@ -305,9 +302,8 @@
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                              <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
                                   @csrf
-                            <div class="row">
+                            <div class="row wpadding">
                                 <input type="hidden" name="_method" value="POST">
-
                                  <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="search" placeholder="any keyword">
@@ -315,9 +311,7 @@
                                 </div>
                               
                                 <div class="col-12 search-form-second-steps">
-                                       <div class="row">                                                                  
-                                    
-                                          <div class="col-12 col-md-6 col-lg-6">
+                                       <div class="row">                                          <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <input type="number" class="form-control" name="price" placeholder="maximum price">
                                     </div>
@@ -331,7 +325,7 @@
                                     <div class="more-filter">
                                         <a href="#" id="moreFilter">+ More filters</a>
                                     </div>
-                                    <!-- Submit -->
+                                 
                                     <div class="form-group mb-0" target="_blank">
                                         <button type="submit" class="btn btn-success" target="_blank" name="search2" value="search2">Search</button>
                                     </div>
@@ -342,14 +336,27 @@
                 </div>
         </div>
     </div>
-
-    </ul>                           
-
      </div>
                                 
 
 </li>
+<li>||</li>
+    <li><a href="#" class="btn btn-outline btn-success" style="color:yellow">Create My Safari</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/tailorForm" >Create New Safari(Tailor Maide)</a></li>
+                <li><a href="/tailorClientForm">My Existing Safari</a></li>
+                                                      
+                                    </ul>
+                                </li>
+
+    <a href="/bookingTrip"  class="btn btn-outline btn-primary tip" style="color:yellow" data-tip="my-tip">My Last Booking</a>
     </ul>
+
+<!-- Tooltip content -->
+<div id="my-tip" class="tip-content hidden" style="border-color:white;">
+      <h4>Tip title</h4>
+    <span>This is my tip content vvvvvvvvvvvvvvvvvvvvvvvvv</span>
+</div>
       </div>
      </div>
  </nav>
@@ -541,6 +548,21 @@
 
 
 
+
+
+<script> 
+    // jQuery code for initializing a tooltip 
+    $(document).ready(function () { 
+        // jQuery Attribute value selector to  
+        // select the specified element and  
+        // call the tooltip method on it 
+        $('[data-toggle="tooltip"]').tooltip(); 
+    }); 
+</script>
+
+
+
+
 <script type="text/javascript">
     //  function getURL(){
     //     url2=window.location.href;
@@ -572,6 +594,21 @@ else
     });
 </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        // Tooltips
+        $('.tip').each(function () {
+            $(this).tooltip(
+            {
+                html: true,
+                title: $('#' + $(this).data('tip')).html()
+            });
+        });
+    });
+</script>
 </body>
 <!-- END BODY -->
 </html>

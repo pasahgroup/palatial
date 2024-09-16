@@ -264,7 +264,7 @@
                                  <div class="single-featured-properties-slide">
                                             <div class="item active">
                  <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                  <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_holiday->days); ?> Days: $<?php echo e(number_format($popular_holiday->price),2); ?></span>
                 <div class="package-list-content">
                         <h3 class="package-list-title">

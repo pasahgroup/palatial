@@ -4,7 +4,6 @@
   <section class="bg-gray ">
         <div class="container">   
                   
-                 <a href="#"></a>
                <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="search_area search_area_two booking-tour">

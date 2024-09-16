@@ -18,6 +18,7 @@ use App\Models\departures;
 use App\Models\buyaddons;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class TailorMadeController extends Controller
 {
@@ -28,7 +29,10 @@ class TailorMadeController extends Controller
      */
     public function index()
     {
-        $datas = tailorMade::where('status','Active')->get();
+        $datas = tailorMade::where('status','Active')
+        ->orderby('id','desc')
+        ->get();
+        //dd($datas);
         return view('admins.tailorMade.tailorMade',compact('datas'));
     }
 
@@ -83,6 +87,27 @@ $status="Active";
      */
     public function store(Request $request)
     {
+
+//dd('store');
+
+ $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:255',
+         'last_name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'arrival_date' => 'required|Date',
+        'days' => 'required|integer',
+
+ 'min_budget' => 'required|numeric',
+
+        // 'password' => 'required|min:8',
+    ]);
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+    }else
+    {
+
      $hear_from = request('hear');
      
      $pin=rand(11111111, 99999999);
@@ -128,7 +153,7 @@ $status="Active";
         ]);
          }   
         }
-
+}
     return redirect()->back()->with('success','SuccessfulSubmitted');
     }
 
@@ -136,8 +161,12 @@ $status="Active";
     {
       $socialmedia = socialmedia::get();
        $tailorMades = tailorMade::get();
+         $programs = program::get();
+
        //dd($tailorMades);
-       return view('website.tailorMade.tailorEnquiryForm',compact('tailorMades','socialmedia'));
+      
+         return view('website.tailorMade.tailorEnquiryForm_new',compact('tailorMades','socialmedia','programs'));
+       // return view('website.tailorMade.tailorEnquiryForm',compact('tailorMades','socialmedia'));
     }
 
      public function tailorClientForm()
