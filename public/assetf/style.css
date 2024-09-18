@@ -504,7 +504,7 @@ img {
   .main-header-area .classynav ul li a {
     color:rgb(1, 19, 5);
     /*text-transform: uppercase;*/
-    font-weight: 600; }
+    font-weight: 300;}
   .main-header-area .nav-brand {
     line-height: 1; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
