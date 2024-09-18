@@ -341,15 +341,15 @@
 <li>||</li>
     <li><a href="#" class="btn btn-outline btn-success" style="color:yellow">Create My Safari</a>
                                     <ul class="dropdown">
-                                         <li><a href="/tailorForm" >Create New Safari(Tailor Maide)</a></li>
-                <li><a href="/tailorClientForm">My Existing Safari</a></li>
+                                         <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
+                <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari</a></li>
                                                       
                                     </ul>
                                 </li>
 
                                  <li><a href="#" class="btn btn-outline btn-primary" style="color:yellow">My Last Booking</a>
                                     <ul class="dropdown">
-                <li><a href="/bookingTrip">My Existing Safari</a></li>
+                <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
                                                       
                                     </ul>
                                 </li>
