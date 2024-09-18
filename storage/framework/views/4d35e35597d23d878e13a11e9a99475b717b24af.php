@@ -349,7 +349,7 @@
 
                                  <li><a href="#" class="btn btn-outline btn-primary" style="color:yellow">My Last Booking</a>
                                     <ul class="dropdown">
-                <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
+                <li><a href="/bookingTrip" class="btn-outline-primary">My Existing Safari</a></li>
                                                       
                                     </ul>
                                 </li>
