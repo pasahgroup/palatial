@@ -347,14 +347,14 @@
                                     </ul>
                                 </li>
 
-    <a href="/bookingTrip"  class="btn btn-outline btn-primary tip" style="color:yellow" data-tip="my-tip">My Last Booking</a>
+                                 <li><a href="#" class="btn btn-outline btn-primary" style="color:yellow">My Last Booking</a>
+                                    <ul class="dropdown">
+                <li><a href="/bookingTrip">My Existing Safari</a></li>
+                                                      
+                                    </ul>
+                                </li>
     </ul>
 
-<!-- Tooltip content -->
-<div id="my-tip" class="tip-content hidden" style="border-color:white;">
-      <h4>Tip title</h4>
-    <span>This is my tip content vvvvvvvvvvvvvvvvvvvvvvvvv</span>
-</div>
       </div>
      </div>
  </nav>
