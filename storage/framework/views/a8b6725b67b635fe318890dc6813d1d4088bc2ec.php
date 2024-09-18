@@ -1,5 +1,4 @@
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <style type="text/css">
     
@@ -46,26 +45,26 @@
   <!-- <link rel="stylesheet" href="../../css/style.css"> -->
   <section class="bg-gray ">
         <div class="container-fluid">
-            @isset($quickLinks->attachment)
+            <?php if(isset($quickLinks->attachment)): ?>
             <div class="package-list-wrap">            
-                         <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%; opacity:1">
+                         <img src="<?php echo e(URL::asset('/storage/uploads/'.$quickLinks->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%; opacity:1">
 
              
                 <div class="package-list-content">
                   <span>Home/Quick-Link </span>
                                      <h3 class="package-list-title">
-                        <a href="#"><b style="color: white;">{{ $quickLinks->quick_title }}</b></a>
+                        <a href="#"><b style="color: white;"><?php echo e($quickLinks->quick_title); ?></b></a>
                     </h3>
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12">
         <p style="color:#1da625; background-color:#fff; font-style:italic;">
-          {{$quickLinks->quick_description ?? ''}}.
+          <?php echo e($quickLinks->quick_description ?? ''); ?>.
        
         </p>         
     </div>
                       </div>
-                         @endisset
+                         <?php endif; ?>
 
            </div>
 
@@ -164,5 +163,7 @@
     <script src="../assetff/js/plugins.js"></script>
     <script src="../assetff/j../assetff/s/classy-nav.min.js"></script>
     <script src="../assetff/js/jquery-ui.min.js"></script>
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/payments/bookingTrip.blade.php ENDPATH**/ ?>

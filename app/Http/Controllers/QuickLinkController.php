@@ -88,7 +88,8 @@ class QuickLinkController extends Controller
 
 
  public function EditQuickLink($id)
-    {        
+    {    
+    //dd('print');    
    $pageTypes= Post::get();
       $quickLinks = quickLink::where('id',$id)
          ->get()->first();         

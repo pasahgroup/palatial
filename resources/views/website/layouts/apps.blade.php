@@ -59,8 +59,6 @@
     <link rel="stylesheet" href="../../../css/custom.css">
        <link rel="stylesheet" href="../../css/customAnimation.css">
        <link rel="stylesheet" href="../../css/customAnimation2.css">
-        <link rel="stylesheet" href="../../css/customNeon.css">
-           <link rel="stylesheet" href="../../css/customNeonButton.css">
            <link rel="stylesheet" href="../../css/customSportLight.css">
 
 

@@ -382,7 +382,7 @@
                         <div class="row">
                             <div class="col-lg-12 text-center">                         
                             
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now bb</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
 
                     <a href="/enquiry/<?php echo e($id); ?>" role="button" class="btn btn-primary float-right">Enquiry</a>
                             </div>
@@ -443,30 +443,20 @@
 
           
 
-<?php if(session('create_category_error')): ?>      
-<script type="text/javascript">
-    $('#bookNow').modal('show');
-</script>
-<?php endif; ?>
                 <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>" class="registration-form">
                     <?php echo csrf_field(); ?>
+
                    
-                  <?php if($errors->any()): ?>
-    <div class="alert alert-danger">
-        <ul>
-            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <li><?php echo e($error); ?></li>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </ul>
-    </div>
-<?php endif; ?>
-                    <!-- progressbar -->
+               <!-- progressbar -->
                     <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
                         <li id="personal"><strong>Tour Information:</strong></li>
                         <li id="payment"><strong>Other Information</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
                     </ul>
+                      <div class="alert alert-danger print-error-msg" style="display:none">
+                        <ul></ul>
+                    </div> 
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
@@ -547,7 +537,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Adults (>16 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="adults" min="0">
+                                        <input type="number" class="zt-control" name="adults" min="0" value="0">
                                     </div>
                                 </div>
   </div>
@@ -556,13 +546,13 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Teens (12-14 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="teens" min="0">
+                                        <input type="number" class="zt-control" name="teens" min="0" value="0">
                                     </div>
                                  </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Children (5-12 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="children" min="0">
+                                        <input type="number" class="zt-control" name="children" min="0" value="0">
                                     </div>
                                  </div>
   </div>
@@ -695,91 +685,44 @@
   </div>
 </div>
 
-
-
-
-<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
-<!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
-<!-- 
 <script type="text/javascript">
+    $('#msform').submit(function(e) {
+        e.preventDefault();
+       
+       
+        var url = $(this).attr("action");
+        let formData = new FormData(this);
+  
+        $.ajax({
+                type:'POST',
+                url: url,
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: (response) => {
+                    alert('Form submitted successfully');
+                      //alert(base_url);
+                    
+                    $("#msform").trigger("reset");
+                    // url: APP_URL + "/save_favorite",
+                    //$('#bookNow form :input').val("");
+                        // $(this).find('form').trigger('reset');
+
+                     //location.replace(url + "/login")
+                    
+                //location.reload();
+                },
+                error: function(response){
+                    $('#msform').find(".print-error-msg").find("ul").html('');
+                    $('#msform').find(".print-error-msg").css('display','block');
+                    $.each( response.responseJSON.errors, function( key, value ) {
+                        $('#msform').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+                    });
+                }
+        });      
+    });
     
-$(document).ready(function(){
-var current_fs, next_fs, previous_fs; //fieldsets
-var opacity;
-var current = 1;
-var steps = $("fieldset").length;
-
-setProgressBar(current);
-$(".next").click(function(){
-
-current_fs = $(this).parent();
-next_fs = $(this).parent().next();
-
-//Add Class Active
-$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-//show the next fieldset
-next_fs.show();
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-next_fs.css({'opacity': opacity});
-},
-duration: 500
-});
-setProgressBar(++current);
-});
-
-$(".previous").click(function(){
-
-current_fs = $(this).parent();
-previous_fs = $(this).parent().prev();
-
-//Remove class active
-$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-//show the previous fieldset
-previous_fs.show();
-
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-previous_fs.css({'opacity': opacity});
-},
-duration: 500
-});
-setProgressBar(--current);
-});
-
-function setProgressBar(curStep){
-var percent = parseFloat(100 / steps) * curStep;
-percent = percent.toFixed();
-$(".progress-bar")
-.css("width",percent+"%")
-}
-
-$(".submit").click(function(){
-return false;
-})
-
-});
-</script> -->
-
-
+</script>
 
    
     <script type="text/javascript">        
@@ -873,9 +816,6 @@ $('#myTab a').on('click', function (event) {
 
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
-
-
-
 
 
 
