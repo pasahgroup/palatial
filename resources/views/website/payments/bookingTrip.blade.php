@@ -1,145 +1,44 @@
 @extends('website.layouts.apps')
 @section('content')
 
-<style type="text/css">
-    
-    .booking-btn {
-  border: 0px solid #647545;
-  padding: 10px 38px;
-  color:#fff;
-  display: block;  
-  /*background-color: #3f403d;*/
-  /*background-color: #2e4432;*/
-  background-color: #2e4432;
-  transition: all ease-in-out 0.5s;
-  -webkit-transition: all ease-in-out 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -ms-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 30px;
-}
-
- .header-btn {
-  border: 0px solid #647545;
-  padding: 1px 2px;
-  color:#fff;
-  display: block;  
-  /*background-color: #3f403d;*/
-  /*background-color: #2e4432;*/
-  background-color: #2e4432;
-  transition: all ease-in-out 0.5s;
-  -webkit-transition: all ease-in-out 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -ms-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 30px;
-}
-</style>
-  <!-- <link rel="stylesheet" href="../../css/style.css"> -->
-  <section class="bg-gray ">
-        <div class="container-fluid">
-            @isset($quickLinks->attachment)
-            <div class="package-list-wrap">            
-                         <img src="{{URL::asset('/storage/uploads/'.$quickLinks->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%; opacity:1">
-
-             
-                <div class="package-list-content">
-                  <span>Home/Quick-Link </span>
-                                     <h3 class="package-list-title">
-                        <a href="#"><b style="color: white;">{{ $quickLinks->quick_title }}</b></a>
-                    </h3>
-                </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-12">
-        <p style="color:#1da625; background-color:#fff; font-style:italic;">
-          {{$quickLinks->quick_description ?? ''}}.
-       
-        </p>         
-    </div>
-                      </div>
-                         @endisset
-
-           </div>
-
-        </div>
-    </div>
-    </section>
-
-<hr>
-
-
-
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
 
     <div class="container" style="padding-bottom:0px;">  
             
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">My Booking Trip</span></h2>
-
-      
-      <div class="px-xl-5 pb-3">     
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+        <h4 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">My Booking Trip</span></h4>
     
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149"> 
 
-
-
-    <div class="container" style=" padding-bottom:0px;">
-
-   <div class="south-search-area">
-        <div class="containe">
-            <div class="row">
-                <div class="col-12">
-                               
-  
   <div class="col-12 col-sm-6 col-xl-3" style="padding-left:20px;padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
-                           
-                            <!-- Featured Properties Slides -->
-                            <div class="featured-properties-slides owl-carousel">
-                                 
-
-
-
-           <div class="single-featured-properties-slide">
-
-             <div class="item active">
-         <div class="package-list-wrap ">
-                                     
-                                        </div>
-      </div>
-                         
-
+                            <div class="widget-title">
+                                  <form  method="post" id="post_form" action="{{ route('viewTrip') }}">
+                        @csrf
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-8">
+                                    <label style="color:yellow;">Enter Your Pin No:</label>
+                                    <div class="form-group">                                                                 
+                                    <input type="number" name="pin" placeholder="pin no" min="2">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                    <label for=""></label>
+                                    <div class="form-group">     
+                                     <div class="col-lg-12 mt-3">
+                                    <button type="submit" class="btn btn-success">Search</button>
+                                </div> 
+                                </div>                            
                       
 
-
-
-
-                            </div>
+                                </div>    
+                              
+                              </form>
+                            </div>                           
                         </div>
                     </div>
 
-
-
-
-                     
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Advance Search Area End ##### -->
-</div>
-
-
-       </div>     
+     
     </div>
 </div>
 </section>
