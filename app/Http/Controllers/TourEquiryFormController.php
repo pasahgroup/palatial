@@ -327,7 +327,9 @@ public function viewTripf($pin)    {
     {
        $validatedData = $request->validate([
             'first_name' => 'required',
-               'last_name' => 'required',            
+               'last_name' => 'required',
+                'last_name' => 'required',
+                 'last_name' => 'required',            
             'email' => 'required',    
                // 'email' => 'required|email|unique:users',          
         ], [
@@ -944,18 +946,14 @@ $id=request('tour_id');
         ->select('accommodations.*','accommodations.type',
         'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
         ->get();
-
-
+        
          if($datas == "[]"){
       return redirect()->back()->with('info','The Program has no Itinery Data');
   };
 
 
 
-
-
  $socialmedia = socialmedia::get();
-
 $date=date('d-M-Y');
 // $data["email"] = "palatialtours@gmail.com";
 $data["email"] = request('email');
@@ -988,7 +986,6 @@ foreach ($files as $file){
 
 
 //dd('Mail sent successfully');
-
 
       return redirect()->route('viewTripf', [$pin]);
        // return redirect()->back()->with('success','Tour Summary Cost created successful');
