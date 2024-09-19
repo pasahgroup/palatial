@@ -342,7 +342,7 @@
     <li><a href="#" class="btn btn-outline btn-success" style="color:yellow">Create My Safari</a>
                                     <ul class="dropdown">
                                          <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
-                <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari</a></li>
+                <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari-Tailor Made</a></li>
                                                       
                                     </ul>
                                 </li>

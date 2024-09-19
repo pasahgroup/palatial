@@ -184,6 +184,8 @@ $status="Active";
      */
     public function show($id)
     {   
+        //dd('eee');
+
         $tour_addon='tailor_made';
         $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
         ->where('itineraries.tour_addon','tailor_made')
@@ -206,6 +208,7 @@ $status="Active";
              //dd($id);
             return view('admins.tailorMade.add',compact('programs','accommodations','destinations','tour_addon'));
         };
+
         return view('admins.itinerary.index',compact('datas','id','tour_addon'));
     }
 
@@ -229,6 +232,8 @@ $status="Active";
         ->select('accommodations.accommodation_name','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
           ->get();
 
+//dd('ddd');
+
          if($datas == "[]"){
         $routes = tailorMade::where('id',$id)->first();
             $accommodations = accommodation::get();
@@ -236,6 +241,8 @@ $status="Active";
              //dd($id);
             return view('admins.tailorMade.add',compact('routes','accommodations','destinations','tour_addon','tailorTours'));
         };
+
+       // dd('dd');
         return view('admins.itinerary.index',compact('datas','id','tour_addon','programs','tailorTours'));
     }
     

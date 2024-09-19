@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 
@@ -24,12 +23,12 @@
 
  <section class="content-header">
       <div class="container-fluid">
-       Customer name: <b>{{$routes->first_name}} {{$routes->last_name}}</b>
+       Customer name: <b><?php echo e($routes->first_name); ?> <?php echo e($routes->last_name); ?></b>
                 <br/>
                       
-     <form  method="post" id="post_form" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
- @csrf
-            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+     <form  method="post" id="post_form" action="<?php echo e(route('storeTailorMade',$routes->id)); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+ <?php echo csrf_field(); ?>
+            <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
         <div class="row">     
      <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="form-group">
@@ -38,9 +37,9 @@
                                     <div class="form-group icon_down">
                                         <select class="form-control" name="tour_name">
                                             
-                                              @foreach($tailorTours as $tailorTour)
-                                              <option value="{{$tailorTour->id}}">{{$tailorTour->tour_name}}</option>
-                                            @endforeach
+                                              <?php $__currentLoopData = $tailorTours; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tailorTour): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                              <option value="<?php echo e($tailorTour->id); ?>"><?php echo e($tailorTour->tour_name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
                                 </div>
@@ -89,10 +88,10 @@
                     <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     </div>
-                    <input type="hidden" name="tour_addon" value="{{$tour_addon}}">
-                    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-                    <input type="hidden" name="days" value="{{ $routes->days }}">
-                    <input type="hidden" name="customer_id" value="{{ $routes->id }}">
+                    <input type="hidden" name="tour_addon" value="<?php echo e($tour_addon); ?>">
+                    <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
+                    <input type="hidden" name="days" value="<?php echo e($routes->days); ?>">
+                    <input type="hidden" name="customer_id" value="<?php echo e($routes->id); ?>">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group row">
                           
@@ -104,36 +103,37 @@
                         </div>
                         </div>
 
-                        @for($i = 1; $i <= $routes->days; $i++)
-                        {{-- Days Itinerary --}}
+                        <?php for($i = 1; $i <= $routes->days; $i++): ?>
+                        
                        <div class="col-12" id="accordion">
                             <div class="card">
-                                <a class="d-block w-100" data-toggle="collapse" href="#collapse{{ $i }}">
+                                <a class="d-block w-100" data-toggle="collapse" href="#collapse<?php echo e($i); ?>">
                                     <div class="card-header bg-primary">
                                         <h4 class="card-title w-100">
-                                           Day {{ $i }}
+                                           Day <?php echo e($i); ?>
+
                                         </h4>
                                     </div>
                                 </a>
-                                <div id="collapse{{ $i }}" class="collapse @if($i==1)show @endif" data-parent="#accordion">
+                                <div id="collapse<?php echo e($i); ?>" class="collapse <?php if($i==1): ?>show <?php endif; ?>" data-parent="#accordion">
                                     <div class="color-palette-set">
                                         <div class="bg-primary disabled color-palette">
                                     <div class="card-body">
-                                      {{-- Days  data  starts here --}}
+                                      
 
             <div class="row" style="padding:10px">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-group row">
-                      <label class="col-sm-2 col-form-label">Days {{ $i }} Title </label>
+                      <label class="col-sm-2 col-form-label">Days <?php echo e($i); ?> Title </label>
                       <div class="col-sm-10">
-                        <input type="hidden" name="day[]" value="{{ $i }}">
-                        <input type="text" name="itinerary_title[]" class="form-control" placeholder="Day {{ $i }} title">
+                        <input type="hidden" name="day[]" value="<?php echo e($i); ?>">
+                        <input type="text" name="itinerary_title[]" class="form-control" placeholder="Day <?php echo e($i); ?> title">
                       </div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group row">
-                          <label for="inputEmail3" class="col-sm-2 col-md-2 col-form-label">Day {{ $i }} Description</label>
+                          <label for="inputEmail3" class="col-sm-2 col-md-2 col-form-label">Day <?php echo e($i); ?> Description</label>
                           <div class="col-sm-10 col-md-10">
                             <textarea name="itinerary_description[]" class="form-control" cols="30" rows="2"></textarea>
                           </div>
@@ -147,9 +147,9 @@
                               <div class="col-sm-8 col-md-8">
                                 <select name="destination_id[]" id="" class="form-control"  required="">
                                     <option value="">--Select Destination--</option>
-                                    @foreach ($destinations as $destination)
-                                    <option value="{{ $destination->id }}">{{ $destination->destination_name }}</option>
-                                    @endforeach
+                                    <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destination): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($destination->id); ?>"><?php echo e($destination->destination_name); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                 </select>
                               </div>
@@ -189,9 +189,9 @@
                         <div class="col-sm-8 col-md-8">
                           <select name="accommodation_id[]" id="" class="form-control"  required="">
                               <option value="">--Select Accommodation--</option>
-                              @foreach ($accommodations as $accommodation)
-                            <option value="{{$accommodation->id }}">{{ $accommodation->accommodation_name }}</option>
-                              @endforeach
+                              <?php $__currentLoopData = $accommodations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $accommodation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($accommodation->id); ?>"><?php echo e($accommodation->accommodation_name); ?></option>
+                              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                           </select>
                         </div>
                           </div>
@@ -216,12 +216,12 @@
                         </div>
                         </div>
                           </div>
-                        {{-- Days data ends here --}}
+                        
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        @endfor
+                        <?php endfor; ?>
 
                          </div>
 
@@ -241,4 +241,6 @@
 
   </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/tailorMade/add.blade.php ENDPATH**/ ?>

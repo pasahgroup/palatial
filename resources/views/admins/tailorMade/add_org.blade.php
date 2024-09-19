@@ -3,8 +3,7 @@
   @section('contents')
 
 <!-- Content Wrapper. Contains page content -->
-
-<div class="content-wrapper" style="background-color:#9bbda2;">
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -22,22 +21,30 @@
       </div><!-- /.container-fluid -->
     </section>
 
- <section class="content-header">
-      <div class="container-fluid">
-       Customer name: <b>{{$routes->first_name}} {{$routes->last_name}}</b>
+    <!-- Main content -->
+    <section class=" container-fluid content">
+        <div class="card-body">
+          <div class="col-md-12">
+            <div class="card card-outline card-info">
+              <div class="card-header">
+              </div>
+              <div class="container-fluid x_content">
+                   Customer name: <b>{{$routes->first_name}} {{$routes->last_name}}</b>
                 <br/>
-                      
-     <form  method="post" id="post_form" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
- @csrf
+                             <form  method="post" id="post_form" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                @csrf
             <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-        <div class="row">     
-     <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card-body">
+                    <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">
                      
+                         <div class="col-lg-6 col-md-12 col-sm-12">
           <label for="">Tour name:</label>
                                     <div class="form-group icon_down">
                                         <select class="form-control" name="tour_name">
-                                            
+                                             </option>
                                               @foreach($tailorTours as $tailorTour)
                                               <option value="{{$tailorTour->id}}">{{$tailorTour->tour_name}}</option>
                                             @endforeach
@@ -45,10 +52,8 @@
                                     </div>
                                 </div>
                         </div>
-
-
-
-      <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                    </div>
+                     <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group row">
                       <label class="control-label" for="price">Physical rating</label>
                       <select class="form-control" name="physical_rating">
@@ -60,32 +65,28 @@
           </select>                        </div>
                     </div>
 
-</div>
-<div class="row">
-              
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <label class="control-label" for="currency">Total cost</label>
-            <input name="price" type="number" min="0" >
-          </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                   <label class="control-label" for="price">Total cost</label>
+                    <input name="price" type="number" min="0" >
+               </div>
                
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <label class="control-label" for="currency">Currency
+                 <div class="col-md-5 col-sm-6 col-xs-12">
+                    <label class="control-label" for="currency">Currency</label>
 
             <select class="form-control" name="currency">
               <option value="0">--Select Currency--</option>
               <option value="USD">USD</option>
               <option value="Tsh">Tsh</option>
-          </select></label>
+          </select>
           </div>
-             
                
-                <div class="col-md-5 col-sm-6 col-xs-12">
+               
+                <div class="col-md-6 col-sm-6 col-xs-12">
                    <label class="control-label" for="photo">Tour Photo</label>
                     <input name="attachment[]" type="file" id="main_img" multiple>
                </div>
-                </div> 
-
-  <div class="card-body">
+       
+                <div class="card-body">
                     <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     </div>
@@ -224,8 +225,8 @@
                         @endfor
 
                          </div>
-
-        <div class="form-group row">
+                           </div>
+          <div class="form-group row">
           <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-3">
               <div>
                 <!--  <a href="/tailorMade" role="button" class="btn btn-success float-left">Return to List</a> -->
@@ -233,12 +234,13 @@
               </div>
                   </div>
                 </div>
-     </form>
 
-      </div><!-- /.container-fluid -->
+            </form>
+
+
+          <!-- /.col-->
+        </div>
     </section>
-
-
   </div>
 
 @endsection
