@@ -336,7 +336,7 @@ public function viewTripf($pin)    {
             'first_name.required' => 'First name field is required.',
               'last_name.required' => 'Last name field is required.',    
                'phone.required' => 'Phone number field is required.',  
-                'travel_date.required' => 'Phone number field is required.',
+                'travel_date.required' => 'Travel date field is required.',
 
             'email.required' => 'Email field is required. test 2',
             'email.email' => 'Email field must be email address.',            
