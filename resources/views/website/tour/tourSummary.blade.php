@@ -577,23 +577,13 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-12">
-<div class="col-8">
-                                      
-                                  </div>
-                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>
-                               
-                                 <div class="col-4">                                      
-                         <div id="waiting">                                      
-                                  </div>
-
-                                  </div>
-                                   </div>
+                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>                               
+</div>
 
 
              
               <div class="col-md-6">
- 
-                           
+                       
                                  <label for="">Tour Addon:</label>
                                    
                                                         <select class="selectpicker search-fields form-control" name="addon">
@@ -700,7 +690,7 @@
        
         var url = $(this).attr("action");
         let formData = new FormData(this);
-        document.getElementById('waiting').innerText="Please wait ............";
+        // document.getElementById('waiting').innerText="Please wait ............";
           $(".btn-submit").prepend('<i class="fa fa-spinner fa-spin"></i>');
         $(".btn-submit").attr("disabled", 'disabled');
 
