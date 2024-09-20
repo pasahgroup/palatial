@@ -425,7 +425,7 @@
     </section>
 
 
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:50px;">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:90px;">
  
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -511,7 +511,7 @@
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
-                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
@@ -571,7 +571,7 @@
 
                         </div> 
 
-                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>                    
+                             <button type="button" class="close btn-secondary float-left" data-dismiss="modal" style="background-color:#d0794e">Close2</button>                    
                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                         <input type="button" name="next" class="next action-button float-right" value="Next" /> 
                     </fieldset>
@@ -653,7 +653,7 @@
                         
                         <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
                      
-                        <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                        <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                            <button type="submit" class="btn btn-success float-right btn-submit">Submit</button>
                     </fieldset>
