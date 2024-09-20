@@ -1,21 +1,20 @@
-<!-- <link rel="stylesheet" href="../../../css/bootstrap431.css"> -->
 
-<?php $__env->startSection('content'); ?>
+<!-- <link rel="stylesheet" href="../../../css/bootstrap431.css"> -->
+@extends('website.layouts.apps')
+@section('content')
 <!-- <link rel="stylesheet" href="../../../css/mform.css"> -->
- <section class="bg-gray" style="margin-top:25px;">
+
 <div class="container">
- <div class="col-lg-3 col-md-12 col-sm-12">
-           </div>
-           <div class="col-lg-7 col-md-12 col-sm-12">
-     
-        <div class="search_area search_area_two"> 
-            <div class="card">
-                <div class="card-body">
+    <div class="row justify-content-center">
+         
+        <div class="">
+        <div class="search_area search_area_two booking-tour"> 
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                 <h4 id="heading">Enquiry Form</h4>
                 <p>Fill all form field to go to next step</p>
                 <!-- tourForm -->
-                <form id="msform"  method="post"  action="<?php echo e(route('enquiry.store')); ?>">
-                    <?php echo csrf_field(); ?>
+                <form id="msform"  method="post"  action="{{ route('enquiry.store') }}">
+                    @csrf
                     <!-- progressbar -->
                     <ul id="progressbar">
                       <li class="active" id="account"><strong>Personal Details</strong></li>
@@ -89,11 +88,11 @@
                                 <div class="form-group">
                                         <select class="form-control" name="tour_id">
 
-                                              <option value="<?php echo e($tours->id); ?>"><?php echo e($tours->tour_name); ?></option>
-                                              <?php $__currentLoopData = $programs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $program): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                              <option value="{{$tours->id}}">{{$tours->tour_name}}</option>
+                                              @foreach($programs as $program)
                                             
-                                            <option value="<?php echo e($program->id); ?>"><?php echo e($program->tour_name); ?></option>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="{{$program->id}}">{{$program->tour_name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -166,11 +165,10 @@
                 </form>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 </div> 
-</section>
-<?php $__env->stopSection(); ?>
+@endsection
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
 
@@ -252,4 +250,3 @@ return false;
 });
 </script>
                                                          
-<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/enquiries/enquiry.blade.php ENDPATH**/ ?>

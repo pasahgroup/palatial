@@ -3,13 +3,15 @@
 @extends('website.layouts.apps')
 @section('content')
 <!-- <link rel="stylesheet" href="../../../css/mform.css"> -->
-
+ <section class="bg-gray" style="margin-top:25px;">
 <div class="container">
-    <div class="row justify-content-center">
-         
-        <div class="">
-        <div class="search_area search_area_two booking-tour"> 
-            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+ <div class="col-lg-3 col-md-12 col-sm-12">
+           </div>
+           <div class="col-lg-7 col-md-12 col-sm-12">
+     
+        <div class="search_area search_area_two"> 
+            <div class="card">
+                <div class="card-body">
                 <h4 id="heading">Enquiry Form</h4>
                 <p>Fill all form field to go to next step</p>
                 <!-- tourForm -->
@@ -165,9 +167,10 @@
                 </form>
             </div>
         </div>
-    </div>
+        </div>
     </div>
 </div> 
+</section>
 @endsection
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>

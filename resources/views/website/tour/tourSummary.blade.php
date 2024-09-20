@@ -2,6 +2,11 @@
 @extends('website.layouts.apps')
 @section('content')
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
   <section class="bg-gray">
         <div class="container">
             <div class="package-list-wrap ">
@@ -65,7 +70,7 @@
               <div class="tab-pane row active" id="tab-I">
 
                    <form method="GET" action="{{ route('safaris.show','print') }}">
-                    @crsf
+                    @csrf
                  <div class="col-md-10 col-sm-10">
                                      </div>
                                        <div class="col-md-2 col-sm-2">
@@ -418,9 +423,7 @@
     </section>
 
 
-
-
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:50px;">
  
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -438,18 +441,16 @@
             <div class="form-wrap">
                 <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
-
-          
+                
 
                 <form id="msform"  method="post"  action="{{ route('tourForm.store') }}" class="registration-form">
                     @csrf
-
                    
                <!-- progressbar -->
                     <ul id="progressbar">
-                      <li class="active" id="account"><strong>Personal Details</strong></li>
-                        <li id="personal"><strong>Tour Information:</strong></li>
-                        <li id="payment"><strong>Other Information</strong></li>
+                      <li class="active" id="account"><strong>Step 1:</strong></li>
+                        <li id="personal"><strong>Step 2:</strong></li>
+                        <li id="payment"><strong>Step 3:</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
                     </ul>
                       <div class="alert alert-danger print-error-msg" style="display:none">
@@ -521,8 +522,6 @@
                              </div>
 
                        
-
-
              <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
@@ -535,7 +534,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Adults (>16 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="adults" min="0" value="0">
+                                        <input type="number" class="zt-control" name="adults" min="0" value="1">
                                     </div>
                                 </div>
   </div>
@@ -555,45 +554,18 @@
                                  </div>
   </div>
 
-
+<div class="row">
+ <div class="col-md-12">
         <div class="form-group">
             <label for="">Tour type:</label>
                    <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
           <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
         </div>
+    </div>
 
-                                 
+                                 </div>                     
 
-                    <div class="form-group">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                   <label for="">Accommodation:</label>
-                                    <div class="form-group">
-                                       <select class="form-control" name="accomodation">
-                                            <option value="0">--Select Accomodation--</option>
-                                            <option>Basic</option>
-                                             <option>Comfort</option>
-                                              <option>Deluxe</option>
-                                               <option>Mix</option>
-                                                <option>Not Sure</option>
-                                           
-                                        </select>
-                                    </div>
-                                </div>
-               
-
-
-      <div class="col-lg-6 col-md-6 col-sm-6">
-                                      <label for="">Tour Addon:</label>
-                                    <div class="form-group">
-                                      <select class="selectpicker search-fields form-control" name="addon">
-              <option value="0" selected>None</option>
-              @foreach ($addons as $addon)
-            <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
-              @endforeach
-          </select>
-                                    </div>
-                                </div>
-             </div>
+                
 
                         </div> 
 
@@ -605,10 +577,38 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-12">
-                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>
+                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>                               </div>
+
+
+             
+              <div class="col-md-6">
+ 
+                           
+                                 <label for="">Tour Addon:</label>
+                                   
+                                                        <select class="selectpicker search-fields form-control" name="addon">
+              <option value="0" selected>None</option>
+              @foreach ($addons as $addon)
+            <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
+              @endforeach
+          </select>
                                 </div>
 
-                              
+               <div class="col-md-6"> 
+                           
+                                   <label for="">Accommodation:</label>
+                                   
+                                       <select class="form-control" name="accomodation">
+                                            <option value="0">--Select Accomodation--</option>
+                                            <option>Basic</option>
+                                             <option>Comfort</option>
+                                              <option>Deluxe</option>
+                                               <option>Mix</option>
+                                                <option>Not Sure</option>
+                                           
+                                        </select>
+                                   
+                                </div>                
     <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
@@ -653,7 +653,7 @@
                      
                         <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
-                           <button type="submit" class="btn btn-success float-right">Submit</button>
+                           <button type="submit" class="btn btn-success float-right btn-submit">Submit</button>
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -690,7 +690,11 @@
        
         var url = $(this).attr("action");
         let formData = new FormData(this);
-  
+        document.getElementById('waiting').innerText="Please wait ............";
+          $(".btn-submit").prepend('<i class="fa fa-spinner fa-spin"></i>');
+        $(".btn-submit").attr("disabled", 'disabled');
+
+
         $.ajax({
                 type:'POST',
                 url: url,
@@ -699,6 +703,8 @@
                 processData: false,
                 success: (response) => {
                     alert('Form submitted successfully');
+                      $(".btn-submit").find(".fa-spinner").remove();
+                      $(".btn-submit").removeAttr("disabled");
                       //alert(base_url);
                     
                     $("#msform").trigger("reset");
@@ -708,13 +714,15 @@
 
                      //location.replace(url + "/login")
                     
-                //location.reload();
+                location.reload();
                 },
                 error: function(response){
                     $('#msform').find(".print-error-msg").find("ul").html('');
                     $('#msform').find(".print-error-msg").css('display','block');
                     $.each( response.responseJSON.errors, function( key, value ) {
                         $('#msform').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+                          $(".btn-submit").find(".fa-spinner").remove();
+                      $(".btn-submit").removeAttr("disabled");
                     });
                 }
         });      

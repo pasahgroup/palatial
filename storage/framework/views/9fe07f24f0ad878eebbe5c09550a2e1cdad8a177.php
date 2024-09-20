@@ -1,6 +1,11 @@
 <?php $__env->startSection('content'); ?>
  <section class="bg-gray">
         <div class="container">
+           <div class="col-lg-3 col-md-12 col-sm-12">
+           </div>
+           <div class="col-lg-6 col-md-12 col-sm-12">
+             <div class="card">
+                        <div class="card-body">
       <div class="modal-content">
      
         <div class="modal-body">
@@ -50,14 +55,14 @@
 
                     
              <div class="form-group">
-                               <div class="col-lg-8 col-md-8 col-sm-8">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <input type="text" name="first_name" placeholder="first name"/> 
                     
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
                                            <input type="text" name="last_name" placeholder="last name" /> 
                                     </div>
@@ -65,26 +70,27 @@
   </div>
 
      <div class="form-group">
-                                   <div class="col-lg-4 col-md-4 col-sm-4">                                    
+                                  <div class="col-lg-6 col-md-6 col-sm-6">                                    
                                     <div class="form-group">
                                            <input type="text" name="phone" placeholder="Phone(+00 00 000 000)"/>                     
                                     </div>
                                 </div>
 
-                                  <div class="col-lg-4 col-md-4 col-sm-4">
+                                  <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group">
                                             <input type="email" name="email" id="email" placeholder="email"/> 
 
                                     </div>
                                 </div>
-                                  <div class="col-lg-4 col-md-4 col-sm-4">
+  </div>
+
+  <div class="form-group">
+ <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                              <input type="text" name="country" placeholder="Nationality" /> 
                                     </div>
                                 </div>
-  </div>
-
-
+                              </div>
     <div class="form-group">
                                    <div class="col-lg-4 col-md-4 col-sm-4">
                                     <label for="">Adults (>16 yrs):</label>
@@ -123,25 +129,7 @@
                                     </div>
                                 </div>
   </div>
-                          
-
-                        </div> 
-                             <a href="/" class="previous action-button-previous float-left" style="background-color:#d0794e">Close</a>
-                              <!-- <a href="/home" role="button" class="btn btn-primary">Close</a> -->
-                        <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-
-                            <div class="form-card">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4 class="fs-title">Tour Information:|Step 2 - 3</h4>
-                                </div>
-                             </div>
-
-                       
-
- <div class="form-group">
+   <div class="form-group">
                                       <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Tour Type:</label>
                                     <div class="form-group">
@@ -170,6 +158,22 @@
                                     </div>
                                 </div>
   </div>
+                          
+
+                        </div> 
+                             <a href="/" class="previous action-button-previous float-left" style="background-color:#d0794e">Close</a>
+                              <!-- <a href="/home" role="button" class="btn btn-primary">Close</a> -->
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+
+                            <div class="form-card">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="fs-title">Tour Information:|Step 2 - 3</h4>
+                                </div>
+                             </div>
+
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="form-group">
@@ -271,6 +275,12 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-12 col-sm-12">
+           </div>
+</div>
 </section>
 
 
