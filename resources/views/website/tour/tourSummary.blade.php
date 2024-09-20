@@ -577,7 +577,17 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-12">
-                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>                               </div>
+<div class="col-8">
+                                      
+                                  </div>
+                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>
+                               
+                                 <div class="col-4">                                      
+                         <div id="waiting">                                      
+                                  </div>
+
+                                  </div>
+                                   </div>
 
 
              
@@ -704,7 +714,7 @@
                 success: (response) => {
                     alert('Form submitted successfully');
                       $(".btn-submit").find(".fa-spinner").remove();
-                      $(".btn-submit").removeAttr("disabled");
+                     $(".btn-submit").removeAttr("disabled");
                       //alert(base_url);
                     
                     $("#msform").trigger("reset");
@@ -721,9 +731,11 @@
                     $('#msform').find(".print-error-msg").css('display','block');
                     $.each( response.responseJSON.errors, function( key, value ) {
                         $('#msform').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
-                          $(".btn-submit").find(".fa-spinner").remove();
-                      $(".btn-submit").removeAttr("disabled");
+
                     });
+
+                    $(".btn-submit").find(".fa-spinner").remove();
+                $(".btn-submit").removeAttr("disabled");
                 }
         });      
     });
