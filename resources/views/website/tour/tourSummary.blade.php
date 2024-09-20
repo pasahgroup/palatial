@@ -1,7 +1,50 @@
 
 @extends('website.layouts.apps')
 @section('content')
+<style>
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+</style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -509,7 +552,7 @@
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
-                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
@@ -563,13 +606,13 @@
         </div>
     </div>
 
-                                 </div>                     
-
-                
+                                 </div>                    
+            
 
                         </div> 
 
-                             <button type="button" class="close previous btn-secondary float-left" data-dismiss="modal" style="background-color:#d0794e">Close2</button>                    
+                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
+
                         <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                         <input type="button" name="next" class="next action-button float-right" value="Next" /> 
                     </fieldset>
@@ -651,9 +694,9 @@
                         
                         <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
                      
-                        <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                        <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
-                           <button type="submit" class="btn btn-success float-right btn-submit">Submit</button>
+                           <button type="submit" class="btn btn-success float-right btn-submit" style="padding: 8px 30px;">Submit</button>
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
