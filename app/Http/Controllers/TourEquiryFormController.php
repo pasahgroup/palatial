@@ -638,10 +638,10 @@ foreach ($files as $file){
 });
 
 
-
-
+  return response()->json(['url' => route('viewTripf', [$pin])]);
+  
   //return redirect()->route('viewTripf', [$pin]);
- return redirect()->back()->with('success','Tour Summary Cost created successful');
+ //return redirect()->back()->with('success','Tour Summary Cost created successful');
 
     }
 

@@ -758,8 +758,10 @@
                         // $(this).find('form').trigger('reset');
 
                      //location.replace(url + "/login")
-                    
-                location.reload();
+                   
+                   // window.location = response.url;
+                   location.reload();
+                   window.location = response.url;
                 },
                 error: function(response){
                     $('#msform').find(".print-error-msg").find("ul").html('');
