@@ -1,53 +1,10 @@
 
 @extends('website.layouts.apps')
 @section('content')
-<style>
-.button {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 8px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
 
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #04AA6D;
-}
-
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #f44336;
-}
-
-.button4 {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
-}
-
-.button5 {
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-}
-</style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+      <script src="../js/jquery361.min.js"></script>
+     <link rel="stylesheet" href="../css/font621.min.css">
+ 
 
   <section class="bg-gray">
         <div class="container">

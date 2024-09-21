@@ -23,11 +23,12 @@
   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
    <link rel="icon" href="../assetf/img/core-img/favicon.ico">
    <link rel="stylesheet" href="../assetf/style.css">
-   <link rel="stylesheet" href="../assets/css/button.css">
+   <!-- <link rel="stylesheet" href="../assets/css/button.css"> -->
 
     <!-- Style CSS -->
 <!-- Custom css -->
  
+
   <script src="../custom/js/jquery.min.js"></script>
     <script src="../custom/js/bootstrap.min.js"></script>
 
