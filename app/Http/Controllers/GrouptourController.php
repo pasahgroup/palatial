@@ -39,7 +39,6 @@ class GrouptourController extends Controller
         ->get();
 
 //dd($safaris);
-
    $PostcategoryImage = title::where('title','Scheduled Group Tours')
           ->first();
         return view('website.grouptour.grouptour',compact('safaris','PostcategoryImage'));
@@ -160,7 +159,8 @@ class GrouptourController extends Controller
      */
     public function show($id)
     {
-       
+       //dd('dddd');
+
           $discounts=specialOffer::where('tour_id',$id)->first();
 
           $tour_addon='Programs';

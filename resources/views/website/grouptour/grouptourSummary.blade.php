@@ -2,6 +2,9 @@
 @extends('website.layouts.apps')
 @section('content')
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
   <section class="bg-gray" style="margin-top: 14px;">
         <div class="container">
             <div class="package-list-wrap ">
@@ -366,9 +369,7 @@
     </section>
 
 
-
-
-<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog">
+<div class="modal fade modal-book-now" id="bookNow" tabindex="-1" role="dialog" style="margin-top:50px;">
  
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -386,15 +387,21 @@
             <div class="form-wrap">
                 <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
-                <form id="msform"  method="post"  action="{{ route('tourForm.store') }}">
+                
+
+                <form id="msform"  method="post"  action="{{ route('tourForm.store') }}" class="registration-form">
                     @csrf
-                    <!-- progressbar -->
+                   
+               <!-- progressbar -->
                     <ul id="progressbar">
-                      <li class="active" id="account"><strong>Personal Details</strong></li>
-                        <li id="personal"><strong>Tour Information:</strong></li>
-                        <li id="payment"><strong>Other Information</strong></li>
+                      <li class="active" id="account"><strong>Step 1:</strong></li>
+                        <li id="personal"><strong>Step 2:</strong></li>
+                        <li id="payment"><strong>Step 3:</strong></li>
                         <li id="confirm"><strong>Finish</strong></li>
                     </ul>
+                      <div class="alert alert-danger print-error-msg" style="display:none">
+                        <ul></ul>
+                    </div> 
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
@@ -407,7 +414,8 @@
                             </div> 
                            
 
- <div class="form-group">
+
+         <div class="form-group">
             @if($discounts !=null)
            <input type="hidden" class="form-control" name="unit_price" value="{{$discounts->new_price}}">
              @else
@@ -417,6 +425,7 @@
              <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
         </div>
+
 
 
                         <!--  <input type="text" name="first_name" placeholder="first name" /> 
@@ -443,12 +452,12 @@
 
                               <!-- <label class="fieldlabels">Phone: *</label> -->
                                <input type="text" name="phone" placeholder="Phone(+00 00 000 000)"/>                                 
-                            <input type="email" name="email" placeholder="email" required=""/> 
+                            <input type="email" name="email" placeholder="email"/> 
 
                              <input type="text" name="country" placeholder="Nationality" /> 
 
                         </div> 
-                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>
@@ -461,13 +470,11 @@
                              </div>
 
                        
-
-
              <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
                                     <div class="form-group">
-                                        <input type="date" name="travel_date" id="travel_date" class="form-control" placeholder="From" value="" required>
+                                        <input type="date" name="travel_date" id="travel_date" class="form-control" placeholder="From" value="">
                     
                                     </div>
                                 </div>
@@ -475,7 +482,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Adults (>16 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="adults" min="0">
+                                        <input type="number" class="zt-control" name="adults" min="0" value="1">
                                     </div>
                                 </div>
   </div>
@@ -484,30 +491,61 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Teens (12-14 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="teens" min="0">
+                                        <input type="number" class="zt-control" name="teens" min="0" value="0">
                                     </div>
                                  </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Children (5-12 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" name="children" min="0">
+                                        <input type="number" class="zt-control" name="children" min="0" value="0">
                                     </div>
                                  </div>
   </div>
 
-
+<div class="row">
+ <div class="col-md-12">
         <div class="form-group">
             <label for="">Tour type:</label>
                    <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
           <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
         </div>
+    </div>
 
-                                 
+                                 </div>                    
+            
 
-                    <div class="form-group">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
+                        </div> 
+
+                             <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
+
+                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
+                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>                               
+</div>
+
+
+             
+              <div class="col-md-6">
+                       
+                                 <label for="">Tour Addon:</label>
+                                   
+                                                        <select class="selectpicker search-fields form-control" name="addon">
+              <option value="0" selected>None</option>
+              @foreach ($addons as $addon)
+            <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
+              @endforeach
+          </select>
+                                </div>
+
+               <div class="col-md-6"> 
+                           
                                    <label for="">Accommodation:</label>
-                                    <div class="form-group">
+                                   
                                        <select class="form-control" name="accomodation">
                                             <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
@@ -517,38 +555,8 @@
                                                 <option>Not Sure</option>
                                            
                                         </select>
-                                    </div>
-                                </div>
-               
-
-
-      <div class="col-lg-6 col-md-6 col-sm-6">
-                                      <label for="">Tour Addon:</label>
-                                    <div class="form-group">
-                                      <select class="selectpicker search-fields form-control" name="addon">
-              <option value="0" selected>None</option>
-              @foreach ($addons as $addon)
-            <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
-              @endforeach
-          </select>
-                                    </div>
-                                </div>
-             </div>
-
-                        </div> 
-
-                             <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>                    
-                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
-                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4 class="fs-title">Other Information:|Step 3 - 4</h4>
-                                </div>
-
-                              
+                                   
+                                </div>                
     <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
@@ -588,12 +596,10 @@
                                 </div>
                           </div> 
                              
-                        
-                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
-                     
-                        <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
+                                           
+                        <button type="button" class="close float-left" data-dismiss="modal" style="background-color:#b32121;padding: 8px 30px;">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
-                           <button type="submit" class="btn btn-success float-right">Submit</button>
+                           <button type="submit" class="btn btn-success float-right btn-submit" style="padding: 8px 30px;">Submit</button>
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -625,87 +631,56 @@
 
 
 {{-- end of booking form madal --}}
-
-<!-- <script type="text/javascript" src="../../../js/jquery321.min.js"></script> -->
-<!--<script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>-->
-<!-- 
 <script type="text/javascript">
-    
-$(document).ready(function(){
-var current_fs, next_fs, previous_fs; //fieldsets
-var opacity;
-var current = 1;
-var steps = $("fieldset").length;
+    $('#msform').submit(function(e) {
+        e.preventDefault();
+       
+       
+        var url = $(this).attr("action");
+        let formData = new FormData(this);
+        // document.getElementById('waiting').innerText="Please wait ............";
+          $(".btn-submit").prepend('<i class="fa fa-spinner fa-spin"></i>');
+        $(".btn-submit").attr("disabled", 'disabled');
 
-setProgressBar(current);
-$(".next").click(function(){
 
-current_fs = $(this).parent();
-next_fs = $(this).parent().next();
+        $.ajax({
+                type:'POST',
+                url: url,
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: (response) => {
+                    alert('Form submitted successfully');
+                      $(".btn-submit").find(".fa-spinner").remove();
+                     $(".btn-submit").removeAttr("disabled");
+                      //alert(base_url);
+                    
+                    $("#msform").trigger("reset");
+                    // url: APP_URL + "/save_favorite",
+                    //$('#bookNow form :input').val("");
+                        // $(this).find('form').trigger('reset');
 
-//Add Class Active
-$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                     //location.replace(url + "/login")
+                   
+                   // window.location = response.url;
+                   location.reload();
+                   window.location = response.url;
+                },
+                error: function(response){
+                    $('#msform').find(".print-error-msg").find("ul").html('');
+                    $('#msform').find(".print-error-msg").css('display','block');
+                    $.each( response.responseJSON.errors, function( key, value ) {
+                        $('#msform').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
 
-//show the next fieldset
-next_fs.show();
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
+                    });
 
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-next_fs.css({'opacity': opacity});
-},
-duration: 500
-});
-setProgressBar(++current);
-});
+                    $(".btn-submit").find(".fa-spinner").remove();
+                $(".btn-submit").removeAttr("disabled");
+                }
+        });      
+    });    
+</script>
 
-$(".previous").click(function(){
-
-current_fs = $(this).parent();
-previous_fs = $(this).parent().prev();
-
-//Remove class active
-$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-//show the previous fieldset
-previous_fs.show();
-
-//hide the current fieldset with style
-current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-previous_fs.css({'opacity': opacity});
-},
-duration: 500
-});
-setProgressBar(--current);
-});
-
-function setProgressBar(curStep){
-var percent = parseFloat(100 / steps) * curStep;
-percent = percent.toFixed();
-$(".progress-bar")
-.css("width",percent+"%")
-}
-
-$(".submit").click(function(){
-return false;
-})
-
-});
-</script> -->
 
 <script>
 function openPage(pageName, elmnt, color) {
@@ -820,5 +795,4 @@ return false;
 
 });
 </script>
-
 @endsection
