@@ -23,6 +23,8 @@
   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
    <link rel="icon" href="../assetf/img/core-img/favicon.ico">
    <link rel="stylesheet" href="../assetf/style.css">
+   <link rel="stylesheet" href="../assets/css/button.css">
+
     <!-- Style CSS -->
 <!-- Custom css -->
  
