@@ -6107,7 +6107,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #F5F5F5 !important;
+/*  background-color: #F5F5F5 !important;*/
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -9281,7 +9281,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #cfcfcf !important;
+  color: #fff !important;
 }
 
 .text-success {
@@ -9483,8 +9483,8 @@ color: #fbd507 !important;
 }
 
 .btn-square {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .btn-sm-square {
@@ -9558,7 +9558,7 @@ color: #fbd507 !important;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(61, 70, 77, 0.5);
+/*  background: rgba(61, 70, 77, 0.5);*/
   z-index: 1;
 }
 

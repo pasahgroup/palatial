@@ -93,18 +93,12 @@
 color:yellow !important;
       }
     </style>
-
-
-    
 </head>
 <!-- Head END -->
 
 <!-- Body BEGIN -->
 <body class="corporate">
-    <!-- BEGIN STYLE CUSTOMIZER -->
-
-
-    <!-- END BEGIN STYLE CUSTOMIZER -->
+        <!-- END BEGIN STYLE CUSTOMIZER -->
     <!-- BEGIN TOP BAR -->
 
          <div class="pre-header">
@@ -134,12 +128,10 @@ color:yellow !important;
                 <div class="h-100 d-inline-flex align-items-center py-3 me-2">
                       <a href="/tailorForm"  class="btn btn-outline-body btn-primary">Tour Enquiry</a>
      <a href="/bookingTrip"  class="btn btn-outline-body btn-success">My Booking</a>
-                </div>
-               
+                </div>               
             </div>
 
             
-
    <div class="col-md-3 col-sm-6" style="float:right;">
   <!-- <div class="col-md-4 px-5 text-end"> -->
                 <div class="h-100 d-inline-flex align-items-center py-3 me-2">

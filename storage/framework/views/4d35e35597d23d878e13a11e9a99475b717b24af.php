@@ -134,6 +134,11 @@
 .button4 {border-radius: 12px;}
 .button5 {border-radius: 50%;}
 </style>
+
+
+ <script src="../js/jquery361.min.js"></script>
+     <link rel="stylesheet" href="../css/font621.min.css">
+ 
 </head>
 
 <body>
@@ -237,11 +242,8 @@
                                             <li><a href="/holiday">Beach Holidays</a></li>
                                             <li><a href="/dayTours">Day Tours</a></li>
                                             <li><a href="/historical-sites">Historical Sites</a></li>                                 
-
-
-
-
                                         </ul>
+                                        
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Special Packages</li>
                                              <li><a href="/group">All Group Tours</a></li>
@@ -258,7 +260,7 @@
 
 
 
-                                <li><a href="#">Services</a>
+                                <li><a href="#">Services<i class="fa fa-angle-down" style="color:pink;"></i></a>
                                     <ul class="dropdown">
                                          <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
                 <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
@@ -266,6 +268,7 @@
                                        
                                     </ul>
                                 </li>
+    
 
 
                                  <li><a href="/safaris-gallery">Galleries</a>
@@ -273,6 +276,20 @@
                                          <li><a href="/safaris-gallery">Gallery</a></li>
                                     </ul> -->
                                 </li>
+
+
+
+                                <li><a href="#">Opportunities<i class="fa fa-angle-down" style="color:pink;"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="/New-Agent">Agent-Register</a></li>
+                        <li><a href="/New-tourGuide">Tour Guide -Register</a></li>
+                        <li><a href="/New-Partner">Partner-Register</a></li>
+                                       
+                                    </ul>
+                                </li>
+
+
+
 
 
                                     <li><a href="/aboutus">About Us</a>

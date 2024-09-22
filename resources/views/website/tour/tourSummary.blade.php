@@ -2,9 +2,6 @@
 @extends('website.layouts.apps')
 @section('content')
 
-      <script src="../js/jquery361.min.js"></script>
-     <link rel="stylesheet" href="../css/font621.min.css">
- 
 
   <section class="bg-gray">
         <div class="container">
