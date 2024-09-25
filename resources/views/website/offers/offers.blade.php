@@ -66,7 +66,7 @@
 
 @isset($PostcategoryImage->attachment)
    <section class="same-section-spacing bg-bannerw">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-10">
                     <div class="banner-box">
@@ -87,7 +87,7 @@
     </section>
 
  <section class="ws-section-spacing bg-gray">
-    <div class="container">   
+    <div class="container-fluid">   
     <div class="row"> 
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p><b>
@@ -105,7 +105,7 @@
 </hr>
 
 <section id="blog_group" class="blog_section">
-<div class="container">
+<div class="container-fluid">
  <div class="row">
                 {{-- start of tabs --}}
                 <div class="col-lg-12 col-md-12 col-sm-12 masonry ">
@@ -121,7 +121,7 @@
                            @if($offers_private)
        
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-    <div class="container" style="padding-bottom:0px;">  
+    <div class="container-fluid" style="padding-bottom:0px;">  
             
         <h3 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> @if($offers_private !='[]')
                     PRIVATE TOUR OFFERS: 

@@ -30,7 +30,7 @@
 
 
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
-    <div class="container" style="padding-bottom:0px;">  
+    <div class="container-fluid" style="padding-bottom:0px;">  
             
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> {{$title ?? ''}} Tours</span></h2>
 

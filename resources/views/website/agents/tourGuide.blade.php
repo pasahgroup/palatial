@@ -43,31 +43,44 @@
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
-                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                     <h2 class="fs-title">Personal Details:</h2>
                                 </div>
-                                <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                     <h2 class="steps">Step 1 - 4</h2>
                                 </div>
                             </div> 
                             
+                                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" />
+                        </div>
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
                              <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
-                        
+                        </div>
                       
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                               <label class="fieldlabels">Phone: *</label> <input type="number" name="phone" placeholder="phone" />
+                          </div>
 
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                               <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" />
+                          </div>
 
-                                
-                              <label class="fieldlabels">Date of Birth: *</label> <input type="date" name="birth" placeholder="phone" /> 
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                              <label class="fieldlabels">Date of Birth: *</label> <input type="date" name="birth"/> 
+                          </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                               <label class="fieldlabels">Current Occupation: *</label> <input type="text" name="occupation" placeholder="Occupation" />
+                          </div>
 
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <label class="fieldlabels">Nationality: *</label> <input type="text" name="nationality" placeholder="nationality" class="form-control" />                             
+                        </div>
                         </div> 
                         
                         <input type="button" name="next" class="next action-button" value="Next" />
+
                     </fieldset>
                     <fieldset>
                             <div class="form-card">
@@ -112,6 +125,7 @@
          <textarea rows="2" name="driving_license"  maxlength="120"  placeholder="List here separate by comma ..." style="width:  100%" ></textarea>
         </div>
      </div>
+     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                                
                                      <label for="">Language(Mother Tongue):</label>
                                      <div class="form-group icon_down">
@@ -130,7 +144,8 @@
                                               <option value="Other">Other Language</option>
                                         </select>
                                     </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
               <label for="">Other languages we should know(French,Spain,chinese etc.)?</label>
                 <div class="form-group">                 
 
@@ -138,13 +153,11 @@
         </div>
         </div>
 
-
-                       </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                       </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
-                            <div class="row">
-                            
+                            <div class="row">                            
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                     <h2 class="fs-title">Photo:</h2>
                                 </div>
@@ -182,7 +195,7 @@
        <br>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         @foreach($socialmedias as $media)
-       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                    <label for="">{{$media->social_name}}
                                     <div class="form-group">
                                        <input id="facebook" type="checkbox"  name="hear[]" value="{{$media->social_name}}">
@@ -203,7 +216,7 @@
                         </div>
                         <input type="submit" name="next" class="next action-button" value="Submit" /> 
                       
-                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
@@ -233,7 +246,8 @@
     </div>
     </div>
 </div> 
-@endsection
+</div>
+
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
 
@@ -314,4 +328,5 @@ return false;
 
 });
 </script>
+@endsection
                                                          
