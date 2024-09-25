@@ -149,18 +149,19 @@
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$special_private->attachment)); ?>" alt="" style="height:250px;">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($special_private->tour_name); ?></i></a>
+                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search"> <?php echo e($special_private->tour_name); ?></i></a>
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($special_private->tour_name); ?></a>                      
+
+ <div class="text-center" style="background-color:#4c7149;">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> <?php echo e($special_private->tour_name); ?></strong></a>                      
                     </div>
                 </div>
                  </div>
 
   <b>  <div class="col-md-5 col-sm-5 col-xs-5 header-btn" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
+    <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
                                                                                  </div></b>
 
  <b class="float-right">  
@@ -188,8 +189,8 @@
 
 
 <hr>
-                                                                        <div class="text-right">
-                                                                                    <a href="<?php echo e(route('safaris.show',$special_private->tour_id)); ?>" class="booking-btn text-center"><b>Read more</b></a>
+                                        <div class="text-right">
+                                    <a href="<?php echo e(route('safaris.show',$special_private->tour_id)); ?>" class="booking-btn text-center"><b>Read more</b></a>
                                                                         </div>
             </div>
 
@@ -241,19 +242,22 @@
                                                 <div class="single_blog listing-shot">
 
                                                                 <div class="listing-shot-img">
-                                                                            <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="width:100%;">
+                                <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
+                                        <div class="blog_image">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="width:100%;">
                                                                         </div>
                                                                 </div>
-                                                                             <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_group->tour_name); ?>"><?php echo e($special_group->tour_name); ?></b>
-                                                                             </h3>
+                          
+
+                        <div class="text-center" style="background-color:#4c7149;">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><?php echo e($special_group->tour_name); ?></a>                     
+                    </div>
                                                                  
                                                         <div class="blog-text">
                                                         <div class="row">
 
-                                                                         <div class="col-md-7 col-sm-7 col-xs-7 header-btn" style="border-right:1px solid rgba(71,85,95,.11);height:0px;">
-                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_group->offer_deadline); ?></b></strong>
+                                    <div class="col-md-7 col-sm-7 col-xs-7 header-btn" style="border-right:1px solid rgba(71,85,95,.11);height:0px;">
+                                <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_group->offer_deadline); ?></b></strong>
                                                                                  </div>
 
                                                                                 <div class="col-md-5 col-sm-5 col-xs-5 header-btn">

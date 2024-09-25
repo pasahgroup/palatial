@@ -122,9 +122,12 @@
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris">{{ $safari->tour_name }}</a>                      
+                 
+                     <div class="text-center" style="background-color:#4c7149;">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> {{ $safari->tour_name }}</strong></a>                      
                     </div>
+
+
                 </div>
                  </div>
 
@@ -157,11 +160,11 @@
                                                                                  
 
                                                                                                  @if($safari->category=="Private") 
-                            <a href="{{ route('safaris.show',$safari->id) }}" class="booking-btn text-center"><b>View More</b></a>
+                            <a href="{{ route('safaris.show',$safari->id) }}" class="booking-btn text-center" style="color:#fff"><b>View More</b></a>
                                @endif 
 
                                            @if($safari->category=="Group") 
-                            <a href="{{ route('grouptour.show',$safari->id) }}" class="booking-btn text-center"><b>View More</b></a>
+                            <a href="{{ route('grouptour.show',$safari->id) }}" class="booking-btn text-center" style="color:#fff"><b>View More</b></a>
                                @endif
                                                                         </div>
             </div>

@@ -465,7 +465,7 @@
                     </div>
 
                     <div class="text-center" style="background-color:#4c7149;">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;">{{ $special_private->tour_name }}</a>                      
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong>{{ $special_private->tour_name }}</strong></a>                      
                     </div>
                 </div>
                  </div>
