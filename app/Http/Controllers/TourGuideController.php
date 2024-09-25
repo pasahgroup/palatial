@@ -8,7 +8,7 @@ use App\Models\tailorMade;
 use App\Models\tourEquerySocialMedia;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class TourGuideController extends Controller
 {
     /**
@@ -49,6 +49,27 @@ class TourGuideController extends Controller
     {
       $hear_from = request('hear');     
       $pin=rand(1111111, 9999999);
+
+
+ $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:255',
+         'last_name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'birth' => 'required|Date',
+        'occupation' => 'required|string',
+        'language' => 'required|string',
+
+
+        // 'password' => 'required|min:8',
+    ]);
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+   
+    }else
+    {
+
   
        if(request('photo')){
                 $attach = request('photo');             
@@ -99,6 +120,7 @@ class TourGuideController extends Controller
      }
               return redirect()->back()->with('success','successfully');
     }
+}
 return redirect()->back()->with('info','Error on submittion of information');
   
     }

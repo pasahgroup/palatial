@@ -13,6 +13,16 @@
                 <h4 id="heading">Tour Guide Registration Form</h4>
                 <p>Fill all form field to go to next step</p>
     
+       <?php if($errors->any()): ?>
+    <div class="alert alert-danger">
+        <ul>
+            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
     <?php if($message = Session::get('success')): ?>
   <div class="alert alert-success">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
@@ -104,7 +114,7 @@
      </div>
     
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <label for="">Any proffessional you have which We should Know plus its level?(Diploma of Tour guide,Degree of Information Technology,diploma of Mountain climbing,Electricity etc)</label>
+              <label for="">Any proffessional you have which we should Know plus its level?(Diploma of Tour guide,Degree of Information Technology etc)</label>
                 <div class="form-group">                 
 
           <textarea rows="2" name="professional"  maxlength="240"  placeholder="List here separate by comma ..." style="width:  100%" ></textarea>
@@ -113,7 +123,7 @@
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <label for="">Working Experience We Should Know?(eg.Kibo tour Safaris as Tour Operator,Driver year 2002-2007,Honeyguide as Data Entry and Receptionalist year 2007-2020 etc.)</label>
+              <label for="">Working Experience We Should Know?(eg.Kibo tour as Tour Operator,Driver year 2002-2007,Kibo tour as Data Entry/Receptionalist year 2007-2020 etc.)</label>
                 <div class="form-group">                 
 
          <textarea rows="2" name="work_experience"  maxlength="240"  placeholder="List here separate by comma as example above..." style="width:  100%"></textarea>
