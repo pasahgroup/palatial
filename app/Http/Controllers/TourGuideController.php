@@ -59,7 +59,6 @@ class TourGuideController extends Controller
         'occupation' => 'required|string',
         'language' => 'required|string',
 
-
         // 'password' => 'required|min:8',
     ]);
     if ($validator->fails()) {
