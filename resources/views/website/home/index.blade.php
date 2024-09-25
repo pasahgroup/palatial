@@ -453,7 +453,7 @@
 <div class="single_blog listing-shot">
                 <div class="product-item bg-light mb-4">
                    <div class="listing-shot-img">
-                                                                            <div class="listing-badge now-open"><strong>{{ round($special_private->save/$special_private->price * 100),0 }}% Off</strong></div>
+                <div class="listing-badge now-open"><strong>{{ round($special_private->save/$special_private->price * 100),0 }}% Off</strong></div>
                                                                     
                                                                
 
@@ -464,8 +464,8 @@
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris">{{ $special_private->tour_name }}</a>                      
+                    <div class="text-center" style="background-color:#4c7149;">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;">{{ $special_private->tour_name }}</a>                      
                     </div>
                 </div>
                  </div>
