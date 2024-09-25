@@ -658,8 +658,8 @@
                             <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($popular_safari->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
+                    <div class="text-center py-4" style="background-color:#4c7149;">
+                        <a class="h2 text-decoration-none text-truncate" href="/safaris"><?php echo e($popular_safari->type); ?></a>                      
                     </div>
                 </div>
             </div>
@@ -674,8 +674,8 @@
                             <a class="btn btn-outline-dark btn-squarex" href="/trekking"><i class="fa fa-search">  <?php echo e($popular_trekking->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>                      
+                    <div class="text-center py-4" style="background-color:#4c7149;">
+                        <a class="h2 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>                      
                     </div>
                 </div>
             </div>
@@ -690,8 +690,8 @@
                             <a class="btn btn-outline-dark btn-squarex" href="/holiday"><i class="fa fa-search">  <?php echo e($popular_holiday->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>                      
+                    <div class="text-center py-4" style="background-color:#4c7149;">
+                        <a class="h2 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>                      
                     </div>
                 </div>
             </div>
@@ -705,8 +705,8 @@
                             <a class="btn btn-outline-dark btn-squarex" href="/historical-sites"><i class="fa fa-search">  <?php echo e($popular_historical->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>                      
+                    <div class="text-center py-4" style="background-color:#4c7149;">
+                        <a class="h2 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>                      
                     </div>
                 </div>
             </div>
