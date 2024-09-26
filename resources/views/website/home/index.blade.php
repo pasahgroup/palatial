@@ -612,34 +612,44 @@
 
 
 
+   <div class="container pt-5 pb-3">
+          <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Partnering</span></h2>
 
-
-
-
-
- <br>
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-
-    <div class="container" style="padding-bottom:0px;">  
-            
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Partnering</span></h2>
-
-      
-      <div class="px-xl-5 pb-3">     
+            <div class="px-xl-5 pb-3">     
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-  
-    <div class="heading-section heading-section-white">
-                        <h3 class="subheading" style="color:">Partnering with SafariBookings.com</h3>
-                <h2 class="mb-3"><a href="https://www.safaribookings.com/" target="_blank"><b>https://www.safaribookings.com</b></a></h2>
-              </div>
-         
+<div class="row">    
 
-        </div>         
+            <div class="col-md-11 col-sm-3 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item d-flex align-items-center mb-4">
+                        <div class="overflow-hidden" style="width: 30px; height: 2px;">
+                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
 
-
-    </div>
+                                             <a href="https://www.safaribookings.com/"><b style="color:#b76b0b;">
+Partnering with SafariBookings.com</b></a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                 
 </div>
-</section>
+        </div>
+      
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
