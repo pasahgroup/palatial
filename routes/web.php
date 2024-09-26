@@ -117,7 +117,7 @@ Route::post('/New-Agent-update/{x}', [AgentController::class, 'update'])->name('
 
 Route::get('/Guide-Destroy/{x}', [TourGuideController::class, 'destroy'])->name('Guide-Destroy');
 
-Route::resource('/Partner', PartnerController::class);
+
 Route::get('/Partner-Destroy/{x}', [PartnerController::class, 'destroy'])->name('Partner-Destroy');
 
 Route::resource('/PostBody', PostBodyController::class);
@@ -148,7 +148,7 @@ Route::get('/New-tourGuide', [TourGuideController::class, 'NewTourGuide'])->name
 Route::resource('/Tour-Guide', TourGuideController::class);
 Route::get('/Guide-Destroy/{x}', [TourGuideController::class, 'destroy'])->name('Guide-Destroy');
 
-// Route::resource('/Partner', PartnerController::class);
+Route::resource('/Partner', PartnerController::class);
 Route::get('/New-Partner', [PartnerController::class, 'NewPartner'])->name('NewPartner');
 // Route::get('/Partner-Destroy/{x}', [PartnerController::class, 'destroy'])->name('Partner-Destroy');
 //End of Agent

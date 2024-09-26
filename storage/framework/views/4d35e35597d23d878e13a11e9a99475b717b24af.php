@@ -56,14 +56,12 @@
   <link href="../../assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="../../assets/corporate/css/custom.css" rel="stylesheet">
 
-
-
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../../css/button.css">
     <link rel="stylesheet" href="../../../css/custom.css">
        <link rel="stylesheet" href="../../css/customAnimation.css">
        <link rel="stylesheet" href="../../css/customAnimation2.css">
-           <link rel="stylesheet" href="../../css/customSportLight.css">
+        <link rel="stylesheet" href="../../css/customSportLight.css">
 
 
    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
@@ -80,12 +78,7 @@
   
  
 
-  <!-- CUSTOM -->
-  <!-- <link href="../../assets/plugins/css/style1.css" rel="stylesheet"> -->
-
-
  <link href="../../assets/pages/css/components.css" rel="stylesheet">
-
 
  <link href="../../img_library/main.css" rel="stylesheet">
     <link href="../../img_library/mform.css" rel="stylesheet">
@@ -151,7 +144,7 @@
 
     <header class="header-area">
    <div class="container-fluid top-header-area">
-        <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="background-color:#37533c;">
+        <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="background-color:#fafbfb;margin-top:-8px;margin-bottom:-8px;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">Palatial</span>
@@ -163,10 +156,10 @@
               <div class="col-lg-4 col-6 text-left">
                  <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><span style="color:yellow;">  info@palatialtours.com</span></a>
+                      <i class="fa fa-envelope" style="color:pink;"></i><span style="color:#072004;">  info@palatialtours.com</span></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                               <span style="color:yellow;">(+255)753 216 263</span>
+                               <span style="color:#072004;">(+255)753 216 263</span>
                             </a>
                 </div>
             </div>
@@ -208,7 +201,7 @@
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:6vh; width:100%;"></a>
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -260,7 +253,7 @@
 
 
 
-                                <li><a href="#">Services<i class="fa fa-angle-down" style="color:pink;"></i></a>
+                                <li><a href="#">Services</a>
                                     <ul class="dropdown">
                                          <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
                 <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
@@ -279,7 +272,7 @@
 
 
 
-                                <li><a href="#">Opportunities<i class="fa fa-angle-down" style="color:pink;"></i></a>
+                                <li><a href="#">Opportunities</a>
                                     <ul class="dropdown">
                                         <li><a href="/New-Agent">Agent-Register</a></li>
                         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>

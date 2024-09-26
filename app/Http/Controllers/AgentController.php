@@ -7,6 +7,7 @@ use App\Models\socialmedia;
 use App\Models\tailorMade;
 use App\Models\tourEquerySocialMedia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class AgentController extends Controller
 {
@@ -48,11 +49,28 @@ class AgentController extends Controller
      */
     public function store(Request $request)
     {
+     
+//dd('ddd');
+         $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:255',
+         'last_name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'phone' => 'required|integer',
+        'language' => 'required|string',
+        // 'photo' => 'required|string',
+    ]);
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+    }else
+    {
+
      $hear_from = request('hear');   
       $pin=rand(11111111, 99999999);
    
-       if(request('attachment')){
-                $attach = request('attachment');             
+       if(request('photo')){
+                $attach = request('photo');             
                 foreach($attach as $attached){
 
                      // Get filename with extension
@@ -97,7 +115,7 @@ class AgentController extends Controller
     {
        return redirect()->back()->with('info','Photo is not Set');  
     }
-
+ }
    // return('Successful submitted');
       return redirect()->back()->with('success','Successful submitted');
     }

@@ -7,6 +7,7 @@ use App\Models\socialmedia;
 use App\Models\tailorMade;
 use App\Models\tourEquerySocialMedia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PartnerController extends Controller
 {
@@ -47,8 +48,24 @@ public function NewPartner()
      */
     public function store(Request $request)
     {
-        $hear_from = request('hear');
-     
+
+        //dd('ddd');
+         $validator = Validator::make($request->all(), [
+        'first_name' => 'required|string|max:255',
+         'last_name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'phone' => 'required|integer',
+        'language' => 'required|string',
+        // 'photo' => 'required|string',
+    ]);
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+    }else
+    {
+
+        $hear_from = request('hear');     
       $pin=rand(1111111, 9999999);
    
        if(request('attachment')){
@@ -100,6 +117,7 @@ public function NewPartner()
     }
      return redirect()->back()->with('success','Partner Successfully Registered');
     }
+}
 
     /**
      * Display the specified resource.

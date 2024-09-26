@@ -88,8 +88,6 @@ $status="Active";
     public function store(Request $request)
     {
 
-//dd('store');
-
  $validator = Validator::make($request->all(), [
         'first_name' => 'required|string|max:255',
          'last_name' => 'required|string|max:255',
@@ -97,7 +95,7 @@ $status="Active";
         'arrival_date' => 'required|Date',
         'days' => 'required|integer',
 
- 'min_budget' => 'required|numeric',
+        'min_budget' => 'required|numeric',
 
         // 'password' => 'required|min:8',
     ]);

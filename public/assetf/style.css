@@ -422,7 +422,7 @@ img {
 .dark .classynav ul li .megamenu,
 .dark.breakpoint-on .classynav > ul > li > a,
 .dark.breakpoint-on .classy-navbar .classy-menu {
-  background-color: #fafbfb; }
+  background-color: #37533c;}
 
 .header-area {
   position: relative;
@@ -502,7 +502,8 @@ img {
         height: 70px;
         padding: 0.5em 30px; } }
   .main-header-area .classynav ul li a {
-    color:rgb(1, 19, 5);
+/*    color:rgb(1, 19, 5);*/
+    color:#fff;
     /*text-transform: uppercase;*/
     font-weight: 300;}
   .main-header-area .nav-brand {

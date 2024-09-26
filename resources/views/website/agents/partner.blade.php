@@ -1,23 +1,28 @@
 @extends('website.layouts.apps')
 @section('content')
 
-  <section class="bg-gray ">
-        <div class="container">   
-                  
-                 <a href="#"></a>
-               <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="search_area search_area_two booking-tour">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="center-title ">
-                                    <h5 class="title">Partner Restration Form</h5>
-                                </div>
-                            </div>
-                           
-                        </div>
-                        <!--Search Form-->
-     @if($message = Session::get('success'))
+
+       <div class="container">
+    <div class="card-body">
+    <div class="row justify-content-center">
+         
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        <div class="search_area search_area_two booking-tour"> 
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h4 id="heading">Partiner Registration Form</h4>
+                <p>Fill all blank fields</p>
+    
+       @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+    @if($message = Session::get('success'))
   <div class="alert alert-success">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
     <span aria-hidden="true">&times;</span></button>
@@ -31,32 +36,43 @@
     <strong>Ops!: </strong> {{$message}}
   </div>
   @endif 
-                           <form  method="post"  action="{{ route('Partner.store') }}" enctype="multipart/form-data">
+                    <form  method="post"  action="{{ route('Partner.store') }}" enctype="multipart/form-data">
                              @csrf
-                            <div class="row">
-                                <div class="col-lg-5 col-md-12 col-sm-12">
-                                    <label for="">First name:</label>
-                                    <div class="form-group">    
+               
+                    <fieldset>
+                        <div class="form-card">
+                                                    
+                                       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" />
+                        </div>
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                        </div>
+                      
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                              <label class="fieldlabels">Phone: *</label> <input type="number" name="phone" placeholder="phone" />
+                          </div>
 
-                                        <input type="text" name="first_name" class="form-control" placeholder="first name" min="2">
-                                    </div>
-                                </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                              <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="email" />
+                          </div>
 
-                                 <div class="col-lg-5 col-md-12 col-sm-12">
-                                    <label for="">Last name:</label>
-                                    <div class="form-group">    
+                          
 
-                                        <input type="text" name="last_name" class="form-control" placeholder="last name" min="2">
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-12 col-sm-12">
-                                    <label for="">Nationality:</label>
-                                    <div class="form-group">
-                                        <input type="text" name="nationality" class="form-control" s placeholder="Nationality" min="2">
-                                    </div>
-                                </div>
-                                  <div class="col-lg-5 col-md-12 col-sm-12">
-                                     <label for="">Language(Mother Toung):</label>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <label class="fieldlabels">Nationality: *</label> <input type="text" name="nationality" placeholder="nationality" class="form-control" />                             
+                        </div>
+                        </div> 
+                   
+
+                    </fieldset>
+                    <fieldset>
+                            <div class="form-card">
+                                          
+     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                               
+                                     <label for="">Language(Mother Tongue):</label>
                                      <div class="form-group icon_down">
                                         <select class="form-control" name="language">
                                               <option value="0">--Speaking Language--</option>
@@ -68,26 +84,21 @@
                                              <option value="Portguise">Portguise</option>
 
                                             <option value="Indian">Indian</option>
-                                            <option value="Chinise">Chinise</option>
+                                            <option value="Chinese">Chinese</option>
+                                                <option value="Swahili">Swahili</option>
                                               <option value="Other">Other Language</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-5 col-md-12 col-sm-12">
-                                   <label for="">Your Phone:</label>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="phone" placeholder="phone" >
-                                        
-                                    </div>
-                                </div>
+         
+
+                    </fieldset>
+                    <fieldset>
+
                          
-                                <div class="col-lg-5 col-md-6 col-sm-12">
-                                   <label for="">Email:</label>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="email" name="email">
-                                    </div>
-                                    </div>
-                
+                        <div class="form-card">
+             
+
                 <div class="col-md-12">
                <label for="">What Goods,you should offer(Cars,Camps,Hotels etc.)?</label>
                 <div class="form-group">                 
@@ -95,17 +106,15 @@
          <textarea rows="2" name="offer" placeholder="cars,camps,Hotels etc..." style="width:  100%" ></textarea>
         </div>
      </div>
-     <hr>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                   <label for="">Your Photo:</label>
+                                               
+  <div class="col-lg-3 col-md-6 col-sm-12">
+                                   <label for="">Photo:</label>
                                     <div class="form-group">
                                     <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;"> 
                                    
                                 </div>
                                 </div>
-      
-     
-                                 <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
 
             <span class="img-div">
               <div class="text-center img-placeholder"  onClick="triggerClick()">
@@ -114,9 +123,8 @@
               <img src="images/no.png" onClick="triggerClick()" id="profileDisplay">
             </span>
             </div>
-                            
-            <hr>
-               <div class="col-md-12">
+       
+           <div class="col-md-12">
                <label for="">Additional Information we should know?</label>
                 <div class="form-group">                 
 
@@ -125,38 +133,43 @@
      </div>
 
       
-       <div class="">
-      
-        <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
          <span> How did you hear about us.?</span>
            </div>
        <br>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         @foreach($socialmedias as $media)
-       <div class="col-lg-4 col-md-4 col-sm-4">
+       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                    <label for="">{{$media->social_name}}
                                     <div class="form-group">
-                                       <input id="facebook" type="checkbox"  name="hear[]" value="{{$media->social_name}}"></label>
-                                    </div>
+                                       <input id="facebook" type="checkbox"  name="hear[]" value="{{$media->social_name}}">
+                                    </div></label>
                                 </div>
                                 @endforeach
-                              </div> 
+                              </div>
 
-                                                        
-                                       <div class="col-lg-12 mt-3">
-                                         <label for=""> Other Media:</label> 
-                                     <textarea rows="2" name="hear_about_us" placeholder="hear about us..." style="width:  100%">
-                                </textarea>
-                                  </div>                          
-                                    <hr>
-                                   <div class="col-lg-12 mt-3">
-                                <button type="submit" class="btn btn-success float-center">Submit</button>
-                                  </div>       
-                               </form>
-                            
-                            </div>
+
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <label for="">Other Media:</label>
+                <div class="form-group">                 
+
+         <textarea rows="2" name="hear_about_us"  maxlength="240"  placeholder="List here separate by comma as example above..." style="width:  100%" ></textarea>
+        </div>
+       </div>
+
+        <div class="col-lg-12 mt-3">
+                                <button type="submit" class="btn btn-success float-center float-right">Submit</button>
+                                  </div> 
+
                         </div>
-                    </div>
-                </div>
-         
-    </section>
+                    </fieldset>
+                 
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div> 
+</div>
+
 @endsection
