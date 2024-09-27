@@ -105,9 +105,10 @@
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris"><?php echo e($safari->tour_name); ?></a>                      
+ <div class="text-center" style="background-color:#4c7149;">
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> <?php echo e($safari->tour_name); ?></strong></a>                      
                     </div>
+
                 </div>
                  </div>
 
@@ -140,11 +141,11 @@
                                                                                  
 
                                                                                                  <?php if($safari->category=="Private"): ?> 
-                            <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
+                            <a href="<?php echo e(route('safaris.show',$safari->id)); ?>" class="booking-btn text-center" style="color:#fff"><b>View More</b></a>
                                <?php endif; ?> 
 
                                            <?php if($safari->category=="Group"): ?> 
-                            <a href="<?php echo e(route('grouptour.show',$safari->id)); ?>" class="booking-btn text-center"><b>View More</b></a>
+                            <a href="<?php echo e(route('grouptour.show',$safari->id)); ?>" class="booking-btn text-center" style="color:#fff"><b>View More</b></a>
                                <?php endif; ?>
                                                                         </div>
             </div>
