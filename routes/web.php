@@ -199,7 +199,7 @@ Route::post('/groupPay/{x}', [PaymentController::class, 'groupPay'])->name('grou
 
 Route::get('/pg/{x}', [PaymentController::class, 'pg'])->name('pg');
 Route::get('/pay/{x}', [PaymentController::class, 'payInvoice'])->name('payInvoice');
-Route::get('/payConfirm/{x}', [PaymentController::class, 'payConfirm'])->name('payConfirm');
+Route::post('/payConfirm/{x}', [PaymentController::class, 'payConfirm'])->name('payConfirm');
 
 Route::get('/groupTourSumary/{x}', [PaymentController::class, 'groupTourSumary'])->name('groupTourSumary');
 //End of payment controller

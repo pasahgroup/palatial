@@ -114,8 +114,14 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
 
     public function payConfirm($cust_id)
     {  
-    dd('print');    
+
+       
+
+
+
+       return view('website.pesapal.pesapal');  
     }
+
 
       public function payInvoice($cust_id)
     {      
