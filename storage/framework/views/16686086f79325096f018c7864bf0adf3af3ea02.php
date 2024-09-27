@@ -185,6 +185,14 @@
    <form  method="post"  action="<?php echo e(route('payConfirm',189)); ?>" enctype="multipart/form-data">
           <?php echo csrf_field(); ?>
                
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" />
+                        </div>
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                        </div>
+               
 
         <div class="clearfix">
          <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Proceed Checkout</button>
