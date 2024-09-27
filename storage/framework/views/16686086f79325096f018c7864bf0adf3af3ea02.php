@@ -11,7 +11,7 @@
   <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <body>
 
- <!--  <div class="pre-loader">
+<!--  <div class="pre-loader">
     <div class="loading-img"></div>
   </div> -->
 
@@ -63,7 +63,7 @@
                 <td>
                   <div class="counter-number">
                     <div class="sub icon-minus"></div>
-                    <input type="text" value="<?php echo e($cust->adults); ?>">
+                    <input type="text" value="<?php echo e($cust->adults); ?>" readonly>
 
                     <div class="add icon-plus"></div>
                   </div>
@@ -92,7 +92,7 @@
                 <td>
                   <div class="counter-number">
                     <div class="sub icon-minus"></div>
-                     <input type="text" value="<?php echo e($cust->teens); ?>">
+                     <input type="text" value="<?php echo e($cust->teens); ?>" readonly>
                     <div class="add icon-plus"></div>
                   </div>
                 </td>
@@ -122,7 +122,7 @@
                 <td>
                   <div class="counter-number">
                     <div class="sub icon-minus"></div>
-                     <input type="text" value="<?php echo e($cust->children); ?>">
+                     <input type="text" value="<?php echo e($cust->children); ?>" readonly>
                     <div class="add icon-plus"></div>
                   </div>
                 </td>
@@ -190,10 +190,12 @@
 
         </div>
 
+
+
         <div class="clearfix">
-         <a href="/pay/<?php echo e($cust->customer_id); ?>" class="btn btn-success pull-right hvr-sweep-to-right">Proceed Checkout</a>
+         <a href="/payConfirm/<?php echo e(23); ?>" class="btn btn-success pull-right hvr-sweep-to-right">Proceed Checkout jl</a>
         </div>
-        <br>
+       <br>
       </div>
 
     </div>

@@ -44,6 +44,7 @@ class PaymentController extends Controller
   public function pg($cust_id)
     {      
 
+//dd('poppp');
       //Get customer details
 
         $cust=invoice::  join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
@@ -111,7 +112,10 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     }
 
 
-
+    public function payConfirm($cust_id)
+    {  
+    dd('print');    
+    }
 
       public function payInvoice($cust_id)
     {      

@@ -12,7 +12,7 @@
   <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
 <body>
 
-<!--  <div class="pre-loader">
+ <!--  <div class="pre-loader">
     <div class="loading-img"></div>
   </div> -->
 
@@ -182,12 +182,10 @@
 
         </div>
 
-
-
         <div class="clearfix">
-         <a href="/payConfirm/{{23}}" class="btn btn-success pull-right hvr-sweep-to-right">Proceed Checkout</a>
+         <a href="/pay/{{$cust->customer_id}}" class="btn btn-success pull-right hvr-sweep-to-right">Proceed Checkout</a>
         </div>
-       <br>
+        <br>
       </div>
 
     </div>
