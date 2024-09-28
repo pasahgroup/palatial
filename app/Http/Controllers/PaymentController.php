@@ -27,6 +27,8 @@ use App\Models\accommodationInclusive;
 
 use Illuminate\Http\Request;
 use DB;
+    include_once(app_path().'/pesapal/oauth.php');
+       // include_once(app_path().'/pesapal/pesapal-iframe.php');   
 
 class PaymentController extends Controller
 {
@@ -35,6 +37,10 @@ class PaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // include(app_path().'/includes/config.php');
+      // include_once(app_path().'/pesapal/oauth.php');
+      // include(app_path().'/pesapal/pesapal-iframe.php');   
+
     public function index()
     {
         //
@@ -47,14 +53,16 @@ class PaymentController extends Controller
 //dd('poppp');
       //Get customer details
 
-        $cust=invoice::  join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
+        $cust=invoice::join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
         ->where('invoices.customer_id',$cust_id)
-        ->select('invoices.*','tour_equiry_forms.children','tour_equiry_forms.teens','tour_equiry_forms.adults','tour_equiry_forms.pin','tour_equiry_forms.first_name','tour_equiry_forms.last_name')->first();
+        ->select('invoices.*','tour_equiry_forms.children','tour_equiry_forms.teens','tour_equiry_forms.adults','tour_equiry_forms.pin','tour_equiry_forms.first_name','tour_equiry_forms.last_name','tour_equiry_forms.email','tour_equiry_forms.phone')->first();
         //dd($cust);
         $id=$cust->tour_id;   
 
          $discounts=specialOffer::where('tour_id',$id)->first();
          $tourInvoice=invoice::where('tour_id',$id)->first();
+         $tourInvoice=invoice::where('tour_id',$id)->first();
+
 
         $tour_addon='Programs';
         $programs = program::
@@ -112,13 +120,19 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     }
 
 
-    public function payConfirm(Request $request,$cust_id)
+    public function payConfirm(Request $request,$id)
     {  
-    dd(request('first_name'));
-       
+   
 
 
-       return view('website.pesapal.pesapal');  
+$first_name=request('first_name');
+$last_name=request('last_name');
+$desc=request('desc');
+$email=request('email');
+$phone=request('phone');
+
+$amount=request('amount');
+    return view('website.pesapal.pesapal',compact('first_name','last_name','amount','desc','email','phone'));  
     }
 
 

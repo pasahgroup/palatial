@@ -178,13 +178,35 @@
           @csrf
                
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" placeholder="first name" />
+                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" value="{{$cust->first_name}}" />
                         </div>
                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" placeholder="last name" /> 
+                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" value="{{$cust->last_name}}" /> 
+                        </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Reference: *</label> <input type="text" name="reference" value="{{$cust->tour_id}}" /> 
+                        </div>
+
+                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Amount: *</label> <input type="text" name="amount" value="{{ number_format($cust->total_cost,2)}}"/> 
                         </div>
                
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">                       
+                             <label class="fieldlabels">Email: *</label> <input type="text" name="email" value="{{$cust->email}}" /> 
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Phone: *</label> <input type="text" name="desc" value="{{$cust->phone}}" /> 
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Description: *</label> <input type="text" name="desc" value="{{$programs->tour_name}}" /> 
+                        </div>
+
 
         <div class="clearfix">
          <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Proceed Checkout</button>
