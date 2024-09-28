@@ -131,8 +131,10 @@ $desc=request('desc');
 $email=request('email');
 $phone=request('phone');
 
+$type=request('type');
+
 $amount=request('amount');
-    return view('website.pesapal.pesapal',compact('first_name','last_name','amount','desc','email','phone'));  
+    return view('website.pesapal.pesapal',compact('first_name','last_name','amount','desc','email','phone','type'));  
     }
 
 

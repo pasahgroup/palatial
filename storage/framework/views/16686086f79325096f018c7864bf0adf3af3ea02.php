@@ -192,10 +192,19 @@
                        
                              <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" value="<?php echo e($cust->last_name); ?>" /> 
                         </div>
+                        
 
                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
                              <label class="fieldlabels">Amount: *</label> <input type="text" name="amount" value="<?php echo e(number_format($cust->total_cost,2)); ?>"/> 
+                        </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Reference: *</label> <input type="text" name="reference" value="<?php echo e($cust->id); ?>" /> 
+                        </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       
+                             <label class="fieldlabels">Type: *</label> <input type="text" name="type" value="MERCHANT" /> 
                         </div>
                
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">                       
