@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Auth;
+// use App\Models\User;
+// use App\Models\answer;
+// use App\Models\myCompany;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +29,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        Schema::defaultStringLength(191);
+        
+
+             // Using view composer to set following variables globally
+           view()->composer('*',function($view) {
+  $view->with('percent',0.3);
+  //dd($view->percent);
+
+
+            //->select('properties.property_name')->first());
+             //$view->with('qnsCount', collect($qnsCount));
+
+            // $view->with('company', myCompany::where('status','Active')->first());
+        });
+        //Schema::defaultStringLength(191);
     }
 }

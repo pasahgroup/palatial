@@ -13,7 +13,7 @@
           <div class="preview-wrap">
            
             <div class="form-wrap">
-                <h4 id="heading">Custom Booking Form f:<span style="color:green"> Create My Safari</span></h4>
+                <h4 id="heading">Custom Booking Form:<span style="color:green"> Create My Safari</span></h4>
           <div>
             <?php if($errors->any()): ?>
     <div class="alert alert-danger">

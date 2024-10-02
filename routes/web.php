@@ -120,7 +120,7 @@ Route::get('/Guide-Destroy/{x}', [TourGuideController::class, 'destroy'])->name(
 
 Route::get('/Partner-Destroy/{x}', [PartnerController::class, 'destroy'])->name('Partner-Destroy');
 
-Route::resource('/PostBody', PostBodyController::class);
+// Route::resource('/PostBody', PostBodyController::class);
 
 //accommodation controller
 Route::resource('/accommodations', accommodationController::class);
@@ -154,10 +154,14 @@ Route::get('/New-Partner', [PartnerController::class, 'NewPartner'])->name('NewP
 //End of Agent
 
 Route::resource('/PostBody', PostBodyController::class);
-Route::get('/coa/', [PostBodyController::class, 'coa'])->name('coa');
+Route::get('/coa', [PostBodyController::class, 'coa'])->name('coa');
+Route::post('store-about', [PostBodyController::class, 'storeAboutUs'])->name('store-about');
+
 Route::get('/coa-About/', [PostBodyController::class, 'createAbout'])->name('coa-About');
 Route::get('/destroy-Aboutus/{x}', [PostBodyController::class, 'destroy'])->name('destroy-Aboutus');
+
 Route::get('/destroy-contact/{x}', [PostBodyController::class, 'destroyContact'])->name('contact-Aboutus');
+
 Route::resource('/PostCategory', PostController::class);
 
 //Welcome introduction

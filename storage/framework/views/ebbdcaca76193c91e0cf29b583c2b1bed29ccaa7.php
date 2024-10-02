@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
-<!-- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" /> -->
+
+      <script src="../js/jquery361.min.js"></script>
+     <link rel="stylesheet" href="../css/font621.min.css">
 
   <section class="bg-gray" style="margin-top: 14px;">
         <div class="container">

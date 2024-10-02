@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
       <style type="text/css">
     .red{
@@ -35,7 +34,7 @@
           <h3 class="card-title">About us</h3>
 
           <div class="card-tools">
-            <a href="{{ route('coa-About') }}" class="btn btn-primary" >
+            <a href="<?php echo e(route('coa-About')); ?>" class="btn btn-primary" >
               <i class="fas fa-plus"></i>About us
             </a>
           </div>
@@ -55,17 +54,17 @@
                   </thead>
                   <tbody>
                    
-                    @foreach ($aboutus as $data)
+                    <?php $__currentLoopData = $aboutus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                    <td>{{ $data->id }}</td>
-                     <td><a href="{{ route('PostBody.edit',$data->id) }}">{{ $data->title }}</a></td>                   
-                    <td>{{ $data->body }}</td>
-                       <td><div class="logo mr-auto"><img src="{{ URL::asset('/storage/uploads/'.$data->attachment) }}" width="2" height="2"></div></td>
-                        <td>{{ $data->status }}</td>
-                       <td><a href="{{ route('PostBody.edit',$data->id) }}"><i class="fa fa-edit"></i></a> 
-                         <a href="/destroy-Aboutus/{{$data->id}}" onclick="return confirm('Are you sure? You want to delete: {{ $data->title}}','Destroy')"><i class="fa fa-trash red"></i></a></td>
+                    <td><?php echo e($data->id); ?></td>
+                     <td><a href="<?php echo e(route('PostBody.edit',$data->id)); ?>"><?php echo e($data->title); ?></a></td>                   
+                    <td><?php echo e($data->body); ?></td>
+                       <td><div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" width="2" height="2"></div></td>
+                        <td><?php echo e($data->status); ?></td>
+                       <td><a href="<?php echo e(route('PostBody.edit',$data->id)); ?>"><i class="fa fa-edit"></i></a> 
+                         <a href="/destroy-Aboutus/<?php echo e($data->id); ?>" onclick="return confirm('Are you sure? You want to delete: <?php echo e($data->title); ?>','Destroy')"><i class="fa fa-trash red"></i></a></td>
                                 </tr>
-                     @endforeach
+                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                   </tbody>
                   <tfoot>
@@ -86,4 +85,5 @@
           </section>
   </div>
   <!-- /.content-wrapper -->
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/coa/aboutus.blade.php ENDPATH**/ ?>

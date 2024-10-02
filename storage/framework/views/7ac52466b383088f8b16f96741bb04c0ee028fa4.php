@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -33,11 +32,10 @@
               </div>
               <div class="container-fluid x_content">
                 <br />
-               <form  method="post" id="post_form" action="{{ route('store-about') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                @csrf
+               <form  method="post" id="post_form" action="<?php echo e(route('store-about')); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                <?php echo csrf_field(); ?>
 
-            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-            
+            <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
                 <div class="card-body">
                                                                      
                 <div class="row" id="title">
@@ -95,7 +93,18 @@
              
                      <div class="row">
                  <div class="col-lg-3 col-md-12 col-sm-12">
-                                    <x-label for="password_confirmation" :value="__('Photo')" />
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'password_confirmation','value' => __('Photo')]]); ?>
+<?php $component->withName('label'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['for' => 'password_confirmation','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('Photo'))]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                                     <div class="form-group">
                                     <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;"> 
                                    
@@ -185,4 +194,6 @@ $(document).on('ready', function () {
 
 });
 <script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/coa/addAboutus.blade.php ENDPATH**/ ?>

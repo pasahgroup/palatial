@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -33,18 +32,16 @@
               </div>
               <div class="container-fluid x_content">
                 <br />
-               <form  method="post" id="post_form" action="{{ route('store-about') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
-                @csrf
-
-            <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-            
+              <form  method="post" id="post_form" action="<?php echo e(route('titles.store')); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                <?php echo csrf_field(); ?>
+            <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
                 <div class="card-body">
                                                                      
-                <div class="row" id="title">
-                                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="row" id="title">          
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">                      
-                      <div class="col-sm-8 col-md-8"><label for="title" class="">Message Type</label>
-                         <select name="post_category" id="post_category" class="form-control">
+                      <div class="col-sm-8 col-md-8"><label for="title" class="">Message Title</label>
+                         <select name="title" id="" class="form-control">
                                           <option value="">--Select Title--</option>
                                             <option>About us</option>
                                             <option>Wildlife Safaris</option>
@@ -72,16 +69,7 @@
                       </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="form-group">                      
-                      <div class="col-sm-6 col-md-6"><label for="post_category" class="">Message Title </label>
-                        <input type="text" class="form-control" name="title"  placeholder="title">
-                      </div>
-                        </div>
                     </div>
-                    </div>
-                   
 
                   <div name="normal-panel" id="normal-panel">
                   <div class="col-md-12 col-sm-6 col-xs-12">
@@ -92,34 +80,10 @@
                   </div>
      
                 <hr>
-             
-                     <div class="row">
-                 <div class="col-lg-3 col-md-12 col-sm-12">
-                                    <x-label for="password_confirmation" :value="__('Photo')" />
-                                    <div class="form-group">
-                                    <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;"> 
-                                   
-                                </div>
-                                </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-            <span class="img-div">
-              <div class="text-center img-placeholder"  onClick="triggerClick()">               
-              </div>
-              <img src="images/no.png" onClick="triggerClick()" id="profileDisplay">
-            </span>
-            </div>
-
-               <div class="col-md-4 col-sm-4 col-xs-12">
-                      <select name="status" id="status" class="form-control">
-                                          <option value="">--Select status--</option>
-                                            <option>Active</option>
-                                            <option>Inactive</option>
-                                             
-                                                  
-                                         
-                         </select>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <label class="control-label" for="first-name">Image</label>
+                    <input name="attachment[]" type="file" id="main_img" multiple>
                  </div>
-           </div>
                </div>
 
       <!-- Data for About us information -->               
@@ -185,4 +149,7 @@ $(document).on('ready', function () {
 
 });
 <script>
-@endsection
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/titles/addTitle.blade.php ENDPATH**/ ?>

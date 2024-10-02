@@ -13,9 +13,11 @@ class CreatePostBodiesTable extends Migration
      */
     public function up()
     {
+        
         Schema::create('post_bodies', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('category')->unique();
+            $table->string('category_aboutus')->nullable();
           $table->string('title')->nullable();          
           $table->string('body',450)->nullable();
 
@@ -28,6 +30,7 @@ class CreatePostBodiesTable extends Migration
               $table->string('phone')->nullable();
               $table->string('email')->nullable();
               $table->string('website')->nullable();
+               $table->string('status')->default('Active');
             $table->integer('user_id')->unsigned();                    
             $table->timestamps();
         });

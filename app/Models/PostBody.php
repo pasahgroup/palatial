@@ -10,6 +10,7 @@ class PostBody extends Model
       use HasFactory;
       protected $fillable = [
        'category',
+       'category_aboutus',
         'title',     
         'body',
         'introduction',
@@ -20,6 +21,7 @@ class PostBody extends Model
         'phone',
         'email',
         'website',
+        'status',
         'user_id'
        ];
 }

@@ -107,7 +107,7 @@ public function emailSendF()
        include_once(app_path().'/jrf/sample/setting.php');
        $jasper = new PHPJasperXML();
            // $jasper = new PHPJasper;
-
+       
 //dd('bvncx');
 $input =app_path().'/reports/pieChart.jrxml';
  //$input =app_path().'/reports/department.jrxml';
