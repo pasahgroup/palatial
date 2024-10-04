@@ -301,9 +301,20 @@ class PostBodyController extends Controller
         where('titles.title','About us')
         ->first();
         
-         $aboutus = PostBody::where('category','About us')
-         ->first();
-           return view('website.aboutus.aboutus2',compact('aboutus','PostcategoryImage'));
+         // $aboutus = PostBody::where('category','About us')
+         // ->first();
+         $aboutusx = PostBody::where('category_aboutus','About us')
+         ->get();
+
+           $aboutus = PostBody::join('attachments','attachments.destination_id','post_bodies.id')
+         ->where('attachments.type','Posts')
+         ->where('post_bodies.category_aboutus','About us')
+         ->where('post_bodies.status','Active')
+         ->select('post_bodies.id','post_bodies.category','post_bodies.category_aboutus','post_bodies.title','post_bodies.body','post_bodies.status','attachments.attachment')
+         ->get();
+//dd($aboutus);
+
+           return view('website.aboutus.aboutus_web',compact('aboutus','PostcategoryImage'));
     }
     /**
      * Display the specified resource.

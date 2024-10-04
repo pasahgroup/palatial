@@ -12,8 +12,42 @@
     <div class="container">
       <div class="border-box">
         <div class="box-title">
-          <h5><strong><?php echo e($programs->tour_name); ?></strong></h5>
-        </div>
+           <div class="col-md-12">
+             <p><strong><?php echo e($programs->tour_name); ?></strong></p>
+           </div>
+        
+<div class="col-md-12">
+         <?php if($message = Session::get('success')): ?>
+  <div class="alert alert-success">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Well!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>
+
+ <?php if($message = Session::get('info')): ?>
+  <div class="alert alert-warning">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Ops!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>   
+
+ <?php if($message = Session::get('error')): ?>
+  <div class="alert alert-danger">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Sorry!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>
+</div>
+</div>
+
+
+
         <p><?php echo e($cust->first_name); ?> <?php echo e($cust->last_name); ?></p>
         <em>Summary invoice for your favourite tour costs</em>
           <em><b>(Please make Payment to arrange your favourite tour)</b></em>
@@ -173,33 +207,21 @@
               </tr>
               <tr class="total">
                 <td class="price">Grand Total</td>
-                <td class="price"> <?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?>:: </td>
+                <td class="price"> <?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?></td>
               </tr>
-            </table>
-
-
-          </div>
-        </div>
-
-   <form  method="post"  action="<?php echo e(route('payConfirm',$cust->id)); ?>" enctype="multipart/form-data">
+ <form  method="post"  action="<?php echo e(route('payConfirm',$cust->id)); ?>" enctype="multipart/form-data">
           <?php echo csrf_field(); ?>
                
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" value="<?php echo e($cust->first_name); ?>" />
-                        </div>
-                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <tr class="total">
+                       <input type="hidden" name="total_cost" value="<?php echo e($cust->total_cost,2); ?>" id="total_cost" /> 
+                     
+                <td class="price">Amount to be Paid</td>
+                <td class="price"><input type="text" name="amount" id="amount" value="<?php echo e($cust->total_cost,2); ?>"/>Down Payment must not below 30% of total booking costs.</td>
+              </tr>
+            </table>
+ <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" value="<?php echo e($cust->last_name); ?>" /> 
-                        </div>
-                        
-  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Amount:*</label> <input type="text" name="amount" value="<?php echo e($cust->total_cost,2); ?>"/> 
-                        </div>
-
-                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Currency:*</label> 
+                             <label class="fieldlabels">Select currency to pay with:*</label> 
                             <select name="currency" class="form-control">
                               <option value="<?php echo e($cust->currency); ?>" selected><?php echo e($cust->currency); ?></option>
                         <option value="KES">KES</option>
@@ -215,69 +237,51 @@
                          </select>
                         </div>
 
+          </div>
+        </div>
+
+  
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> <input type="hidden" name="first_name" value="<?php echo e($cust->first_name); ?>" />
+                        </div>
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <input type="hidden" name="last_name" value="<?php echo e($cust->last_name); ?>" /> 
+                        </div>
+  
+                        
+
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Reference: *</label> <input type="text" name="reference" value="<?php echo e($cust->id); ?>" /> 
+                        <input type="hidden" name="reference" value="<?php echo e($cust->id); ?>" /> 
                         </div>
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Type: *</label> <input type="text" name="type" value="MERCHANT" /> 
+                        <input type="hidden" name="type" value="MERCHANT" /> 
                         </div>
                
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">                       
-                             <label class="fieldlabels">Email: *</label> <input type="text" name="email" value="<?php echo e($cust->email); ?>" /> 
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">   <input type="hidden" name="email" value="<?php echo e($cust->email); ?>" /> 
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Phone: *</label> <input type="text" name="desc" value="<?php echo e($cust->phone); ?>" /> 
+                       <input type="hidden" name="desc" value="<?php echo e($cust->phone); ?>" /> 
+                        </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       <input type="hidden" name="percent_downpayment" value="<?php echo e($percent_downpayment); ?>" id="percent_downpayment" /> 
                         </div>
 
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
-                             <label class="fieldlabels">Description: *</label> <input type="text" name="desc" value="<?php echo e($programs->tour_name); ?>" /> 
+                            <input type="hidden" name="desc" value="<?php echo e($programs->tour_name); ?>" /> 
                         </div>
 
 
-        <div class="clearfix">
-           <button class="btn btn-primary pull-right hvr-sweep-to-right" id="cash_narrat" name="cash_narrat" data-toggle="modal" data-target="#narratModal">Advance Payment</button>
-         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Full Payment</button>
-         
+        <div class="clearfix">          
+         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Ok</button>        
         </div>
+
+
+
       </form>
- <button class="btn btn-primary pull-right hvr-sweep-to-right" id="cash_narrat" name="cash_narrat" data-toggle="modal" data-target="#narratModal">Advance Payment2</button>
       </div>
-    </div>
+                
   </section>
-
-<button>
-  <input type="text" id="cash_narrat2" placeholder="Enter here" class="form-control narate" pattern="[a-zA-Z0-9-_.]{1,20}" name="cash_narrat2" data-toggle="modal2" data-target="#narratModal2" />
-</button>
-
-<!-- Modal -->
-  <div class="modal fade" id="narratModal" tabindex="-1" role="dialog" aria-labelledby="narratModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title modal_head" id="narratModalLabel">Narration</h4>
-        <button type="button" class="close cash-dismiss" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <label class="modal_note">Input</label>
-        <input class="myInput form-control form-control-sm" />
-      </div>
-      <div class="modal-footer narr_footer">
-        <button type="button" class="btn btn-primary cashmodal_btn" id="narrat_ok" data-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 
-<script type="text/javascript">
-  $('#narratModal').on('hide.bs.modal', function() {
-  let val = $('.myInput').val();
-  $('#cash_narrat2').val(val);
-})
-</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/payments/privatePaySummary.blade.php ENDPATH**/ ?>

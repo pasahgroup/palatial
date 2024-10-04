@@ -123,6 +123,13 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     public function payConfirm(Request $request,$id)
     {   
 
+//dd(request('percent_downpayment'));
+$amount_percent=request('percent_downpayment')*request('total_cost');
+
+if(request('amount')<$amount_percent)
+{
+ return redirect()->back()->with('error','Down Payment must not below 30% of total booking costs.');
+}
 
 // Fetching JSON
 $req_url = 'https://api.exchangerate-api.com/v4/latest/USD';
@@ -134,7 +141,6 @@ if(false !== $response_json) {
 
     // Try/catch for json_decode operation
     try {
-
     // Decoding
     $response_object = json_decode($response_json);
 $first_name=request('first_name');
@@ -148,7 +154,7 @@ $amount=request('amount');
 $currency=request('currency');
 $status=1;
 
-
+ // dd($amount);
 
 // dd(number_format($amount, 2));
     // YOUR APPLICATION CODE HERE, e.g.
@@ -159,7 +165,7 @@ $base_price=($response_object->rates->TZS/$response_object->rates->$currency);
 
  // $defaultCurrency2=($response_object->rates->$currency);
     $to_bepaid = round(($amount * $base_price), 2);
-     //dd($to_bepaid);
+     dd($to_bepaid);
     
     }
     catch(Exception $e) {

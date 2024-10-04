@@ -36,6 +36,7 @@
                 <?php echo csrf_field(); ?>
 
             <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
+            
                 <div class="card-body">
                                                                      
                 <div class="row" id="title">

@@ -13,8 +13,39 @@
     <div class="container">
       <div class="border-box">
         <div class="box-title">
-          <h5><strong>{{$programs->tour_name}}</strong></h5>
-        </div>
+           <div class="col-md-12">
+             <p><strong>{{$programs->tour_name}}</strong></p>
+           </div>
+        
+<div class="col-md-12">
+         @if($message = Session::get('success'))
+  <div class="alert alert-success">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Well!: </strong> {{$message}}
+  </div>
+  @endif
+
+ @if($message = Session::get('info'))
+  <div class="alert alert-warning">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Ops!: </strong> {{$message}}
+  </div>
+  @endif   
+
+ @if($message = Session::get('error'))
+  <div class="alert alert-danger">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Sorry!: </strong> {{$message}}
+  </div>
+  @endif
+</div>
+</div>
+
+
+
         <p>{{$cust->first_name}} {{$cust->last_name}}</p>
         <em>Summary invoice for your favourite tour costs</em>
           <em><b>(Please make Payment to arrange your favourite tour)</b></em>
@@ -165,33 +196,21 @@
               </tr>
               <tr class="total">
                 <td class="price">Grand Total</td>
-                <td class="price"> {{ number_format($cust->total_cost,2)}}  {{ $cust->currency}}:: </td>
+                <td class="price"> {{ number_format($cust->total_cost,2)}}  {{ $cust->currency}}</td>
               </tr>
-            </table>
-
-
-          </div>
-        </div>
-
-   <form  method="post"  action="{{ route('payConfirm',$cust->id) }}" enctype="multipart/form-data">
+ <form  method="post"  action="{{ route('payConfirm',$cust->id) }}" enctype="multipart/form-data">
           @csrf
                
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <label class="fieldlabels">First Name: *</label> <input type="text" name="first_name" value="{{$cust->first_name}}" />
-                        </div>
-                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <tr class="total">
+                       <input type="hidden" name="total_cost" value="{{ $cust->total_cost,2}}" id="total_cost" /> 
+                     
+                <td class="price">Amount to be Paid</td>
+                <td class="price"><input type="text" name="amount" id="amount" value="{{ $cust->total_cost,2}}"/>Down Payment must not below 30% of total booking costs.</td>
+              </tr>
+            </table>
+ <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
-                             <label class="fieldlabels">Last Name: *</label> <input type="text" name="last_name" value="{{$cust->last_name}}" /> 
-                        </div>
-                        
-  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Amount:*</label> <input type="text" name="amount" value="{{ $cust->total_cost,2}}"/> 
-                        </div>
-
-                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Currency:*</label> 
+                             <label class="fieldlabels">Select currency to pay with:*</label> 
                             <select name="currency" class="form-control">
                               <option value="{{ $cust->currency}}" selected>{{ $cust->currency}}</option>
                         <option value="KES">KES</option>
@@ -207,68 +226,50 @@
                          </select>
                         </div>
 
+          </div>
+        </div>
+
+  
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> <input type="hidden" name="first_name" value="{{$cust->first_name}}" />
+                        </div>
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <input type="hidden" name="last_name" value="{{$cust->last_name}}" /> 
+                        </div>
+  
+                        
+
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Reference: *</label> <input type="text" name="reference" value="{{$cust->id}}" /> 
+                        <input type="hidden" name="reference" value="{{$cust->id}}" /> 
                         </div>
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Type: *</label> <input type="text" name="type" value="MERCHANT" /> 
+                        <input type="hidden" name="type" value="MERCHANT" /> 
                         </div>
                
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">                       
-                             <label class="fieldlabels">Email: *</label> <input type="text" name="email" value="{{$cust->email}}" /> 
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">   <input type="hidden" name="email" value="{{$cust->email}}" /> 
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Phone: *</label> <input type="text" name="desc" value="{{$cust->phone}}" /> 
+                       <input type="hidden" name="desc" value="{{$cust->phone}}" /> 
+                        </div>
+                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                       <input type="hidden" name="percent_downpayment" value="{{$percent_downpayment}}" id="percent_downpayment" /> 
                         </div>
 
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                        
-                             <label class="fieldlabels">Description: *</label> <input type="text" name="desc" value="{{$programs->tour_name}}" /> 
+                            <input type="hidden" name="desc" value="{{$programs->tour_name}}" /> 
                         </div>
 
 
-        <div class="clearfix">
-           <button class="btn btn-primary pull-right hvr-sweep-to-right" id="cash_narrat" name="cash_narrat" data-toggle="modal" data-target="#narratModal">Advance Payment</button>
-         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Full Payment</button>
-         
+        <div class="clearfix">          
+         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Ok</button>        
         </div>
+
+
+
       </form>
- <button class="btn btn-primary pull-right hvr-sweep-to-right" id="cash_narrat" name="cash_narrat" data-toggle="modal" data-target="#narratModal">Advance Payment2</button>
       </div>
-    </div>
+                
   </section>
-
-<button>
-  <input type="text" id="cash_narrat2" placeholder="Enter here" class="form-control narate" pattern="[a-zA-Z0-9-_.]{1,20}" name="cash_narrat2" data-toggle="modal2" data-target="#narratModal2" />
-</button>
-
-<!-- Modal -->
-  <div class="modal fade" id="narratModal" tabindex="-1" role="dialog" aria-labelledby="narratModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title modal_head" id="narratModalLabel">Narration</h4>
-        <button type="button" class="close cash-dismiss" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <label class="modal_note">Input</label>
-        <input class="myInput form-control form-control-sm" />
-      </div>
-      <div class="modal-footer narr_footer">
-        <button type="button" class="btn btn-primary cashmodal_btn" id="narrat_ok" data-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 
-<script type="text/javascript">
-  $('#narratModal').on('hide.bs.modal', function() {
-  let val = $('.myInput').val();
-  $('#cash_narrat2').val(val);
-})
-</script>
 @endsection

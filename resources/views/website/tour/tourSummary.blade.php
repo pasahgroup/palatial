@@ -696,7 +696,7 @@
                 contentType: false,
                 processData: false,
                 success: (response) => {
-                    alert('Form submitted successfully');
+                  //  alert('Form submitted successfully');
                       $(".btn-submit").find(".fa-spinner").remove();
                      $(".btn-submit").removeAttr("disabled");
                       //alert(base_url);

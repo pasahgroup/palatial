@@ -1,10 +1,8 @@
-
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
- @isset($PostcategoryImage->attachment)
+ <?php if(isset($PostcategoryImage->attachment)): ?>
   <section class="same-section-spacing bg-bannerw">
         <div class="container">
             <div class="row">
@@ -22,13 +20,13 @@
             </div>
         </div>
     </section>
-  @endisset
+  <?php endif; ?>
 
 
   <section class="bg-gray">
         <div class="container-fluid">
             
-                {{-- start of tabs --}}
+                
             <div class="col-lg-12 col-md-12 col-sm-12 masonry"  style="background-color:#2e4432">
                     <div class="package-detail"> 
                              
@@ -42,121 +40,38 @@
               <div class="tab-pane active" id="tab-I">           
      
        <div class="card booking-tourPadding">   
-      <div class="card-header booking-tourPadding" style="background-color:Gray">
-    <span><b>Introduction</b></span>
-                     </div>          
-
-  @if($aboutus->introduction ?? '')
-                        <div class="card-body">                      
-                                <div class="col-lg-8">
-                                <div class="hotel-diss">
-                                       
-                                                
-                                      <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p> {{$aboutus->introduction ?? ''}}  
-
-                                      </div>          
-                                                                                 
-                                                 
-                                                 </div>
-                                               </div>
-                                        <div class="col-lg-4">                  
-                                            <div class="hotel-pics-one">                                   
-                                            <img src="" alt="" style="height: 32vh !important;width:100%">        
-                                            </div>                   
-
-                                      </div>
-                               </div> 
-  
-                                                          @endif
+            
 
 
-                                                        @if($aboutus->mission ?? '')
+                                                      <?php $__currentLoopData = $aboutus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $about): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                                                           <div class="card-header booking-tourPadding" style="background-color:Gray">
-    <span><b>Mission</b></span>
+    <span><b><?php echo e($about->title ?? ''); ?></b></span>
                      </div>
 
                         <div class="card-body">                      
-                                <div class="col-lg-8">
+                                <div class="col-lg-9">
                                 <div class="hotel-diss">
                                         
                                       <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p> {{$aboutus->mission ?? ''}} 
+                                        <p> <?php echo e($about->body ?? ''); ?> 
 
                                       </div>          
                                                                                  
                                                  
                                                  </div>
                                                </div>
-                                        <div class="col-lg-4">                  
+                                        <div class="col-lg-3">                  
                                             <div class="hotel-pics-one">                                   
-                                            <img src="" alt="" style="height: 32vh !important;width:100%">        
+                                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$about->attachment)); ?>" alt="" style="height: 32vh !important;width:100%"> 
+
                                             </div>                   
 
                                       </div>
                                </div> 
 
-                                                          @endif
+                                                          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                         @if($aboutus->vission ?? '')
-                                                             <div class="card-header booking-tourPadding" style="background-color:Gray">
-    <span><b>Vission</b></span>
-                     </div>
-
-                        <div class="card-body"> 
-
-                          <div class="col-lg-4">                  
-                                            <div class="hotel-pics-one">                                   
-                                            <img src="" alt="" style="height: 32vh !important;width:100%">        
-                                            </div>                   
-
-                                      </div>
-
-                                <div class="col-lg-8">
-                                <div class="hotel-diss">
-                                          
-                                      <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p> {{$aboutus->vission ?? ''}} 
-
-                                      </div>          
-                                                                                 
-                                                 
-                                                 </div>
-                                               </div>
-                                      
-                               </div> 
-
-                                                          @endif
-
-                                @if($aboutus->objectives ?? '')
-
-                  <div class="card-header booking-tourPadding" style="background-color:Gray">
-    <span><b>Objectives</b></span>
-                     </div>
-                       
-                        <div class="card-body">                      
-                                
-                                        <div class="col-lg-4">                  
-                                            <div class="hotel-pics-one">                                   
-                                            <img src="" alt="" style="height: 32vh !important;width:100%">        
-                                            </div>                   
-
-                                      </div>
-                                      <div class="col-lg-8">
-                                <div class="hotel-diss">
-                                          
-                                      <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p> {{$aboutus->objectives ?? ''}}</p> 
-
-                                      </div>          
-                                                                                 
-                                                 
-                                                 </div>
-                                               </div>
-                               </div> 
-
-                                                          @endif
                                 </div>
                                 </div>  
               
@@ -394,4 +309,5 @@ return false;
 
 });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/aboutus/aboutus_web.blade.php ENDPATH**/ ?>
