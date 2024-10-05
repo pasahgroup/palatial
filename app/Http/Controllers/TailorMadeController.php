@@ -91,7 +91,8 @@ $status="Active";
  $validator = Validator::make($request->all(), [
         'first_name' => 'required|string|max:255',
          'last_name' => 'required|string|max:255',
-        'email' => 'required|email|unique:users',
+        // 'email' => 'required|email|unique:users',
+         'email' => 'required|email',
         'arrival_date' => 'required|Date',
         'days' => 'required|integer',
 
@@ -152,6 +153,9 @@ $status="Active";
          }   
         }
 }
+//Send PIN to customer Email
+
+
     return redirect()->back()->with('success','SuccessfulSubmitted');
     }
 
