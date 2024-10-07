@@ -94,13 +94,13 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
                                        <div class="">
 
-                                <div class="row">
+                                <div class="">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
                                <p class="booking-btn-gray"><?php echo e($data->itinerary_description); ?></p>   
                                                
                                                      
-                               <div class="row"> 
+                               <div class=""> 
                                       <div class="col-md-12 col-lg-12 col-sm-12">
                                         <p><b class="text-success">Distance:</b> <?php echo e($data->distance); ?> KM <b class="text-success">Transport:</b> <?php echo e($data->transport); ?></p>
 
@@ -136,11 +136,11 @@
                      </div>          
 
                         <div class="card-body">
-                       <div class="row ">
+                       <div class="">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss" style="background-color:#2e4432">
                 
-                               <div class="row">                   
+                               <div class="">                   
                                 <div class="col-md-6 col-lg-6 col-sm-12">                                   
                                   <div class="rating">                     
                                     <h4>Location Details</h4>                        
@@ -652,7 +652,7 @@
                 contentType: false,
                 processData: false,
                 success: (response) => {
-                    alert('Form submitted successfully');
+                    // alert('Form submitted successfully');
                       $(".btn-submit").find(".fa-spinner").remove();
                      $(".btn-submit").removeAttr("disabled");
                       //alert(base_url);

@@ -64,8 +64,8 @@
 <div class="row">
               
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <label class="control-label" for="currency">Total cost</label>
-            <input name="price" type="number" min="0" >
+                    <label class="control-label" for="currency">Unit cost</label>
+            <input name="price" type="number" min="0" value="0.00">
           </div>
                
                  <div class="col-md-3 col-sm-6 col-xs-12">

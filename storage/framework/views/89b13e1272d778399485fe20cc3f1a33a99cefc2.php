@@ -180,7 +180,6 @@
         </div>
     </section>
   </div>
-
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/Itinerary/edit.blade.php ENDPATH**/ ?>

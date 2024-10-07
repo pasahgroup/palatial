@@ -26,8 +26,6 @@
 
 
 
-
-
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
     <div class="container-fluid" style="padding-bottom:0px;">  
             

@@ -25,7 +25,7 @@
     </div>
 <?php endif; ?>
           </div>
-                <form id="msform"  method="post"  action="<?php echo e(route('tailorMade.store')); ?>" class="registration-form">
+                <form id="msform" method="post" action="<?php echo e(route('tailorMade.store')); ?>" class="registration-form">
                     <?php echo csrf_field(); ?>
                     <!-- progressbar -->
                     <ul id="progressbar">

@@ -228,6 +228,7 @@ Route::post('search-tour', [websiteController::class, 'searchTour'])->name('sear
 
 Route::get('/attachmentTailorMade/{x}', [TailorMadeController::class, 'attachmentTailorMade'])->name('attachmentTailorMade');
 
+
 Route::post('/clientTailorMade', [TailorMadeController::class, 'clientTailorMade'])->name('clientTailorMade');
 Route::POST('/viewTrip', [TourEquiryFormController::class, 'viewTrip'])->name('viewTrip');
 Route::get('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');
@@ -320,7 +321,6 @@ Route::get('/accommodation-camps', [accommodationController::class, 'accommodati
 //End of accommodation controller
 
 Route::post('/updateItenary', [itineraryController::class, 'updateItenary'])->name('updateItenary');
-//Route::resource('/itineraries', itineraryController::class);
 
 Route::resource('/locations', locationController::class);
 Route::get('/location-edit/{x}', [locationController::class, 'edit'])->name('location-edit');

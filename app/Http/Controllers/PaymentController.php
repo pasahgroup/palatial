@@ -322,8 +322,10 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
         ->get();
 
        // dd($basic);
+           $peoplePercents=people_percent::get();
 
-        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives','cust'));
+
+        return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives','cust','peoplePercents'));
     }
     /**
      * Show the form for creating a new resource.
@@ -448,7 +450,7 @@ else
       $tailorCustomer = tailorMade::
         where('id',$z)
         ->first();
-    //dd($tailorCustomer);
+    dd($tailorCustomer);
   if($tailorCustomer->payee_status!='Paid')
    {
         $tourcostsummary = payment::create([

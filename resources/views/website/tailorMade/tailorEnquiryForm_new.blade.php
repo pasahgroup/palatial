@@ -26,7 +26,7 @@
     </div>
 @endif
           </div>
-                <form id="msform"  method="post"  action="{{ route('tailorMade.store') }}" class="registration-form">
+                <form id="msform" method="post" action="{{ route('tailorMade.store') }}" class="registration-form">
                     @csrf
                     <!-- progressbar -->
                     <ul id="progressbar">
