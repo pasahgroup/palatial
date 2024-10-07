@@ -117,13 +117,13 @@
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$safari->attachment)); ?>" alt="" style="height:250px;">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($safari->tour_name); ?></i></a>
+                            <a class="btn btn-outline-dark btn-squarex" href="<?php echo e(route('safaris.show',$safari->id)); ?>"><i class="fa fa-search">  <?php echo e($safari->tour_name); ?></i></a>
                         </div>
                     </div>
 
                  
                      <div class="text-center" style="background-color:#4c7149;">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> <?php echo e($safari->tour_name); ?></strong></a>                      
+                        <a class="h6 text-decoration-none text-truncate" href="<?php echo e(route('safaris.show',$safari->id)); ?>" style="font-size:20px;"><strong> <?php echo e($safari->tour_name); ?></strong></a>                      
                     </div>
 
 
@@ -136,8 +136,8 @@
 
  <b class="float-right">  
   <div class="header-btn">
-                                                                                <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($safari->price),2); ?> </strong>
-                                                                                     </span>
+  <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($safari->price),2); ?> </strong>
+                                                                        </span>
                                                                                     
 
                                                                                  </div></b>
