@@ -272,7 +272,7 @@
 
 
         <div class="clearfix">          
-         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Ok</button>        
+         <button href="/payConfirm/" class="btn btn-success pull-right hvr-sweep-to-right" type="submit">Proceed</button>        
         </div>
 
 

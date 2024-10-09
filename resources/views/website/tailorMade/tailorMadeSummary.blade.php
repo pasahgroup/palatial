@@ -18,7 +18,7 @@
                      <h3 class="package-list-title">
                         {{ $programs->tour_name }}
                     </h3>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoicex</button>
 
                 </div>
         
@@ -235,14 +235,20 @@
                                 @endforeach
                         </div>
                         </div>
-
                         <hr>
                         <div class="row">
-                            <div class="col-lg-12 text-center">                         
-                            
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+                            <div class="col-lg-9 text-center">  
 
-                    <!-- <a href="/enquiry/{{$id}}" role="button" class="btn btn-primary float-right">Enquiry</a> -->
+
+
+
+ <form method="GET" action="{{ route('viewTripf',$programs->pin) }}" class="registration-form">
+                    @csrf
+<input type="hidden" name="_method" value="PUT">
+
+                      <button type="submit" class="btn btn-success float-right" name="print" value="print">Pay Invoice</button>
+
+</form>
                             </div>
                             </div>
                         <hr>
@@ -257,7 +263,7 @@
                 </div>
                 <hr>
                 <p class="text-center">
-                <a class="btn btn-primary" href="{{ route('addons.index') }}">Pay Invoice</a></p>
+                <a class="btn btn-primary" href="{{ route('addons.index') }}">Print Invoice</a></p>
                 </div>
                 </div>
             </div>

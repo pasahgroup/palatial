@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
  <section class="bg-gray">
         <div class="container">
-           <div class="col-lg-3 col-md-12 col-sm-12">
+           <div class="col-lg-1 col-md-12 col-sm-12">
            </div>
-           <div class="col-lg-6 col-md-12 col-sm-12">
+           <div class="col-lg-10 col-md-12 col-sm-12">
              <div class="card">
                         <div class="card-body">
       <div class="modal-content">
@@ -278,7 +278,7 @@
 </div>
 </div>
 
-<div class="col-lg-3 col-md-12 col-sm-12">
+<div class="col-lg-1 col-md-12 col-sm-12">
            </div>
 </div>
 </section>

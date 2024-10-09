@@ -17,7 +17,7 @@
                         <?php echo e($programs->tour_name); ?>
 
                     </h3>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoicex</button>
 
                 </div>
         
@@ -237,14 +237,20 @@
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                         </div>
-
                         <hr>
                         <div class="row">
-                            <div class="col-lg-12 text-center">                         
-                            
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
+                            <div class="col-lg-9 text-center">  
 
-                    <!-- <a href="/enquiry/<?php echo e($id); ?>" role="button" class="btn btn-primary float-right">Enquiry</a> -->
+
+
+
+ <form method="GET" action="<?php echo e(route('viewTripf',$programs->pin)); ?>" class="registration-form">
+                    <?php echo csrf_field(); ?>
+<input type="hidden" name="_method" value="PUT">
+
+                      <button type="submit" class="btn btn-success float-right" name="print" value="print">Pay Invoice</button>
+
+</form>
                             </div>
                             </div>
                         <hr>
@@ -259,7 +265,7 @@
                 </div>
                 <hr>
                 <p class="text-center">
-                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>">Pay Invoice</a></p>
+                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>">Print Invoice</a></p>
                 </div>
                 </div>
             </div>

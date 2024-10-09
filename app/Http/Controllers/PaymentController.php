@@ -50,7 +50,7 @@ class PaymentController extends Controller
   public function pg($cust_id)
     {      
 
-//dd('poppp');
+//dd($cust_id);
       //Get customer details
 
         $cust=invoice::join('tour_equiry_forms','tour_equiry_forms.id','invoices.customer_id')
