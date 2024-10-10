@@ -44,12 +44,12 @@
 <br>
 <div class="col-md-12 col-sm-12">
      <strong class="card-text" style="background-color:yellow;">
-     <?php echo e($programs->tour_name); ?> </strong>
+     <?php echo e($programs->tour_name ?? ''); ?> </strong>
 </div>
 
                 <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                            <?php echo e($programs->itinerary_summury); ?>
+                                            <?php echo e($programs->itinerary_summury?? ''); ?>
 
                                             </p>
                                             <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

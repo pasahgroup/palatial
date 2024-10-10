@@ -347,7 +347,6 @@ if(request('print')=="print")
 
     public function store(Request $request)
     {
-
        $validatedData = $request->validate([
             'first_name' => 'required',
                'last_name' => 'required',

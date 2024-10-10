@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,43 +22,28 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
+            <?php if(Route::has('login')): ?>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    <a href="{{ route('email-send',11) }}" class="ml-4 text-sm text-gray-700 underline">Mailing</a>
+                    <a href="<?php echo e(route('email-send',11)); ?>" class="ml-4 text-sm text-gray-700 underline">Mailing</a>
                 </div>
-            @endif
+            <?php endif; ?>
 
 
 
-                   <form method="GET" action="{{ route('safaris.show','print') }}">
-                    @crsf
-                 <div class="col-md-10 col-sm-10">
-                                     </div>
-                                       <div class="col-md-2 col-sm-2">
-                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
-                                     </div>
-
-                                 </form>
-
-
-<br>
-<div class="col-md-12 col-sm-12">
-     <strong class="card-text" style="background-color:yellow;">
-     {{ $programs->tour_name ?? '' }} </strong>
-</div>
-
-                <div class="col-md-12 col-sm-12">
+  <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                            {{ $programs->itinerary_summury?? '' }}
+                                        
                                             </p>
-                                            @foreach ($datas as $data)
+                                            <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+ <?php echo e($datas['email']); ?>
+
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
-                                                <span><b> Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
+                                                <span></span>
 
                                                 </div>
                                                 <div class="card-body">
-                                                {{-- test --}}
+                                                
 
                                                 <div class="row masonry-item">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
@@ -67,21 +52,17 @@
                                 <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
-                               <p class="booking-btn-gray">{{ $data->itinerary_description }}</p>   
+                               <p class="booking-btn-gray"></p>   
                                                
                                                      
                                <div class="row"> 
-                                      <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p><b class="text-success">Distance:</b> {{$data->distance}} KM <b class="text-success">Transport:</b> {{$data->transport}}</p>
-
-                                          <p><b class="text-success">Accommodation:</b> {{$data->accommodation_name}} | <b class="text-success">Meal Plan:</b> {{$data->meal}}</p>
-                                      </div>           
+                                             
                                                                                  
                                                   </div>
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                           
-                                           <div class="hotel-pics-one">                                               <img src="{{URL('http://localhost:8000/storage/destination/'.$data->photo) }}" alt="" style="height: 32vh !important;width:100%">
+                                           <div class="hotel-pics-one">                                               
                                                  </div>
 
                                                  </div>
@@ -89,13 +70,17 @@
                                                 </div>
                                                 </div>
 
-                                        {{-- test --}}
+                                        
                                             </div>
                                             </div>
                                             <hr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
 
         </div>
+
+
+
     </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/emails/email_send_pin.blade.php ENDPATH**/ ?>

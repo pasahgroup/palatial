@@ -30,31 +30,15 @@
 
 
 
-                   <form method="GET" action="{{ route('safaris.show','print') }}">
-                    @crsf
-                 <div class="col-md-10 col-sm-10">
-                                     </div>
-                                       <div class="col-md-2 col-sm-2">
-                    <button type="submit" class="btn btn-success float-right" name="print" value="print">Print Itinerary</button>
-                                     </div>
-
-                                 </form>
-
-
-<br>
-<div class="col-md-12 col-sm-12">
-     <strong class="card-text" style="background-color:yellow;">
-     {{ $programs->tour_name ?? '' }} </strong>
-</div>
-
-                <div class="col-md-12 col-sm-12">
+  <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                            {{ $programs->itinerary_summury?? '' }}
+                                        
                                             </p>
                                             @foreach ($datas as $data)
+ {{$datas['email']}}
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
-                                                <span><b> Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
+                                                <span></span>
 
                                                 </div>
                                                 <div class="card-body">
@@ -67,21 +51,17 @@
                                 <div class="row">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
-                               <p class="booking-btn-gray">{{ $data->itinerary_description }}</p>   
+                               <p class="booking-btn-gray"></p>   
                                                
                                                      
                                <div class="row"> 
-                                      <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p><b class="text-success">Distance:</b> {{$data->distance}} KM <b class="text-success">Transport:</b> {{$data->transport}}</p>
-
-                                          <p><b class="text-success">Accommodation:</b> {{$data->accommodation_name}} | <b class="text-success">Meal Plan:</b> {{$data->meal}}</p>
-                                      </div>           
+                                             
                                                                                  
                                                   </div>
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">                           
-                                           <div class="hotel-pics-one">                                               <img src="{{URL('http://localhost:8000/storage/destination/'.$data->photo) }}" alt="" style="height: 32vh !important;width:100%">
+                                           <div class="hotel-pics-one">                                               
                                                  </div>
 
                                                  </div>
@@ -97,5 +77,8 @@
                 </div>
 
         </div>
+
+
+
     </body>
 </html>
