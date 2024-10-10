@@ -10,6 +10,8 @@ use App\Models\Tourcostsummary;
 use App\Models\departures;
 use App\Models\itinerary;
 use App\Models\specialOffer;
+use App\Models\tailorMade;
+
 
 use App\Models\people_percent;
 
@@ -278,17 +280,27 @@ dd('Mail sent successfully');
 
 
 
-public function viewTripf(Request $request,$pin)    {
+public function viewTripf(Request $request,$pin)  {
 
+$tourType="";
               //Verify if the pin exists
           // $pin=request('pin');  
           // dd($pin);      
-dd(request('print'));
-
-
-            $trip = TourEquiryForm::
+//dd(request('print'));
+if(request('print')=="print")
+{
+  $trip = tailorMade::
+            where('tailor_mades.pin',$pin)
+           ->where('tailor_mades.status','Active')->first();
+         $tourType="Private";
+          
+           }
+           else{
+  $trip = TourEquiryForm::
             where('tour_equiry_forms.pin',$pin)
-           ->where('tour_equiry_forms.status','Active')->first();        
+           ->where('tour_equiry_forms.status','Active')->first();
+           $tourType=$trip->tour_type;
+           }        
             //dd($trip);
 
            if($trip==null)
@@ -300,9 +312,17 @@ dd(request('print'));
            // $id=$trip->tour_id;
              $id=$trip->id;         
             // dd($id);
-        if($trip->tour_type=='Private' || $trip->tour_type=='Group')
+        if($tourType=='Private' || $tourType=='Group')
         {
-        return redirect()->route('pg',$id)->with('success','Tour Summary Cost created successful');
+
+        if(request('print')=="print")
+{    
+        return redirect()->route('pgtm',$id)->with('success','Tour Summary Cost created successful');
+    }
+    else
+    {
+     return redirect()->route('pg',$id)->with('success','Tour Summary Cost created successful');   
+    }
         }
         // else if ($trip->tour_type=='Group') {
         //     # code... 

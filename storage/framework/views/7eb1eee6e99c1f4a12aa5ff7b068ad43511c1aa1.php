@@ -26,7 +26,7 @@
        Customer name: <b><?php echo e($routes->first_name); ?> <?php echo e($routes->last_name); ?></b>
                 <br/>
                       
-     <form  method="post" id="post_form" action="<?php echo e(route('storeTailorMade',$routes->id)); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+     <form  method="post" action="<?php echo e(route('storeTailorMade',$routes->id)); ?>" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
  <?php echo csrf_field(); ?>
             <input type="hidden" name="user_id" value="<?php echo e(Auth::id()); ?>">
         <div class="row">     

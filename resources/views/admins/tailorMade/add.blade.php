@@ -27,7 +27,7 @@
        Customer name: <b>{{$routes->first_name}} {{$routes->last_name}}</b>
                 <br/>
                       
-     <form  method="post" id="post_form" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+     <form  method="post" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
  @csrf
             <input type="hidden" name="user_id" value="{{ Auth::id() }}">
         <div class="row">     

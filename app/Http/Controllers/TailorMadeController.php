@@ -235,14 +235,17 @@ $status="Active";
     }
 
 
-    public function attachmentTailorMade($id)
+    public function attachmentTailorMade(Request $request,$id)
     {
         $tour_addon='tailor_made';
         $tailorTours = program::get();
         //dd($id);
+  //dd(request('attachment'));
+
         $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
         ->where('itineraries.tour_addon','tailor_made')
         ->where('tailor_mades.id',$id)->first();
+
       
         $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
@@ -253,7 +256,6 @@ $status="Active";
         ->where('itineraries.program_id',$id)
         ->select('accommodations.accommodation_name','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
           ->get();
-
 //dd($datas);
 
          if($datas == "[]"){
@@ -264,8 +266,7 @@ $status="Active";
             return view('admins.tailorMade.add',compact('routes','accommodations','destinations','tour_addon','tailorTours'));
         };
 
-       // dd('dd');
-        return view('admins.itinerary.index',compact('datas','id','tour_addon','programs','tailorTours'));
+            return view('admins.itinerary.index',compact('datas','id','tour_addon','programs','tailorTours'));
     }
     
 
@@ -494,11 +495,8 @@ $adults_cost=$unit_price * $adults;
                      //upload the image
                      $path = $attached->storeAs('public/tailorMade/', $imageToStore);
 
-            attachment::UpdateOrcreate(
-                [
-                'destination_id'=>request('customer_id'),
-                'attachment'=>$imageToStore,
-                'type'=>'tailor_made'
+             $toUpdate = tailorMade::where('id',$id)->update([
+                'attachment'=>$imageToStore
                 ]
                 );
         }
@@ -527,26 +525,23 @@ $adults_cost=$unit_price * $adults;
             $id=$tailorMades->id;
            }
            
-           $tour_addon='tailor_made';
-          
+           $tour_addon='tailor_made';          
            $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
             //->join('attachments','attachments.destination_id','tailor_mades.id')        
           ->where('itineraries.tour_addon','tailor_made')
           // ->where('attachments.type','tailor_made')
           ->where('tailor_mades.id',$id)->first();
-      
 
+      
            if($programs ==null){
               $programs = tailorMade::
               where('tailor_mades.id',$id)->first();
               }
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
-
-        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')     
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')    
 
         ->join('destinations','destinations.id','itinerary_days.destination_id') 
-
          ->join('tailor_mades','tailor_mades.id','itineraries.program_id')
                   
          ->join('attachments','attachments.destination_id','accommodations.id') 
@@ -633,6 +628,8 @@ $adults_cost=$unit_price * $adults;
 
   //Update image
    if(request('attachment')){
+    //dd(request('attachment'));
+
                 $attach = request('attachment');
                 //dd($attach);
                 foreach($attach as $attached){
@@ -648,14 +645,10 @@ $adults_cost=$unit_price * $adults;
                      //upload the image
                      $path = $attached->storeAs('public/tailorMade/', $imageToStore);
             
-            attachment::UpdateOrcreate(
-                [
-                'destination_id'=>$id,
-                'type'=>'tailor_made'],
-                [
-                'attachment'=>$imageToStore                
-                ]);
-                
+             $toUpdate = tailorMade::where('id',$id)->update([
+                'attachment'=>$imageToStore
+                ]
+                );
         }
     }
 

@@ -237,7 +237,7 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-lg-9 text-center">  
+                            <div class="col-lg-8 text-center">  
 
 
 

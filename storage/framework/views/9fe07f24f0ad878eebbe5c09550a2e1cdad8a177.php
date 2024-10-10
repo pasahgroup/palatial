@@ -3,7 +3,7 @@
         <div class="container">
            <div class="col-lg-1 col-md-12 col-sm-12">
            </div>
-           <div class="col-lg-10 col-md-12 col-sm-12">
+           <div class="col-lg-8 col-md-12 col-sm-12">
              <div class="card">
                         <div class="card-body">
       <div class="modal-content">
