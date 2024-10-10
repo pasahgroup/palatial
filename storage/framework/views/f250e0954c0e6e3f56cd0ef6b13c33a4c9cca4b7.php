@@ -35,7 +35,7 @@
                                         
                                             </p>
                                             <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
- <?php echo e($datas['email']); ?>
+ <?php echo e($data); ?>
 
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">

@@ -34,7 +34,7 @@
                 <p class="card-text">
                                         
                                             </p>
-                                            @foreach ($datas as $data)
+                                          
  {{$datas['email']}}
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
@@ -72,8 +72,6 @@
                                         {{-- test --}}
                                             </div>
                                             </div>
-                                            <hr>
-                                            @endforeach
                 </div>
 
         </div>
