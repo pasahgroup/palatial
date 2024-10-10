@@ -32,10 +32,9 @@
 
   <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                        
+                                    PIN Number: <?php echo e($datas['pin']); ?>     
                                             </p>
-                                            <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
- <?php echo e($data); ?>
+                                          
 
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
@@ -73,8 +72,6 @@
                                         
                                             </div>
                                             </div>
-                                            <hr>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
 
         </div>

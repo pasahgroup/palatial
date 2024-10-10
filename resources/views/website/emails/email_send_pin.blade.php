@@ -32,10 +32,10 @@
 
   <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                        
+                                   Tailor PIN Number: {{$datas['pin']}}     
                                             </p>
                                           
- {{$datas['email']}}
+
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
                                                 <span></span>
