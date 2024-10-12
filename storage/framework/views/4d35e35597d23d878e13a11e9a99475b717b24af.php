@@ -142,7 +142,7 @@
  -->
  
     <header class="header-area">  
-    <?php echo $__env->make('website.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>  
+          <?php echo $__env->make('website.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>  
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;">              
             <div class="classy-nav-container breakpoint-off">  
