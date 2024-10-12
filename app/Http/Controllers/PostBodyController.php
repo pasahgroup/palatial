@@ -312,7 +312,6 @@ class PostBodyController extends Controller
          ->where('post_bodies.status','Active')
          ->select('post_bodies.id','post_bodies.category','post_bodies.category_aboutus','post_bodies.title','post_bodies.body','post_bodies.status','attachments.attachment')
          ->get();
-//dd($aboutus);
 
            return view('website.aboutus.aboutus_web',compact('aboutus','PostcategoryImage'));
     }
