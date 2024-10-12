@@ -142,7 +142,7 @@
  -->
  
     <header class="header-area">  
-        @include('website.layouts.header') 
+    @include('website.layouts.header')  
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;">              
             <div class="classy-nav-container breakpoint-off">  
