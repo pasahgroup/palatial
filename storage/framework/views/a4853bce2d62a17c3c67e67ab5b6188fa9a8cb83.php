@@ -4,7 +4,7 @@
         <div class="main-header-area" id="stickyHeaderx" style="background:#fdfdfd;">
            <!-- <div class="main-header-area" id="stickyHeader" style="background:#2e4432;"> -->
              <div class="container">
-            <div class="classy-nav-container breakpoint-off" style="background:#889973;margin-top:-9px;padding:0px;padding-bottom:-999px;">
+            <div class="classy-nav-container breakpoint-off" style="background:#889973;margin-top:-9px;padding-top:0px;padding-bottom:0px;">
 
       
         <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex">
