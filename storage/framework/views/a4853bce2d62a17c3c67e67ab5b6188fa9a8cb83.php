@@ -1,12 +1,12 @@
 
-    <header class="header-area">
-   
+    <header class="header-area">   
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeaderx" style="background:#fdfdfd;">
            <!-- <div class="main-header-area" id="stickyHeader" style="background:#2e4432;"> -->
+             <div class="container">
             <div class="classy-nav-container breakpoint-off">
 
-       <div class="container">
+      
         <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex" style="margin-top:-2px;margin-bottom:-2px;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
