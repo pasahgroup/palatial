@@ -663,7 +663,7 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
                     <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/safaris">{{ $popular_safari->type }}</a>                      
+                        <a class="h2 text-decoration-none text-truncate" href="/safaris" >{{ $popular_safari->type }}</a>                      
                     </div>
                 </div>
             </div>

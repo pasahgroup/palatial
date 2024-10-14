@@ -75,8 +75,7 @@
 
 
 
- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">                               
-    <div class="container mt-3">
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">  
   <strong>Language(Mother Tongue):</strong>
     <label for="browser" class="form-label">Choose the language from the list:</label>
     <input class="form-control" list="languages" name="language" id="language">
@@ -95,7 +94,6 @@
                                               <option value="Other">Other Language</option>
     </datalist> 
 </div>
-                                </div>
 
                     </fieldset>
                     <fieldset>
@@ -139,7 +137,7 @@
                                    <label for=""><?php echo e($media->social_name); ?>
 
                                     <div class="form-group">
-                                       <input id="facebook" type="checkbox"  name="hear[]" value="<?php echo e($media->social_name); ?>">
+                                       <input id="facebook" type="checkbox"  name="hear[]" value="<?php echo e($media->social_name); ?>"  style="height: 20px;">
                                     </div></label>
                                 </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

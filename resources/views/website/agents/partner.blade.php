@@ -139,7 +139,7 @@
        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                    <label for="">{{$media->social_name}}
                                     <div class="form-group">
-                                       <input id="facebook" type="checkbox"  name="hear[]" value="{{$media->social_name}}">
+                                       <input id="facebook" type="checkbox"  name="hear[]" value="{{$media->social_name}}"  style="height: 20px;">
                                     </div></label>
                                 </div>
                                 @endforeach

@@ -36,11 +36,6 @@
 
   <script src="../custom/js/jquery.min.js"></script>
     <script src="../custom/js/bootstrap.min.js"></script>
-
-
-
-
-
 <!-- End of Modal -->
 <style type="text/css">
     .wpadding{
