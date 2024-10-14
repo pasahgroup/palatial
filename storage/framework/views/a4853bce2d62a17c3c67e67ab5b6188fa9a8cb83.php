@@ -18,10 +18,10 @@
               <div class="col-lg-4 col-6 text-left">
                  <div class="email-address">
                     <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><span style="color:#072004;">  info@palatialtours.com</span></a>
+                      <i class="fa fa-envelope" style="color:pink;"></i><span style="color:#fff;">  info@palatialtours.com</span></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                               <span style="color:#072004;">(+255)753 216 263</span>
+                               <span style="color:#fff;">(+255)753 216 263</span>
                             </a>
                 </div>
             </div>

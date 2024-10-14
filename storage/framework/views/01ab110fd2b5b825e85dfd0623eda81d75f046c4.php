@@ -212,7 +212,7 @@
                                    <label for=""><?php echo e($media->social_name); ?>
 
                                     <div class="form-group">
-                                       <input id="facebook" type="checkbox"  name="hear[]" value="<?php echo e($media->social_name); ?>">
+                                       <input id="facebook" type="checkbox"  name="hear[]" value="<?php echo e($media->social_name); ?>"  style="height: 20px;">
                                     </div></label>
                                 </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
