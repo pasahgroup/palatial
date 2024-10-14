@@ -9,7 +9,8 @@
  </section>
 
 
-    <section class="ws-section-spacing bg-gray">
+<section class="featured-properties-area section-padding-100-50" style="padding-top:14px;"> 
+  
     <div class="container">
           <!-- Start of Image filled from slider -->
              <div class="package-list-wrap ">
@@ -141,4 +142,5 @@
 
 
 <!-- End-Package-Section -->
+<script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection

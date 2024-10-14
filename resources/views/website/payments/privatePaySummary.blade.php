@@ -1,14 +1,6 @@
 @extends('website.layouts.apps')
 @section('content')
 
-  <!-- <link rel="stylesheet" href="../assets/css/min/bootstrap.min.css" media="all"> -->
-
-  <!-- <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all"> -->
-  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
-<body>
   <section class="cart-page">
     <div class="container">
       <div class="border-box">
@@ -270,6 +262,5 @@
       </div>
                 
   </section>
-</body>
-
+  <script src="../../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection

@@ -250,30 +250,43 @@ dd('Mail sent successfully');
            $pin=request('pin');        
 
             $trip = TourEquiryForm::
-            where('tour_equiry_forms.pin',$pin)
-           ->where('tour_equiry_forms.status','Active')->first();        
+            where('tour_equiry_forms.pin',$pin)->first();
+
+           // ->where('tour_equiry_forms.status','Active')->first();        
             //dd($trip);
 
            if($trip==null)
            {
-            return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+            // return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+            return redirect()->back()->with('error','Your PIN Number does not Exists');
            }
            else
            {
-           // $id=$trip->tour_id;
-             $id=$trip->id;         
-            // dd($id);
+        
+         if($trip->status=="Inactive")
+           {
+             return redirect()->back()->with('error','Your PIN Number has been already Expired');
+           }else
+           {
+              $id=$trip->id;  
+           }
+
+
+
         if($trip->tour_type=='Private')
         {
+          //dd($trip->tour_type);  
         // return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
               return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
         }
-        else if ($trip->tour_type=='Group') {
+        elseif ($trip->tour_type=='Group') {
+            //dd($trip->tour_type);
             # code... 
               return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
         }else
         {
-         return 'Tour category was not specified...!';      
+         // return 'Tour category was not specified...!'; 
+           return redirect()->back()->with('info','Tour category was not specified...!');     
         }       
      }
     }

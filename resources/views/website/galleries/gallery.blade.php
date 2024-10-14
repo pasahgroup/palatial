@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 @extends('website.layouts.apps')
 @section('content')
 <style type="text/css">
@@ -8,16 +8,6 @@
   }
 </style>
 
-<html lang="en">
-<!--<![endif]-->
-
-<!-- Head BEGIN -->
-<head>
-  <!-- Global styles START -->          
-<!--   <link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- Global styles END --> 
-   
   <!-- Page level plugin styles START -->
   <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
   <!-- Page level plugin styles END -->
@@ -29,9 +19,7 @@
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet">
   <link href="../../assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="../../assets/corporate/css/custom.css" rel="stylesheet">
-  <!-- Theme styles END -->
-</head>
-<!-- Head END -->
+
 
 <!-- Body BEGIN -->
 <body class="corporate">
@@ -133,8 +121,6 @@
         <!-- BEGIN SIDEBAR & CONTENT -->
       </div>
     </div>
-@endsection
-
     <!-- <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script> -->
     <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
    
@@ -154,7 +140,5 @@
             Portfolio.init();
         });
     </script>
-    <!-- END PAGE LEVEL JAVASCRIPTS -->
-</body>
-<!-- END BODY -->
-</html>
+    <script src="../../assetff/js/jquery/jquery-2.2.4.min.js"></script>
+ @endsection

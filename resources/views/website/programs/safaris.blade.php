@@ -72,26 +72,12 @@
 }
 </style>
 
- <hr>
-
-
-
- <section class="">
-    <div class="container">   
-
-      <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+<section class="featured-properties-area section-padding-100-50" style="padding-top:14px;"> 
+ <div class="col-lg-12 col-md-12 col-sm-12 text-center">
         <h3 style="color:#b76b0b;">
          <b> {{$title ?? ''}}</b>
       </h3>        
     </div>
-    </div>
-</section>
-
-
-
-
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
-
     <div class="container-fluid" style="padding-bottom:0px;">  
             
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> {{$title ?? ''}} Tours</span></h2>
@@ -183,6 +169,6 @@
     </div>
 </div>
 </section>
-
+<script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
  @endsection
 

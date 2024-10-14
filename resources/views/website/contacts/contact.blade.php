@@ -121,5 +121,6 @@
          <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&amp;callback=initMap">          
         </script>
+        <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection
 

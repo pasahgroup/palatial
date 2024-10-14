@@ -5,7 +5,7 @@
       <script src="../js/jquery361.min.js"></script>
      <link rel="stylesheet" href="../css/font621.min.css">
 
-  <section class="bg-gray" style="margin-top: 14px;">
+  <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
@@ -530,33 +530,32 @@
 
 
              
-              <div class="col-md-6">
-                       
-                                 <label for="">Tour Addon:</label>
-                                   
-                                                        <select class="selectpicker search-fields form-control" name="addon">
-              <option value="0" selected>None</option>
+               <div class="col-md-6">                  
+                    <label for="">Tour Addon:</label>
+    <input class="form-control" list="addons" name="addon" id="addon">
+    <datalist id="addons">
+            <option value="0" selected>None</option>
               @foreach ($addons as $addon)
             <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
               @endforeach
-          </select>
+    </datalist>
+
                                 </div>
 
-               <div class="col-md-6"> 
-                           
-                                   <label for="">Accommodation:</label>
-                                   
-                                       <select class="form-control" name="accomodation">
-                                            <option value="0">--Select Accomodation--</option>
+
+              <div class="col-md-6">                           
+    <label for="">Accommodation:</label>
+    <input class="form-control" list="accomodations" name="accomodation" id="accomodation">
+    <datalist id="accomodations">
+         <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
                                              <option>Comfort</option>
                                               <option>Deluxe</option>
                                                <option>Mix</option>
                                                 <option>Not Sure</option>
-                                           
-                                        </select>
-                                   
-                                </div>                
+    </datalist>                                   
+    </div> 
+                    
     <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
@@ -795,4 +794,5 @@ return false;
 
 });
 </script>
+    <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection

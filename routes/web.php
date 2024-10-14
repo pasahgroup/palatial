@@ -208,6 +208,7 @@ Route::get('/pay/{x}', [PaymentController::class, 'payInvoice'])->name('payInvoi
 Route::post('/payConfirm/{x}', [PaymentController::class, 'payConfirm'])->name('payConfirm');
 
 Route::get('/groupTourSumary/{x}', [PaymentController::class, 'groupTourSumary'])->name('groupTourSumary');
+
 //End of payment controller
 
 //Contact part

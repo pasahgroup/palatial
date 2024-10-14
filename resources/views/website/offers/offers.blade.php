@@ -8,6 +8,8 @@
 }
 </style>
 
+
+
 <style type="text/css">
     
     .booking-btn {
@@ -349,7 +351,7 @@
    </div>
 
 </section>
-
+ <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script> 
 <script>    
 function openPage(pageName, elmnt, color) {
   // Hide all elements with class="tabcontent" by default */

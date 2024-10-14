@@ -357,8 +357,22 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
     {
        $cust_id=$id;
        $cust=invoice::where('customer_id',$cust_id)->first();
-       // dd($cust);
-        $id=$cust->tour_id;   
+     
+        if($cust==null)
+        {
+            return redirect()->back()->with('info','Tour ID is null ...! Trace 2 Payment controller');
+
+        }
+        else{
+               $id=$cust->tour_id;  
+ if($id==0)
+        {
+            return redirect()->back()->with('info','Tour ID is 0 ...! Trace  Payment controller');
+
+        }
+
+        }
+
 
           $discounts=specialOffer::where('tour_id',$id)->first();
              $tourInvoice=invoice::where('tour_id',$id)->first();
@@ -419,10 +433,9 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
          ->where('departures.tour_id',$id)
         ->get();
 
-       // dd($basic);
            $peoplePercents=people_percent::get();
 
-
+  //dd($basic);
         return view('website.payments.privatePaySummary',compact('datas','id','programs','basic','discounts','tourInvoice','assignLists','inclusives','cust','peoplePercents'));
     }
     /**

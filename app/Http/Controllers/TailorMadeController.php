@@ -550,16 +550,28 @@ $adults_cost=$unit_price * $adults;
               //Verify if the pin exists
           $pin=request('pin');
          // dd($pin);
+          
           $tailorMades = tailorMade::
-            where('tailor_mades.pin',$pin)
-          ->where('tailor_mades.status','Active')->first();        
+            where('tailor_mades.pin',$pin)->first(); 
+
+            //dd($tailorMades);
+          // ->where('tailor_mades.status','Active')->first();        
+           
            if($tailorMades==null)
            {
-            return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+            // return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+               return redirect()->back()->with('error','Your Tailor PIN Number does not Exists');
            }
            else
            {
-            $id=$tailorMades->id;
+             if($tailorMades->status=="Inactive")
+           {
+             return redirect()->back()->with('error','Your tailor PIN Number has been already Expired');
+           }else
+           {
+             $id=$tailorMades->id;
+           }
+           
            }
            
            $tour_addon='tailor_made';          
@@ -595,7 +607,8 @@ $adults_cost=$unit_price * $adults;
 
          if($datas == "[]"){          
             $destinations = destination::get();
-            return ($programs->full_name.' Ops your tailor made still on Progess....');
+              return redirect()->back()->with('info',$programs->full_name.' Ops your tailor made still on Progess....');
+            // return ($programs->full_name.' Ops your tailor made still on Progess....');
           };
 
         $basic=tailorMade::join('attachments','attachments.destination_id','tailor_mades.id')
@@ -606,7 +619,7 @@ $adults_cost=$unit_price * $adults;
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
 //dd($programs);
-        return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists'));
+        return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin'));
     }
  
     /**

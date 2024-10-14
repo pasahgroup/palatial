@@ -467,5 +467,6 @@
     <script src="../assetff/js/plugins.js"></script>
     <script src="../assetff/j../assetff/s/classy-nav.min.js"></script>
     <script src="../assetff/js/jquery-ui.min.js"></script>
+    <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection
 

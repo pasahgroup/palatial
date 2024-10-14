@@ -233,7 +233,9 @@ $('#myTab a').on('click', function (event) {
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
 
-
+    <!-- Template Javascript -->
+       <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
+ 
 
 <script type="text/javascript">    
 $(document).ready(function(){

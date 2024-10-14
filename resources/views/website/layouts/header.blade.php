@@ -1,17 +1,17 @@
 
-    <header class="header-area">   
+
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeaderx" style="background:#fdfdfd;">
+        <div class="main-header-area" id="stickyHeaderx" style="background:#fff;margin:4px;padding-top:10px;">
            <!-- <div class="main-header-area" id="stickyHeader" style="background:#2e4432;"> -->
              <div class="container">
-            <div class="classy-nav-container breakpoint-off" style="background:#889973;margin-top:-9px;padding-top:0px;padding-bottom:0px;">
+            <div class="classy-nav-container breakpoint-off" style="background:#b07432;margin-top:-14px;padding-top:0px;padding-bottom:0px;border-style: solid;border-color: yellow;">
 
-        <div class="row align-items-center py-3 px-xl-5 d-none d-lg-flex">
+        <div class="row align-items-center py-1 px-xl-5 d-none d-lg-flex" style="padding:1px;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">Palatial</span>
                     <span class="h3 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
-                </a>            
+                </a>          
 
             </div>
 
@@ -53,5 +53,5 @@
     </div>
 
         </div>
-    </header>
+
 

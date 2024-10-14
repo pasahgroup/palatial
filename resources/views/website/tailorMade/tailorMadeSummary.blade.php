@@ -27,10 +27,14 @@
              <!-- Tabs starts here -->
             <div class="row">
                 {{-- start of tabs --}}
+      
             <div class="col-lg-9 col-md-9 col-sm-12 masonry"  style="background-color:#2e4432">
+          
                     <div class="package-detail"> 
-                             
+                        
             <div class="">
+               <strong style="color:#fff;">PIN number: {{$pin}}</strong>
+               <br>
             <ul class="nav nav-tabs">
               <li><a href="#tab-H" data-toggle="tab">Highlight</a></li>
               <li class="active"><a href="#tab-I" data-toggle="tab">Itinerary</a></li>

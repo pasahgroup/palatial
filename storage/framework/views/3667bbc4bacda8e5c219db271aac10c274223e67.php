@@ -1,9 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<style type="text/css">
-    .top{
-        margin-top:7%;
-    }
-</style>
+
 <style type="text/css">
     
     .booking-btn {
@@ -47,6 +43,7 @@
 }
 </style>
     <!-- Carousel Start -->
+ <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
             <div class="col-lg-9">
@@ -83,10 +80,7 @@
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                <!--     <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
-                                    <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
-                                   <!--  <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>">Read more</a>
- -->
+            
                                  <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($slides->tour_name); ?></h5>
                                     <div class="wrapper">
                                                                      <p class="demo-1" style="color:white"><?php echo e($slides->description); ?></p>
@@ -371,15 +365,15 @@
  <div class="single-featured-properties-slide">
     <div class="item active">
                  <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
-                                                                                 <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
+    <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+     <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
             <p><?php echo e($popular_historical->tour_name); ?></p>
                                                     </h3>
      <a class="package-list-button" href="<?php echo e(route('safaris-slider-packages',$popular_historical->id)); ?>">Explore More</a>
-                                                                                    </div>
-                                                                                </div>
+                                                            </div>
+                                                                </div>
             </div>
 </div>
 
@@ -396,8 +390,8 @@
                               
 
     <div class="item">
-                                                    <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                             <div class="package-list-wrap ">
+ <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
                                                                                         <span class="off-box" style="background-color:#2e4432"><?php echo e($historicalf->days); ?> Days: $<?php echo e(number_format($historicalf->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -866,15 +860,12 @@ Partnering with SafariBookings.com</b></a>
         </div>
     </div>
     <!-- Vendor End -->
-
+</section>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
    
      <script src="../assetff/js/category.js"></script>
     <script src="../assetff/lib/easing/easing.min.js"></script>

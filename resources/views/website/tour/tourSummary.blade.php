@@ -3,7 +3,7 @@
 @section('content')
 
 
-  <section class="bg-gray">
+   <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
@@ -482,18 +482,13 @@
 
  -->
            
-             <div class="row form-group">
+             <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
                                         <input type="text" name="first_name" placeholder="first name" /> 
-                    
-                                    </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
                                            <input type="text" name="last_name" placeholder="last name" /> 
-                                    </div>
                                 </div>
   </div>
 
@@ -518,7 +513,7 @@
                              </div>
 
                        
-             <div class="row">
+          
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Travel Date:</label>
                                     <div class="form-group">
@@ -533,9 +528,8 @@
                                         <input type="number" class="zt-control" name="adults" min="0" value="1">
                                     </div>
                                 </div>
-  </div>
 
-                                <div class="row">
+
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                    <label for="">Teens (12-14 yrs):</label>
                                     <div class="form-group">
@@ -548,9 +542,8 @@
                                         <input type="number" class="zt-control" name="children" min="0" value="0">
                                     </div>
                                  </div>
-  </div>
 
-<div class="row">
+
  <div class="col-md-12">
         <div class="form-group">
             <label for="">Tour type:</label>
@@ -559,7 +552,7 @@
         </div>
     </div>
 
-                                 </div>                    
+                                               
             
 
                         </div> 
@@ -571,40 +564,39 @@
                     </fieldset>
                     <fieldset>
                         <div class="form-card">
-                            <div class="row">
                                 <div class="col-12">
                                     <h4 class="fs-title">Other Information:|Step 3 - 4</h4>                               
 </div>
 
 
              
-              <div class="col-md-6">
-                       
-                                 <label for="">Tour Addon:</label>
-                                   
-                                                        <select class="selectpicker search-fields form-control" name="addon">
-              <option value="0" selected>None</option>
+              <div class="col-md-6">                  
+                    <label for="">Tour Addon:</label>
+    <input class="form-control" list="addons" name="addon" id="addon">
+    <datalist id="addons">
+            <option value="0" selected>None</option>
               @foreach ($addons as $addon)
             <option value="{{ $addon->price }}">{{ $addon->addon_name }} - {{ $addon->days }} days / ${{ $addon->price }}</option>
               @endforeach
-          </select>
+    </datalist>
+
                                 </div>
 
-               <div class="col-md-6"> 
-                           
-                                   <label for="">Accommodation:</label>
-                                   
-                                       <select class="form-control" name="accomodation">
-                                            <option value="0">--Select Accomodation--</option>
+<div class="col-md-6">                           
+    <label for="">Accommodation:</label>
+    <input class="form-control" list="accomodations" name="accomodation" id="accomodation">
+    <datalist id="accomodations">
+         <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
                                              <option>Comfort</option>
                                               <option>Deluxe</option>
                                                <option>Mix</option>
                                                 <option>Not Sure</option>
-                                           
-                                        </select>
-                                   
-                                </div>                
+    </datalist>                                   
+    </div> 
+
+
+
     <div class="col-md-12">
                 <div class="form-group">
                     <label for="">  Additional Information we should know?</label>
@@ -641,7 +633,6 @@
            <input type="text" class="form-control" name="hear_about_us">
         </div>
         </div> 
-                                </div>
                           </div> 
                              
                                            
@@ -820,7 +811,7 @@ $('#myTab a').on('click', function (event) {
 
 <script type="text/javascript" src="../../../js/jquery321.min.js"></script>
 <script type="text/javascript" src="../../../js/bootstrap431.bundle.min.js"></script>
-
+<script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 
 
 <script type="text/javascript">    

@@ -20,6 +20,11 @@
   <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh;" alt="Palatial Tours"><!-- link to image for socio -->
   <meta property="og:url" content="https://palatialtours.com/">
 
+<style type="text/css">
+    .top{
+        margin-top:7%;
+    }
+</style>
   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
    <link rel="icon" href="../assetf/img/core-img/favicon.ico">
    <link rel="stylesheet" href="../assetf/style.css">
@@ -31,6 +36,10 @@
 
   <script src="../custom/js/jquery.min.js"></script>
     <script src="../custom/js/bootstrap.min.js"></script>
+
+
+
+
 
 <!-- End of Modal -->
 <style type="text/css">
@@ -45,7 +54,6 @@
        padding-left:6px;  
     }
 </style>
-
 
     <link href="../custom/css/style.css" rel="stylesheet">
 
@@ -144,7 +152,7 @@
     <header class="header-area">  
           <?php echo $__env->make('website.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>  
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;">              
+        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">              
             <div class="classy-nav-container breakpoint-off">  
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
@@ -441,9 +449,6 @@
   </footer>
 
 
-
-       <!-- <script src="../assetf/js/jquery/jquery-2.2.4.min.js"></script> -->
-
     <!-- Popper js -->
     <script src="../assetf/js/popper.min.js"></script>
     <!-- Bootstrap js -->
@@ -475,15 +480,12 @@
   <script src="../assets/js/min/countnumbers.min.js"></script>
   <script src="../assets/js/main.js"></script>
 
-
- <!-- Custom2 -->
-
+   <!-- Custom2 -->
   <script src="../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script src="../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script>
 
     <script src="../../assets/corporate/scripts/layout.js" type="text/javascript"></script>
     <script src="../../assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
-
 
 
    <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
@@ -506,10 +508,6 @@
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->
 
-
-
-
-
 <script> 
     // jQuery code for initializing a tooltip 
     $(document).ready(function () { 
@@ -519,9 +517,6 @@
         $('[data-toggle="tooltip"]').tooltip(); 
     }); 
 </script>
-
-
-
 
 <script type="text/javascript">
     //  function getURL(){
