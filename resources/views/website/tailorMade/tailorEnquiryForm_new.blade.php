@@ -1,6 +1,6 @@
 @extends('website.layouts.apps')
 @section('content')
- <section class="bg-gray">
+ <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
         <div class="container">
            <div class="col-lg-1 col-md-12 col-sm-12">
            </div>
@@ -54,8 +54,10 @@
              @endif       
                --}}
 
-             <input type="hidden" class="form-control" name="tour_name" value="666">
-            <input type="hidden" class="form-control" name="currency" value="555">
+ <input type="hidden" class="form-control" name="company_name" value="{{$company_name}}">
+ 
+            <!--  <input type="hidden" class="form-control" name="tour_name" value="666">
+            <input type="hidden" class="form-control" name="currency" value="555"> -->
         </div>
 
 
@@ -136,32 +138,33 @@
                                 </div>
   </div>
    <div class="form-group">
-                                      <div class="col-lg-6 col-md-6 col-sm-6">
+                                      <div class="col-lg-8 col-md-8 col-sm-4">
                                    <label for="">Tour Type:</label>
-                                    <div class="form-group">
-                                        <select class="selectpicker search-fields form-control" name="tour_type">
-                                              <option value="0">--Select tour type--</option>
+                                 
+<input class="form-control" list="tour_types" name="tour_type" id="tour_type">
+    <datalist id="tour_types">
+<option value="0">--Select tour type--</option>
                                             <option value="Safaris">Wildlife Safaris</option>
                                             <option value="Trekking">Mt.Trekking & Hiking</option>
                                               <option value="Holidays">Beach Holidays</option>
                                             <option value="Historical_sites">Historical Sites</option>
                                             <option value="Other">Other</option>
-                                        </select>
-                                    </div>
+    </datalist> 
+
                                 </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
                                    <label for="">Accommodation:</label>
-                                    <div class="form-group">
-                                       <select class="form-control" name="accomodation">
-                                            <option value="0">--Select Accomodation--</option>
+                                   
+    <input class="form-control" list="accomodations" name="accomodation" id="accomodation">
+    <datalist id="accomodations">
+   <option value="0">--Select Accomodation--</option>
                                             <option>Basic</option>
                                              <option>Comfort</option>
                                               <option>Deluxe</option>
                                                <option>Mix</option>
                                                 <option>Not Sure</option>
-                                           
-                                        </select>
-                                    </div>
+    </datalist> 
+
                                 </div>
   </div>
                           
@@ -243,13 +246,6 @@
         </div>
         </div> 
                         </div> 
-
-                         <!--     <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>                    
-                        <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
-                        <input type="button" name="next" class="next action-button float-right" value="Next" /> 
-                                       -->
-                        
-                        <!-- <input type="submit" name="next" class="next action-button" value="Submit"/> -->
                      
                         <button type="button" class="previous action-button-previous float-left" data-dismiss="modal" style="background-color:#d0794e">Close</button>
                          <input type="button" name="previous" class="previous action-button-previous float-left" value="Previous" />
@@ -328,10 +324,6 @@ next_fs = $(this).parent().next();
     //     }
 
     // });
-
-
-
-
 
 
 //Add Class Active
@@ -454,4 +446,5 @@ return false;
    
 });
     </script> -->
+    <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection

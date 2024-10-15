@@ -19,6 +19,7 @@ use App\Models\accommodationInclusive;
 use App\Models\people_percent;
 use App\Models\specialOffer;
 use Mail;
+use Illuminate\Support\Facades\Route;
 
 use App\Models\departures;
 use App\Models\buyaddons;
@@ -176,14 +177,23 @@ $status="Active";
         ]);
 
 }
+
+//dd(request('company_name'));
+$currentPath= Route::getFacadeRoot()->current()->uri();
+$currentPath_root= $request->root();
+$uri = $request->fullUrl();
+
+//dd($currentPath_url);
 //Send PIN to customer Email
+$company_name=request('company_name');
 $date=date('d-M-Y');
 // $data["email"] = "palatialtours@gmail.com";
 $data["email"] = request('email');
 // $data["email"] ="buruwawa@gmail.com";
 
 // $data["title"] = "ITINERARY ".$tour_addon;
-$data["title"] = "ITINERARY ";
+$data["title"] = "TAILOR MADE WITH ".' '.$company_name;
+$data["uri"] =$currentPath_root.'/tailorClientForm';
 
 $data["body"] = "Manyara Best View Hotel: Daily General Inspection Report held on $date";
 $data["date"] = "Date: $date";
@@ -193,8 +203,6 @@ $data['socialmedia'] ="facebook";
 $data['datas'] =$datas; 
 $data['programs'] ="Program 1";
 
-
-//dd($data);
 
 $files = [
 //app_path('reports/pieChart.pdf'),
@@ -215,6 +223,9 @@ foreach ($files as $file){
 
     return redirect()->back()->with('success','SuccessfulSubmitted');
     }
+
+
+
 
  public function tailorForm()
     {

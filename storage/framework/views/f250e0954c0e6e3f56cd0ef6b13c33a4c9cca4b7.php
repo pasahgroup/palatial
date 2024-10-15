@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,21 +22,21 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
+            <?php if(Route::has('login')): ?>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    <a href="{{ route('email-send',11) }}" class="ml-4 text-sm text-gray-700 underline">Mailing</a>
+                    <a href="<?php echo e(route('email-send',11)); ?>" class="ml-4 text-sm text-gray-700 underline">Mailing</a>
                 </div>
-            @endif
+            <?php endif; ?>
 
 
 
   <div class="col-md-12 col-sm-12">
-    <h3>{{$title}}</h3>
+    <h3><?php echo e($title); ?></h3>
                 <p class="card-text">
-                                   Tailor PIN Number: {{$datas['pin']}}     
+                                   Tailor PIN Number: <?php echo e($datas['pin']); ?>     
                                             </p>
                                             <p class="card-text">
-                                   Link: {{$uri}}     
+                                   Link: <?php echo e($uri); ?>     
                                             </p>
                                           
 
@@ -46,7 +46,7 @@
 
                                                 </div>
                                                 <div class="card-body">
-                                                {{-- test --}}
+                                                
 
                                                 <div class="row masonry-item">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
@@ -73,7 +73,7 @@
                                                 </div>
                                                 </div>
 
-                                        {{-- test --}}
+                                        
                                             </div>
                                             </div>
                 </div>
@@ -84,3 +84,4 @@
 
     </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/emails/email_send_pin.blade.php ENDPATH**/ ?>

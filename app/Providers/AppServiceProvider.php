@@ -34,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
              // Using view composer to set following variables globally
            view()->composer('*',function($view) {
   $view->with('percent_downpayment',0.3);
+    $view->with('company_name',"Palatial Tour Company");
+    view()->share('company_name',"Palatial Tour Company");
   //dd($view->percent);
 
 
