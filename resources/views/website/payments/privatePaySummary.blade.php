@@ -195,16 +195,15 @@
                
               <tr class="total">
                        <input type="hidden" name="total_cost" value="{{ $cust->total_cost,2}}" id="total_cost" /> 
-                     
                 <td class="price">Amount to be Paid</td>
-                <td class="price"><input type="text" name="amount" id="amount" value="{{ $cust->total_cost,2}}"/>Down Payment must not below 30% of total booking costs.</td>
+                <td class="price"><input type="text" name="amount" id="amount" value="{{ $cust->total_cost,2}}"/>Down Payment must not below 30% of total booking costs. not below ({{$cust->total_cost*$percent_downpayment,2}})</td>
               </tr>
             </table>
  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                       
-                             <label class="fieldlabels">Select currency to pay with:*</label> 
-                            <select name="currency" class="form-control">
-                              <option value="{{ $cust->currency}}" selected>{{ $cust->currency}}</option>
+   <label class="fieldlabels">Select Currency: *</label>
+                          <input class="form-control" list="currencies" name="currency" id="currency" required>
+    <datalist id="currencies">
+         <option value="{{ $cust->currency}}" selected>{{ $cust->currency}}</option>
                         <option value="KES">KES</option>
                           <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
@@ -214,8 +213,7 @@
                                  <option value="TZS">TZS</option>
                                   <option value="ZMW">ZMW</option>
                                    <option value="RWF">RWF</option>
-                         
-                         </select>
+    </datalist> 
                         </div>
 
           </div>
