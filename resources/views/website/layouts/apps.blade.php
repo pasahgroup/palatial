@@ -131,7 +131,6 @@
 .button5 {border-radius: 50%;}
 </style>
 
-
  <script src="../js/jquery361.min.js"></script>
      <link rel="stylesheet" href="../css/font621.min.css">
  
@@ -150,7 +149,6 @@
         <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">              
             <div class="classy-nav-container breakpoint-off">  
                 <nav class="classy-navbar justify-content-between" id="southNav">
-
                     <!-- Logo -->
                     <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
                     <!-- Navbar Toggler -->
@@ -169,7 +167,7 @@
                         <div class="classynav">
                             <ul>
 
-  <li><a href="/">Home</a>
+                            <li><a href="/">Home</a>
                                   <!--   <ul class="dropdown">
                                          <li><a href="/">Home</a></li>
                                     </ul -->
@@ -332,9 +330,9 @@
   <hr>
     
 
-      <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
+      <footer class="container footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
         <!-- Main Footer Area -->
-        <div class="row px-xl-5 pt-5">
+        <div class="px-xl-5 pt-5">
               <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
                            
@@ -484,7 +482,6 @@
 
 
    <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-
 <script src="../../js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
