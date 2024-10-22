@@ -17,402 +17,447 @@
   <meta property="og:title" content="Palatial tours">
   <meta property="og:description" content="Palatial tour">
   <meta property="og:type" content="https://Palatialtours.com/">
-  <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh; width: 100%" alt="Palatial tours"><!-- link to image for socio -->
+  <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh;" alt="Palatial Tours"><!-- link to image for socio -->
   <meta property="og:url" content="https://palatialtours.com/">
 
-  <link rel="shortcut icon" href="favicon.ico">
+<style type="text/css">
+    .top{
+        margin-top:7%;
+    }
+</style>
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+   <link rel="icon" href="../assetf/img/core-img/favicon.ico">
+   <link rel="stylesheet" href="../assetf/style.css">
+   <!-- <link rel="stylesheet" href="../assets/css/button.css"> -->
 
-        <!--  Custom button -->
-          <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../../css/button.css">
-    <link rel="stylesheet" href="../../../css/custom.css">
-       <link rel="stylesheet" href="../../css/customAnimation.css">
-       <link rel="stylesheet" href="../../css/customAnimation2.css">
-        <link rel="stylesheet" href="../../css/customNeon.css">
-           <link rel="stylesheet" href="../../css/customNeonButton.css">
-           <link rel="stylesheet" href="../../css/customSportLight.css">
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
+    <!-- Style CSS -->
+<!-- Custom css -->
+ 
 
-  <link rel="stylesheet" href="../../css/style-shortline.css">
-  <!-- Global styles START -->
-  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../custom/js/jquery.min.js"></script>
+    <script src="../custom/js/bootstrap.min.js"></script>
+<!-- End of Modal -->
+<style type="text/css">
+    .wpadding{
+       padding-left:20px; 
+        padding-right:25px; 
+    }
+</style>
 
-  <!-- Global styles END -->
+<style type="text/css">
+    .wppadding{
+       padding-left:6px;  
+    }
+</style>
 
-  <!-- Page level plugin styles START -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <link href="../../assets/pages/css/animate.css" rel="stylesheet">
-  <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
-  <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
-    <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet">
-  <!-- Page level plugin styles END -->
+    <link href="../custom/css/style.css" rel="stylesheet">
 
-  <!-- Theme styles START -->
-  <link href="../../assets/pages/css/components.css" rel="stylesheet">
+        <link href="../../assets/pages/css/components.css" rel="stylesheet">
 <link href="../../assets/pages/css/slider.css" rel="stylesheet">
   <link href="../../assets/corporate/css/style.css" rel="stylesheet">
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet">
   <link href="../../assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="../../assets/corporate/css/custom.css" rel="stylesheet">
 
-<!-- custom style -->
-  <!-- <link href="../../assets/corporate/css/styleCustom.css" rel="stylesheet"> -->
-  <!-- Theme styles END -->
-          <script src="../../../../assets/corporate/scripts/jquery351.min.js" type="text/javascript"></script>
-  <!-- Image Libray -->
-    <link href="../../img_library/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../../css/button.css">
+    <link rel="stylesheet" href="../../../css/custom.css">
+       <link rel="stylesheet" href="../../css/customAnimation.css">
+       <link rel="stylesheet" href="../../css/customAnimation2.css">
+        <link rel="stylesheet" href="../../css/customSportLight.css">
+
+
+   <link rel="stylesheet" href="../../css/css/font-mytravel.css">
+  <link rel="stylesheet" href="../../css/style-shortline.css">
+  
+   <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link href="../../assets/pages/css/animate.css" rel="stylesheet">
+  <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+  <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
+    <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
+  
+ 
+
+ <link href="../../assets/pages/css/components.css" rel="stylesheet">
+
+ <link href="../../img_library/main.css" rel="stylesheet">
     <link href="../../img_library/mform.css" rel="stylesheet">
 
     <link href="../../css/mform.css" rel="stylesheet">
     <link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/sidemenu.css" rel="stylesheet">
-   <!-- End Image Libray -->
 
 
-<!-- Mold custom style -->
-  <!-- <link rel="stylesheet" href="../assets/css/min/bootstrap.min.css" media="all"> -->
-  <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all">
-  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
+<link href="../../assets/corporate/css/styleCustom.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all">
+
+ <!--  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
   <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all">
   <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all">
-  <!-- <link rel="stylesheet" href="../assets/css/main.css" media="all" id="maincss"> -->
-<!-- End of Mold custom style -->
+ -->
+     <link href="../custom/css/style.css" rel="stylesheet">
+         <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom stylesheet -->
-    <link href="../custom/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../custom/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+ <!-- Libraries Stylesheet -->
+    <link href="../assetff/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../assetff/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template Stylesheet -->
-    <link href="../custom/css/style.css" rel="stylesheet">
+    <link href="../assetff/css/style.css" rel="stylesheet">
 
-    <style type="text/css">
-      .a{
-color:yellow !important;
-      }
-    </style>
+
+    <style>
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+</style>
+
+
+ <script src="../js/jquery361.min.js"></script>
+     <link rel="stylesheet" href="../css/font621.min.css">
+ 
 </head>
-<!-- Head END -->
 
-<!-- Body BEGIN -->
-<body class="corporate">
-        <!-- END BEGIN STYLE CUSTOMIZER -->
-    <!-- BEGIN TOP BAR -->
+<body>
+    <!-- Preloader -->
+ <!--    <div id="preloader">
+        <div class="south-load"></div>
+    </div>
+ -->
+ 
+    <header class="header-area">  
+          @include('website.layouts.header')  
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">              
+            <div class="classy-nav-container breakpoint-off">  
+                <nav class="classy-navbar justify-content-between" id="southNav">
 
-         <div class="pre-header">
-        <div class="container-fluid">
-            <!-- <div class="row" style="background-color:#317746de"> -->
-               <div class="row" style="background-color:#8b9b76;">
-                <!-- BEGIN TOP BAR LEFT PART -->
-
-                <div class="col-md-6 col-sm-12 additional-shop-info"  style="font-size;color: white;">
-                    <ul class="list-unstyled list-inline">
-                          <li>
- <!--   <a href="https://wa.me/+255692710255"> -->
-    <a href="https://wa.link/z5mmcd">
-                            <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                                +255 753 216 263
-                            </a>
-                        <!--   </span></li>
-                        <li> --><i class="fa fa-envelope" style="color:pink;"></i><span>info@palatialtours.com</span>
-
-                        </li>
-                    </ul>
-                </div>
-
-
-   <div class="col-md-3 col-sm-6" style="float:right;">
-  <!-- <div class="col-md-4 px-5 text-end"> -->
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                      <a href="/tailorForm"  class="btn btn-outline-body btn-primary">Tour Enquiry</a>
-     <a href="/bookingTrip"  class="btn btn-outline-body btn-success">My Booking</a>
-                </div>               
-            </div>
-
-            
-   <div class="col-md-3 col-sm-6" style="float:right;">
-  <!-- <div class="col-md-4 px-5 text-end"> -->
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
-      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
-           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
-
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
                     </div>
-               
-            </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+
+  <li><a href="/">Home</a>
+                                  <!--   <ul class="dropdown">
+                                         <li><a href="/">Home</a></li>
+                                    </ul -->
+                                </li>
 
 
 
-            </div>
-
-        </div>
-</div>
-
-    <!-- BEGIN HEADER -->
-    <div class="header" style="background-color:#3a6859;">
-       <!-- <div class="row" style="background-color:transparent;"> -->
-      <div class="container">
-          <a class="site-logo" href="/"><img src="../../assets/corporate/img/logos/logo-corp-red.png" style="height:8vh; width:100px" alt="palatial tours"></a>
-
-        <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
-
-        <!-- BEGIN NAVIGATION -->
-        <div class="header-navigation pull-right font-transform-inherit">
-          <ul>
-            <li class="dropdown active">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-               <b>Home</b>
-                 </a>
-
-              <ul class="dropdown-menu">
-                <li><a href="/">Home</a></li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-megamenu">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                <b>Tour Packages</b>
-
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="header-navigation-content">
-                    <div class="row">
-                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  header-navigation-col">
-                        <h4>Tour Packages</h4>
-                        <ul>
-                          <li><a href="/safaris" class="">Wildlife Safaris</a></li>
-                          <li><a href="/trekking"><i class="fas fa-hiking"></i><span> Hiking & Trekking</span></a></li>
-                           <li><a href="/holiday">Beach Holidays</a></li>
-                            <li><a href="/dayTours">Day Tours</a></li>
-                             <li><a href="/historical-sites">Historical Sites</a></li>
-                         </ul>
-                      </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  header-navigation-col">
-                        <h4>Special Packages </h4>
-                        <ul>
-                         <li><a href="/group">All Group Tours</a></li>
+                                    <li><a href="#">Tour Packages</a>
+                                    <div class="megamenu">
+                                        <ul class="single-mega cn-col-4">
+                                            <li class="title">Packages</li>
+                                            <li><a href="/safaris">Wildlife Safaris</a></li>
+                                            <li><a href="/trekking">Hiking & Trekking</a></li>
+                                            <li><a href="/holiday">Beach Holidays</a></li>
+                                            <li><a href="/dayTours">Day Tours</a></li>
+                                            <li><a href="/historical-sites">Historical Sites</a></li>                                 
+                                        </ul>
+                                        
+                                        <ul class="single-mega cn-col-4">
+                                            <li class="title">Special Packages</li>
+                                             <li><a href="/group">All Group Tours</a></li>
                           <li><a href="/Group-scheduled">Scheduled Group Tours</a></li>
                 <li><a href="/offers">Special Offers</a></li>
                 <li><a href="/special-occasions">Special Occasions</a></li>
                    <li><a href="/cultural">Cultural Tours</a></li>
                     <li><a href="/addons">Addons</a></li>
-                        </ul>
-                      </div>
+                                        </ul>                                 
+                                    </div>
+                                </li>
+                               
 
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
 
-              <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-               <b>Services</b>
-                </a>
 
-              <ul class="dropdown-menu">
-                <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
+
+                                <li><a href="#">Services</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
                 <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
                 <li><a href="#">Palatial Crafts and Designing</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                <b>Galleries</b>
-              </a>
-
-              <ul class="dropdown-menu">
-                <li><a href="/safaris-gallery">Gallery</a></li>
-              </ul>
-            </li>
+                                       
+                                    </ul>
+                                </li>
+    
 
 
-            <!--  <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                <b>Opportunities</b>
-              </a>
+                                 <li><a href="/safaris-gallery">Galleries</a>
+                                    <!-- <ul class="dropdown">
+                                         <li><a href="/safaris-gallery">Gallery</a></li>
+                                    </ul> -->
+                                </li>
 
-              <ul class="dropdown-menu">
-                  <li><a href="/New-Agent">Agent-Register</a></li>
+
+
+                                <li><a href="#">Opportunities</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/New-Agent">Agent-Register</a></li>
                         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>
                         <li><a href="/New-Partner">Partner-Register</a></li>
-              </ul>
-            </li> -->
+                                       
+                                    </ul>
+                                </li>
 
-               <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                <b>About us</b>
-              </a>
 
-              <ul class="dropdown-menu">
-                <li><a href="/aboutus">About us</a></li>
-               <!--     <li class="dropdown">-->
-               <!--  <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">-->
-               <!--Opportunities <i class="fa fa-angle-right"></i>-->
-               <!-- </a>  -->
 
-               <!--      <ul class="dropdown-menu">-->
-               <!--         <li><a href="/New-Agent">Agent-Register</a></li>-->
-               <!--         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>-->
-               <!--         <li><a href="/New-Partner">Partner-Register</a></li>-->
-               <!--       </ul>-->
-               <!-- </li> -->
-              </ul>
-            </li>
 
-           <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-               <b>Contacts</b>
-                </a>
 
-              <ul class="dropdown-menu">
-                     <li><a href="/mailing" role="button">Contacts</a></li>
-                                </ul>
-            </li>
+                                    <li><a href="/aboutus">About Us</a>
+                                   <!--  <ul class="dropdown">
+                                         <li><a href="/safaris-gallery">About Us</a></li>
+                                    </ul> -->
+                                   </li>
 
-            <!-- END TOP SEARCH -->
-          </ul>
+                                  <li><a href="/mailing">Contact</a>
+                                    <!-- <ul class="dropdown">
+                                         <li><a href="/aboutus">Contact</a></li>
+                                    </ul> -->
+                                </li>
+
+
+
+                                     <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
+                                    <div class="megamenu">
+                                        <ul class="single-mega cn-col-12">
+                                            <li class="title">Search by selecting program</li>
+                                           
+                                       
+  <div class="south-search-area">
+            <div class="row wppadding">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                      
+                        <!-- Search Form -->
+                        <!-- <form action="#" method="post" id="advanceSearch"> -->
+                             <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
+                                  @csrf
+                            <div class="row wpadding">
+                                <input type="hidden" name="_method" value="POST">
+                                 <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="search" placeholder="any keyword">
+                                    </div>
+                                </div>
+                              
+                                <div class="col-12 search-form-second-steps">
+                                       <div class="row">                                          <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="price" placeholder="maximum price">
+                                    </div>
+                                </div>
+                                     
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between align-items-end">
+                                    <!-- More Filter -->
+                                    <div class="more-filter">
+                                        <a href="#" id="moreFilter">+ More filters</a>
+                                    </div>
+                                 
+                                    <div class="form-group mb-0" target="_blank">
+                                        <button type="submit" class="btn btn-success" target="_blank" name="search2" value="search2">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
         </div>
-        <!-- END NAVIGATION -->
-      </div>
     </div>
+     </div>
+                                
 
+</li>
+<li>||</li>
+    <li><a href="#" class="btn btn-success" style="color:#000">Create My Safari</a>
+                                    <ul class="dropdown">
+                                         <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
+                <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari-Tailor Made</a></li>
+                                                      
+                                    </ul>
+                                </li>
 
+                                 <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">My Last Booking</a>
+                                    <ul class="dropdown">
+                <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
+                                                      
+                                    </ul>
+                                </li>
+    </ul>
 
-
+      </div>
+     </div>
+ </nav>
+           </div>
+        </div>
+    </header>
 
     <!-- Header END -->
     @yield('content')
   <hr>
-      <footer id="footer">
-    <div class="container-fluid" style="background-color:#8b9b76;">
-      <div class="row">
-        <div class="col-md-3">
-        <h3 class="" style="color:#0d4f2a;">Destinations</h3>
-           <ul class="link-widget">
-                        <li class="dropdown"><a title="Northern Circuit" href="/circuitTour/Northern Circuit">Northern Circuit</a></li>
-                        <li class="dropdown"><a title="Southern Circuit" href="/circuitTour/Southern Circuit">Southern Circuit</a></li>
-                        <li class="dropdown"><a title="Eastern Circuit" href="/circuitTour/Eastern Circuit">Eastern Circuit</a></li>
-                        <li class="dropdown"><a title="Western Circuit" href="/circuitTour/Western Circuit">Western Circuit</a></li>
-                         <li class="dropdown"><a title="Central Circuit" href="/circuitTour/Central Circuit">Central Circuit</a></li>
-                    </ul>
-        </div>
-        <div class="col-md-3">
-              <h3 class="" style="color:#0d4f2a;">About Palatial Tours</h3>
-            <ul class="link-widget">
-                         <li class="dropdown"><a title="Why Adventure with us" href="#">Why Adventure with us</a></li>
-                        <li class="dropdown"><a title="What We offer" href="/whatWeOfferClient">What We offer</a></li>
-                        <li class="dropdown"><a title="Accommodation List-Safaris" href="/accommodation-hotels">Accommodation-Hotels</a></li>
-                         <li class="dropdown"><a title="Accommodation List-Camps" href="/accommodation-camps">Accommodation-Camps</a></li>
-                    </ul>
-        </div>
-        <div class="col-md-3">
-          <h3 class="" style="color:#0d4f2a;">Support</h3>
-           <ul class="link-widget">
-                        <li class="dropdown"><a  href="">Visa information</a></li>
-                        <li class="dropdown"><a  href="#">Health & Vaccination</a></li>
-                        <li class="dropdown"><a  href="#">Payment Methods</a></li>
-                        <li class="dropdown"><a href="#">About Tanzania</a></li>
-                    </ul>
-                  </div>
-        <div class="col-md-3">
-                <h3 class="" style="color:#0d4f2a;">Contacts</h3>
-            <ul class="link-widget">
+    
 
-                        <li class="dropdown"><a  href="">Address:{{$contacts->address??'Arusha'}}</a></li>
-                        <li class="dropdown"><a  href="#">Contact No: (+255)753 216 263</a></li>
-                        <li class="dropdown"><a  href="#">Email: info@palatialtours.com</a></li>
-                        <li class="dropdown"><a href="#">Website: www.palatialtours.com</a></li>
-                    </ul>
+      <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
+        <!-- Main Footer Area -->
+        <div class="row px-xl-5 pt-5">
+              <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
+                           
+                              <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="/circuitTour/Northern Circuit"><i class="fa fa-angle-right mr-2"></i>Northern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Southern Circuit"><i class="fa fa-angle-right mr-2"></i>Southern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Eastern Circuit"><i class="fa fa-angle-right mr-2"></i>Eastern Circuit</a>
+                            <a class="text-secondary mb-2" href="/circuitTour/Western Circuit"><i class="fa fa-angle-right mr-2"></i>Western Circuit</a>
+                     <a class="text-secondary mb-2" href="/circuitTour/Central Circuit"><i class="fa fa-angle-right mr-2"></i>Central Circuit</a>
+                        </div>
+                        <br>
+ 
+                    </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">About Palatial Tours</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Why Adventure with us</a>
+                            <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>What We offer</a>
+                            <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Accommodation-Hotels</a>
+                            <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>Accommodation-Camps</a>
+                  
+                        </div>
+                    </div>
+                       <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Support</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Visa information</a>
+                            <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>Health & Vaccination</a>
+                            <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Payment Methods</a>
+                            <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>About Tanzania</a>
+                  
+                        </div>
+                    </div>
+                   
+                   
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Contacts</h5>
+                           
+                           <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:{{$contacts->address??'Arusha'}}</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: (+255)753 216 263</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Email: info@palatialtours.com</a>
+                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: www.palatialtours.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+          <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+              
+<div class="col-md-8">
+         <div class="footer-widget-area mb-100">
+                <h3 class="" style="color:yellow;">Working Hours</h3>
+            <div class="weekly-office-hours">
+                                <ul>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
+                                </ul>
+                            </div>
+        </div>
       </div>
-    </div>
-    <!-- <div class="copy"><span>&copy;</span> Copyright Mold Discover, 2017</div> -->
+
+                <div class="col-md-4">
+         <div class="footer-widget-area mb-100">
+            <br>
+            <div class="weekly-office-hours">
+                              <div class="single-featured-properties-slide">
+                                       <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:20vh; width: 80%"></a>
+                                </div>
+                            </div>
+        </div>
+      </div>
+
+
+
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                   <div class="col-md-4 mb-5 float-right">
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    2024 &copy; <a class="text-primary" href="#">Palatial Tour</a>. All Rights Reserved.<a href="javascript:;">| Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" target=”_blank” >Email</a>
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary float-right">
+                  Developed by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a>
+                </p>
+            </div>
+        </div>
+
   </footer>
 
-   <div class="footer" style="background-color:#3a6859;">
-      <div class="container-fluid">
-          <!-- BEGIN COPYRIGHT -->
-          <div class="col-md-5 col-sm-6 padding-top-10">
-            2021 © Palatial Tours. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a>  |  <a href="javascript:;">Terms of Service</a>  |  <a href="https://palatialtours.com:2096" target=”_blank” >Email</a>
-          </div>
-          <!-- END COPYRIGHT -->
-          <!-- BEGIN PAYMENTS -->
 
-                 <div class="col-md-4 col-sm-6 padding-left-0 padding-top-8 padding-right-30">
-                                <div class="login-socio">
-                             <!--        <ul class="social-icons">
-                                <li><a href="#" data-original-title="facebook" class="facebook btn btn-outline-body" title="facebook"></a></li>
-                                <li><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
-                                 <li><a href="#" data-original-title="Twitter" class="instagram" title="Instagram"></a></li>
-                                <li><a href="javascript:;" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
-                                <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
-                            </ul>
- -->
+    <!-- Popper js -->
+    <script src="../assetf/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../assetf/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../assetf/js/plugins.js"></script>
+    <script src="../assetf/js/classy-nav.min.js"></script>
+    <script src="../assetf/js/jquery-ui.min.js"></script>
+    <!-- Active js -->
+    <script src="../assetf/js/active.js"></script>
+
+<!-- Custom Javascript -->
 
 
-                                     <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                      <a href="#"  class="btn btn-outline-body"><i class="fab fa-twitter"></i></a>
-      <a href="#"  class="btn btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-          <a href="#"  class="btn btn-outline-body"><i class="fab fa-linkedin-in"></i></a>
-           <a href="#"  class="btn btn-outline-body"><i class="fab fa-instagram"></i></a>
-
-                    </div>
-                        </div>
-
-
-
-
-                      </div>
-                   <!-- BEGIN POWERED -->
-          <div class="col-md-3 col-sm-6 text-right">
-            <p class="powered">Powered by: <a href="https://www.pasah.net" target="_blank">www.pasah.net</a></p>
-          </div>
-        </div>
-      </div>
-    <!-- END FOOTER -->
- <!--bootstrap.min.js-->
-<script src="../../js/bootstrap.min.js"></script>
-
-  <!-- <script type="text/javascript" src="../../js/jquery321.min.js"></script> -->
-   <script src="../../assets/plugins/jquery.min.js" type="text/javascript"></script>
-   <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-
-    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../../assets/corporate/scripts/back-to-top.js" type="text/javascript"></script>
-
-    <!-- END CORE PLUGINS -->
-
-    <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-   
-    <script src="../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
-    <script src="../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script>
-
-    <script src="../../assets/corporate/scripts/layout.js" type="text/javascript"></script>
-    <script src="../../assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
-   
-
-   <!-- Image libray -->
-   <script src="../../img_library/scripts.js" type="text/javascript"></script>
-    <!-- End of Image libray -->
-
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            Layout.init();
-            Layout.initOWL();
-            Layout.initTwitter();
-            Layout.initFixHeaderWithPreHeader(); 
-            Layout.initNavScrolling();
-        });
-    </script>
-
-<!-- Mold custom scripts -->
-      <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="../assets/vendor/jqueryui/jquery-ui-1.10.3.custom.min.js"></script>
   <script src="../assets/vendor/jquery.ui.touch-punch.min.js"></script>
 
@@ -430,10 +475,43 @@ color:yellow !important;
   <script src="../assets/js/min/countnumbers.min.js"></script>
   <script src="../assets/js/main.js"></script>
 
-<!-- Custom Javascript -->
-  <!-- <script src="../custom/js/main.js"></script> -->
+   <!-- Custom2 -->
+  <script src="../../assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script>
 
-<!-- End of Mold custom scripts -->
+    <script src="../../assets/corporate/scripts/layout.js" type="text/javascript"></script>
+    <script src="../../assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
+
+
+   <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+
+<script src="../../js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+        jQuery(document).ready(function() {
+            Layout.init();
+            Layout.initOWL();
+            Layout.initTwitter();
+            Layout.initFixHeaderWithPreHeader(); 
+            Layout.initNavScrolling();
+        });
+    </script>
+
+<!-- Custom3 -->   
+  <!-- Plugin prevent returning of mobile menu  -->
+   <!-- Image libray -->
+   <script src="../../img_library/scripts.js" type="text/javascript"></script>
+    <!-- End of Image libray -->
+
+<script> 
+    // jQuery code for initializing a tooltip 
+    $(document).ready(function () { 
+        // jQuery Attribute value selector to  
+        // select the specified element and  
+        // call the tooltip method on it 
+        $('[data-toggle="tooltip"]').tooltip(); 
+    }); 
+</script>
 
 <script type="text/javascript">
     //  function getURL(){
@@ -466,6 +544,20 @@ else
     });
 </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
+
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        // Tooltips
+        $('.tip').each(function () {
+            $(this).tooltip(
+            {
+                html: true,
+                title: $('#' + $(this).data('tip')).html()
+            });
+        });
+    });
+</script>
 </body>
 <!-- END BODY -->
 </html>

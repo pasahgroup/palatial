@@ -2,7 +2,6 @@
 @extends('website.layouts.apps')
 @section('content')
 
-
    <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
         <div class="container">
             <div class="package-list-wrap ">
@@ -383,7 +382,7 @@
                             
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
 
-                    <a href="/enquiry/{{$id}}" role="button" class="btn btn-primary float-right">Enquiry</a>
+                    <a href="#" role="button" class="btn btn-primary float-right">Enquiry</a>
                             </div>
                             </div>
                         <hr>

@@ -1,7 +1,7 @@
 
 
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeaderx" style="background:#fff;margin:4px;padding-top:10px;">
+        <div class="main-header-area" id="stickyHeader" style="background:#fff;margin:4px;padding-top:10px;">
            <!-- <div class="main-header-area" id="stickyHeader" style="background:#2e4432;"> -->
              <div class="container">
             <div class="classy-nav-container breakpoint-off" style="background:#b07432;margin-top:-14px;padding-top:0px;padding-bottom:0px;border-style: solid;border-color: yellow;">
