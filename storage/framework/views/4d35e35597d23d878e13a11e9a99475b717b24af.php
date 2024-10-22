@@ -330,9 +330,10 @@
   <hr>
     
 
-      <footer class="container footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
+      <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
         <!-- Main Footer Area -->
-        <div class="px-xl-5 pt-5">
+        <div class="container-fluid">
+        <div class="row px-xl-5 pt-5">
               <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
                            
@@ -347,7 +348,6 @@
  
                     </div>
             <div class="col-lg-8 col-md-12">
-                <div class="row">
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">About Palatial Tours</h5>
                         <div class="d-flex flex-column justify-content-start">
@@ -380,7 +380,6 @@
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: www.palatialtours.com</a>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
@@ -425,6 +424,7 @@
                     </div>
             </div>
         </div>
+</div>
 
         <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
