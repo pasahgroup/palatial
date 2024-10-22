@@ -8,7 +8,7 @@
 
             </div>
 
-              <div class="col-lg-5 col-md-7">
+              <div class="col-lg-4 col-md-7">
                  <div class="email-address_no">
                     <a href="mailto:info@palatialtours.com">
                       <i class="fa fa-envelope" style="color:pink;"></i><span style="color:#072004;">  info@palatialtours.com</span></a>
@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-8 text-left">
+            <div class="col-lg-4 col-md-8 text-left">
                       <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
                                   <?php echo csrf_field(); ?>
                     <div class="input-group">
@@ -34,7 +34,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-4 text-right">
+            <div class="col-lg-2 col-md-4 text-right">
 <!-- btn btn-primary btn-square mr-2 -->
                       <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-twitter"></i></a>
       <a href="#"  class="btn btn-outline btn-primary" href=""><i class="fab fa-facebook-f"></i></a>
