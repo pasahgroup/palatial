@@ -18,7 +18,11 @@
                      <h3 class="package-list-title">
                         {{ $programs->tour_name }}
                     </h3>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoicex</button>
+                    @isset($invoice_amount)
+@if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0)
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>
+@endif
+@endisset
 
                 </div>
         
@@ -28,12 +32,12 @@
             <div class="row">
                 {{-- start of tabs --}}
       
-            <div class="col-lg-9 col-md-9 col-sm-12 masonry"  style="background-color:#2e4432">
+            <div class="col-lg-9 col-md-9 col-sm-12 masonry"  style="background-color:#fafbfb">
           
                     <div class="package-detail"> 
                         
             <div class="">
-               <strong style="color:#fff;">PIN number: {{$pin}}</strong>
+               <strong>PIN number: {{$pin}}</strong>
                <br>
             <ul class="nav nav-tabs">
               <li><a href="#tab-H" data-toggle="tab">Highlight</a></li>
@@ -116,14 +120,14 @@
                @foreach ($datas as $data)
      
        <div class="card booking-tourPadding">   
-      <div class="card-header booking-tourPadding" style="background-color:green">
+      <div class="card-header booking-tourPadding" style="background-color:#fafbfb">
     <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
                      </div>          
 
                         <div class="card-body">
                        <div class="">
                                 <div class="col-lg-7">
-                                <div class="hotel-diss" style="background-color:#2e4432">                
+                                <div class="hotel-diss" style="background-color:#fafbfb">                
                                <div class="">                   
                                 <div class="col-md-6 col-lg-6 col-sm-12">                                   
                                   <div class="rating">                     
@@ -250,22 +254,23 @@
                     @csrf
 <input type="hidden" name="_method" value="PUT">
 
-                      <button type="submit" class="btn btn-success float-right" name="print" value="print">Pay Invoice</button>
+               @isset($invoice_amount)
+@if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0)
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>
+@endif
+@endisset
 
 </form>
                             </div>
                             </div>
-                        <hr>
-                            
-                                <p class="text-center">
-                               <h5 > List of Add-ons</h5>
-                                </p>
 
                     </div>
-{{-- End of tour summary sidebar --}}
+                    <hr>
+                      @isset($invoice_amount)
+ <p class="text-center">Amount remain:{{$invoice_amount->amount_remain}} {{$invoice_amount->currency}}</p>
+ @endisset
 
                 </div>
-                <hr>
                 <p class="text-center">
                 <a class="btn btn-primary" href="{{ route('addons.index') }}">Print Invoice</a></p>
                 </div>
@@ -292,7 +297,7 @@
           <div class="preview-wrap">
            
             <div class="form-wrap">
-                <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
+                <h4 id="heading">Booking Form:<span style="color:#fafbfb">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
                 
 

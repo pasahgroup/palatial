@@ -598,10 +598,13 @@ $adults_cost=$unit_price * $adults;
               where('tailor_mades.id',$id)->first();
               }
 
-        $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
-        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')    
 
-        ->join('destinations','destinations.id','itinerary_days.destination_id') 
+
+
+        $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
+
+         ->join('destinations','destinations.id','itinerary_days.destination_id') 
          ->join('tailor_mades','tailor_mades.id','itineraries.program_id')
                   
          ->join('attachments','attachments.destination_id','accommodations.id') 
@@ -615,6 +618,8 @@ $adults_cost=$unit_price * $adults;
          ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
            ->get();
     
+//dd($id);
+
 
          if($datas == "[]"){          
             $destinations = destination::get();
@@ -630,7 +635,10 @@ $adults_cost=$unit_price * $adults;
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
 //dd($programs);
-        return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin'));
+  $invoice_amount = invoice::where('customer_id',$id)->first(); 
+//dd($invoice_amount);
+
+        return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin','invoice_amount'));
     }
  
     /**

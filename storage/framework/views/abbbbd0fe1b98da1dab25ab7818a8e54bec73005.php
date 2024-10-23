@@ -128,7 +128,7 @@
                <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
      
        <div class="card booking-tourPadding">   
-      <div class="card-header booking-tourPadding" style="background-color:green">
+      <div class="card-header booking-tourPadding" style="background-color:#fafbfb">
     <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
                      </div>          
 
@@ -436,7 +436,7 @@
           <div class="preview-wrap">
            
             <div class="form-wrap">
-                <h4 id="heading">Booking Form:<span style="color:green"><?php echo e($programs->tour_name); ?></span></h4>
+                <h4 id="heading">Booking Form:<span style="color:#fafbfb"><?php echo e($programs->tour_name); ?></span></h4>
                 <!-- <form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>"> -->
                 
 

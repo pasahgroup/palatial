@@ -128,7 +128,7 @@
                @foreach ($datas as $data)
      
        <div class="card booking-tourPadding">   
-      <div class="card-header booking-tourPadding" style="background-color:green">
+      <div class="card-header booking-tourPadding" style="background-color:#fafbfb">
     <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
                      </div>          
 
@@ -434,7 +434,7 @@
           <div class="preview-wrap">
            
             <div class="form-wrap">
-                <h4 id="heading">Booking Form:<span style="color:green">{{$programs->tour_name}}</span></h4>
+                <h4 id="heading">Booking Form:<span style="color:#fafbfb">{{$programs->tour_name}}</span></h4>
                 <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
                 
 

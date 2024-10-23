@@ -50,29 +50,32 @@
    
         <div>
     <!-- Content Header (Page header) -->
-         @if($message = Session::get('success'))
+         <?php if($message = Session::get('success')): ?>
   <div class="alert alert-success">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
     <span aria-hidden="true">&times;</span></button>
-    <strong>Well!: </strong> {{$message}}
-  </div>
-  @endif
+    <strong>Well!: </strong> <?php echo e($message); ?>
 
- @if($message = Session::get('info'))
+  </div>
+  <?php endif; ?>
+
+ <?php if($message = Session::get('info')): ?>
   <div class="alert alert-warning">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
     <span aria-hidden="true">&times;</span></button>
-    <strong>Ops!: </strong> {{$message}}
-  </div>
-  @endif   
+    <strong>Ops!: </strong> <?php echo e($message); ?>
 
- @if($message = Session::get('error'))
+  </div>
+  <?php endif; ?>   
+
+ <?php if($message = Session::get('error')): ?>
   <div class="alert alert-danger">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
     <span aria-hidden="true">&times;</span></button>
-    <strong>Sorry!: </strong> {{$message}}
+    <strong>Sorry!: </strong> <?php echo e($message); ?>
+
   </div>
-  @endif     
+  <?php endif; ?>     
 </div> 
       </li>
 
@@ -107,11 +110,11 @@
  <li class="nav-item dropdown">
          <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="">   
-          @isset(auth()->user()->photo)       
+          <?php if(isset(auth()->user()->photo)): ?>       
           <div class="logo mr-auto">
-            <img src="{{ URL::asset('/storage/user/'.auth()->user()->photo)?? 0}}" width="60px" height="40px">
+            <img src="<?php echo e(URL::asset('/storage/user/'.auth()->user()->photo)?? 0); ?>" width="60px" height="40px">
           </div>
-          @endisset
+          <?php endif; ?>
           </i>         
         </a>
 
@@ -122,21 +125,24 @@
               <img src="../../dist/img/" alt="Profile:" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                 @isset(auth()->user()->name)
-                  {{auth()->user()->name}}
- @endisset
+                 <?php if(isset(auth()->user()->name)): ?>
+                  <?php echo e(auth()->user()->name); ?>
+
+ <?php endif; ?>
 
                   <span class="float-right text-sm text-danger"><i class=""></i></span>
                 </h3>
                 <p class="text-sm">
-  @isset(auth()->user()->email)
-                {{auth()->user()->email}}
-                @endisset
+  <?php if(isset(auth()->user()->email)): ?>
+                <?php echo e(auth()->user()->email); ?>
+
+                <?php endif; ?>
                 </p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>
- @isset(auth()->user()->role)
-                  {{auth()->user()->role}}
- @endisset
+ <?php if(isset(auth()->user()->role)): ?>
+                  <?php echo e(auth()->user()->role); ?>
+
+ <?php endif; ?>
                 </p>
               </div>
             </div>
@@ -171,20 +177,20 @@
             <a href="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                  @isset(auth()->user()->role)
+                  <?php if(isset(auth()->user()->role)): ?>
               
-                @if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant' || Auth::user()->role =='NMB' || Auth::user()->role =='owner' || Auth::user()->role =='Cultural')
+                <?php if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant' || Auth::user()->role =='NMB' || Auth::user()->role =='owner' || Auth::user()->role =='Cultural'): ?>
                 Dashboard
-                @endif
-                 @endisset
+                <?php endif; ?>
+                 <?php endif; ?>
              </p>
             </a>
           </li>
-           @isset(auth()->user()->role)
-            @if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant')
-             @endisset
+           <?php if(isset(auth()->user()->role)): ?>
+            <?php if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant'): ?>
+             <?php endif; ?>
              
-          {{-- Sales --}}
+          
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-dollar-sign"></i>
@@ -216,7 +222,7 @@
           </li>
 
 
-   {{-- Customers --}}
+   
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -263,7 +269,7 @@
             </ul>
           </li>
 
-                {{-- Theme --}}
+                
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -295,7 +301,7 @@
             </ul>
           </li>
           
-            {{-- Opportunities --}}
+            
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -326,7 +332,7 @@
             </ul>
           </li>
 
-         {{-- Pages --}}
+         
    <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -356,13 +362,13 @@
                 </a>
               </li>
                <li class="nav-item">
-                <a href="{{ route('titles.index') }}" class="nav-link">
+                <a href="<?php echo e(route('titles.index')); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Titles</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('Attraction.index') }}" class="nav-link">
+                <a href="<?php echo e(route('Attraction.index')); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Attractions/Do you Know</p>
                 </a>
@@ -370,7 +376,7 @@
             </ul>
           </li>
 
-           {{-- Pages --}}
+           
         <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-dollar-sign"></i>
@@ -407,7 +413,7 @@
             </ul>
           </li>
 
-           {{-- Settings --}}
+           
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -492,7 +498,7 @@
             </ul>
           </li>
       
- {{-- User --}}
+ 
                 
       <li class="nav-item">
             <a href="#" class="nav-link">
@@ -513,8 +519,8 @@
           </li>          
             </ul>
           </li> 
-               @endif      
-         {{-- Other --}}
+               <?php endif; ?>      
+         
 
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -544,7 +550,7 @@
             </ul>
           </li>           
 
-   {{-- Quick Link--}}
+   
         <!--   <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -569,7 +575,7 @@
     <!-- /.sidebar -->
   </aside>
   
-@yield('contents')
+<?php echo $__env->yieldContent('contents'); ?>
 
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -651,3 +657,4 @@
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/layouts/Apps/app.blade.php ENDPATH**/ ?>
