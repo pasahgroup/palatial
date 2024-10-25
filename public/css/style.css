@@ -2448,9 +2448,9 @@ ul.share-icon {
 	color: #21ab64;
 	background-color: transparent;
 	font-size: 15px;
-	line-height: 35px;
-	height: 55px;
-	width: 45px;
+	line-height: 5px;
+	height: 25px;
+/*	width: 45px;*/
 	margin: 0 0 -5px;
 	border: none;
 	border-radius: 0 0 5px 5px;

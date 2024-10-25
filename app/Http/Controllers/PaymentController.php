@@ -418,8 +418,14 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
           
             $accommodations = accommodation::get();
             $destinations = destination::get();
-            return view('admins.itinerary.add',compact('programs','accommodations','destinations','tour_addon'));
-             };
+            
+            return redirect()->back()->with('info','Itinerary not specified');
+
+            // return view('admins.itinerary.add',compact('programs','accommodations','destinations','tour_addon'));
+             
+            };
+
+             //dd($datas);
   
      $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
     $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
@@ -561,7 +567,7 @@ else
       $tailorCustomer = tailorMade::
         where('id',$z)
         ->first();
-    dd($tailorCustomer);
+    //dd($tailorCustomer);
   if($tailorCustomer->payee_status!='Paid')
    {
         $tourcostsummary = payment::create([

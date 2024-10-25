@@ -150,6 +150,7 @@ class itineraryController extends Controller
      */
     public function edit($id)
     {
+        //dd('rr');
       
         $accommodations = accommodation::join('attachments','accommodations.id','attachments.destination_id')
         ->select('accommodations.*','attachments.attachment')
@@ -160,11 +161,12 @@ class itineraryController extends Controller
         $day_data = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->select('itineraries.program_id','itineraries.tour_addon','itinerary_days.*')
         ->where('itinerary_days.id',$id)->first();
-       // dd($day_data);
+       //dd($day_data);
 
     $destination_name = destination::where('id',$day_data->destination_id)->first();
        $accommodation_name = accommodation::where('id',$day_data->accommodation_id)->first();
 
+//dd('print');
         return view('admins.Itinerary.edit',compact('day_data','accommodations','destinations','destination_name','accommodation_name'));
     }
 

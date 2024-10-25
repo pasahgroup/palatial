@@ -107,10 +107,8 @@
  <li class="nav-item dropdown">
          <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="">   
-          @isset(auth()->user()->photo)       
-          <div class="logo mr-auto">
-            <img src="{{ URL::asset('/storage/user/'.auth()->user()->photo)?? 0}}" width="60px" height="40px">
-          </div>
+          @isset(auth()->user()->photo) 
+            <img src="{{ URL::asset('/storage/user/'.auth()->user()->photo)?? 0}}" width="60px" height="60px" class="brand-image img-circle elevation-3">
           @endisset
           </i>         
         </a>

@@ -8,10 +8,12 @@ use App\Models\socialmedia;
 use App\Models\invoice;
 use App\Models\Tourcostsummary;
 use App\Models\departures;
-use App\Models\itinerary;
 use App\Models\specialOffer;
 use App\Models\tailorMade;
 
+use App\Models\itinerary;
+use App\Models\itinerary_day;
+use App\Models\destination;
 
 use App\Models\people_percent;
 
@@ -244,7 +246,93 @@ dd('Mail sent successfully');
     }
 
 
-      public function viewTrip(Request $request)    {
+
+     public function viewTrip(Request $request)    {
+
+              //Verify if the pin exists
+          $pin=request('pin');
+         // dd($pin);
+          
+          $trip = TourEquiryForm::
+            where('tour_equiry_forms.pin',$pin)->first();
+
+           if($trip==null)
+           {
+            // return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
+            return redirect()->back()->with('error','Your PIN Number does not Exists');
+           }
+           else
+           {
+        
+         if($trip->status=="Inactive")
+           {
+             return redirect()->back()->with('error','Your PIN Number has been already Expired');
+           }else
+           {
+              $id=$trip->id;  
+           }
+           
+           $tour_addon='Programs';          
+           $programs = program::join('itineraries','itineraries.program_id','programs.id')
+            ->join('attachments','attachments.destination_id','programs.id')        
+          ->where('itineraries.tour_addon','Programs')
+          ->where('attachments.type','Programs')
+          ->where('programs.id',$id)->first();      
+dd($programs);
+
+
+           if($programs ==null){
+            // tour_equiry_forms
+              $programs = tailorMade::
+              where('programs.id',$id)->first();
+              }
+
+        $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
+
+         ->join('destinations','destinations.id','itinerary_days.destination_id') 
+         ->join('programs','programs.id','itineraries.program_id')
+                  
+         ->join('attachments','attachments.destination_id','accommodations.id') 
+          ->where('itineraries.tour_addon','Programs')
+          ->where('itineraries.program_id',$id)          
+          ->where('attachments.type','Accommodation')
+          ->where('programs.id',$id)
+       
+         ->orderby('itinerary_days.id','ASC')
+        
+         ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','programs.first_name','programs.last_name','itinerary_days.*')
+           ->get();
+    
+//dd($datas);
+
+
+         if($datas == "[]"){          
+            $destinations = destination::get();
+              return redirect()->back()->with('info',$programs->full_name.' Ops your tailor made still on Progess....');
+            // return ($programs->full_name.' Ops your tailor made still on Progess....');
+          };
+
+        $basic=tailorMade::join('attachments','attachments.destination_id','programs.id')
+        ->get();
+         
+         $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
+        
+           $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
+        ->where('accommodation_inclusives.tour_id',$id)->get();
+//dd($programs);
+  $invoice_amount = invoice::where('customer_id',$id)->first(); 
+//dd($invoice_amount);
+
+        return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin','invoice_amount'));
+    }
+}
+      
+
+    
+
+
+     public function viewTrip_org(Request $request)    {
 
               //Verify if the pin exists
            $pin=request('pin');        
@@ -272,11 +360,14 @@ dd('Mail sent successfully');
            }
 
 
+//dd('print');
+
 
         if($trip->tour_type=='Private')
         {
           //dd($trip->tour_type);  
         // return redirect()->route('privateTourSumary',$id)->with('success','Tour Summary Cost created successful');
+
               return redirect()->route('groupTourSumary',$id)->with('success','Tour Summary Cost created successful');  
         }
         elseif ($trip->tour_type=='Group') {
@@ -289,6 +380,7 @@ dd('Mail sent successfully');
            return redirect()->back()->with('info','Tour category was not specified...!');     
         }       
      }
+    
     }
 
 

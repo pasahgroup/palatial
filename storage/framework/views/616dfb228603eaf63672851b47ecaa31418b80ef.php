@@ -17,6 +17,7 @@
                         <?php echo e($programs->tour_name); ?>
 
                     </h3>
+                   
                     <?php if(isset($invoice_amount)): ?>
 <?php if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0): ?>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>

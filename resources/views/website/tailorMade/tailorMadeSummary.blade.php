@@ -18,6 +18,7 @@
                      <h3 class="package-list-title">
                         {{ $programs->tour_name }}
                     </h3>
+                   
                     @isset($invoice_amount)
 @if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0)
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>

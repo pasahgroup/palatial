@@ -598,9 +598,6 @@ $adults_cost=$unit_price * $adults;
               where('tailor_mades.id',$id)->first();
               }
 
-
-
-
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
 
@@ -618,7 +615,7 @@ $adults_cost=$unit_price * $adults;
          ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
            ->get();
     
-//dd($id);
+//dd($datas);
 
 
          if($datas == "[]"){          

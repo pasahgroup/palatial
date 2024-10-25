@@ -198,6 +198,8 @@ class programController extends Controller
     public function show($id)
     {     
           
+//dd($id);
+
          $tour_addons = program::where('id', $id)->first();
 
         $type=$tour_addons->main;
