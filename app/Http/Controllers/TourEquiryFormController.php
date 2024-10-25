@@ -193,7 +193,6 @@ $id=11;
 
 
 
-
  $socialmedia = socialmedia::get();
 
 $date=date('d-M-Y');
@@ -317,8 +316,11 @@ dd('Mail sent successfully');
               return redirect()->back()->with('info',$programs->full_name.' Ops your tailor made still on Progess....');
             // return ($programs->full_name.' Ops your tailor made still on Progess....');
           };
-          
-        $basic=tourEquiryFrom::join('attachments','attachments.destination_id','tour_equiry_forms.id')
+
+       $gg=TourEquiryForm::get();
+       dd($gg);
+        
+        $basic=TourEquiryForm::join('attachments','attachments.destination_id','tour_equiry_forms.id')
         ->get();
         dd($basic);
 
@@ -785,7 +787,7 @@ $id=request('tour_id');
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TourEquiryFrom  $tourEquiryFrom
+     * @param  \App\Models\TourEquiryForm  $TourEquiryForm
      * @return \Illuminate\Http\Response
      */
 
@@ -837,10 +839,10 @@ $groupTrip=  DB::select("select sum(t1.adults)adults,sum(t1.teens)teens,sum(t1.c
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TourEquiryFrom  $tourEquiryFrom
+     * @param  \App\Models\TourEquiryForm  $TourEquiryForm
      * @return \Illuminate\Http\Response
      */
-    public function edit(TourEquiryFrom $tourEquiryFrom)
+    public function edit(TourEquiryForm $TourEquiryForm)
     {
         //
     }
@@ -849,10 +851,10 @@ $groupTrip=  DB::select("select sum(t1.adults)adults,sum(t1.teens)teens,sum(t1.c
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TourEquiryFrom  $tourEquiryFrom
+     * @param  \App\Models\TourEquiryForm  $TourEquiryForm
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TourEquiryFrom $tourEquiryFrom)
+    public function update(Request $request, TourEquiryForm $TourEquiryForm)
     {
         //
     }
@@ -860,10 +862,10 @@ $groupTrip=  DB::select("select sum(t1.adults)adults,sum(t1.teens)teens,sum(t1.c
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TourEquiryFrom  $tourEquiryFrom
+     * @param  \App\Models\TourEquiryForm  $TourEquiryForm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TourEquiryFrom $tourEquiryFrom)
+    public function destroy(TourEquiryForm $TourEquiryForm)
     {
         //
     }
