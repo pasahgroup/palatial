@@ -294,22 +294,21 @@ dd('Mail sent successfully');
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
-
          ->join('destinations','destinations.id','itinerary_days.destination_id') 
-         ->join('programs','programs.id','itineraries.program_id')
+         ->join('tour_equiry_forms','tour_equiry_forms.tour_id','itineraries.program_id')
                   
          ->join('attachments','attachments.destination_id','accommodations.id') 
           ->where('itineraries.tour_addon','Programs')
           ->where('itineraries.program_id',$id)          
           ->where('attachments.type','Accommodation')
-          ->where('programs.id',$id)
+          ->where('tour_equiry_forms.tour_id',$id)
        
          ->orderby('itinerary_days.id','ASC')
         
-         ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','programs.first_name','programs.last_name','itinerary_days.*')
+         ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','tour_equiry_forms.first_name','tour_equiry_forms.last_name','itinerary_days.*')
            ->get();
     
-dd($datas);
+//dd($datas);
 
 
          if($datas == "[]"){          
@@ -318,7 +317,7 @@ dd($datas);
             // return ($programs->full_name.' Ops your tailor made still on Progess....');
           };
 
-        $basic=tailorMade::join('attachments','attachments.destination_id','programs.id')
+        $basic=tailorMade::join('attachments','attachments.destination_id','tailor_mades.id')
         ->get();
          
          $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");

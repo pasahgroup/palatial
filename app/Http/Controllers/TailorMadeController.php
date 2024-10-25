@@ -625,7 +625,7 @@ $adults_cost=$unit_price * $adults;
           };
 
         $basic=tailorMade::join('attachments','attachments.destination_id','tailor_mades.id')
-        ->get();
+            ->get();
          
          $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
         
