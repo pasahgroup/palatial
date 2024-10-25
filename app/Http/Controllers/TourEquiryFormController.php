@@ -253,8 +253,9 @@ dd('Mail sent successfully');
           $pin=request('pin');
          // dd($pin);
           
-          $trip = TourEquiryForm::
-            where('tour_equiry_forms.pin',$pin)->first();
+    $trip = TourEquiryForm::where('tour_equiry_forms.pin',$pin)->first();
+
+       //dd($trip);  
 
            if($trip==null)
            {
@@ -269,7 +270,8 @@ dd('Mail sent successfully');
              return redirect()->back()->with('error','Your PIN Number has been already Expired');
            }else
            {
-              $id=$trip->id;  
+              //$id=$trip->id;  
+              $id=$trip->tour_id;
            }
            
            $tour_addon='Programs';          
@@ -277,8 +279,9 @@ dd('Mail sent successfully');
             ->join('attachments','attachments.destination_id','programs.id')        
           ->where('itineraries.tour_addon','Programs')
           ->where('attachments.type','Programs')
-          ->where('programs.id',$id)->first();      
-dd($programs);
+          ->where('programs.id',$id)->first();
+
+//dd($programs);
 
 
            if($programs ==null){
@@ -286,6 +289,8 @@ dd($programs);
               $programs = tailorMade::
               where('programs.id',$id)->first();
               }
+
+//dd($programs);
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
@@ -304,7 +309,7 @@ dd($programs);
          ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','programs.first_name','programs.last_name','itinerary_days.*')
            ->get();
     
-//dd($datas);
+dd($datas);
 
 
          if($datas == "[]"){          
