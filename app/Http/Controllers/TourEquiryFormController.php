@@ -14,7 +14,7 @@ use App\Models\tailorMade;
 use App\Models\itinerary;
 use App\Models\itinerary_day;
 use App\Models\destination;
-// use App\Models\TourEquiryForm;
+use App\Models\accommodationInclusive;
 
 use App\Models\people_percent;
 
@@ -317,20 +317,19 @@ dd('Mail sent successfully');
             // return ($programs->full_name.' Ops your tailor made still on Progess....');
           };
 
-       $gg=TourEquiryForm::get();
-       dd($gg);
+       $gg=TourEquiryForm::get();     
         
         $basic=TourEquiryForm::join('attachments','attachments.destination_id','tour_equiry_forms.id')
         ->get();
-        dd($basic);
+        //dd($basic);
 
 
          $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
         
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
-//dd($programs);
-  $invoice_amount = invoice::where('customer_id',$id)->first(); 
+//dd($inclusives);
+  $invoice_amount = invoice::where('customer_id',$trip->id)->first(); 
 //dd($invoice_amount);
 
         return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin','invoice_amount'));
