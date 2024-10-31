@@ -763,7 +763,7 @@ Partnering with SafariBookings.com</b></a>
                                                  <img class="pull-left" src="{{ URL::asset('/storage/uploads/'.$testimonies_one->attachment) }}" width="50" alt="review image">
                                                  @endisset
                                                  <div class="pull-left">
-                                                     <span class="testimonials-name">{{$testimonies_one->full_name}}</span>
+                                                     <span class="testimonials-name">{{$testimonies_one->full_name?? 0}}</span>
                                                      <span class="testimonials-post">
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
