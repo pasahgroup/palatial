@@ -53,6 +53,7 @@ $phonenumber    = '';                                   // ONE of email or phone
 
 // Define the callback_url i.e the redirect url, this page that will handle the
 // response from pesapal.
+
 $callback_url = 'http://www.YOURDOMAIN.com/pesapal_callback.php';
 
 // The format is standard so no editing is required. Encode the variable using

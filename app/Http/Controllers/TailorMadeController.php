@@ -183,7 +183,12 @@ $currentPath= Route::getFacadeRoot()->current()->uri();
 $currentPath_root= $request->root();
 $uri = $request->fullUrl();
 
-//dd($currentPath_url);
+
+
+//$callback_url = 'http://www.YOURDOMAIN.com/pesapal_callback.php';
+//$callback_url = $currentPath_root.'/pesapal_callback.php';
+//dd($callback_url);
+
 //Send PIN to customer Email
 $company_name=request('company_name');
 $date=date('d-M-Y');

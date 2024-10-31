@@ -1,6 +1,34 @@
 <?php $__env->startSection('content'); ?>
 
+
+
    <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
+    <?php if($message = Session::get('success')): ?>
+  <div class="alert alert-success">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Well!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>
+
+ <?php if($message = Session::get('info')): ?>
+  <div class="alert alert-warning">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Ops!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>   
+
+ <?php if($message = Session::get('error')): ?>
+  <div class="alert alert-danger">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+    <span aria-hidden="true">&times;</span></button>
+    <strong>Sorry!: </strong> <?php echo e($message); ?>
+
+  </div>
+  <?php endif; ?>     
         <div class="container">
             <div class="package-list-wrap ">
                 <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">

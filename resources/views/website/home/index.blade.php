@@ -757,7 +757,7 @@ Partnering with SafariBookings.com</b></a>
                                      <!-- Carousel items -->
                                      <div class="carousel-inner">
                                          <div class="active item">
-                                             <blockquote><i>{{$testimonies_one->comments}}</i></blockquote>
+                                             <blockquote><i>{{$testimonies_one->comments ?? 0}}</i></blockquote>
                                              <div class="carousel-info">
                                                  <img class="pull-left" src="{{ URL::asset('/storage/uploads/'.$testimonies_one->attachment) }}" width="50" alt="review image">
                                                  <div class="pull-left">
@@ -765,13 +765,13 @@ Partnering with SafariBookings.com</b></a>
                                                      <span class="testimonials-post">
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
-                                                                             <li class="list-inline-item">
+                                     <li class="list-inline-item">
                                                                                     @for ($i = 0; $i <$testimonies_one->rating; $i++)
                                                                                      <i class="text-primary fa fa-star text-warning"></i>
                                                                                     @endfor
 
                                                                                 @for($i=0;$i<5-$testimonies_one->rating;$i++)
-                                                                             <i class="fa fa-star-o text-warning"></i>
+  <i class="fa fa-star-o text-warning"></i>
                                                                                     @endfor
 
                                                                              </li>

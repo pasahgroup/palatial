@@ -275,19 +275,17 @@ dd('Mail sent successfully');
            }
            
            $tour_addon='Programs';          
-           $programs = program::join('itineraries','itineraries.program_id','programs.id')
-            ->join('attachments','attachments.destination_id','programs.id')        
+           $programs = TourEquiryForm::join('itineraries','itineraries.program_id','tour_equiry_forms.tour_id')
+            ->join('attachments','attachments.destination_id','tour_equiry_forms.tour_id')        
           ->where('itineraries.tour_addon','Programs')
           ->where('attachments.type','Programs')
-          ->where('programs.id',$id)->first();
-
-//dd($programs);
+          ->where('tour_equiry_forms.tour_id',$id)->first();
 
 
            if($programs ==null){
             // tour_equiry_forms
-              $programs = tailorMade::
-              where('programs.id',$id)->first();
+              $programs = TourEquiryForm::
+              where('tour_equiry_forms.tour_id',$id)->first();
               }
 
 //dd($programs);
@@ -317,7 +315,7 @@ dd('Mail sent successfully');
             // return ($programs->full_name.' Ops your tailor made still on Progess....');
           };
 
-       $gg=TourEquiryForm::get();     
+       //$gg=TourEquiryForm::get();     
         
         $basic=TourEquiryForm::join('attachments','attachments.destination_id','tour_equiry_forms.id')
         ->get();
@@ -434,7 +432,8 @@ if(request('print')=="print")
     }
     else
     {
-     return redirect()->route('pg',$id)->with('success','Tour Summary Cost created successful');   
+      return redirect()->route('pg',$id)->with('success','Tour Summary Cost created successful');
+// return redirect()->back()->with('info','The program has No Itinerary');  
     }
         }
         // else if ($trip->tour_type=='Group') {

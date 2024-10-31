@@ -70,23 +70,23 @@
 </section>
 
  
-     <script src="../assetff/js/category.js"></script>
-    <script src="../assetff/lib/easing/easing.min.js"></script>
-    <script src="../assetff/lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="../../assetff/js/category.js"></script>
+    <script src="../../assetff/lib/easing/easing.min.js"></script>
+    <script src="../../assetff/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="../assetff/mail/jqBootstrapValidation.min.js"></script>
-    <script src="../assetff/mail/contact.js"></script>
+    <script src="../../assetff/mail/jqBootstrapValidation.min.js"></script>
+    <script src="../../assetff/mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../assetff/js/main.js"></script>
-       <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="../../assetff/js/main.js"></script>
+       <script src="../../assetff/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="../assetff/js/popper.min.js"></script>
+    <script src="../../assetff/js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="../assetff/js/bootstrap.min.js"></script>
+    <script src="../../assetff/js/bootstrap.min.js"></script>
     <!-- Plugins js -->
-    <script src="../assetff/js/plugins.js"></script>
-    <script src="../assetff/j../assetff/s/classy-nav.min.js"></script>
-    <script src="../assetff/js/jquery-ui.min.js"></script>
+    <script src="../../assetff/js/plugins.js"></script>
+    <script src="../../assetff/j../assetff/s/classy-nav.min.js"></script>
+    <script src="../../assetff/js/jquery-ui.min.js"></script>
 @endsection
