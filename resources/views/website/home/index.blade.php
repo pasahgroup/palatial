@@ -768,15 +768,15 @@ Partnering with SafariBookings.com</b></a>
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
                                      <li class="list-inline-item">
-                                                                                    @for ($i = 0; $i <$testimonies_one->rating; $i++)
-                                                                                     <i class="text-primary fa fa-star text-warning"></i>
-                                                                                    @endfor
+                                           @isset($testimonies_one)
+                                           @for ($i = 0; $i <$testimonies_one->rating; $i++)                                  <i class="text-primary fa fa-star text-warning"></i>                                                  @endfor
+                                            @endisset
 
                                                                                 @for($i=0;$i<5-$testimonies_one->rating;$i++)
   <i class="fa fa-star-o text-warning"></i>
                                                                                     @endfor
 
-                                                                             </li>
+                                                                 </li>
                                                                      </ul>
                                                              </div>
                                                      </span>
@@ -791,11 +791,11 @@ Partnering with SafariBookings.com</b></a>
                                              <div class="carousel-info">
                                                  <img class="pull-left" src="{{ URL::asset('/storage/uploads/'.$testimony->attachment) }}" width="50" alt="review image">
                                                  <div class="pull-left">
-                                                     <span class="testimonials-name">{{$testimony->full_name}}</span>
+                                                     <span class="testimonials-name">{{$testimony->full_name?? 0}}</span>
                                                      <span class="testimonials-post">
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
-                                                                             <li class="list-inline-item">
+                                                         <li class="list-inline-item">
                                                                                     @for ($i = 0; $i <$testimony->rating; $i++)
                                                                                      <i class="text-primary fa fa-star text-warning"></i>
                                                                                     @endfor
