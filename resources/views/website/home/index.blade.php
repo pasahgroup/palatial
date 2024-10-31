@@ -770,11 +770,9 @@ Partnering with SafariBookings.com</b></a>
                                      <li class="list-inline-item">
                                            @isset($testimonies_one)
                                            @for ($i = 0; $i <$testimonies_one->rating; $i++)                                  <i class="text-primary fa fa-star text-warning"></i>                                                  @endfor
-                                            @endisset
-
-                                                                                @for($i=0;$i<5-$testimonies_one->rating;$i++)
-  <i class="fa fa-star-o text-warning"></i>
-                                                                                    @endfor
+                @for($i=0;$i<5-$testimonies_one->rating;$i++)
+  <i class="fa fa-star-o text-warning"></i>                                                                                    @endfor
+   @endisset  
 
                                                                  </li>
                                                                      </ul>
