@@ -759,7 +759,7 @@ Partnering with SafariBookings.com</b></a>
                                          <div class="active item">
                                              <blockquote><i>{{$testimonies_one->comments ?? 0}}</i></blockquote>
                                              <div class="carousel-info">
-                                                 <img class="pull-left" src="{{ URL::asset('/storage/uploads/'.$testimonies_one->attachment) }}" width="50" alt="review image">
+                                                 <img class="pull-left" src="{{ URL::asset('/storage/uploads/'.$testimonies_one->attachment?? 0) }}" width="50" alt="review image">
                                                  <div class="pull-left">
                                                      <span class="testimonials-name">{{$testimonies_one->full_name}}</span>
                                                      <span class="testimonials-post">
