@@ -759,22 +759,22 @@ Partnering with SafariBookings.com</b></a>
                                          <div class="active item">
                                              <blockquote><i><?php echo e($testimonies_one->comments ?? 0); ?></i></blockquote>
                                              <div class="carousel-info">
+                                                <?php if(isset($testimonies_one)): ?>
                                                  <img class="pull-left" src="<?php echo e(URL::asset('/storage/uploads/'.$testimonies_one->attachment)); ?>" width="50" alt="review image">
+                                                 <?php endif; ?>
                                                  <div class="pull-left">
-                                                     <span class="testimonials-name"><?php echo e($testimonies_one->full_name); ?></span>
+                                                     <span class="testimonials-name"><?php echo e($testimonies_one->full_name?? 0); ?></span>
                                                      <span class="testimonials-post">
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
                                      <li class="list-inline-item">
-                                                                                    <?php for($i = 0; $i <$testimonies_one->rating; $i++): ?>
-                                                                                     <i class="text-primary fa fa-star text-warning"></i>
-                                                                                    <?php endfor; ?>
+                                           <?php if(isset($testimonies_one)): ?>
+                                           <?php for($i = 0; $i <$testimonies_one->rating; $i++): ?>                                  <i class="text-primary fa fa-star text-warning"></i>                                                  <?php endfor; ?>
+                <?php for($i=0;$i<5-$testimonies_one->rating;$i++): ?>
+  <i class="fa fa-star-o text-warning"></i>                                                                                    <?php endfor; ?>
+   <?php endif; ?>  
 
-                                                                                <?php for($i=0;$i<5-$testimonies_one->rating;$i++): ?>
-  <i class="fa fa-star-o text-warning"></i>
-                                                                                    <?php endfor; ?>
-
-                                                                             </li>
+                                                                 </li>
                                                                      </ul>
                                                              </div>
                                                      </span>
@@ -789,11 +789,11 @@ Partnering with SafariBookings.com</b></a>
                                              <div class="carousel-info">
                                                  <img class="pull-left" src="<?php echo e(URL::asset('/storage/uploads/'.$testimony->attachment)); ?>" width="50" alt="review image">
                                                  <div class="pull-left">
-                                                     <span class="testimonials-name"><?php echo e($testimony->full_name); ?></span>
+                                                     <span class="testimonials-name"><?php echo e($testimony->full_name?? 0); ?></span>
                                                      <span class="testimonials-post">
                                                                 <div class="test-rating">
                                                                      <ul class="list-inline">
-                                                                             <li class="list-inline-item">
+                                                         <li class="list-inline-item">
                                                                                     <?php for($i = 0; $i <$testimony->rating; $i++): ?>
                                                                                      <i class="text-primary fa fa-star text-warning"></i>
                                                                                     <?php endfor; ?>

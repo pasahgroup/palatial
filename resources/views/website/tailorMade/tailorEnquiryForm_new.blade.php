@@ -300,32 +300,6 @@ current_fs = $(this).parent();
 next_fs = $(this).parent().next();
 
 
-
-
-    // $('.registration-form .next').on('click', function () {
-    //     var parent_fieldset = $(this).parents('fieldset');
-    //     var next_step = true;
-    //     parent_fieldset.find('input[required],input[type="email"]').each(function () {
-    //              if ($(this).val() == "" || $(this).val() == "0") {
-    //             $(this).addClass('input-error');
-    //             alert('g1');
-    //             next_step = false;
-    //         } else {
-    //             $(this).removeClass('input-error');
-    //             alert('g2');
-    //         }
-    //     });
-
-    //     if (next_step) {
-    //         parent_fieldset.fadeOut(400, function () {
-    //           alert('g3');
-    //             $(this).next().fadeIn();
-    //         });
-    //     }
-
-    // });
-
-
 //Add Class Active
 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 

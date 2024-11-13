@@ -147,10 +147,10 @@
         @include('website.layouts.header3')   
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">              
-            <div class="classy-nav-container breakpoint-off">  
+            <div class="classy-nav-container breakpoint-off"> 
                 <nav class="classy-navbar justify-content-between" id="southNav">
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
+                <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:50px; width:80px;padding:1px;"></a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -174,7 +174,6 @@
                                 </li>
 
 
-
                                     <li><a href="#">Tour Packages</a>
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-4">
@@ -196,9 +195,7 @@
                     <li><a href="/addons">Addons</a></li>
                                         </ul>                                 
                                     </div>
-                                </li>
-                               
-
+                                </li>                      
 
 
 
@@ -250,7 +247,7 @@
 
                                      <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
                                     <div class="megamenu">
-                                        <ul class="single-mega cn-col-12">
+                                    <ul class="single-mega cn-col-12">
                                             <li class="title">Search by selecting program</li>
                                            
                                        
@@ -302,7 +299,7 @@
 
 </li>
 <li>||</li>
-    <li><a href="#" class="btn btn-success" style="color:#000">Create My Safari</a>
+    <li style="padding-top:2px;"><a href="#" class="btn btn-success" style="color:#000">Create My Safari</a>
                                     <ul class="dropdown">
                                          <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
                 <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari-Tailor Made</a></li>
