@@ -131,11 +131,7 @@
 </head>
 
 <body>
-    <!-- Preloader -->
- <!--    <div id="preloader">
-        <div class="south-load"></div>
-    </div>
- -->
+
 
     <header class="header-area" style="padding-left:3%;padding-right:3%;">
           <?php echo $__env->make('website.layouts.header3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
