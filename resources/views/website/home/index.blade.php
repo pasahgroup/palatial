@@ -49,7 +49,7 @@
         <div class="row px-xl-5">
             <div class="col-lg-9">
                 <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-                  {{$sliderCount}}
+                
                     <ol class="carousel-indicators">
                         <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                           @for ($x =0; $x <=$slidersCount; $x++)

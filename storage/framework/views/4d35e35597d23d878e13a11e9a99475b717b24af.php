@@ -91,10 +91,7 @@
 
       <link rel="stylesheet" href="../assets/css/jqueryui.css" media="all">
 
- <!--  <link rel="stylesheet" href="../assets/vendor/animate-css/animate.css" media="all">
-  <link rel="stylesheet" href="../assets/font/iconfont/iconstyle.css" media="all">
-  <link rel="stylesheet" href="../assets/font/font-awesome/css/font-awesome.css" media="all">
- -->
+
      <link href="../custom/css/style.css" rel="stylesheet">
          <link href="../custom/css/bootstrap.min.css" rel="stylesheet">
 
@@ -140,15 +137,15 @@
     </div>
  -->
 
-    <header class="header-area">
-          <?php echo $__env->make('website.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <header class="header-area" style="padding-left:2%;">
+          <?php echo $__env->make('website.layouts.header3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">
+        <div class="main-header-area" id="stickyHeader" style="background:#;margin-top:0px;">
             <div class="classy-nav-container breakpoint-off">
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:50px; width:80px;padding:1px;"></a>
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:40px; width:60px;padding:1px;"></a>
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -157,7 +154,6 @@
 
                     <!-- Menu -->
                     <div class="classy-menu">
-
                         <!-- close btn -->
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
