@@ -137,7 +137,7 @@
     </div>
  -->
 
-    <header class="header-area" style="padding-left:2%;">
+    <header class="header-area" style="padding-left:3%;padding-right:3%;">
           @include('website.layouts.header3')
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#;margin-top:0px;">

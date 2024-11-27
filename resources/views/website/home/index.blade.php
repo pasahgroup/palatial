@@ -44,12 +44,13 @@
 }
 </style>
     <!-- Carousel Start -->
- <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+ <section class="featured-properties-area section-padding-100-50" style="padding-top:2.2%;">
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
+
             <div class="col-lg-9">
                 <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-                
+
                     <ol class="carousel-indicators">
                         <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                           @for ($x =0; $x <=$slidersCount; $x++)
@@ -114,7 +115,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-<hr>
+
                 <div class="product-offer mb-30" style="height: 195px;">
                      @if ($popular_safari)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" alt="">
@@ -420,16 +421,12 @@
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#f0f0f0">
 
 
-
-
-
-
                                 @foreach ($offers_private as $special_private)
 
  <div class="col-lg-3 col-md-3"  style="border-right:0px solid rgba(71,85,95,.11)">
 
        <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
-            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#c6bc71">
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#496a48">
 
 <div class="single_blog listing-shot">
                 <div class="product-item bg-light mb-4">

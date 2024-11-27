@@ -3,7 +3,7 @@
 
 
 
-  <div class="container top-header-area" style="background:#f0f0f0;padding:2px;border-color:red !important">
+  <div class="container top-header-area" style="background:#37533c;padding:2px;border-color:red !important">
          <div class="align-items-center py-2 px-xl-5 d-lg-flex">
               <div class="col-lg-2 col-md-4">
                 <a href="" class="text-decoration-none">

@@ -137,7 +137,7 @@
     </div>
  -->
 
-    <header class="header-area" style="padding-left:2%;">
+    <header class="header-area" style="padding-left:3%;padding-right:3%;">
           <?php echo $__env->make('website.layouts.header3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#;margin-top:0px;">
