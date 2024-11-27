@@ -423,9 +423,9 @@
 
                                 @foreach ($offers_private as $special_private)
 
- <div class="col-lg-3 col-md-3"  style="border-right:0px solid rgba(71,85,95,.11)">
+ <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
 
-       <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
+       <h5 class="text-center"><b style="background:">{{$special_private->sales_header}}</b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#496a48">
 
 <div class="single_blog listing-shot">
@@ -441,8 +441,8 @@
                         </div>
                     </div>
 
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong>{{ $special_private->tour_name }}</strong></a>
-
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong style="text-align:center">{{ $special_private->tour_name }} bnvb</strong></a>
+                          
                 </div>
                  </div>
 
