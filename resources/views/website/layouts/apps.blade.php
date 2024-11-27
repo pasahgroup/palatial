@@ -76,10 +76,6 @@
 <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <link href="../../assets/pages/css/animate.css" rel="stylesheet">
   <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
-  <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
-    <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
-
-
 
  <link href="../../assets/pages/css/components.css" rel="stylesheet">
 
@@ -152,11 +148,12 @@
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:50px; width:80px;padding:1px;"></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
 
                     <!-- Menu -->
                     <div class="classy-menu">
