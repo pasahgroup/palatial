@@ -1,12 +1,12 @@
 <?php $__env->startSection('content'); ?>
 
 <style type="text/css">
-    
+
     .booking-btn {
   border: 0px solid #647545;
   padding: 10px 38px;
   color:#fff;
-  display: block;  
+  display: block;
   /*background-color: #3f403d;*/
   /*background-color: #2e4432;*/
   background-color: #2e4432;
@@ -26,7 +26,7 @@
   border: 0px solid #647545;
   padding: 1px 2px;
   color:#fff;
-  display: block;  
+  display: block;
   /*background-color: #3f403d;*/
   /*background-color: #2e4432;*/
   background-color: #2e4432;
@@ -43,7 +43,7 @@
 }
 </style>
     <!-- Carousel Start -->
- <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+ <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
             <div class="col-lg-9">
@@ -54,7 +54,7 @@
                         <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                           <?php for($x =0; $x <=$slidersCount; $x++): ?>
                         <li data-target="#header-carousel" data-slide-to="$x"></li>
-                          <?php endfor; ?> 
+                          <?php endfor; ?>
                     </ol>
 
                     <div class="carousel-inner">
@@ -62,7 +62,7 @@
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slider_first->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-     
+
  <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($slider_first->title); ?></h5>
                                     <div class="wrapper">
                                                                      <p class="demo-1" style="color:white"><?php echo e($slider_first->description); ?></p>
@@ -70,7 +70,7 @@
 
                                                                   <p><a href="/QuickLink/<?php echo e($slider_first->id); ?>" data-animation="animated fadeInUp">
                                                                         <b style="color:yellow">Read More <i class="fa fa-angle-double-right"></i></b></a></p>
-                                                                    </div>
+                                 </div>
                                 </div>
                             </div>
                         </div>
@@ -80,19 +80,18 @@
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-            
+
                                  <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($slides->tour_name); ?></h5>
                                     <div class="wrapper">
-                                                                     <p class="demo-1" style="color:white"><?php echo e($slides->description); ?></p>
+                            <p class="demo-1" style="color:white"><?php echo e($slides->description); ?></p>
 
-
-                                                                    <p><a href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>" data-animation="animated fadeInUp">
+<p><a href="<?php echo e(route('safaris-slider',$slides->tour_id)); ?>" data-animation="animated fadeInUp">
                                                                         <b style="color:yellow">Read More <i class="fa fa-angle-double-right"></i></b></a></p>
-                                                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
+                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
   <?php $__currentLoopData = $quickLinkSliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quickSliderf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -100,20 +99,17 @@
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                             
+
                                               <h5 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?php echo e($quickSliderf->quick_title); ?></h5>
 
                                   <div class="wrapper">
-                                                                     <p class="demo-1" style="color:white"><?php echo e($quickSliderf->quick_description); ?></p>
-
-
-                                                                    <p><a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" data-animation="animated fadeInUp">
-                                                                        <b style="color:yellow">Read More <i class="fa fa-angle-double-right"></i></b></a></p>
-                                                                    </div>
+                                <p class="demo-1" style="color:white"><?php echo e($quickSliderf->quick_description); ?></p>
+<p><a href="/QuickLink/<?php echo e($quickSliderf->id); ?>" data-animation="animated fadeInUp">                                                                        <b style="color:yellow">Read More <i class="fa fa-angle-double-right"></i></b></a></p>
+                                </div>
                                 </div>
                             </div>
                         </div>
-                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
+                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>
@@ -161,27 +157,23 @@
 
 
 
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
 
-    <div class="container-fluid" style="padding-bottom:0px;">  
-            
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Tour Packages</span></h2>
+    <div class="container-fluid" style="padding-bottom:0px;">
 
-      
-      <div class="px-xl-5 pb-3">     
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-    
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#;">Tour Packages</span></h2>
 
 
-
+      <div class="px-xl-5 pb-3">
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#">
     <div class="container-fluid" style=" padding-bottom:0px;">
 
    <div class="south-search-area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                               
-  
+
+
   <div class="col-12 col-sm-6 col-xl-3" style="padding-left:20px;padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
@@ -190,10 +182,6 @@
                             </div>
                             <!-- Featured Properties Slides -->
                             <div class="featured-properties-slides owl-carousel">
-                                 
-
-
-
            <div class="single-featured-properties-slide">
 
              <div class="item active">
@@ -208,17 +196,17 @@
                                           </div>
                                         </div>
       </div>
-                         
+
 
                                </div>
 
 
 
-                                  <?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>   
+                                  <?php $__currentLoopData = $popular_safarif; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <!-- Single Slide -->
                                 <div class="single-featured-properties-slide">
                                     <!-- <a href="#"><img src="../assetf/img/bg-img/fea-product.jpg" alt=""></a> -->
-                               
+
 
         <div class="item">
                           <div class="package-list-wrap ">
@@ -234,16 +222,12 @@
                       </div>
 
 
-                                </div>                          
+                                </div>
 
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>
-
-
-
-
    <div class="col-12 col-sm-4 col-xl-3"  style="padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
@@ -273,7 +257,7 @@
 
 
 
-                            
+
                          <?php $__currentLoopData = $popular_holidayf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $holidays): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <div class="item active">
                                                     <div class="package-list-wrap ">
@@ -326,7 +310,7 @@
 
 
                                 <!-- Single Slide -->
-                                 <?php $__currentLoopData = $popular_trekkingf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $trekking): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
+                                 <?php $__currentLoopData = $popular_trekkingf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $trekking): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <!-- Single Slide -->
                                 <div class="single-featured-properties-slide">
                                         <div class="item">
@@ -343,7 +327,7 @@
                       </div>
 
 
-                                </div>                          
+                                </div>
 
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
@@ -385,9 +369,9 @@
 
                                 <!-- Single Slide -->
                                          <?php $__currentLoopData = $popular_historicalf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $historicalf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                     
+
                                 <div class="single-featured-properties-slide">
-                              
+
 
     <div class="item">
                              <div class="package-list-wrap ">
@@ -403,7 +387,7 @@
                                             </div>
 
                                 </div>
-                               
+
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
@@ -418,7 +402,7 @@
 </div>
 
 
-       </div>     
+       </div>
     </div>
 </div>
 </section>
@@ -426,30 +410,32 @@
 
 
 
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+    <div class="container-fluid" style="padding-bottom:0px;">
 
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-    <div class="container-fluid" style="padding-bottom:0px;">  
-            
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Special Offers</span></h2>
 
-      
-      <div class="px-xl-5 pb-3">     
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-  
-   
+
+      <div class="px-xl-5 pb-3">
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#f0f0f0">
+
+
+
+
+
+
                                 <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
- <div class="col-lg-3 col-md-3">
-    
+ <div class="col-lg-3 col-md-3"  style="border-right:0px solid rgba(71,85,95,.11)">
+
        <h5><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
-            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#f3f4f4">
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#c6bc71">
 
 <div class="single_blog listing-shot">
                 <div class="product-item bg-light mb-4">
                    <div class="listing-shot-img">
                 <div class="listing-badge now-open"><strong><?php echo e(round($special_private->save/$special_private->price * 100),0); ?>% Off</strong></div>
-                                                                    
-                                                               
+
 
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$special_private->attachment)); ?>" alt="" style="height:250px;">
@@ -458,18 +444,17 @@
                         </div>
                     </div>
 
-                    <div class="text-center" style="background-color:#4c7149;">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong><?php echo e($special_private->tour_name); ?></strong></a>                      
-                    </div>
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong><?php echo e($special_private->tour_name); ?></strong></a>
+
                 </div>
                  </div>
 
-  <b>  <div class="col-md-5 col-sm-5 col-xs-5 header-btn" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
+  <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
+                                                                                         <strong>Dead Line3: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
                                                                                  </div></b>
 
- <b class="float-right">  
-  <div class="header-btn">
+ <b class="float-right">
+  <div class="">
                                                                                 <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_private->new_price),2); ?> </strong> pp
                                                                                      </span><s style=""><sup>$ <?php echo e(number_format($special_private->price),2); ?> </sup></s><br>
                                                                                         <span style="font-size:12px;">Save $<?php echo e(number_format($special_private->save),2); ?></span>
@@ -482,9 +467,9 @@
 
                </div>
 
-<div>Tour Duration:         
-                                                                  <strong class="float-right"><?php echo e($special_private->days); ?> Days, <?php echo e($special_private->days -1); ?> Nights</strong>
-                                                                                              
+<div>Tour Duration:
+<strong class="float-right"><?php echo e($special_private->days); ?> Days, <?php echo e($special_private->days -1); ?> Nights</strong>
+
                                                                                               </div>
 
 <div>Physical Rating:          <strong class="float-right"><?php echo e($special_private->physical_rating); ?></strong></div>
@@ -505,97 +490,80 @@
 
 
 
+                                <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="col-sm-6 col-md-4">
+                                <h4><b style="background:"><?php echo e($special_group->sales_header); ?>-(<?php echo e($special_group->category); ?>)</b></h4>
+
+                                        <div class="single_blog listing-shot item-grid">
+                                <div class="listing-shot-img">
+                                                                    <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
+
+                                                              </div>
 
 
-                    <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-     <div class="col-lg-4 col-md-12">
-         <h4><b style="background:"><?php echo e($special_group->sales_header); ?></b></h4>
-                                                <div class="single_blog listing-shot">
-
-                                                                <div class="listing-shot-img">
-                                                                            <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
-                                                                        <div class="blog_image">
-                                                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" class="img-responsive" alt="<?php echo e($special_group->tour_name); ?>" style="width:100%;">
-                                                                        </div>
-                                                                </div>
-                                                                             <h3 class="text-center demo-3"> <b style="color:" title="<?php echo e($special_group->tour_name); ?>"><?php echo e($special_group->tour_name); ?></b>
-                                                                             </h3>
-                                                                 <hr>
-                                                        <div class="blog-text">
-                                                        <div class="row">
-
-                                                                         <div class="col-md-7 col-sm-7 col-xs-7 header-btn" style="border-right:1px solid rgba(71,85,95,.11);height:0px;">
-                                                                                         <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger"><?php echo e($special_group->offer_deadline); ?></b></strong>
-                                                                                 </div>
-
-                                                                                <div class="col-md-5 col-sm-5 col-xs-5 header-btn">
-                                                                                <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_group->new_price),2); ?> </strong> pp
-                                                                                     </span><s style=""><sup>$ <?php echo e(number_format($special_group->price),2); ?> </sup></s><br>
-                                                                                        <span style="font-size:12px;">Save $<?php echo e(number_format($special_group->save),2); ?></span>
-
-                                                                                 </div>
-                                                                        </div>
-
-                                                                    <div class="col-md-12 col-sm-12 col-xs-12 text-left booking-btn-gray">
-                                                                            <div class="row">
-                                                                                     <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                         Tour Duration:
-                                                                                        </div>
-
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_group->days); ?> Days, <?php echo e($special_group->days -1); ?> Nights</strong>
-                                                                                                </div>
-                                                                                         </div>
-
-                                                                                             <div class="row">
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6"  style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Physical Rating: </span>
-                                                                                         </div>
 
 
-                                                                                             <div class="col-md-5 col-sm-5 col-xs-5" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_group->physical_rating); ?></strong>
-                                                                                                </div>
-                                                                                             </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Category: </span>
-                                                                                     </div>
+                                          <div class="item-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>);" style="background-size:cover; background-position:center">
+                                            <div class="item-overlay">
+                                              <a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>"><span class="icon-binocular"></span></a>
+                                            </div>
+                                          </div>
+
+                                          <div class="item-desc" style="background-color:#345742;">
+
+                                            <div class="">
+                                              <span class=""></span>
+                                              <h4 class="title"><a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>"><?php echo e($special_group->tour_name); ?></a></h4>
+                                            </div>
+
+                                <hr>
+                                            <div class="sub-title">
+                                              <span class="location">Tour Duration</span>
+                                              <span class="grade"><?php echo e($special_group->days); ?> Days, <?php echo e($special_group->days -1); ?> Nights</span>
+                                            </div>
+                                            <div class="sub-title">
+                                              <span class="location">Physical rating</span>
+                                              <span class="grade"><?php echo e($special_group->physical_rating); ?></span>
+                                            </div>
+
+                                            <div class="sub-title">
+                                               <span class="location">Tour Category</span>
+                                              <span class="grade"><?php echo e($special_group->category); ?></span>
+                                            </div>
+
+                                 <div class="sub-title">
+                                              <span class="location">Tour Code</span>
+                                              <span class="grade"><?php echo e($special_group->tour_code); ?></span>
+                                            </div>
+
+                                            <div class="item-detail">
+                                              <div class="left">
+                                                <div class="day"><span class="icon-sun">Dead Line2:</span></div>
+                                                <div class="night"><span class="icon-moonx"></span><?php echo e($special_group->offer_deadline); ?></div>
+                                              </div>
+                                              <div class="right">
+
+                                                  <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_group->new_price),2); ?> </strong> pp
+                                                                         </span><sup style="text-decoration: line-through;">$ <?php echo e(number_format($special_group->price),2); ?> </sup></s><br>
+                                                                          <span style="font-size:12px;">Save $<?php echo e(number_format($special_group->save),2); ?></span>
 
 
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_group->category); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                                    <div class="row">
-                                                                                                    <div class="col-md-6 col-sm-6 col-xs-6" style="border-right:1px solid rgba(255,255,0,.5)">
-                                                                                             <span> Tour Code: </span>
-                                                                                     </div>
+                                                <a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>" class="btn btn-primary hvr-sweep-to-right">Tour Details</a>
 
-                                                                                             <div class="col-md-6 col-sm-6 col-xs-6" style="font-size:14px;">
-                                                                                                     <strong><?php echo e($special_group->tour_code); ?></strong>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                         </div>
+                                                <!-- <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="btn btn-primary hvr-sweep-to-right">Tour Details</a> -->
+                                              </div>
+                                            </div>
 
-                                                            <div class="row">
-                                                                        <div class="col-md-12 col-sm-12 col-xs-12 text-right booking-btn-gray">
-                                                                                    <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Explore Tour Details</b></a>
-                                                                        </div>
-                                                                            </div>
-                                                                </div>
-
-                                                </div>
+                                              <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Read more</b></a>
+                                          </div>
                                         </div>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-        </div>  
+                                      </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
 
- <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right"> 
+ <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right">
 
   <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Offers
                         </a>
@@ -609,9 +577,9 @@
    <div class="container pt-5 pb-3">
           <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Partnering</span></h2>
 
-            <div class="px-xl-5 pb-3">     
+            <div class="px-xl-5 pb-3">
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-<div class="row">    
+<div class="row">
 
             <div class="col-md-11 col-sm-3 pb-1">
                 <a class="text-decoration-none" href="">
@@ -627,10 +595,10 @@ Partnering with SafariBookings.com</b></a>
                     </div>
                 </a>
             </div>
-                 
+
 </div>
         </div>
-      
+
     </div>
     </div>
 
@@ -663,7 +631,7 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
                     <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/safaris" ><?php echo e($popular_safari->type); ?></a>                      
+                        <a class="h2 text-decoration-none text-truncate" href="/safaris" ><?php echo e($popular_safari->type); ?></a>
                     </div>
                 </div>
             </div>
@@ -679,12 +647,12 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
                     <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>                      
+                        <a class="h2 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>
                     </div>
                 </div>
             </div>
 <?php endif; ?>
-            
+
            <?php if($popular_holiday): ?>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
@@ -695,7 +663,7 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
                     <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>                      
+                        <a class="h2 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>
                     </div>
                 </div>
             </div>
@@ -710,7 +678,7 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
                     <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>                      
+                        <a class="h2 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>
                     </div>
                 </div>
             </div>
@@ -724,9 +692,9 @@ Partnering with SafariBookings.com</b></a>
    <div class="container-fluid pt-5 pb-3">
           <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Quick Link</span></h2>
 
-            <div class="px-xl-5 pb-3">     
+            <div class="px-xl-5 pb-3">
 <div class="col-md-8 col-sm-12 pb-1" style="background-color:#4c7149">
-<div class="row">    
+<div class="row">
 
       <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-3 col-sm-3 pb-1">
@@ -743,12 +711,12 @@ Partnering with SafariBookings.com</b></a>
                 </a>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-         
+
 </div>
         </div>
 
             <div class="col-md-4 col-sm-12 pb-1">
-     <div class="row" style="background-color:#4c7149"> 
+     <div class="row" style="background-color:#4c7149">
 
 <div class="testimonials-v1">
       <div class="service-box-heading bg-color">
@@ -772,7 +740,7 @@ Partnering with SafariBookings.com</b></a>
                                            <?php for($i = 0; $i <$testimonies_one->rating; $i++): ?>                                  <i class="text-primary fa fa-star text-warning"></i>                                                  <?php endfor; ?>
                 <?php for($i=0;$i<5-$testimonies_one->rating;$i++): ?>
   <i class="fa fa-star-o text-warning"></i>                                                                                    <?php endfor; ?>
-   <?php endif; ?>  
+   <?php endif; ?>
 
                                                                  </li>
                                                                      </ul>
@@ -817,8 +785,8 @@ Partnering with SafariBookings.com</b></a>
                                  </div>
 
 </div>
-</div>        
-     </div>       
+</div>
+     </div>
 </div>
 
 
@@ -866,7 +834,7 @@ Partnering with SafariBookings.com</b></a>
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-   
+
      <script src="../assetff/js/category.js"></script>
     <script src="../assetff/lib/easing/easing.min.js"></script>
     <script src="../assetff/lib/owlcarousel/owl.carousel.min.js"></script>
@@ -889,4 +857,5 @@ Partnering with SafariBookings.com</b></a>
     <!-- Active js -->
     <!-- <script src="../assetff/js/active.js"></script> -->
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/home/index.blade.php ENDPATH**/ ?>

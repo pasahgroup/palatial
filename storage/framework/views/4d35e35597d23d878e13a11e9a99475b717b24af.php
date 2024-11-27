@@ -32,21 +32,21 @@
 
     <!-- Style CSS -->
 <!-- Custom css -->
- 
+
 
   <script src="../custom/js/jquery.min.js"></script>
     <script src="../custom/js/bootstrap.min.js"></script>
 <!-- End of Modal -->
 <style type="text/css">
     .wpadding{
-       padding-left:20px; 
-        padding-right:25px; 
+       padding-left:20px;
+        padding-right:25px;
     }
 </style>
 
 <style type="text/css">
     .wppadding{
-       padding-left:6px;  
+       padding-left:6px;
     }
 </style>
 
@@ -69,7 +69,7 @@
 
    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
   <link rel="stylesheet" href="../../css/style-shortline.css">
-  
+
    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -78,8 +78,8 @@
   <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
   <!-- <link href="../../assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet"> -->
     <!-- <link href="../../assets/plugins/css/style1xx.css" rel="stylesheet"> -->
-  
- 
+
+
 
  <link href="../../assets/pages/css/components.css" rel="stylesheet">
 
@@ -131,9 +131,10 @@
 .button5 {border-radius: 50%;}
 </style>
 
+
  <script src="../js/jquery361.min.js"></script>
      <link rel="stylesheet" href="../css/font621.min.css">
- 
+
 </head>
 
 <body>
@@ -142,15 +143,16 @@
         <div class="south-load"></div>
     </div>
  -->
- 
-    <header class="header-area">  
-        <?php echo $__env->make('website.layouts.header3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>   
+
+    <header class="header-area">
+          <?php echo $__env->make('website.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Main Header Area -->
-        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">              
-            <div class="classy-nav-container breakpoint-off"> 
+        <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">
+            <div class="classy-nav-container breakpoint-off">
                 <nav class="classy-navbar justify-content-between" id="southNav">
+
                     <!-- Logo -->
-                <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:50px; width:80px;padding:1px;"></a>
+                    <a class="nav-brand" href="/"><img src="../assets/corporate/img/logos/logoe.png" alt="" style="height:5vh; width:100%;"></a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -167,11 +169,12 @@
                         <div class="classynav">
                             <ul>
 
-                            <li><a href="/">Home</a>
+  <li><a href="/">Home</a>
                                   <!--   <ul class="dropdown">
                                          <li><a href="/">Home</a></li>
                                     </ul -->
                                 </li>
+
 
 
                                     <li><a href="#">Tour Packages</a>
@@ -182,9 +185,9 @@
                                             <li><a href="/trekking">Hiking & Trekking</a></li>
                                             <li><a href="/holiday">Beach Holidays</a></li>
                                             <li><a href="/dayTours">Day Tours</a></li>
-                                            <li><a href="/historical-sites">Historical Sites</a></li>                                 
+                                            <li><a href="/historical-sites">Historical Sites</a></li>
                                         </ul>
-                                        
+
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Special Packages</li>
                                              <li><a href="/group">All Group Tours</a></li>
@@ -193,9 +196,11 @@
                 <li><a href="/special-occasions">Special Occasions</a></li>
                    <li><a href="/cultural">Cultural Tours</a></li>
                     <li><a href="/addons">Addons</a></li>
-                                        </ul>                                 
+                                        </ul>
                                     </div>
-                                </li>                      
+                                </li>
+
+
 
 
 
@@ -204,10 +209,10 @@
                                          <li><a href="/whatWeOfferClient">Palatial Tour Services</a></li>
                 <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
                 <li><a href="#">Palatial Crafts and Designing</a></li>
-                                       
+
                                     </ul>
                                 </li>
-    
+
 
 
                                  <li><a href="/safaris-gallery">Galleries</a>
@@ -223,7 +228,7 @@
                                         <li><a href="/New-Agent">Agent-Register</a></li>
                         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>
                         <li><a href="/New-Partner">Partner-Register</a></li>
-                                       
+
                                     </ul>
                                 </li>
 
@@ -247,15 +252,15 @@
 
                                      <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
                                     <div class="megamenu">
-                                    <ul class="single-mega cn-col-12">
+                                        <ul class="single-mega cn-col-12">
                                             <li class="title">Search by selecting program</li>
-                                           
-                                       
+
+
   <div class="south-search-area">
             <div class="row wppadding">
                 <div class="col-12">
                     <div class="advanced-search-form">
-                      
+
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                              <form  method="post"  action="<?php echo e(route('search-tour')); ?>" enctype="multipart/form-data">
@@ -267,14 +272,14 @@
                                         <input type="text" class="form-control" name="search" placeholder="any keyword">
                                     </div>
                                 </div>
-                              
+
                                 <div class="col-12 search-form-second-steps">
                                        <div class="row">                                          <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <input type="number" class="form-control" name="price" placeholder="maximum price">
                                     </div>
                                 </div>
-                                     
+
                                     </div>
                                 </div>
 
@@ -283,7 +288,7 @@
                                     <div class="more-filter">
                                         <a href="#" id="moreFilter">+ More filters</a>
                                     </div>
-                                 
+
                                     <div class="form-group mb-0" target="_blank">
                                         <button type="submit" class="btn btn-success" target="_blank" name="search2" value="search2">Search</button>
                                     </div>
@@ -295,22 +300,22 @@
         </div>
     </div>
      </div>
-                                
+
 
 </li>
 <li>||</li>
-    <li style="padding-top:2px;"><a href="#" class="btn btn-success" style="color:#000">Create My Safari</a>
+    <li><a href="#" class="btn btn-success" style="color:#000">Create My Safari</a>
                                     <ul class="dropdown">
                                          <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
                 <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari-Tailor Made</a></li>
-                                                      
+
                                     </ul>
                                 </li>
 
                                  <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">My Last Booking</a>
                                     <ul class="dropdown">
                 <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
-                                                      
+
                                     </ul>
                                 </li>
     </ul>
@@ -325,15 +330,14 @@
     <!-- Header END -->
     <?php echo $__env->yieldContent('content'); ?>
   <hr>
-    
+
 
       <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../assetf/img/bg-img/cta.jpg); color:yellow;">
         <!-- Main Footer Area -->
-        <div class="container-fluid">
         <div class="row px-xl-5 pt-5">
               <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
-                           
+
                               <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="/circuitTour/Northern Circuit"><i class="fa fa-angle-right mr-2"></i>Northern Circuit</a>
                             <a class="text-secondary mb-2" href="/circuitTour/Southern Circuit"><i class="fa fa-angle-right mr-2"></i>Southern Circuit</a>
@@ -342,9 +346,10 @@
                      <a class="text-secondary mb-2" href="/circuitTour/Central Circuit"><i class="fa fa-angle-right mr-2"></i>Central Circuit</a>
                         </div>
                         <br>
- 
+
                     </div>
             <div class="col-lg-8 col-md-12">
+                <div class="row">
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">About Palatial Tours</h5>
                         <div class="d-flex flex-column justify-content-start">
@@ -352,7 +357,7 @@
                             <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>What We offer</a>
                             <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Accommodation-Hotels</a>
                             <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>Accommodation-Camps</a>
-                  
+
                         </div>
                     </div>
                        <div class="col-md-4 mb-5">
@@ -362,14 +367,14 @@
                             <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>Health & Vaccination</a>
                             <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Payment Methods</a>
                             <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>About Tanzania</a>
-                  
+
                         </div>
                     </div>
-                   
-                   
+
+
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Contacts</h5>
-                           
+
                            <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:<?php echo e($contacts->address??'Arusha'); ?></a>
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: (+255)753 216 263</a>
@@ -377,12 +382,13 @@
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: www.palatialtours.com</a>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
 
           <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
-              
+
 <div class="col-md-8">
          <div class="footer-widget-area mb-100">
                 <h3 class="" style="color:yellow;">Working Hours</h3>
@@ -421,7 +427,6 @@
                     </div>
             </div>
         </div>
-</div>
 
         <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
@@ -457,7 +462,7 @@
   <script src="../assets/vendor/jquery.ui.touch-punch.min.js"></script>
 
 
- 
+
   <script src="../assets/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
   <script src="../assets/vendor/owlcarousel/owl.carousel.min.js"></script>
   <script src="../assets/vendor/retina.min.js"></script>
@@ -479,6 +484,7 @@
 
 
    <script src="../../assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+
 <script src="../../js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
@@ -486,25 +492,25 @@
             Layout.init();
             Layout.initOWL();
             Layout.initTwitter();
-            Layout.initFixHeaderWithPreHeader(); 
+            Layout.initFixHeaderWithPreHeader();
             Layout.initNavScrolling();
         });
     </script>
 
-<!-- Custom3 -->   
+<!-- Custom3 -->
   <!-- Plugin prevent returning of mobile menu  -->
    <!-- Image libray -->
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
     <!-- End of Image libray -->
 
-<script> 
-    // jQuery code for initializing a tooltip 
-    $(document).ready(function () { 
-        // jQuery Attribute value selector to  
-        // select the specified element and  
-        // call the tooltip method on it 
-        $('[data-toggle="tooltip"]').tooltip(); 
-    }); 
+<script>
+    // jQuery code for initializing a tooltip
+    $(document).ready(function () {
+        // jQuery Attribute value selector to
+        // select the specified element and
+        // call the tooltip method on it
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 
 <script type="text/javascript">
@@ -555,4 +561,5 @@ else
 </script>
 </body>
 <!-- END BODY -->
-</html><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/layouts/apps.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/layouts/apps.blade.php ENDPATH**/ ?>

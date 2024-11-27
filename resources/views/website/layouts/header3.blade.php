@@ -1,10 +1,15 @@
-  <div class="container top-header-area" style="background:yellow;padding:2px">
-         <div class="align-items-center py-2 px-xl-5 d-lg-flex" style="background-color:#51934f;margin-top:0px;margin-bottom:0px;">
+
+
+
+
+
+  <div class="container top-header-area" style="background:#f0f0f0;padding:2px;border-color:red !important">
+         <div class="align-items-center py-2 px-xl-5 d-lg-flex">
               <div class="col-lg-2 col-md-4">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">PALATIAL</span>
                     <span class="h3 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
-                </a>            
+                </a>
 
             </div>
 
