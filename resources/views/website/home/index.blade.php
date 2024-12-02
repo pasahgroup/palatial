@@ -425,7 +425,7 @@
  <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
 
        <h5 class="text-center"><b style="background:">{{$special_private->sales_header}}</b></h5>
-            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#496a48">
+            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#fff">
 
 <div class="single_blog listing-shot">
                 <div class="product-item bg-light mb-4">
@@ -440,7 +440,7 @@
                         </div>
                     </div>
 
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong style="text-align:center">{{ $special_private->tour_name }} bnvb</strong></a>
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong style="text-align:center">{{ $special_private->tour_name }}</strong></a>
                           
                 </div>
                  </div>

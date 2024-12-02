@@ -8,7 +8,7 @@
               <div class="col-lg-2 col-md-4">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">PALATIAL</span>
-                    <span class="h3 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
+                    <span class="h3 text-uppercase text-dark bg-primary px-1 ml-n1">Tour</span>
                 </a>
 
             </div>

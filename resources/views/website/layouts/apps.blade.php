@@ -152,7 +152,7 @@
                     <div class="classy-menu">
                         <!-- close btn -->
                         <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span>gg</div>
                         </div>
                         <!-- Nav Start -->
                         <div class="classynav">
