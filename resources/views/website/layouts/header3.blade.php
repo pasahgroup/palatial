@@ -3,8 +3,8 @@
 
 
 
-  <div class="container top-header-area" style="background:#37533c;padding:2px;border-color:red !important">
-         <div class="align-items-center py-2 px-xl-5 d-lg-flex">
+  <div class="container top-header-area" style="background:#transparent;padding:2px;">
+         <div class="align-items-center py-2 px-xl-5 d-lg-flex" style="border:1px solid rgba(0,0,0,.9)">
               <div class="col-lg-2 col-md-4">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">PALATIAL</span>

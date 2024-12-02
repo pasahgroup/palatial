@@ -47,8 +47,25 @@ class programController extends Controller
      */
     public function store(Request $request)
     {
-        // No of days before update on itenary table
-       //dd (request('main'));
+        //Validation part before insertion
+
+
+ $request->validate([
+            // 'cost' => 'required|integer|in:'.join(',', Location::active()->orderBy('name')->pluck('id')->toArray()),
+          
+
+            //  'drop_location' => 'required|integer|in:'.join(',', Location::active()->orderBy('name')->pluck('id')->toArray()),
+     'tour_name' => 'required|string',
+             'cost' => 'required|integer',
+             'price' => 'required|integer',           
+             // 'pick_time' => 'required|date_format:m/d/Y h:i a|after_or_equal:today',
+             // 'drop_time' => 'required|date_format:m/d/Y h:i a|after_or_equal:'. $request->pick_time,
+            //          ]
+            //          ,[
+            // 'drop_location.not_in' => 'Please choose different location!'
+        ]);
+
+
 
         if(request('main')=='Program')
         {

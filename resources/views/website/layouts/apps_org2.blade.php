@@ -170,9 +170,6 @@
     <header class="header-area">
         @include('website.layouts.header3')
         <!-- Main Header Area -->
-        <!-- <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">
-            <div class="classy-nav-container breakpoint-off">
-                <nav class="classy-navbar justify-content-between" id="southNav"> -->
 
                   <div class="main-header-area" id="stickyHeader" style="background:#fdfdfd;margin-top:0px;">
                       <div class="classy-nav-container breakpoint-off">

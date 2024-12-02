@@ -137,7 +137,7 @@
           <?php echo $__env->make('website.layouts.header3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Main Header Area -->
         <div class="main-header-area" id="stickyHeader" style="background:#;margin-top:0px;">
-            <div class="classy-nav-container breakpoint-off">
+            <div class="classy-nav-container breakpoint-off"  style="border:1px solid rgba(0,0,0,.9)">
                 <nav class="classy-navbar justify-content-between" id="southNav">
 
                     <!-- Logo -->

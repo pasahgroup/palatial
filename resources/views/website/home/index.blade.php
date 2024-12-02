@@ -2,7 +2,6 @@
 @section('content')
 
 <style type="text/css">
-
     .booking-btn {
   border: 0px solid #647545;
   padding: 10px 38px;
