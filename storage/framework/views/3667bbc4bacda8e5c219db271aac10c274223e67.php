@@ -158,14 +158,13 @@
 
 
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
-
     <div class="container-fluid" style="padding-bottom:0px;">
 
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#;">Tour Packages</span></h2>
 
 
       <div class="px-xl-5 pb-3">
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#">
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#FFFFFF">
     <div class="container-fluid" style=" padding-bottom:0px;">
 
    <div class="south-search-area">
@@ -186,7 +185,7 @@
 
              <div class="item active">
          <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px">
                                          <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_safari->days); ?> Days: $<?php echo e(number_format($popular_safari->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -210,7 +209,7 @@
 
         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px">
                                             <span class="off-box" style="background-color:#2e4432"><?php echo e($safaris->days); ?> Days: $<?php echo e(number_format($safaris->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -241,7 +240,7 @@
                                  <div class="single-featured-properties-slide">
                                             <div class="item active">
                  <div class="package-list-wrap ">
-                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                  <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_holiday->days); ?> Days: $<?php echo e(number_format($popular_holiday->price),2); ?></span>
                 <div class="package-list-content">
                         <h3 class="package-list-title">
@@ -261,7 +260,7 @@
                          <?php $__currentLoopData = $popular_holidayf; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $holidays): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <div class="item active">
                                                     <div class="package-list-wrap ">
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$holidays->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                  <span class="off-box" style="background-color:#2e4432"><?php echo e($holidays->days); ?> Days: $<?php echo e(number_format($holidays->price),2); ?></span>
                 <div class="package-list-content">
                     <h3 class="package-list-title">
@@ -293,7 +292,7 @@
     <div class="item active">
                  <div class="package-list-wrap ">
 
-                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                 <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_trekking->days); ?> Days: $<?php echo e(number_format($popular_trekking->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -315,7 +314,7 @@
                                 <div class="single-featured-properties-slide">
                                         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="<?php echo e(URL::asset('/storage/uploads/'.$trekking->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
                                             <span class="off-box" style="background-color:#2e4432"><?php echo e($trekking->days); ?> Days: $<?php echo e(number_format($trekking->price),2); ?></span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -349,7 +348,7 @@
  <div class="single-featured-properties-slide">
     <div class="item active">
                  <div class="package-list-wrap ">
-    <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+    <img src="<?php echo e(URL::asset('/storage/uploads/'.$popular_historical->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
      <span class="off-box" style="background-color:#2e4432"><?php echo e($popular_historical->days); ?> Days: $<?php echo e(number_format($popular_historical->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -375,7 +374,7 @@
 
     <div class="item">
                              <div class="package-list-wrap ">
- <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+ <img src="<?php echo e(URL::asset('/storage/uploads/'.$historicalf->attachment)); ?>" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                         <span class="off-box" style="background-color:#2e4432"><?php echo e($historicalf->days); ?> Days: $<?php echo e(number_format($historicalf->price),2); ?></span>
                 <div class="package-list-content">
             <h3 class="package-list-title">

@@ -159,14 +159,13 @@
 
 
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
-
     <div class="container-fluid" style="padding-bottom:0px;">
 
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#;">Tour Packages</span></h2>
 
 
       <div class="px-xl-5 pb-3">
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#">
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#FFFFFF">
     <div class="container-fluid" style=" padding-bottom:0px;">
 
    <div class="south-search-area">
@@ -187,7 +186,7 @@
 
              <div class="item active">
          <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment)}}" class="img-fluid" alt="No Image" style="height:250px">
                                          <span class="off-box" style="background-color:#2e4432">{{ $popular_safari->days  }} Days: ${{number_format($popular_safari->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -211,7 +210,7 @@
 
         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$safaris->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="{{URL::asset('/storage/uploads/'.$safaris->attachment) }}" class="img-fluid" alt="No Image" style="height:250px">
                                             <span class="off-box" style="background-color:#2e4432">{{ $safaris->days  }} Days: ${{number_format($safaris->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -242,7 +241,7 @@
                                  <div class="single-featured-properties-slide">
                                             <div class="item active">
                  <div class="package-list-wrap ">
-                <img src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                <img src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                  <span class="off-box" style="background-color:#2e4432">{{ $popular_holiday->days  }} Days: ${{number_format($popular_holiday->price),2 }}</span>
                 <div class="package-list-content">
                         <h3 class="package-list-title">
@@ -262,7 +261,7 @@
                          @foreach ($popular_holidayf as $holidays)
                                                 <div class="item active">
                                                     <div class="package-list-wrap ">
-                                                                                <img src="{{URL::asset('/storage/uploads/'.$holidays->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$holidays->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                  <span class="off-box" style="background-color:#2e4432">{{ $holidays->days  }} Days: ${{number_format($holidays->price),2 }}</span>
                 <div class="package-list-content">
                     <h3 class="package-list-title">
@@ -294,7 +293,7 @@
     <div class="item active">
                  <div class="package-list-wrap ">
 
-                                                                                <img src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                                                                <img src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                 <span class="off-box" style="background-color:#2e4432">{{ $popular_trekking->days  }} Days: ${{number_format($popular_trekking->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -316,7 +315,7 @@
                                 <div class="single-featured-properties-slide">
                                         <div class="item">
                           <div class="package-list-wrap ">
-                                        <img src="{{URL::asset('/storage/uploads/'.$trekking->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+                                        <img src="{{URL::asset('/storage/uploads/'.$trekking->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;">
                                             <span class="off-box" style="background-color:#2e4432">{{ $trekking->days  }} Days: ${{number_format($trekking->price),2 }}</span>
         <div class="package-list-content">
       <h3 class="package-list-title">
@@ -350,7 +349,7 @@
  <div class="single-featured-properties-slide">
     <div class="item active">
                  <div class="package-list-wrap ">
-    <img src="{{URL::asset('/storage/uploads/'.$popular_historical->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+    <img src="{{URL::asset('/storage/uploads/'.$popular_historical->attachment)}}" class="img-fluid" alt="No Image" style="height:250px;">
      <span class="off-box" style="background-color:#2e4432">{{ $popular_historical->days  }} Days: ${{number_format($popular_historical->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
@@ -376,7 +375,7 @@
 
     <div class="item">
                              <div class="package-list-wrap ">
- <img src="{{URL::asset('/storage/uploads/'.$historicalf->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;width:100%;">
+ <img src="{{URL::asset('/storage/uploads/'.$historicalf->attachment) }}" class="img-fluid" alt="No Image" style="height:250px;">
                                                                                         <span class="off-box" style="background-color:#2e4432">{{ $historicalf->days  }} Days: ${{number_format($historicalf->price),2 }}</span>
                 <div class="package-list-content">
             <h3 class="package-list-title">
