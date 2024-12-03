@@ -48,7 +48,6 @@
 
             <div class="col-lg-9">
                 <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel"  style="background-color:#4c7149">
-
                     <ol class="carousel-indicators">
                         <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                           <?php for($x =0; $x <=$slidersCount; $x++): ?>
@@ -57,7 +56,7 @@
                     </ol>
 
                     <div class="carousel-inner">
-                            <div class="carousel-item position-relative active" style="height: 82vh;">
+                            <div class="carousel-item position-relative active" style="height: 80vh;">
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slider_first->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
@@ -75,7 +74,7 @@
                         </div>
 
   <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slides): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="carousel-item position-relative" style="height: 82vh;">
+                        <div class="carousel-item position-relative" style="height: 80vh;">
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$slides->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
@@ -94,7 +93,7 @@
 
 
   <?php $__currentLoopData = $quickLinkSliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quickSliderf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="carousel-item position-relative" style="height: 82vh;">
+                        <div class="carousel-item position-relative" style="height: 80vh;">
                             <img class="position-absolute w-100 h-100" src="<?php echo e(URL::asset('/storage/uploads/'.$quickSliderf->attachment)); ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
@@ -113,7 +112,6 @@
                 </div>
             </div>
             <div class="col-lg-3">
-
                 <div class="product-offer mb-30" style="height: 195px;">
                      <?php if($popular_safari): ?>
                     <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
@@ -145,9 +143,13 @@
                     </div>
                     <?php endif; ?>
                 </div>
-  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                        </a>
             </div>
+                <div class="col-lg-10">
+                </div>
+                    <div class="col-lg-2">
+            <a class="btn-transparent float-right" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float-right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                  </a>
+                                </div>
         </div>
     </div>
     <!-- Carousel End -->

@@ -149,7 +149,7 @@
  .offer-box,.slide {
      color: #FFFFFF;
      font-size: 13px;
-     padding: 2px 8px;
+     padding: 2px 2px;
      font-family: 'Poppins', sans-serif;
 }
  .offer-box li {
@@ -184,4 +184,3 @@
  .our-link ul li:last-child{
      border: none;
 }
-
