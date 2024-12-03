@@ -485,74 +485,64 @@
 
 
                                 <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <div class="col-sm-6 col-md-4">
-                                <h4><b style="background:"><?php echo e($special_group->sales_header); ?>-(<?php echo e($special_group->category); ?>)</b></h4>
+                                <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
 
-                                        <div class="single_blog listing-shot item-grid">
-                                <div class="listing-shot-img">
-                                                                    <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
+                                      <h5 class="text-center"><b style="color:#b76b0b;"><?php echo e($special_group->sales_header); ?></b></h5>
+                                           <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#fff">
 
-                                                              </div>
+                               <div class="single_blog listing-shot">
+                                               <div class="product-item bg-light mb-4">
+                                                  <div class="listing-shot-img">
+                                               <div class="listing-badge now-open"><strong><?php echo e(round($special_group->save/$special_group->price * 100),0); ?>% Off</strong></div>
+
+                                                   <div class="product-img position-relative overflow-hidden">
+                                                       <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>" alt="" style="height:250px;">
+                                                       <div class="product-action">
+                                                           <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($special_group->tour_name); ?></i></a>
+                                                       </div>
+                                                   </div>
+
+                                                       <h5 class="text-center" style="font-size:20px;"><strong><?php echo e($special_group->tour_name); ?></strong></h5>
+
+                                               </div>
+                                                </div>
+
+                                 <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
+                                                                                                                        <strong style="color:#fff">Dead Line:<br> <b style="color:#fde205"><?php echo e($special_group->offer_deadline); ?></b></strong>
+                                                                                                                </div></b>
+
+                                <b class="float-right">
+                                 <div class="">
+                                                                                                               <span class="text-danger" style="font-size:17px"><strong style="color:#fde205">$<?php echo e(number_format($special_group->new_price),2); ?> </strong> pp
+                                                                                                                    </span><s style=""><sup style="color:#fff">$ <?php echo e(number_format($special_group->price),2); ?> </sup></s><br>
+                                                                                                                       <span style="font-size:12px;color:#fff">Save $<?php echo e(number_format($special_group->save),2); ?></span>
+
+                                                                                                                </div></b>
 
 
 
 
-                                          <div class="item-img" style="background-image: url(<?php echo e(URL::asset('/storage/uploads/'.$special_group->attachment)); ?>);" style="background-size:cover; background-position:center">
-                                            <div class="item-overlay">
-                                              <a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>"><span class="icon-binocular"></span></a>
-                                            </div>
-                                          </div>
 
-                                          <div class="item-desc" style="background-color:#345742;">
-
-                                            <div class="">
-                                              <span class=""></span>
-                                              <h4 class="title"><a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>"><?php echo e($special_group->tour_name); ?></a></h4>
-                                            </div>
-
-                                <hr>
-                                            <div class="sub-title">
-                                              <span class="location">Tour Duration</span>
-                                              <span class="grade"><?php echo e($special_group->days); ?> Days, <?php echo e($special_group->days -1); ?> Nights</span>
-                                            </div>
-                                            <div class="sub-title">
-                                              <span class="location">Physical rating</span>
-                                              <span class="grade"><?php echo e($special_group->physical_rating); ?></span>
-                                            </div>
-
-                                            <div class="sub-title">
-                                               <span class="location">Tour Category</span>
-                                              <span class="grade"><?php echo e($special_group->category); ?></span>
-                                            </div>
-
-                                 <div class="sub-title">
-                                              <span class="location">Tour Code</span>
-                                              <span class="grade"><?php echo e($special_group->tour_code); ?></span>
-                                            </div>
-
-                                            <div class="item-detail">
-                                              <div class="left">
-                                                <div class="day"><span class="icon-sun">Dead Line2:</span></div>
-                                                <div class="night"><span class="icon-moonx"></span><?php echo e($special_group->offer_deadline); ?></div>
                                               </div>
-                                              <div class="right">
 
-                                                  <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_group->new_price),2); ?> </strong> pp
-                                                                         </span><sup style="text-decoration: line-through;">$ <?php echo e(number_format($special_group->price),2); ?> </sup></s><br>
-                                                                          <span style="font-size:12px;">Save $<?php echo e(number_format($special_group->save),2); ?></span>
+                               <div>Tour Duration:
+                               <strong class="float-right"><?php echo e($special_group->days); ?> Days, <?php echo e($special_group->days -1); ?> Nights</strong>
+
+                                                                                                                             </div>
+
+                               <div>Physical Rating:          <strong class="float-right"><?php echo e($special_group->physical_rating); ?></strong></div>
+                               <div>Tour Category:          <strong class="float-right"><?php echo e($special_group->category); ?></strong></div>
+                               <div>Physical Rating:          <strong class="float-right"><?php echo e($special_group->tour_code); ?></strong></div>
 
 
-                                                <a href="<?php echo e(route('safaris.show',$special_group->tour_id,$offers)); ?>" class="btn btn-primary hvr-sweep-to-right">Tour Details</a>
+                               <hr>
+                                                                                                       <div class="text-right">
+                                                                                                                   <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Read more</b></a>
+                                                                                                       </div>
+                                           </div>
 
-                                                <!-- <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="btn btn-primary hvr-sweep-to-right">Tour Details</a> -->
-                                              </div>
-                                            </div>
-
-                                              <a href="<?php echo e(route('grouptour.show',$special_group->tour_id,$offers)); ?>" class="booking-btn text-center"><b>Read more</b></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                               </div>
+                               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
     </div>
@@ -563,7 +553,6 @@
     </span></h3>
 </div>
 </section>
-
 
 
    <div class="container pt-5 pb-3">
