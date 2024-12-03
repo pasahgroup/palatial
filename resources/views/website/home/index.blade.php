@@ -432,7 +432,6 @@
                    <div class="listing-shot-img">
                 <div class="listing-badge now-open"><strong>{{ round($special_private->save/$special_private->price * 100),0 }}% Off</strong></div>
 
-
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$special_private->attachment) }}" alt="" style="height:250px;">
                         <div class="product-action">
@@ -446,7 +445,7 @@
                  </div>
 
   <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong style="color:#fff">Dead Line: <b style="color:#fde205">{{ $special_private->offer_deadline }}</b></strong>
+                                                                                         <strong style="color:#fff">Dead Line:<br> <b style="color:#fde205">{{ $special_private->offer_deadline }}</b></strong>
                                                                                  </div></b>
 
  <b class="float-right">
@@ -595,20 +594,6 @@ Partnering with SafariBookings.com</b></a>
 
     </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Products Start -->
     <div class="container-fluid pt-5 pb-3 top">
