@@ -548,7 +548,7 @@
     </div>
     <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right">
 
-     <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Offers
+     <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right">Explore More Offers <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                            </a>
     </span></h3>
 </div>
