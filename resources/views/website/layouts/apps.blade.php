@@ -152,7 +152,7 @@
                     <div class="classy-menu">
                         <!-- close btn -->
                         <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span>gg</div>
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
                         <!-- Nav Start -->
                         <div class="classynav">
@@ -303,7 +303,7 @@
 
                                  <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">My Last Booking</a>
                                     <ul class="dropdown">
-                <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
+                <li><a href="/bookingTrip" class="booking-btn">My Existing Safari</a></li>
 
                                     </ul>
                                 </li>

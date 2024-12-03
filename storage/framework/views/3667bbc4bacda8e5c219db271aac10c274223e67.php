@@ -423,7 +423,7 @@
 
  <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
 
-       <h5 class="text-center"><b style="background:"><?php echo e($special_private->sales_header); ?></b></h5>
+       <h5 class="text-center"><b style="color:#b76b0b;"><?php echo e($special_private->sales_header); ?></b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#fff">
 
 <div class="single_blog listing-shot">
@@ -439,20 +439,20 @@
                         </div>
                     </div>
 
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong style="text-align:center"><?php echo e($special_private->tour_name); ?></strong></a>
-                          
+                        <h5 class="text-center" style="font-size:20px;"><strong><?php echo e($special_private->tour_name); ?></strong></h5>
+
                 </div>
                  </div>
 
   <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong>Dead Line3: <b class="text-danger"><?php echo e($special_private->offer_deadline); ?></b></strong>
+                                                                                         <strong style="color:#fff">Dead Line: <b style="color:#fde205"><?php echo e($special_private->offer_deadline); ?></b></strong>
                                                                                  </div></b>
 
  <b class="float-right">
   <div class="">
-                                                                                <span class="text-danger" style="font-size:17px"><strong>$<?php echo e(number_format($special_private->new_price),2); ?> </strong> pp
-                                                                                     </span><s style=""><sup>$ <?php echo e(number_format($special_private->price),2); ?> </sup></s><br>
-                                                                                        <span style="font-size:12px;">Save $<?php echo e(number_format($special_private->save),2); ?></span>
+                                                                                <span class="text-danger" style="font-size:17px"><strong style="color:#fde205">$<?php echo e(number_format($special_private->new_price),2); ?> </strong> pp
+                                                                                     </span><s style=""><sup style="color:#fff">$ <?php echo e(number_format($special_private->price),2); ?> </sup></s><br>
+                                                                                        <span style="font-size:12px;color:#fff">Save $<?php echo e(number_format($special_private->save),2); ?></span>
 
                                                                                  </div></b>
 
@@ -556,14 +556,12 @@
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-
-
- <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right">
-
-  <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Offers
-                        </a>
- </span></h3>
     </div>
+    <h3 class="position-relative mx-xl-5"><span class="bg-secondary pr-3 section-heading wow fadeInUp float-right">
+
+     <a class="btn-transparent" href="/offers" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Offers
+                           </a>
+    </span></h3>
 </div>
 </section>
 
@@ -625,9 +623,7 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($popular_safari->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/safaris" ><?php echo e($popular_safari->type); ?></a>
-                    </div>
+                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong><?php echo e($popular_safari->type); ?></strong></a>
                 </div>
             </div>
 <?php endif; ?>
@@ -641,9 +637,7 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/trekking"><i class="fa fa-search">  <?php echo e($popular_trekking->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/trekking"><?php echo e($popular_trekking->type); ?></a>
-                    </div>
+                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong><?php echo e($popular_trekking->type); ?></strong></a>
                 </div>
             </div>
 <?php endif; ?>
@@ -657,9 +651,9 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/holiday"><i class="fa fa-search">  <?php echo e($popular_holiday->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/holiday"><?php echo e($popular_holiday->type); ?></a>
-                    </div>
+
+                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong><?php echo e($popular_holiday->type); ?></strong></a>
+
                 </div>
             </div>
 <?php endif; ?>
@@ -672,9 +666,7 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/historical-sites"><i class="fa fa-search">  <?php echo e($popular_historical->type); ?></i></a>
                         </div>
                     </div>
-                    <div class="text-center py-4" style="background-color:#4c7149;">
-                        <a class="h2 text-decoration-none text-truncate" href="/historical-sites"><?php echo e($popular_historical->type); ?></a>
-                    </div>
+                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong><?php echo e($popular_holiday->type); ?></strong></a>
                 </div>
             </div>
 <?php endif; ?>
@@ -688,7 +680,7 @@ Partnering with SafariBookings.com</b></a>
           <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">Quick Link</span></h2>
 
             <div class="px-xl-5 pb-3">
-<div class="col-md-8 col-sm-12 pb-1" style="background-color:#4c7149">
+<div class="col-md-8 col-sm-12 pb-1" style="background-color:#9f9c63">
 <div class="row">
 
       <?php $__currentLoopData = $datasLink; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -711,7 +703,7 @@ Partnering with SafariBookings.com</b></a>
         </div>
 
             <div class="col-md-4 col-sm-12 pb-1">
-     <div class="row" style="background-color:#4c7149">
+     <div class="row" style="background-color:#9f9c63">
 
 <div class="testimonials-v1">
       <div class="service-box-heading bg-color">

@@ -2,8 +2,6 @@
 @extends('website.layouts.apps')
 @section('content')
 
-
-
    <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
     @if($message = Session::get('success'))
   <div class="alert alert-success">
@@ -29,17 +27,12 @@
   </div>
   @endif     
         <div class="container">
+            {{--
             <div class="package-list-wrap ">
                 <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
                     <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}}  Night(s)<span
                             class="rate">
-
-              <!--              @if($discounts !=[])-->
-              <!--              ${{number_format($discounts->new_price),2 }}-->
-              <!--     @else-->
-              <!-- $ {{number_format($programs->price),2 }}-->
-              <!--@endif-->
 
                     </span>
                     </p>
@@ -63,6 +56,33 @@
                <span class="off-box">FROM  $ {{number_format($programs->price),2 }}</span>
               @endif
             </div>
+--}}
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+    </div>
+    <div class="col-lg-6 col-md-6 float-left">
+        <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}}  Night(s)<span
+                            class="rate">
+
+                    </span>
+                    </p>
+                     
+                     <h3 class="package-list-title">
+                        {{ $programs->tour_name }}
+                    </h3>
+    </div>
+     <div class="col-lg-6 col-md-6 float-right">
+        <span class="text-danger" style="font-size:18px"><strong>${{number_format($discounts->new_price),2 }} </strong> pp
+                                           </span><s style=""><sup>$ {{number_format($programs->price),2 }} </sup></s><br>
+                                            <span style="font-size:12px;">Save ${{number_format($discounts->save),2 }}</span>
+    </div>
+</div>
+<br>
+            
+
+
 
              <!-- Tabs starts here -->
             <div class="row">
@@ -499,12 +519,6 @@
             <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
         </div>
 
-
-                        <!--  <input type="text" name="first_name" placeholder="first name" /> 
-                           <input type="text" name="last_name" placeholder="last name" /> 
-
-
- -->
            
              <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6">

@@ -1,7 +1,5 @@
 <?php $__env->startSection('content'); ?>
 
-
-
    <section class="featured-properties-area section-padding-100-50" style="padding-top:40px;"> 
     <?php if($message = Session::get('success')): ?>
   <div class="alert alert-success">
@@ -30,17 +28,15 @@
   </div>
   <?php endif; ?>     
         <div class="container">
-            <div class="package-list-wrap ">
-                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
-                <div class="package-list-content">
-                    <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s)<span
-                            class="rate">
+            
 
-              <!--              <?php if($discounts !=[]): ?>-->
-              <!--              $<?php echo e(number_format($discounts->new_price),2); ?>-->
-              <!--     <?php else: ?>-->
-              <!-- $ <?php echo e(number_format($programs->price),2); ?>-->
-              <!--<?php endif; ?>-->
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+    </div>
+    <div class="col-lg-6 col-md-6 float-left">
+        <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s)<span
+                            class="rate">
 
                     </span>
                     </p>
@@ -49,22 +45,17 @@
                         <?php echo e($programs->tour_name); ?>
 
                     </h3>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Book Now</button>
-
-                </div>
-             <?php if($discounts !=[]): ?>
-           <span class="off-box">
-            
-                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                          <span class="text-danger" style="font-size:18px"><strong>$<?php echo e(number_format($discounts->new_price),2); ?> </strong> pp
+    </div>
+     <div class="col-lg-6 col-md-6 float-right">
+        <span class="text-danger" style="font-size:18px"><strong>$<?php echo e(number_format($discounts->new_price),2); ?> </strong> pp
                                            </span><s style=""><sup>$ <?php echo e(number_format($programs->price),2); ?> </sup></s><br>
                                             <span style="font-size:12px;">Save $<?php echo e(number_format($discounts->save),2); ?></span>
-                </div>
-              </span>
-              <?php else: ?>
-               <span class="off-box">FROM  $ <?php echo e(number_format($programs->price),2); ?></span>
-              <?php endif; ?>
-            </div>
+    </div>
+</div>
+<br>
+            
+
+
 
              <!-- Tabs starts here -->
             <div class="row">
@@ -504,12 +495,6 @@
             <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
         </div>
 
-
-                        <!--  <input type="text" name="first_name" placeholder="first name" /> 
-                           <input type="text" name="last_name" placeholder="last name" /> 
-
-
- -->
            
              <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6">

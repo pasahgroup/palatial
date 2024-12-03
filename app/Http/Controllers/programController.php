@@ -55,7 +55,7 @@ class programController extends Controller
           
 
             //  'drop_location' => 'required|integer|in:'.join(',', Location::active()->orderBy('name')->pluck('id')->toArray()),
-     'tour_name' => 'required|string',
+          'tour_name' => 'required|string',
              'cost' => 'required|integer',
              'price' => 'required|integer',           
              // 'pick_time' => 'required|date_format:m/d/Y h:i a|after_or_equal:today',
