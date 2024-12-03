@@ -145,7 +145,7 @@
                     </div>
                     <?php endif; ?>
                 </div>
-  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right"><i class="fa fa-search margin-right-10"></i>Explore More Experiences
+  <a class="btn-transparent" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float: right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </a>
             </div>
         </div>
