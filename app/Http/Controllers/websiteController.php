@@ -45,7 +45,7 @@ class websiteController extends Controller
         ]);
        //End of Code to check Status
 
-        $offers='offers';
+        $offers='Offers';
         $offers_private = specialOffer::join('programs','programs.id','special_offers.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
         ->select('special_offers.id','special_offers.*','programs.tour_name','programs.days','programs.category','programs.type','programs.tour_code',

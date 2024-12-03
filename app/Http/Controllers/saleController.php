@@ -97,8 +97,8 @@ class saleController extends Controller
         $PostcategoryImage = title::where('title','Special Offers')
           ->first();
 
-
-        return view('website.offers.offers',compact('offers_group','offers_private','PostcategoryImage'));
+  $offers='Offers';
+        return view('website.offers.offers',compact('offers_group','offers_private','PostcategoryImage','offers'));
     }
 
     /**

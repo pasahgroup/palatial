@@ -155,7 +155,6 @@
 
 
 
-
   <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
 
     <div class="container-fluid" style="padding-bottom:0px;">
@@ -421,9 +420,9 @@
 
                                 <?php $__currentLoopData = $offers_private; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_private): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
- <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
+ <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9);background-color:#4c7149;">
 
-       <h5 class="text-center"><b style="color:#b76b0b;"><?php echo e($special_private->sales_header); ?></b></h5>
+       <h5 class="text-center"><b style="color:#fff;"><?php echo e($special_private->sales_header); ?></b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#fff">
 
 <div class="single_blog listing-shot">
@@ -485,9 +484,9 @@
 
 
                                 <?php $__currentLoopData = $offers_group; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $special_group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9)">
+                                <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9);background-color:#4c7149">
 
-                                      <h5 class="text-center"><b style="color:#b76b0b;"><?php echo e($special_group->sales_header); ?></b></h5>
+                                      <h5 class="text-center"><b style="color:#fff;"><?php echo e($special_group->sales_header); ?></b></h5>
                                            <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#fff">
 
                                <div class="single_blog listing-shot">
