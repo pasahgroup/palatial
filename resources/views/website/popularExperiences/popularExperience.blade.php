@@ -127,6 +127,10 @@
 
   </div>
 </div>
-</section>
+
+</div>
+  <div class="container">
   {!! $popularExperiences->links() !!}
+</div>
+</section>
 @endsection
