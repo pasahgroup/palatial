@@ -106,7 +106,7 @@
  <?php endif; ?>
 </hr>
 
-<section id="blog_group" class="blog_section" style="padding-left:2.4%;padding-right:2.4%">
+<section id="blog_group" class="blog_section" style="padding-left:2.4%;padding-right:2.4%;margin-top:2%">
 <div class="container-fluid">
  <div class="row">
                 
