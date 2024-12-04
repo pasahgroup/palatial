@@ -99,11 +99,7 @@
                                                                               <span class="text-danger" style="font-size:15px"><strong style="color:#fde205">{{ $safaris->days }} Days, {{ $safaris->days -1 }} Nights </strong>
                                                                                </div>
 
-
-
-
-
-             </div>
+         </div>
 
 <div>Physical Rating:          <strong class="float-right">{{$safaris->physical_rating }}</strong></div>
 <div>Tour Category:          <strong class="float-right">{{$safaris->category }}</strong></div>
