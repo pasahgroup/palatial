@@ -740,7 +740,7 @@ select.form-control:focus {
 
 input.form-control,
 textarea.form-control {
-	border-color: #dbdbdb;
+	border-color: #2b840b;
 	color: #777;
 	font: 14px Arial, sans-serif;
 	border-radius: 0;

@@ -16,10 +16,10 @@
               <div class="col-lg-4 col-md-7">
                  <div class="email-address_no">
                     <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><b style="color:#FDD43D;">  info@palatialtours.com</b></a>
+                      <i class="fa fa-envelope" style="color:pink;"></i><b style="color:#6C5603;">  info@palatialtours.com</b></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
-                               <b style="color:#FDD43D;">(+255)753 216 263</b>
+                               <b style="color:#6C5603;">(+255)753 216 263</b>
                             </a>
                 </div>
             </div>
@@ -40,7 +40,6 @@
 
 
             <div class="col-lg-2 col-md-4 text-right">
-<!-- btn btn-primary btn-square mr-2 -->
                       <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-twitter"></i></a>
       <a href="#"  class="btn btn-outline btn-primary" href=""><i class="fab fa-facebook-f"></i></a>
           <a href="#"  class="btn btn-outline btn-primary"><i class="fab fa-linkedin-in"></i></a>
