@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-
+     Paginator::useBootstrap();
              // Using view composer to set following variables globally
            view()->composer('*',function($view) {
   $view->with('percent_downpayment',0.3);
@@ -48,6 +48,6 @@ class AppServiceProvider extends ServiceProvider
         //Schema::defaultStringLength(191);
 
             //Paginator::useBootstrap();
-             Paginator::useBootstrap();
+
     }
 }
