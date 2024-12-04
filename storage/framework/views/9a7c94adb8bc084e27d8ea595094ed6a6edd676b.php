@@ -86,7 +86,7 @@
                       </div>
                   </div>
 
-                      <h5 class="text-center" style="font-size:20px;"><strong><?php echo e($safaris->tour_name); ?></strong></h5>
+                      <h5 class="text-center" style="font-size:20px;"><strong class="demo-3"><?php echo e($safaris->tour_name); ?></strong></h5>
 
               </div>
                </div>
@@ -98,11 +98,7 @@
                                                                               <span class="text-danger" style="font-size:15px"><strong style="color:#fde205"><?php echo e($safaris->days); ?> Days, <?php echo e($safaris->days -1); ?> Nights </strong>
                                                                                </div>
 
-
-
-
-
-             </div>
+         </div>
 
 <div>Physical Rating:          <strong class="float-right"><?php echo e($safaris->physical_rating); ?></strong></div>
 <div>Tour Category:          <strong class="float-right"><?php echo e($safaris->category); ?></strong></div>

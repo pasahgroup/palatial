@@ -87,7 +87,7 @@
                       </div>
                   </div>
 
-                      <h5 class="text-center" style="font-size:20px;"><strong>{{ $safaris->tour_name }}</strong></h5>
+                      <h5 class="text-center" style="font-size:20px;"><strong class="demo-3">{{ $safaris->tour_name }}</strong></h5>
 
               </div>
                </div>
