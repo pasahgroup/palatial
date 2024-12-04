@@ -408,7 +408,7 @@ $title=$safarisCount." Result(s) from search";
   ->select('programs.*','attachments.attachment')
    ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-  ->paginate(8);
+  ->paginate(4);
   // ->get();
 
    $PostcategoryImage = title::where('title','Popular Experience')
