@@ -408,10 +408,13 @@ $title=$safarisCount." Result(s) from search";
   ->select('programs.*','attachments.attachment')
    ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
-  ->get();
+  ->paginate(8);
+  // ->get();
 
    $PostcategoryImage = title::where('title','Popular Experience')
           ->first();
+
+          //dd($popularExperiences);
 
     return view('website.popularExperiences.popularExperience',compact('popularExperiences','PostcategoryImage'));
     }

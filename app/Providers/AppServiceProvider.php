@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 // use App\Models\User;
 // use App\Models\answer;
 // use App\Models\myCompany;
@@ -29,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
 
              // Using view composer to set following variables globally
            view()->composer('*',function($view) {
@@ -45,5 +46,7 @@ class AppServiceProvider extends ServiceProvider
             // $view->with('company', myCompany::where('status','Active')->first());
         });
         //Schema::defaultStringLength(191);
+
+            //Paginator::useBootstrap();
     }
 }
