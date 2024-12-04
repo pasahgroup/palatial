@@ -124,10 +124,10 @@
                               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-  </div>
-    <?php echo $popularExperiences->links(); ?>
-
+  </div>  
 </div>
+  <?php echo $popularExperiences->links(); ?>
+
 </section>
 <?php $__env->stopSection(); ?>
 

@@ -125,8 +125,8 @@
                               @endforeach
 
 
-  </div>
-    {!! $popularExperiences->links() !!}
+  </div>  
 </div>
+  {!! $popularExperiences->links() !!}
 </section>
 @endsection
