@@ -87,7 +87,7 @@
 <div class="single_blog listing-shot">
               <div class="product-item bg-light mb-4">
                  <div class="listing-shot-img">
-              <div class="listing-badge now-open" style="transform:rotate(0deg);top:1px;background-color:#486841;color:#fde205"><strong>$<?php echo e(number_format($safaris->price),2); ?></strong></div>
+              <div class="listing-badge now-open" style="transform:rotate(0deg);top:1px;background-color:#486841;color:#fde205"><strong>From: $<?php echo e(number_format($safaris->price),2); ?></strong></div>
 
                   <div class="product-img position-relative overflow-hidden">
                       <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" alt="" style="height:250px;">
@@ -96,7 +96,7 @@
                       </div>
                   </div>
 
-                      <h5 class="text-center" style="font-size:20px;"><strong class="demo-3"><?php echo e($safaris->tour_name); ?></strong></h5>
+                      <h5 class="text-center" style="font-size:18px;"><strong class="demo-3"><?php echo e($safaris->tour_name); ?></strong></h5>
 
               </div>
                </div>
