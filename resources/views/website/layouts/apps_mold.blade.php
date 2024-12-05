@@ -17,21 +17,21 @@
   <link rel="stylesheet" href="../mold/assets/font/font-awesome/css/font-awesome.css" media="all">
   <link rel="stylesheet" href="../mold/assets/css/main.css" media="all" id="maincss">
 
-
 <link rel="stylesheet" href="../assetf/style.css">
- <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+ <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../assets/corporate/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/shortline.css">
 
   <!-- Custom -->
   <link href="../../img_library/main.css" rel="stylesheet">
     <link href="../../img_library/mform.css" rel="stylesheet">
     <link href="../../css/mform.css" rel="stylesheet">
-    
+
     <!--   <link href="../custom/css/style.css" rel="stylesheet">
 
         <link href="../../assets/pages/css/components.css" rel="stylesheet">
 <link href="../../assets/pages/css/slider.css" rel="stylesheet">
-  
+
   <link href="../../assets/corporate/css/style-responsive.css" rel="stylesheet">
   <link href="../../assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
   <link href="../../assets/corporate/css/custom.css" rel="stylesheet">
@@ -47,9 +47,9 @@
    <!-- <link rel="stylesheet" href="../../css/css/font-mytravel.css">
   <link rel="stylesheet" href="../../css/style-shortline.css">
    -->
-  
 
-  
+
+
 <!-- Custom css -->
  <link rel="stylesheet" href="../css/font621.min.css">
 
@@ -64,25 +64,25 @@
 
 
   <!-- <link href="../../assets/pages/css/animate.css" rel="stylesheet">
-  <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet"> 
+  <link href="../../assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
 -->
 </head>
 
 <body>
-<!-- 
+<!--
   <div class="pre-loader">
     <div class="loading-img"></div>
   </div>
  -->
 
-    <header class="header-area">    
+    <header class="header-area">
    <div class="container-fluid top-header-area">
          <div class="row align-items-center py-3 px-xl-5 d-lg-flex" style="background-color:#fafbfb;margin-top:0px;margin-bottom:0px;">
             <div class="col-lg-2">
                 <a href="" class="text-decoration-none">
                     <span class="h3 text-uppercase text-primary bg-dark px-2">ISOL</span>
                     <span class="h3 text-uppercase text-dark bg-primary px-2 ml-n1">Tour</span>
-                </a>            
+                </a>
 
             </div>
 
@@ -167,9 +167,9 @@
                                             <li><a href="/trekking">Hiking & Trekking</a></li>
                                             <li><a href="/holiday">Beach Holidays</a></li>
                                             <li><a href="/dayTours">Day Tours</a></li>
-                                            <li><a href="/historical-sites">Historical Sites</a></li>                                 
+                                            <li><a href="/historical-sites">Historical Sites</a></li>
                                         </ul>
-                                        
+
                                         <ul class="single-mega cn-col-4">
                                             <li class="title">Special Packages</li>
                                              <li><a href="/group">All Group Tours</a></li>
@@ -178,10 +178,10 @@
                 <li><a href="/special-occasions">Special Occasions</a></li>
                    <li><a href="/cultural">Cultural Tours</a></li>
                     <li><a href="/addons">Addons</a></li>
-                                        </ul>                                 
+                                        </ul>
                                     </div>
                                 </li>
-                               
+
 
 
 
@@ -191,10 +191,10 @@
                                          <li><a href="/whatWeOfferClient">ISOL Tour Services</a></li>
                 <li><a href="/drongo-attractions">Palatial Tour Attractios</a></li>
                 <li><a href="#">Palatial Crafts and Designing</a></li>
-                                       
+
                                     </ul>
                                 </li>
-    
+
 
 
                                  <li><a href="/safaris-gallery">Galleries</a>
@@ -210,7 +210,7 @@
                                         <li><a href="/New-Agent">Agent-Register</a></li>
                         <li><a href="/New-tourGuide">Tour Guide -Register</a></li>
                         <li><a href="/New-Partner">Partner-Register</a></li>
-                                       
+
                                     </ul>
                                 </li>
 
@@ -236,13 +236,13 @@
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-12">
                                             <li class="title">Search by selecting program</li>
-                                           
-                                       
+
+
   <div class="south-search-area">
             <div class="row wppadding">
                 <div class="col-12">
                     <div class="advanced-search-form">
-                      
+
                         <!-- Search Form -->
                         <!-- <form action="#" method="post" id="advanceSearch"> -->
                              <form  method="post"  action="{{ route('search-tour') }}" enctype="multipart/form-data">
@@ -254,14 +254,14 @@
                                         <input type="text" class="form-control" name="search" placeholder="any keyword">
                                     </div>
                                 </div>
-                              
+
                                 <div class="col-12 search-form-second-steps">
                                        <div class="row">                                          <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <input type="number" class="form-control" name="price" placeholder="maximum price">
                                     </div>
                                 </div>
-                                     
+
                                     </div>
                                 </div>
 
@@ -270,7 +270,7 @@
                                     <div class="more-filter">
                                         <a href="#" id="moreFilter">+ More filters</a>
                                     </div>
-                                 
+
                                     <div class="form-group mb-0" target="_blank">
                                         <button type="submit" class="btn btn-success" target="_blank" name="search2" value="search2">Search</button>
                                     </div>
@@ -282,7 +282,7 @@
         </div>
     </div>
      </div>
-                                
+
 
 </li>
 <li>||</li>
@@ -290,14 +290,14 @@
                                     <ul class="dropdown">
                                          <li><a href="/tailorForm" class="btn-outline btn-success">Create New Safari(Tailor Maide)</a></li>
                 <li><a href="/tailorClientForm" class="btn-outline btn-success">My Existing Safari-Tailor Made</a></li>
-                                                      
+
                                     </ul>
                                 </li>
 
                                  <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">My Last Booking</a>
                                     <ul class="dropdown">
                 <li><a href="/bookingTrip" class="btn-outline btn-primary">My Existing Safari</a></li>
-                                                      
+
                                     </ul>
                                 </li>
     </ul>
@@ -316,7 +316,7 @@
         <div class="row px-xl-5 pt-5">
               <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Destinations</h5>
-                           
+
                               <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="/circuitTour/Northern Circuit"><i class="fa fa-angle-right mr-2"></i>Northern Circuit</a>
                             <a class="text-secondary mb-2" href="/circuitTour/Southern Circuit"><i class="fa fa-angle-right mr-2"></i>Southern Circuit</a>
@@ -325,7 +325,7 @@
                      <a class="text-secondary mb-2" href="/circuitTour/Central Circuit"><i class="fa fa-angle-right mr-2"></i>Central Circuit</a>
                         </div>
                         <br>
- 
+
                     </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
@@ -336,7 +336,7 @@
                             <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>What We offer</a>
                             <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Accommodation-Hotels</a>
                             <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>Accommodation-Camps</a>
-                  
+
                         </div>
                     </div>
                        <div class="col-md-4 mb-5">
@@ -346,14 +346,14 @@
                             <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>Health & Vaccination</a>
                             <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Payment Methods</a>
                             <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>About Tanzania</a>
-                  
+
                         </div>
                     </div>
-                   
-                   
+
+
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Contacts</h5>
-                           
+
                            <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:{{$contacts->address??'Arusha'}}</a>
                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: (+255)753 216 263</a>
@@ -367,7 +367,7 @@
 
           <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
-              
+
 <div class="col-md-8">
          <div class="footer-widget-area mb-100">
                 <h3 class="" style="color:yellow;">Working Hours</h3>
@@ -464,13 +464,13 @@
 <!--     <script src="../assetf/js/popper.min.js"></script>
 
     <script src="../assetf/js/bootstrap.min.js"></script>
-              -->        
+              -->
     <script src="../assetf/js/plugins.js"></script>
     <script src="../assetf/js/classy-nav.min.js"></script>
     <script src="../assetf/js/jquery-ui.min.js"></script>
-      
+
     <script src="../assetf/js/active.js"></script>
-     <script src="../assets/js/main.js"></script> 
+     <script src="../assets/js/main.js"></script>
 
 <!-- Custom Javascript -->
 
@@ -505,6 +505,6 @@
  <script src="../../img_library/scripts.js" type="text/javascript"></script>
 
 
-  
+
 </body>
 </html>

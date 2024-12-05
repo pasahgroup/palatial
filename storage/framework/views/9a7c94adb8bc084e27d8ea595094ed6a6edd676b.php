@@ -16,19 +16,6 @@
 </style>
 
 <style>
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    min-height: 100vh;
-}
-
 .Main-Text:hover + .Extra-Text {
     display: block;
 }
@@ -82,9 +69,6 @@ body {
 
 
 
-
-
-
 <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
   <div class="container-fluid" style="padding-bottom:0px;">
 
@@ -121,19 +105,10 @@ body {
                       </strong>
                     </h3>
                         <div class="Extra-Text">
-                            <p>
                               <h5 class="text-center" style="font-size:18px;"><strong><?php echo e($safaris->tour_name); ?></strong></h3>
 
-                            </p>
                         </div>
                         </div>
-
-
-
-
-
-
-
               </div>
                </div>
 

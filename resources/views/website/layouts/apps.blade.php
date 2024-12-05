@@ -69,6 +69,7 @@
 
    <link rel="stylesheet" href="../../css/css/font-mytravel.css">
   <link rel="stylesheet" href="../../css/style-shortline.css">
+    <link rel="stylesheet" href="../../css/shortline.css">
 
    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
