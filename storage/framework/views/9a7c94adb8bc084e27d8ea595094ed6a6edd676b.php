@@ -14,6 +14,17 @@
     background-size:cover;
 }
 </style>
+
+<style>
+.hide {
+  display: none;
+}
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+
       <?php if(isset($PostcategoryImage->attachment)): ?>
    <section class="same-section-spacing bg-bannerw">
         <div class="container-fluid">
@@ -55,8 +66,6 @@
 
 
 
-
-
 <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
   <div class="container-fluid" style="padding-bottom:0px;">
 
@@ -68,6 +77,7 @@
 
 
                               <?php $__currentLoopData = $popularExperiences; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 
 <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9);background-color:#4c7149;">
 

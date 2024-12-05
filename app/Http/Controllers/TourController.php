@@ -38,11 +38,12 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Wildlife Safaris')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
+          ->paginate(4);
+
           $PostcategoryImage = title::where('title', $title)
           ->first();
-         
-         //dd('print');
+
+         //dd($safaris);
         return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
      }
 
@@ -69,15 +70,15 @@ class TourController extends Controller
           }
             else if($sliders->type==' Combined Tours'){
              $title=' Combined Tours';
-             
+
           }
             else if($sliders->type==' Historical Site'){
              $title=' Historical Sites';
-             
+
           }
             else if($sliders->type==' Day Tours'){
              $title=' Day Tours';
-             
+
           }
           else
           {
@@ -96,7 +97,7 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type',$sliders->type)
           ->where('itineraries.tour_addon','Programs')
-         ->get();
+          ->paginate(4);
 
       $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -105,7 +106,7 @@ class TourController extends Controller
 
   public function safarisSliderTourPackages($x)
     {
-      
+
           //$sliders=slider::limit(1)->first();
             $programs=program::join('attachments','programs.id','attachments.destination_id')
              ->select('programs.*','attachments.attachment')
@@ -113,7 +114,7 @@ class TourController extends Controller
              ->where('attachments.type','programs')
             //->where('programs.id',$x)
             ->first();
-              
+
            // dd($programs->type);
           if($programs->type=='Wildlife Safaris')
           {
@@ -128,15 +129,15 @@ class TourController extends Controller
           }
             else if($programs->type==' Combined Tours'){
              $title='Combined Tours';
-             
+
           }
             else if($programs->type==' Historical Site'){
              $title='Historical Sites';
-             
+
           }
             else if($programs->type==' Day Tours'){
              $title='Day Tours';
-             
+
           }
           else
           {
@@ -150,7 +151,7 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type',$programs->type)
           ->where('itineraries.tour_addon','Programs')
-         ->get();
+           ->paginate(4);
       $PostcategoryImage = title::where('title', $title)
           ->first();
            return view('website.programs.safaris-slider-packages',compact('safaris','programs','title','PostcategoryImage'));
@@ -177,8 +178,8 @@ class TourController extends Controller
            ->where('programs.type',request('tours'))
             // ->where('programs.price','=<',$price)
           ->where('itineraries.tour_addon','Programs')
-         ->get();
-       
+           ->paginate(4);
+
 //dd($price);
 
 
@@ -198,8 +199,8 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Hiking & Trekking')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
-       
+          ->paginate(4);
+
       // dd($safaris);
 
   $PostcategoryImage = title::where('title', $title)
@@ -220,10 +221,10 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Beach Holidays')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
+          ->paginate(4);
           $PostcategoryImage = title::where('title', $title)
           ->first();
-           
+
     return view('website.programs.safaris',compact('safaris','title','PostcategoryImage'));
     }
 
@@ -237,7 +238,7 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Day Tours')
           ->where('itineraries.tour_addon','Programs')
-         ->get();       
+          ->paginate(4);
 
          $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -253,8 +254,8 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Combined Tours')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
-       
+          ->paginate(4);
+
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -272,8 +273,8 @@ class TourController extends Controller
           ->where('programs.main','Program')
           ->where('programs.type','Historical Site')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
-       
+          ->paginate(4);
+
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -288,10 +289,10 @@ class TourController extends Controller
          ->select('programs.*','attachments.attachment')
           ->where('attachments.type','Programs')
           ->where('programs.main','Program')
-          ->where('programs.type','Cultural Tour')
+         ->where('programs.type','Cultural Tour')
           ->where('itineraries.tour_addon','Programs')
-         ->get();
-       
+           ->paginate(4);
+// dd($safaris);
 
   $PostcategoryImage = title::where('title', $title)
           ->first();
@@ -326,10 +327,10 @@ class TourController extends Controller
      */
     public function show($id)
     {
- //dd($id);
-       
+ // dd($id);
+
     $tour_addons = program::where('id',$id)->first();
-        $type=$tour_addons->main; 
+        $type=$tour_addons->main;
 
         if($type=='Program')
         {
@@ -340,7 +341,9 @@ class TourController extends Controller
         $tour_addon='Addon';
         }
 
-$discounts=specialOffer::where('tour_id',$id)->first(); 
+$discounts=specialOffer::where('tour_id',$id)->first();
+// dd($discounts);
+
 
         $programs = program::
            join('itineraries','itineraries.program_id','programs.id')
@@ -350,7 +353,7 @@ $discounts=specialOffer::where('tour_id',$id)->first();
          ->where('programs.id',$id)
             ->select('programs.*','attachments.attachment','itineraries.*')
           ->get()->first();
-      
+
        $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
         ->join('destinations','destinations.id','itinerary_days.destination_id')
@@ -370,10 +373,10 @@ $discounts=specialOffer::where('tour_id',$id)->first();
          if($datas == "[]"){
       return redirect()->back()->with('info','The Program has no Itinery Data');
            };
-        
+
         $get_type = program::whereid($id)->first();
         $type = $get_type->type;
-       
+
         $addons = program::join('attachments','programs.id','attachments.destination_id')
         ->select('programs.*','attachments.attachment')
         ->where('programs.main','Addon')
@@ -410,14 +413,11 @@ $discounts=specialOffer::where('tour_id',$id)->first();
 
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
- //End of accommodation Inclusive  
-    
+ //End of accommodation Inclusive
+
          $buyaddons= buyaddons::join('programs','programs.id','buyaddons.program_id')
           ->where('buyaddons.program_id',$id)
          ->get();
-
-
-// Send Email to clint
 
         return view('website.tour.tourSummary',compact('datas','id','programs','basic','comfort','luxury','buyaddons','addons','addondatas','discounts','inclusives','assignLists'));
     }

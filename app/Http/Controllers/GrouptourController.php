@@ -36,7 +36,7 @@ class GrouptourController extends Controller
         ->select('departures.*','programs.*','attachments.attachment')
         ->where('departures.status','Active')
         ->where('attachments.type','Programs')
-        ->get();
+        ->paginate(4);
 
 //dd($safaris);
    $PostcategoryImage = title::where('title','Scheduled Group Tours')
@@ -46,19 +46,19 @@ class GrouptourController extends Controller
 
  public function group()
     {
-      
+
             $tour_category='Scheduled Group,Special Ocassions & Utalii Nyumbani Tours';
 
          $safaris = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')
-        ->select('departures.*','programs.*','attachments.attachment')
+        ->select('programs.*','departures.group_tour_category','attachments.attachment')
         ->where('departures.status','Active')
         // ->where('departures.group_tour_category','GS')
           ->whereIn('departures.group_tour_category',['GS','UN','SO'])
         ->where('attachments.type','Programs')
         ->groupby('departures.group_tour_category')
          ->groupby('departures.tour_id')
-        ->get();
+        ->paginate(4);
 
 
 //dd($safaris);
@@ -75,13 +75,14 @@ class GrouptourController extends Controller
 
          $safaris = departures::join('programs','departures.tour_id','programs.id')
        ->join('attachments','attachments.destination_id','programs.id')
-        ->select('departures.*','programs.*','attachments.attachment')
+        // ->select('departures.*','programs.*','attachments.attachment')
+          ->select('programs.*','departures.group_tour_category','attachments.attachment')
         ->where('departures.status','Active')
         ->where('departures.group_tour_category','GS')
         ->where('attachments.type','Programs')
         ->groupby('departures.group_tour_category')
          ->groupby('departures.tour_id')
-        ->get();
+          ->paginate(4);
 
     $PostcategoryImage = title::where('title',' Scheduled Group Tours')
           ->first();
@@ -97,13 +98,14 @@ class GrouptourController extends Controller
 
          $safaris = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
-        ->select('departures.*','programs.*','attachments.attachment')
+        // ->select('departures.*','programs.*','attachments.attachment')
+          ->select('programs.*','departures.group_tour_category','attachments.attachment')
         ->where('departures.status','Active')
         ->where('departures.group_tour_category','SO')
         ->where('attachments.type','Programs')
          ->groupby('departures.group_tour_category')
          ->groupby('departures.tour_id')
-        ->get();
+          ->paginate(4);
 
       $PostcategoryImage = title::where('title','Special Occasions')
           ->first();
@@ -118,13 +120,14 @@ class GrouptourController extends Controller
 
          $safaris = departures::join('programs','programs.id','departures.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
-        ->select('departures.*','programs.*','attachments.attachment')
+        // ->select('departures.*','programs.*','attachments.attachment')
+          ->select('programs.*','departures.group_tour_category','attachments.attachment')
         ->where('departures.status','Active')
         ->where('departures.group_tour_category','UN')
         ->where('attachments.type','Programs')
          ->groupby('departures.group_tour_category')
          ->groupby('departures.tour_id')
-        ->get();
+          ->paginate(4);
 
           $PostcategoryImage = title::where('title','Utalii Nyumbani')
           ->first();
@@ -173,16 +176,16 @@ class GrouptourController extends Controller
 
            ->select('programs.*','attachments.attachment','itineraries.*')
           ->get()->first();
-     
+
            if($programs ==null){
               $programs = program::
-              where('programs.id',$id)->first();                        
+              where('programs.id',$id)->first();
                }
 
           $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
-            
+
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
- 
+
          ->join('destinations','destinations.id','itinerary_days.destination_id')
          ->join('programs','programs.id','itineraries.program_id')
 
@@ -193,14 +196,13 @@ class GrouptourController extends Controller
          ->where('itineraries.tour_addon','programs')
           ->where('attachments.type','Accommodation')
          //->get();
-         
          ->where('itineraries.program_id',$id)
-         
-        
+
+
          ->select('accommodations.*','accommodations.type',
          'itineraries.*','destinations.*','locations.*','programs.tour_name','itinerary_days.*','attachments.attachment')
          ->get();
-    
+
          if($datas == "[]"){
             $programs = program::
             join('attachments','attachments.destination_id','programs.id')
@@ -215,7 +217,7 @@ class GrouptourController extends Controller
 
       $get_type = program::whereid($id)->first();
         $type = $get_type->type;
-      
+
        // $addons = addons::join('attachments','addons.id','attachments.destination_id')
        //  ->select('addons.*','attachments.attachment')
        //  ->where('addons.type','!=',$type)
@@ -227,7 +229,7 @@ class GrouptourController extends Controller
            ->where('programs.main','addon')
          ->where('attachments.type','addon')
         ->select('programs.*','attachments.attachment','attachments.type')
-        ->groupby('programs.id')  
+        ->groupby('programs.id')
         ->latest()->limit(3)->get();
           // ->get();
 //dd($addons);
@@ -236,15 +238,13 @@ class GrouptourController extends Controller
 
     $basic=DB::select("select d.tour_id,d.group_tour_category,d.price,d.srs,(d.seats-d.booked)seats,p.currency,d.start_date,d.end_date  from departures d,programs p,attachments a where p.id=d.tour_id and a.destination_id=p.id and d.status='Active' and a.type='Programs' and d.tour_id=$id group by d.start_date");
   //  dd($basic);
-         $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_FORMAT(d.start_date,'%m-%Y')datef from departures d,programs p,attachments a where d.tour_id=p.id and a.destination_id=p.id and d.status='Active' and a.type='Programs' and d.tour_id=$id group by datef)as tmp_table order by DATE_FORMAT(datef,'%m-%Y')");
+  $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_FORMAT(d.start_date,'%m-%Y')datef from departures d,programs p,attachments a where d.tour_id=p.id and a.destination_id=p.id and d.status='Active' and a.type='Programs' and d.tour_id=$id group by datef)as tmp_table order by DATE_FORMAT(datef,'%m-%Y')");
 
   //Tour Departure date
   // $departureDate=departures::where('tour_id',$id)
   //   ->where('seats','>','booked')
   //  ->orderBy('start_date')
   // ->get();
-
-
 
    $departureDate=DB::select("select * from departures where tour_id=$id and seats>booked order by start_date");
   //dd($departureDate);
@@ -254,8 +254,8 @@ class GrouptourController extends Controller
 
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
- //End of accommodation Inclusive  
-    
+ //End of accommodation Inclusive
+
       $buyaddons= buyaddons::join('programs','programs.id','buyaddons.program_id')
           ->where('buyaddons.program_id',$id)
          ->get();

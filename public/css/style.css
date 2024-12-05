@@ -43,9 +43,9 @@
 		- Booking-tour
         - Accordian
         - Comment-form
-        - Blockqouts      
+        - Blockqouts
         - Pagination
-	
+
 
 ---------------------------------------------------------------- */
 
@@ -2577,7 +2577,7 @@ ul.share-icon {
 	animation: scale 40s linear infinite !important;
 	-webkit-animation: scale 40s linear infinite !important;
 }
-	
+
   @keyframes scale {
 	50% {
 	  -webkit-transform:scale(1.2);
@@ -2956,17 +2956,17 @@ color: #fff;
 }
 .off-box{
 	position: absolute;
-    top: 1px;
+    margin-top:1px;
     right: 1px;
     color: #fff;
     font-size: 18px;
     font-weight: 400;
-    background-color: #947054;
+    background-color: #bdab63;
       /*background-color: #496f50;*/
     padding: 2px 10px;
     border-radius: 8px;
     z-index: 9;
-    
+
    }
 .other-packages{
 	display: block;
@@ -3041,7 +3041,7 @@ main.hero-slide.slide-type-four .slick-next:before {
 	max-width: 250px;
     width: 100%;
     min-height: 250px;
-   
+
 }
 .hotel-service-area .single_package .media{
 	align-items: stretch;
@@ -3095,5 +3095,5 @@ main.hero-slide.slide-type-four .slick-next:before {
 		background: transparent;
 		padding: 30px 20px;
 	}
-	
+
 }
