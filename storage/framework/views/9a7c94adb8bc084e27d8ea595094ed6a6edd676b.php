@@ -16,12 +16,31 @@
 </style>
 
 <style>
-.hide {
-  display: none;
+* {
+    margin: 0px;
+    padding: 0px;
 }
-.myDIV:hover + .hide {
-  display: block;
-  color: red;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    min-height: 100vh;
+}
+
+.Main-Text:hover + .Extra-Text {
+    display: block;
+}
+
+.Extra-Text {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    width:100%;
+    border: 2px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    display: none;
 }
 </style>
 
@@ -77,8 +96,6 @@
 
 
                               <?php $__currentLoopData = $popularExperiences; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $safaris): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-
 <div class="col-lg-3 col-md-3"  style="border:1px solid rgba(0,0,0,.9);background-color:#4c7149;">
 
      <h5 class="text-center"><b style="color:#fff;"><?php echo e($safaris->type); ?></b></h5>
@@ -96,7 +113,26 @@
                       </div>
                   </div>
 
-                      <h5 class="text-center" style="font-size:18px;"><strong class="demo-3"><?php echo e($safaris->tour_name); ?></strong></h5>
+                      <div class="text-center" style="font-size:18px;">
+                        <h5 class="Main-Text">
+                          <strong class="demo-3">
+                        <?php echo e($safaris->tour_name); ?>
+
+                      </strong>
+                    </h3>
+                        <div class="Extra-Text">
+                            <p>
+                              <h5 class="text-center" style="font-size:18px;"><strong><?php echo e($safaris->tour_name); ?></strong></h3>
+
+                            </p>
+                        </div>
+                        </div>
+
+
+
+
+
+
 
               </div>
                </div>
