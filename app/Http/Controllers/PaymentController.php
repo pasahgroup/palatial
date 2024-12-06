@@ -269,8 +269,11 @@ $base_price=($response_object->rates->TZS/$response_object->rates->$currency);
 
  // $defaultCurrency2=($response_object->rates->$currency);
     $to_bepaid = round(($amount * $base_price), 2);
-     //dd($id);
+    // dd($current_date);
     // $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount.'" and amount_remain=total_cost-total_amount_paid where id="'.$id.'"');
+
+  //$timestamp = strtotime( "February 26, 2007" );
+
 
      $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount.'" where id="'.$id.'"');
    $invoice_update2=DB::statement('update invoices set amount_remain="'.$amount.'" where id="'.$id.'"');

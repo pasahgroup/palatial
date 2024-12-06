@@ -17,7 +17,7 @@
   <meta property="og:title" content="Palatial tours">
   <meta property="og:description" content="Palatial tour">
   <meta property="og:type" content="https://Palatialtours.com/">
-  <meta property="og:image" content="../../assets/corporate/img/logos/logo.png" style="height:6vh;" alt="Palatial Tours"><!-- link to image for socio -->
+  <meta property="og:image" content="../../assets/corporate/img/logos/logoe.png" style="height:6vh;" alt="Palatial Tours"><!-- link to image for socio -->
   <meta property="og:url" content="https://palatialtours.com/">
 
 <style type="text/css">
@@ -26,7 +26,7 @@
     }
 </style>
   <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-   <link rel="icon" href="../assetf/img/core-img/favicon.ico">
+   <link rel="icon" href="../assetf/img/core-img/g.ico">
    <link rel="stylesheet" href="../assetf/style.css">
    <!-- <link rel="stylesheet" href="../assets/css/button.css"> -->
 
@@ -150,8 +150,7 @@
 
 
                     <!-- Menu -->
-                    <div class="classy-menu">
-                        <!-- close btn -->
+                    <div class="classy-menu">                        <!-- close btn -->
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
