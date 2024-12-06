@@ -268,15 +268,17 @@ $base_price=($response_object->rates->TZS/$response_object->rates->$currency);
  // $defaultCurrency2=($response_object->rates->$currency);
     $to_bepaid = round(($amount * $base_price), 2);
      //dd($to_bepaid);
-//Amount paid backup data
-// $special_date = invoice::where('id',$id)
-//         ->update([
-//          'total_amount_paid'=>$amount,
-//          'total_cost'=>$amount,
-//          'total_amount_paid'=>$amount,
-//          'total_amount_paid'=>$amount,
-//      ]);
+
      $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount .'" and amount_remain=amount_remain-"'.$amount.'" where id="'.$id.'"');
+
+//Amount paid backup data
+$special_date =payment::where('id',$id)
+        ->update([
+         'total_amount_paid'=>$amount,
+         'total_cost'=>$amount,
+         'total_amount_paid'=>$amount,
+         'total_amount_paid'=>$amount,
+     ]);
 
     }
     catch(Exception $e) {
