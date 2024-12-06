@@ -1,8 +1,3 @@
-
-
-
-
-
   <div class="container top-header-area" style="background:#;padding:2px;">
          <div class="align-items-center py-1 px-xl-5 d-lg-flex" style="border:1px solid rgba(0,0,0,.9);background:#dfd78e;">
               <div class="col-lg-3 col-md-4">

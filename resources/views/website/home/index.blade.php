@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="product-offer mb-30" style="height: 195px;">
+                <div class="product-offer mb-30" style="height: 180px;">
                      @if ($popular_safari)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" alt="">
                     <div class="offer-text">
@@ -144,13 +144,9 @@
                     </div>
                     @endif
                 </div>
-            </div>
-                <div class="col-lg-10">
-                </div>
-                    <div class="col-lg-2">
-            <a class="btn-transparent float-right" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float-right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                  </a>
-                                </div>
+                <a class="btn-transparent float-right" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float-right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                      </a>
+            </div>            
         </div>
     </div>
     <!-- Carousel End -->
@@ -172,7 +168,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-
 
   <div class="col-12 col-sm-6 col-xl-3" style="padding-left:20px;padding-right:20px;">
                         <div class="footer-widget-area mb-100">
