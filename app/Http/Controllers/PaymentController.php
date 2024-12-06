@@ -15,6 +15,7 @@ use App\Models\specialOffer;
 use App\Models\slider;
 use App\Models\people_percent;
 use App\Models\bank;
+use Carbon\Carbon;
 
 use App\Models\Tourcostsummary;
 use App\Models\buyaddons;
@@ -220,8 +221,9 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
 
     public function payConfirm(Request $request,$id)
     {
-
+ $current_date=Carbon::now();
 //dd($id);
+// $customer_data=
 
 $amount = preg_replace("/[^0-9\.]/", "",request('amount'));
 $amount_percent=request('percent_downpayment')*request('total_cost');
@@ -267,18 +269,34 @@ $base_price=($response_object->rates->TZS/$response_object->rates->$currency);
 
  // $defaultCurrency2=($response_object->rates->$currency);
     $to_bepaid = round(($amount * $base_price), 2);
-     //dd($to_bepaid);
+     //dd($id);
+    // $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount.'" and amount_remain=total_cost-total_amount_paid where id="'.$id.'"');
 
-     $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount .'" and amount_remain=amount_remain-"'.$amount.'" where id="'.$id.'"');
+     $invoice_update=DB::statement('update invoices set total_amount_paid=total_amount_paid+"'.$amount.'" where id="'.$id.'"');
+   $invoice_update2=DB::statement('update invoices set amount_remain="'.$amount.'" where id="'.$id.'"');
 
+     $customer_data = invoice::where('id',$id)->first();//dd($customer_data);
 //Amount paid backup data
-$special_date =payment::where('id',$id)
-        ->update([
-         'total_amount_paid'=>$amount,
-         'total_cost'=>$amount,
-         'total_amount_paid'=>$amount,
-         'total_amount_paid'=>$amount,
-     ]);
+$addon =  payment::updateOrCreate(
+     [
+        'customer_id'=>$customer_data->customer_id,
+      ],[
+        'tour_id'=>$customer_data->tour_id,
+        'amount_paid'=>$amount,
+        'amount_carry_forward'=>$customer_data->amount_remain,
+'currency'=>request('currency'),
+'payee_date'=>$current_date
+]);
+
+//dd('updated');
+
+// $special_date =payment::updateOrCreate('id',$id)
+//         ->update([
+//          'total_amount_paid'=>$amount,
+//          'total_cost'=>$amount,
+//          'total_amount_paid'=>$amount,
+//          'total_amount_paid'=>$amount,
+//      ]);
 
     }
     catch(Exception $e) {

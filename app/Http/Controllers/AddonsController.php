@@ -93,9 +93,10 @@ class AddonsController extends Controller
      */
     public function show($id)
     {
-          $tour_addon='addon';     
+          $tour_addon='addon';
           $programs = addons::join('itineraries','itineraries.program_id','addons.id')
         ->where('addons.id',$id)->first();
+
         $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
         ->join('destinations','destinations.id','itinerary_days.destination_id')

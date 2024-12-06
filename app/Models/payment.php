@@ -13,6 +13,8 @@ class payment extends Model
         'tour_id',
         'amount_paid',
         'amount_carry_forward',
+        'total_amount_paid',
+          'amount_remain',
         'currency',
         'payee_date'
       ];
