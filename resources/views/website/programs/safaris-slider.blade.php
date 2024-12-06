@@ -37,7 +37,7 @@
                                </div>
      </div>
 </section>
-
+--}}
 
 
 
@@ -111,9 +111,7 @@
                                                                       </div>
           </div>
 </div>
-
-
-                              @endforeach
+@endforeach
 
 
   </div>

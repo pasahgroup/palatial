@@ -94,7 +94,18 @@
                   <div class="product-img position-relative overflow-hidden">
                       <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$safaris->attachment) }}" alt="" style="height:250px;">
                       <div class="product-action">
-                          <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  {{ $safaris->tour_name }}</i></a>
+
+                          @if($safaris->category=="Private")
+    <a href="{{ route('safaris.show',$safaris->id) }}" class="btn btn-outline-dark btn-squarex"><i class="fa fa-search">  {{ $safaris->tour_name }}</i></a>
+
+    @endif
+
+    @if($safaris->category=="Group")
+    <a href="/safaris/{{$safaris->id}}" class="btn btn-outline-dark btn-squarex"><i class="fa fa-search">  {{ $safaris->tour_name }}</i></a>
+
+    @endif
+
+
                       </div>
                   </div>
 

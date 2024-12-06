@@ -93,7 +93,18 @@
                   <div class="product-img position-relative overflow-hidden">
                       <img class="img-fluid w-100" src="<?php echo e(URL::asset('/storage/uploads/'.$safaris->attachment)); ?>" alt="" style="height:250px;">
                       <div class="product-action">
-                          <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  <?php echo e($safaris->tour_name); ?></i></a>
+
+                          <?php if($safaris->category=="Private"): ?>
+    <a href="<?php echo e(route('safaris.show',$safaris->id)); ?>" class="btn btn-outline-dark btn-squarex"><i class="fa fa-search">  <?php echo e($safaris->tour_name); ?></i></a>
+
+    <?php endif; ?>
+
+    <?php if($safaris->category=="Group"): ?>
+    <a href="/safaris/<?php echo e($safaris->id); ?>" class="btn btn-outline-dark btn-squarex"><i class="fa fa-search">  <?php echo e($safaris->tour_name); ?></i></a>
+
+    <?php endif; ?>
+
+
                       </div>
                   </div>
 
