@@ -4,11 +4,7 @@
     <div class="container">
       <div class="border-box">
         <div class="box-title">
-           <div class="col-md-12">
-             <p><strong><?php echo e($programs->tour_name); ?></strong></p>
-           </div>
-
-<div class="col-md-12">
+          <div class="col-md-12">
          <?php if($message = Session::get('success')): ?>
   <div class="alert alert-success">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
@@ -38,8 +34,11 @@
 </div>
 </div>
 
-
-
+<div class="masonry">
+    <div class="card">
+    <div class="card-body">
+      <br>
+     <p><strong>Tour name: <?php echo e($programs->tour_name); ?></strong></p>
         <p><?php echo e($cust->first_name); ?> <?php echo e($cust->last_name); ?></p>
         <em>Summary invoice for your favourite tour costs</em>
           <em><b>(Please make Payment to arrange your favourite tour)</b></em>
@@ -152,28 +151,16 @@
         </div>
         <hr>
         <div class="row">
-          <div class="col-sm-6">
-          <!--   <div class="form-group col-md-8 col-sm-10">
-              <label>Have a Promotional Code</label>
-              <div class="input-group">
-                <div class="input-group-addon icon-tag">
-                </div>
-                <input type="text" class="form-control" placeholder="Code">
-                <div class="input-group-btn">
-                  <button class="btn btn-primary">Submit</button>
-                </div>
-              </div>
-              <br>
-              <button class="btn btn-primary hvr-sweep-to-right">Update Cart</button>
-            </div> -->
+          <div class="col-sm-4">
+
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-8">
             <table class="table table-responsive cart-checkout-table">
               <tr>
                 <td>
                   Sub Total
                 </td>
-                <td class="price">
+                <td class="price" style="padding:0px">
                  <?php echo e(number_format($cust->total_price,2)); ?>  <?php echo e($cust->currency); ?>
 
                 </td>
@@ -182,7 +169,7 @@
                 <td>
                   Addon total
                 </td>
-                <td class="price">
+                <td class="price" style="padding:0px">
                  <?php echo e(number_format($cust->total_addon_price,2)); ?>  <?php echo e($cust->currency); ?>
 
                 </td>
@@ -192,15 +179,18 @@
                 <td>
                   Discount
                 </td>
-                <td class="price">
+                <td class="price" style="padding:0px">
                 <?php echo e(number_format($cust->total_discount,2)); ?>  <?php echo e($cust->currency); ?>
 
                 </td>
               </tr>
+
+
               <tr class="total">
-                <td class="price">Grand Total</td>
-                <td class="price"> <?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?></td>
+                <td><strong> Grand Total</strong></td>
+                <td class="price"> <strong><?php echo e(number_format($cust->total_cost,2)); ?>  <?php echo e($cust->currency); ?></strong></td>
               </tr>
+
  <form  method="post"  action="<?php echo e(route('payConfirm',$cust->id)); ?>" enctype="multipart/form-data">
           <?php echo csrf_field(); ?>
 
@@ -266,6 +256,9 @@
 
       </form>
       </div>
+    </div>
+  </div>
+</div>
 
   </section>
   <script src="../../assetff/js/jquery/jquery-2.2.4.min.js"></script>
