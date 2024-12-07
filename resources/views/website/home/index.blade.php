@@ -146,7 +146,7 @@
                 </div>
                 <a class="btn-transparent float-right" href="/popularExperienceClient" target="_blank"  style="color:#b76b0b;float-right">Explore More Experiences <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                       </a>
-            </div>            
+            </div>
         </div>
     </div>
     <!-- Carousel End -->
@@ -428,7 +428,7 @@
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$special_private->attachment) }}" alt="" style="height:250px;">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  {{ $special_private->tour_name }}</i></a>
+                            <a class="btn btn-outline-dark btn-squarex" href="{{route('safaris.show',$special_private->tour_id,$offers) }}"><i class="fa fa-search">  {{ $special_private->tour_name }}</i></a>
                         </div>
                     </div>
 
@@ -492,7 +492,7 @@
                                                    <div class="product-img position-relative overflow-hidden">
                                                        <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$special_group->attachment) }}" alt="" style="height:250px;">
                                                        <div class="product-action">
-                                                           <a class="btn btn-outline-dark btn-squarex" href="/safaris"><i class="fa fa-search">  {{ $special_group->tour_name }}</i></a>
+                                                           <a class="btn btn-outline-dark btn-squarex" href="{{route('grouptour.show',$special_group->tour_id,$offers) }}"><i class="fa fa-search">  {{ $special_group->tour_name }}</i></a>
                                                        </div>
                                                    </div>
 
