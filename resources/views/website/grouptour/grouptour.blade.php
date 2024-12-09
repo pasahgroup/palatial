@@ -68,7 +68,7 @@
 
 <div>Physical Rating:          <strong class="float-right">{{$safari->physical_rating }}</strong></div>
 <div>Tour Category:          <strong class="float-right">{{$safari->category }}</strong></div>
-<div>Physical Rating:          <strong class="float-right">{{$safari->tour_code }}</strong></div>
+<div>Tour Code:          <strong class="float-right">{{$safari->tour_code }}</strong></div>
 
 
 <hr>
@@ -173,7 +173,7 @@
 
 <div>Physical Rating:          <strong class="float-right">{{$program->physical_rating }}</strong></div>
 <div>Tour Category:          <strong class="float-right">{{$program->category }}</strong></div>
-<div>Physical Rating:          <strong class="float-right">{{$program->tour_code }}</strong></div>
+<div>Tour Code:         <strong class="float-right">{{$program->tour_code }}</strong></div>
 
 
 <hr>

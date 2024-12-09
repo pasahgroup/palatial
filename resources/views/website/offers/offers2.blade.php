@@ -11,12 +11,12 @@
 
 
 <style type="text/css">
-    
+
     .booking-btn {
   border: 0px solid #647545;
   padding: 10px 38px;
   color:#fff;
-  display: block;  
+  display: block;
   /*background-color: #3f403d;*/
   /*background-color: #2e4432;*/
   background-color: #2e4432;
@@ -36,7 +36,7 @@
   border: 0px solid #647545;
   padding: 1px 2px;
   color:#fff;
-  display: block;  
+  display: block;
   /*background-color: #3f403d;*/
   /*background-color: #2e4432;*/
   background-color: #2e4432;
@@ -58,7 +58,7 @@
      @isset($PostcategoryImage->attachment)
   background-image:url({{URL::asset('/storage/uploads/'.$PostcategoryImage->attachment)}});
     @endisset
-    
+
    height: 80%;
     position: relative;
     background-repeat: no-repeat;
@@ -75,9 +75,9 @@
                         <h2>Special Offers</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"> 
+                                <li class="breadcrumb-item"><a href="#">
                                     Home
-                                
+
                                 </a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Special Offers</li>
                             </ol>
@@ -89,8 +89,8 @@
     </section>
 
  <section class="ws-section-spacing bg-gray">
-    <div class="container-fluid">   
-    <div class="row"> 
+    <div class="container-fluid">
+    <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <p><b>
           @isset($PostcategoryImage->body)
@@ -98,7 +98,7 @@
           @endisset
         </b>
         </p>
-         
+
     </div>
        </div>
     </div>
@@ -115,29 +115,29 @@
 <div class="tab" id="myTabContent">
     <button class="tablink" onclick="openPage('tabP', this, 'orange')" id="defaultOpen" >Private Tour Offers</button>
     <button class="tablink" onclick="openPage('tabG', this, 'orange')">Group Tour Offers</button>
-                                    
+
                     </div>
                     <div id="tabP" class="tabcontent">
                     <hr>
-                          
+
                            @if($offers_private)
-       
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-    <div class="container-fluid" style="padding-bottom:0px;">  
-            
+
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+    <div class="container-fluid" style="padding-bottom:0px;">
+
         <h3 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> @if($offers_private !='[]')
-                    PRIVATE TOUR OFFERS: 
+                    PRIVATE TOUR OFFERS:
                     @endif Special Offers</span></h3>
 
-      
-      <div class="px-xl-5 pb-3">     
+
+      <div class="px-xl-5 pb-3">
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-  
-   
+
+
                                 @foreach ($offers_private as $special_private)
 
  <div class="col-lg-3 col-md-3">
-    
+
        <h5><b style="background:">{{$special_private->sales_header}}</b></h5>
             <div class="col-lg-12 col-md-12 col-sm-12 pb-1" style="background-color:#f3f4f4">
 
@@ -145,8 +145,8 @@
                 <div class="product-item bg-light mb-4">
                    <div class="listing-shot-img">
                                                                             <div class="listing-badge now-open"><strong>{{ round($special_private->save/$special_private->price * 100),0 }}% Off</strong></div>
-                                                                    
-                                                               
+
+
 
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" src="{{ URL::asset('/storage/uploads/'.$special_private->attachment) }}" alt="" style="height:250px;">
@@ -157,7 +157,7 @@
 
 
  <div class="text-center" style="background-color:#4c7149;">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> {{ $special_private->tour_name }}</strong></a>                      
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;"><strong> {{ $special_private->tour_name }}</strong></a>
                     </div>
                 </div>
                  </div>
@@ -166,7 +166,7 @@
     <strong style="background-color:#2e352b;">Dead Line: <b class="text-danger">{{ $special_private->offer_deadline }}</b></strong>
                                                                                  </div></b>
 
- <b class="float-right">  
+ <b class="float-right">
   <div class="header-btn">
                                                                                 <span class="text-danger" style="font-size:17px"><strong>${{ number_format($special_private->new_price),2 }} </strong> pp
                                                                                      </span><s style=""><sup>$ {{ number_format($special_private->price),2 }} </sup></s><br>
@@ -180,14 +180,14 @@
 
                </div>
 
-<div>Tour Duration:         
+<div>Tour Duration:
                                                                   <strong class="float-right">{{ $special_private->days }} Days, {{ $special_private->days -1 }} Nights</strong>
-                                                                                              
+
                                                                                               </div>
 
 <div>Physical Rating:          <strong class="float-right">{{$special_private->physical_rating }}</strong></div>
 <div>Tour Category:          <strong class="float-right">{{$special_private->category }}</strong></div>
-<div>Physical Rating:          <strong class="float-right">{{$special_private->tour_code }}</strong></div>
+<div>Tour Code:          <strong class="float-right">{{$special_private->tour_code }}</strong></div>
 
 
 <hr>
@@ -201,7 +201,7 @@
 
                                 @endforeach
 
-        </div>  
+        </div>
 
     </div>
 </div>
@@ -209,7 +209,7 @@
 
             <div class="row">
             <div class="col-md-12" data-aos="fade-up">
-                <div class="section-title text-center" style="background-color:#ec8224">                  
+                <div class="section-title text-center" style="background-color:#ec8224">
                 @if($offers_private =='[]')
                     <h4>No any Private Offered at this moment</h4>
                 @endif
@@ -222,22 +222,22 @@
 
 
 <div id="tabG" class="tabcontent">
-                              
+
 
 @if($offers_group)
-  
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
-    <div class="container" style="padding-bottom:0px;">  
-            
+
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
+    <div class="container" style="padding-bottom:0px;">
+
        <h3 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;"> @if($offers_private !='[]')
-                    GROUP TOUR OFFERS: 
+                    GROUP TOUR OFFERS:
                     @endif Special Offers</span></h3>
 
-      
-      <div class="px-xl-5 pb-3">     
+
+      <div class="px-xl-5 pb-3">
 <div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
-  
-   
+
+
                     @foreach ($offers_group as $special_group)
      <div class="col-lg-4 col-md-12">
          <h4><b style="background:">{{$special_group->sales_header}}</b></h4>
@@ -249,12 +249,12 @@
                                         <img src="{{URL::asset('/storage/uploads/'.$special_group->attachment) }}" class="img-responsive" alt="{{  $special_group->tour_name }}" style="width:100%;">
                                                                         </div>
                                                                 </div>
-                          
+
 
                         <div class="text-center" style="background-color:#4c7149;">
-                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;">{{ $special_group->tour_name }}</a>                     
+                        <a class="h6 text-decoration-none text-truncate" href="/safaris" style="font-size:20px;">{{ $special_group->tour_name }}</a>
                     </div>
-                                                                 
+
                                                         <div class="blog-text">
                                                         <div class="row">
 
@@ -324,7 +324,7 @@
                         @endforeach
 
 
-        </div>  
+        </div>
 
     </div>
 </div>
@@ -335,7 +335,7 @@
 
           <div class="row">
             <div class="col-md-12" data-aos="fade-up">
-                <div class="section-title text-center" style="background-color:#ec8224">                  
+                <div class="section-title text-center" style="background-color:#ec8224">
                 @if($offers_group =='[]')
                     <h4>No any Group Offered at this moment</h4>
                 @endif
@@ -351,8 +351,8 @@
    </div>
 
 </section>
- <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script> 
-<script>    
+ <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
+<script>
 function openPage(pageName, elmnt, color) {
   // Hide all elements with class="tabcontent" by default */
   var i, tabcontent, tablinks;

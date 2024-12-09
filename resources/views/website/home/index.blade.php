@@ -462,7 +462,7 @@
 
 <div>Physical Rating:          <strong class="float-right">{{$special_private->physical_rating }}</strong></div>
 <div>Tour Category:          <strong class="float-right">{{$special_private->category }}</strong></div>
-<div>Physical Rating:          <strong class="float-right">{{$special_private->tour_code }}</strong></div>
+<div>Tour Code:          <strong class="float-right">{{$special_private->tour_code }}</strong></div>
 
 
 <hr>
@@ -526,7 +526,7 @@
 
                                <div>Physical Rating:          <strong class="float-right">{{$special_group->physical_rating }}</strong></div>
                                <div>Tour Category:          <strong class="float-right">{{$special_group->category }}</strong></div>
-                               <div>Physical Rating:          <strong class="float-right">{{$special_group->tour_code }}</strong></div>
+                               <div>Tour Code:          <strong class="float-right">{{$special_group->tour_code }}</strong></div>
 
 
                                <hr>
