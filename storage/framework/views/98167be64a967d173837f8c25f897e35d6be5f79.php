@@ -126,7 +126,7 @@
 
 <div>Physical Rating:          <strong class="float-right"><?php echo e($safari->physical_rating); ?></strong></div>
 <div>Tour Category:          <strong class="float-right"><?php echo e($safari->category); ?></strong></div>
-<div>Physical Rating:          <strong class="float-right"><?php echo e($safari->tour_code); ?></strong></div>
+<div>Tour Code:          <strong class="float-right"><?php echo e($safari->tour_code); ?></strong></div>
 
 
 <hr>

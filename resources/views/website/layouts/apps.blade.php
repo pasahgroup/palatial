@@ -239,7 +239,7 @@
 
 
 
-                                     <li><a href="#"> <i class="fa fa-search" style="color:pink;"></i></a>
+                                     <li><a href="#"> <i class="fa fa-search" style="color:#f90678;"></i></a>
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-12">
                                             <li class="title">Search by selecting program</li>

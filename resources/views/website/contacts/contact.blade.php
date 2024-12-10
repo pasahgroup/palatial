@@ -1,32 +1,34 @@
 @extends('website.layouts.apps')
 @section('content')
 
-     <section class="">
+     <section class="" style="margin-top:50px">
         <div class="container">
         <a href="#"></a>
-        <div class="row"> 
+
+        <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12 ">
             <p class="text-center">
               @isset($contacts->title)
-             <b> {{$contacts->title}}</b> 
+             <b> {{$contacts->title}}</b>
               @endisset
             </p>
-           </div> 
+           </div>
         </div>
-            <div class="row"> 
-            @if($contacts)               
+            <hr>
+            <div class="row">
+            @if($contacts)
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <div class="contact-box">
                         <div class="icon-box">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="con-diss">
-                            <h4> Address </h4>                        
-                            
+                            <h4> Address </h4>
+
                                               @isset($contacts->address)
-             <b> {{$contacts->address}}</b> 
+             <b> {{$contacts->address}}</b>
               @endisset
-                          
+
                         </div>
                     </div>
                  </div>
@@ -119,8 +121,7 @@
     </section>
  <script src="map/main.js"></script>
          <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&amp;callback=initMap">          
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&amp;callback=initMap">
         </script>
         <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 @endsection
-

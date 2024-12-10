@@ -11,7 +11,7 @@
               <div class="col-lg-4 col-md-7">
                  <div class="email-address_no">
                     <a href="mailto:info@palatialtours.com">
-                      <i class="fa fa-envelope" style="color:pink;"></i><b style="color:#6C5603;">  info@palatialtours.com</b></a>
+                      <i class="fa fa-envelope" style="color:#f90678;"></i><b style="color:#6C5603;">  info@palatialtours.com</b></a>
                        <a href="https://wa.link/z5mmcd" style="padding-left:10px">
                             <img src="../../../images/whatsapp.png" alt="" style="width:20px; height:20px;">
                                <b style="color:#6C5603;">(+255)753 216 263</b>
@@ -25,7 +25,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" name="search" placeholder="search any keyword" required="">
                         <div class="input-group-append">
-                            <button class="input-group-text bg-transparent text-primary">
+                            <button class="input-group-text bg-transparent" style="color:#048023 !important">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>

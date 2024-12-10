@@ -438,7 +438,7 @@
                  </div>
 
   <b>  <div class="col-md-5 col-sm-5 col-xs-5" style="border-right:0px solid rgba(71,85,95,.11);height:0px; ">
-                                                                                         <strong style="color:#fff">Dead Line:<br> <b style="color:#fde205">{{ $special_private->offer_deadline }}</b></strong>
+                                                                                         <p style="color:#fff">Dead Line:<br> <b style="color:#fde205">{{ $special_private->offer_deadline }}</b></p>
                                                                                  </div></b>
 
  <b class="float-right">

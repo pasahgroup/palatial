@@ -1,31 +1,33 @@
 <?php $__env->startSection('content'); ?>
 
-     <section class="">
+     <section class="" style="margin-top:50px">
         <div class="container">
         <a href="#"></a>
-        <div class="row"> 
+
+        <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12 ">
             <p class="text-center">
               <?php if(isset($contacts->title)): ?>
-             <b> <?php echo e($contacts->title); ?></b> 
+             <b> <?php echo e($contacts->title); ?></b>
               <?php endif; ?>
             </p>
-           </div> 
+           </div>
         </div>
-            <div class="row"> 
-            <?php if($contacts): ?>               
+            <hr>
+            <div class="row">
+            <?php if($contacts): ?>
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <div class="contact-box">
                         <div class="icon-box">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="con-diss">
-                            <h4> Address </h4>                        
-                            
+                            <h4> Address </h4>
+
                                               <?php if(isset($contacts->address)): ?>
-             <b> <?php echo e($contacts->address); ?></b> 
+             <b> <?php echo e($contacts->address); ?></b>
               <?php endif; ?>
-                          
+
                         </div>
                     </div>
                  </div>
@@ -118,10 +120,9 @@
     </section>
  <script src="map/main.js"></script>
          <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&amp;callback=initMap">          
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&amp;callback=initMap">
         </script>
         <script src="../assetff/js/jquery/jquery-2.2.4.min.js"></script>
 <?php $__env->stopSection(); ?>
-
 
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/contacts/contact.blade.php ENDPATH**/ ?>
