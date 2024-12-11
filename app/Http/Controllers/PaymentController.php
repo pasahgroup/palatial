@@ -228,10 +228,14 @@ $basicCount=DB::select("select * from(select count(d.start_date)date_count,DATE_
 $amount = preg_replace("/[^0-9\.]/", "",request('amount'));
 $amount_percent=request('percent_downpayment')*request('total_cost');
 
+// if($amount<$amount_percent)
+// {
+//  return redirect()->back()->with('error','Down Payment must not below 30% of total booking costs.');
+// }
 
-if($amount<$amount_percent)
+if($amount<=0.00)
 {
- return redirect()->back()->with('error','Down Payment must not below 30% of total booking costs.');
+ return redirect()->back()->with('error','Down Payment must be Greater than 0.00');
 }
 
 // Fetching JSON
