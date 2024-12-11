@@ -1,6 +1,6 @@
 
-@extends('admins.layouts.Apps.app')
-@section('contents')
+
+<?php $__env->startSection('contents'); ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -8,8 +8,8 @@
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 <style>
-@charset "UTF-8";
-@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@charset  "UTF-8";
+@import  url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 .pcs:after {
   content: " pcs";
 }
@@ -569,4 +569,6 @@ $(function(){
   });
 });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/programs/index.blade.php ENDPATH**/ ?>

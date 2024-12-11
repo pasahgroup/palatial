@@ -655,4 +655,4 @@
    <script src="../../img_library/scripts.js" type="text/javascript"></script>
 </body>
 </html>
-<?php /**PATH /home/drongosa/palatialtours.com/resources/views/admins/layouts/Apps/app.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/layouts/Apps/app.blade.php ENDPATH**/ ?>
