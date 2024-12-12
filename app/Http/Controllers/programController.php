@@ -25,7 +25,8 @@ class programController extends Controller
         ->select('programs.*','attachments.attachment')
         ->where('attachments.type','Programs')
          ->orWhere('attachments.type','Addon')
-        ->get();
+        ->paginate(15);
+
         return view('admins.programs.index',compact('datas'));
     }
 

@@ -160,9 +160,10 @@ table.fold-table > tbody > tr.fold.open {
       </td>
     </tr>
 @endforeach
-
   </tbody>
 </table>
+<br>
+{!! $datas->links()!!}
 </section>
 </div>
 <script>

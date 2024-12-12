@@ -160,9 +160,11 @@ table.fold-table > tbody > tr.fold.open {
       </td>
     </tr>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
   </tbody>
 </table>
+<br>
+<?php echo $datas->links(); ?>
+
 </section>
 </div>
 <script>
