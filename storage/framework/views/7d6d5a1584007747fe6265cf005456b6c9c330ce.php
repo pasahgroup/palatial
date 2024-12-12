@@ -104,13 +104,19 @@ table.fold-table > tbody > tr.fold.open {
 <div class="content-wrapper">
        <!-- Main content -->
     <section class=" container-fluid content">
-<table class="fold-table">
+    
+
+      <div class="input-group"> <span class="input-group-addon">Filter</span>
+          <input id="filter" type="text" class="form-control" placeholder="--search here...">
+      </div>
+
+<table class="fold-table table-bordered table-striped" id="example1">
   <thead>
     <tr>
       <th>Program</th><th>Days</th><th>Costs</th><th>Price</th><th>Tour code</th><th>Category</th><th>Type</th>
     </tr>
   </thead>
-  <tbody>
+    <tbody class="searchable">
 
       <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <tr class="view">
@@ -134,7 +140,7 @@ table.fold-table > tbody > tr.fold.open {
                 <th>Company ID</th><th>Main</th><th>Photo</th><th>Popular Experience</th><th>Circuit</th><th>Overview</th><th>SEO</th><th>Action</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="searchable">
               <tr>
                 <td><?php echo e($data->id); ?></td>
                   <td><?php echo e($data->main); ?></td>
@@ -174,6 +180,29 @@ $(function(){
   });
 });
 </script>
+
+<script>
+
+
+$(document).ready(function () {
+    (function ($) {
+
+        $('#filter').keyup(function () {
+
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+
+        })
+
+    }(jQuery));
+
+});
+</script>
+
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/programs/index.blade.php ENDPATH**/ ?>
