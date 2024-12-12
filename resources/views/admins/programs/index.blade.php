@@ -8,6 +8,17 @@
 </style>
 
 
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
 <style>
 @charset "UTF-8";
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
@@ -104,13 +115,13 @@ table.fold-table > tbody > tr.fold.open {
 <div class="content-wrapper">
        <!-- Main content -->
     <section class=" container-fluid content">
-    
 
-      <div class="input-group"> <span class="input-group-addon">Filter</span>
+
+    <div class="input-group"> <span class="input-group-addon">Filter</span>
           <input id="filter" type="text" class="form-control" placeholder="--search here...">
       </div>
 
-<table class="fold-table table-bordered table-striped" id="example1">
+<table class="fold-table table-bordered table-striped" id="myTable">
   <thead>
     <tr>
       <th>Program</th><th>Days</th><th>Costs</th><th>Price</th><th>Tour code</th><th>Category</th><th>Type</th>
@@ -201,5 +212,10 @@ $(document).ready(function () {
 });
 </script>
 
+<script>
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
+</script>
 
 @endsection
