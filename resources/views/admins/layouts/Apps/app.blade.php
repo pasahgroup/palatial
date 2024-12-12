@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Palatial Tour</title>
 
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+
+
+
+
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -47,7 +63,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-   
+
         <div>
     <!-- Content Header (Page header) -->
          @if($message = Session::get('success'))
@@ -64,7 +80,7 @@
     <span aria-hidden="true">&times;</span></button>
     <strong>Ops!: </strong> {{$message}}
   </div>
-  @endif   
+  @endif
 
  @if($message = Session::get('error'))
   <div class="alert alert-danger">
@@ -72,8 +88,8 @@
     <span aria-hidden="true">&times;</span></button>
     <strong>Sorry!: </strong> {{$message}}
   </div>
-  @endif     
-</div> 
+  @endif
+</div>
       </li>
 
 
@@ -106,11 +122,11 @@
 
  <li class="nav-item dropdown">
          <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="">   
-          @isset(auth()->user()->photo) 
+          <i class="">
+          @isset(auth()->user()->photo)
             <img src="{{ URL::asset('/storage/user/'.auth()->user()->photo)?? 0}}" width="60px" height="60px" class="brand-image img-circle elevation-3">
           @endisset
-          </i>         
+          </i>
         </a>
 
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -142,7 +158,7 @@
           </a>
           <div class="dropdown-divider"></div>
           <a href="/logout" class="dropdown-item dropdown-footer"><i class="fas fa-power-off" style="color: red;"></i> <b class="text-danger">Logout</b></a>
-         
+
         </div>
       </li>
      </ul>
@@ -164,13 +180,13 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-   
+
           <li class="nav-item">
             <a href="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                   @isset(auth()->user()->role)
-              
+
                 @if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant' || Auth::user()->role =='NMB' || Auth::user()->role =='owner' || Auth::user()->role =='Cultural')
                 Dashboard
                 @endif
@@ -181,7 +197,7 @@
            @isset(auth()->user()->role)
             @if(Auth::user()->role == 'Admin' || Auth::user()->role =='accountant')
              @endisset
-             
+
           {{-- Sales --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -276,23 +292,23 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Program-Slider</p>
                 </a>
-              </li>       
+              </li>
                         <li class="nav-item">
                 <a href="/quickLink" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Page Content</p>
                 </a>
-              </li>    
+              </li>
           <li class="nav-item">
                 <a href="/PostCategory" class="nav-link">
                   <i class="fas fa-minus"></i>
                   <p>Page Type</p>
                 </a>
-              </li>                
+              </li>
 
             </ul>
           </li>
-          
+
             {{-- Opportunities --}}
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -334,7 +350,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-          
+
               <li class="nav-item">
                 <a href="/PostBody" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -401,7 +417,7 @@
                   <i class="fas fa-plus"></i>
                   <p>Create Page</p>
                 </a>
-              </li> 
+              </li>
             </ul>
           </li>
 
@@ -456,7 +472,7 @@
                   <p>Bank</p>
                 </a>
               </li>
-             
+
                <li class="nav-item">
                 <a href="/percent" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -486,12 +502,12 @@
                 Locations
              </p>
             </a>
-          </li>        
+          </li>
             </ul>
           </li>
-      
+
  {{-- User --}}
-                
+
       <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-eye"></i>
@@ -508,10 +524,10 @@
                 User List
              </p>
             </a>
-          </li>          
+          </li>
             </ul>
-          </li> 
-               @endif      
+          </li>
+               @endif
          {{-- Other --}}
 
           <li class="nav-item">
@@ -538,35 +554,18 @@
                 Testimonies
              </p>
             </a>
-          </li> 
+          </li>
             </ul>
-          </li>           
+          </li>
 
-   {{-- Quick Link--}}
-        <!--   <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-              Quick Link
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/quickLink" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Quick Link</p>
-                </a>
-              </li>           
-            </ul>
-          </li>  -->       
+   {{-- Quick Link--}}    
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
-  
+
 @yield('contents')
 
 <footer class="main-footer">

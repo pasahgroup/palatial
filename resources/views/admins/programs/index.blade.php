@@ -1,11 +1,12 @@
 
 @extends('admins.layouts.Apps.app')
 @section('contents')
+<style type="text/css">
+  .red{
+    color: red;
+  }
+</style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 <style>
 @charset "UTF-8";
@@ -106,458 +107,60 @@ table.fold-table > tbody > tr.fold.open {
 <table class="fold-table">
   <thead>
     <tr>
-      <th>Company</th><th>Amount</th><th>Value</th><th>Premiums</th><th>Strategy A</th><th>Strategy B</th><th>Strategy C</th>
+      <th>Program</th><th>Days</th><th>Costs</th><th>Price</th><th>Tour code</th><th>Category</th><th>Type</th>
     </tr>
   </thead>
   <tbody>
+
+      @foreach ($datas as $data)
     <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
+      <td>{{ $data->tour_name }}</td>
+      <td><a href="{{ route('programs.show',$data->id) }}">{{ $data->days }}</a></td>
+<td>{{ number_format($data->cost,2) }}<span class="badge"> {{ $data->currency}}</span></td>
+  <td>{{ number_format($data->price,2) }}<span class="badge"> {{ $data->currency }}</span></td>
+        <td>{{ $data->tour_code }}</td>
+      <td>{{ $data->category }}</td>
+      <td>{{ $data->type }}</td>
+
     </tr>
     <tr class="fold">
       <td colspan="7">
         <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <strong>{{ $data->tour_name }}</strong>
+          <p><strong>Tour highlight:</strong> {{ $data->tour_highlight }}</p>
           <table>
             <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
+              <tr style="background-color:#fdfdfd">
+                <th>Company ID</th><th>Main</th><th>Photo</th><th>Popular Experience</th><th>Circuit</th><th>Overview</th><th>SEO</th><th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
+                <td>{{ $data->id }}</td>
+                  <td>{{ $data->main }}</td>
+                <td><div class="logo mr-auto"><img src="{{ URL::asset('/storage/uploads/'.$data->attachment) }}" style="width:80px;height:50px"></div></td>
+                <td>{{ $data->popular_experience }}</td>
+                <td>{{ $data->tour_circuit }}</td>
+                <td>{{ $data->overview }}</td>
+                <td>{{ $data->seo }}</td>
+                <td>
+                  <p>
+                  <a role="button" href="{{ route('editProgram',$data->id) }}"><i class="fa fa-edit"></i> Edit</a>
+                </p>
+<p>
+                  <a href="{{ route('inclusive.show',$data->id) }}"><i class="fas fa-solid fa-bars"></i> Inclusive</a></p>
+                  <p>
+                  <a role="button" href="/destroyf/{{$data->id}} " onclick="return confirm('Are you sure? You want to delete {{ $data->tour_name}}','Inclusive')"><i class="fas fa-trash red"></i> Delete</a>
+</p>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </td>
     </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr class="view">
-      <td>Company Name</td>
-      <td class="pcs">457</td>
-      <td class="cur">6535178</td>
-      <td>-</td>
-      <td class="per">50,71</td>
-      <td class="per">49,21</td>
-      <td class="per">0</td>
-    </tr>
-    <tr class="fold">
-      <td colspan="7">
-        <div class="fold-content">
-          <h3>Company Name</h3>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Company name</th><th>Customer no</th><th>Customer name</th><th>Insurance no</th><th>Strategy</th><th>Start</th><th>Current</th><th>Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sony</td>
-                <td>13245</td>
-                <td>John Doe</td>
-                <td>064578</td>
-                <td>A, 100%</td>
-                <td class="cur">20000</td>
-                <td class="cur">33000</td>
-                <td class="cur">13000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>13288</td>
-                <td>Claire Bennet</td>
-                <td>064877</td>
-                <td>B, 100%</td>
-                <td class="cur">28000</td>
-                <td class="cur">48000</td>
-                <td class="cur">20000</td>
-              </tr>
-              <tr>
-                <td>Sony</td>
-                <td>12341</td>
-                <td>Barry White</td>
-                <td>064123</td>
-                <td>A, 100%</td>
-                <td class="cur">10000</td>
-                <td class="cur">22000</td>
-                <td class="cur">12000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
+@endforeach
+
   </tbody>
 </table>
 </section>
