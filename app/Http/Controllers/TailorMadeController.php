@@ -20,6 +20,7 @@ use App\Models\people_percent;
 use App\Models\specialOffer;
 use Mail;
 use Illuminate\Support\Facades\Route;
+use Carbon\Carbon;
 
 use App\Models\departures;
 use App\Models\buyaddons;
@@ -82,8 +83,8 @@ $status="Active";
          $tailorMades = tailorMade::where('id',$id)
          ->first();
 
-        $tourTypes = program::get(); 
-       // dd($tourTypes);             
+        $tourTypes = program::get();
+       // dd($tourTypes);
        return view('admins.tailorMade.addEdit',compact('tailorMades','tour_addon','id','tourTypes'));
      }
     /**
@@ -115,10 +116,13 @@ $status="Active";
     {
 
      $hear_from = request('hear');
-     
-     $pin=rand(11111111, 99999999);
 
-     $days=request('days');  
+     $pin=rand(11111111, 99999999);
+     $pin="TB".$pin;
+      $now = Carbon::now();
+
+
+     $days=request('days');
       $start_date=request('arrival_date');
      $start_datef=date('Y-m-d', strtotime($start_date));
        $end_date=date('Y-m-d', strtotime($start_date. ' + '.$days.' days'));
@@ -136,28 +140,28 @@ $status="Active";
         'days'=>request('days'),
         'tour_type'=>request('tour_type'),
         'destination'=>request('destination'),
-        'accommodation'=>request('accomodation'),    
-       
+        'accommodation'=>request('accomodation'),
+
         'min_budget'=>request('min_budget'),
         'max_budget'=>request('max_budget'),
         'end_date'=>$end_date,
-
-         'pin'=>$pin,
+           'pin'=>$pin,
+          'date_created'=>$now,
           'status'=>'Active',
        'other_information'=>request('additional_information'),
         'hear_about_us'=>request('hear_about_us'),
         ]);
-          
-         //dd($hear_from); 
+
+         //dd($hear_from);
          if($hear_from !=null){
         foreach ($hear_from as $hears) {
         $tourhearfrom = tourEquerySocialMedia::create([
         'tour_equery_id'=>$datas->id,
         'social_name'=>$hears,
         'from_name'=>'tailor_made'
-        
+
         ]);
-         }   
+         }
         }
 
         //Install into invoices
@@ -174,7 +178,7 @@ $status="Active";
          'total_discount'=>0.00,
          'total_cost'=>0.00,
         'currency'=>"USD"
-        ]);
+      ]);
 
 }
 
@@ -205,7 +209,7 @@ $data["date"] = "Date: $date";
 
 // $arrayName =$socialmedia;
 $data['socialmedia'] ="facebook";
-$data['datas'] =$datas; 
+$data['datas'] =$datas;
 $data['programs'] ="Program 1";
 
 
@@ -239,7 +243,7 @@ foreach ($files as $file){
          $programs = program::get();
 
        //dd($tailorMades);
-      
+
          return view('website.tailorMade.tailorEnquiryForm_new',compact('tailorMades','socialmedia','programs'));
        // return view('website.tailorMade.tailorEnquiryForm',compact('tailorMades','socialmedia'));
     }
@@ -258,7 +262,7 @@ foreach ($files as $file){
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
+    {
         //dd('eee');
 
         $tour_addon='tailor_made';
@@ -292,24 +296,36 @@ foreach ($files as $file){
     {
         $tour_addon='tailor_made';
         $tailorTours = program::get();
-        //dd($id);
+
+        $tailor_pin = tailorMade::
+          where('tailor_mades.id',$id)->first();
+
+        //dd($tailor_pin->pin);
   //dd(request('attachment'));
 
         $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
+       ->whereColumn('tailor_mades.date_created','itineraries.date_created')
+       ->where('itineraries.date_created',$tailor_pin->date_created)
+          ->where('itineraries.pin',$tailor_pin->pin)
         ->where('itineraries.tour_addon','tailor_made')
         ->where('tailor_mades.id',$id)->first();
+//dd($programs);
 
-      
         $datas = itinerary::join('itinerary_days','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
         ->join('destinations','destinations.id','itinerary_days.destination_id')
         ->join('tailor_mades','tailor_mades.id','itineraries.program_id')
         ->orderby('itinerary_days.id','ASC')
+             ->whereColumn('itineraries.date_created','itinerary_days.date_created')
+             ->where('itinerary_days.date_created',$tailor_pin->date_created)
+                ->where('itinerary_days.pin',$tailor_pin->pin)
+
          ->where('itineraries.tour_addon','tailor_made')
         ->where('itineraries.program_id',$id)
         ->select('accommodations.accommodation_name','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
           ->get();
-//dd($datas);
+
+// dd($datas);
 
          if($datas == "[]"){
         $routes = tailorMade::where('id',$id)->first();
@@ -321,11 +337,11 @@ foreach ($files as $file){
 
             return view('admins.itinerary.index',compact('datas','id','tour_addon','programs','tailorTours'));
     }
-    
+
 
 
  public function storeTailorMade(Request $request,$id)
-    {       
+    {
       $toupdate = tailorMade::where('id',$id)->update([
             'calculated_cost'=>request('price'),
             'currency'=>request('currency'),
@@ -345,7 +361,7 @@ foreach ($files as $file){
             $description = request('itinerary_description');
             $destination = request('destination_id');
             $accommodation = request('accommodation_id');
-          
+
              $distance = request('distance');
               $transport = request('transport');
                $meal = request('meal');
@@ -368,14 +384,14 @@ foreach ($files as $file){
     //Update invoice table
 
 
-$tour_date=request('tour_date'); 
-         $yearM =date('Y-m-d', strtotime($tour_date)); 
-       
+$tour_date=request('tour_date');
+         $yearM =date('Y-m-d', strtotime($tour_date));
+
 // Travel date
-           $travel_date=request('travel_date'); 
-         $travel_date =date('Y-m-d', strtotime($travel_date)); 
-         
-        
+           $travel_date=request('travel_date');
+         $travel_date =date('Y-m-d', strtotime($travel_date));
+
+
           $departurePrice=departures::where('tour_id',request('tour_id'))
           ->where('status','Active')
           ->where('start_date',$yearM)
@@ -388,12 +404,12 @@ $tour_date=request('tour_date');
             else{
                  $pricef=request('unit_price');
                  $dapart_id=0;
-            } 
+            }
 
 
     if(request('discount_price')==null)
            {
-          
+
              $discount_pricef=specialOffer::where('tour_id',request('tour_id'))
              ->where('status','Active')
              ->first();
@@ -405,7 +421,7 @@ $tour_date=request('tour_date');
 
              $discount_pricef=$discount_pricef->discount;
              }
-            
+
            }
 
 $adult=people_percent::where('percent_name','Adults')->first();
@@ -455,18 +471,18 @@ if($children_p<=0.00)
 
 //dd(request('children'));
 
-         if($Tourcostsummary == "[]"){   
-         // $unit_price=$pricef;     
-            $teens_cost=($unit_price * $teen_p)*$teens;          
-            $children_cost=($unit_price * $children_p)*$childrens;  
+         if($Tourcostsummary == "[]"){
+         // $unit_price=$pricef;
+            $teens_cost=($unit_price * $teen_p)*$teens;
+            $children_cost=($unit_price * $children_p)*$childrens;
              //Total discount
            $total_discount=$discount_pricef*$adults + $discount_pricef*$teen_p*$teens + $discount_pricef*$children_p*$teens;
-          
+
        //dd($children_cost);
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
          // dd($total_price);
             $total_addon_price=($addon_price*$teen_p)*$teens + ($addon_price * $adults+($addon_price*$children_p)*$childrens);
-            
+
             $total_cost=$total_price + $total_addon_price - $total_discount;
          }
          else
@@ -477,12 +493,12 @@ if($children_p<=0.00)
 
             if($adults==2)
             {
-                $unit_price=$costsummary->twopax;                        
+                $unit_price=$costsummary->twopax;
              }
             elseif ($adults==3)
             {
               $unit_price=$costsummary->threepax;
-            
+
             }elseif ($adults==4)
              {
               $unit_price=$costsummary->fourpax;
@@ -495,22 +511,22 @@ if($children_p<=0.00)
             {
              $unit_price=$costsummary->sixpax;
             }
-         
 
-            $teens_cost=($unit_price * $teen_p)*$teens;          
-            $children_cost=($unit_price * $children_p)*$childrens;   
+
+            $teens_cost=($unit_price * $teen_p)*$teens;
+            $children_cost=($unit_price * $children_p)*$childrens;
             $total_discount=$discount_pricef*$adults + $discount_pricef*$teen_p*request('teens') + $discount_pricef*$children_p*$teens;
 
             $total_price=($unit_price * $adults)+$teens_cost + $children_cost;
-   
+
             $total_addon_price=($addon_price*$teen_p)*$teens + ($addon_price * $adults+($addon_price*$children_p)*$childrens);
-            
+
             $total_cost=$total_price + $total_addon_price -  $total_discount;
          }
 $adults_cost=$unit_price * $adults;
 
 //dd($children_cost);
-           
+
       $toupdate = invoice::where('customer_id',$id)->update([
         //'customer_id'=>$tour_costsummary->id,
         'tour_id'=>request('tour_name'),
@@ -566,13 +582,13 @@ $adults_cost=$unit_price * $adults;
               //Verify if the pin exists
           $pin=request('pin');
          // dd($pin);
-          
-          $tailorMades = tailorMade::
-            where('tailor_mades.pin',$pin)->first(); 
 
-            //dd($tailorMades);
-          // ->where('tailor_mades.status','Active')->first();        
-           
+          $tailorMades = tailorMade::
+            where('tailor_mades.pin',$pin)->first();
+
+          //dd($tailorMades);
+          // ->where('tailor_mades.status','Active')->first();
+
            if($tailorMades==null)
            {
             // return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
@@ -587,43 +603,42 @@ $adults_cost=$unit_price * $adults;
            {
              $id=$tailorMades->id;
            }
-           
+
            }
-           
-           $tour_addon='tailor_made';          
+
+           $tour_addon='tailor_made';
            $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
-            //->join('attachments','attachments.destination_id','tailor_mades.id')        
+            //->join('attachments','attachments.destination_id','tailor_mades.id')
           ->where('itineraries.tour_addon','tailor_made')
           // ->where('attachments.type','tailor_made')
           ->where('tailor_mades.id',$id)->first();
 
-      
            if($programs ==null){
               $programs = tailorMade::
               where('tailor_mades.id',$id)->first();
               }
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
-        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')   
+        ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
 
-         ->join('destinations','destinations.id','itinerary_days.destination_id') 
+         ->join('destinations','destinations.id','itinerary_days.destination_id')
          ->join('tailor_mades','tailor_mades.id','itineraries.program_id')
-                  
-         ->join('attachments','attachments.destination_id','accommodations.id') 
+
+         ->join('attachments','attachments.destination_id','accommodations.id')
           ->where('itineraries.tour_addon','tailor_made')
-          ->where('itineraries.program_id',$id)          
+          ->where('itineraries.program_id',$id)
           ->where('attachments.type','Accommodation')
           ->where('tailor_mades.id',$id)
-       
+
          ->orderby('itinerary_days.id','ASC')
-        
+
          ->select('accommodations.accommodation_name','accommodations.accommodation_descriptions','attachments.attachment','accommodations.category','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
            ->get();
-    
+
 //dd($datas);
 
 
-         if($datas == "[]"){          
+         if($datas == "[]"){
             $destinations = destination::get();
               return redirect()->back()->with('info',$programs->full_name.' Ops your tailor made still on Progess....');
             // return ($programs->full_name.' Ops your tailor made still on Progess....');
@@ -631,18 +646,18 @@ $adults_cost=$unit_price * $adults;
 
         $basic=tailorMade::join('attachments','attachments.destination_id','tailor_mades.id')
             ->get();
-         
+
          $inclusives=DB::select("select id,inclusive from inclusives  where id not in(select (inclusive_id)id from accommodation_inclusives where tour_id =$id)");
-        
+
            $assignLists = accommodationInclusive::join('inclusives','accommodation_inclusives.inclusive_id','inclusives.id')
         ->where('accommodation_inclusives.tour_id',$id)->get();
 //dd($programs);
-  $invoice_amount = invoice::where('customer_id',$id)->first(); 
+  $invoice_amount = invoice::where('customer_id',$id)->first();
 //dd($invoice_amount);
 
         return view('website.tailorMade.tailorMadeSummary',compact('datas','id','programs','basic','inclusives','assignLists','pin','invoice_amount'));
     }
- 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -667,7 +682,7 @@ $adults_cost=$unit_price * $adults;
 //dd($id);
  $pin=rand(11111111, 99999999);
 
-     $days=request('days');  
+     $days=request('days');
       $start_date=request('arrival_date');
      $start_datef=date('Y-m-d', strtotime($start_date));
        $end_date=date('Y-m-d', strtotime($start_date. ' + '.$days.' days'));
@@ -686,8 +701,8 @@ $adults_cost=$unit_price * $adults;
         'days'=>request('days'),
         'tour_type'=>request('tour_type'),
         'destination'=>request('destination'),
-        'accommodation'=>request('accomodation'),    
-       
+        'accommodation'=>request('accomodation'),
+
         'min_budget'=>request('min_budget'),
         'max_budget'=>request('max_budget'),
         'end_date'=>$end_date,
@@ -715,7 +730,7 @@ $adults_cost=$unit_price * $adults;
                      $imageToStore = $filename.'_'.time().'.'.$extension;
                      //upload the image
                      $path = $attached->storeAs('public/tailorMade/', $imageToStore);
-            
+
              $toUpdate = tailorMade::where('id',$id)->update([
                 'attachment'=>$imageToStore
                 ]
@@ -736,12 +751,12 @@ $adults_cost=$unit_price * $adults;
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {       
+    {
         $delete = tailorMade::where('id',$id)->first();
-        if($delete->delete()){           
+        if($delete->delete()){
                DB::statement("delete from attachments where destination_id=$id and type='tailor_made'");
             return redirect()->route('tailorMade.index')->with('success','tailor made removed successfully');
-        }    
+        }
         else{
             return redirect('/')->route('/tailorMade')->with('error','Widget not exists');
         }

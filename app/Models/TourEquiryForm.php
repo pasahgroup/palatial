@@ -19,15 +19,14 @@ class TourEquiryForm extends Model
         'tour_type',
         'accommodation',
         'adults',
-
          'teens',
         'children',
          'tour_date',
         'travel_date',
-
-          'pin',
+         'pin',
           'status',
         'additional_information',
-       'hear_about_us'
+       'hear_about_us',
+       'date_created'
     ];
 }

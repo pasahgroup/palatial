@@ -13,6 +13,7 @@ class itinerary extends Model
         'days',
         'program_id',
         'tour_addon',
-        'user_id'
+        'user_id',
+        'date_created'
     ];
 }

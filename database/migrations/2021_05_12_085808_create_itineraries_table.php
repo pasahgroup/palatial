@@ -20,6 +20,7 @@ class CreateItinerariesTable extends Migration
             $table->integer('program_id')->unsigned();
               $table->string('tour_addon')->nullable();
             $table->integer('user_id')->unsigned();
+              $table->date('date_created')->nullable();
             $table->timestamps();
         });
     }
