@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
 
-  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;"> 
+  <section class="featured-properties-area section-padding-100-50" style="padding-bottom:0px;">
 
-    <div class="container" style="padding-bottom:0px;">  
-            
+    <div class="container" style="padding-bottom:0px;">
+
         <h4 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3 section-heading wow fadeInUp" style="color:#b76b0b;">My Tailor Made Trip</span></h4>
                <?php if($message = Session::get('success')): ?>
   <div class="alert alert-success">
@@ -21,7 +21,7 @@
     <strong>Ops!: </strong> <?php echo e($message); ?>
 
   </div>
-  <?php endif; ?>   
+  <?php endif; ?>
 
  <?php if($message = Session::get('error')): ?>
   <div class="alert alert-danger">
@@ -30,16 +30,16 @@
     <strong>Sorry!: </strong> <?php echo e($message); ?>
 
   </div>
-  <?php endif; ?>     
-    
-<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149"> 
+  <?php endif; ?>
 
-                               
+<div class="col-md-12 col-sm-12 pb-1" style="background-color:#4c7149">
+
+
 
 
                                 <div class="col-lg-12 col-md-12 col-sm-">
                                     <label style="color:yellow;">Enter Your Tailor Made Pin No:</label></div>
-             
+
   <div class="col-12 col-sm-6 col-xl-3" style="padding-left:20px;padding-right:20px;">
                         <div class="footer-widget-area mb-100">
                             <!-- Widget Title -->
@@ -48,30 +48,30 @@
                         <?php echo csrf_field(); ?>
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <div class="form-group">                                                                 
-                                    <input type="number" name="pin" placeholder="pin no" min="2" required>
+                                    <div class="form-group">
+                                    <input type="text" name="pin" placeholder="pin no" min="2" required>
                                     </div>
                                 </div>
-                                  <div class="col-lg-1 col-md-1 col-sm-1"> 
-                                </div> 
+                                  <div class="col-lg-1 col-md-1 col-sm-1">
+                                </div>
 
-                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                <div class="col-lg-3 col-md-3 col-sm-3">
                                     <button type="submit" class="btn btn-success">Search</button>
-                                </div> 
-                                                        
-                          
-                              
+                                </div>
+
+
+
                               </form>
-                            </div>                           
+                            </div>
                         </div>
                     </div>
 
-     
+
     </div>
 </div>
 </section>
 
- 
+
      <script src="../assetff/js/category.js"></script>
     <script src="../assetff/lib/easing/easing.min.js"></script>
     <script src="../assetff/lib/owlcarousel/owl.carousel.min.js"></script>
@@ -92,6 +92,5 @@
     <script src="../assetff/j../assetff/s/classy-nav.min.js"></script>
     <script src="../assetff/js/jquery-ui.min.js"></script>
 <?php $__env->stopSection(); ?>
-
 
 <?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/tailorMade/tailorClientForm.blade.php ENDPATH**/ ?>

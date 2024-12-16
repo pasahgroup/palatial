@@ -325,7 +325,7 @@ foreach ($files as $file){
         ->select('accommodations.accommodation_name','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
           ->get();
 
-// dd($datas);
+dd($datas);
 
          if($datas == "[]"){
         $routes = tailorMade::where('id',$id)->first();
