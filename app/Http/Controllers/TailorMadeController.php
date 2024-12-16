@@ -325,7 +325,7 @@ foreach ($files as $file){
         ->select('accommodations.accommodation_name','destinations.destination_name','itineraries.*','tailor_mades.first_name','tailor_mades.last_name','itinerary_days.*')
           ->get();
 
-dd($datas);
+//dd($datas);
 
          if($datas == "[]"){
         $routes = tailorMade::where('id',$id)->first();
@@ -342,17 +342,24 @@ dd($datas);
 
  public function storeTailorMade(Request $request,$id)
     {
+$tailorMade=tailorMade::where('id',$id)->first();
+//dd($tailorMade->pin);
+
       $toupdate = tailorMade::where('id',$id)->update([
             'calculated_cost'=>request('price'),
             'currency'=>request('currency'),
             'physical_rating'=>request('physical_rating')
         ]);
 
-              $main_itinerary = itinerary::create(            [
+              $main_itinerary = itinerary::create([
                 'itinerary_summury'=>request('itinerary_summury'),
                 'days'=>request('days'),
                 'program_id'=>request('customer_id'),
                  'tour_addon'=>request('tour_addon'),
+
+                  'pin'=>$tailorMade->pin,
+                   'date_created'=>$tailorMade->date_created,
+
                 'user_id'=>request('user_id')
             ]);
 
@@ -428,7 +435,7 @@ $adult=people_percent::where('percent_name','Adults')->first();
 $teen=people_percent::where('percent_name','Teens')->first();
 $children=people_percent::where('percent_name','children')->first();
 
-$tailorMade=tailorMade::where('id',$id)->first();
+//$tailorMade=tailorMade::where('id',$id)->first();
 //dd($id);
 
 $adult_p=$adult->percent/100;
