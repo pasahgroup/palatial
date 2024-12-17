@@ -43,7 +43,7 @@
                         {{ $programs->itinerary_summury }}
                       </p>
                    </div>
-                   
+
                     @foreach ($datas as $data)
                     <div class="card card-primary card-outline">
                         <div class="card-header">
@@ -52,7 +52,7 @@
                         <div class="card-body">
                           <p class="card-text">{{ $data->itinerary_description }}</p>
                           <p class="">
-                            
+
                             <p class=""><span class=""> Destination: </span><b>{{ $data->destination_name }} </b></p>
 
                               <p class=""><span class=""> Distance: </span><b>{{ $data->distance }} </b>Km</p>
@@ -71,33 +71,33 @@
 
               <div class="container-fluid x_content">
                 <br />
-               
+
               <form  method="post" id="post_form" action="{{ route('updateItenary') }}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                 @csrf
-                
-                    <div class="row">                    
+
+                    <div class="row">
                     <input type="hidden" name="tour_addon" value="{{$tour_addon}}">
                     <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                     <input type="hidden" name="days" value="{{ $programs->days }}">
                     <input type="hidden" name="program_id" value="{{ $id }}">
                     <input type="hidden" name="unfilledDays" value="{{ $unfilledDays }}">
-                  </div> 
-                        
-                 
+                  </div>
+
+
    <div class="row">
    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-group row">
                           <label class="col-sm-2 col-md-2 col-form-label">Itinerary Summury</label>
                           <div class="col-sm-10 col-md-10">
                             <textarea  class="form-control" name="itinerary_summury"  cols="30" rows="3" maxlength="490">
-                             {{ $programs->itinerary_summury }} 
+                             {{ $programs->itinerary_summury }}
                             </textarea>
                           </div>
                             </div>
     </div>
     </div>
-                              <div class="row">                                     
-                                                  
+                              <div class="row">
+
                         @for($i =$filledDays +1; $i <= $unfilledDays +$filledDays; $i++)
                          <p class="text-center"><b style="color:green">Incomplete Day {{$i}}</b></p>
                         {{-- Days Itinerary --}}
@@ -148,7 +148,7 @@
                                 </select>
                               </div>
                                 </div>
-                            </div>                  
+                            </div>
 
 
    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">

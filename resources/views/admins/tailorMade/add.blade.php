@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="mb-2">
           <div class="col-sm-6">
-            <h1>Add Route Itinerary and Attachment</h1>
+            <h3>Add Route Itinerary and Attachment</h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,6 +24,14 @@
 
  <section class="content-header">
       <div class="container">
+        <div class="card-header">
+        <div class="col-md-10">
+        <h3 class="card-title">Customer name: <b>{{$routes->first_name}} {{$routes->last_name}}</b></h3>
+      </div>
+        <div class="col-sm-2">
+          <a href="/tailorMade" class="btn btn-secondary float-right"><<</a>
+        </div>
+      </div>
      <form  method="post" action="{{ route('storeTailorMade',$routes->id)}}" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
  @csrf
             <input type="hidden" name="user_id" value="{{ Auth::id() }}">

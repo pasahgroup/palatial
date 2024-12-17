@@ -26,7 +26,12 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
+          <div class="col-md-10">
           <h3 class="card-title">Tours</h3>
+        </div>
+          <div class="col-sm-2">
+            <a href="/tailorMade" class="btn btn-secondary float-right"><<</a>
+          </div>
 
         </div>
         <div class="card-body">
@@ -39,7 +44,7 @@
                         {{ $programs->itinerary_summury }}
                       </p>
                    </div>
-                 
+
                     @foreach ($datas as $data)
                     <div class="card card-primary card-outline">
                         <div class="card-header">
@@ -47,7 +52,7 @@
                         </div>
                         <div class="card-body">
                           <p class="card-text">{{ $data->itinerary_description }}</p>
-                      
+
                         <p class=""><span class=""> Destination: </span><b>{{ $data->destination_name }} </b></p>
 
                               <p class=""><span class=""> Distance: </span><b>{{ $data->distance }} </b>Km</p>
@@ -67,7 +72,7 @@
         </div>
 
   </div>
-  
+
     </section>
   </div>
 @endsection

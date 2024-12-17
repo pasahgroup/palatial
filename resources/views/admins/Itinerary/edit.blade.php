@@ -92,7 +92,7 @@
                                 </select>
                               </div>
                                 </div>
-                            </div>                
+                            </div>
 
 
                   <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -126,7 +126,7 @@
                              <option>Mini-Bus/Min-Van</option>
                               <option>Min-Van</option>
                               <option>Overland Truck</option>
-                              
+
                           </select>
                         </div>
                           </div>
