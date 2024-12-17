@@ -334,7 +334,6 @@ foreach ($files as $file){
              //dd($id);
             return view('admins.tailorMade.add',compact('routes','accommodations','destinations','tour_addon','tailorTours'));
         };
-
             return view('admins.itinerary.index',compact('datas','id','tour_addon','programs','tailorTours'));
     }
 
@@ -359,7 +358,6 @@ $tailorMade=tailorMade::where('id',$id)->first();
 
                   'pin'=>$tailorMade->pin,
                    'date_created'=>$tailorMade->date_created,
-
                 'user_id'=>request('user_id')
             ]);
 
