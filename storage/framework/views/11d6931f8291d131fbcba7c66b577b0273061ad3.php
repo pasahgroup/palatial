@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="row content-wrapper" style="background-color:#9bbda2;">
@@ -33,18 +32,18 @@
               </div>
               <div class="container-fluid x_content">
 
-                    <form  method="POST"  action="{{ route('tailorMade.update',$id) }}" enctype="multipart/form-data">
-                         @method('PATCH')
-                             @csrf
+                    <form  method="POST"  action="<?php echo e(route('tailorMade.update',$id)); ?>" enctype="multipart/form-data">
+                         <?php echo method_field('PATCH'); ?>
+                             <?php echo csrf_field(); ?>
 
                             <div class="row card-body">
                                 <div class="col-lg-5 col-md-12 col-sm-12">
                                     <label for="">First name:</label>
                                     <div class="form-group">     <input type="hidden" class="form-control" name="price" value="">
                                    <input type="hidden" class="form-control" name="currency" value="">
-                                   <input type="hidden" class="form-control" name="id" value="{{$tailorMades->id}}">
+                                   <input type="hidden" class="form-control" name="id" value="<?php echo e($tailorMades->id); ?>">
 
-                                        <input type="text" name="first_name" value="{{$tailorMades->first_name}}" min="2">
+                                        <input type="text" name="first_name" value="<?php echo e($tailorMades->first_name); ?>" min="2">
                                     </div>
                                 </div>
 
@@ -52,33 +51,33 @@
                                     <label for="">Last name:</label>
                                     <div class="form-group">
 
-                                    <input type="text" name="last_name" value="{{$tailorMades->last_name}}" min="2">
+                                    <input type="text" name="last_name" value="<?php echo e($tailorMades->last_name); ?>" min="2">
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12 col-sm-12">
                                     <label for="">Nationality:</label>
                                     <div class="form-group">
-                                        <input type="text" name="nationality" value="{{$tailorMades->nationality}}" min="2">
+                                        <input type="text" name="nationality" value="<?php echo e($tailorMades->nationality); ?>" min="2">
                                     </div>
                                 </div>
                                   <div class="col-lg-5 col-md-12 col-sm-12">
                                      <label for="">Email:</label>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" value="{{$tailorMades->email}}">
+                                        <input type="email" class="form-control" name="email" value="<?php echo e($tailorMades->email); ?>">
                                     </div>
                                 </div>
 
                                   <div class="col-lg-5 col-md-12 col-sm-12">
                                      <label for="">Phone:</label>
                                     <div class="form-group">
-                                        <input type="phone" class="form-control" name="phone" value="{{$tailorMades->phone}}">
+                                        <input type="phone" class="form-control" name="phone" value="<?php echo e($tailorMades->phone); ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12 col-sm-12">
                                    <label for="">Arrival Date:</label>
                                     <div class="form-group  input-datepicker">
                                         <input type="text" class="form-control " id="datepicker-3" name="arrival_date"
-                                            data-date-format="dd-m-yyyy" placeholder="Arrival Date" value="{{$tailorMades->arrival_date}}">
+                                            data-date-format="dd-m-yyyy" placeholder="Arrival Date" value="<?php echo e($tailorMades->arrival_date); ?>">
                                         <span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
                                     </div>
                                 </div>
@@ -86,27 +85,27 @@
                                   <div class="col-lg-3 col-md-6 col-sm-12">
                                    <label for="">Adults(>16yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->adults}}" name="adults" min="0">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->adults); ?>" name="adults" min="0">
                                     </div>
                                   </div>
 
                                 <div class="col-lg-2  col-md-6 col-sm-12 pl-0">
                                   <label for="">Teens(13-14yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->teens}}" name="teens" min="0">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->teens); ?>" name="teens" min="0">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                    <label for="">Children (5-12 yrs):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->children}}" name="children" min="0">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->children); ?>" name="children" min="0">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-2  col-md-6 col-sm-12 pl-0">
                                    <label for="">Days:</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->days}}" name="days" min="0">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->days); ?>" name="days" min="0">
                                     </div>
                                 </div>
 
@@ -115,10 +114,10 @@
           <label for="">Tour Type:</label>
                                     <div class="form-group icon_down">
                                         <select class="selectpicker search-fields form-control" name="tour_type" required="">
-                                              <option value="{{$tailorMades->tour_type}}">{{$tailorMades->tour_name}}</option>
-                                              @foreach($tourTypes as $tourType)
-                                            <option>{{$tourType->tour_name}}</option>
-                                            @endforeach
+                                              <option value="<?php echo e($tailorMades->tour_type); ?>"><?php echo e($tailorMades->tour_name); ?></option>
+                                              <?php $__currentLoopData = $tourTypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tourType): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option><?php echo e($tourType->tour_name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
                                 </div>
@@ -127,7 +126,7 @@
                                      <label for="">Accomodation:</label>
                                     <div class="form-group icon_down">
                                         <select class="selectpicker search-fields form-control" name="accomodation">
-                                           <option value="{{$tailorMades->accomodation}}">{{$tailorMades->accommodation}}</option>
+                                           <option value="<?php echo e($tailorMades->accomodation); ?>"><?php echo e($tailorMades->accommodation); ?></option>
               <option value="Basic">Basic</option>
               <option value="Comfort">Comfort</option>
                 <option value="Deluxe">Deluxe</option>
@@ -143,26 +142,26 @@
 <div class="col-lg-3 col-md-12 col-sm-12">
                                     <label for="">Destination:</label>
                                     <div class="form-group">
-                                        <input type="text" name="destination" value="{{$tailorMades->destination}}" min="0.00">
+                                        <input type="text" name="destination" value="<?php echo e($tailorMades->destination); ?>" min="0.00">
                                     </div>
                                 </div>
                                    <div class="col-lg-3 col-md-6 col-sm-12 pl-0">
                                   <label for="">Min Budget(Budget Range):</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->min_budget}}" name="min_budget" min="0.00">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->min_budget); ?>" name="min_budget" min="0.00">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                    <label for="">Max Budget:</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->max_budget}}" name="max_budget" min="0.00">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->max_budget); ?>" name="max_budget" min="0.00">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                    <label for="">Calculated costs:</label>
                                     <div class="form-group">
-                                        <input type="number" class="zt-control" value="{{$tailorMades->calculated_cost}}" name="calculated_cost" min="0.00">
+                                        <input type="number" class="zt-control" value="<?php echo e($tailorMades->calculated_cost); ?>" name="calculated_cost" min="0.00">
                                     </div>
                                 </div>
 
@@ -180,7 +179,7 @@
               <div class="text-center img-placeholder"  onClick="triggerClick()">
                 <h4>Update image</h4>
 
-              <img src="{{URL::asset('/storage/tailorMade/'.$tailorMades->attachment?? '') }}" onClick="triggerClick()" id="profileDisplay">
+              <img src="<?php echo e(URL::asset('/storage/tailorMade/'.$tailorMades->attachment?? '')); ?>" onClick="triggerClick()" id="profileDisplay">
                 </div>
             </span>
             </div>
@@ -188,7 +187,7 @@
             <div class="col-md-12">
                <label for="">  Additional Information we should know?</label>
                 <div class="form-group">
-         <textarea rows="3" name="additional_information" style="width:  100%"> {{$tailorMades->other_information}}</textarea>
+         <textarea rows="3" name="additional_information" style="width:  100%"> <?php echo e($tailorMades->other_information); ?></textarea>
         </div>
         </div>
 
@@ -201,4 +200,6 @@
 
     </section>
   </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/admins/tailorMade/addEdit.blade.php ENDPATH**/ ?>

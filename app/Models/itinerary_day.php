@@ -18,6 +18,7 @@ class itinerary_day extends Model
         'itinerary_description',
         'destination_id',
         'accommodation_id',
+        'pin',
         'date_created'
     ];
 }

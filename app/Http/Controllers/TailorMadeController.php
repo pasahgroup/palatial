@@ -316,9 +316,9 @@ foreach ($files as $file){
         ->join('destinations','destinations.id','itinerary_days.destination_id')
         ->join('tailor_mades','tailor_mades.id','itineraries.program_id')
         ->orderby('itinerary_days.id','ASC')
-             ->whereColumn('itineraries.date_created','itinerary_days.date_created')
-             ->where('itinerary_days.date_created',$tailor_pin->date_created)
-                ->where('itinerary_days.pin',$tailor_pin->pin)
+              ->whereColumn('itineraries.date_created','itinerary_days.date_created')
+              ->where('itinerary_days.date_created',$tailor_pin->date_created)
+                 ->where('itinerary_days.pin',$tailor_pin->pin)
 
          ->where('itineraries.tour_addon','tailor_made')
         ->where('itineraries.program_id',$id)
@@ -371,6 +371,8 @@ $tailorMade=tailorMade::where('id',$id)->first();
               $transport = request('transport');
                $meal = request('meal');
 
+              // dd($main_itinerary->id);
+
         foreach($day as $key => $day){
                 $input['day']=$day;
                 $input['itinerary_id']=$main_itinerary->id;
@@ -384,18 +386,21 @@ $tailorMade=tailorMade::where('id',$id)->first();
                 $input['destination_id']=$destination[$key];
                 $input['accommodation_id']=$accommodation[$key];
 
+                  $input['pin']=$tailorMade->pin;
+                    $input['date_created']=$tailorMade->date_created;
+
+
                 $day_itinerary = itinerary_day::UpdateOrCreate($input);
     }
     //Update invoice table
 
 
 $tour_date=request('tour_date');
-         $yearM =date('Y-m-d', strtotime($tour_date));
+$yearM =date('Y-m-d', strtotime($tour_date));
 
 // Travel date
            $travel_date=request('travel_date');
          $travel_date =date('Y-m-d', strtotime($travel_date));
-
 
           $departurePrice=departures::where('tour_id',request('tour_id'))
           ->where('status','Active')
@@ -685,7 +690,7 @@ $adults_cost=$unit_price * $adults;
     {
         $id=request('id');
 //dd($id);
- $pin=rand(11111111, 99999999);
+ //$pin=rand(11111111, 99999999);
 
      $days=request('days');
       $start_date=request('arrival_date');
@@ -710,6 +715,7 @@ $adults_cost=$unit_price * $adults;
 
         'min_budget'=>request('min_budget'),
         'max_budget'=>request('max_budget'),
+          'calculated_cost'=>request('calculated_cost'),
         'end_date'=>$end_date,
 
          // 'pin'=>$pin,
