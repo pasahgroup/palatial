@@ -247,17 +247,24 @@ dd('Mail sent successfully');
     }
 
 
-
-     public function viewTrip(Request $request)    {
-
+     public function viewTrip(Request $request){
               //Verify if the pin exists
-          $pin=request('pin');
-         // dd($pin);
+$pin=request('pin');
+$db_contains = str_contains($pin, 'DB');
+if($db_contains==false)
+{
+  $socialmedia = socialmedia::get();
+  $tailorMades = tailorMade::get();
+  // compact('tailorMades','socialmedia')
+  // return redirect()->route('tailorClientForm')->with('pin',$pin);
+    // return redirect()->route('clientTailorMade')->with('pin',$pin);
+      return view('website.tailorMade.tailorMadeSummary',compact('pin'));
+}
 
+
+
+          //dd($pin);
     $trip = TourEquiryForm::where('tour_equiry_forms.pin',$pin)->first();
-
-       //dd($trip);
-
            if($trip==null)
            {
             // return 'Enter your PIN No Or Your PIN No is Expired Or Not Exists';
@@ -275,20 +282,22 @@ dd('Mail sent successfully');
               $id=$trip->tour_id;
            }
 
+//dd($id);
+
+
            $tour_addon='Programs';
            $programs = TourEquiryForm::join('itineraries','itineraries.program_id','tour_equiry_forms.tour_id')
             ->join('attachments','attachments.destination_id','tour_equiry_forms.tour_id')
+          ->select('tour_equiry_forms.*','attachments.attachment','itineraries.itinerary_summury','itineraries.days')
           ->where('itineraries.tour_addon','Programs')
           ->where('attachments.type','Programs')
           ->where('tour_equiry_forms.tour_id',$id)->first();
-
 
            if($programs ==null){
             // tour_equiry_forms
               $programs = TourEquiryForm::
               where('tour_equiry_forms.tour_id',$id)->first();
               }
-
 //dd($programs);
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')

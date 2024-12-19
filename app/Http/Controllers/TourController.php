@@ -327,8 +327,7 @@ class TourController extends Controller
      */
     public function show($id)
     {
- // dd($id);
-
+  //dd($id);
     $tour_addons = program::where('id',$id)->first();
         $type=$tour_addons->main;
 
@@ -343,7 +342,6 @@ class TourController extends Controller
 
 $discounts=specialOffer::where('tour_id',$id)->first();
 // dd($discounts);
-
 
         $programs = program::
            join('itineraries','itineraries.program_id','programs.id')

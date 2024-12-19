@@ -1,12 +1,10 @@
-
-@extends('website.layouts.apps')
-@section('content')
+<?php $__env->startSection('content'); ?>
   <section class="bg-gray">
         <div class="container">
             <div class="package-list-wrap ">
-                <img src="{{URL::asset('/storage/uploads/'.$programs->attachment?? '') }}" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
+                <img src="<?php echo e(URL::asset('/storage/uploads/'.$programs->attachment?? '')); ?>" class="img-fluid" alt="det-img" style="min-height: 20vh !important;max-height: 50vh;background-size: cover;width: 100%;">
                 <div class="package-list-content">
-                    <p class="package-list-duration">{{$programs->days}} Days, {{$programs->days -1}}  Night(s)<span
+                    <p class="package-list-duration"><?php echo e($programs->days); ?> Days, <?php echo e($programs->days -1); ?>  Night(s)<span
                             class="rate">
 
 
@@ -14,14 +12,15 @@
                     </p>
 
                      <h3 class="package-list-title">
-                        {{ $programs->tour_name }}
+                        <?php echo e($programs->tour_name); ?>
+
                     </h3>
 
-                    @isset($invoice_amount)
-@if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0)
+                    <?php if(isset($invoice_amount)): ?>
+<?php if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0): ?>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>
-@endif
-@endisset
+<?php endif; ?>
+<?php endif; ?>
 
                 </div>
 
@@ -29,14 +28,14 @@
 
              <!-- Tabs starts here -->
             <div class="row">
-                {{-- start of tabs --}}
+                
 
             <div class="col-lg-9 col-md-9 col-sm-12 masonry"  style="background-color:#fafbfb">
 
                     <div class="package-detail">
 
             <div class="">
-               <strong>PIN number: {{$pin}}</strong>
+               <strong>PIN number: <?php echo e($pin); ?></strong>
                <br>
             <ul class="nav nav-tabs">
               <li><a href="#tab-H" data-toggle="tab">Highlight</a></li>
@@ -48,15 +47,15 @@
               <div class="tab-pane row fade" id="tab-H">
                 <div class="col-md-12 col-sm-12">
                 <p>
-                                {{ $programs->tour_highlight }}</p>
+                                <?php echo e($programs->tour_highlight); ?></p>
                                     <hr>
                                 <p>Maps Come Here</p>
                </div>
               </div>
               <div class="tab-pane row active" id="tab-I">
 
-                   <form method="GET" action="{{ route('safaris.show','print') }}">
-                    @csrf
+                   <form method="GET" action="<?php echo e(route('safaris.show','print')); ?>">
+                    <?php echo csrf_field(); ?>
                  <div class="col-md-10 col-sm-10">
                                      </div>
                                        <div class="col-md-2 col-sm-2">
@@ -67,16 +66,17 @@
 
                 <div class="col-md-12 col-sm-12">
                 <p class="card-text">
-                                            {{ $programs->itinerary_summury }}
+                                            <?php echo e($programs->itinerary_summury); ?>
+
                                             </p>
-                                            @foreach ($datas as $data)
+                                            <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="card card-primary booking-tourPadding">
                                                 <div class="card-header  booking-tourPadding"  style="background-color:Gray;">
-                                                <span><b> Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
+                                                <span><b> Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
 
                                                 </div>
                                                 <div class="card-body">
-                                                {{-- test --}}
+                                                
 
                                                 <div class="row masonry-item">
                                                     <div class="col-lg-12 col-md-12 col-sm-12 masonry">
@@ -85,21 +85,21 @@
                                 <div class="">
                                 <div class="col-lg-7">
                                 <div class="hotel-diss">
-                               <p class="booking-btn-gray">{{ $data->itinerary_description }}</p>
+                               <p class="booking-btn-gray"><?php echo e($data->itinerary_description); ?></p>
 
 
                                <div class="">
                                       <div class="col-md-12 col-lg-12 col-sm-12">
-                                        <p><b class="text-success">Distance:</b> {{$data->distance}} KM <b class="text-success">Transport:</b> {{$data->transport}}</p>
+                                        <p><b class="text-success">Distance:</b> <?php echo e($data->distance); ?> KM <b class="text-success">Transport:</b> <?php echo e($data->transport); ?></p>
 
-                                          <p><b class="text-success">Accommodation:</b> {{$data->accommodation_name}} | <b class="text-success">Meal Plan:</b> {{$data->meal}}</p>
+                                          <p><b class="text-success">Accommodation:</b> <?php echo e($data->accommodation_name); ?> | <b class="text-success">Meal Plan:</b> <?php echo e($data->meal); ?></p>
                                       </div>
 
                                                   </div>
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">
-                                            <div class="hotel-pics-one">                                               <img src="{{URL::asset('/storage/destination/'.$data->photo) }}" alt="" style="height: 32vh !important;width:100%">                                                                              </div>
+                                            <div class="hotel-pics-one">                                               <img src="<?php echo e(URL::asset('/storage/destination/'.$data->photo)); ?>" alt="" style="height: 32vh !important;width:100%">                                                                              </div>
 
                                                  </div>
                                                  </div>
@@ -107,20 +107,20 @@
                                                 </div>
                                                 </div>
 
-                                        {{-- test --}}
+                                        
                                             </div>
                                             </div>
                                             <hr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
               </div>
               <div class="tab-pane fade" id="tab-A">
 
-               @foreach ($datas as $data)
+               <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
        <div class="card booking-tourPadding">
       <div class="card-header booking-tourPadding" style="background-color:#fafbfb">
-    <span><b>Day {{ $data->day }} - {{ $data->itinerary_title }}</b></span>
+    <span><b>Day <?php echo e($data->day); ?> - <?php echo e($data->itinerary_title); ?></b></span>
                      </div>
 
                         <div class="card-body">
@@ -133,30 +133,30 @@
                                     <h4>Location Details</h4>
                                   </div>
 
-                                  <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> {{ $data->destination_name }}</a>
-                                     <a class="map-viw" href="#"><i class="fa fa-home"></i> {{ $data->location_name }}/{{ $data->region }}/{{ $data->country }}</a>
+                                  <a class="map-viw" href="#"><i class="fa fa-map-marker"></i> <?php echo e($data->destination_name); ?></a>
+                                     <a class="map-viw" href="#"><i class="fa fa-home"></i> <?php echo e($data->location_name); ?>/<?php echo e($data->region); ?>/<?php echo e($data->country); ?></a>
                                    </div>
                                 <div class="col-md-6 col-lg-6 col-sm-12 booking-tour">
-                                <div class="rating">                                                                       <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b>{{ $data->accommodation_name }}</b></a>
+                                <div class="rating">                                                                       <h4>Accommodation Details</h4>                                                                       </div>  <a class="map-viw" href="#"><i class="fa fa-home"></i><b><?php echo e($data->accommodation_name); ?></b></a>
 
                                     <div>
                                      <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Standard Category: <br>
-                                        @for($i=0;$i<$data->national_standard;$i++)
+                                        <?php for($i=0;$i<$data->national_standard;$i++): ?>
                                         <span class="fa fa-star text-warning"></span>
-                                        @endfor
-                                         @for($i=0;$i<5-$data->national_standard;$i++)
+                                        <?php endfor; ?>
+                                         <?php for($i=0;$i<5-$data->national_standard;$i++): ?>
                                         <span class="fa fa-star-o text-warning"></span>
-                                           @endfor
+                                           <?php endfor; ?>
                                          </div></b></a>
 
-                                       <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Our Category</b>: {{$data->type }}:</a>
-                                       <a href="https://{{$data->url}}" class="btn btn-primary" role="button">View More</a>                                          </div>
+                                       <a class="map-viw" href="#"><i class="fa fa-home"></i><b>Our Category</b>: <?php echo e($data->type); ?>:</a>
+                                       <a href="https://<?php echo e($data->url); ?>" class="btn btn-primary" role="button">View More</a>                                          </div>
                                                   </div>
                                                  </div>
                                                </div>
                                         <div class="col-lg-5">
                                             <div class="hotel-pics-one">
-                                            <img src="{{URL::asset('/storage/uploads/'.$data->attachment) }}" alt="" style="height: 32vh !important;width:100%">
+                                            <img src="<?php echo e(URL::asset('/storage/uploads/'.$data->attachment)); ?>" alt="" style="height: 32vh !important;width:100%">
                                             </div>
 
                                       </div>
@@ -164,7 +164,7 @@
                                 </div>
                                 </div>
                                 <hr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
               </div>
 
@@ -186,14 +186,15 @@
                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                   <div class="rating">                                                                      <h4>Not Inclusive</h4>
                                   </div>
-   @foreach($inclusives as $inclusive)
+   <?php $__currentLoopData = $inclusives; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $inclusive): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                   <div class="form-check">
    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
   <label class="form-check-label" for="flexCheckDisabled">
-   {{ $inclusive->inclusive}}
+   <?php echo e($inclusive->inclusive); ?>
+
   </label>
 </div>
-     @endforeach
+     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
                                                   </div>
                                                  </div>
@@ -202,14 +203,15 @@
                                             <div class="rating">
                                                 <h4>Inclusive</h4>
 
-                                            </div>                                        @foreach($assignLists as $assignList)
+                                            </div>                                        <?php $__currentLoopData = $assignLists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $assignList): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
   <label class="form-check-label" for="flexCheckChecked">
-   {{ $assignList->inclusive}}
+   <?php echo e($assignList->inclusive); ?>
+
   </label>
 </div>
-@endforeach
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                 </div>
                                </div>
@@ -223,8 +225,8 @@
 
                     </div>
                     </div>
-                     {{-- End of tabs --}}
-                    {{-- Tour Summury sidebar --}}
+                     
+                    
                     <div class="col-md-3 col-lg-3 masonry">
                         <div class="card">
                         <div class="card-body">
@@ -232,14 +234,14 @@
                             <div >
                                 <h4 class="text-secondary booking-tourPadding"><b>Tour Summary</b></h4>
                             </div>
-                            <div>Type: <b>{{ $programs->type }}</b></div>
-                            <div>Style: <b>{{ $programs->style }}</b></div>
-                            <div>Duration: <b>{{ $programs->days }} Days</b></div>
+                            <div>Type: <b><?php echo e($programs->type); ?></b></div>
+                            <div>Style: <b><?php echo e($programs->style); ?></b></div>
+                            <div>Duration: <b><?php echo e($programs->days); ?> Days</b></div>
                             <div>Countries: <b>Tanzania</b> </div>
                             <div>Destinations:
-                                @foreach($datas as $destnation)
-                               <span class="text-primary " style="font-size: 12px; border-right:solid 1px #ddd; padding-right:2px"> {{ $destnation->destination_name }}</span>
-                                @endforeach
+                                <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destnation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                               <span class="text-primary " style="font-size: 12px; border-right:solid 1px #ddd; padding-right:2px"> <?php echo e($destnation->destination_name); ?></span>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                         </div>
                         <hr>
@@ -249,15 +251,15 @@
 
 
 
- <form method="GET" action="{{ route('viewTripf',$programs->pin) }}" class="registration-form">
-                    @csrf
+ <form method="GET" action="<?php echo e(route('viewTripf',$programs->pin)); ?>" class="registration-form">
+                    <?php echo csrf_field(); ?>
 <input type="hidden" name="_method" value="PUT">
 
-               @isset($invoice_amount)
-@if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0)
+               <?php if(isset($invoice_amount)): ?>
+<?php if($invoice_amount->amount_remain==null || $invoice_amount->amount_remain>0): ?>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookNow">Pay Invoice</button>
-@endif
-@endisset
+<?php endif; ?>
+<?php endif; ?>
 
 </form>
                             </div>
@@ -265,13 +267,13 @@
 
                     </div>
                     <hr>
-                      @isset($invoice_amount)
- <p class="text-center">Amount remain:{{$invoice_amount->amount_remain}} {{$invoice_amount->currency}}</p>
- @endisset
+                      <?php if(isset($invoice_amount)): ?>
+ <p class="text-center">Amount remain:<?php echo e($invoice_amount->amount_remain); ?> <?php echo e($invoice_amount->currency); ?></p>
+ <?php endif; ?>
 
                 </div>
                 <p class="text-center">
-                <a class="btn btn-primary" href="{{ route('addons.index') }}">Print Invoice</a></p>
+                <a class="btn btn-primary" href="<?php echo e(route('addons.index')); ?>">Print Invoice</a></p>
                 </div>
                 </div>
             </div>
@@ -289,19 +291,19 @@
           </button>
 
 
-          <!-- <h4 class="modal-title"><b>{{$programs->tour_name}}</b></h4> -->
+          <!-- <h4 class="modal-title"><b><?php echo e($programs->tour_name); ?></b></h4> -->
         </div>
         <div class="modal-body">
 
           <div class="preview-wrap">
 
             <div class="form-wrap">
-                <h4 id="heading">Booking Form:<span style="color:#fafbfb">{{$programs->tour_name}}</span></h4>
-                <!-- <form  method="post" id="post_form" action="{{ route('tourForm.store') }}"> -->
+                <h4 id="heading">Booking Form:<span style="color:#fafbfb"><?php echo e($programs->tour_name); ?></span></h4>
+                <!-- <form  method="post" id="post_form" action="<?php echo e(route('tourForm.store')); ?>"> -->
 
 
-                <form id="msform"  method="post"  action="{{ route('tourForm.store') }}" class="registration-form">
-                    @csrf
+                <form id="msform"  method="post"  action="<?php echo e(route('tourForm.store')); ?>" class="registration-form">
+                    <?php echo csrf_field(); ?>
 
                <!-- progressbar -->
                     <ul id="progressbar">
@@ -328,8 +330,8 @@
  <div class="form-group">
 
 
-             <input type="hidden" class="form-control" name="tour_name" value="{{ $programs->tour_name }}">
-            <input type="hidden" class="form-control" name="currency" value="{{ $programs->currency }}">
+             <input type="hidden" class="form-control" name="tour_name" value="<?php echo e($programs->tour_name); ?>">
+            <input type="hidden" class="form-control" name="currency" value="<?php echo e($programs->currency); ?>">
         </div>
 
 
@@ -411,8 +413,8 @@
  <div class="col-md-12">
         <div class="form-group">
             <label for="">Tour type:</label>
-                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="{{$programs->program_id}}" readonly="true">
-          <input type="text" class="form-control" placeholder=""  name="tour_type" value="{{$programs->category}}" readonly="true">
+                   <input type="hidden" class="form-control" placeholder=""  name="tour_id" value="<?php echo e($programs->program_id); ?>" readonly="true">
+          <input type="text" class="form-control" placeholder=""  name="tour_type" value="<?php echo e($programs->category); ?>" readonly="true">
         </div>
     </div>
 
@@ -743,4 +745,6 @@ return false;
 
 });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('website.layouts.apps', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\palatialf\resources\views/website/tailorMade/tailorMadeSummary.blade.php ENDPATH**/ ?>

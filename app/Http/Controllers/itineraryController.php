@@ -43,13 +43,12 @@ class itineraryController extends Controller
      */
     public function store(Request $request)
     {
-
         $main_itinerary = itinerary::UpdateOrCreate(
             [ 'program_id'=>request('program_id'),
               'tour_addon'=>request('tour_addon')],
 
                [ 'itinerary_summury'=>request('itinerary_summury'),
-                'days'=>request('days'),               
+                'days'=>request('days'),
                 'user_id'=>request('user_id')
             ]);
 
@@ -96,7 +95,7 @@ class itineraryController extends Controller
 
                [ 'itinerary_summury'=>request('itinerary_summury'),
                 'days'=>request('days'),
-               
+
                 'user_id'=>request('user_id')
             ]);
 
@@ -106,14 +105,14 @@ class itineraryController extends Controller
             $description = request('itinerary_description');
             $destination = request('destination_id');
             $accommodation = request('accommodation_id');
-               
+
             $distance = request('distance');
             $transport = request('transport');
             $meal = request('meal');
-        
+
     if(request('day')>0)
     {
-    foreach($day as $key => $days){      
+    foreach($day as $key => $days){
     $toupdate = itinerary_day::where('itinerary_id',$main_itinerary->id)
     ->where('day',$days)->update([
             'itinerary_title'=>$title[$key],
@@ -151,12 +150,12 @@ class itineraryController extends Controller
     public function edit($id)
     {
         //dd('rr');
-      
+
         $accommodations = accommodation::join('attachments','accommodations.id','attachments.destination_id')
         ->select('accommodations.*','attachments.attachment')
         ->where('attachments.type','Accommodation')
         ->get();
-  
+
         $destinations = destination::get();
         $day_data = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->select('itineraries.program_id','itineraries.tour_addon','itinerary_days.*')
@@ -198,7 +197,7 @@ class itineraryController extends Controller
         $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
         ->join('itinerary_days','itinerary_days.itinerary_id','itineraries.id')
         ->where('itinerary_days.id',$id)->first();
-          
+
          $id=$programs->program_id;
            return redirect()->route('attachmentTailorMade',$id)->with('success','Edited successfuly');
         }
@@ -206,11 +205,11 @@ class itineraryController extends Controller
         {
         $programs = program::join('itineraries','itineraries.program_id','programs.id')
         ->join('itinerary_days','itinerary_days.itinerary_id','itineraries.id')
-        ->where('itinerary_days.id',$id)->first();  
+        ->where('itinerary_days.id',$id)->first();
 
          $id=$programs->program_id;
         return redirect()->route('programs.show',$id)->with('success','Edited successfuly');
-        }       
+        }
     }
 
     /**

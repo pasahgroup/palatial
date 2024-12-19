@@ -587,11 +587,7 @@ $adults_cost=$unit_price * $adults;
 
 
 
-     public function clientTailorMade(Request $request)    {
-
-              //Verify if the pin exists
-          $pin=request('pin');
-         // dd($pin);
+     public function clientTailorMade(Request $request,$pin)    {
 
           $tailorMades = tailorMade::
             where('tailor_mades.pin',$pin)->first();

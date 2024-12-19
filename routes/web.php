@@ -232,7 +232,7 @@ Route::post('search-tour', [websiteController::class, 'searchTour'])->name('sear
 Route::get('/attachmentTailorMade/{x}', [TailorMadeController::class, 'attachmentTailorMade'])->name('attachmentTailorMade');
 
 
-Route::post('/clientTailorMade', [TailorMadeController::class, 'clientTailorMade'])->name('clientTailorMade');
+Route::post('/clientTailorMade/{p}', [TailorMadeController::class, 'clientTailorMade'])->name('clientTailorMade');
 Route::post('/viewTrip', [TourEquiryFormController::class, 'viewTrip'])->name('viewTrip');
 Route::get('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');
 // Route::post('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');

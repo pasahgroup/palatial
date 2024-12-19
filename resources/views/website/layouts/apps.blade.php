@@ -293,16 +293,18 @@
 
 </li>
 <li>||</li>
-    <li><a href="#" class="btn-success" style="color:#000;margin-top:4px">Create My Safari</a>
+    <li><a href="#" class="btn btn-outline btn-primary" style="color:#000;margin-top:4px">Bookings</a>
                                     <ul class="dropdown">
-                                         <li><a href="/tailorForm" class="btn-outline">Create New Safari(Tailor Maide)</a></li>
-                <li><a href="/tailorClientForm" class="btn-outline">My Existing Safari-Tailor Made</a></li>
+                                         <li><a href="/tailorForm" class="btn btn-outline btn-primary">Create New Safari(Tailor Maide)</a></li>
+                                           <li><a href="/bookingTrip" class="btn btn-outline btn-primary">My Last Booking</a></li>
+                <!-- <li><a href="/tailorClientForm" class="btn btn-outline btn-primary">My Last Booking</a></li> -->
 
                                     </ul>
                                 </li>
 
-                                 <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">My Last Booking</a>
+                                 <li><a href="#" class="btn btn-outline btn-primary" style="color:#000">Bookings</a>
                                     <ul class="dropdown">
+                                         <li><a href="/tailorForm" class="btn-outline">Create New Safari(Tailor Maide)</a></li>
                 <li><a href="/bookingTrip" class="btn-outline">My Existing Safari</a></li>
 
                                     </ul>
