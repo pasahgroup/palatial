@@ -257,10 +257,10 @@ if($db_contains==false)
   $tailorMades = tailorMade::get();
   // compact('tailorMades','socialmedia')
   // return redirect()->route('tailorClientForm')->with('pin',$pin);
-    // return redirect()->route('clientTailorMade')->with('pin',$pin);
-      return view('website.tailorMade.tailorMadeSummary',compact('pin'));
+    // return redirect()->route('clientTailorMade')->compact('pin',$pin);
+    return redirect()->route('clientTailorMade', ['pin' =>$pin]);
+    //  return view('website.tailorMade.tailorMadeSummary',compact('pin'));
 }
-
 
 
           //dd($pin);
