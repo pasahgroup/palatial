@@ -229,9 +229,7 @@ foreach ($files as $file){
 dd('Mail sent successfully');
 }
 
-
-
-    /**
+  /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -258,7 +256,8 @@ if($db_contains==false)
   // compact('tailorMades','socialmedia')
   // return redirect()->route('tailorClientForm')->with('pin',$pin);
     // return redirect()->route('clientTailorMade')->compact('pin',$pin);
-    return redirect()->route('clientTailorMade', ['pin' =>$pin]);
+  //dd('dddd');
+    return redirect()->route('clientTailorMade', [$pin]);
     //  return view('website.tailorMade.tailorMadeSummary',compact('pin'));
 }
 

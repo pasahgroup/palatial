@@ -235,7 +235,7 @@ Route::get('/attachmentTailorMade/{x}', [TailorMadeController::class, 'attachmen
 Route::get('/clientTailorMade/{p}', [TailorMadeController::class, 'clientTailorMade'])->name('clientTailorMade');
 Route::post('/viewTrip', [TourEquiryFormController::class, 'viewTrip'])->name('viewTrip');
 Route::get('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');
-// Route::post('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');
+Route::post('/viewTripf/{x}', [TourEquiryFormController::class, 'viewTripf'])->name('viewTripf');
 
 Route::get('/tailorClientForm', [TailorMadeController::class, 'tailorClientForm'])->name('tailorClientForm');
 Route::get('/bookingTrip', [TourEquiryFormController::class, 'bookingTrip'])->name('bookingTrip');

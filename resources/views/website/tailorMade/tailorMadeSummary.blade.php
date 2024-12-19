@@ -250,6 +250,9 @@
 
 
  <form method="GET" action="{{ route('viewTripf',$programs->pin) }}" class="registration-form">
+{{--
+    <form method="GET" action="#" class="registration-form">
+         --}}
                     @csrf
 <input type="hidden" name="_method" value="PUT">
 

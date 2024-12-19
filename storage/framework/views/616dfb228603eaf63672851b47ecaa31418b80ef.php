@@ -252,6 +252,7 @@
 
 
  <form method="GET" action="<?php echo e(route('viewTripf',$programs->pin)); ?>" class="registration-form">
+
                     <?php echo csrf_field(); ?>
 <input type="hidden" name="_method" value="PUT">
 

@@ -614,7 +614,9 @@ $adults_cost=$unit_price * $adults;
 
            $tour_addon='tailor_made';
            $programs = tailorMade::join('itineraries','itineraries.program_id','tailor_mades.id')
-            //->join('attachments','attachments.destination_id','tailor_mades.id')
+          ->join('attachments','attachments.destination_id','tailor_mades.id')
+          ->select('tailor_mades.*','attachments.attachment','itineraries.days','itineraries.itinerary_summury')
+
           ->where('itineraries.tour_addon','tailor_made')
           // ->where('attachments.type','tailor_made')
           ->where('tailor_mades.id',$id)->first();
@@ -623,6 +625,8 @@ $adults_cost=$unit_price * $adults;
               $programs = tailorMade::
               where('tailor_mades.id',$id)->first();
               }
+
+            //  dd($programs);
 
         $datas = itinerary_day::join('itineraries','itineraries.id','itinerary_days.itinerary_id')
         ->join('accommodations','accommodations.id','itinerary_days.accommodation_id')
