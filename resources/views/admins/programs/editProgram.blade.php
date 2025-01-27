@@ -205,7 +205,7 @@
                 </div>
 
                 <div class="form-group row">
-          <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-3">
+          <div class="col-md-12 col-sm-12 col-xs-12">
               <div>
                  <a href="/programs" type="submit" class="btn btn-secondary float-left"><i class="fas fa-angle-double-left"></i></a>
                 <button type="submit" class="btn btn-primary float-right">Update</button>
