@@ -245,8 +245,6 @@ $response_json = file_get_contents($req_url);
 //dd($response_json);
 // Continuing if we got a result
 if(false !== $response_json) {
-
-
 //dd(request('amount'));
     // Try/catch for json_decode operation
     try {
@@ -309,6 +307,10 @@ $addon =  payment::updateOrCreate(
     catch(Exception $e) {
         // Handle JSON parse error...
     }
+}
+else
+{
+    return redirect()->back()->with('info','No Internet connection');
 }
 
  //return response()->json(['url' => redirect('https://payments.pesapal.com/palatialtours',compact(['first_name','status']));

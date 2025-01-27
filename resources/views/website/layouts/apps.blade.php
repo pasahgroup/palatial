@@ -358,7 +358,6 @@
                             <a class="text-secondary mb-2" href="/whatWeOfferClient"><i class="fa fa-angle-right mr-2"></i>Health & Vaccination</a>
                             <a class="text-secondary mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Payment Methods</a>
                             <a class="text-secondary mb-2" href="/accommodation-camps"><i class="fa fa-angle-right mr-2"></i>About Tanzania</a>
-
                         </div>
                     </div>
 
@@ -367,10 +366,10 @@
                         <h5 class="text-secondary text-uppercase mb-4">Contacts</h5>
 
                            <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:{{$contacts->address??'Arusha'}}</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: (+255)753 216 263</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Email: info@palatialtours.com</a>
-                            <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: www.palatialtours.com</a>
+                             <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Address:{{$contacts->address??'Arusha'}}</a>
+                                   <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Contact No: {{$contacts->phone??' No Number'}}</a>
+                                   <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Email: {{$contacts->email??'No Email'}}</a>
+                                   <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Website: {{$contacts->website??'No Website'}}</a>
                         </div>
                     </div>
                 </div>

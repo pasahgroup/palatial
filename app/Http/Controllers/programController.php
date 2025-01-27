@@ -30,6 +30,20 @@ class programController extends Controller
         return view('admins.programs.index',compact('datas'));
     }
 
+
+    public function search(Request $request,$id)
+    {
+      $search=request('search');
+
+        $datas = program::join('attachments','attachments.destination_id','programs.id')
+        ->select('programs.*','attachments.attachment')
+        ->where('attachments.type','Programs')
+         //->orWhere('attachments.type','Addon')
+         ->where('tour_name', 'LIKE', "%{$search}%")
+          ->paginate(15);
+        return view('admins.programs.index',compact('datas'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

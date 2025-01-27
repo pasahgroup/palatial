@@ -172,11 +172,20 @@ class websiteController extends Controller
           ->where('itineraries.tour_addon','Programs')
           ->limit(6)->latest()->get();
 
+
+          $slider_first = slider::where('status','1')
+                  //->select('sliders.*')
+                  // ->offset(1)
+                  ->limit(1)->first();
+
+
          //Slider part
           $slidersf = slider::join('programs','programs.id','sliders.tour_id')
           ->where('sliders.status','1')
           ->select('sliders.*','programs.tour_name')
           ->limit(1)->first();
+
+            //dd($slider_first); 
 
            $sliders = slider::join('programs','programs.id','sliders.tour_id')
           ->where('sliders.status','1')
@@ -265,11 +274,6 @@ class websiteController extends Controller
           $culture=attraction::where('type','Culture & Belief')
           // ->offset(1)
           ->limit(8)->get();
-
-  $slider_first = slider::where('status','1')
-          //->select('sliders.*')
-          // ->offset(1)
-          ->limit(1)->first();
 
 
 //dd($slider_first);

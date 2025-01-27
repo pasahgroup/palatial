@@ -130,6 +130,9 @@ Route::get('/accommodation-Destroy/{x}', [accommodationController::class, 'destr
 Route::resource('/dashboard', dashboardController::class);
 Route::resource('/programs', programController::class);
 
+Route::post('/search/{x}', [programController::class, 'search'])->name('search');
+Route::get('/search/{x}', [programController::class, 'search'])->name('search');
+
 Route::resource('/itineraries', itineraryController::class);
 });
 
@@ -163,7 +166,6 @@ Route::get('/destroy-Aboutus/{x}', [PostBodyController::class, 'destroy'])->name
 Route::get('/destroy-contact/{x}', [PostBodyController::class, 'destroyContact'])->name('contact-Aboutus');
 
 Route::resource('/PostCategory', PostController::class);
-
 //Welcome introduction
 Route::get('/aboutus', [PostBodyController::class, 'aboutus'])->name('aboutus');
 Route::get('/welcomeMessage', [PostBodyController::class, 'welcomeMessage'])->name('welcomeMessage');
