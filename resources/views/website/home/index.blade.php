@@ -605,7 +605,7 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/trekking"><i class="fa fa-search">  {{ $popular_trekking->type }}</i></a>
                         </div>
                     </div>
-                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_trekking->type }}</strong></a>
+                      <a href="/trekking" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_trekking->type }}</strong></a>
                 </div>
             </div>
 @endif
@@ -620,7 +620,7 @@ Partnering with SafariBookings.com</b></a>
                         </div>
                     </div>
 
-                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_holiday->type }}</strong></a>
+                      <a href="/holiday" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_holiday->type }}</strong></a>
 
                 </div>
             </div>
@@ -634,7 +634,7 @@ Partnering with SafariBookings.com</b></a>
                             <a class="btn btn-outline-dark btn-squarex" href="/historical-sites"><i class="fa fa-search">  {{ $popular_historical->type }}</i></a>
                         </div>
                     </div>
-                      <a href="/safaris" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_holiday->type }}</strong></a>
+                      <a href="/historical-sites" class="booking-btn text-center" style="border:1px solid rgba(253,4,4)"><strong>{{ $popular_holiday->type }}</strong></a>
                 </div>
             </div>
 @endif
