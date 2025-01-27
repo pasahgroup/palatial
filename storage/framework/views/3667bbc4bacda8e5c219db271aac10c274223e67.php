@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="product-offer mb-30" style="height: 180px;">
+                <div class="product-offer mb-30" style="height: 191px;">
                      <?php if($popular_safari): ?>
                     <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_safari->attachment)); ?>" alt="">
                     <div class="offer-text">
@@ -122,7 +122,7 @@
                     </div>
                     <?php endif; ?>
                 </div>
-                   <div class="product-offer mb-30" style="height: 190px;">
+                   <div class="product-offer mb-30" style="height: 191px;">
                      <?php if($popular_trekking): ?>
                     <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_trekking->attachment)); ?>" alt="">
                     <div class="offer-text">
@@ -133,7 +133,7 @@
                     <?php endif; ?>
                 </div>
 
-                   <div class="product-offer mb-30" style="height: 190px;">
+                   <div class="product-offer mb-30" style="height: 200px;">
                      <?php if($popular_holiday): ?>
                     <img class="img-fluid" src="<?php echo e(URL::asset('/storage/uploads/'.$popular_holiday->attachment)); ?>" alt="">
                     <div class="offer-text">

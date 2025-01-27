@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="product-offer mb-30" style="height: 180px;">
+                <div class="product-offer mb-30" style="height: 191px;">
                      @if ($popular_safari)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_safari->attachment) }}" alt="">
                     <div class="offer-text">
@@ -123,7 +123,7 @@
                     </div>
                     @endif
                 </div>
-                   <div class="product-offer mb-30" style="height: 190px;">
+                   <div class="product-offer mb-30" style="height: 191px;">
                      @if ($popular_trekking)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_trekking->attachment) }}" alt="">
                     <div class="offer-text">
@@ -134,7 +134,7 @@
                     @endif
                 </div>
 
-                   <div class="product-offer mb-30" style="height: 190px;">
+                   <div class="product-offer mb-30" style="height: 200px;">
                      @if ($popular_holiday)
                     <img class="img-fluid" src="{{URL::asset('/storage/uploads/'.$popular_holiday->attachment) }}" alt="">
                     <div class="offer-text">
