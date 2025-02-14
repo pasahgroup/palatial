@@ -137,6 +137,8 @@ Route::resource('/itineraries', itineraryController::class);
 });
 
 
+//Route::get('/chat', [App\Http\Controllers\HomeController::class, 'chat'])->name('chat');
+Route::get('/chat', [websiteController::class, 'chat'])->name('chat');
 
 // Route::resource('/Agents', AgentController::class);
 Route::get('/New-Agent', [AgentController::class, 'NewAgent'])->name('NewAgent');

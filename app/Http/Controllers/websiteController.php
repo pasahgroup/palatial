@@ -14,7 +14,7 @@ use App\Models\title;
 use App\Models\quickLink;
 use App\Models\attraction;
 use DB;
-
+use App\Models\user;
 use Illuminate\Http\Request;
 
 class websiteController extends Controller
@@ -185,7 +185,7 @@ class websiteController extends Controller
           ->select('sliders.*','programs.tour_name')
           ->limit(1)->first();
 
-            //dd($slider_first); 
+            //dd($slider_first);
 
            $sliders = slider::join('programs','programs.id','sliders.tour_id')
           ->where('sliders.status','1')
@@ -287,6 +287,21 @@ class websiteController extends Controller
      * @return \Illuminate\Http\Response
      */
     //Fction to read the tours according the circuit zone
+
+
+
+
+    public function chat()
+    {
+       //$loggedInUserId = Auth::id();
+         //$loggedInUserId=Auth::user()->id();
+       // $users = User::where('id', '!=', $loggedInUserId)->get();
+        $users = User::where('id', '!=',1)->get();
+       return view('website.chat',compact('users'));
+    }
+
+
+
 
 
 

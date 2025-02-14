@@ -5,10 +5,11 @@ $consumer_key="xN2px0DCDBvE9cIr+zEK2fH00/sRjTJW";//Register a merchant account o
                    //When you are ready to go live make sure you change the key to the live account
                    //registered on www.pesapal.com!
 $consumer_secret="z3pein/v6RLsbAhyuC1zHffXahg=";// Use the secret from your test
-                   //account on demo.pesapal.com. When you are ready to go live make sure you 
+                   //account on demo.pesapal.com. When you are ready to go live make sure you
                    //change the secret to the live account registered on www.pesapal.com!
-$statusrequestAPI = 'https://demo.pesapal.com/api/querypaymentstatus';//change to      
+//$statusrequestAPI = 'https://demo.pesapal.com/api/querypaymentstatus';//change to
                    //https://www.pesapal.com/api/querypaymentstatus' when you are ready to go live!
+                      $statusrequestAPI = 'https://www.pesapal.com/api/querypaymentstatus';
 
 // Parameters sent to you by PesaPal IPN
 $pesapalNotification=$_GET['pesapal_notification_type'];
@@ -52,7 +53,7 @@ if($pesapalNotification=="CHANGE" && $pesapalTrackingId!='')
    $status = $elements[1];
 
    curl_close ($ch);
-   
+
    //UPDATE YOUR DB TABLE WITH NEW STATUS FOR TRANSACTION WITH pesapal_transaction_tracking_id $pesapalTrackingId
 
    if(DB_UPDATE_IS_SUCCESSFUL)

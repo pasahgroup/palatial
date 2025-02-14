@@ -11,6 +11,7 @@ use App\Models\program;
 use App\Models\specialOffer;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class programController extends Controller
 {
